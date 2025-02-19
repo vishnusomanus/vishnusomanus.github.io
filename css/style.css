@@ -27,6 +27,39 @@ body {
 .first-column{
     background-color: var(--blue);
 }
+#avatar {
+    border: 1px solid #ccc;
+    position: relative;
+    
+  }
+
+
+  @keyframes bounceDown {
+    0%   { transform: scale(1) translateY(0); }
+    20%  { transform: scale(1) translateY(20px); }
+    40%  { transform: scale(1) translateY(30px); }
+    60%  { transform: scale(1) translateY(35px); }
+    80%  { transform: scale(1) translateY(25px); }
+    100% { transform: scale(1) translateY(0); }
+  }
+  .bounce {
+    animation: bounceDown 0.5s ease;
+  }
+  #boyFace {
+    transition: transform 0.3s ease;
+    margin: auto;
+    cursor: pointer;
+  }
+
+
+
+
+
+
+
+
+
+
 
 
   .box-content {
@@ -64,10 +97,4 @@ body {
     background-position: right;
     background-position-x: calc(100% - 15px);
     text-transform: uppercase;
-}
-.avatar {
-    min-height: 250px;
-    border: 5px solid #04356f;
-    margin: 0 14px;
-    border-radius: 10px;
 }
