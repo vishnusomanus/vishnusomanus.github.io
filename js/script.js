@@ -12,7 +12,7 @@ function showIconsSequentially(index) {
         $("#boyFace").fadeIn(1000).css("opacity", "1");
         toggleFace();
         setTimeout(function () {
-            $("#message").fadeIn(500)
+            $("#message").fadeIn(500).fadeOut(3000);
           }, 1000);
     }
 }
