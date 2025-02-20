@@ -8,10 +8,12 @@ function showIconsSequentially(index) {
         showIconsSequentially(index + 1);
     });
     } else {
-    // After last icon, show boy face
-    $("#boyFace").fadeIn(1000).css("opacity", "1");
-    toggleFace();
-    
+        // After last icon, show boy face
+        $("#boyFace").fadeIn(1000).css("opacity", "1");
+        toggleFace();
+        setTimeout(function () {
+            $("#message").fadeIn(500)
+          }, 1000);
     }
 }
 function toggleFace() {

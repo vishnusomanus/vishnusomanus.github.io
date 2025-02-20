@@ -1,5 +1,11 @@
 /* Custom styles */
-
+:root {
+    --send-bg: #0B93F6;
+    --send-color: white;
+    --receive-bg: #E5E5EA;
+    --receive-text: black;
+    --page-background: white;
+  }
 body.blue {
     --dark-black: #1c1c25;
     --smoke: #c4c4c4;
@@ -41,6 +47,46 @@ body {
     display: none; /* Hidden initially */
     transition: opacity 0.5s ease-in-out;
   }
+
+
+  .message {
+    background: #0B93F6;
+    color: black;
+    align-self: flex-start;
+    max-width: 255px;
+    word-wrap: break-word;
+    margin-bottom: 12px;
+    line-height: 24px;
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 25px;
+    position: absolute;
+    right: 30px;
+    top: 20px;
+  }
+  
+  .message:before, 
+  .message:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 25px;
+  }
+  
+  .message:before {
+    left: -7px;
+    width: 20px;
+    background-color: #0B93F6;
+    border-bottom-right-radius: 16px 14px;
+  }
+  
+  .message:after {
+    left: -26px;
+    width: 26px;
+    background-color: #000000;
+    border-bottom-right-radius: 10px;
+  }
+  
 
 
   @keyframes bounceDown {
