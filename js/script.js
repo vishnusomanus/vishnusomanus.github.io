@@ -1,4 +1,40 @@
+
+let icons = $(".icons i");
+let delayTime = 50; // Time for each icon to stay visible
+
+function showIconsSequentially(index) {
+    if (index < icons.length) {
+    $(icons[index]).fadeIn(50).delay(delayTime).fadeOut(50, function() {
+        showIconsSequentially(index + 1);
+    });
+    } else {
+    // After last icon, show boy face
+    $("#boyFace").fadeIn(1000).css("opacity", "1");
+    toggleFace();
+    
+    }
+}
+function toggleFace() {
+    // Hide pupils and the smiling mouth.
+    $("#pupilLeft, #pupilRight, #mouthSmiling").hide();
+    // Show the S-shaped mouth and the eye-line paths.
+    $("#mouthS, #eyeLeftLine, #eyeRightLine").show();
+  
+    // Add bounce animation to SVG.
+    $("#boyFace").addClass("bounce").one("animationend", function () {
+      $(this).removeClass("bounce");
+    });
+  
+    setTimeout(function () {
+      // Revert to smiling face: show pupils, show the smiling mouth, hide S-shaped mouth and eye lines.
+      $("#pupilLeft, #pupilRight, #mouthSmiling").show();
+      $("#mouthS, #eyeLeftLine, #eyeRightLine").hide();
+    }, 500);
+  }
+    
 $(document).ready(function(){
+    showIconsSequentially(0);
+
     // Select elements using jQuery
     var $hair       = $("#hair");
     var $pupilLeft  = $("#pupilLeft");
@@ -33,21 +69,5 @@ $(document).ready(function(){
     });
     
     // On mousedown: update appearance, add bounce animation, and keep the state permanently.
-    $svg.on("mousedown", function(){
-      // Hide pupils and the smiling mouth.
-      $("#pupilLeft, #pupilRight, #mouthSmiling").hide();
-      // Show the S-shaped mouth and the eye-line paths.
-      $("#mouthS, #eyeLeftLine, #eyeRightLine").show();
-      
-      // Add bounce animation to svg.
-      $svg.addClass("bounce").one("animationend", function(){
-        $svg.removeClass("bounce");
-      });
-      setTimeout(function(){
-        // Revert to smiling face: show pupils, show the smiling mouth, hide S-shaped mouth and eye lines.
-        $("#pupilLeft, #pupilRight").show();
-        $("#mouthSmiling").show();
-        $("#mouthS, #eyeLeftLine, #eyeRightLine").hide();
-      }, 500);
-    });
+    $svg.on("mousedown", toggleFace);
   });
