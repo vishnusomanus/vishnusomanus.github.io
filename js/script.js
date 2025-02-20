@@ -12,7 +12,7 @@ function showIconsSequentially(index) {
         $("#boyFace").fadeIn(1000).css("opacity", "1");
         toggleFace();
         setTimeout(function () {
-            $("#message").fadeIn(500).fadeOut(3000);
+            $("#message").fadeIn(500).fadeOut(4000);
           }, 1000);
     }
 }
@@ -72,4 +72,36 @@ $(document).ready(function(){
     
     // On mousedown: update appearance, add bounce animation, and keep the state permanently.
     $svg.on("mousedown", toggleFace);
+
+
+    // $("#draggable").on("mousedown", function () {
+    //     $("body").addClass("dragging");
+    // });
+    
+    // $("#draggable").on("mouseup", function () {
+    //     $("body").removeClass("dragging");
+    // });
+
+    $("#draggable").draggable({
+    containment: ".contact-me", // Restrict movement inside parent
+    // revert: "invalid", 
+    revert: true,
+    drag: function(event, ui) {
+        $("body").addClass("dragging"); 
+        $("#message").removeClass('animate__shakeX').addClass('animate__bounce animate__infinite	infinite').show().text("Slide It!"); 
+
+    },
+    stop: function(event, ui) {
+        console.log("Stopped dragging."); 
+        $("body").removeClass("dragging"); 
+        $("#message").hide();
+    }
+    });
+
+    $("#droppable").droppable({
+    drop: function (event, ui) {
+        alert('droped');
+    }
+    });
+    
   });
