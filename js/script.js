@@ -33,6 +33,13 @@ function toggleFace() {
       $("#mouthS, #eyeLeftLine, #eyeRightLine").hide();
     }, 500);
   }
+  function toggleModal(show) {
+    if (show) {
+        $("#modal").removeClass("hidden");
+    } else {
+        $("#modal").addClass("hidden");
+    }
+}
     
 $(document).ready(function(){
     showIconsSequentially(0);
@@ -89,12 +96,14 @@ $(document).ready(function(){
     drag: function(event, ui) {
         $("body").addClass("dragging"); 
         $("#message").removeClass('animate__shakeX').addClass('animate__bounce animate__infinite	infinite').show().text("Slide It!"); 
+        $(".progress-bar-striped").addClass('progress-bar-animated').find('i').addClass('animate__animated');
 
     },
     stop: function(event, ui) {
         console.log("Stopped dragging."); 
         $("body").removeClass("dragging"); 
         $("#message").hide();
+        $(".progress-bar-striped").removeClass('progress-bar-animated').find('i').removeClass('animate__animated');
     }
     });
 
@@ -102,6 +111,17 @@ $(document).ready(function(){
     drop: function (event, ui) {
         alert('droped');
     }
+    });
+
+
+    $("#closeModalBtn").on("click", function () {
+        toggleModal(false);
+    });
+
+    $(window).on("click", function (e) {
+        if ($(e.target).is("#modal")) {
+            toggleModal(false);
+        }
     });
     
   });

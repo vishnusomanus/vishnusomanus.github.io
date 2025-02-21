@@ -49,7 +49,7 @@ body {
 
 .message {
     background: #0B93F6;
-    color: black;
+    color: #fff;
     align-self: flex-start;
     max-width: 255px;
     word-wrap: break-word;
@@ -59,8 +59,8 @@ body {
     padding: 10px 20px;
     border-radius: 25px;
     position: absolute;
-    right: 30px;
-    top: 20px;
+    right: 60px;
+    top: 50px;
 }
 
 .message:before,
@@ -81,7 +81,7 @@ body {
 .message:after {
     left: -26px;
     width: 26px;
-    background-color: #000000;
+    background-color: #3a3372;
     border-bottom-right-radius: 10px;
 }
 
@@ -173,7 +173,7 @@ body {
     animation: progress-bar-stripes 1s linear infinite;
 }
 
-body.dragging .progress-bar-striped {
+.progress-bar-striped {
     display: block;
     text-indent: 80px;
     font-size: 30px;
@@ -191,7 +191,7 @@ body.dragging .progress-bar-striped {
     transition: all ease 0.1s;
     box-shadow: 0px 5px 0px 0px var(--dark-green);
 }
-body.dragging .progress-bar-striped i{
+.progress-bar-striped i{
     font-size: 30px;
     position: relative;
     top: -10px;
