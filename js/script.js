@@ -109,7 +109,7 @@ $(document).ready(function(){
 
     $("#droppable").droppable({
     drop: function (event, ui) {
-        alert('droped');
+        toggleModal(true);
     }
     });
 
