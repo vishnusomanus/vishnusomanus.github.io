@@ -90,22 +90,22 @@ $(document).ready(function(){
     // });
 
     $("#draggable").draggable({
-    containment: ".contact-me", // Restrict movement inside parent
-    // revert: "invalid", 
-    revert: true,
-    drag: function(event, ui) {
-        $("body").addClass("dragging"); 
-        $("#message").removeClass('animate__shakeX').addClass('animate__bounce animate__infinite	infinite').show().text("Slide It!"); 
-        $(".progress-bar-striped").addClass('progress-bar-animated').find('i').addClass('animate__animated');
-
-    },
-    stop: function(event, ui) {
-        console.log("Stopped dragging."); 
-        $("body").removeClass("dragging"); 
-        $("#message").hide();
-        $(".progress-bar-striped").removeClass('progress-bar-animated').find('i').removeClass('animate__animated');
-    }
-    });
+      containment: ".contact-me",
+      revert: true,
+      drag: function(event, ui) {
+          $("body").addClass("dragging");
+          $("#message").removeClass('animate__shakeX').addClass('animate__bounce animate__infinite').show().text("Slide It!");
+          $(".progress-bar-striped").addClass('progress-bar-animated').find('i').addClass('animate__animated');
+      },
+      stop: function(event, ui) {
+          $("body").removeClass("dragging");
+          $("#message").hide();
+          $(".progress-bar-striped").removeClass('progress-bar-animated').find('i').removeClass('animate__animated');
+      }
+  }).on("touchstart touchmove touchend", function(event) {
+      event.preventDefault(); // Prevent scrolling while dragging
+  });
+  
 
     $("#droppable").droppable({
     drop: function (event, ui) {
