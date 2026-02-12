@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Admin Panel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header admin-header">
+        <div class="header-content">
+            <a href="admin-dashboard.html" class="logo">Admin Panel</a>
+            <nav class="nav-links">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="admin-pools.html">Pools</a>
+                <a href="admin-results.html">Draws</a>
+                <a href="admin-users.html">Users</a>
+                <a href="admin-transactions.html">Transactions</a>
+                <a href="admin-reports.html">Reports</a>
+                <a href="admin-settings.html">Settings</a>
+                <a href="index.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Admin Settings</h1>
+        
+        <!-- General Settings -->
+        <div class="card">
+            <h3>General Settings</h3>
+            <div class="form-group">
+                <label>Platform Name</label>
+                <input type="text" value="PSIP">
+            </div>
+            <div class="form-group">
+                <label>Default Currency</label>
+                <select>
+                    <option>INR (₹)</option>
+                    <option>USD ($)</option>
+                    <option>EUR (€)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Time Zone</label>
+                <select>
+                    <option>IST (Indian Standard Time)</option>
+                    <option>UTC</option>
+                    <option>EST</option>
+                </select>
+            </div>
+            <button class="btn btn-admin">Save General Settings</button>
+        </div>
+
+        <!-- Pool Settings -->
+        <div class="card" style="margin-top: 1.5rem;">
+            <h3>Pool Default Settings</h3>
+            <div class="form-group">
+                <label>Default Token Price (₹)</label>
+                <input type="number" value="25000" min="1000" step="1000">
+            </div>
+            <div class="form-group">
+                <label>Default Pool Duration (months)</label>
+                <input type="number" value="50" min="1">
+            </div>
+            <div class="form-group">
+                <label>Default Monthly Winners</label>
+                <input type="number" value="6" min="1">
+            </div>
+            <div class="form-group">
+                <label>Regular Token Payout Percentage</label>
+                <input type="number" value="3" min="0" max="100" step="0.1">
+                <p style="font-size: 0.875rem; color: #6B7280; margin-top: 0.25rem;">Percentage paid to non-winning tokens each month</p>
+            </div>
+            <div class="form-group">
+                <label>Winner Multiplier</label>
+                <input type="number" value="2" min="1" step="0.1">
+                <p style="font-size: 0.875rem; color: #6B7280; margin-top: 0.25rem;">Multiplier for winning tokens (e.g., 2x = double the token price)</p>
+            </div>
+            <button class="btn btn-admin">Save Pool Settings</button>
+        </div>
+
+        <!-- Payment Settings -->
+        <div class="card" style="margin-top: 1.5rem;">
+            <h3>Payment Settings</h3>
+            <div class="form-group">
+                <label>Minimum Token Purchase</label>
+                <input type="number" value="1" min="1">
+            </div>
+            <div class="form-group">
+                <label>Maximum Token Purchase</label>
+                <input type="number" value="50" min="1">
+            </div>
+            <div class="form-group">
+                <label>Payment Methods</label>
+                <div style="margin-top: 0.5rem;">
+                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" checked> UPI
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" checked> Bank Transfer
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox" checked> Credit/Debit Card
+                    </label>
+                    <label style="display: flex; align-items: center; gap: 0.5rem;">
+                        <input type="checkbox"> Wallet
+                    </label>
+                </div>
+            </div>
+            <button class="btn btn-admin">Save Payment Settings</button>
+        </div>
+
+        <!-- Security Settings -->
+        <div class="card" style="margin-top: 1.5rem;">
+            <h3>Security Settings</h3>
+            <div class="form-group">
+                <label>Session Timeout (minutes)</label>
+                <input type="number" value="30" min="5">
+            </div>
+            <div class="form-group">
+                <label>Password Reset Link Expiry (hours)</label>
+                <input type="number" value="24" min="1">
+            </div>
+            <div class="form-group">
+                <label>Two-Factor Authentication</label>
+                <select>
+                    <option>Optional</option>
+                    <option>Required for Admin</option>
+                    <option>Required for All Users</option>
+                </select>
+            </div>
+            <button class="btn btn-admin">Save Security Settings</button>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION (Mobile - Admin) -->
+    <nav class="bottom-nav">
+        <a href="admin-dashboard.html" data-page="admin-dashboard">
+            <div class="nav-icon"></div>
+            <span>Dashboard</span>
+        </a>
+        <a href="admin-pools.html" data-page="admin-pools">
+            <div class="nav-icon"></div>
+            <span>Pools</span>
+        </a>
+        <a href="admin-results.html" data-page="admin-results">
+            <div class="nav-icon"></div>
+            <span>Draws</span>
+        </a>
+        <a href="admin-users.html" data-page="admin-users">
+            <div class="nav-icon"></div>
+            <span>Users</span>
+        </a>
+        <a href="admin-settings.html" data-page="admin-settings" class="active">
+            <div class="nav-icon"></div>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

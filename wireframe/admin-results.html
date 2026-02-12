@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Draw - Admin Panel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header admin-header">
+        <div class="header-content">
+            <a href="admin-dashboard.html" class="logo">Admin Panel</a>
+            <nav class="nav-links">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="admin-pools.html">Pools</a>
+                <a href="admin-results.html">Draws</a>
+                <a href="admin-users.html">Users</a>
+                <a href="admin-transactions.html">Transactions</a>
+                <a href="admin-reports.html">Reports</a>
+                <a href="admin-settings.html">Settings</a>
+                <a href="index.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Record Monthly Draw</h1>
+        <p style="color: #6B7280; margin-bottom: 1.5rem;">Manually add draw event details after conducting the draw offline</p>
+        
+        <div class="card">
+            <h2>Add Draw Event</h2>
+            <form>
+                <div class="form-group">
+                    <label for="draw-pool-select">Pool</label>
+                    <select id="draw-pool-select">
+                        <option>Pool #001</option>
+                        <option>Pool #002</option>
+                        <option>Pool #003</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="draw-month">Month Number</label>
+                    <input type="number" id="draw-month" placeholder="6" min="1" step="1">
+                    <p style="font-size: 0.875rem; color: #6B7280; margin-top: 0.25rem;">Which month of the pool (e.g. Month 6 of 50)</p>
+                </div>
+                <div class="form-group">
+                    <label for="draw-date">Draw Date</label>
+                    <input type="date" id="draw-date">
+                </div>
+                <div class="form-group">
+                    <label for="draw-time">Draw Time</label>
+                    <input type="time" id="draw-time" value="18:00">
+                </div>
+                <div class="form-group">
+                    <label for="draw-winners">Winning Token Numbers</label>
+                    <textarea id="draw-winners" rows="3" placeholder="Enter winning token numbers, one per line or comma-separated&#10;Example: 19, 88, 145, 198, 239, 275&#10;or: #019, #088, #145, #198, #239, #275"></textarea>
+                    <p style="font-size: 0.875rem; color: #6B7280; margin-top: 0.25rem;">Enter the token numbers that won 2x payout. One per line or comma-separated.</p>
+                </div>
+                <div class="form-group">
+                    <label for="draw-notes">Notes (Optional)</label>
+                    <input type="text" id="draw-notes" placeholder="e.g. Conducted at office, verified by manager">
+                </div>
+                <button type="button" class="btn btn-admin" onclick="alert('Draw event recorded successfully!')">Record Draw Event</button>
+            </form>
+        </div>
+
+        <!-- Recorded Draw Events -->
+        <div class="card" style="margin-top: 2rem;">
+            <h2>Recorded Draw Events</h2>
+            <div style="margin-top: 1rem;">
+                <div style="padding: 1rem; border: 1px solid #E5E7EB; border-radius: 6px; margin-bottom: 0.5rem;">
+                    <h3>Pool #001 - Month 5</h3>
+                    <p style="color: #6B7280; margin-top: 0.5rem;">Draw Date: March 1, 2026</p>
+                    <p style="margin-top: 0.5rem;"><strong>Winners:</strong> Tokens #019, #088, #145, #198, #239, #275</p>
+                    <p style="margin-top: 0.5rem;"><strong>Total Payout:</strong> ₹5,20,500</p>
+                </div>
+                <div style="padding: 1rem; border: 1px solid #E5E7EB; border-radius: 6px; margin-bottom: 0.5rem;">
+                    <h3>Pool #001 - Month 4</h3>
+                    <p style="color: #6B7280; margin-top: 0.5rem;">Draw Date: February 1, 2026</p>
+                    <p style="margin-top: 0.5rem;"><strong>Winners:</strong> Tokens #056, #102, #178, #223, #247, #291</p>
+                    <p style="margin-top: 0.5rem;"><strong>Total Payout:</strong> ₹5,20,500</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION (Mobile - Admin) -->
+    <nav class="bottom-nav">
+        <a href="admin-dashboard.html" data-page="admin-dashboard">
+            <div class="nav-icon"></div>
+            <span>Dashboard</span>
+        </a>
+        <a href="admin-pools.html" data-page="admin-pools">
+            <div class="nav-icon"></div>
+            <span>Pools</span>
+        </a>
+        <a href="admin-results.html" data-page="admin-results" class="active">
+            <div class="nav-icon"></div>
+            <span>Draws</span>
+        </a>
+        <a href="admin-users.html" data-page="admin-users">
+            <div class="nav-icon"></div>
+            <span>Users</span>
+        </a>
+        <a href="admin-settings.html" data-page="admin-settings">
+            <div class="nav-icon"></div>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

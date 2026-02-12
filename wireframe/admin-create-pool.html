@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Pool - Admin Panel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header admin-header">
+        <div class="header-content">
+            <a href="admin-dashboard.html" class="logo">Admin Panel</a>
+            <nav class="nav-links">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="admin-pools.html">Pools</a>
+                <a href="admin-results.html">Draws</a>
+                <a href="admin-users.html">Users</a>
+                <a href="admin-transactions.html">Transactions</a>
+                <a href="admin-reports.html">Reports</a>
+                <a href="admin-settings.html">Settings</a>
+                <a href="index.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Create New Pool</h1>
+        
+        <div class="card">
+            <h2>Pool Configuration</h2>
+            <form>
+                <div class="form-group">
+                    <label for="admin-token-price">Token Price (₹)</label>
+                    <input type="number" id="admin-token-price" placeholder="25000" min="1000" step="1" value="">
+                    <p style="font-size: 0.875rem; color: #6B7280; margin-top: 0.25rem;">One-time payment amount per token (integers only)</p>
+                </div>
+                <div class="form-group">
+                    <label for="admin-total-tokens">Total Tokens</label>
+                    <input type="number" id="admin-total-tokens" placeholder="300" min="10" step="1" value="">
+                    <p style="font-size: 0.875rem; color: #6B7280; margin-top: 0.25rem;">Total number of tokens in the pool (integers only)</p>
+                </div>
+                <div class="form-group">
+                    <label for="admin-duration">Duration (months)</label>
+                    <input type="number" id="admin-duration" placeholder="50" min="1" step="1" value="">
+                    <p style="font-size: 0.875rem; color: #6B7280; margin-top: 0.25rem;">Total pool duration. Auto-calculated if you enter Monthly Winners: Duration = Total Tokens ÷ Monthly Winners</p>
+                </div>
+                <div class="form-group">
+                    <label for="admin-monthly-winners">Monthly Winners</label>
+                    <input type="number" id="admin-monthly-winners" placeholder="6" min="1" step="1" value="">
+                    <p style="font-size: 0.875rem; color: #6B7280; margin-top: 0.25rem;">Tokens that win 2x each month. Auto-calculated if you enter Duration: Monthly Winners = Total Tokens ÷ Duration</p>
+                    <p id="pool-params-error" style="font-size: 0.875rem; color: #c00; margin-top: 0.25rem; display: none;"></p>
+                </div>
+                <div class="form-group">
+                    <label for="admin-pool-name">Pool Name (Optional)</label>
+                    <input type="text" id="admin-pool-name" placeholder="Pool #004">
+                </div>
+                <div class="card" style="background-color: #f9f9f9; margin-top: 1rem;">
+                    <h3>Pool Summary</h3>
+                    <div style="margin-top: 0.5rem;">
+                        <p style="margin-bottom: 0.5rem;">
+                            <strong>Total Pool Value:</strong> ₹<span id="pool-value-preview">-</span>
+                        </p>
+                        <p style="margin-bottom: 0.5rem;">
+                            <strong>Monthly Winner Payout:</strong> ₹<span id="winner-payout-preview">-</span> each (2x token price)
+                        </p>
+                        <p style="margin-bottom: 0.5rem;">
+                            <strong>Regular Token Payout:</strong> ₹<span id="regular-payout-preview">-</span> each (3% of token price)
+                        </p>
+                        <p style="margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid #E5E7EB; color: #6B7280; font-size: 0.875rem;">
+                            <strong>Payment Model:</strong> One-time payment per token
+                        </p>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-admin" onclick="alert('Pool created successfully!')">Create Pool</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION (Mobile - Admin) -->
+    <nav class="bottom-nav">
+        <a href="admin-dashboard.html" data-page="admin-dashboard">
+            <div class="nav-icon"></div>
+            <span>Dashboard</span>
+        </a>
+        <a href="admin-pools.html" data-page="admin-pools" class="active">
+            <div class="nav-icon"></div>
+            <span>Pools</span>
+        </a>
+        <a href="admin-results.html" data-page="admin-results">
+            <div class="nav-icon"></div>
+            <span>Draws</span>
+        </a>
+        <a href="admin-users.html" data-page="admin-users">
+            <div class="nav-icon"></div>
+            <span>Users</span>
+        </a>
+        <a href="admin-settings.html" data-page="admin-settings">
+            <div class="nav-icon"></div>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Force integer input - reject floating points
+        function enforceInteger(inputEl) {
+            var val = inputEl.value;
+            if (val === '' || val === '-') return;
+            var num = parseFloat(val);
+            if (isNaN(num) || num % 1 !== 0) {
+                inputEl.value = Math.floor(num) || '';
+            } else if (num < 0) {
+                inputEl.value = '';
+            } else {
+                inputEl.value = parseInt(num, 10);
+            }
+        }
+
+        // Update Duration, Monthly Winners, and Pool Summary
+        // Supports: Total+Duration → Monthly Winners   OR   Total+Monthly Winners → Duration
+        var lastChanged = 'duration'; // which field user last edited
+
+        function updatePoolParamsAndSummary() {
+            var totalTokensInput = document.getElementById('admin-total-tokens');
+            var durationInput = document.getElementById('admin-duration');
+            var monthlyWinnersInput = document.getElementById('admin-monthly-winners');
+            var errorEl = document.getElementById('pool-params-error');
+
+            var totalTokens = parseInt(totalTokensInput.value, 10);
+            var duration = parseInt(durationInput.value, 10);
+            var monthlyWinners = parseInt(monthlyWinnersInput.value, 10);
+
+            errorEl.style.display = 'none';
+            errorEl.textContent = '';
+
+            if (isNaN(totalTokens) || totalTokens < 1) {
+                durationInput.value = '';
+                monthlyWinnersInput.value = '';
+                calculatePoolSummary();
+                return;
+            }
+
+            if (lastChanged === 'duration' && !isNaN(duration) && duration >= 1) {
+                // User edited Duration: Monthly Winners = Total Tokens ÷ Duration
+                if (totalTokens % duration !== 0) {
+                    errorEl.textContent = 'Total Tokens must be divisible by Duration. Example: 300 ÷ 50 = 6.';
+                    errorEl.style.display = 'block';
+                    monthlyWinnersInput.value = '';
+                } else {
+                    monthlyWinnersInput.value = totalTokens / duration;
+                }
+            } else if (lastChanged === 'monthlyWinners' && !isNaN(monthlyWinners) && monthlyWinners >= 1) {
+                // User edited Monthly Winners: Duration = Total Tokens ÷ Monthly Winners
+                if (totalTokens % monthlyWinners !== 0) {
+                    errorEl.textContent = 'Total Tokens must be divisible by Monthly Winners. Example: 300 ÷ 6 = 50.';
+                    errorEl.style.display = 'block';
+                    durationInput.value = '';
+                } else {
+                    durationInput.value = totalTokens / monthlyWinners;
+                }
+            } else {
+                durationInput.value = '';
+                monthlyWinnersInput.value = '';
+            }
+
+            calculatePoolSummary();
+        }
+
+        // Calculate Pool Summary
+        function calculatePoolSummary() {
+            var tokenPriceInput = document.getElementById('admin-token-price');
+            var totalTokensInput = document.getElementById('admin-total-tokens');
+            var tokenPriceStr = tokenPriceInput.value.trim();
+            var totalTokensStr = totalTokensInput.value.trim();
+            var tokenPrice = parseInt(tokenPriceStr, 10);
+            var totalTokens = parseInt(totalTokensStr, 10);
+
+            var formatCurrency = function(value) {
+                if (isNaN(value) || value === 0) return '-';
+                return value.toLocaleString('en-IN', { maximumFractionDigits: 0, minimumFractionDigits: 0 });
+            };
+
+            if (tokenPriceStr && totalTokensStr && !isNaN(tokenPrice) && !isNaN(totalTokens) && tokenPrice > 0 && totalTokens > 0) {
+                var totalPoolValue = tokenPrice * totalTokens;
+                var winnerPayout = tokenPrice * 2;
+                var regularPayout = Math.round(tokenPrice * 0.03);
+                document.getElementById('pool-value-preview').textContent = formatCurrency(totalPoolValue);
+                document.getElementById('winner-payout-preview').textContent = formatCurrency(winnerPayout);
+                document.getElementById('regular-payout-preview').textContent = formatCurrency(regularPayout);
+            } else {
+                document.getElementById('pool-value-preview').textContent = '-';
+                document.getElementById('winner-payout-preview').textContent = '-';
+                document.getElementById('regular-payout-preview').textContent = '-';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var tokenPriceInput = document.getElementById('admin-token-price');
+            var totalTokensInput = document.getElementById('admin-total-tokens');
+            var durationInput = document.getElementById('admin-duration');
+            var monthlyWinnersInput = document.getElementById('admin-monthly-winners');
+
+            function onTokenPriceInput() {
+                enforceInteger(tokenPriceInput);
+                calculatePoolSummary();
+            }
+            function onTotalTokensInput() {
+                enforceInteger(totalTokensInput);
+                updatePoolParamsAndSummary();
+            }
+            function onDurationInput() {
+                enforceInteger(durationInput);
+                lastChanged = 'duration';
+                updatePoolParamsAndSummary();
+            }
+            function onMonthlyWinnersInput() {
+                enforceInteger(monthlyWinnersInput);
+                lastChanged = 'monthlyWinners';
+                updatePoolParamsAndSummary();
+            }
+
+            tokenPriceInput.addEventListener('input', onTokenPriceInput);
+            tokenPriceInput.addEventListener('change', onTokenPriceInput);
+            totalTokensInput.addEventListener('input', onTotalTokensInput);
+            totalTokensInput.addEventListener('change', onTotalTokensInput);
+            durationInput.addEventListener('input', onDurationInput);
+            durationInput.addEventListener('change', onDurationInput);
+            monthlyWinnersInput.addEventListener('input', onMonthlyWinnersInput);
+            monthlyWinnersInput.addEventListener('change', onMonthlyWinnersInput);
+
+            updatePoolParamsAndSummary();
+        });
+    </script>
+</body>
+</html>

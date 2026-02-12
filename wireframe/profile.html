@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - PSIP</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="dashboard.html" class="logo">PSIP</a>
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="pools.html">Pools</a>
+                <a href="wallet.html">Wallet</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Profile</h1>
+        
+        <!-- User Info -->
+        <div class="card">
+            <h3>Personal Information</h3>
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" value="John Doe" readonly style="background-color: #f9f9f9;">
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" value="john.doe@example.com" readonly style="background-color: #f9f9f9;">
+            </div>
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" value="+91 98765 43210" readonly style="background-color: #f9f9f9;">
+            </div>
+            <button type="button" class="btn btn-outline">Edit Profile</button>
+        </div>
+
+        <!-- KYC Status -->
+        <div class="card">
+            <h3>KYC Status</h3>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem;">
+                <div>
+                    <strong>Verification Status</strong><br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">Documents verified</span>
+                </div>
+                <span class="badge badge-success">Verified</span>
+            </div>
+            <button type="button" class="btn btn-outline" style="margin-top: 1rem;">Update KYC</button>
+        </div>
+
+        <!-- Introducers by Pool -->
+        <div class="card">
+            <h3>Introducers by Pool</h3>
+            <p style="color: #6B7280; font-size: 0.875rem; margin-bottom: 1rem;">People who introduced you to each pool</p>
+            <div style="margin-top: 0.75rem;">
+                <div style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <strong>Pool #001</strong><br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">Rajesh Kumar (UID-000789)</span>
+                </div>
+                <div style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <strong>Pool #002</strong><br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">Priya Sharma (UID-001012)</span>
+                </div>
+                <div style="padding: 0.75rem 0;">
+                    <strong>Pool #003</strong><br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">Amit Patel (UID-000456)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bank Details -->
+        <div class="card">
+            <h3>Bank Details</h3>
+            <div style="margin-top: 1rem;">
+                <div style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <span style="color: #6B7280; font-size: 0.875rem;">Account Holder</span><br>
+                    <strong>John Doe</strong>
+                </div>
+                <div style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <span style="color: #6B7280; font-size: 0.875rem;">Account Number</span><br>
+                    <strong>****1234</strong>
+                </div>
+                <div style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <span style="color: #6B7280; font-size: 0.875rem;">IFSC Code</span><br>
+                    <strong>HDFC0001234</strong>
+                </div>
+                <div style="padding: 0.75rem 0;">
+                    <span style="color: #6B7280; font-size: 0.875rem;">Bank Name</span><br>
+                    <strong>HDFC Bank</strong>
+                </div>
+            </div>
+            <button type="button" class="btn btn-outline" style="margin-top: 1rem;">Update Bank Details</button>
+        </div>
+
+        <!-- Logout -->
+        <a href="index.html" class="btn btn-secondary" style="margin-top: 2rem;">Logout</a>
+    </div>
+
+    <!-- BOTTOM NAVIGATION (Mobile) -->
+    <nav class="bottom-nav">
+        <a href="dashboard.html" data-page="dashboard">
+            <div class="nav-icon"></div>
+            <span>Home</span>
+        </a>
+        <a href="pools.html" data-page="pools">
+            <div class="nav-icon"></div>
+            <span>Pools</span>
+        </a>
+        <a href="wallet.html" data-page="wallet">
+            <div class="nav-icon"></div>
+            <span>Wallet</span>
+        </a>
+        <a href="profile.html" data-page="profile" class="active">
+            <div class="nav-icon"></div>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

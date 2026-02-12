@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions - Admin Panel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header admin-header">
+        <div class="header-content">
+            <a href="admin-dashboard.html" class="logo">Admin Panel</a>
+            <nav class="nav-links">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="admin-pools.html">Pools</a>
+                <a href="admin-results.html">Draws</a>
+                <a href="admin-users.html">Users</a>
+                <a href="admin-transactions.html">Transactions</a>
+                <a href="admin-reports.html">Reports</a>
+                <a href="admin-settings.html">Settings</a>
+                <a href="index.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Transaction Management</h1>
+        
+        <!-- Filters -->
+        <div class="card">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label>Date From</label>
+                    <input type="date" value="2026-01-01">
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label>Date To</label>
+                    <input type="date" value="2026-03-31">
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label>Transaction Type</label>
+                    <select>
+                        <option>All Types</option>
+                        <option>Token Purchase</option>
+                        <option>Winner Payout</option>
+                        <option>Monthly Payout</option>
+                        <option>Deposit</option>
+                        <option>Withdrawal</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label>Pool</label>
+                    <select>
+                        <option>All Pools</option>
+                        <option>Pool #001</option>
+                        <option>Pool #002</option>
+                        <option>Pool #003</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn btn-admin" style="margin-top: 1rem;">Apply Filters</button>
+        </div>
+
+        <!-- Summary Stats -->
+        <div class="stats-grid" style="margin-top: 1.5rem;">
+            <div class="stat-card">
+                <div class="stat-value">₹1,79,25,000</div>
+                <div class="stat-label">Total Revenue</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">₹26,02,500</div>
+                <div class="stat-label">Total Payouts</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">₹1,53,22,500</div>
+                <div class="stat-label">Net Balance</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">1,245</div>
+                <div class="stat-label">Total Transactions</div>
+            </div>
+        </div>
+
+        <!-- Transactions Table -->
+        <div class="card" style="overflow-x: auto;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <h3>All Transactions</h3>
+                <button class="btn btn-outline" style="width: auto; padding: 0.5rem 1rem;">Export CSV</button>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Transaction ID</th>
+                        <th>User</th>
+                        <th>Type</th>
+                        <th>Pool</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mar 2, 2026</td>
+                        <td>TXN-001234</td>
+                        <td>John Doe</td>
+                        <td>Monthly Payout</td>
+                        <td>Pool #001</td>
+                        <td>+₹750</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                        <td><a href="#" class="link">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>Mar 1, 2026</td>
+                        <td>TXN-001233</td>
+                        <td>Jane Smith</td>
+                        <td>Winner Payout</td>
+                        <td>Pool #001</td>
+                        <td>+₹50,000</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                        <td><a href="#" class="link">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>Feb 28, 2026</td>
+                        <td>TXN-001232</td>
+                        <td>Bob Johnson</td>
+                        <td>Token Purchase</td>
+                        <td>Pool #002</td>
+                        <td>-₹30,000</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                        <td><a href="#" class="link">View</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION (Mobile - Admin) -->
+    <nav class="bottom-nav">
+        <a href="admin-dashboard.html" data-page="admin-dashboard">
+            <div class="nav-icon"></div>
+            <span>Dashboard</span>
+        </a>
+        <a href="admin-pools.html" data-page="admin-pools">
+            <div class="nav-icon"></div>
+            <span>Pools</span>
+        </a>
+        <a href="admin-results.html" data-page="admin-results">
+            <div class="nav-icon"></div>
+            <span>Draws</span>
+        </a>
+        <a href="admin-users.html" data-page="admin-users">
+            <div class="nav-icon"></div>
+            <span>Users</span>
+        </a>
+        <a href="admin-settings.html" data-page="admin-settings">
+            <div class="nav-icon"></div>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

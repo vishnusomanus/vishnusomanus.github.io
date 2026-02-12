@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details - Admin Panel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header admin-header">
+        <div class="header-content">
+            <a href="admin-dashboard.html" class="logo">Admin Panel</a>
+            <nav class="nav-links">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="admin-pools.html">Pools</a>
+                <a href="admin-results.html">Draws</a>
+                <a href="admin-users.html">Users</a>
+                <a href="admin-transactions.html">Transactions</a>
+                <a href="admin-reports.html">Reports</a>
+                <a href="admin-settings.html">Settings</a>
+                <a href="index.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>User Details</h1>
+        
+        <!-- User Info -->
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                <div>
+                    <h2>John Doe</h2>
+                    <p style="color: #6B7280;">User ID: UID-001234</p>
+                </div>
+                <span class="badge badge-success">Verified</span>
+            </div>
+            <div style="margin-top: 1rem;">
+                <div style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <span style="color: #6B7280; font-size: 0.875rem;">Email</span><br>
+                    <strong>john.doe@example.com</strong>
+                </div>
+                <div style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <span style="color: #6B7280; font-size: 0.875rem;">Phone</span><br>
+                    <strong>+91 98765 43210</strong>
+                </div>
+                <div style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <span style="color: #6B7280; font-size: 0.875rem;">Registration Date</span><br>
+                    <strong>January 5, 2026</strong>
+                </div>
+                <div style="padding: 0.75rem 0;">
+                    <span style="color: #6B7280; font-size: 0.875rem;">KYC Status</span><br>
+                    <span class="badge badge-success">Verified</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Investment Summary -->
+        <div class="card">
+            <h3>Investment Summary</h3>
+            <div class="stats-grid" style="margin-top: 1rem;">
+                <div class="stat-card">
+                    <div class="stat-value">12</div>
+                    <div class="stat-label">Total Tokens</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">₹3,00,000</div>
+                    <div class="stat-label">Total Invested</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">₹50,000</div>
+                    <div class="stat-label">Total Earnings</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Active Pools</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Introducers by Pool -->
+        <div class="card">
+            <h3>Introducers by Pool</h3>
+            <p style="color: #6B7280; font-size: 0.875rem; margin-bottom: 1rem;">Who introduced this user to each pool</p>
+            <div style="margin-top: 0.75rem;">
+                <div style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <strong>Pool #001</strong><br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">Rajesh Kumar (UID-000789)</span>
+                </div>
+                <div style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <strong>Pool #002</strong><br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">Priya Sharma (UID-001012)</span>
+                </div>
+                <div style="padding: 0.75rem 0;">
+                    <strong>Pool #003</strong><br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">Amit Patel (UID-000456)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Token Holdings -->
+        <div class="card">
+            <h3>Token Holdings</h3>
+            <div style="margin-top: 1rem;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Pool</th>
+                            <th>Tokens</th>
+                            <th>Investment</th>
+                            <th>Wins</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pool #001</td>
+                            <td>8</td>
+                            <td>₹2,00,000</td>
+                            <td>2 (Month 1)</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td>Pool #002</td>
+                            <td>3</td>
+                            <td>₹90,000</td>
+                            <td>0</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td>Pool #003</td>
+                            <td>1</td>
+                            <td>₹20,000</td>
+                            <td>0</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Transaction History -->
+        <div class="card">
+            <h3>Transaction History</h3>
+            <div style="margin-top: 1rem;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mar 2, 2026</td>
+                            <td>Payout</td>
+                            <td>+₹750</td>
+                            <td><span class="badge badge-success">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Feb 2, 2026</td>
+                            <td>Winner Payout</td>
+                            <td>+₹50,000</td>
+                            <td><span class="badge badge-success">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>Jan 15, 2026</td>
+                            <td>Token Purchase</td>
+                            <td>-₹2,00,000</td>
+                            <td><span class="badge badge-success">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+            <button class="btn btn-outline" style="flex: 1;">Edit User</button>
+            <button class="btn btn-outline" style="flex: 1;">Suspend Account</button>
+            <a href="admin-users.html" class="btn btn-outline" style="flex: 1;">Back to Users</a>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION (Mobile - Admin) -->
+    <nav class="bottom-nav">
+        <a href="admin-dashboard.html" data-page="admin-dashboard">
+            <div class="nav-icon"></div>
+            <span>Dashboard</span>
+        </a>
+        <a href="admin-pools.html" data-page="admin-pools">
+            <div class="nav-icon"></div>
+            <span>Pools</span>
+        </a>
+        <a href="admin-results.html" data-page="admin-results">
+            <div class="nav-icon"></div>
+            <span>Draws</span>
+        </a>
+        <a href="admin-users.html" data-page="admin-users" class="active">
+            <div class="nav-icon"></div>
+            <span>Users</span>
+        </a>
+        <a href="admin-settings.html" data-page="admin-settings">
+            <div class="nav-icon"></div>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pool Details - Admin Panel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header admin-header">
+        <div class="header-content">
+            <a href="admin-dashboard.html" class="logo">Admin Panel</a>
+            <nav class="nav-links">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="admin-pools.html">Pools</a>
+                <a href="admin-results.html">Draws</a>
+                <a href="admin-users.html">Users</a>
+                <a href="admin-transactions.html">Transactions</a>
+                <a href="admin-reports.html">Reports</a>
+                <a href="admin-settings.html">Settings</a>
+                <a href="index.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Pool #001 - Details</h1>
+        
+        <!-- Pool Overview -->
+        <div class="card">
+            <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                <div>
+                    <h2>Pool #001</h2>
+                    <p style="color: #6B7280;">Started: January 1, 2026</p>
+                </div>
+                <span class="badge badge-success">Active</span>
+            </div>
+            <div class="pool-info" style="border-top: none; padding-top: 0;">
+                <div class="info-item">
+                    <span class="info-label">Token Price</span>
+                    <span class="info-value">₹25,000</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Total Tokens</span>
+                    <span class="info-value">300</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Tokens Sold</span>
+                    <span class="info-value">245</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Remaining</span>
+                    <span class="info-value">55</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Current Month</span>
+                    <span class="info-value">5/50</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Total Revenue</span>
+                    <span class="info-value">₹61,25,000</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress -->
+        <div class="card">
+            <h3>Pool Progress</h3>
+            <div class="progress-bar" style="margin-top: 1rem;">
+                <div class="progress-fill" style="width: 10%;">10%</div>
+            </div>
+            <p style="margin-top: 0.5rem; color: #6B7280;">
+                <strong>Sales Progress:</strong> 81.67% tokens sold<br>
+                <strong>Time Progress:</strong> 10% completed (5 of 50 months)
+            </p>
+        </div>
+
+        <!-- Financial Summary -->
+        <div class="card">
+            <h3>Financial Summary</h3>
+            <div style="margin-top: 1rem;">
+                <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <span>Total Revenue Collected:</span>
+                    <span><strong>₹61,25,000</strong></span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <span>Total Payouts Distributed:</span>
+                    <span><strong>₹26,02,500</strong></span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <span>This Month Payout:</span>
+                    <span><strong>₹5,20,500</strong></span>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; font-weight: bold;">
+                    <span>Net Balance:</span>
+                    <span>₹35,22,500</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Token Holders -->
+        <div class="card">
+            <h3>Top Token Holders</h3>
+            <div style="margin-top: 1rem;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Tokens</th>
+                            <th>Investment</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>John Doe</td>
+                            <td>12</td>
+                            <td>₹3,00,000</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td>Jane Smith</td>
+                            <td>10</td>
+                            <td>₹2,50,000</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                        </tr>
+                        <tr>
+                            <td>Bob Johnson</td>
+                            <td>8</td>
+                            <td>₹2,00,000</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Draw History -->
+        <div class="card">
+            <h3>Draw History</h3>
+            <div style="margin-top: 1rem;">
+                <div style="padding: 1rem; border: 1px solid #E5E7EB; border-radius: 6px; margin-bottom: 0.5rem;">
+                    <strong>Month 5</strong> - March 1, 2026<br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">Winners: #019, #088, #145, #198, #239, #275</span>
+                </div>
+                <div style="padding: 1rem; border: 1px solid #E5E7EB; border-radius: 6px; margin-bottom: 0.5rem;">
+                    <strong>Month 4</strong> - February 1, 2026<br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">Winners: #056, #102, #178, #223, #247, #291</span>
+                </div>
+                <div style="padding: 1rem; border: 1px solid #E5E7EB; border-radius: 6px;">
+                    <strong>Month 3</strong> - January 1, 2026<br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">Winners: #034, #091, #167, #212, #256, #278</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Actions -->
+        <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+            <a href="admin-results.html" class="btn btn-admin" style="flex: 1;">Conduct Next Draw</a>
+            <button class="btn btn-outline" style="flex: 1;">Export Data</button>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION (Mobile - Admin) -->
+    <nav class="bottom-nav">
+        <a href="admin-dashboard.html" data-page="admin-dashboard">
+            <div class="nav-icon"></div>
+            <span>Dashboard</span>
+        </a>
+        <a href="admin-pools.html" data-page="admin-pools" class="active">
+            <div class="nav-icon"></div>
+            <span>Pools</span>
+        </a>
+        <a href="admin-results.html" data-page="admin-results">
+            <div class="nav-icon"></div>
+            <span>Draws</span>
+        </a>
+        <a href="admin-users.html" data-page="admin-users">
+            <div class="nav-icon"></div>
+            <span>Users</span>
+        </a>
+        <a href="admin-settings.html" data-page="admin-settings">
+            <div class="nav-icon"></div>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

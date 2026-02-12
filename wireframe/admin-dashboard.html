@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - PSIP</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header admin-header">
+        <div class="header-content">
+            <a href="admin-dashboard.html" class="logo">Admin Panel</a>
+            <nav class="nav-links">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="admin-pools.html">Pools</a>
+                <a href="admin-results.html">Draws</a>
+                <a href="admin-users.html">Users</a>
+                <a href="admin-transactions.html">Transactions</a>
+                <a href="admin-reports.html">Reports</a>
+                <a href="admin-settings.html">Settings</a>
+                <a href="index.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Admin Dashboard</h1>
+        
+        <!-- Admin Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">3</div>
+                <div class="stat-label">Active Pools</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">950</div>
+                <div class="stat-label">Total Tokens</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">745</div>
+                <div class="stat-label">Sold Tokens</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">₹1,86,25,000</div>
+                <div class="stat-label">Total Pool Value</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">1,250</div>
+                <div class="stat-label">Total Users</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">₹5,20,500</div>
+                <div class="stat-label">This Month Payouts</div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <h2 style="margin-top: 2rem;">Quick Actions</h2>
+        <div class="actions-grid">
+            <a href="admin-create-pool.html" class="action-btn">
+                <div class="action-icon action-icon-add"></div>
+                <span>Create Pool</span>
+            </a>
+            <a href="admin-pools.html" class="action-btn">
+                <div class="action-icon action-icon-pools"></div>
+                <span>Manage Pools</span>
+            </a>
+            <a href="admin-results.html" class="action-btn">
+                <div class="action-icon action-icon-draw"></div>
+                <span>Conduct Draw</span>
+            </a>
+            <a href="admin-users.html" class="action-btn">
+                <div class="action-icon action-icon-users"></div>
+                <span>View Users</span>
+            </a>
+            <a href="admin-transactions.html" class="action-btn">
+                <div class="action-icon action-icon-wallet"></div>
+                <span>Transactions</span>
+            </a>
+            <a href="admin-reports.html" class="action-btn">
+                <div class="action-icon action-icon-reports"></div>
+                <span>Reports</span>
+            </a>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="card" style="margin-top: 2rem;">
+            <h3>Recent Activity</h3>
+            <div style="margin-top: 1rem;">
+                <p style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <strong>Pool Created</strong><br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">Pool #003 created - 400 tokens at ₹20,000</span>
+                </p>
+                <p style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <strong>Monthly Draw Completed</strong><br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">Pool #001 - Month 5 draw completed</span>
+                </p>
+                <p style="padding: 0.75rem 0;">
+                    <strong>New User Registration</strong><br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">25 new users registered today</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION (Mobile - Admin) -->
+    <nav class="bottom-nav">
+        <a href="admin-dashboard.html" data-page="admin-dashboard" class="active">
+            <div class="nav-icon"></div>
+            <span>Dashboard</span>
+        </a>
+        <a href="admin-pools.html" data-page="admin-pools">
+            <div class="nav-icon"></div>
+            <span>Pools</span>
+        </a>
+        <a href="admin-results.html" data-page="admin-results">
+            <div class="nav-icon"></div>
+            <span>Draws</span>
+        </a>
+        <a href="admin-users.html" data-page="admin-users">
+            <div class="nav-icon"></div>
+            <span>Users</span>
+        </a>
+        <a href="admin-settings.html" data-page="admin-settings">
+            <div class="nav-icon"></div>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

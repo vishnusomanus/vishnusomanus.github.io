@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Buy Tokens - PSIP</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="dashboard.html" class="logo">PSIP</a>
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="pools.html">Pools</a>
+                <a href="wallet.html">Wallet</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Buy Tokens</h1>
+
+        <div class="card">
+            <a href="buy-token.html" class="link" style="display: inline-block; margin-bottom: 0.75rem; font-size: 0.875rem;">← Change pool</a>
+            <h3 id="pool-title">Pool #001</h3>
+            <p style="color: #6B7280; margin-bottom: 1rem;">Token price: <strong id="pool-price">₹25,000</strong> (one-time payment)</p>
+            <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 1.5rem;">Tokens sold: <span id="sold-text">245 of 300</span>. Next available: <span id="next-range">#246 to #300</span>. Max <span id="max-available">55</span> tokens in this pool.</p>
+
+            <div class="form-group">
+                <label for="token-count">Number of tokens</label>
+                <input type="number" id="token-count" min="1" value="1" max="55" oninput="calculateTotal(); updatePendingTokens();">
+                <p style="font-size: 0.875rem; color: #6B7280; margin-top: 0.25rem;">Max <span id="max-hint">55</span> tokens available</p>
+            </div>
+
+            <div class="card" style="background-color: #F3F6FB; border: 1px solid #E5E7EB;">
+                <h3 style="margin-bottom: 0.5rem;">Tokens you will receive</h3>
+                <p style="color: #6B7280; font-size: 0.875rem; margin-bottom: 0.75rem;">Token numbers allocated (pending until payment confirmed)</p>
+                <div id="pending-tokens" style="display: flex; flex-wrap: wrap; gap: 0.5rem; min-height: 2rem;">
+                    <span class="badge badge-pending">#246</span>
+                </div>
+            </div>
+
+            <div class="card" style="background-color: #F9FAFB; margin-top: 1rem; border: 1px solid #E5E7EB;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                    <span>Token price</span>
+                    <span id="line-price">₹25,000</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                    <span>Quantity</span>
+                    <span id="quantity-display">1</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1rem; padding-top: 0.5rem; border-top: 1px solid #E5E7EB;">
+                    <span>Total payable (one-time)</span>
+                    <span id="total-display">₹25,000</span>
+                </div>
+            </div>
+
+            <div style="background-color: #ECFDF5; padding: 1rem; border-radius: 12px; margin-top: 1rem; border: 1px solid #A7F3D0;">
+                <p style="font-size: 0.875rem; color: #065F46;">
+                    <strong>One-time payment:</strong> You pay this amount once. After purchase you receive monthly payouts (3% or 2x if you win).
+                </p>
+            </div>
+
+            <div class="form-group" style="margin-top: 1.5rem;">
+                <label for="introduced-by">Introduced by</label>
+                <input type="text" id="introduced-by" placeholder="Introducer name or referral ID">
+                <p style="font-size: 0.875rem; color: #6B7280; margin-top: 0.25rem;">Person who introduced you to this pool</p>
+            </div>
+
+            <div class="form-group" style="margin-top: 1.5rem;">
+                <label>Payment method</label>
+                <select>
+                    <option>Wallet balance</option>
+                    <option>UPI</option>
+                    <option>Bank transfer</option>
+                    <option>Credit / Debit card</option>
+                </select>
+            </div>
+
+            <button type="button" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;" onclick="confirmPurchase()">Confirm purchase (one-time payment)</button>
+        </div>
+
+        <div class="card" style="margin-top: 1rem;">
+            <h3>Terms & conditions</h3>
+            <ul style="list-style-position: inside; margin-top: 0.5rem; font-size: 0.875rem; color: #6B7280;">
+                <li>One-time payment per token – no recurring charges</li>
+                <li>Tokens are non-transferable</li>
+                <li>Monthly draws are conducted transparently</li>
+                <li>Payouts credited within 24 hours</li>
+                <li>Each token wins exactly once over pool duration</li>
+            </ul>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <a href="dashboard.html" data-page="dashboard">
+            <div class="nav-icon"></div>
+            <span>Home</span>
+        </a>
+        <a href="pools.html" data-page="pools">
+            <div class="nav-icon"></div>
+            <span>Pools</span>
+        </a>
+        <a href="wallet.html" data-page="wallet">
+            <div class="nav-icon"></div>
+            <span>Wallet</span>
+        </a>
+        <a href="profile.html" data-page="profile">
+            <div class="nav-icon"></div>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+    <script>
+        var poolData = {
+            '001': { price: 25000, sold: 245, total: 300, next: 246, maxAvailable: 55 },
+            '002': { price: 30000, sold: 70, total: 250, next: 71, maxAvailable: 180 },
+            '003': { price: 20000, sold: 80, total: 400, next: 81, maxAvailable: 320 }
+        };
+        function formatPrice(n) { return '₹' + n.toLocaleString('en-IN'); }
+        var poolId = '001';
+        var nextAvailableToken = 246;
+        var maxTokensAvailable = 55;
+        var tokenPrice = 25000;
+
+        function initPool() {
+            var match = /[?&]pool=(\d+)/.exec(location.search);
+            if (match && poolData[match[1]]) {
+                poolId = match[1];
+                var d = poolData[poolId];
+                tokenPrice = d.price;
+                nextAvailableToken = d.next;
+                maxTokensAvailable = d.maxAvailable;
+                document.getElementById('pool-title').textContent = 'Pool #' + poolId;
+                document.getElementById('pool-price').textContent = formatPrice(d.price);
+                document.getElementById('sold-text').textContent = d.sold + ' of ' + d.total;
+                document.getElementById('next-range').textContent = '#' + String(d.next).padStart(3, '0') + ' to #' + String(d.total).padStart(3, '0');
+                document.getElementById('max-available').textContent = d.maxAvailable;
+                document.getElementById('max-hint').textContent = d.maxAvailable;
+                document.getElementById('token-count').max = d.maxAvailable;
+                document.getElementById('line-price').textContent = formatPrice(d.price);
+            }
+        }
+
+        function updatePendingTokens() {
+            var count = parseInt(document.getElementById('token-count').value, 10) || 0;
+            if (count < 1) count = 1;
+            if (count > maxTokensAvailable) count = maxTokensAvailable;
+            document.getElementById('token-count').value = count;
+            document.getElementById('quantity-display').textContent = count;
+            var container = document.getElementById('pending-tokens');
+            container.innerHTML = '';
+            for (var i = 0; i < count; i++) {
+                var num = nextAvailableToken + i;
+                var span = document.createElement('span');
+                span.className = 'badge badge-pending';
+                span.textContent = '#' + String(num).padStart(3, '0');
+                container.appendChild(span);
+            }
+            calculateTotal();
+        }
+
+        function calculateTotal() {
+            var count = parseInt(document.getElementById('token-count').value, 10) || 0;
+            if (count < 1) count = 1;
+            if (count > maxTokensAvailable) count = maxTokensAvailable;
+            var total = tokenPrice * count;
+            document.getElementById('total-display').textContent = formatPrice(total);
+        }
+
+        function confirmPurchase() {
+            var count = parseInt(document.getElementById('token-count').value, 10) || 1;
+            var total = tokenPrice * count;
+            alert('Purchase confirmed for Pool #' + poolId + '. ₹' + total.toLocaleString('en-IN') + ' will be charged once.');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initPool();
+            updatePendingTokens();
+        });
+    </script>
+</body>
+</html>

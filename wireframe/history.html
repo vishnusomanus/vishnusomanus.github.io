@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History - PSIP</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="dashboard.html" class="logo">PSIP</a>
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="pools.html">Pools</a>
+                <a href="wallet.html">Wallet</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Transaction History</h1>
+        
+        <!-- Filter Tabs -->
+        <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; overflow-x: auto;">
+            <button class="btn btn-secondary" style="width: auto; padding: 0.5rem 1rem; font-size: 0.875rem;">All</button>
+            <button class="btn btn-outline" style="width: auto; padding: 0.5rem 1rem; font-size: 0.875rem;">Deposits</button>
+            <button class="btn btn-outline" style="width: auto; padding: 0.5rem 1rem; font-size: 0.875rem;">Payouts</button>
+            <button class="btn btn-outline" style="width: auto; padding: 0.5rem 1rem; font-size: 0.875rem;">Withdrawals</button>
+        </div>
+
+        <!-- Transactions Table -->
+        <div class="card" style="overflow-x: auto;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mar 2, 2026</td>
+                        <td>Credit</td>
+                        <td>Monthly 3% - Pool #001</td>
+                        <td>+₹750</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>Feb 2, 2026</td>
+                        <td>Credit</td>
+                        <td>Winner Payout - Token #045</td>
+                        <td>+₹50,000</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>Feb 1, 2026</td>
+                        <td>Credit</td>
+                        <td>Monthly 3% - Pool #001</td>
+                        <td>+₹750</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>Jan 15, 2026</td>
+                        <td>Debit</td>
+                        <td>Token Purchase - Pool #001 (2 tokens - One-time)</td>
+                        <td>-₹50,000</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>Jan 10, 2026</td>
+                        <td>Credit</td>
+                        <td>Deposit - Bank Transfer</td>
+                        <td>+₹1,00,000</td>
+                        <td><span class="badge badge-success">Completed</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION (Mobile) -->
+    <nav class="bottom-nav">
+        <a href="dashboard.html" data-page="dashboard">
+            <div class="nav-icon"></div>
+            <span>Home</span>
+        </a>
+        <a href="pools.html" data-page="pools">
+            <div class="nav-icon"></div>
+            <span>Pools</span>
+        </a>
+        <a href="wallet.html" data-page="wallet">
+            <div class="nav-icon"></div>
+            <span>Wallet</span>
+        </a>
+        <a href="profile.html" data-page="profile">
+            <div class="nav-icon"></div>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

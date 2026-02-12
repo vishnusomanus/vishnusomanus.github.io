@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design System - PSIP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: #F3F6FB;
+            color: #111827;
+            line-height: 1.5;
+            padding: 20px;
+            padding-bottom: 100px;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #111827;
+            margin-bottom: 1.5rem;
+        }
+        h2 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #111827;
+            margin: 2rem 0 1rem;
+        }
+        h3 {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #6B7280;
+            margin-bottom: 0.75rem;
+        }
+        p {
+            font-size: 0.875rem;
+            color: #6B7280;
+            margin-bottom: 0.5rem;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        /* COLOR SYSTEM */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        .color-swatch {
+            border-radius: 14px;
+            padding: 1rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #fff;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+            min-height: 60px;
+        }
+        .color-swatch.light {
+            color: #111827;
+        }
+        .color-swatch.border {
+            border: 1px solid #E5E7EB;
+        }
+
+        /* TYPOGRAPHY */
+        .typography-demo {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+            margin-bottom: 16px;
+        }
+        .text-heading { font-size: 1.25rem; font-weight: 600; }
+        .text-body { font-size: 0.875rem; font-weight: 400; }
+        .text-label { font-size: 0.75rem; font-weight: 500; color: #6B7280; }
+        .text-balance { font-size: 2rem; font-weight: 700; }
+
+        /* BUTTONS */
+        .btn-demo {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            margin-bottom: 12px;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #1E3A8A, #2563EB);
+            color: #FFFFFF;
+        }
+        .btn-success {
+            background: linear-gradient(135deg, #16A34A, #22C55E);
+            color: #FFFFFF;
+        }
+        .btn-outline {
+            background: transparent;
+            color: #1E3A8A;
+            border: 2px solid #2563EB;
+        }
+        .btn-secondary {
+            background: #E5E7EB;
+            color: #111827;
+        }
+
+        /* CARDS */
+        .card-demo {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+            margin-bottom: 16px;
+            border: 1px solid #E5E7EB;
+        }
+        .card-demo .card-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .card-demo .card-value {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+
+        /* DASHBOARD HEADER */
+        .dashboard-header-demo {
+            background: linear-gradient(135deg, #0F2C67, #1D4ED8);
+            border-radius: 16px;
+            padding: 20px;
+            color: #FFFFFF;
+            margin-bottom: 16px;
+        }
+        .dashboard-header-demo .balance {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #F59E0B;
+        }
+        .dashboard-header-demo .label {
+            font-size: 0.875rem;
+            opacity: 0.9;
+            margin-top: 0.25rem;
+        }
+
+        /* BOTTOM NAV */
+        .bottom-nav-demo {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 420px;
+            background: #FFFFFF;
+            border-radius: 16px 16px 0 0;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.06);
+            padding: 12px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .nav-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            text-decoration: none;
+            color: #6B7280;
+            font-size: 0.6875rem;
+            font-weight: 500;
+        }
+        .nav-item.active {
+            color: #2563EB;
+            font-weight: 600;
+        }
+        .nav-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 8px;
+        }
+        .nav-item.active .nav-icon {
+            /* Same SVG icon set as app – see styles.css .bottom-nav-demo */
+        }
+
+        /* STAT CARDS */
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        .stat-card {
+            background: #FFFFFF;
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+        .stat-card .value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #111827;
+        }
+        .stat-card .label {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #6B7280;
+            margin-top: 0.25rem;
+        }
+
+        /* BADGES */
+        .badge-demo {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+        .badge-success { background: #DCFCE7; color: #16A34A; }
+        .badge-pending { background: #FEF3C7; color: #F59E0B; }
+        .badge-primary { background: #DBEAFE; color: #2563EB; }
+
+        /* SPACING REFERENCE */
+        .spacing-demo {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .spacing-box {
+            width: 40px;
+            height: 40px;
+            background: #2563EB;
+            border-radius: 14px;
+        }
+
+        /* PROGRESS BAR */
+        .progress-demo {
+            height: 12px;
+            background: #E5E7EB;
+            border-radius: 6px;
+            overflow: hidden;
+            margin: 12px 0;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(135deg, #1E3A8A, #2563EB);
+            border-radius: 6px;
+            width: 60%;
+        }
+
+        /* INPUT */
+        .input-demo {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #E5E7EB;
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 0.875rem;
+            margin-bottom: 12px;
+        }
+        .input-demo:focus {
+            outline: none;
+            border-color: #2563EB;
+        }
+    </style>
+</head>
+<body>
+    <h1>Design System</h1>
+    <p style="margin-bottom: 1.5rem;">PSIP · Mobile First · Max 420px</p>
+
+    <!-- COLOR SYSTEM -->
+    <section class="section">
+        <h2>Color System</h2>
+        <div class="color-grid">
+            <div class="color-swatch" style="background: linear-gradient(135deg, #0F2C67, #1D4ED8);">Primary Gradient</div>
+            <div class="color-swatch" style="background: #1E3A8A;">Primary Blue</div>
+            <div class="color-swatch" style="background: #2563EB;">Secondary Blue</div>
+            <div class="color-swatch" style="background: #22C55E;">Success Green</div>
+            <div class="color-swatch" style="background: #16A34A;">Dark Green</div>
+            <div class="color-swatch" style="background: #F59E0B;">Gold Accent</div>
+            <div class="color-swatch light" style="background: #F3F6FB; border: 1px solid #E5E7EB;">Background</div>
+            <div class="color-swatch light border" style="background: #FFFFFF;">Card BG</div>
+            <div class="color-swatch light border" style="background: #FFFFFF;">Border #E5E7EB</div>
+            <div class="color-swatch" style="background: #111827;">Text Primary</div>
+            <div class="color-swatch" style="background: #6B7280;">Text Secondary</div>
+            <div class="color-swatch" style="background: #FFFFFF; color: #111827; border: 1px solid #E5E7EB;">White</div>
+        </div>
+    </section>
+
+    <!-- TYPOGRAPHY -->
+    <section class="section">
+        <h2>Typography</h2>
+        <div class="typography-demo">
+            <div class="text-heading">Heading · 600</div>
+            <p class="text-body" style="margin-top: 0.5rem;">Body text · 400 · Inter or system-ui</p>
+            <div class="text-label" style="margin-top: 0.5rem;">Small label · 500</div>
+            <div class="text-balance" style="margin-top: 0.5rem; color: #F59E0B;">₹45,750</div>
+            <p style="font-size: 0.75rem; margin-top: 0.25rem;">Balance · 700</p>
+        </div>
+    </section>
+
+    <!-- BUTTONS -->
+    <section class="section">
+        <h2>Buttons</h2>
+        <button class="btn-demo btn-primary">Primary Button</button>
+        <button class="btn-demo btn-success">Success Button</button>
+        <button class="btn-demo btn-outline">Outline Button</button>
+        <button class="btn-demo btn-secondary">Secondary Button</button>
+    </section>
+
+    <!-- CARDS -->
+    <section class="section">
+        <h2>Cards</h2>
+        <div class="card-demo">
+            <div class="card-title">Total Balance</div>
+            <div class="card-value" style="color: #F59E0B;">₹45,750</div>
+            <p style="font-size: 0.75rem; margin-top: 0.25rem;">Available for withdrawal</p>
+        </div>
+        <div class="card-demo">
+            <div class="card-title">Stat Card</div>
+            <div class="card-value">12</div>
+            <p style="font-size: 0.75rem; margin-top: 0.25rem;">Tokens Owned</p>
+        </div>
+    </section>
+
+    <!-- DASHBOARD HEADER -->
+    <section class="section">
+        <h2>Dashboard Header</h2>
+        <div class="dashboard-header-demo">
+            <div class="label">Total Balance</div>
+            <div class="balance">₹45,750</div>
+            <div class="label">Available for withdrawal</div>
+        </div>
+    </section>
+
+    <!-- STAT GRID -->
+    <section class="section">
+        <h2>Stat Grid</h2>
+        <div class="stat-grid">
+            <div class="stat-card">
+                <div class="value">12</div>
+                <div class="label">Tokens</div>
+            </div>
+            <div class="stat-card">
+                <div class="value">₹3,00,000</div>
+                <div class="label">Invested</div>
+            </div>
+            <div class="stat-card">
+                <div class="value">3</div>
+                <div class="label">Pools</div>
+            </div>
+            <div class="stat-card">
+                <div class="value">₹45,000</div>
+                <div class="label">Earnings</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BADGES -->
+    <section class="section">
+        <h2>Badges</h2>
+        <span class="badge-demo badge-success">Verified</span>
+        <span class="badge-demo badge-pending">Pending</span>
+        <span class="badge-demo badge-primary">Active</span>
+    </section>
+
+    <!-- PROGRESS BAR -->
+    <section class="section">
+        <h2>Progress Bar</h2>
+        <div class="card-demo">
+            <div class="card-title">Pool Progress</div>
+            <div class="progress-demo">
+                <div class="progress-fill"></div>
+            </div>
+            <p style="font-size: 0.75rem;">Month 5 of 50</p>
+        </div>
+    </section>
+
+    <!-- FORM INPUTS -->
+    <section class="section">
+        <h2>Form Inputs</h2>
+        <div class="card-demo">
+            <label style="font-size: 0.75rem; font-weight: 500; color: #6B7280; display: block; margin-bottom: 6px;">Email</label>
+            <input type="text" class="input-demo" placeholder="Enter your email">
+            <label style="font-size: 0.75rem; font-weight: 500; color: #6B7280; display: block; margin-bottom: 6px;">Password</label>
+            <input type="password" class="input-demo" placeholder="Enter password">
+        </div>
+    </section>
+
+    <!-- SPACING -->
+    <section class="section">
+        <h2>Spacing</h2>
+        <p>16px between cards · 20px padding · 14px border-radius</p>
+        <div class="spacing-demo" style="margin-top: 1rem;">
+            <div class="spacing-box"></div>
+            <div class="spacing-box"></div>
+            <div class="spacing-box"></div>
+        </div>
+    </section>
+
+    <!-- BOTTOM NAV PREVIEW -->
+    <section class="section">
+        <h2>Bottom Navigation</h2>
+        <div class="card-demo">
+            <p>White background · Soft shadow top · 16px radius top corners</p>
+            <div style="height: 60px; background: #F3F6FB; border-radius: 12px; margin-top: 12px; display: flex; align-items: center; justify-content: center;">
+                <span style="font-size: 0.75rem; color: #6B7280;">See fixed nav at bottom →</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTTOM NAV (Fixed Demo) -->
+    <nav class="bottom-nav-demo">
+        <a href="#" class="nav-item active">
+            <div class="nav-icon"></div>
+            Home
+        </a>
+        <a href="#" class="nav-item">
+            <div class="nav-icon"></div>
+            Pools
+        </a>
+        <a href="#" class="nav-item">
+            <div class="nav-icon"></div>
+            Wallet
+        </a>
+        <a href="#" class="nav-item">
+            <div class="nav-icon"></div>
+            Profile
+        </a>
+    </nav>
+</body>
+</html>

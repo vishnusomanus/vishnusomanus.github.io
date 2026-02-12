@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pool Details - PSIP</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="dashboard.html" class="logo">PSIP</a>
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="pools.html">Pools</a>
+                <a href="wallet.html">Wallet</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Pool #001 Details</h1>
+        
+        <!-- Pool Summary -->
+        <div class="card">
+            <h2>Pool Summary</h2>
+            <div class="pool-info" style="border-top: none; padding-top: 0;">
+                <div class="info-item">
+                    <span class="info-label">Total Tokens</span>
+                    <span class="info-value">300</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Token Value</span>
+                    <span class="info-value">₹25,000</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Total Pool Value</span>
+                    <span class="info-value">₹75,00,000</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Monthly Winners</span>
+                    <span class="info-value">6 tokens</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Winner Payout</span>
+                    <span class="info-value">2x (₹50,000)</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Regular Payout</span>
+                    <span class="info-value">3% (₹750)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Your tokens in this pool -->
+        <div class="card">
+            <h3>Your Tokens in This Pool</h3>
+            <p style="color: #6B7280; font-size: 0.875rem; margin-bottom: 0.75rem;">Token numbers you own in Pool #001</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span class="badge badge-success">#045</span>
+                <span class="badge badge-success">#123</span>
+                <span class="badge badge-success">#189</span>
+                <span class="badge badge-success">#234</span>
+                <span class="badge badge-success">#267</span>
+                <span class="badge badge-success">#298</span>
+                <span class="badge badge-success">#012</span>
+                <span class="badge badge-success">#078</span>
+            </div>
+            <p style="margin-top: 0.75rem; font-size: 0.875rem; color: #6B7280;">8 tokens owned</p>
+            <div style="margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #E5E7EB;">
+                <strong>Introduced by:</strong> Rajesh Kumar <span style="color: #6B7280; font-size: 0.875rem;">(UID-000789)</span>
+            </div>
+        </div>
+
+        <!-- Payment Info -->
+        <div class="card" style="background-color: #f9f9f9;">
+            <h3>Payment Information</h3>
+            <p style="margin-top: 0.5rem; color: #6B7280;">
+                <strong>One-time Payment:</strong> Pay ₹25,000 per token when you purchase.<br>
+                <strong>No recurring charges.</strong> After purchase, you'll receive monthly payouts automatically.
+            </p>
+        </div>
+
+        <!-- Progress -->
+        <div class="card">
+            <h3>Pool Progress</h3>
+            <p style="margin-bottom: 0.5rem;">Month 5 of 50</p>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 10%;">10%</div>
+            </div>
+            <p style="margin-top: 0.5rem; color: #6B7280; font-size: 0.875rem;">
+                45 months remaining
+            </p>
+        </div>
+
+        <!-- How It Works -->
+        <div class="card">
+            <h3>How It Works</h3>
+            <ul style="list-style-position: inside; margin-top: 1rem; line-height: 2;">
+                <li><strong>One-time payment:</strong> Pay ₹25,000 per token (paid once)</li>
+                <li>Every month, 6 tokens are randomly selected</li>
+                <li>Selected tokens receive 2x payout (₹50,000)</li>
+                <li>All other tokens receive 3% return (₹750)</li>
+                <li>Each token wins 2x exactly once over 50 months</li>
+                <li>Pool runs for 50 months total</li>
+            </ul>
+        </div>
+
+        <!-- Completed Winners -->
+        <div class="card">
+            <h3>Completed Winners</h3>
+            <div style="margin-top: 1rem;">
+                <p style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <strong>Month 1:</strong> Tokens #045, #123, #189, #234, #267, #298
+                </p>
+                <p style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <strong>Month 2:</strong> Tokens #012, #078, #156, #201, #245, #289
+                </p>
+                <p style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <strong>Month 3:</strong> Tokens #034, #091, #167, #212, #256, #278
+                </p>
+                <p style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <strong>Month 4:</strong> Tokens #056, #102, #178, #223, #247, #291
+                </p>
+                <p style="padding: 0.75rem 0;">
+                    <strong>Month 5:</strong> Tokens #019, #088, #145, #198, #239, #275
+                </p>
+            </div>
+        </div>
+
+            <!-- Join Pool Button -->
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                <a href="buy-token.html" class="btn" style="flex: 1; min-width: 150px;">Buy Tokens (One-time Payment)</a>
+                <a href="monthly-result.html" class="btn btn-outline" style="flex: 1; min-width: 150px;">View Monthly Results</a>
+            </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION (Mobile) -->
+    <nav class="bottom-nav">
+        <a href="dashboard.html" data-page="dashboard">
+            <div class="nav-icon"></div>
+            <span>Home</span>
+        </a>
+        <a href="pools.html" data-page="pools" class="active">
+            <div class="nav-icon"></div>
+            <span>Pools</span>
+        </a>
+        <a href="wallet.html" data-page="wallet">
+            <div class="nav-icon"></div>
+            <span>Wallet</span>
+        </a>
+        <a href="profile.html" data-page="profile">
+            <div class="nav-icon"></div>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

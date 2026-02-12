@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - PSIP</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="dashboard.html" class="logo">PSIP</a>
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="pools.html">Pools</a>
+                <a href="wallet.html">Wallet</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Dashboard</h1>
+        
+        <!-- Stats Overview -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">12</div>
+                <div class="stat-label">Tokens Owned</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">3</div>
+                <div class="stat-label">Active Pools</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">₹3,00,000</div>
+                <div class="stat-label">Total Invested</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">₹45,000</div>
+                <div class="stat-label">Total Earnings</div>
+            </div>
+        </div>
+
+        <!-- My Token Numbers (owned by user) -->
+        <div class="card">
+            <h3>Your Token Numbers</h3>
+            <p style="color: #6B7280; font-size: 0.875rem; margin-bottom: 1rem;">Token numbers you own in each pool</p>
+            <div style="margin-top: 0.75rem;">
+                <div style="padding: 12px 0; border-bottom: 1px solid #E5E7EB;">
+                    <strong>Pool #001</strong> (8 tokens)<br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">#045, #123, #189, #234, #267, #298, #012, #078</span><br>
+                    <span style="font-size: 0.8125rem; color: #6B7280; margin-top: 0.25rem; display: inline-block;">Introduced by: Rajesh Kumar (ID: UID-000789)</span>
+                </div>
+                <div style="padding: 12px 0; border-bottom: 1px solid #E5E7EB;">
+                    <strong>Pool #002</strong> (3 tokens)<br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">#015, #089, #156</span><br>
+                    <span style="font-size: 0.8125rem; color: #6B7280; margin-top: 0.25rem; display: inline-block;">Introduced by: Priya Sharma (ID: UID-001012)</span>
+                </div>
+                <div style="padding: 0.75rem 0;">
+                    <strong>Pool #003</strong> (1 token)<br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">#042</span><br>
+                    <span style="font-size: 0.8125rem; color: #6B7280; margin-top: 0.25rem; display: inline-block;">Introduced by: Amit Patel (ID: UID-000456)</span>
+                </div>
+            </div>
+            <a href="pools.html" class="link" style="display: inline-block; margin-top: 0.5rem;">View pool details →</a>
+        </div>
+
+        <!-- Next Draw Info -->
+        <div class="card">
+            <h3>Next Draw</h3>
+            <p style="font-size: 1.1rem; margin-top: 0.5rem;">
+                <strong>Date:</strong> March 15, 2026<br>
+                <strong>Time:</strong> 6:00 PM IST
+            </p>
+            <a href="monthly-result.html" class="link" style="display: inline-block; margin-top: 0.75rem;">View last month results →</a>
+        </div>
+
+        <!-- Quick Actions -->
+        <h2 style="margin-top: 2rem;">Quick Actions</h2>
+        <div class="actions-grid">
+            <a href="buy-token.html" class="action-btn">
+                <div class="action-icon action-icon-add"></div>
+                <span>Buy Token</span>
+            </a>
+            <a href="pools.html" class="action-btn">
+                <div class="action-icon action-icon-pools"></div>
+                <span>View Pools</span>
+            </a>
+            <a href="wallet.html" class="action-btn">
+                <div class="action-icon action-icon-wallet"></div>
+                <span>Wallet</span>
+            </a>
+            <a href="history.html" class="action-btn">
+                <div class="action-icon action-icon-history"></div>
+                <span>History</span>
+            </a>
+        </div>
+
+        <!-- Recent Activity -->
+        <div class="card" style="margin-top: 2rem;">
+            <h3>Recent Activity</h3>
+            <div style="margin-top: 1rem;">
+                <p style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <strong>Token Purchase</strong><br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">2 tokens in Pool #001 - ₹50,000 (One-time payment)</span>
+                </p>
+                <p style="padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <strong>Monthly Payout</strong><br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">3% return - ₹750 credited</span>
+                </p>
+                <p style="padding: 0.75rem 0;">
+                    <strong>Winner Announcement</strong><br>
+                    <span style="color: #6B7280; font-size: 0.875rem;">Pool #001 - Month 5 results announced</span><br>
+                    <a href="monthly-result.html" class="link" style="font-size: 0.875rem;">View results →</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION (Mobile) -->
+    <nav class="bottom-nav">
+        <a href="dashboard.html" data-page="dashboard" class="active">
+            <div class="nav-icon"></div>
+            <span>Home</span>
+        </a>
+        <a href="pools.html" data-page="pools">
+            <div class="nav-icon"></div>
+            <span>Pools</span>
+        </a>
+        <a href="wallet.html" data-page="wallet">
+            <div class="nav-icon"></div>
+            <span>Wallet</span>
+        </a>
+        <a href="profile.html" data-page="profile">
+            <div class="nav-icon"></div>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

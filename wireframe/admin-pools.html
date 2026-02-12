@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Pools - Admin Panel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header admin-header">
+        <div class="header-content">
+            <a href="admin-dashboard.html" class="logo">Admin Panel</a>
+            <nav class="nav-links">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="admin-pools.html">Pools</a>
+                <a href="admin-results.html">Draws</a>
+                <a href="admin-users.html">Users</a>
+                <a href="admin-transactions.html">Transactions</a>
+                <a href="admin-reports.html">Reports</a>
+                <a href="admin-settings.html">Settings</a>
+                <a href="index.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Manage Pools</h1>
+        
+        <!-- Pool List -->
+        <div class="pool-card">
+            <div class="pool-card-accent"></div>
+            <div class="pool-card-body">
+                <div class="pool-header">
+                    <div class="pool-title-wrap">
+                        <h3>Pool #001</h3>
+                        <p class="pool-meta">Started Jan 2026</p>
+                    </div>
+                    <span class="badge badge-success">Active</span>
+                </div>
+                <div class="pool-price-hero">
+                    <span class="info-label">Token price</span>
+                    <span class="info-value">₹25,000</span>
+                </div>
+                <div class="pool-progress-wrap">
+                    <div class="info-label">
+                        <span>Sold</span>
+                        <span>55 / 300</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 18%;">18%</div>
+                    </div>
+                </div>
+                <div class="pool-info">
+                    <div class="info-item">
+                        <span class="info-label">Current month</span>
+                        <span class="info-value">5/50</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Total revenue</span>
+                        <span class="info-value">₹61.25L</span>
+                    </div>
+                </div>
+                <div class="pool-card-actions">
+                    <a href="admin-pool-details.html" class="btn btn-primary" style="flex: 1;">View Details</a>
+                    <a href="admin-results.html" class="btn btn-outline" style="flex: 1;">Conduct Draw</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pool-card">
+            <div class="pool-card-accent"></div>
+            <div class="pool-card-body">
+                <div class="pool-header">
+                    <div class="pool-title-wrap">
+                        <h3>Pool #002</h3>
+                        <p class="pool-meta">Started Feb 2026</p>
+                    </div>
+                    <span class="badge badge-success">Active</span>
+                </div>
+                <div class="pool-price-hero">
+                    <span class="info-label">Token price</span>
+                    <span class="info-value">₹30,000</span>
+                </div>
+                <div class="pool-progress-wrap">
+                    <div class="info-label">
+                        <span>Sold</span>
+                        <span>180 / 250</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 72%;">72%</div>
+                    </div>
+                </div>
+                <div class="pool-info">
+                    <div class="info-item">
+                        <span class="info-label">Current month</span>
+                        <span class="info-value">1/50</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Total revenue</span>
+                        <span class="info-value">₹54L</span>
+                    </div>
+                </div>
+                <div class="pool-card-actions">
+                    <a href="admin-pool-details.html" class="btn btn-primary" style="flex: 1;">View Details</a>
+                    <a href="admin-results.html" class="btn btn-outline" style="flex: 1;">Conduct Draw</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="pool-card">
+            <div class="pool-card-accent"></div>
+            <div class="pool-card-body">
+                <div class="pool-header">
+                    <div class="pool-title-wrap">
+                        <h3>Pool #003</h3>
+                        <p class="pool-meta">Started Feb 2026</p>
+                    </div>
+                    <span class="badge badge-success">Active</span>
+                </div>
+                <div class="pool-price-hero">
+                    <span class="info-label">Token price</span>
+                    <span class="info-value">₹20,000</span>
+                </div>
+                <div class="pool-progress-wrap">
+                    <div class="info-label">
+                        <span>Sold</span>
+                        <span>320 / 400</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%;">80%</div>
+                    </div>
+                </div>
+                <div class="pool-info">
+                    <div class="info-item">
+                        <span class="info-label">Current month</span>
+                        <span class="info-value">1/50</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Total revenue</span>
+                        <span class="info-value">₹64L</span>
+                    </div>
+                </div>
+                <div class="pool-card-actions">
+                    <a href="admin-pool-details.html" class="btn btn-primary" style="flex: 1;">View Details</a>
+                    <a href="admin-results.html" class="btn btn-outline" style="flex: 1;">Conduct Draw</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION (Mobile - Admin) -->
+    <nav class="bottom-nav">
+        <a href="admin-dashboard.html" data-page="admin-dashboard">
+            <div class="nav-icon"></div>
+            <span>Dashboard</span>
+        </a>
+        <a href="admin-pools.html" data-page="admin-pools" class="active">
+            <div class="nav-icon"></div>
+            <span>Pools</span>
+        </a>
+        <a href="admin-results.html" data-page="admin-results">
+            <div class="nav-icon"></div>
+            <span>Draws</span>
+        </a>
+        <a href="admin-users.html" data-page="admin-users">
+            <div class="nav-icon"></div>
+            <span>Users</span>
+        </a>
+        <a href="admin-settings.html" data-page="admin-settings">
+            <div class="nav-icon"></div>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

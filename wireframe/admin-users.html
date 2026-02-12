@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - Admin Panel</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .users-table-desktop { display: block; }
+        .users-list-mobile { display: none; }
+        .user-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            margin-bottom: 0.75rem;
+        }
+        @media (max-width: 767px) {
+            .users-table-desktop { display: none; }
+            .users-list-mobile { display: block; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header admin-header">
+        <div class="header-content">
+            <a href="admin-dashboard.html" class="logo">Admin Panel</a>
+            <nav class="nav-links">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="admin-pools.html">Pools</a>
+                <a href="admin-results.html">Draws</a>
+                <a href="admin-users.html">Users</a>
+                <a href="admin-transactions.html">Transactions</a>
+                <a href="admin-reports.html">Reports</a>
+                <a href="admin-settings.html">Settings</a>
+                <a href="index.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>User Management</h1>
+        
+        <!-- Search and Filter -->
+        <div class="card">
+            <div class="form-group">
+                <label>Search Users</label>
+                <input type="text" placeholder="Search by name, email, or phone">
+            </div>
+            <div style="display: flex; gap: 0.5rem;">
+                <button class="btn btn-outline" style="width: auto; flex: 1;">All Users</button>
+                <button class="btn btn-outline" style="width: auto; flex: 1;">KYC Pending</button>
+                <button class="btn btn-outline" style="width: auto; flex: 1;">Verified</button>
+            </div>
+        </div>
+
+        <!-- Users Table (Desktop) -->
+        <div class="card users-table-desktop" style="overflow-x: auto;">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Tokens</th>
+                        <th>Invested</th>
+                        <th>KYC</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td>
+                        <td>john.doe@example.com</td>
+                        <td>+91 98765 43210</td>
+                        <td>12</td>
+                        <td>₹3,00,000</td>
+                        <td><span class="badge badge-success">Verified</span></td>
+                        <td><a href="admin-user-details.html" class="link">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>jane.smith@example.com</td>
+                        <td>+91 98765 43211</td>
+                        <td>8</td>
+                        <td>₹2,00,000</td>
+                        <td><span class="badge badge-success">Verified</span></td>
+                        <td><a href="admin-user-details.html" class="link">View</a></td>
+                    </tr>
+                    <tr>
+                        <td>Bob Johnson</td>
+                        <td>bob.j@example.com</td>
+                        <td>+91 98765 43212</td>
+                        <td>5</td>
+                        <td>₹1,25,000</td>
+                        <td><span class="badge badge-pending">Pending</span></td>
+                        <td><a href="admin-user-details.html" class="link">View</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Users Card List (Mobile) -->
+        <div class="users-list-mobile">
+            <a href="admin-user-details.html" class="card user-card">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                    <strong>John Doe</strong>
+                    <span class="badge badge-success">Verified</span>
+                </div>
+                <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 0.25rem;">john.doe@example.com</p>
+                <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 0.5rem;">+91 98765 43210</p>
+                <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                    <span>12 tokens</span>
+                    <span>₹3,00,000</span>
+                </div>
+                <span class="link" style="display: inline-block; margin-top: 0.5rem;">View details →</span>
+            </a>
+            <a href="admin-user-details.html" class="card user-card">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                    <strong>Jane Smith</strong>
+                    <span class="badge badge-success">Verified</span>
+                </div>
+                <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 0.25rem;">jane.smith@example.com</p>
+                <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 0.5rem;">+91 98765 43211</p>
+                <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                    <span>8 tokens</span>
+                    <span>₹2,00,000</span>
+                </div>
+                <span class="link" style="display: inline-block; margin-top: 0.5rem;">View details →</span>
+            </a>
+            <a href="admin-user-details.html" class="card user-card">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 0.5rem;">
+                    <strong>Bob Johnson</strong>
+                    <span class="badge badge-pending">Pending</span>
+                </div>
+                <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 0.25rem;">bob.j@example.com</p>
+                <p style="font-size: 0.875rem; color: #6B7280; margin-bottom: 0.5rem;">+91 98765 43212</p>
+                <div style="display: flex; justify-content: space-between; font-size: 0.875rem;">
+                    <span>5 tokens</span>
+                    <span>₹1,25,000</span>
+                </div>
+                <span class="link" style="display: inline-block; margin-top: 0.5rem;">View details →</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION (Mobile - Admin) -->
+    <nav class="bottom-nav">
+        <a href="admin-dashboard.html" data-page="admin-dashboard">
+            <div class="nav-icon"></div>
+            <span>Dashboard</span>
+        </a>
+        <a href="admin-pools.html" data-page="admin-pools">
+            <div class="nav-icon"></div>
+            <span>Pools</span>
+        </a>
+        <a href="admin-results.html" data-page="admin-results">
+            <div class="nav-icon"></div>
+            <span>Draws</span>
+        </a>
+        <a href="admin-users.html" data-page="admin-users" class="active">
+            <div class="nav-icon"></div>
+            <span>Users</span>
+        </a>
+        <a href="admin-settings.html" data-page="admin-settings">
+            <div class="nav-icon"></div>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

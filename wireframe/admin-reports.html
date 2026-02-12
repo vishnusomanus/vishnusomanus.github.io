@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Admin Panel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header admin-header">
+        <div class="header-content">
+            <a href="admin-dashboard.html" class="logo">Admin Panel</a>
+            <nav class="nav-links">
+                <a href="admin-dashboard.html">Dashboard</a>
+                <a href="admin-pools.html">Pools</a>
+                <a href="admin-results.html">Draws</a>
+                <a href="admin-users.html">Users</a>
+                <a href="admin-transactions.html">Transactions</a>
+                <a href="admin-reports.html">Reports</a>
+                <a href="admin-settings.html">Settings</a>
+                <a href="index.html">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Reports & Analytics</h1>
+        
+        <!-- Report Filters -->
+        <div class="card">
+            <h3>Generate Report</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label>Report Type</label>
+                    <select>
+                        <option>Financial Summary</option>
+                        <option>Pool Performance</option>
+                        <option>User Activity</option>
+                        <option>Payout Analysis</option>
+                        <option>Sales Report</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label>Period</label>
+                    <select>
+                        <option>Last 7 Days</option>
+                        <option>Last 30 Days</option>
+                        <option>Last 3 Months</option>
+                        <option>Last 6 Months</option>
+                        <option>Custom Range</option>
+                    </select>
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                    <label>Pool</label>
+                    <select>
+                        <option>All Pools</option>
+                        <option>Pool #001</option>
+                        <option>Pool #002</option>
+                        <option>Pool #003</option>
+                    </select>
+                </div>
+            </div>
+            <button class="btn btn-admin" style="margin-top: 1rem;">Generate Report</button>
+        </div>
+
+        <!-- Key Metrics -->
+        <div class="card" style="margin-top: 1.5rem;">
+            <h3>Key Metrics (Last 30 Days)</h3>
+            <div class="stats-grid" style="margin-top: 1rem;">
+                <div class="stat-card">
+                    <div class="stat-value">₹45,00,000</div>
+                    <div class="stat-label">New Revenue</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">₹15,61,500</div>
+                    <div class="stat-label">Payouts</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">125</div>
+                    <div class="stat-label">New Users</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">180</div>
+                    <div class="stat-label">Tokens Sold</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">18</div>
+                    <div class="stat-label">Winners</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">₹29,38,500</div>
+                    <div class="stat-label">Net Profit</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pool Performance -->
+        <div class="card" style="margin-top: 1.5rem;">
+            <h3>Pool Performance</h3>
+            <div style="margin-top: 1rem;">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Pool</th>
+                            <th>Tokens Sold</th>
+                            <th>Revenue</th>
+                            <th>Payouts</th>
+                            <th>Net</th>
+                            <th>Completion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pool #001</td>
+                            <td>245/300</td>
+                            <td>₹61,25,000</td>
+                            <td>₹26,02,500</td>
+                            <td>₹35,22,500</td>
+                            <td>81.67%</td>
+                        </tr>
+                        <tr>
+                            <td>Pool #002</td>
+                            <td>180/250</td>
+                            <td>₹54,00,000</td>
+                            <td>₹2,25,000</td>
+                            <td>₹51,75,000</td>
+                            <td>72%</td>
+                        </tr>
+                        <tr>
+                            <td>Pool #003</td>
+                            <td>320/400</td>
+                            <td>₹64,00,000</td>
+                            <td>₹2,40,000</td>
+                            <td>₹61,60,000</td>
+                            <td>80%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Export Options -->
+        <div class="card" style="margin-top: 1.5rem;">
+            <h3>Export Reports</h3>
+            <div style="display: flex; gap: 0.5rem; margin-top: 1rem;">
+                <button class="btn btn-outline" style="flex: 1;">Export as PDF</button>
+                <button class="btn btn-outline" style="flex: 1;">Export as Excel</button>
+                <button class="btn btn-outline" style="flex: 1;">Export as CSV</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION (Mobile - Admin) -->
+    <nav class="bottom-nav">
+        <a href="admin-dashboard.html" data-page="admin-dashboard">
+            <div class="nav-icon"></div>
+            <span>Dashboard</span>
+        </a>
+        <a href="admin-pools.html" data-page="admin-pools">
+            <div class="nav-icon"></div>
+            <span>Pools</span>
+        </a>
+        <a href="admin-results.html" data-page="admin-results">
+            <div class="nav-icon"></div>
+            <span>Draws</span>
+        </a>
+        <a href="admin-users.html" data-page="admin-users">
+            <div class="nav-icon"></div>
+            <span>Users</span>
+        </a>
+        <a href="admin-settings.html" data-page="admin-settings">
+            <div class="nav-icon"></div>
+            <span>Settings</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet - PSIP</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <a href="dashboard.html" class="logo">PSIP</a>
+            <nav class="nav-links">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="pools.html">Pools</a>
+                <a href="wallet.html">Wallet</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Wallet</h1>
+        
+        <!-- Balance Card -->
+        <div class="balance-card">
+            <h3>Total Balance</h3>
+            <div class="balance-amount">₹45,750</div>
+            <p class="balance-label">Available for withdrawal</p>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="actions-grid" style="margin-top: 1.5rem;">
+            <a href="#" class="action-btn" onclick="alert('Add money feature')">
+                <div class="action-icon action-icon-add"></div>
+                <span>Add Money</span>
+            </a>
+            <a href="#" class="action-btn" onclick="alert('Withdraw feature')">
+                <div class="action-icon action-icon-withdraw"></div>
+                <span>Withdraw</span>
+            </a>
+        </div>
+
+        <!-- Recent Transactions -->
+        <div class="card" style="margin-top: 2rem;">
+            <h3>Recent Transactions</h3>
+            <div style="margin-top: 1rem;">
+                <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <div>
+                        <strong>Monthly Payout</strong><br>
+                        <span style="color: #6B7280; font-size: 0.875rem;">Pool #001 - 3% return</span>
+                    </div>
+                    <div style="text-align: right;">
+                        <strong style="color: #22c55e;">+₹750</strong><br>
+                        <span style="color: #6B7280; font-size: 0.875rem;">Mar 2, 2026</span>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <div>
+                        <strong>Winner Payout</strong><br>
+                        <span style="color: #6B7280; font-size: 0.875rem;">Pool #001 - Token #045</span>
+                    </div>
+                    <div style="text-align: right;">
+                        <strong style="color: #22c55e;">+₹50,000</strong><br>
+                        <span style="color: #6B7280; font-size: 0.875rem;">Feb 2, 2026</span>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 0.75rem 0; border-bottom: 1px solid #E5E7EB;">
+                    <div>
+                        <strong>Token Purchase</strong><br>
+                        <span style="color: #6B7280; font-size: 0.875rem;">Pool #001 - 2 tokens (One-time)</span>
+                    </div>
+                    <div style="text-align: right;">
+                        <strong style="color: #ef4444;">-₹50,000</strong><br>
+                        <span style="color: #6B7280; font-size: 0.875rem;">Jan 15, 2026</span>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: space-between; padding: 0.75rem 0;">
+                    <div>
+                        <strong>Deposit</strong><br>
+                        <span style="color: #6B7280; font-size: 0.875rem;">Bank Transfer</span>
+                    </div>
+                    <div style="text-align: right;">
+                        <strong style="color: #22c55e;">+₹1,00,000</strong><br>
+                        <span style="color: #6B7280; font-size: 0.875rem;">Jan 10, 2026</span>
+                    </div>
+                </div>
+            </div>
+            <a href="history.html" class="btn btn-outline" style="margin-top: 1rem;">View All Transactions</a>
+        </div>
+    </div>
+
+    <!-- BOTTOM NAVIGATION (Mobile) -->
+    <nav class="bottom-nav">
+        <a href="dashboard.html" data-page="dashboard">
+            <div class="nav-icon"></div>
+            <span>Home</span>
+        </a>
+        <a href="pools.html" data-page="pools">
+            <div class="nav-icon"></div>
+            <span>Pools</span>
+        </a>
+        <a href="wallet.html" data-page="wallet" class="active">
+            <div class="nav-icon"></div>
+            <span>Wallet</span>
+        </a>
+        <a href="profile.html" data-page="profile">
+            <div class="nav-icon"></div>
+            <span>Profile</span>
+        </a>
+    </nav>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
