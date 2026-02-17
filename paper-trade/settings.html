@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - PaperTrade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        profit: '#10b981',
+                        loss: '#ef4444',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { transition: all 0.2s ease; }
+    </style>
+    <script>
+        function toggleTradingMode() {
+            const toggle = document.getElementById('settings-trading-toggle');
+            const modeBadge = document.getElementById('settings-mode-badge');
+            const headerIndicator = document.getElementById('settings-mode-indicator');
+            const warning = document.getElementById('real-trading-warning');
+            
+            if (toggle.checked) {
+                modeBadge.textContent = 'Real';
+                modeBadge.classList.remove('bg-green-100', 'text-green-700');
+                modeBadge.classList.add('bg-orange-100', 'text-orange-700');
+                // Update header indicator
+                headerIndicator.classList.remove('bg-green-100');
+                headerIndicator.classList.add('bg-orange-100');
+                headerIndicator.querySelector('div').classList.remove('bg-green-500');
+                headerIndicator.querySelector('div').classList.add('bg-orange-500');
+                headerIndicator.querySelector('span').textContent = 'Real';
+                headerIndicator.querySelector('span').classList.remove('text-green-700');
+                headerIndicator.querySelector('span').classList.add('text-orange-700');
+                warning.classList.remove('hidden');
+                localStorage.setItem('tradingMode', 'real');
+            } else {
+                modeBadge.textContent = 'Paper';
+                modeBadge.classList.remove('bg-orange-100', 'text-orange-700');
+                modeBadge.classList.add('bg-green-100', 'text-green-700');
+                // Update header indicator
+                headerIndicator.classList.remove('bg-orange-100');
+                headerIndicator.classList.add('bg-green-100');
+                headerIndicator.querySelector('div').classList.remove('bg-orange-500');
+                headerIndicator.querySelector('div').classList.add('bg-green-500');
+                headerIndicator.querySelector('span').textContent = 'Paper';
+                headerIndicator.querySelector('span').classList.remove('text-orange-700');
+                headerIndicator.querySelector('span').classList.add('text-green-700');
+                warning.classList.add('hidden');
+                localStorage.setItem('tradingMode', 'paper');
+            }
+        }
+        
+        // Load saved mode on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedMode = localStorage.getItem('tradingMode') || 'paper';
+            const toggle = document.getElementById('settings-trading-toggle');
+            const modeBadge = document.getElementById('settings-mode-badge');
+            const headerIndicator = document.getElementById('settings-mode-indicator');
+            const warning = document.getElementById('real-trading-warning');
+            
+            if (savedMode === 'real') {
+                toggle.checked = true;
+                modeBadge.textContent = 'Real';
+                modeBadge.classList.remove('bg-green-100', 'text-green-700');
+                modeBadge.classList.add('bg-orange-100', 'text-orange-700');
+                // Update header indicator
+                headerIndicator.classList.remove('bg-green-100');
+                headerIndicator.classList.add('bg-orange-100');
+                headerIndicator.querySelector('div').classList.remove('bg-green-500');
+                headerIndicator.querySelector('div').classList.add('bg-orange-500');
+                headerIndicator.querySelector('span').textContent = 'Real';
+                headerIndicator.querySelector('span').classList.remove('text-green-700');
+                headerIndicator.querySelector('span').classList.add('text-orange-700');
+                warning.classList.remove('hidden');
+            }
+        });
+    </script>
+</head>
+<body class="bg-gray-50 font-sans antialiased pb-20">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="px-4 py-3">
+            <div class="flex items-center gap-3">
+                <a href="profile.html" class="text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </a>
+                <h1 class="text-xl font-bold text-gray-800 flex-1">Settings</h1>
+                <div id="settings-mode-indicator" class="inline-flex items-center gap-1.5 px-2 py-1 bg-green-100 rounded-full">
+                    <div class="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                    <span class="text-xs font-semibold text-green-700">Paper</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Settings Options -->
+    <div class="p-4 space-y-3">
+        <!-- Trading Mode -->
+        <div class="bg-white rounded-xl p-4 shadow-md border-l-4 border-blue-500">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-1">
+                        <p class="font-semibold text-gray-800">Trading Mode</p>
+                        <span id="settings-mode-badge" class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded">Paper</span>
+                    </div>
+                    <p class="text-xs text-gray-500">Switch between Paper Trading and Real Trading</p>
+                </div>
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="settings-trading-toggle" class="sr-only peer" onchange="toggleTradingMode()">
+                    <div class="w-11 h-6 bg-gray-300 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-orange-500"></div>
+                </label>
+            </div>
+            <div id="real-trading-warning" class="hidden mt-3 p-3 bg-orange-50 border border-orange-200 rounded-lg">
+                <div class="flex items-start gap-2">
+                    <svg class="w-5 h-5 text-orange-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                    </svg>
+                    <div>
+                        <p class="text-xs font-semibold text-orange-800">Real Trading Mode Active</p>
+                        <p class="text-xs text-orange-700">You are trading with real money. All orders will be executed with actual funds.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Notifications -->
+        <div class="bg-white rounded-xl p-4 shadow-md">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <p class="font-semibold text-gray-800">Push Notifications</p>
+                    <p class="text-xs text-gray-500">Receive order updates and alerts</p>
+                </div>
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" checked class="sr-only peer">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                </label>
+            </div>
+        </div>
+        
+        <!-- Price Alerts -->
+        <div class="bg-white rounded-xl p-4 shadow-md">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <p class="font-semibold text-gray-800">Price Alerts</p>
+                    <p class="text-xs text-gray-500">Get notified when stocks reach target price</p>
+                </div>
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" checked class="sr-only peer">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                </label>
+            </div>
+        </div>
+        
+        <!-- Dark Mode -->
+        <div class="bg-white rounded-xl p-4 shadow-md">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <p class="font-semibold text-gray-800">Dark Mode</p>
+                    <p class="text-xs text-gray-500">Switch to dark theme</p>
+                </div>
+                <label class="relative inline-flex items-center cursor-pointer">
+                    <input type="checkbox" class="sr-only peer">
+                    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                </label>
+            </div>
+        </div>
+        
+        <!-- Language -->
+        <a href="#" class="block bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="font-semibold text-gray-800">Language</p>
+                    <p class="text-xs text-gray-500">English</p>
+                </div>
+                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </div>
+        </a>
+        
+        <!-- Currency -->
+        <a href="#" class="block bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="font-semibold text-gray-800">Currency</p>
+                    <p class="text-xs text-gray-500">Indian Rupee (₹)</p>
+                </div>
+                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </div>
+        </a>
+        
+        <!-- About -->
+        <a href="#" class="block bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+            <div class="flex items-center justify-between">
+                <div>
+                    <p class="font-semibold text-gray-800">About</p>
+                    <p class="text-xs text-gray-500">App version 1.0.0</p>
+                </div>
+                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </div>
+        </a>
+        
+        <!-- Terms & Conditions -->
+        <a href="#" class="block bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+            <div class="flex items-center justify-between">
+                <p class="font-semibold text-gray-800">Terms & Conditions</p>
+                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </div>
+        </a>
+        
+        <!-- Privacy Policy -->
+        <a href="#" class="block bg-white rounded-xl p-4 shadow-md hover:shadow-lg">
+            <div class="flex items-center justify-between">
+                <p class="font-semibold text-gray-800">Privacy Policy</p>
+                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </div>
+        </a>
+    </div>
+    
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-20">
+        <div class="grid grid-cols-5 h-16">
+            <a href="dashboard.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                </svg>
+                <span class="text-xs font-medium">Home</span>
+            </a>
+            <a href="watchlist.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+                <span class="text-xs font-medium">Markets</span>
+            </a>
+            <a href="portfolio.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span class="text-xs font-medium">Portfolio</span>
+            </a>
+            <a href="order-book.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                </svg>
+                <span class="text-xs font-medium">Orders</span>
+            </a>
+            <a href="profile.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+                <span class="text-xs font-medium">Profile</span>
+            </a>
+        </div>
+    </nav>
+</body>
+</html>

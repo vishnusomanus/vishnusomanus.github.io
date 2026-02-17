@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RELIANCE - PaperTrade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        profit: '#10b981',
+                        loss: '#ef4444',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { transition: all 0.2s ease; }
+    </style>
+    <script>
+        let chart;
+        let currentTimeframe = '1D';
+        
+        // Sample candlestick data for different timeframes
+        const chartData = {
+            '1D': generateIntradayData(),
+            '1W': generateWeeklyData(),
+            '1M': generateMonthlyData(),
+            '1Y': generateYearlyData()
+        };
+        
+        function generateIntradayData() {
+            const data = [];
+            const basePrice = 2456.75;
+            let currentPrice = basePrice;
+            const now = new Date();
+            
+            for (let i = 0; i < 24; i++) {
+                const time = new Date(now);
+                time.setHours(9 + i, i % 2 === 0 ? 0 : 30, 0);
+                if (time.getHours() >= 15 && time.getMinutes() > 30) break;
+                
+                const open = currentPrice;
+                // Generate both positive and negative moves
+                const volatility = (Math.random() - 0.5) * 40;
+                const close = open + volatility;
+                const high = Math.max(open, close) + Math.random() * 15;
+                const low = Math.min(open, close) - Math.random() * 15;
+                
+                // ApexCharts format: [open, high, low, close]
+                data.push({
+                    x: time.getTime(),
+                    y: [open, high, low, close]
+                });
+                
+                currentPrice = close;
+            }
+            return data;
+        }
+        
+        function generateWeeklyData() {
+            const data = [];
+            const basePrice = 2456.75;
+            let currentPrice = basePrice;
+            const now = new Date();
+            
+            for (let i = 0; i < 5; i++) {
+                const time = new Date(now);
+                time.setDate(time.getDate() - (4 - i));
+                time.setHours(15, 30, 0);
+                
+                const open = currentPrice;
+                // Generate both positive and negative moves
+                const volatility = (Math.random() - 0.5) * 100;
+                const close = open + volatility;
+                const high = Math.max(open, close) + Math.random() * 40;
+                const low = Math.min(open, close) - Math.random() * 40;
+                
+                // ApexCharts format: [open, high, low, close]
+                data.push({
+                    x: time.getTime(),
+                    y: [open, high, low, close]
+                });
+                
+                currentPrice = close;
+            }
+            return data;
+        }
+        
+        function generateMonthlyData() {
+            const data = [];
+            const basePrice = 2456.75;
+            let currentPrice = basePrice;
+            const now = new Date();
+            
+            for (let i = 0; i < 30; i++) {
+                const time = new Date(now);
+                time.setDate(time.getDate() - (29 - i));
+                time.setHours(15, 30, 0);
+                
+                const open = currentPrice;
+                // Generate both positive and negative moves
+                const volatility = (Math.random() - 0.5) * 150;
+                const close = open + volatility;
+                const high = Math.max(open, close) + Math.random() * 60;
+                const low = Math.min(open, close) - Math.random() * 60;
+                
+                // ApexCharts format: [open, high, low, close]
+                data.push({
+                    x: time.getTime(),
+                    y: [open, high, low, close]
+                });
+                
+                currentPrice = close;
+            }
+            return data;
+        }
+        
+        function generateYearlyData() {
+            const data = [];
+            const basePrice = 2456.75;
+            let currentPrice = basePrice;
+            const now = new Date();
+            
+            for (let i = 0; i < 12; i++) {
+                const time = new Date(now);
+                time.setMonth(time.getMonth() - (11 - i));
+                time.setDate(1);
+                time.setHours(15, 30, 0);
+                
+                const open = currentPrice;
+                // Generate both positive and negative moves
+                const volatility = (Math.random() - 0.5) * 300;
+                const close = open + volatility;
+                const high = Math.max(open, close) + Math.random() * 120;
+                const low = Math.min(open, close) - Math.random() * 120;
+                
+                // ApexCharts format: [open, high, low, close]
+                data.push({
+                    x: time.getTime(),
+                    y: [open, high, low, close]
+                });
+                
+                currentPrice = close;
+            }
+            return data;
+        }
+        
+        function initializeChart(timeframe) {
+            const options = {
+                series: [{
+                    name: 'Candlestick',
+                    data: chartData[timeframe]
+                }],
+                chart: {
+                    type: 'candlestick',
+                    height: 350,
+                    toolbar: {
+                        show: false
+                    },
+                    zoom: {
+                        enabled: true,
+                        type: 'x',
+                        autoScaleYaxis: true
+                    }
+                },
+                xaxis: {
+                    type: 'datetime',
+                    labels: {
+                        style: {
+                            colors: '#6b7280',
+                            fontSize: '12px'
+                        }
+                    }
+                },
+                yaxis: {
+                    labels: {
+                        style: {
+                            colors: '#6b7280',
+                            fontSize: '12px'
+                        },
+                        formatter: function(val) {
+                            return '₹' + val.toFixed(2);
+                        }
+                    }
+                },
+                plotOptions: {
+                    candlestick: {
+                        colors: {
+                            upward: '#10b981',
+                            downward: '#ef4444'
+                        },
+                        wick: {
+                            useFillColor: true
+                        }
+                    }
+                },
+                stroke: {
+                    width: 1,
+                    colors: ['#10b981', '#ef4444']
+                },
+                grid: {
+                    borderColor: '#e5e7eb',
+                    strokeDashArray: 3
+                },
+                tooltip: {
+                    theme: 'light',
+                    custom: function({seriesIndex, dataPointIndex, w}) {
+                        const data = w.globals.initialSeries[seriesIndex].data[dataPointIndex];
+                        // ApexCharts format: [open, high, low, close]
+                        const [open, high, low, close] = data.y;
+                        return `
+                            <div class="p-2 bg-white border border-gray-200 rounded shadow-lg">
+                                <div class="text-xs font-semibold mb-1">${new Date(data.x).toLocaleString()}</div>
+                                <div class="text-xs"><span class="text-gray-500">Open:</span> <span class="font-semibold">₹${open.toFixed(2)}</span></div>
+                                <div class="text-xs"><span class="text-gray-500">High:</span> <span class="font-semibold">₹${high.toFixed(2)}</span></div>
+                                <div class="text-xs"><span class="text-gray-500">Low:</span> <span class="font-semibold">₹${low.toFixed(2)}</span></div>
+                                <div class="text-xs"><span class="text-gray-500">Close:</span> <span class="font-semibold ${close >= open ? 'text-green-600' : 'text-red-600'}">₹${close.toFixed(2)}</span></div>
+                            </div>
+                        `;
+                    }
+                }
+            };
+            
+            if (chart) {
+                chart.updateSeries([{
+                    data: chartData[timeframe]
+                }]);
+            } else {
+                chart = new ApexCharts(document.querySelector("#candlestick-chart"), options);
+                chart.render();
+            }
+        }
+        
+        function changeTimeframe(timeframe) {
+            currentTimeframe = timeframe;
+            
+            // Update button styles
+            ['1D', '1W', '1M', '1Y'].forEach(tf => {
+                const btn = document.getElementById('btn-' + tf);
+                if (tf === timeframe) {
+                    btn.classList.remove('text-gray-600', 'hover:bg-gray-100');
+                    btn.classList.add('bg-blue-100', 'text-blue-700');
+                } else {
+                    btn.classList.remove('bg-blue-100', 'text-blue-700');
+                    btn.classList.add('text-gray-600', 'hover:bg-gray-100');
+                }
+            });
+            
+            // Update chart
+            initializeChart(timeframe);
+        }
+        
+        // Load trading mode indicator and initialize chart
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedMode = localStorage.getItem('tradingMode') || 'paper';
+            const indicator = document.getElementById('stock-mode-indicator');
+            if (savedMode === 'real') {
+                indicator.classList.remove('bg-green-100');
+                indicator.classList.add('bg-orange-100');
+                indicator.querySelector('div').classList.remove('bg-green-500');
+                indicator.querySelector('div').classList.add('bg-orange-500');
+                indicator.querySelector('span').textContent = 'Real';
+                indicator.querySelector('span').classList.remove('text-green-700');
+                indicator.querySelector('span').classList.add('text-orange-700');
+            }
+            
+            // Initialize chart with 1D timeframe
+            initializeChart('1D');
+        });
+    </script>
+</head>
+<body class="bg-gray-50 font-sans antialiased pb-24">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="px-4 py-3">
+            <div class="flex items-center gap-3">
+                <a href="watchlist.html" class="text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </a>
+                <div class="flex-1">
+                    <h1 class="text-lg font-bold text-gray-800">RELIANCE</h1>
+                    <p class="text-xs text-gray-500">Reliance Industries Ltd</p>
+                </div>
+                <div id="stock-mode-indicator" class="inline-flex items-center gap-1.5 px-2 py-1 bg-green-100 rounded-full mr-2">
+                    <div class="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                    <span class="text-xs font-semibold text-green-700">Paper</span>
+                </div>
+                <button class="text-yellow-500">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Stock Price Info -->
+    <div class="bg-white px-4 py-6 border-b border-gray-200">
+        <div class="flex items-baseline gap-3 mb-2">
+            <h2 class="text-3xl font-bold text-gray-800">₹2,456.75</h2>
+            <span class="text-green-600 font-semibold">+1.25%</span>
+        </div>
+        <div class="flex gap-4 text-sm text-gray-600">
+            <div>
+                <span class="text-gray-500">Day High:</span> ₹2,480.00
+            </div>
+            <div>
+                <span class="text-gray-500">Day Low:</span> ₹2,420.00
+            </div>
+        </div>
+    </div>
+    
+    <!-- Candlestick Chart -->
+    <div class="bg-white p-4 mb-4">
+        <div class="flex gap-2 mb-4">
+            <button onclick="changeTimeframe('1D')" id="btn-1D" class="px-3 py-1 text-xs font-medium bg-blue-100 text-blue-700 rounded-lg">1D</button>
+            <button onclick="changeTimeframe('1W')" id="btn-1W" class="px-3 py-1 text-xs font-medium text-gray-600 hover:bg-gray-100 rounded-lg">1W</button>
+            <button onclick="changeTimeframe('1M')" id="btn-1M" class="px-3 py-1 text-xs font-medium text-gray-600 hover:bg-gray-100 rounded-lg">1M</button>
+            <button onclick="changeTimeframe('1Y')" id="btn-1Y" class="px-3 py-1 text-xs font-medium text-gray-600 hover:bg-gray-100 rounded-lg">1Y</button>
+        </div>
+        <div id="candlestick-chart" class="rounded-lg"></div>
+    </div>
+    
+    <!-- Order Book Preview -->
+    <div class="bg-white mb-4">
+        <div class="px-4 py-3 border-b border-gray-200">
+            <h3 class="font-semibold text-gray-800">Order Book</h3>
+        </div>
+        <div class="px-4 py-3">
+            <div class="grid grid-cols-3 gap-4 text-sm mb-3">
+                <div class="text-center">
+                    <p class="text-gray-500 text-xs mb-1">Bid Price</p>
+                    <p class="font-semibold text-gray-800">₹2,456.50</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-gray-500 text-xs mb-1">Quantity</p>
+                    <p class="font-semibold text-gray-800">500</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-gray-500 text-xs mb-1">Ask Price</p>
+                    <p class="font-semibold text-gray-800">₹2,457.00</p>
+                </div>
+            </div>
+            <a href="order-book.html" class="block text-blue-600 text-sm font-medium w-full text-center py-2">
+                View Full Order Book →
+            </a>
+        </div>
+    </div>
+    
+    <!-- Company Info -->
+    <div class="bg-white mb-4">
+        <div class="px-4 py-3 border-b border-gray-200">
+            <h3 class="font-semibold text-gray-800">Company Information</h3>
+        </div>
+        <div class="px-4 py-4 space-y-3 text-sm">
+            <div class="flex justify-between">
+                <span class="text-gray-500">Market Cap</span>
+                <span class="font-medium text-gray-800">₹16.5L Cr</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="text-gray-500">52W High</span>
+                <span class="font-medium text-gray-800">₹2,850.00</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="text-gray-500">52W Low</span>
+                <span class="font-medium text-gray-800">₹2,100.00</span>
+            </div>
+            <div class="flex justify-between">
+                <span class="text-gray-500">P/E Ratio</span>
+                <span class="font-medium text-gray-800">28.5</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sticky Buy/Sell Buttons -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 p-4 shadow-lg z-20">
+        <div class="grid grid-cols-2 gap-3">
+            <a href="buy-sell.html" class="bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 text-center">
+                Buy
+            </a>
+            <a href="buy-sell.html" class="bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700 text-center">
+                Sell
+            </a>
+        </div>
+    </div>
+</body>
+</html>
