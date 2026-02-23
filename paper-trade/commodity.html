@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commodity - PaperTrade</title>
+    <link rel="stylesheet" href="tailwind.css">
+    <style>* { transition: all 0.2s ease; }</style>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedMode = localStorage.getItem('tradingMode') || 'paper';
+            const indicator = document.getElementById('commodity-mode-indicator');
+            if (savedMode === 'real' && indicator) {
+                indicator.classList.remove('bg-green-100');
+                indicator.classList.add('bg-orange-100');
+                indicator.querySelector('div').classList.remove('bg-green-500');
+                indicator.querySelector('div').classList.add('bg-orange-500');
+                indicator.querySelector('span').textContent = 'Real';
+                indicator.querySelector('span').classList.remove('text-green-700');
+                indicator.querySelector('span').classList.add('text-orange-700');
+            }
+        });
+    </script>
+</head>
+<body class="bg-gray-50 font-sans antialiased pt-14 pb-20">
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-10">
+        <div class="px-4 py-3">
+            <div class="flex items-center gap-3">
+                <a href="dashboard.html" class="text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </a>
+                <h1 class="text-xl font-bold text-gray-800 flex-1">Commodity</h1>
+                <div id="commodity-mode-indicator" class="inline-flex items-center gap-1.5 px-2 py-1 bg-green-100 rounded-full">
+                    <div class="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                    <span class="text-xs font-semibold text-green-700">Paper</span>
+                </div>
+                <a href="profile.html">
+                    <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">VS</div>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="p-4">
+        <div class="bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-2xl p-6 text-white shadow-lg mb-4">
+            <div class="flex items-center gap-3 mb-2">
+                <div class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                    </svg>
+                </div>
+                <div>
+                    <p class="text-yellow-100 text-sm">Trade commodities</p>
+                    <p class="font-semibold">Gold, Silver, Crude & more</p>
+                </div>
+            </div>
+        </div>
+        
+        <h3 class="text-lg font-semibold text-gray-800 mb-3">Popular Commodities</h3>
+        <div class="space-y-3">
+            <a href="stock-detail.html" class="block bg-white rounded-xl p-4 shadow-md hover:shadow-lg flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-yellow-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.736 6.979C9.208 6.193 9.696 6 10 6c.304 0 .792.193 1.264.979a1 1 0 001.715-1.029C11.279 4.784 10.232 4 10 4c-.232 0-1.28.784-1.979 2.01a1 1 0 101.715 1.029z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-800">GOLD</p>
+                        <p class="text-xs text-gray-500">Gold MCX</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="font-semibold text-gray-800">₹62,450</p>
+                    <p class="text-green-600 text-sm">+0.85%</p>
+                </div>
+            </a>
+            <a href="stock-detail.html" class="block bg-white rounded-xl p-4 shadow-md hover:shadow-lg flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-gray-200 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-800">SILVER</p>
+                        <p class="text-xs text-gray-500">Silver MCX</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="font-semibold text-gray-800">₹72,890</p>
+                    <p class="text-red-600 text-sm">-0.42%</p>
+                </div>
+            </a>
+            <a href="stock-detail.html" class="block bg-white rounded-xl p-4 shadow-md hover:shadow-lg flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 text-orange-600" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a8 8 0 018-8v8a8 8 0 01-8 8v-8z"></path><path d="M18 10a8 8 0 01-8 8v8a8 8 0 018-8v-8z"></path></svg>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-800">CRUDE OIL</p>
+                        <p class="text-xs text-gray-500">Crude Oil MCX</p>
+                    </div>
+                </div>
+                <div class="text-right">
+                    <p class="font-semibold text-gray-800">₹6,245</p>
+                    <p class="text-green-600 text-sm">+1.22%</p>
+                </div>
+            </a>
+        </div>
+    </div>
+    
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-20">
+        <div class="grid grid-cols-5 h-16">
+            <a href="dashboard.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                <span class="text-xs font-medium">Home</span>
+            </a>
+            <a href="watchlist.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                <span class="text-xs font-medium">Markets</span>
+            </a>
+            <a href="portfolio.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span class="text-xs font-medium">Portfolio</span>
+            </a>
+            <a href="order-book.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                <span class="text-xs font-medium">Orders</span>
+            </a>
+            <a href="lessons.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                </svg>
+                <span class="text-xs font-medium">Learning</span>
+            </a>
+        </div>
+    </nav>
+</body>
+</html>

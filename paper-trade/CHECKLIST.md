@@ -60,7 +60,7 @@
 
 ### Watchlist
 - ✅ Search bar
-- ✅ Tabs (All, F&O, Equity, Crypto)
+- ✅ Tabs (All, F&O, Stocks)
 - ✅ Stock cards with watchlist toggle
 - ✅ Price and % change display
 - ✅ "View" buttons to stock detail

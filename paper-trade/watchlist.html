@@ -14,14 +14,16 @@
             // Hide all content
             document.getElementById('all-content').classList.add('hidden');
             document.getElementById('fno-content').classList.add('hidden');
-            document.getElementById('equity-content').classList.add('hidden');
-            document.getElementById('crypto-content').classList.add('hidden');
+            document.getElementById('stocks-content').classList.add('hidden');
+            document.getElementById('gainers-content').classList.add('hidden');
             
             // Remove active state from all tabs
-            ['all', 'fno', 'equity', 'crypto'].forEach(tab => {
+            ['all', 'fno', 'stocks', 'gainers'].forEach(tab => {
                 const tabEl = document.getElementById('tab-' + tab);
-                tabEl.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
-                tabEl.classList.add('text-gray-600');
+                if (tabEl) {
+                    tabEl.classList.remove('text-blue-600', 'border-b-2', 'border-blue-600');
+                    tabEl.classList.add('text-gray-600');
+                }
             });
             
             // Show selected content
@@ -29,8 +31,36 @@
             
             // Add active state to selected tab
             const activeTab = document.getElementById('tab-' + tabName);
-            activeTab.classList.remove('text-gray-600');
-            activeTab.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+            if (activeTab) {
+                activeTab.classList.remove('text-gray-600');
+                activeTab.classList.add('text-blue-600', 'border-b-2', 'border-blue-600');
+            }
+        }
+        
+        function setGainersLosers(type) {
+            document.querySelectorAll('[data-gl-tab]').forEach(el => {
+                el.classList.remove('bg-blue-600', 'text-white');
+                el.classList.add('bg-gray-100', 'text-gray-700');
+            });
+            const active = document.querySelector('[data-gl-tab="' + type + '"]');
+            if (active) {
+                active.classList.remove('bg-gray-100', 'text-gray-700');
+                active.classList.add('bg-blue-600', 'text-white');
+            }
+            document.getElementById('gl-gainers-list').classList.toggle('hidden', type !== 'gainers');
+            document.getElementById('gl-losers-list').classList.toggle('hidden', type !== 'losers');
+        }
+        
+        function setCapFilter(cap) {
+            document.querySelectorAll('[data-cap-filter]').forEach(el => {
+                el.classList.remove('bg-blue-600', 'text-white');
+                el.classList.add('bg-gray-200', 'text-gray-700');
+            });
+            const active = document.querySelector('[data-cap-filter="' + cap + '"]');
+            if (active) {
+                active.classList.remove('bg-gray-200', 'text-gray-700');
+                active.classList.add('bg-blue-600', 'text-white');
+            }
         }
         
         // Load trading mode indicator
@@ -49,9 +79,9 @@
         });
     </script>
 </head>
-<body class="bg-gray-50 font-sans antialiased pb-20">
+<body class="bg-gray-50 font-sans antialiased pt-36 pb-20">
     <!-- Header -->
-    <header class="bg-white shadow-sm sticky top-0 z-10">
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-10">
         <div class="px-4 py-3">
             <div class="flex items-center gap-3 mb-3">
                 <a href="dashboard.html" class="text-gray-600">
@@ -64,6 +94,9 @@
                     <div class="w-1.5 h-1.5 rounded-full bg-green-500"></div>
                     <span class="text-xs font-semibold text-green-700">Paper</span>
                 </div>
+                <a href="profile.html">
+                    <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">VS</div>
+                </a>
             </div>
             <!-- Search Bar -->
             <div class="relative">
@@ -76,11 +109,11 @@
         </div>
         
         <!-- Tabs -->
-        <div class="flex border-b border-gray-200 px-4">
-            <button onclick="showTab('all')" id="tab-all" class="px-4 py-2 text-sm font-medium text-blue-600 border-b-2 border-blue-600">All</button>
-            <button onclick="showTab('fno')" id="tab-fno" class="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-800">F&O</button>
-            <button onclick="showTab('equity')" id="tab-equity" class="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-800">Equity</button>
-            <button onclick="showTab('crypto')" id="tab-crypto" class="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-800">Crypto</button>
+        <div class="flex border-b border-gray-200 px-4 overflow-x-auto">
+            <button onclick="showTab('all')" id="tab-all" class="px-4 py-2 text-sm font-medium text-blue-600 border-b-2 border-blue-600 flex-shrink-0">All</button>
+            <button onclick="showTab('fno')" id="tab-fno" class="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 flex-shrink-0">F&O</button>
+            <button onclick="showTab('stocks')" id="tab-stocks" class="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 flex-shrink-0">Stocks</button>
+            <button onclick="showTab('gainers')" id="tab-gainers" class="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-800 flex-shrink-0">Gainers & Losers</button>
         </div>
     </header>
     
@@ -246,8 +279,8 @@
         </div>
     </div>
     
-    <!-- Equity Stocks -->
-    <div id="equity-content" class="p-4 space-y-3 hidden">
+    <!-- Stocks -->
+    <div id="stocks-content" class="p-4 space-y-3 hidden">
         <div class="bg-white rounded-xl p-4 shadow-md">
             <div class="flex items-center justify-between mb-2">
                 <div class="flex-1">
@@ -327,58 +360,88 @@
         </div>
     </div>
     
-    <!-- Crypto Stocks -->
-    <div id="crypto-content" class="p-4 space-y-3 hidden">
-        <div class="bg-white rounded-xl p-4 shadow-md">
-            <div class="flex items-center justify-between mb-2">
-                <div class="flex-1">
-                    <div class="flex items-center gap-2">
-                        <p class="font-bold text-gray-800">BTC/INR</p>
-                        <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded">CRYPTO</span>
-                    </div>
-                    <p class="text-xs text-gray-500">Bitcoin</p>
-                </div>
-                <button class="text-yellow-500">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-lg font-bold text-gray-800">₹45,67,890</p>
-                    <p class="text-sm text-green-600">+₹1,23,450 (+2.78%)</p>
-                </div>
-                <a href="stock-detail.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700">
-                    View
-                </a>
+    <!-- Gainers & Losers -->
+    <div id="gainers-content" class="hidden">
+        <!-- Gainers / Losers toggle -->
+        <div class="p-4 pb-2">
+            <div class="flex gap-2 p-1 bg-gray-100 rounded-lg">
+                <button data-gl-tab="gainers" onclick="setGainersLosers('gainers')" class="flex-1 py-2 text-sm font-medium rounded-md bg-blue-600 text-white">Gainers</button>
+                <button data-gl-tab="losers" onclick="setGainersLosers('losers')" class="flex-1 py-2 text-sm font-medium rounded-md bg-gray-100 text-gray-700">Losers</button>
             </div>
         </div>
-        
-        <div class="bg-white rounded-xl p-4 shadow-md">
-            <div class="flex items-center justify-between mb-2">
+        <!-- Large / Mid / Small cap filter -->
+        <div class="px-4 pb-3">
+            <div class="flex gap-2 flex-wrap">
+                <button data-cap-filter="large" onclick="setCapFilter('large')" class="px-4 py-2 text-sm font-medium rounded-full bg-blue-600 text-white">Large cap</button>
+                <button data-cap-filter="mid" onclick="setCapFilter('mid')" class="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 text-gray-700">Mid cap</button>
+                <button data-cap-filter="small" onclick="setCapFilter('small')" class="px-4 py-2 text-sm font-medium rounded-full bg-gray-200 text-gray-700">Small cap</button>
+            </div>
+        </div>
+        <!-- Gainers list -->
+        <div id="gl-gainers-list" class="p-4 pt-0 space-y-2">
+            <a href="stock-detail.html" class="block bg-white rounded-xl p-4 shadow-md flex items-center justify-between hover:shadow-lg">
                 <div class="flex-1">
-                    <div class="flex items-center gap-2">
-                        <p class="font-bold text-gray-800">ETH/INR</p>
-                        <span class="text-xs bg-yellow-100 text-yellow-700 px-2 py-0.5 rounded">CRYPTO</span>
-                    </div>
-                    <p class="text-xs text-gray-500">Ethereum</p>
+                    <p class="font-semibold text-gray-800">TATASTEEL</p>
+                    <p class="text-xs text-gray-500">Tata Steel Ltd</p>
                 </div>
-                <button class="text-yellow-500">
-                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-                    </svg>
-                </button>
-            </div>
-            <div class="flex items-center justify-between">
-                <div>
-                    <p class="text-lg font-bold text-gray-800">₹2,34,567</p>
-                    <p class="text-sm text-red-600">-₹5,432 (-2.26%)</p>
+                <div class="text-right">
+                    <p class="font-semibold text-gray-800">₹145.20</p>
+                    <p class="text-green-600 text-sm font-medium">+5.32%</p>
                 </div>
-                <a href="stock-detail.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-blue-700">
-                    View
-                </a>
-            </div>
+            </a>
+            <a href="stock-detail.html" class="block bg-white rounded-xl p-4 shadow-md flex items-center justify-between hover:shadow-lg">
+                <div class="flex-1">
+                    <p class="font-semibold text-gray-800">HINDALCO</p>
+                    <p class="text-xs text-gray-500">Hindalco Industries</p>
+                </div>
+                <div class="text-right">
+                    <p class="font-semibold text-gray-800">₹528.75</p>
+                    <p class="text-green-600 text-sm font-medium">+4.18%</p>
+                </div>
+            </a>
+            <a href="stock-detail.html" class="block bg-white rounded-xl p-4 shadow-md flex items-center justify-between hover:shadow-lg">
+                <div class="flex-1">
+                    <p class="font-semibold text-gray-800">JSWSTEEL</p>
+                    <p class="text-xs text-gray-500">JSW Steel Ltd</p>
+                </div>
+                <div class="text-right">
+                    <p class="font-semibold text-gray-800">₹892.40</p>
+                    <p class="text-green-600 text-sm font-medium">+3.85%</p>
+                </div>
+            </a>
+        </div>
+        <!-- Losers list -->
+        <div id="gl-losers-list" class="p-4 pt-0 space-y-2 hidden">
+            <a href="stock-detail.html" class="block bg-white rounded-xl p-4 shadow-md flex items-center justify-between hover:shadow-lg">
+                <div class="flex-1">
+                    <p class="font-semibold text-gray-800">WIPRO</p>
+                    <p class="text-xs text-gray-500">Wipro Limited</p>
+                </div>
+                <div class="text-right">
+                    <p class="font-semibold text-gray-800">₹412.30</p>
+                    <p class="text-red-600 text-sm font-medium">-4.25%</p>
+                </div>
+            </a>
+            <a href="stock-detail.html" class="block bg-white rounded-xl p-4 shadow-md flex items-center justify-between hover:shadow-lg">
+                <div class="flex-1">
+                    <p class="font-semibold text-gray-800">TECHM</p>
+                    <p class="text-xs text-gray-500">Tech Mahindra Ltd</p>
+                </div>
+                <div class="text-right">
+                    <p class="font-semibold text-gray-800">₹1,156.80</p>
+                    <p class="text-red-600 text-sm font-medium">-3.42%</p>
+                </div>
+            </a>
+            <a href="stock-detail.html" class="block bg-white rounded-xl p-4 shadow-md flex items-center justify-between hover:shadow-lg">
+                <div class="flex-1">
+                    <p class="font-semibold text-gray-800">LTIM</p>
+                    <p class="text-xs text-gray-500">LTIMindtree Ltd</p>
+                </div>
+                <div class="text-right">
+                    <p class="font-semibold text-gray-800">₹4,892.50</p>
+                    <p class="text-red-600 text-sm font-medium">-2.91%</p>
+                </div>
+            </a>
         </div>
     </div>
     
@@ -409,11 +472,11 @@
                 </svg>
                 <span class="text-xs font-medium">Orders</span>
             </a>
-            <a href="profile.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
+            <a href="lessons.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
                 <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
                 </svg>
-                <span class="text-xs font-medium">Profile</span>
+                <span class="text-xs font-medium">Learning</span>
             </a>
         </div>
     </nav>

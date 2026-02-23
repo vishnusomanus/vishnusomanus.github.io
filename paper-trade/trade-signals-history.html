@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trade Signals History - PaperTrade</title>
+    <link rel="stylesheet" href="tailwind.css">
+    <style>* { transition: all 0.2s ease; }</style>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const savedMode = localStorage.getItem('tradingMode') || 'paper';
+            const indicator = document.getElementById('signals-mode-indicator');
+            if (savedMode === 'real' && indicator) {
+                indicator.classList.remove('bg-green-100');
+                indicator.classList.add('bg-orange-100');
+                indicator.querySelector('div').classList.remove('bg-green-500');
+                indicator.querySelector('div').classList.add('bg-orange-500');
+                indicator.querySelector('span').textContent = 'Real';
+                indicator.querySelector('span').classList.remove('text-green-700');
+                indicator.querySelector('span').classList.add('text-orange-700');
+            }
+        });
+    </script>
+</head>
+<body class="bg-gray-50 font-sans antialiased pt-14 pb-20">
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-10">
+        <div class="px-4 py-3">
+            <div class="flex items-center gap-3">
+                <a href="dashboard.html" class="text-gray-600">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </a>
+                <h1 class="text-xl font-bold text-gray-800 flex-1">Trade Signals History</h1>
+                <div id="signals-mode-indicator" class="inline-flex items-center gap-1.5 px-2 py-1 bg-green-100 rounded-full">
+                    <div class="w-1.5 h-1.5 rounded-full bg-green-500"></div>
+                    <span class="text-xs font-semibold text-green-700">Paper</span>
+                </div>
+                <a href="profile.html">
+                    <div class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">VS</div>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="p-4">
+        <p class="text-sm text-gray-500 mb-4">Past trade signals by date</p>
+        
+        <!-- 23 Feb 2025 -->
+        <div class="mb-6">
+            <h3 class="text-sm font-semibold text-gray-500 mb-3">23 Feb 2025</h3>
+            <div class="space-y-3">
+                <a href="stock-detail.html" class="block bg-white rounded-xl p-4 shadow-md hover:shadow-lg border-l-4 border-green-500">
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <p class="font-semibold text-gray-800">RELIANCE</p>
+                            <p class="text-xs text-gray-500">Reliance Industries Ltd</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded font-medium">BUY</span>
+                            <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded font-medium flex items-center gap-1">✓ Target hit</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <div><span class="text-gray-500">Entry:</span> <span class="font-medium">₹2,456</span></div>
+                        <div><span class="text-gray-500">Target:</span> <span class="font-medium text-green-600">₹2,520</span></div>
+                        <div><span class="text-gray-500">SL:</span> <span class="font-medium text-red-600">₹2,420</span></div>
+                    </div>
+                </a>
+                <a href="stock-detail.html" class="block bg-white rounded-xl p-4 shadow-md hover:shadow-lg border-l-4 border-green-500">
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <p class="font-semibold text-gray-800">TATASTEEL</p>
+                            <p class="text-xs text-gray-500">Tata Steel Ltd</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded font-medium">BUY</span>
+                            <span class="text-xs bg-red-100 text-red-700 px-2 py-1 rounded font-medium">SL hit</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <div><span class="text-gray-500">Entry:</span> <span class="font-medium">₹145</span></div>
+                        <div><span class="text-gray-500">Target:</span> <span class="font-medium text-green-600">₹152</span></div>
+                        <div><span class="text-gray-500">SL:</span> <span class="font-medium text-red-600">₹141</span></div>
+                    </div>
+                </a>
+                <a href="stock-detail.html" class="block bg-white rounded-xl p-4 shadow-md hover:shadow-lg border-l-4 border-red-500">
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <p class="font-semibold text-gray-800">WIPRO</p>
+                            <p class="text-xs text-gray-500">Wipro Limited</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs bg-red-100 text-red-700 px-2 py-1 rounded font-medium">SELL</span>
+                            <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded font-medium flex items-center gap-1">✓ Target hit</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <div><span class="text-gray-500">Entry:</span> <span class="font-medium">₹412</span></div>
+                        <div><span class="text-gray-500">Target:</span> <span class="font-medium text-green-600">₹398</span></div>
+                        <div><span class="text-gray-500">SL:</span> <span class="font-medium text-red-600">₹422</span></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- 22 Feb 2025 -->
+        <div class="mb-6">
+            <h3 class="text-sm font-semibold text-gray-500 mb-3">22 Feb 2025</h3>
+            <div class="space-y-3">
+                <a href="stock-detail.html" class="block bg-white rounded-xl p-4 shadow-md hover:shadow-lg border-l-4 border-green-500">
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <p class="font-semibold text-gray-800">HDFCBANK</p>
+                            <p class="text-xs text-gray-500">HDFC Bank Limited</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded font-medium">BUY</span>
+                            <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded font-medium flex items-center gap-1">✓ Target hit</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <div><span class="text-gray-500">Entry:</span> <span class="font-medium">₹1,678</span></div>
+                        <div><span class="text-gray-500">Target:</span> <span class="font-medium text-green-600">₹1,725</span></div>
+                        <div><span class="text-gray-500">SL:</span> <span class="font-medium text-red-600">₹1,645</span></div>
+                    </div>
+                </a>
+                <a href="stock-detail.html" class="block bg-white rounded-xl p-4 shadow-md hover:shadow-lg border-l-4 border-green-500">
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <p class="font-semibold text-gray-800">INFY</p>
+                            <p class="text-xs text-gray-500">Infosys Limited</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded font-medium">BUY</span>
+                            <span class="text-xs bg-amber-100 text-amber-700 px-2 py-1 rounded font-medium">Active</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <div><span class="text-gray-500">Entry:</span> <span class="font-medium">₹1,523</span></div>
+                        <div><span class="text-gray-500">Target:</span> <span class="font-medium text-green-600">₹1,565</span></div>
+                        <div><span class="text-gray-500">SL:</span> <span class="font-medium text-red-600">₹1,490</span></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
+        <!-- 21 Feb 2025 -->
+        <div class="mb-6">
+            <h3 class="text-sm font-semibold text-gray-500 mb-3">21 Feb 2025</h3>
+            <div class="space-y-3">
+                <a href="stock-detail.html" class="block bg-white rounded-xl p-4 shadow-md hover:shadow-lg border-l-4 border-green-500">
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <p class="font-semibold text-gray-800">ICICIBANK</p>
+                            <p class="text-xs text-gray-500">ICICI Bank Limited</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs bg-green-100 text-green-700 px-2 py-1 rounded font-medium">BUY</span>
+                            <span class="text-xs bg-emerald-100 text-emerald-700 px-2 py-1 rounded font-medium flex items-center gap-1">✓ Target hit</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <div><span class="text-gray-500">Entry:</span> <span class="font-medium">₹1,124</span></div>
+                        <div><span class="text-gray-500">Target:</span> <span class="font-medium text-green-600">₹1,160</span></div>
+                        <div><span class="text-gray-500">SL:</span> <span class="font-medium text-red-600">₹1,095</span></div>
+                    </div>
+                </a>
+                <a href="stock-detail.html" class="block bg-white rounded-xl p-4 shadow-md hover:shadow-lg border-l-4 border-red-500">
+                    <div class="flex items-center justify-between mb-2">
+                        <div>
+                            <p class="font-semibold text-gray-800">TECHM</p>
+                            <p class="text-xs text-gray-500">Tech Mahindra Ltd</p>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xs bg-red-100 text-red-700 px-2 py-1 rounded font-medium">SELL</span>
+                            <span class="text-xs bg-red-100 text-red-700 px-2 py-1 rounded font-medium">SL hit</span>
+                        </div>
+                    </div>
+                    <div class="flex justify-between text-sm">
+                        <div><span class="text-gray-500">Entry:</span> <span class="font-medium">₹1,156</span></div>
+                        <div><span class="text-gray-500">Target:</span> <span class="font-medium text-green-600">₹1,120</span></div>
+                        <div><span class="text-gray-500">SL:</span> <span class="font-medium text-red-600">₹1,175</span></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 shadow-lg z-20">
+        <div class="grid grid-cols-5 h-16">
+            <a href="dashboard.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                <span class="text-xs font-medium">Home</span>
+            </a>
+            <a href="watchlist.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
+                <span class="text-xs font-medium">Markets</span>
+            </a>
+            <a href="portfolio.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span class="text-xs font-medium">Portfolio</span>
+            </a>
+            <a href="order-book.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path></svg>
+                <span class="text-xs font-medium">Orders</span>
+            </a>
+            <a href="lessons.html" class="flex flex-col items-center justify-center text-gray-400 hover:text-gray-600">
+                <svg class="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                <span class="text-xs font-medium">Learning</span>
+            </a>
+        </div>
+    </nav>
+</body>
+</html>
