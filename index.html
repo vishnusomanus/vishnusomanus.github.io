@@ -460,7 +460,7 @@
     <nav class="flex justify-between items-center px-margin-sm md:px-margin-md h-20 w-full max-w-container-max mx-auto">
       <a href="#top" class="flex items-center gap-2 cursor-pointer active:scale-95 transition-transform">
         <span class="material-symbols-outlined text-electric-blue">terminal</span>
-        <span class="font-mono text-body-lg font-bold tracking-tighter text-on-surface">VISHNU.DEV</span>
+        <span class="font-mono text-body-lg font-bold tracking-tighter text-on-surface">vishnusoman.us</span>
       </a>
       <div class="hidden md:flex items-center space-x-8">
         <a class="nav-link text-on-surface-variant hover:text-electric-blue transition-colors font-mono text-label-caps" href="#top" data-section="top">Home</a>
@@ -1078,20 +1078,21 @@
               </a>
             </div>
           </div>
-          <form class="space-y-4" action="mailto:vishnusomanus@gmail.com" method="get" enctype="text/plain">
+          <form id="contact-form" class="space-y-4" novalidate>
             <div>
               <label for="name" class="block font-mono text-label-caps text-on-surface-variant mb-2">Name</label>
-              <input type="text" id="name" name="subject" required class="w-full px-4 py-3 rounded-lg bg-slate-900/60 border border-white/10 text-on-surface focus:outline-none focus:border-electric-blue transition-colors" placeholder="Your Name" />
+              <input type="text" id="name" name="name" required autocomplete="name" class="w-full px-4 py-3 rounded-lg bg-slate-900/60 border border-white/10 text-on-surface focus:outline-none focus:border-electric-blue transition-colors" placeholder="Your Name" />
             </div>
             <div>
               <label for="email" class="block font-mono text-label-caps text-on-surface-variant mb-2">Email</label>
-              <input type="email" id="email" name="email" required class="w-full px-4 py-3 rounded-lg bg-slate-900/60 border border-white/10 text-on-surface focus:outline-none focus:border-electric-blue transition-colors" placeholder="your@email.com" />
+              <input type="email" id="email" name="email" required autocomplete="email" class="w-full px-4 py-3 rounded-lg bg-slate-900/60 border border-white/10 text-on-surface focus:outline-none focus:border-electric-blue transition-colors" placeholder="your@email.com" />
             </div>
             <div>
               <label for="message" class="block font-mono text-label-caps text-on-surface-variant mb-2">Message</label>
-              <textarea id="message" name="body" rows="5" required class="w-full px-4 py-3 rounded-lg bg-slate-900/60 border border-white/10 text-on-surface focus:outline-none focus:border-electric-blue transition-colors resize-y" placeholder="Your message..."></textarea>
+              <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 rounded-lg bg-slate-900/60 border border-white/10 text-on-surface focus:outline-none focus:border-electric-blue transition-colors resize-y" placeholder="Your message..."></textarea>
             </div>
-            <button type="submit" class="btn-glow w-full bg-electric-blue text-white px-8 py-4 rounded font-mono text-label-caps flex items-center justify-center gap-2">
+            <p id="contact-form-status" class="font-mono text-code-md min-h-[1.25rem]" role="status" aria-live="polite"></p>
+            <button type="submit" id="contact-form-submit" class="btn-glow w-full bg-electric-blue text-white px-8 py-4 rounded font-mono text-label-caps flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed">
               SEND MESSAGE <span class="material-symbols-outlined text-sm">send</span>
             </button>
           </form>
@@ -1114,6 +1115,45 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       renderPortfolioProjects("#projects-grid", { featuredOnly: true });
+
+      const CONTACT_FORM_URL =
+        "https://script.google.com/macros/s/AKfycbyIlKjGYJLTzqLkqs4XPGwN5HbHVGLYWyKzfzpFYsjer_5qWif-p4aHpWymLJZo2xk/exec";
+      const contactForm = document.getElementById("contact-form");
+      const contactStatus = document.getElementById("contact-form-status");
+      const contactSubmit = document.getElementById("contact-form-submit");
+
+      contactForm?.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        if (!contactForm.checkValidity()) {
+          contactForm.reportValidity();
+          return;
+        }
+
+        const submitLabel = contactSubmit.innerHTML;
+        contactSubmit.disabled = true;
+        contactSubmit.textContent = "SENDING...";
+        contactStatus.textContent = "";
+        contactStatus.className = "font-mono text-code-md min-h-[1.25rem]";
+
+        try {
+          const body = new URLSearchParams(new FormData(contactForm));
+          await fetch(CONTACT_FORM_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body,
+          });
+          contactForm.reset();
+          contactStatus.textContent = "Message sent. I'll get back to you soon.";
+          contactStatus.classList.add("text-electric-blue");
+        } catch {
+          contactStatus.textContent = "Couldn’t send right now. Email me at vishnusomanus@gmail.com.";
+          contactStatus.classList.add("text-red-400");
+        } finally {
+          contactSubmit.disabled = false;
+          contactSubmit.innerHTML = submitLabel;
+        }
+      });
 
       const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
       const menuBtn = document.getElementById("mobile-menu-btn");
