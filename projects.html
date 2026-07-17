@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Vishnu Soman U S</title>
+  <meta name="description" content="Selected projects by Vishnu Soman U S — SaaS, media, e-commerce, and multi-site platforms." />
+  <link rel="canonical" href="https://vishnusoman.us/projects.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vishnusoman.us/projects.html" />
+  <meta property="og:title" content="Projects — Vishnu Soman U S" />
+  <meta property="og:description" content="Selected projects by Vishnu Soman U S — SaaS, media, e-commerce, and multi-site platforms." />
+  <meta property="og:site_name" content="vishnusoman.us" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Projects — Vishnu Soman U S" />
+  <meta name="twitter:description" content="Selected projects by Vishnu Soman U S — SaaS, media, e-commerce, and multi-site platforms." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23101415'/><text x='50' y='70' font-size='48' text-anchor='middle' fill='%23007AFF' font-family='monospace' font-weight='bold'>VS</text></svg>" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            background: "#101415",
+            surface: "#101415",
+            "surface-container": "#1d2022",
+            "surface-container-low": "#191c1e",
+            "surface-container-lowest": "#0b0f10",
+            "surface-container-high": "#272a2c",
+            "on-surface": "#e0e3e5",
+            "on-surface-variant": "#c1c6d7",
+            "on-secondary-container": "#adb4ce",
+            "electric-blue": "#007AFF",
+            "slate-800": "#1E293B",
+            "slate-900": "#0F172A",
+            outline: "#8b90a0",
+            "outline-variant": "#414755",
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            "2xl": "1rem",
+            full: "0.75rem",
+          },
+          spacing: {
+            "margin-md": "32px",
+            "container-max": "1200px",
+            "section-padding": "120px",
+            "margin-sm": "16px",
+            gutter: "24px",
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+            mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+          },
+          fontSize: {
+            "label-caps": ["12px", { lineHeight: "16px", letterSpacing: "0.1em", fontWeight: "700" }],
+            "code-md": ["14px", { lineHeight: "20px", fontWeight: "500" }],
+            "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "headline-sm": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+            "headline-md": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+            "headline-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+          },
+          keyframes: {
+            "fade-up": {
+              "0%": { opacity: "0", transform: "translateY(24px)" },
+              "100%": { opacity: "1", transform: "translateY(0)" },
+            },
+          },
+          animation: {
+            "fade-up": "fade-up 0.7s ease-out both",
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .glass-card {
+      position: relative;
+      background: rgba(30, 41, 59, 0.4);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                  box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                  transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      overflow: hidden;
+    }
+    .glass-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(
+        600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(0, 122, 255, 0.12),
+        transparent 40%
+      );
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .glass-card:hover::before { opacity: 1; }
+    .glass-card > * { position: relative; z-index: 1; }
+    .glass-card:hover {
+      border-color: #007aff;
+      box-shadow: 0 0 30px rgba(0, 122, 255, 0.12), 0 12px 40px rgba(0, 0, 0, 0.35);
+      transform: translateY(-6px);
+    }
+    .timeline-gradient {
+      background: linear-gradient(to bottom, #007aff 0%, transparent 100%);
+      transform-origin: top;
+      transform: scaleY(0);
+      transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .timeline-gradient.is-drawn { transform: scaleY(1); }
+    .matrix-bg {
+      background-image: radial-gradient(#1e293b 1px, transparent 1px);
+      background-size: 24px 24px;
+      animation: matrix-drift 40s linear infinite;
+    }
+    @keyframes matrix-drift {
+      0% { background-position: 0 0; }
+      100% { background-position: 24px 24px; }
+    }
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+    html { scroll-behavior: smooth; }
+
+    /* Hero full-bleed background */
+    .hero {
+      position: relative;
+      isolation: isolate;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+      z-index: 0;
+      background:
+        radial-gradient(ellipse 70% 55% at 15% 20%, rgba(0, 122, 255, 0.16), transparent 55%),
+        radial-gradient(ellipse 55% 45% at 90% 70%, rgba(56, 189, 248, 0.08), transparent 50%),
+        #101415;
+    }
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      will-change: transform;
+      animation: orb-float 14s ease-in-out infinite;
+    }
+    .orb-a {
+      width: min(36rem, 80vw);
+      height: min(36rem, 80vw);
+      background: rgba(0, 122, 255, 0.22);
+      top: -12%;
+      left: -8%;
+      opacity: 0.9;
+    }
+    .orb-b {
+      width: min(28rem, 70vw);
+      height: min(28rem, 70vw);
+      background: rgba(56, 189, 248, 0.14);
+      bottom: -8%;
+      right: -6%;
+      animation-delay: -5s;
+      animation-duration: 18s;
+      opacity: 0.85;
+    }
+    @keyframes orb-float {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+      50% { transform: translate3d(24px, -28px, 0) scale(1.06); }
+    }
+
+    /* Scroll reveals */
+    .reveal {
+      opacity: 0;
+      transform: translateY(36px);
+      transition:
+        opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+      transition-delay: var(--delay, 0ms);
+    }
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition:
+        opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+      transition-delay: var(--delay, 0ms);
+    }
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition:
+        opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.85s cubic-bezier(0.22, 1, 0.36, 1);
+      transition-delay: var(--delay, 0ms);
+    }
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.92);
+      transition:
+        opacity 0.75s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+      transition-delay: var(--delay, 0ms);
+    }
+    .reveal.is-visible,
+    .reveal-left.is-visible,
+    .reveal-right.is-visible,
+    .reveal-scale.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* Hero text shimmer */
+    .text-shimmer {
+      background: linear-gradient(
+        110deg,
+        #007aff 0%,
+        #7bd0ff 35%,
+        #007aff 50%,
+        #38bdf8 65%,
+        #007aff 100%
+      );
+      background-size: 200% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      animation: shimmer 4s linear infinite;
+    }
+    @keyframes shimmer {
+      to { background-position: 200% center; }
+    }
+
+    /* Hero stagger entrance */
+    .hero-line {
+      opacity: 0;
+      transform: translateY(28px);
+      animation: hero-in 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+    .hero-line:nth-child(1) { animation-delay: 0.1s; }
+    .hero-line:nth-child(2) { animation-delay: 0.25s; }
+    .hero-line:nth-child(3) { animation-delay: 0.4s; }
+    .hero-line:nth-child(4) { animation-delay: 0.55s; }
+    /* inline style animation-delay overrides nth-child when set */
+    @keyframes hero-in {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Stats pop */
+    .stat-value {
+      display: inline-block;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .glass-card:hover .stat-value {
+      transform: scale(1.08);
+    }
+
+    /* Skill tags */
+    .skill-tag {
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+                  border-color 0.25s ease,
+                  background 0.25s ease,
+                  color 0.25s ease;
+    }
+    .skill-tag:hover {
+      transform: translateY(-2px) scale(1.05);
+      border-color: rgba(0, 122, 255, 0.5) !important;
+      color: #7bd0ff;
+    }
+
+    /* Nav underline */
+    .nav-link {
+      position: relative;
+    }
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      left: 0; right: 0; bottom: -6px;
+      height: 2px;
+      background: #007aff;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: 0 0 8px rgba(0, 122, 255, 0.6);
+    }
+    .nav-link:hover::after,
+    .nav-link.is-active::after {
+      transform: scaleX(1);
+    }
+    .nav-link.is-active { color: #007aff; }
+
+    /* Header scroll state */
+    header.scrolled {
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 40px rgba(0, 122, 255, 0.06);
+    }
+
+    /* Timeline node pulse */
+    .timeline-node {
+      transition: box-shadow 0.4s ease, border-color 0.4s ease, transform 0.4s ease;
+    }
+    .timeline-node.is-active {
+      border-color: #007aff !important;
+      box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.2), 0 0 16px #007aff;
+      animation: node-pulse 2s ease-in-out infinite;
+    }
+    @keyframes node-pulse {
+      0%, 100% { box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.15), 0 0 12px rgba(0, 122, 255, 0.5); }
+      50% { box-shadow: 0 0 0 8px rgba(0, 122, 255, 0.08), 0 0 24px rgba(0, 122, 255, 0.7); }
+    }
+
+    /* CTA button glow */
+    .btn-glow {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.25s ease, box-shadow 0.35s ease;
+    }
+    .btn-glow::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(105deg, transparent 40%, rgba(255,255,255,0.25) 50%, transparent 60%);
+      transform: translateX(-120%);
+      transition: transform 0.6s ease;
+    }
+    .btn-glow:hover {
+      box-shadow: 0 0 28px rgba(0, 122, 255, 0.45);
+      transform: translateY(-2px);
+    }
+    .btn-glow:hover::after { transform: translateX(120%); }
+
+    /* Project icon float */
+    .project-icon {
+      transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    article:hover .project-icon {
+      transform: scale(1.15) rotate(-6deg);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .animate-fade-up,
+      .hero-line,
+      .orb,
+      .matrix-bg,
+      .text-shimmer,
+      .timeline-node.is-active { animation: none !important; }
+      .reveal, .reveal-left, .reveal-right, .reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+      }
+      .timeline-gradient { transform: none !important; }
+      .glass-card:hover { transform: none; }
+      .btn-glow::after { display: none; }
+    }
+
+    /* Experience collapse */
+    .exp-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-top: 0.75rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(0, 122, 255, 0.08);
+      color: #007aff;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: border-color 0.25s ease, background 0.25s ease, color 0.25s ease;
+    }
+    .exp-toggle:hover {
+      border-color: rgba(0, 122, 255, 0.45);
+      background: rgba(0, 122, 255, 0.16);
+    }
+    .exp-toggle .material-symbols-outlined {
+      font-size: 16px;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .exp-item.is-open .exp-toggle .material-symbols-outlined {
+      transform: rotate(180deg);
+    }
+    .exp-details {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .exp-item.is-open .exp-details {
+      grid-template-rows: 1fr;
+    }
+    .exp-details-inner {
+      overflow: hidden;
+      min-height: 0;
+    }
+    .exp-details-inner > ul {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .exp-preview {
+      color: #c1c6d7;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .exp-details { transition: none; }
+      .exp-toggle .material-symbols-outlined { transition: none; }
+    }
+
+    /* Project grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+    @media (min-width: 768px) {
+      .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (min-width: 1100px) {
+      .projects-grid.projects-grid--all {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 28px;
+      }
+    }
+    .project-card {
+      min-height: 100%;
+    }
+    .project-card-media::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border: 1px solid transparent;
+      transition: border-color 0.3s ease;
+      pointer-events: none;
+    }
+    .project-card:hover .project-card-media::after {
+      border-color: rgba(0, 122, 255, 0.35);
+    }
+  </style>
+
+  <script src="js/projects.js" defer></script>
+</head>
+<body class="bg-background text-on-surface font-sans selection:bg-electric-blue/30 overflow-x-hidden selection:text-white">
+  <header id="site-header" class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-white/10 shadow-[0_0_40px_rgba(0,122,255,0.05)] transition-shadow duration-300">
+    <nav class="flex justify-between items-center px-margin-sm md:px-margin-md h-20 w-full max-w-container-max mx-auto">
+      <a href="index.html" class="flex items-center gap-2 cursor-pointer active:scale-95 transition-transform">
+        <span class="material-symbols-outlined text-electric-blue">terminal</span>
+        <span class="font-mono text-body-lg font-bold tracking-tighter text-on-surface">VISHNU.DEV</span>
+      </a>
+      <div class="hidden md:flex items-center space-x-8">
+        <a class="nav-link text-on-surface-variant hover:text-electric-blue transition-colors font-mono text-label-caps" href="index.html">Home</a>
+        <a class="nav-link text-on-surface-variant hover:text-electric-blue transition-colors font-mono text-label-caps" href="index.html#about">About</a>
+        <a class="nav-link text-on-surface-variant hover:text-electric-blue transition-colors font-mono text-label-caps" href="index.html#experience">Experience</a>
+        <a class="nav-link is-active text-electric-blue transition-colors font-mono text-label-caps" href="projects.html">Projects</a>
+        <a class="nav-link text-on-surface-variant hover:text-electric-blue transition-colors font-mono text-label-caps" href="index.html#contact">Contact</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="index.html#contact" class="btn-glow bg-electric-blue text-white font-mono px-6 py-2 rounded-lg cursor-pointer active:scale-95 transition-transform text-label-caps inline-block">
+          GET IN TOUCH
+        </a>
+        <button id="mobile-menu-btn" type="button" class="md:hidden p-2 text-on-surface-variant hover:text-electric-blue transition-colors" aria-label="Open menu" aria-expanded="false">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </nav>
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/10 bg-background/95 backdrop-blur-xl">
+      <div class="flex flex-col px-margin-sm py-4 space-y-1">
+        <a class="font-mono text-label-caps py-3 text-on-surface-variant hover:text-electric-blue" href="index.html">Home</a>
+        <a class="font-mono text-label-caps py-3 text-on-surface-variant hover:text-electric-blue" href="index.html#about">About</a>
+        <a class="font-mono text-label-caps py-3 text-on-surface-variant hover:text-electric-blue" href="index.html#experience">Experience</a>
+        <a class="font-mono text-label-caps py-3 text-electric-blue" href="projects.html">Projects</a>
+        <a class="font-mono text-label-caps py-3 text-on-surface-variant hover:text-electric-blue" href="index.html#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+    <main class="mt-20">
+    <section class="py-20 md:py-section-padding matrix-bg min-h-screen">
+      <div class="max-w-container-max mx-auto px-margin-sm md:px-margin-md">
+        <div class="mb-6 reveal">
+          <a href="index.html" class="inline-flex items-center gap-2 font-mono text-label-caps text-on-surface-variant hover:text-electric-blue transition-colors">
+            <span class="material-symbols-outlined text-sm">arrow_back</span> BACK HOME
+          </a>
+        </div>
+        <div class="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-4 reveal">
+          <div>
+            <span class="font-mono text-label-caps text-electric-blue tracking-widest uppercase mb-4 block">Portfolio</span>
+            <h1 class="text-headline-md">All Projects</h1>
+          </div>
+          <p class="text-on-surface-variant max-w-sm text-body-md">
+            Platforms and products shipped across SaaS, media, e-commerce, learning, and consumer apps.
+          </p>
+        </div>
+        <div id="projects-grid" class="projects-grid projects-grid--all" aria-live="polite"></div>
+      </div>
+    </section>
+  </main>
+
+
+  <footer class="bg-surface-container-lowest border-t border-white/5 w-full">
+    <div class="flex flex-col md:flex-row justify-between items-center py-margin-md px-margin-sm md:px-margin-md w-full max-w-container-max mx-auto gap-4">
+      <span class="font-mono text-on-surface text-code-md">© 2026 VISHNU SOMAN U S • ENGINEERED FOR SCALE</span>
+      <div class="flex items-center gap-8">
+        <a class="font-mono text-code-md text-on-secondary-container hover:text-electric-blue underline transition-all" href="https://github.com/vishnusomanus" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a class="font-mono text-code-md text-on-secondary-container hover:text-electric-blue underline transition-all" href="https://linkedin.com/in/vishnusomanus" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="font-mono text-code-md text-on-secondary-container hover:text-electric-blue underline transition-all" href="index.html">Home</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      renderPortfolioProjects("#projects-grid");
+
+      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      const menuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const header = document.getElementById("site-header");
+
+      menuBtn?.addEventListener("click", () => {
+        const open = mobileMenu.classList.toggle("hidden") === false;
+        menuBtn.setAttribute("aria-expanded", String(open));
+        menuBtn.querySelector(".material-symbols-outlined").textContent = open ? "close" : "menu";
+      });
+
+      mobileMenu?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuBtn.setAttribute("aria-expanded", "false");
+          menuBtn.querySelector(".material-symbols-outlined").textContent = "menu";
+        });
+      });
+
+      window.addEventListener("scroll", () => {
+        header?.classList.toggle("scrolled", window.scrollY > 24);
+      }, { passive: true });
+
+      document.querySelectorAll(".glass-card").forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+          const rect = card.getBoundingClientRect();
+          card.style.setProperty("--mouse-x", `${e.clientX - rect.left}px`);
+          card.style.setProperty("--mouse-y", `${e.clientY - rect.top}px`);
+        });
+      });
+
+      const revealEls = document.querySelectorAll(".reveal, .reveal-scale");
+      if (reduceMotion) {
+        revealEls.forEach((el) => el.classList.add("is-visible"));
+        return;
+      }
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+      );
+      revealEls.forEach((el) => revealObserver.observe(el));
+    });
+  </script>
+</body>
+</html>
