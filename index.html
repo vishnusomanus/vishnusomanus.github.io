@@ -452,10 +452,174 @@
     .project-card:hover .project-card-media::after {
       border-color: rgba(0, 122, 255, 0.35);
     }
+
+    /* 3D studio invite modal */
+    .studio-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      background: rgba(8, 12, 14, 0.82);
+      backdrop-filter: blur(10px);
+    }
+    .studio-modal[hidden] {
+      display: none;
+    }
+    .studio-modal-card {
+      width: min(440px, 100%);
+      padding: 1.75rem 1.5rem;
+      border-radius: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(29, 32, 34, 0.95);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55), 0 0 40px rgba(0, 122, 255, 0.08);
+      animation: studio-modal-in 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    @keyframes studio-modal-in {
+      from { opacity: 0; transform: translateY(12px) scale(0.98); }
+      to { opacity: 1; transform: none; }
+    }
+    .studio-modal-eyebrow {
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #007aff;
+      margin-bottom: 0.75rem;
+    }
+    .studio-modal-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+    }
+    .studio-modal-body {
+      color: #c1c6d7;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      margin-bottom: 1rem;
+    }
+    .studio-modal-notes {
+      list-style: none;
+      display: grid;
+      gap: 0.55rem;
+      margin: 0 0 1.35rem;
+      padding: 0;
+    }
+    .studio-modal-notes li {
+      display: flex;
+      gap: 0.55rem;
+      align-items: flex-start;
+      color: #c1c6d7;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+    .studio-modal-notes .material-symbols-outlined {
+      font-size: 18px;
+      color: #007aff;
+      margin-top: 1px;
+      flex-shrink: 0;
+    }
+    .studio-modal-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+    @media (min-width: 480px) {
+      .studio-modal-actions {
+        flex-direction: row;
+      }
+    }
+    .studio-modal-actions a,
+    .studio-modal-actions button {
+      flex: 1;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      padding: 0.85rem 1rem;
+      border-radius: 0.5rem;
+      font-family: "JetBrains Mono", ui-monospace, monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .studio-modal-primary {
+      background: #007aff;
+      color: #fff;
+      border: none;
+      text-decoration: none;
+    }
+    .studio-modal-primary:hover {
+      box-shadow: 0 0 24px rgba(0, 122, 255, 0.4);
+      transform: translateY(-1px);
+    }
+    .studio-modal-secondary {
+      background: transparent;
+      color: #c1c6d7;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+    }
+    .studio-modal-secondary:hover {
+      border-color: rgba(0, 122, 255, 0.45);
+      color: #7bd0ff;
+    }
+    body.studio-modal-open {
+      overflow: hidden;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .studio-modal-card { animation: none; }
+    }
   </style>
   <script src="js/projects.js" defer></script>
 </head>
 <body class="bg-background text-on-surface font-sans selection:bg-electric-blue/30 overflow-x-hidden selection:text-white">
+  <div
+    id="studio-modal"
+    class="studio-modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="studio-modal-title"
+    hidden
+  >
+    <div class="studio-modal-card">
+      <p class="studio-modal-eyebrow">Interactive experience</p>
+      <h2 id="studio-modal-title" class="studio-modal-title">Try the 3D portfolio?</h2>
+      <p class="studio-modal-body">
+        Explore my work in an interactive 3D workspace at
+        <span class="text-electric-blue font-mono">studio.vishnusoman.us</span>.
+      </p>
+      <ul class="studio-modal-notes">
+        <li>
+          <span class="material-symbols-outlined" aria-hidden="true">laptop_mac</span>
+          <span>Best experienced on a laptop or desktop with a modern browser.</span>
+        </li>
+        <li>
+          <span class="material-symbols-outlined" aria-hidden="true">hourglass_top</span>
+          <span>Initial load may take a few seconds while the 3D scene prepares.</span>
+        </li>
+      </ul>
+      <div class="studio-modal-actions">
+        <a
+          id="studio-modal-enter"
+          class="studio-modal-primary"
+          href="https://studio.vishnusoman.us"
+        >
+          Enter 3D Studio
+          <span class="material-symbols-outlined text-sm">view_in_ar</span>
+        </a>
+        <button id="studio-modal-dismiss" type="button" class="studio-modal-secondary">
+          Stay on classic site
+        </button>
+      </div>
+    </div>
+  </div>
+
   <header id="site-header" class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-xl border-b border-white/10 shadow-[0_0_40px_rgba(0,122,255,0.05)] transition-shadow duration-300">
     <nav class="flex justify-between items-center px-margin-sm md:px-margin-md h-20 w-full max-w-container-max mx-auto">
       <a href="#top" class="flex items-center gap-2 cursor-pointer active:scale-95 transition-transform">
@@ -467,6 +631,7 @@
         <a class="nav-link text-on-surface-variant hover:text-electric-blue transition-colors font-mono text-label-caps" href="#about" data-section="about">About</a>
         <a class="nav-link text-on-surface-variant hover:text-electric-blue transition-colors font-mono text-label-caps" href="#experience" data-section="experience">Experience</a>
         <a class="nav-link text-on-surface-variant hover:text-electric-blue transition-colors font-mono text-label-caps" href="projects.html">Projects</a>
+        <a class="nav-link text-on-surface-variant hover:text-electric-blue transition-colors font-mono text-label-caps" href="https://studio.vishnusoman.us" target="_blank" rel="noopener noreferrer">3D Studio</a>
         <a class="nav-link text-on-surface-variant hover:text-electric-blue transition-colors font-mono text-label-caps" href="#contact" data-section="contact">Contact</a>
       </div>
       <div class="flex items-center gap-3">
@@ -484,6 +649,7 @@
         <a class="font-mono text-label-caps py-3 text-on-surface-variant hover:text-electric-blue" href="#about">About</a>
         <a class="font-mono text-label-caps py-3 text-on-surface-variant hover:text-electric-blue" href="#experience">Experience</a>
         <a class="font-mono text-label-caps py-3 text-on-surface-variant hover:text-electric-blue" href="projects.html">Projects</a>
+        <a class="font-mono text-label-caps py-3 text-on-surface-variant hover:text-electric-blue" href="https://studio.vishnusoman.us" target="_blank" rel="noopener noreferrer">3D Studio</a>
         <a class="font-mono text-label-caps py-3 text-on-surface-variant hover:text-electric-blue" href="#contact">Contact</a>
       </div>
     </div>
@@ -510,10 +676,13 @@
               <a href="#contact" class="btn-glow bg-electric-blue text-white px-8 py-4 rounded font-mono text-label-caps flex items-center justify-center gap-2">
                 GET IN TOUCH <span class="material-symbols-outlined text-sm">send</span>
               </a>
-              <a href="#projects" class="border border-white/10 hover:border-electric-blue px-8 py-4 rounded font-mono text-label-caps transition-all inline-flex items-center justify-center hover:-translate-y-0.5">
-                VIEW WORK
+              <a href="https://studio.vishnusoman.us" target="_blank" rel="noopener noreferrer" class="border border-white/10 hover:border-electric-blue px-8 py-4 rounded font-mono text-label-caps transition-all inline-flex items-center justify-center gap-2 hover:-translate-y-0.5">
+                3D STUDIO <span class="material-symbols-outlined text-sm">view_in_ar</span>
               </a>
             </div>
+            <p class="hero-line mt-4 font-mono text-[11px] text-on-secondary-container max-w-md" style="animation-delay: 0.65s">
+              Prefer immersive? Visit <a href="https://studio.vishnusoman.us" target="_blank" rel="noopener noreferrer" class="text-electric-blue hover:underline">studio.vishnusoman.us</a> on a laptop — first load can take a few seconds.
+            </p>
           </div>
           <div class="lg:col-span-5 grid grid-cols-2 gap-4">
             <div class="p-8 rounded-xl glass-card text-center hero-line" style="animation-delay: 0.35s">
@@ -1057,6 +1226,10 @@
               <span class="material-symbols-outlined text-electric-blue">language</span>
               <span class="font-mono text-code-md group-hover:underline">vishnusoman.us</span>
             </a>
+            <a href="https://studio.vishnusoman.us" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 text-on-surface-variant hover:text-electric-blue transition-colors group">
+              <span class="material-symbols-outlined text-electric-blue">view_in_ar</span>
+              <span class="font-mono text-code-md group-hover:underline">studio.vishnusoman.us — 3D Portfolio</span>
+            </a>
             <a href="https://maps.google.com/?q=Kollam,Kerala,India+691534" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 text-on-surface-variant hover:text-electric-blue transition-colors group">
               <span class="material-symbols-outlined text-electric-blue">location_on</span>
               <span class="font-mono text-code-md group-hover:underline">Kollam, Kerala, India 691534</span>
@@ -1105,6 +1278,7 @@
     <div class="flex flex-col md:flex-row justify-between items-center py-margin-md px-margin-sm md:px-margin-md w-full max-w-container-max mx-auto gap-4">
       <span class="font-mono text-on-surface text-code-md">© 2026 VISHNU SOMAN U S • ENGINEERED FOR SCALE</span>
       <div class="flex items-center gap-8">
+        <a class="font-mono text-code-md text-on-secondary-container hover:text-electric-blue underline transition-all" href="https://studio.vishnusoman.us" target="_blank" rel="noopener noreferrer">3D Studio</a>
         <a class="font-mono text-code-md text-on-secondary-container hover:text-electric-blue underline transition-all" href="https://github.com/vishnusomanus" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a class="font-mono text-code-md text-on-secondary-container hover:text-electric-blue underline transition-all" href="https://linkedin.com/in/vishnusomanus" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a class="font-mono text-code-md text-on-secondary-container hover:text-electric-blue underline transition-all" href="https://vishnusoman.us" target="_blank" rel="noopener noreferrer">Website</a>
@@ -1114,6 +1288,45 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
+      const studioModal = document.getElementById("studio-modal");
+      const studioDismiss = document.getElementById("studio-modal-dismiss");
+      const studioKey = "studio-invite-dismissed";
+
+      const closeStudioModal = () => {
+        if (!studioModal) return;
+        studioModal.hidden = true;
+        document.body.classList.remove("studio-modal-open");
+        try {
+          sessionStorage.setItem(studioKey, "1");
+        } catch (_) {}
+      };
+
+      const openStudioModal = () => {
+        if (!studioModal) return;
+        studioModal.hidden = false;
+        document.body.classList.add("studio-modal-open");
+        studioDismiss?.focus();
+      };
+
+      let dismissed = false;
+      try {
+        dismissed = sessionStorage.getItem(studioKey) === "1";
+      } catch (_) {}
+
+      if (!dismissed) {
+        openStudioModal();
+      }
+
+      studioDismiss?.addEventListener("click", closeStudioModal);
+      studioModal?.addEventListener("click", (event) => {
+        if (event.target === studioModal) closeStudioModal();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && studioModal && !studioModal.hidden) {
+          closeStudioModal();
+        }
+      });
+
       renderPortfolioProjects("#projects-grid", { featuredOnly: true });
 
       const CONTACT_FORM_URL =
