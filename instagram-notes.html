@@ -203,6 +203,15 @@
 
       <div id="list-status" class="glass rounded-2xl px-4 py-3 text-sm text-on-surface-variant hidden break-words"></div>
 
+      <div id="connect-panel" class="glass rounded-2xl p-4 space-y-3 hidden">
+        <p class="text-sm text-on-surface-variant">This site needs the Apps Script Web app URL (the one that ends with <span class="font-mono text-on-surface">/exec</span>).</p>
+        <div class="flex flex-col sm:flex-row gap-2">
+          <input id="script-url-input" type="url" placeholder="https://script.google.com/macros/s/…/exec" class="w-full min-w-0 rounded-lg px-3 py-3 min-h-[44px]" />
+          <button id="save-script-url" type="button" class="rounded-lg bg-electric-blue px-4 py-3 min-h-[44px] text-sm font-semibold text-white hover:bg-blue-500 disabled:opacity-60 shrink-0">Connect</button>
+        </div>
+        <p id="connect-status" class="font-mono text-xs min-h-[1rem]"></p>
+      </div>
+
       <div class="table-shell glass rounded-2xl overflow-hidden">
         <table class="notes-table w-full text-left text-sm">
           <thead class="bg-surface-container-high/60 text-[11px] font-mono uppercase tracking-wider text-on-surface-variant">
@@ -340,6 +349,7 @@ function doPost(e) {
     const SHEET_ID = "1OtTTKI_xm9zx9_rkI3nVqtoxF1SA3l03XiQW4ORl0EQ";
     const GID = "0";
     const STORAGE_KEY = "instagram-notes-script-url";
+    const APPS_SCRIPT_URL = "";
     const GVIZ_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&gid=${GID}`;
 
     const els = {
@@ -354,6 +364,10 @@ function doPost(e) {
       refreshBtn: document.getElementById("refresh-btn"),
       listStatus: document.getElementById("list-status"),
       rowsBody: document.getElementById("rows-body"),
+      connectPanel: document.getElementById("connect-panel"),
+      scriptUrlInput: document.getElementById("script-url-input"),
+      saveScriptUrl: document.getElementById("save-script-url"),
+      connectStatus: document.getElementById("connect-status"),
     };
 
     let rows = [];
@@ -365,7 +379,24 @@ function doPost(e) {
       const day = String(d.getDate()).padStart(2, "0");
       return `${y}-${m}-${day}`;
     };
-    const scriptUrl = () => (localStorage.getItem(STORAGE_KEY) || "").trim();
+    const scriptUrl = () => (APPS_SCRIPT_URL || localStorage.getItem(STORAGE_KEY) || "").trim();
+
+    function normalizeScriptUrl(value) {
+      const trimmed = String(value || "").trim().replace(/\/+$/, "");
+      try {
+        const parsed = new URL(trimmed);
+        const okHost = parsed.hostname.endsWith("script.google.com");
+        const okPath = parsed.pathname.includes("/macros/s/") && parsed.pathname.endsWith("/exec");
+        return okHost && okPath ? trimmed : "";
+      } catch {
+        return "";
+      }
+    }
+
+    function showConnect(show) {
+      els.connectPanel.classList.toggle("hidden", !show);
+      if (show) els.scriptUrlInput.value = scriptUrl();
+    }
 
     function resetForm() {
       els.form.reset();
@@ -502,24 +533,26 @@ function doPost(e) {
     async function loadRows() {
       els.rowsBody.innerHTML = `<tr class="is-placeholder"><td colspan="5" class="px-4 py-10 text-center text-on-surface-variant">Loading…</td></tr>`;
       const url = scriptUrl();
+      if (!url) {
+        rows = [];
+        showListStatus("");
+        showConnect(true);
+        els.rowsBody.innerHTML = `<tr class="is-placeholder"><td colspan="5" class="px-4 py-10 text-center text-on-surface-variant">Connect the sheet to load rows.</td></tr>`;
+        els.rowCount.textContent = "";
+        return { ok: false, error: "missing-url" };
+      }
+      showConnect(false);
       try {
-        if (url) {
-          const data = await fetchScript({ action: "list" });
-          rows = data.rows || [];
-          showListStatus("");
-          renderRows();
-          return { ok: true };
-        }
-        rows = await loadFromGviz();
+        const data = await fetchScript({ action: "list" });
+        rows = data.rows || [];
         showListStatus("");
         renderRows();
         return { ok: true };
       } catch (err) {
         rows = [];
-        const message = url
-          ? (err.message || "Could not load rows.")
-          : "Could not load the sheet.";
+        const message = err.message || "Could not load rows.";
         showListStatus(message, "error");
+        showConnect(true);
         renderRows();
         return { ok: false, error: message };
       }
@@ -528,7 +561,8 @@ function doPost(e) {
     async function saveEntry(payload) {
       const url = scriptUrl();
       if (!url) {
-        throw new Error("Sheet connection is missing. Refresh the page after saving the Web app URL once.");
+        showConnect(true);
+        throw new Error("Connect the sheet first using the /exec URL.");
       }
       const params = new URLSearchParams({
         action: "save",
@@ -586,6 +620,30 @@ function doPost(e) {
 
     els.search.addEventListener("input", renderRows);
     els.refreshBtn.addEventListener("click", loadRows);
+
+    els.saveScriptUrl.addEventListener("click", async () => {
+      const value = normalizeScriptUrl(els.scriptUrlInput.value);
+      if (!value) {
+        els.connectStatus.textContent = "Paste the Web app URL that ends with /exec.";
+        els.connectStatus.className = "font-mono text-xs min-h-[1rem] text-red-400";
+        return;
+      }
+      localStorage.setItem(STORAGE_KEY, value);
+      els.scriptUrlInput.value = value;
+      els.saveScriptUrl.disabled = true;
+      els.connectStatus.textContent = "Connecting…";
+      els.connectStatus.className = "font-mono text-xs min-h-[1rem] text-electric-blue";
+      const result = await loadRows();
+      els.saveScriptUrl.disabled = false;
+      if (result.ok) {
+        els.connectStatus.textContent = "";
+        return;
+      }
+      els.connectStatus.textContent = result.error === "missing-url"
+        ? "Paste the Web app URL that ends with /exec."
+        : result.error;
+      els.connectStatus.className = "font-mono text-xs min-h-[1rem] text-red-400";
+    });
 
     loadRows();
   </script>
