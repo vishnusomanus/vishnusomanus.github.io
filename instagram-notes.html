@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Instagram Notes — Sheet</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23101415'/><text x='50' y='70' font-size='48' text-anchor='middle' fill='%23007AFF' font-family='monospace' font-weight='bold'>VS</text></svg>" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            background: "#101415",
+            surface: "#101415",
+            "surface-container": "#1d2022",
+            "surface-container-low": "#191c1e",
+            "surface-container-high": "#272a2c",
+            "on-surface": "#e0e3e5",
+            "on-surface-variant": "#c1c6d7",
+            "electric-blue": "#007AFF",
+            outline: "#8b90a0",
+            "outline-variant": "#414755",
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+            mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+    body {
+      background:
+        radial-gradient(ellipse 70% 50% at 12% 0%, rgba(0, 122, 255, 0.14), transparent 55%),
+        radial-gradient(ellipse 50% 40% at 95% 80%, rgba(56, 189, 248, 0.08), transparent 50%),
+        #101415;
+    }
+    .glass {
+      background: rgba(30, 41, 59, 0.4);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    html, body {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+    input, textarea {
+      background: #191c1e !important;
+      border-color: #414755 !important;
+      color: #e0e3e5 !important;
+      font-size: 16px !important;
+    }
+    input:focus, textarea:focus {
+      border-color: #007AFF !important;
+      box-shadow: 0 0 0 1px #007AFF !important;
+    }
+    .notes-table td {
+      word-break: break-word;
+      overflow-wrap: anywhere;
+    }
+    @media (max-width: 1279px) {
+      .table-shell {
+        background: transparent;
+        border: none;
+        backdrop-filter: none;
+        overflow: visible;
+      }
+      .notes-table,
+      .notes-table thead,
+      .notes-table tbody,
+      .notes-table th,
+      .notes-table td,
+      .notes-table tr {
+        display: block;
+        width: 100%;
+      }
+      .notes-table thead {
+        display: none;
+      }
+      .notes-table tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .notes-table tr {
+        background: rgba(30, 41, 59, 0.4);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 1rem;
+        padding: 0.9rem 1rem;
+      }
+      .notes-table td {
+        display: grid;
+        grid-template-columns: minmax(6.5rem, 34%) minmax(0, 1fr);
+        gap: 0.75rem;
+        align-items: start;
+        padding: 0.45rem 0;
+        border: 0;
+      }
+      .notes-table td + td {
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .notes-table td::before {
+        content: attr(data-label);
+        font-family: "JetBrains Mono", ui-monospace, monospace;
+        font-size: 10px;
+        line-height: 1.4;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #c1c6d7;
+        padding-top: 0.15rem;
+      }
+      .notes-table tr.is-placeholder {
+        padding: 0;
+      }
+      .notes-table tr.is-placeholder td {
+        display: block;
+        text-align: center;
+        padding: 2.5rem 1rem;
+      }
+      .notes-table tr.is-placeholder td::before {
+        content: none;
+      }
+    }
+    @media (min-width: 1280px) {
+      .notes-table {
+        table-layout: fixed;
+      }
+      .notes-table th:nth-child(1),
+      .notes-table td:nth-child(1) { width: 20%; }
+      .notes-table th:nth-child(2),
+      .notes-table td:nth-child(2) { width: 18%; }
+      .notes-table th:nth-child(3),
+      .notes-table td:nth-child(3) { width: 34%; }
+      .notes-table th:nth-child(4),
+      .notes-table td:nth-child(4) { width: 14%; }
+      .notes-table th:nth-child(5),
+      .notes-table td:nth-child(5) { width: 14%; }
+    }
+  </style>
+</head>
+<body class="min-h-screen text-on-surface font-sans antialiased pb-[env(safe-area-inset-bottom)]">
+  <header class="border-b border-white/5 sticky top-0 z-20 bg-background/80 backdrop-blur-md pt-[env(safe-area-inset-top)]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+      <p class="font-mono text-[11px] tracking-[0.14em] uppercase text-electric-blue">Google Sheet</p>
+      <h1 class="text-lg sm:text-xl font-semibold tracking-tight">Instagram Notes</h1>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-5 sm:py-8 grid lg:grid-cols-[minmax(0,22rem)_minmax(0,1fr)] gap-5 sm:gap-6">
+    <section class="glass rounded-2xl p-4 sm:p-6 h-fit lg:sticky lg:top-24 min-w-0">
+      <div class="mb-5">
+        <h2 class="text-base font-semibold">Add entry</h2>
+        <p class="text-sm text-on-surface-variant mt-1">Saves to the Google Sheet.</p>
+      </div>
+
+      <form id="entry-form" class="space-y-4">
+
+        <label class="block">
+          <span class="block text-xs font-mono uppercase tracking-wider text-on-surface-variant mb-1.5">Instagram Username</span>
+          <input id="username" name="username" type="text" required autocomplete="off" autocapitalize="off" placeholder="@username" class="w-full rounded-lg px-3 py-3 min-h-[44px]" />
+        </label>
+
+        <label class="block">
+          <span class="block text-xs font-mono uppercase tracking-wider text-on-surface-variant mb-1.5">Suggested Name</span>
+          <input id="name" name="name" type="text" required autocomplete="off" placeholder="Display name" class="w-full rounded-lg px-3 py-3 min-h-[44px]" />
+        </label>
+
+        <label class="block">
+          <span class="block text-xs font-mono uppercase tracking-wider text-on-surface-variant mb-1.5">Dialogue / Note</span>
+          <textarea id="note" name="note" rows="4" placeholder="Message, caption, or note" class="w-full rounded-lg px-3 py-3 resize-y min-h-[6rem]"></textarea>
+        </label>
+
+        <button id="submit-btn" type="submit" class="w-full rounded-lg bg-electric-blue py-3 min-h-[44px] text-sm font-semibold text-white hover:bg-blue-500 disabled:opacity-60 transition-colors">
+          Save to sheet
+        </button>
+        <p id="form-status" class="font-mono text-xs min-h-[1rem]" role="status"></p>
+      </form>
+    </section>
+
+    <section class="space-y-4 min-w-0">
+      <div class="flex items-center gap-2 sm:gap-3">
+        <div class="relative min-w-0 flex-1">
+          <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px] pointer-events-none">search</span>
+          <input id="search" type="search" placeholder="Search…" class="w-full rounded-lg pl-10 pr-3 py-3 min-h-[44px]" />
+        </div>
+        <p id="row-count" class="font-mono text-xs text-on-surface-variant whitespace-nowrap shrink-0"></p>
+        <button id="refresh-btn" type="button" class="inline-flex items-center justify-center gap-1 rounded-lg border border-outline-variant min-h-[44px] min-w-[44px] px-3 text-sm text-on-surface-variant hover:text-on-surface hover:border-electric-blue transition-colors shrink-0" aria-label="Refresh">
+          <span class="material-symbols-outlined text-[20px]">refresh</span>
+          <span class="hidden sm:inline">Refresh</span>
+        </button>
+      </div>
+
+      <div id="list-status" class="glass rounded-2xl px-4 py-3 text-sm text-on-surface-variant hidden break-words"></div>
+
+      <div class="table-shell glass rounded-2xl overflow-hidden">
+        <table class="notes-table w-full text-left text-sm">
+          <thead class="bg-surface-container-high/60 text-[11px] font-mono uppercase tracking-wider text-on-surface-variant">
+            <tr>
+              <th class="px-4 py-3 font-medium">Instagram Username</th>
+              <th class="px-4 py-3 font-medium">Suggested Name</th>
+              <th class="px-4 py-3 font-medium">Dialogue / Note</th>
+              <th class="px-4 py-3 font-medium">Date</th>
+              <th class="px-4 py-3 font-medium">Status</th>
+            </tr>
+          </thead>
+          <tbody id="rows-body" class="xl:divide-y xl:divide-white/5">
+            <tr class="is-placeholder">
+              <td colspan="5" class="px-4 py-10 text-center text-on-surface-variant">Loading…</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script type="text/plain" id="apps-script-source">
+const SHEET_ID = "1OtTTKI_xm9zx9_rkI3nVqtoxF1SA3l03XiQW4ORl0EQ";
+const SHEET_GID = 0;
+const HEADERS = ["Instagram Username", "Suggested Name", "Dialogue / Note", "Date", "Status"];
+
+function getSheet() {
+  const ss = SpreadsheetApp.openById(SHEET_ID);
+  return ss.getSheets().find(function (s) { return s.getSheetId() === SHEET_GID; }) || ss.getSheets()[0];
+}
+
+function ensureHeaders(sheet) {
+  const first = sheet.getRange(1, 1, 1, 5).getValues()[0];
+  if (!String(first[0] || "").trim()) {
+    sheet.getRange(1, 1, 1, 5).setValues([HEADERS]);
+  } else if (!String(first[4] || "").trim()) {
+    sheet.getRange(1, 5).setValue("Status");
+  }
+}
+
+function formatDate(value) {
+  if (!value) return "";
+  if (Object.prototype.toString.call(value) === "[object Date]" && !isNaN(value)) {
+    return Utilities.formatDate(value, Session.getScriptTimeZone(), "yyyy-MM-dd");
+  }
+  return String(value);
+}
+
+function listRows() {
+  const sheet = getSheet();
+  ensureHeaders(sheet);
+  const last = sheet.getLastRow();
+  if (last < 2) return { ok: true, rows: [] };
+  const values = sheet.getRange(2, 1, last - 1, 5).getDisplayValues();
+  const rows = [];
+  for (var i = 0; i < values.length; i++) {
+    var r = values[i];
+    var username = String(r[0] || "").trim();
+    var name = String(r[1] || "").trim();
+    var note = String(r[2] || "").trim();
+    var date = formatDate(r[3]);
+    var status = String(r[4] || "").trim();
+    if (username || name || note || date || status) {
+      rows.push({ row: i + 2, username: username, name: name, note: note, date: date, status: status });
+    }
+  }
+  return { ok: true, rows: rows };
+}
+
+function todayStamp() {
+  return Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "yyyy-MM-dd");
+}
+
+function saveRow(params) {
+  const sheet = getSheet();
+  ensureHeaders(sheet);
+  const rowNum = parseInt(params.row, 10);
+  const existingDate = rowNum >= 2 ? formatDate(sheet.getRange(rowNum, 4).getValue()) : "";
+  const date = String(params.date || "").trim() || existingDate || todayStamp();
+  const record = [
+    String(params.username || "").trim(),
+    String(params.name || "").trim(),
+    String(params.note || "").trim(),
+    date
+  ];
+  if (rowNum >= 2) {
+    sheet.getRange(rowNum, 1, 1, 4).setValues([record]);
+    return { ok: true, action: "updated", row: rowNum };
+  }
+  sheet.appendRow(record);
+  return { ok: true, action: "added", row: sheet.getLastRow() };
+}
+
+function jsonp(e, payload) {
+  const out = JSON.stringify(payload);
+  const cb = e && e.parameter && e.parameter.callback;
+  if (cb && /^[A-Za-z_$][A-Za-z0-9_$]*$/.test(cb)) {
+    return ContentService.createTextOutput(cb + "(" + out + ")").setMimeType(ContentService.MimeType.JAVASCRIPT);
+  }
+  return ContentService.createTextOutput(out).setMimeType(ContentService.MimeType.JSON);
+}
+
+function readParams(e) {
+  const params = Object.assign({}, (e && e.parameter) || {});
+  if (e && e.postData && e.postData.contents) {
+    try {
+      const json = JSON.parse(e.postData.contents);
+      for (var key in json) params[key] = json[key];
+    } catch (err) {}
+  }
+  return params;
+}
+
+function doGet(e) {
+  try {
+    const params = readParams(e);
+    const action = String(params.action || "list").toLowerCase();
+    if (action === "save") return jsonp(e, saveRow(params));
+    return jsonp(e, listRows());
+  } catch (err) {
+    return jsonp(e, { ok: false, error: String(err) });
+  }
+}
+
+function doPost(e) {
+  try {
+    return jsonp(e, saveRow(readParams(e)));
+  } catch (err) {
+    return jsonp(e, { ok: false, error: String(err) });
+  }
+}
+  </script>
+
+  <script>
+    const SHEET_ID = "1OtTTKI_xm9zx9_rkI3nVqtoxF1SA3l03XiQW4ORl0EQ";
+    const GID = "0";
+    const STORAGE_KEY = "instagram-notes-script-url";
+    const GVIZ_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&gid=${GID}`;
+
+    const els = {
+      form: document.getElementById("entry-form"),
+      formStatus: document.getElementById("form-status"),
+      submitBtn: document.getElementById("submit-btn"),
+      username: document.getElementById("username"),
+      name: document.getElementById("name"),
+      note: document.getElementById("note"),
+      search: document.getElementById("search"),
+      rowCount: document.getElementById("row-count"),
+      refreshBtn: document.getElementById("refresh-btn"),
+      listStatus: document.getElementById("list-status"),
+      rowsBody: document.getElementById("rows-body"),
+    };
+
+    let rows = [];
+
+    const today = () => {
+      const d = new Date();
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, "0");
+      const day = String(d.getDate()).padStart(2, "0");
+      return `${y}-${m}-${day}`;
+    };
+    const scriptUrl = () => (localStorage.getItem(STORAGE_KEY) || "").trim();
+
+    function resetForm() {
+      els.form.reset();
+      els.formStatus.textContent = "";
+    }
+
+    function parseScriptPayload(text) {
+      const raw = String(text || "").trim();
+      if (!raw) throw new Error("Apps Script returned an empty response. Deploy again as a Web app.");
+      if (raw.startsWith("<") || raw.includes("<!DOCTYPE")) {
+        throw new Error("Google returned a login page. Redeploy with Who has access = Anyone.");
+      }
+      const start = raw.indexOf("{");
+      const end = raw.lastIndexOf("}");
+      if (start < 0 || end < start) throw new Error("Unexpected response from Apps Script.");
+      return JSON.parse(raw.slice(start, end + 1));
+    }
+
+    async function fetchScript(params, timeoutMs = 12000) {
+      const url = scriptUrl();
+      if (!url) throw new Error("No Web app URL saved.");
+      const endpoint = new URL(url);
+      Object.entries(params).forEach(([key, value]) => {
+        if (value != null && value !== "") endpoint.searchParams.set(key, value);
+      });
+      const ctrl = new AbortController();
+      const timer = setTimeout(() => ctrl.abort(), timeoutMs);
+      try {
+        const res = await fetch(endpoint.toString(), { method: "GET", redirect: "follow", signal: ctrl.signal });
+        const data = parseScriptPayload(await res.text());
+        if (!data || data.ok === false) throw new Error((data && data.error) || "Apps Script request failed.");
+        return data;
+      } catch (err) {
+        if (err.name === "AbortError") throw new Error("Request timed out. Check the /exec URL and deploy access.");
+        throw err;
+      } finally {
+        clearTimeout(timer);
+      }
+    }
+
+    function parseGviz(text) {
+      const start = text.indexOf("{");
+      const end = text.lastIndexOf("}");
+      if (start < 0 || end < start) throw new Error("Unexpected sheet response");
+      const json = JSON.parse(text.slice(start, end + 1));
+      const table = json.table;
+      if (!table || !table.rows) return [];
+      const cols = (table.cols || []).map((c) => String(c.label || "").trim().toLowerCase());
+      const indexOf = (labels) => cols.findIndex((c) => labels.includes(c));
+      const iUser = indexOf(["instagram username", "username"]) >= 0 ? indexOf(["instagram username", "username"]) : 0;
+      const iName = indexOf(["suggested name", "name"]) >= 0 ? indexOf(["suggested name", "name"]) : 1;
+      const iNote = indexOf(["dialogue / note", "dialogue/note", "note"]) >= 0 ? indexOf(["dialogue / note", "dialogue/note", "note"]) : 2;
+      const iDate = indexOf(["date"]) >= 0 ? indexOf(["date"]) : 3;
+      const iStatus = indexOf(["status"]) >= 0 ? indexOf(["status"]) : 4;
+
+      const cell = (row, i) => {
+        const c = row.c && row.c[i];
+        if (!c) return "";
+        if (c.f) return String(c.f);
+        if (c.v == null) return "";
+        return String(c.v);
+      };
+
+      return table.rows.map((row, i) => ({
+        row: i + 2,
+        username: cell(row, iUser).trim(),
+        name: cell(row, iName).trim(),
+        note: cell(row, iNote).trim(),
+        date: cell(row, iDate).trim(),
+        status: cell(row, iStatus).trim(),
+      })).filter((r) => r.username || r.name || r.note || r.date || r.status);
+    }
+
+    async function loadFromGviz() {
+      const res = await fetch(GVIZ_URL);
+      if (!res.ok) throw new Error("Sheet is not public");
+      return parseGviz(await res.text());
+    }
+
+    function showListStatus(message, kind) {
+      if (!message) {
+        els.listStatus.classList.add("hidden");
+        els.listStatus.textContent = "";
+        return;
+      }
+      els.listStatus.classList.remove("hidden");
+      els.listStatus.textContent = message;
+      els.listStatus.className = "glass rounded-2xl px-4 py-3 text-sm " + (kind === "error" ? "text-red-400" : "text-on-surface-variant");
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function emptyMessage() {
+      return rows.length ? "No matches." : "No rows yet. Add the first entry.";
+    }
+
+    function statusBadge(status) {
+      if (!status) return `<span class="text-xs text-outline">—</span>`;
+      return `<span class="inline-flex max-w-full items-center rounded-full border border-outline-variant px-2 py-0.5 text-[11px] font-medium text-on-surface-variant break-all">${escapeHtml(status)}</span>`;
+    }
+
+    function renderRows() {
+      const q = els.search.value.trim().toLowerCase();
+      const filtered = rows.filter((r) => {
+        if (!q) return true;
+        return [r.username, r.name, r.note, r.date, r.status].join(" ").toLowerCase().includes(q);
+      });
+      els.rowCount.textContent = q
+        ? `${filtered.length} of ${rows.length}`
+        : `${rows.length} ${rows.length === 1 ? "entry" : "entries"}`;
+
+      if (!filtered.length) {
+        els.rowsBody.innerHTML = `<tr class="is-placeholder"><td colspan="5" class="px-4 py-10 text-center text-on-surface-variant">${emptyMessage()}</td></tr>`;
+        return;
+      }
+
+      els.rowsBody.innerHTML = filtered.map((r) => `
+        <tr class="xl:hover:bg-white/[0.03]">
+          <td class="px-4 py-3 font-medium" data-label="Username">${escapeHtml(r.username) || "—"}</td>
+          <td class="px-4 py-3" data-label="Name">${escapeHtml(r.name) || "—"}</td>
+          <td class="px-4 py-3 text-on-surface-variant" data-label="Note"><span class="xl:line-clamp-3">${escapeHtml(r.note) || "—"}</span></td>
+          <td class="px-4 py-3 font-mono text-xs" data-label="Date">${escapeHtml(r.date) || "—"}</td>
+          <td class="px-4 py-3" data-label="Status">${statusBadge(r.status)}</td>
+        </tr>
+      `).join("");
+    }
+
+    async function loadRows() {
+      els.rowsBody.innerHTML = `<tr class="is-placeholder"><td colspan="5" class="px-4 py-10 text-center text-on-surface-variant">Loading…</td></tr>`;
+      const url = scriptUrl();
+      try {
+        if (url) {
+          const data = await fetchScript({ action: "list" });
+          rows = data.rows || [];
+          showListStatus("");
+          renderRows();
+          return { ok: true };
+        }
+        rows = await loadFromGviz();
+        showListStatus("");
+        renderRows();
+        return { ok: true };
+      } catch (err) {
+        rows = [];
+        const message = url
+          ? (err.message || "Could not load rows.")
+          : "Could not load the sheet.";
+        showListStatus(message, "error");
+        renderRows();
+        return { ok: false, error: message };
+      }
+    }
+
+    async function saveEntry(payload) {
+      const url = scriptUrl();
+      if (!url) {
+        throw new Error("Sheet connection is missing. Refresh the page after saving the Web app URL once.");
+      }
+      const params = new URLSearchParams({
+        action: "save",
+        username: payload.username,
+        name: payload.name,
+        note: payload.note,
+        date: payload.date,
+      });
+
+      try {
+        return await fetchScript(Object.fromEntries(params.entries()));
+      } catch {
+        await fetch(url, {
+          method: "POST",
+          mode: "no-cors",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: params,
+        });
+        await new Promise((r) => setTimeout(r, 1200));
+        return { ok: true, action: "added" };
+      }
+    }
+
+    els.form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      if (!els.form.checkValidity()) {
+        els.form.reportValidity();
+        return;
+      }
+      const payload = {
+        username: els.username.value.trim(),
+        name: els.name.value.trim(),
+        note: els.note.value.trim(),
+        date: today(),
+      };
+      const label = els.submitBtn.textContent;
+      els.submitBtn.disabled = true;
+      els.submitBtn.textContent = "Saving…";
+      els.formStatus.textContent = "";
+      els.formStatus.className = "font-mono text-xs min-h-[1rem]";
+      try {
+        await saveEntry(payload);
+        els.formStatus.textContent = "Row added.";
+        els.formStatus.classList.add("text-electric-blue");
+        resetForm();
+        await loadRows();
+      } catch (err) {
+        els.formStatus.textContent = err.message || "Could not save.";
+        els.formStatus.classList.add("text-red-400");
+      } finally {
+        els.submitBtn.disabled = false;
+        els.submitBtn.textContent = label;
+      }
+    });
+
+    els.search.addEventListener("input", renderRows);
+    els.refreshBtn.addEventListener("click", loadRows);
+
+    loadRows();
+  </script>
+</body>
+</html>
