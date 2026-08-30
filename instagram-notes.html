@@ -199,20 +199,9 @@
           <span class="material-symbols-outlined text-[20px]">refresh</span>
           <span class="hidden sm:inline">Refresh</span>
         </button>
-        <button id="copy-script" type="button" class="hidden sm:inline text-xs text-on-surface-variant hover:text-electric-blue shrink-0">Copy Apps Script</button>
       </div>
 
       <div id="list-status" class="glass rounded-2xl px-4 py-3 text-sm text-on-surface-variant hidden break-words"></div>
-
-      <div id="connect-panel" class="glass rounded-2xl p-4 space-y-3 hidden">
-        <p class="text-sm text-on-surface-variant">This site needs the Apps Script Web app URL (the one that ends with <span class="font-mono text-on-surface">/exec</span>).</p>
-        <div class="flex flex-col sm:flex-row gap-2">
-          <input id="script-url-input" type="url" placeholder="https://script.google.com/macros/s/…/exec" class="w-full min-w-0 rounded-lg px-3 py-3 min-h-[44px]" />
-          <button id="save-script-url" type="button" class="rounded-lg bg-electric-blue px-4 py-3 min-h-[44px] text-sm font-semibold text-white hover:bg-blue-500 disabled:opacity-60 shrink-0">Connect</button>
-        </div>
-        <p id="connect-status" class="font-mono text-xs min-h-[1rem]"></p>
-        <button id="copy-script-connect" type="button" class="text-xs text-electric-blue hover:underline">Copy updated Apps Script</button>
-      </div>
 
       <div class="table-shell glass rounded-2xl overflow-hidden">
         <table class="notes-table w-full text-left text-sm">
@@ -367,11 +356,7 @@ function doPost(e) {
   </script>
 
   <script>
-    const SHEET_ID = "1OtTTKI_xm9zx9_rkI3nVqtoxF1SA3l03XiQW4ORl0EQ";
-    const GID = "0";
-    const STORAGE_KEY = "instagram-notes-script-url";
-    const APPS_SCRIPT_URL = "";
-    const GVIZ_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&gid=${GID}`;
+    const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx1Rb47UDt6ruaC2JVaoCUGHBVODoVgOY280F6GE7pO4v95EsuNEHH4xMZBRxv_38Jt/exec";
 
     const els = {
       form: document.getElementById("entry-form"),
@@ -385,12 +370,6 @@ function doPost(e) {
       refreshBtn: document.getElementById("refresh-btn"),
       listStatus: document.getElementById("list-status"),
       rowsBody: document.getElementById("rows-body"),
-      connectPanel: document.getElementById("connect-panel"),
-      scriptUrlInput: document.getElementById("script-url-input"),
-      saveScriptUrl: document.getElementById("save-script-url"),
-      connectStatus: document.getElementById("connect-status"),
-      copyScript: document.getElementById("copy-script"),
-      copyScriptConnect: document.getElementById("copy-script-connect"),
     };
 
     let rows = [];
@@ -402,24 +381,7 @@ function doPost(e) {
       const day = String(d.getDate()).padStart(2, "0");
       return `${y}-${m}-${day}`;
     };
-    const scriptUrl = () => (APPS_SCRIPT_URL || localStorage.getItem(STORAGE_KEY) || "").trim();
-
-    function normalizeScriptUrl(value) {
-      const trimmed = String(value || "").trim().replace(/\/+$/, "");
-      try {
-        const parsed = new URL(trimmed);
-        const okHost = parsed.hostname.endsWith("script.google.com");
-        const okPath = parsed.pathname.includes("/macros/s/") && parsed.pathname.endsWith("/exec");
-        return okHost && okPath ? trimmed : "";
-      } catch {
-        return "";
-      }
-    }
-
-    function showConnect(show) {
-      els.connectPanel.classList.toggle("hidden", !show);
-      if (show) els.scriptUrlInput.value = scriptUrl();
-    }
+    const scriptUrl = () => APPS_SCRIPT_URL;
 
     function resetForm() {
       els.form.reset();
@@ -458,45 +420,6 @@ function doPost(e) {
       } finally {
         clearTimeout(timer);
       }
-    }
-
-    function parseGviz(text) {
-      const start = text.indexOf("{");
-      const end = text.lastIndexOf("}");
-      if (start < 0 || end < start) throw new Error("Unexpected sheet response");
-      const json = JSON.parse(text.slice(start, end + 1));
-      const table = json.table;
-      if (!table || !table.rows) return [];
-      const cols = (table.cols || []).map((c) => String(c.label || "").trim().toLowerCase());
-      const indexOf = (labels) => cols.findIndex((c) => labels.includes(c));
-      const iUser = indexOf(["instagram username", "username"]) >= 0 ? indexOf(["instagram username", "username"]) : 0;
-      const iName = indexOf(["suggested name", "name"]) >= 0 ? indexOf(["suggested name", "name"]) : 1;
-      const iNote = indexOf(["dialogue / note", "dialogue/note", "note"]) >= 0 ? indexOf(["dialogue / note", "dialogue/note", "note"]) : 2;
-      const iDate = indexOf(["date"]) >= 0 ? indexOf(["date"]) : 3;
-      const iStatus = indexOf(["status"]) >= 0 ? indexOf(["status"]) : 4;
-
-      const cell = (row, i) => {
-        const c = row.c && row.c[i];
-        if (!c) return "";
-        if (c.f) return String(c.f);
-        if (c.v == null) return "";
-        return String(c.v);
-      };
-
-      return table.rows.map((row, i) => ({
-        row: i + 2,
-        username: cell(row, iUser).trim(),
-        name: cell(row, iName).trim(),
-        note: cell(row, iNote).trim(),
-        date: cell(row, iDate).trim(),
-        status: cell(row, iStatus).trim(),
-      })).filter((r) => r.username || r.name || r.note || r.date || r.status);
-    }
-
-    async function loadFromGviz() {
-      const res = await fetch(GVIZ_URL);
-      if (!res.ok) throw new Error("Sheet is not public");
-      return parseGviz(await res.text());
     }
 
     function showListStatus(message, kind) {
@@ -555,16 +478,6 @@ function doPost(e) {
 
     async function loadRows() {
       els.rowsBody.innerHTML = `<tr class="is-placeholder"><td colspan="5" class="px-4 py-10 text-center text-on-surface-variant">Loading…</td></tr>`;
-      const url = scriptUrl();
-      if (!url) {
-        rows = [];
-        showListStatus("");
-        showConnect(true);
-        els.rowsBody.innerHTML = `<tr class="is-placeholder"><td colspan="5" class="px-4 py-10 text-center text-on-surface-variant">Connect the sheet to load rows.</td></tr>`;
-        els.rowCount.textContent = "";
-        return { ok: false, error: "missing-url" };
-      }
-      showConnect(false);
       try {
         const data = await fetchScript({ action: "list" });
         rows = (data.rows || []).map((r) => ({
@@ -577,23 +490,15 @@ function doPost(e) {
         }));
         showListStatus("");
         renderRows();
-        return { ok: true };
       } catch (err) {
         rows = [];
-        const message = err.message || "Could not load rows.";
-        showListStatus(message, "error");
-        showConnect(true);
+        showListStatus(err.message || "Could not load rows.", "error");
         renderRows();
-        return { ok: false, error: message };
       }
     }
 
     async function saveEntry(payload) {
       const url = scriptUrl();
-      if (!url) {
-        showConnect(true);
-        throw new Error("Connect the sheet first using the /exec URL.");
-      }
       const params = new URLSearchParams({
         action: "save",
         username: payload.username,
@@ -648,48 +553,8 @@ function doPost(e) {
       }
     });
 
-    async function copyAppsScript() {
-      const code = document.getElementById("apps-script-source").textContent.trim();
-      try {
-        await navigator.clipboard.writeText(code);
-        els.connectStatus.textContent = "Apps Script copied. Paste it in Extensions → Apps Script, then Deploy → Manage deployments → New version.";
-        els.connectStatus.className = "font-mono text-xs min-h-[1rem] text-electric-blue";
-        showConnect(true);
-      } catch {
-        showConnect(true);
-        els.connectStatus.textContent = "Copy failed — select the script in the page source.";
-        els.connectStatus.className = "font-mono text-xs min-h-[1rem] text-red-400";
-      }
-    }
-
     els.search.addEventListener("input", renderRows);
     els.refreshBtn.addEventListener("click", loadRows);
-    els.copyScript?.addEventListener("click", copyAppsScript);
-    els.copyScriptConnect?.addEventListener("click", copyAppsScript);
-
-    els.saveScriptUrl.addEventListener("click", async () => {
-      const value = normalizeScriptUrl(els.scriptUrlInput.value);
-      if (!value) {
-        els.connectStatus.textContent = "Paste the Web app URL that ends with /exec.";
-        els.connectStatus.className = "font-mono text-xs min-h-[1rem] text-red-400";
-        return;
-      }
-      localStorage.setItem(STORAGE_KEY, value);
-      els.scriptUrlInput.value = value;
-      els.saveScriptUrl.disabled = true;
-      els.connectStatus.textContent = "Connecting…";
-      els.connectStatus.className = "font-mono text-xs min-h-[1rem] text-electric-blue";
-      const result = await loadRows();
-      els.saveScriptUrl.disabled = false;
-      if (result.ok) {
-        els.connectStatus.textContent = "";
-        return;
-      }
-      els.connectStatus.textContent = result.error === "missing-url"
-        ? "Paste the Web app URL that ends with /exec."
-        : result.error;
-      els.connectStatus.className = "font-mono text-xs min-h-[1rem] text-red-400";
-    });
 
     loadRows();
   </script>
