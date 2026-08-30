@@ -199,6 +199,7 @@
           <span class="material-symbols-outlined text-[20px]">refresh</span>
           <span class="hidden sm:inline">Refresh</span>
         </button>
+        <button id="copy-script" type="button" class="hidden sm:inline text-xs text-on-surface-variant hover:text-electric-blue shrink-0">Copy Apps Script</button>
       </div>
 
       <div id="list-status" class="glass rounded-2xl px-4 py-3 text-sm text-on-surface-variant hidden break-words"></div>
@@ -210,6 +211,7 @@
           <button id="save-script-url" type="button" class="rounded-lg bg-electric-blue px-4 py-3 min-h-[44px] text-sm font-semibold text-white hover:bg-blue-500 disabled:opacity-60 shrink-0">Connect</button>
         </div>
         <p id="connect-status" class="font-mono text-xs min-h-[1rem]"></p>
+        <button id="copy-script-connect" type="button" class="text-xs text-electric-blue hover:underline">Copy updated Apps Script</button>
       </div>
 
       <div class="table-shell glass rounded-2xl overflow-hidden">
@@ -243,13 +245,53 @@ function getSheet() {
   return ss.getSheets().find(function (s) { return s.getSheetId() === SHEET_GID; }) || ss.getSheets()[0];
 }
 
+function headerIndex(headers, aliases) {
+  const lower = headers.map(function (h) { return String(h || "").trim().toLowerCase().replace(/\s+/g, " "); });
+  for (var i = 0; i < aliases.length; i++) {
+    var idx = lower.indexOf(aliases[i]);
+    if (idx >= 0) return idx;
+  }
+  return -1;
+}
+
 function ensureHeaders(sheet) {
-  const first = sheet.getRange(1, 1, 1, 5).getValues()[0];
+  const lastCol = Math.max(sheet.getLastColumn(), 5);
+  const first = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
   if (!String(first[0] || "").trim()) {
     sheet.getRange(1, 1, 1, 5).setValues([HEADERS]);
-  } else if (!String(first[4] || "").trim()) {
-    sheet.getRange(1, 5).setValue("Status");
+    return;
   }
+  if (headerIndex(first, ["status"]) < 0) {
+    sheet.getRange(1, lastCol + (String(first[lastCol - 1] || "").trim() ? 1 : 0)).setValue("Status");
+  }
+}
+
+function listRows() {
+  const sheet = getSheet();
+  ensureHeaders(sheet);
+  const lastRow = sheet.getLastRow();
+  if (lastRow < 2) return { ok: true, rows: [] };
+  const lastCol = Math.max(sheet.getLastColumn(), 5);
+  const headers = sheet.getRange(1, 1, 1, lastCol).getDisplayValues()[0];
+  const iUser = Math.max(0, headerIndex(headers, ["instagram username", "username"]));
+  const iName = headerIndex(headers, ["suggested name", "name"]);
+  const iNote = headerIndex(headers, ["dialogue / note", "dialogue/note", "note"]);
+  const iDate = headerIndex(headers, ["date"]);
+  const iStatus = headerIndex(headers, ["status"]);
+  const values = sheet.getRange(2, 1, lastRow - 1, lastCol).getDisplayValues();
+  const rows = [];
+  for (var i = 0; i < values.length; i++) {
+    var r = values[i];
+    var username = String(r[iUser] || "").trim();
+    var name = iName >= 0 ? String(r[iName] || "").trim() : "";
+    var note = iNote >= 0 ? String(r[iNote] || "").trim() : "";
+    var date = iDate >= 0 ? formatDate(r[iDate]) : "";
+    var status = iStatus >= 0 ? String(r[iStatus] || "").trim() : "";
+    if (username || name || note || date || status) {
+      rows.push({ row: i + 2, username: username, name: name, note: note, date: date, status: status });
+    }
+  }
+  return { ok: true, rows: rows };
 }
 
 function formatDate(value) {
@@ -258,27 +300,6 @@ function formatDate(value) {
     return Utilities.formatDate(value, Session.getScriptTimeZone(), "yyyy-MM-dd");
   }
   return String(value);
-}
-
-function listRows() {
-  const sheet = getSheet();
-  ensureHeaders(sheet);
-  const last = sheet.getLastRow();
-  if (last < 2) return { ok: true, rows: [] };
-  const values = sheet.getRange(2, 1, last - 1, 5).getDisplayValues();
-  const rows = [];
-  for (var i = 0; i < values.length; i++) {
-    var r = values[i];
-    var username = String(r[0] || "").trim();
-    var name = String(r[1] || "").trim();
-    var note = String(r[2] || "").trim();
-    var date = formatDate(r[3]);
-    var status = String(r[4] || "").trim();
-    if (username || name || note || date || status) {
-      rows.push({ row: i + 2, username: username, name: name, note: note, date: date, status: status });
-    }
-  }
-  return { ok: true, rows: rows };
 }
 
 function todayStamp() {
@@ -368,6 +389,8 @@ function doPost(e) {
       scriptUrlInput: document.getElementById("script-url-input"),
       saveScriptUrl: document.getElementById("save-script-url"),
       connectStatus: document.getElementById("connect-status"),
+      copyScript: document.getElementById("copy-script"),
+      copyScriptConnect: document.getElementById("copy-script-connect"),
     };
 
     let rows = [];
@@ -544,7 +567,14 @@ function doPost(e) {
       showConnect(false);
       try {
         const data = await fetchScript({ action: "list" });
-        rows = data.rows || [];
+        rows = (data.rows || []).map((r) => ({
+          row: r.row,
+          username: r.username || "",
+          name: r.name || "",
+          note: r.note || "",
+          date: r.date || "",
+          status: r.status || r.Status || "",
+        }));
         showListStatus("");
         renderRows();
         return { ok: true };
@@ -618,8 +648,24 @@ function doPost(e) {
       }
     });
 
+    async function copyAppsScript() {
+      const code = document.getElementById("apps-script-source").textContent.trim();
+      try {
+        await navigator.clipboard.writeText(code);
+        els.connectStatus.textContent = "Apps Script copied. Paste it in Extensions → Apps Script, then Deploy → Manage deployments → New version.";
+        els.connectStatus.className = "font-mono text-xs min-h-[1rem] text-electric-blue";
+        showConnect(true);
+      } catch {
+        showConnect(true);
+        els.connectStatus.textContent = "Copy failed — select the script in the page source.";
+        els.connectStatus.className = "font-mono text-xs min-h-[1rem] text-red-400";
+      }
+    }
+
     els.search.addEventListener("input", renderRows);
     els.refreshBtn.addEventListener("click", loadRows);
+    els.copyScript?.addEventListener("click", copyAppsScript);
+    els.copyScriptConnect?.addEventListener("click", copyAppsScript);
 
     els.saveScriptUrl.addEventListener("click", async () => {
       const value = normalizeScriptUrl(els.scriptUrlInput.value);
