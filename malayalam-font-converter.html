@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Malayalam to ML TT / FML Font Converter</title>
+  <meta name="description" content="Convert Unicode Malayalam to ML-TT and FML ASCII fonts for Photoshop, CorelDRAW, and other design tools." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%23101415'/><text x='50' y='70' font-size='48' text-anchor='middle' fill='%23007AFF' font-family='monospace' font-weight='bold'>VS</text></svg>" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Noto+Sans+Malayalam:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            background: "#101415",
+            surface: "#101415",
+            "surface-container": "#1d2022",
+            "surface-container-low": "#191c1e",
+            "surface-container-high": "#272a2c",
+            "on-surface": "#e0e3e5",
+            "on-surface-variant": "#c1c6d7",
+            "electric-blue": "#007AFF",
+            outline: "#8b90a0",
+            "outline-variant": "#414755",
+          },
+          fontFamily: {
+            sans: ["Inter", "system-ui", "sans-serif"],
+            mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+            ml: ["Noto Sans Malayalam", "Inter", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+    body {
+      background:
+        radial-gradient(ellipse 70% 50% at 12% 0%, rgba(0, 122, 255, 0.14), transparent 55%),
+        radial-gradient(ellipse 50% 40% at 95% 80%, rgba(56, 189, 248, 0.08), transparent 50%),
+        #101415;
+    }
+    .glass {
+      background: rgba(30, 41, 59, 0.4);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+    html, body {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+    textarea {
+      background: #191c1e !important;
+      border-color: #414755 !important;
+      color: #e0e3e5 !important;
+      font-size: 16px !important;
+    }
+    textarea:focus {
+      border-color: #007AFF !important;
+      box-shadow: 0 0 0 1px #007AFF !important;
+    }
+    .fml-preview {
+      font-family: "ML-TTKarthika", "ML-TTKarthikaNormal", "ML-TTRevathi", "FML-TT-Leela", "FML-TTLeela", "FML-TT-Chithira", "Karthika", "Kartika", serif;
+    }
+    #manglish-suggest {
+      display: none;
+      position: fixed;
+      z-index: 80;
+      min-width: 11rem;
+      width: max-content;
+      max-width: min(18rem, calc(100vw - 16px));
+      max-height: 16rem;
+      overflow: hidden;
+      border-radius: 4px;
+      border: 1px solid #414755;
+      background: #1d2022;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+      user-select: none;
+    }
+    #manglish-suggest.is-open {
+      display: flex;
+      flex-direction: column;
+    }
+    #manglish-compose {
+      padding: 6px 10px;
+      border-bottom: 1px solid #414755;
+      font-family: Inter, system-ui, sans-serif;
+      font-size: 14px;
+      color: #c1c6d7;
+      white-space: nowrap;
+    }
+    #manglish-compose::after {
+      content: "";
+      display: inline-block;
+      width: 1px;
+      height: 1em;
+      margin-left: 1px;
+      background: #007AFF;
+      vertical-align: text-bottom;
+      animation: caret-blink 1s step-end infinite;
+    }
+    @keyframes caret-blink {
+      50% { opacity: 0; }
+    }
+    #manglish-suggest-list {
+      margin: 0;
+      padding: 2px 0;
+      overflow: auto;
+      max-height: 13.5rem;
+    }
+    .suggest-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      min-height: 28px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .suggest-item[aria-selected="true"] {
+      background: #007AFF;
+      color: #fff;
+    }
+    .suggest-item[aria-selected="true"] .suggest-num {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  </style>
+</head>
+<body class="min-h-screen text-on-surface font-sans antialiased pb-[env(safe-area-inset-bottom)]">
+  <header class="border-b border-white/5 sticky top-0 z-20 bg-background/80 backdrop-blur-md pt-[env(safe-area-inset-top)]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between gap-4">
+      <div>
+        <p class="font-mono text-[11px] tracking-[0.14em] uppercase text-electric-blue">Font tool</p>
+        <h1 class="text-lg sm:text-xl font-semibold tracking-tight">Malayalam → ML TT / FML</h1>
+      </div>
+      <a href="index.html" class="inline-flex items-center gap-1 rounded-lg border border-outline-variant min-h-[44px] px-3 text-sm text-on-surface-variant hover:text-on-surface hover:border-electric-blue transition-colors">
+        <span class="material-symbols-outlined text-[18px]">home</span>
+        <span class="hidden sm:inline">Home</span>
+      </a>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 sm:px-6 py-5 sm:py-8 space-y-5 sm:space-y-6">
+    <section class="glass rounded-2xl p-4 sm:p-6">
+      <p class="text-sm text-on-surface-variant max-w-3xl">
+        Type Manglish (English) for Google Malayalam suggestions, or paste Unicode. Then copy ASCII for <span class="text-on-surface">ML-TTKarthika</span>, <span class="text-on-surface">FML-TT</span>, and other TT fonts in Photoshop, CorelDRAW, PageMaker, or Word.
+      </p>
+
+      <div class="mt-4 flex flex-wrap gap-2" role="tablist" aria-label="Conversion direction">
+        <button type="button" id="dir-u2a" class="dir-btn rounded-lg px-4 py-2.5 min-h-[44px] text-sm font-medium bg-electric-blue text-white" aria-pressed="true">
+          Unicode → ML TT / FML
+        </button>
+        <button type="button" id="dir-a2u" class="dir-btn rounded-lg px-4 py-2.5 min-h-[44px] text-sm font-medium border border-outline-variant text-on-surface-variant hover:text-on-surface" aria-pressed="false">
+          ML TT / FML → Unicode
+        </button>
+      </div>
+    </section>
+
+    <section class="grid lg:grid-cols-2 gap-5 sm:gap-6">
+      <div class="glass rounded-2xl p-4 sm:p-6 min-w-0 flex flex-col">
+        <div class="flex items-center justify-between gap-3 mb-3">
+          <label for="input-text" id="input-label" class="text-xs font-mono uppercase tracking-wider text-on-surface-variant">Unicode Malayalam</label>
+          <div class="flex items-center gap-2">
+            <button id="manglish-toggle" type="button" class="inline-flex items-center gap-1 rounded-full bg-electric-blue px-3 py-1.5 text-[11px] font-medium text-white" aria-pressed="true">
+              <span class="material-symbols-outlined text-[16px]">translate</span>
+              Manglish
+            </button>
+            <span id="input-count" class="font-mono text-[11px] text-outline">0</span>
+          </div>
+        </div>
+        <div class="flex-1">
+          <textarea id="input-text" rows="12" lang="en" spellcheck="false" autocomplete="off" autocapitalize="off" autocorrect="off" inputmode="latin" placeholder="Type Manglish: namaskaram…" class="w-full h-full rounded-lg px-3 py-3 resize-y min-h-[14rem] font-ml leading-relaxed"></textarea>
+        </div>
+        <p id="manglish-hint" class="mt-2 font-mono text-[11px] text-outline">Google suggestions · Space / Enter to choose · ↑↓ to change</p>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <button type="button" data-sample="നമസ്കാരം" class="sample-btn rounded-full border border-outline-variant px-3 py-1.5 text-sm font-ml text-on-surface-variant hover:border-electric-blue hover:text-on-surface transition-colors">നമസ്കാരം</button>
+          <button type="button" data-sample="കേരളം" class="sample-btn rounded-full border border-outline-variant px-3 py-1.5 text-sm font-ml text-on-surface-variant hover:border-electric-blue hover:text-on-surface transition-colors">കേരളം</button>
+          <button type="button" data-sample="മലയാളം ഫോണ്ട് കൺവേർട്ടർ" class="sample-btn rounded-full border border-outline-variant px-3 py-1.5 text-sm font-ml text-on-surface-variant hover:border-electric-blue hover:text-on-surface transition-colors">മലയാളം ഫോണ്ട് കൺവേർട്ടർ</button>
+        </div>
+      </div>
+
+      <div class="glass rounded-2xl p-4 sm:p-6 min-w-0 flex flex-col">
+        <div class="flex items-center justify-between gap-3 mb-3">
+          <label for="output-text" id="output-label" class="text-xs font-mono uppercase tracking-wider text-on-surface-variant">ML TT / FML ASCII</label>
+          <span id="output-count" class="font-mono text-[11px] text-outline">0</span>
+        </div>
+        <textarea id="output-text" rows="12" spellcheck="false" readonly class="w-full flex-1 rounded-lg px-3 py-3 resize-y min-h-[14rem] font-mono leading-relaxed"></textarea>
+        <div class="mt-3 flex flex-wrap gap-2">
+          <button id="copy-btn" type="button" class="inline-flex items-center justify-center gap-1 rounded-lg bg-electric-blue min-h-[44px] px-4 text-sm font-semibold text-white hover:bg-blue-500 disabled:opacity-60 transition-colors">
+            <span class="material-symbols-outlined text-[18px]">content_copy</span>
+            Copy
+          </button>
+          <button id="download-btn" type="button" class="inline-flex items-center justify-center gap-1 rounded-lg border border-outline-variant min-h-[44px] px-4 text-sm text-on-surface-variant hover:text-on-surface hover:border-electric-blue transition-colors">
+            <span class="material-symbols-outlined text-[18px]">download</span>
+            Download .txt
+          </button>
+          <button id="clear-btn" type="button" class="inline-flex items-center justify-center gap-1 rounded-lg border border-outline-variant min-h-[44px] px-4 text-sm text-on-surface-variant hover:text-on-surface hover:border-electric-blue transition-colors">
+            <span class="material-symbols-outlined text-[18px]">backspace</span>
+            Clear
+          </button>
+        </div>
+        <p id="copy-status" class="font-mono text-xs min-h-[1rem] mt-2" role="status"></p>
+      </div>
+    </section>
+
+    <section class="glass rounded-2xl p-4 sm:p-6 space-y-3">
+      <div class="flex items-center justify-between gap-3">
+        <h2 class="text-sm font-semibold">Font preview</h2>
+        <p class="font-mono text-[11px] text-outline hidden sm:block">Uses a local ML-TT / FML font if installed</p>
+      </div>
+      <div id="font-preview" class="fml-preview rounded-lg border border-outline-variant bg-surface-container-low px-4 py-5 min-h-[4.5rem] text-2xl leading-relaxed break-words text-on-surface"></div>
+      <p class="text-xs text-on-surface-variant">
+        After copying, select <span class="font-medium text-on-surface">ML-TTKarthika</span>, <span class="font-medium text-on-surface">ML-TTRevathi</span>, <span class="font-medium text-on-surface">FML-TT-Leela</span>, or another compatible TT font in your design app.
+      </p>
+    </section>
+
+    <section class="grid sm:grid-cols-3 gap-4 text-sm">
+      <div class="glass rounded-2xl p-4">
+        <p class="font-mono text-[11px] uppercase tracking-wider text-electric-blue mb-1">1</p>
+        <p class="text-on-surface-variant">Type Manglish like <span class="font-mono text-on-surface">namaskaram</span> and pick a Google suggestion, or paste Unicode Malayalam.</p>
+      </div>
+      <div class="glass rounded-2xl p-4">
+        <p class="font-mono text-[11px] uppercase tracking-wider text-electric-blue mb-1">2</p>
+        <p class="text-on-surface-variant">Copy the ASCII output. It looks like Latin letters until a TT font is applied.</p>
+      </div>
+      <div class="glass rounded-2xl p-4">
+        <p class="font-mono text-[11px] uppercase tracking-wider text-electric-blue mb-1">3</p>
+        <p class="text-on-surface-variant">Paste into Photoshop, Illustrator, or Word and set an ML-TT or FML font.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="manglish-suggest" role="listbox" aria-label="Google Malayalam suggestions">
+    <div id="manglish-compose"></div>
+    <ul id="manglish-suggest-list"></ul>
+  </div>
+
+  <script>
+    const UNICODE_TO_ASCII = {
+      "ം": "w", "ഃ": "x", "അ": "A", "ആ": "B", "ഇ": "C", "ഈ": "Cu", "ഉ": "D", "ഊ": "Du",
+      "ഋ": "E", "ഌ": "p", "എ": "F", "ഏ": "G", "ഐ": "sF", "ഒ": "H", "ഓ": "Hm", "ഔ": "Hu",
+      "ക": "I", "ഖ": "J", "ഗ": "K", "ഘ": "L", "ങ": "M", "ച": "N", "ഛ": "O", "ജ": "P",
+      "ഝ": "Q", "ഞ": "R", "ട": "S", "ഠ": "T", "ഡ": "U", "ഢ": "V", "ണ": "W", "ത": "X",
+      "ഥ": "Y", "ദ": "Z", "ധ": "[", "ന": "\\", "പ": "]", "ഫ": "^", "ബ": "_", "ഭ": "`",
+      "മ": "a", "യ": "b", "ര": "c", "റ": "d", "ല": "e", "ള": "f", "ഴ": "g", "വ": "h",
+      "ശ": "i", "ഷ": "j", "സ": "k", "ഹ": "l", "ാ": "m", "ി": "n", "ീ": "o", "ു": "p",
+      "ൂ": "q", "ൃ": "r", "െ": "s", "േ": "t", "ൈ": "ss", "ൊ": "sm", "ോ": "tm", "ൌ": "su",
+      "്‌": "v", "്": "v", "ൗ": "u", "്യേ": "ty", "്യെ": "sy",
+      "ക്ക": "¡", "ക്ല": "¢", "ക്ഷ": "£", "ഗ്ഗ": "¤", "ഗ്ല": "¥", "ങ്ക": "¦", "ങ്ങ": "§",
+      "ച്ച": "¨", "ഞ്ച": "©", "ഞ്ഞ": "ª", "ട്ട": "«", "ണ്‍": "¬", "ൺ": "¬", "ണ്ട": "ï",
+      "ണ്ണ": "®", "ത്ത": "¯", "ത്ഥ": "°", "ദ്ദ": "±", "ദ്ധ": "²", "ന്‍": "³", "ൻ": "³",
+      "ന്ത": "´", "ന്ദ": "µ", "ന്ന": "¶", "ന്മ": "·", "പ്പ": "¸", "പ്ല": "¹", "ബ്ബ": "º",
+      "ബ്ല": "»", "മ്പ": "¼", "മ്മ": "½", "മ്ല": "Ÿ", "യ്യ": "¿", "ർ‌": "À", "ർ‍": "À",
+      "ർ": "À", "ര്‍": "À", "റ്റ": "ä", "ല്‍": "Â", "ൽ": "Â", "ല്ല": "Ã", "ള്‍": "Ä",
+      "ൾ": "Ä", "ള്ള": "Å", "വ്വ": "Æ", "ശ്ല": "Ç", "ശ്ശ": "È", "സ്ല": "É", "സ്സ": "Ê",
+      "ഹ്ല": "Ë", "സ്റ്റ": "Ì", "ഡ്ഡ": "Í", "ക്ട": "Î", "ബ്ധ": "Ï", "ബ്ദ": "Ð", "ച്ഛ": "Ñ",
+      "ഹ്മ": "Ò", "ഹ്ന": "Ó", "ന്ധ": "Ô", "ത്സ": "Õ", "ജ്ജ": "Ö", "ണ്മ": "×", "സ്ഥ": "Ø",
+      "ന്ഥ": "Ù", "ജ്ഞ": "Ú", "ത്ഭ": "Û", "ഗ്മ": "Ü", "ശ്ച": "Ý", "ണ്ഡ": "Þ", "ത്മ": "ß",
+      "ക്ത": "à", "ഗ്ന": "á", "ന്റ": "â", "ഷ്ട": "ã", "്യ": "y", "്വ": "z", "്ര": "{",
+      "ൿ": "Iv", "-": "þ"
+    };
+
+    const PREBASE = new Set(["െ", "േ", "ൈ", "്ര"]);
+    const POSTBASE = new Set(["ാ", "ി", "ീ", "ു", "ൂ", "ൃ", "ൗ", "ം", "ഃ", "്യ", "്വ"]);
+    const UNICODE_KEYS = Object.keys(UNICODE_TO_ASCII).sort((a, b) => b.length - a.length);
+    const MAX_UNI_LEN = UNICODE_KEYS[0].length;
+
+    const ASCII_TO_UNICODE = {};
+    UNICODE_KEYS.forEach((uni) => {
+      const ascii = UNICODE_TO_ASCII[uni];
+      if (!(ascii in ASCII_TO_UNICODE) || uni.length <= ASCII_TO_UNICODE[ascii].length) {
+        ASCII_TO_UNICODE[ascii] = uni;
+      }
+    });
+
+    const PREBASE_ASCII = new Set();
+    const POSTBASE_ASCII = new Set();
+    Object.entries(ASCII_TO_UNICODE).forEach(([ascii, uni]) => {
+      if (PREBASE.has(uni) && ascii.length === 1) PREBASE_ASCII.add(ascii);
+      if (POSTBASE.has(uni) && ascii.length === 1) POSTBASE_ASCII.add(ascii);
+    });
+
+    function normalizeMalayalam(text) {
+      return String(text || "")
+        .normalize("NFC")
+        .replace(/\u200D/g, "")
+        .replace(/െെ/g, "ൈ")
+        .replace(/ൊ/g, "ൊ")
+        .replace(/ോ/g, "ോ")
+        .replace(/ൌ/g, "ൌ")
+        .replace(/െഎ/g, "ഐ")
+        .replace(/എെ/g, "ഐ")
+        .replace(/ഒാ/g, "ഓ")
+        .replace(/ഒൗ/g, "ഔ")
+        .replace(/ഇൗ/g, "ഈ")
+        .replace(/ഉൗ/g, "ഊ");
+    }
+
+    function unicode2ascii(strText) {
+      const source = normalizeMalayalam(strText);
+      if (!source) return "";
+      let ascii = "";
+      let repham = false;
+      let index = 0;
+
+      while (index < source.length) {
+        let matched = false;
+        const max = Math.min(MAX_UNI_LEN, source.length - index);
+        for (let len = max; len > 0; len--) {
+          const chunk = source.substring(index, index + len);
+          const mapped = UNICODE_TO_ASCII[chunk];
+          if (!mapped) continue;
+
+          if (chunk === "ൈ") {
+            if (repham && ascii.length >= 2) {
+              ascii = ascii.slice(0, -2) + mapped + ascii.slice(-2);
+            } else if (ascii.length) {
+              ascii = ascii.slice(0, -1) + mapped + ascii.slice(-1);
+            } else {
+              ascii += mapped;
+            }
+            repham = false;
+          } else if (chunk === "ോ" || chunk === "ൊ" || chunk === "ൌ") {
+            if (repham && ascii.length >= 2) {
+              ascii = ascii.slice(0, -2) + mapped[0] + ascii.slice(-2) + mapped.slice(1);
+            } else if (ascii.length) {
+              ascii = ascii.slice(0, -1) + mapped[0] + ascii.slice(-1) + mapped.slice(1);
+            } else {
+              ascii += mapped;
+            }
+            repham = false;
+          } else if (chunk === "്യേ" || chunk === "്യെ") {
+            if (ascii.length) {
+              ascii = ascii.slice(0, -1) + mapped[0] + ascii.slice(-1) + mapped.slice(1);
+            } else {
+              ascii += mapped;
+            }
+            repham = false;
+          } else if (chunk === "െ" || chunk === "േ" || chunk === "്ര") {
+            if (repham && ascii.length >= 2) {
+              ascii = ascii.slice(0, -2) + mapped[0] + ascii.slice(-2);
+            } else if (ascii.length) {
+              ascii = ascii.slice(0, -1) + mapped[0] + ascii.slice(-1);
+            } else {
+              ascii += mapped;
+            }
+            repham = chunk === "്ര";
+          } else {
+            ascii += mapped;
+            repham = false;
+          }
+
+          index += len;
+          matched = true;
+          break;
+        }
+
+        if (!matched) {
+          ascii += source[index];
+          index += 1;
+          repham = false;
+        }
+      }
+
+      return ascii;
+    }
+
+    function ascii2unicode(strText) {
+      const source = String(strText || "");
+      if (!source) return "";
+
+      let transposed = "";
+      let prebase = "";
+      for (const letter of source) {
+        if (PREBASE_ASCII.has(letter)) {
+          prebase = letter + prebase;
+        } else if (POSTBASE_ASCII.has(letter)) {
+          transposed += letter + prebase;
+          prebase = "";
+        } else {
+          transposed += letter + prebase;
+          prebase = "";
+        }
+      }
+      transposed += prebase;
+
+      let unicode = "";
+      const asciiKeys = Object.keys(ASCII_TO_UNICODE).sort((a, b) => b.length - a.length);
+      const maxLen = asciiKeys[0].length;
+      let index = 0;
+      while (index < transposed.length) {
+        let matched = false;
+        const max = Math.min(maxLen, transposed.length - index);
+        for (let len = max; len > 0; len--) {
+          const chunk = transposed.substring(index, index + len);
+          if (ASCII_TO_UNICODE[chunk]) {
+            unicode += ASCII_TO_UNICODE[chunk];
+            index += len;
+            matched = true;
+            break;
+          }
+        }
+        if (!matched) {
+          unicode += transposed[index];
+          index += 1;
+        }
+      }
+
+      return normalizeMalayalam(unicode);
+    }
+
+    const els = {
+      input: document.getElementById("input-text"),
+      output: document.getElementById("output-text"),
+      inputLabel: document.getElementById("input-label"),
+      outputLabel: document.getElementById("output-label"),
+      inputCount: document.getElementById("input-count"),
+      outputCount: document.getElementById("output-count"),
+      copyBtn: document.getElementById("copy-btn"),
+      downloadBtn: document.getElementById("download-btn"),
+      clearBtn: document.getElementById("clear-btn"),
+      copyStatus: document.getElementById("copy-status"),
+      preview: document.getElementById("font-preview"),
+      dirU2A: document.getElementById("dir-u2a"),
+      dirA2U: document.getElementById("dir-a2u"),
+      manglishToggle: document.getElementById("manglish-toggle"),
+      manglishSuggest: document.getElementById("manglish-suggest"),
+      manglishCompose: document.getElementById("manglish-compose"),
+      manglishList: document.getElementById("manglish-suggest-list"),
+      manglishHint: document.getElementById("manglish-hint"),
+    };
+
+    let direction = "u2a";
+    let manglishOn = localStorage.getItem("ml-manglish") !== "off";
+
+    function unicodePlaceholder() {
+      return manglishOn ? "Type Manglish: namaskaram…" : "മലയാളം ഇവിടെ ടൈപ്പ് ചെയ്യുക…";
+    }
+
+    function setManglish(on, persist) {
+      manglishOn = Boolean(on) && direction === "u2a";
+      if (persist !== false) localStorage.setItem("ml-manglish", manglishOn ? "on" : "off");
+      els.manglishToggle.setAttribute("aria-pressed", String(manglishOn));
+      els.manglishToggle.className = "inline-flex items-center gap-1 rounded-full px-3 py-1.5 text-[11px] font-medium " +
+        (manglishOn ? "bg-electric-blue text-white" : "border border-outline-variant text-on-surface-variant");
+      els.manglishToggle.classList.toggle("hidden", direction !== "u2a");
+      els.manglishHint.classList.toggle("hidden", !manglishOn);
+      if (direction === "u2a") {
+        els.input.lang = manglishOn ? "en" : "ml";
+        els.input.setAttribute("inputmode", manglishOn ? "latin" : "text");
+        els.input.placeholder = unicodePlaceholder();
+      }
+      if (!manglishOn) hideSuggestions();
+    }
+
+    function setDirection(next) {
+      direction = next;
+      const u2a = next === "u2a";
+      els.dirU2A.className = "dir-btn rounded-lg px-4 py-2.5 min-h-[44px] text-sm font-medium " +
+        (u2a ? "bg-electric-blue text-white" : "border border-outline-variant text-on-surface-variant hover:text-on-surface");
+      els.dirA2U.className = "dir-btn rounded-lg px-4 py-2.5 min-h-[44px] text-sm font-medium " +
+        (u2a ? "border border-outline-variant text-on-surface-variant hover:text-on-surface" : "bg-electric-blue text-white");
+      els.dirU2A.setAttribute("aria-pressed", String(u2a));
+      els.dirA2U.setAttribute("aria-pressed", String(!u2a));
+      els.inputLabel.textContent = u2a ? "Unicode Malayalam" : "ML TT / FML ASCII";
+      els.outputLabel.textContent = u2a ? "ML TT / FML ASCII" : "Unicode Malayalam";
+      els.output.lang = u2a ? "en" : "ml";
+      els.input.classList.toggle("font-ml", u2a);
+      els.input.classList.toggle("font-mono", !u2a);
+      els.output.classList.toggle("font-ml", !u2a);
+      els.output.classList.toggle("font-mono", u2a);
+      if (u2a) {
+        setManglish(localStorage.getItem("ml-manglish") !== "off", false);
+      } else {
+        hideSuggestions();
+        els.manglishToggle.classList.add("hidden");
+        els.manglishHint.classList.add("hidden");
+        els.input.lang = "en";
+        els.input.setAttribute("inputmode", "text");
+        els.input.placeholder = "Paste ML-TT / FML ASCII here…";
+      }
+      convert();
+    }
+
+    function convert() {
+      const value = els.input.value;
+      const result = direction === "u2a" ? unicode2ascii(value) : ascii2unicode(value);
+      els.output.value = result;
+      els.inputCount.textContent = String(value.length);
+      els.outputCount.textContent = String(result.length);
+      els.preview.textContent = direction === "u2a" ? result : value;
+      if (!els.copyStatus.dataset.locked) els.copyStatus.textContent = "";
+    }
+
+    function flashStatus(message, ok) {
+      els.copyStatus.dataset.locked = "1";
+      els.copyStatus.textContent = message;
+      els.copyStatus.className = "font-mono text-xs min-h-[1rem] mt-2 " + (ok ? "text-electric-blue" : "text-red-400");
+      setTimeout(() => {
+        delete els.copyStatus.dataset.locked;
+        if (els.copyStatus.textContent === message) els.copyStatus.textContent = "";
+      }, 1600);
+    }
+
+    const MANGLISH_ITC = "ml-t-i0-und";
+    const suggestionCache = new Map();
+    let suggestionState = { word: "", start: 0, end: 0, items: [], index: 0 };
+    let suggestTimer = 0;
+    let suggestAbort = null;
+
+    function hideSuggestions() {
+      suggestionState.items = [];
+      suggestionState.index = 0;
+      els.manglishSuggest.classList.remove("is-open");
+      els.manglishList.innerHTML = "";
+      els.manglishCompose.textContent = "";
+    }
+
+    function getCaretCoordinates(element, position) {
+      const style = window.getComputedStyle(element);
+      const div = document.createElement("div");
+      const props = [
+        "boxSizing", "width", "height", "overflowX", "overflowY",
+        "borderTopWidth", "borderRightWidth", "borderBottomWidth", "borderLeftWidth",
+        "paddingTop", "paddingRight", "paddingBottom", "paddingLeft",
+        "fontStyle", "fontVariant", "fontWeight", "fontStretch", "fontSize",
+        "lineHeight", "fontFamily", "textAlign", "textTransform", "textIndent",
+        "textDecoration", "letterSpacing", "wordSpacing", "tabSize", "whiteSpace",
+        "wordWrap", "wordBreak", "direction"
+      ];
+      props.forEach((prop) => { div.style[prop] = style[prop]; });
+      div.style.position = "absolute";
+      div.style.visibility = "hidden";
+      div.style.top = "0";
+      div.style.left = "-9999px";
+      div.style.whiteSpace = "pre-wrap";
+      div.style.wordWrap = "break-word";
+      div.style.overflow = "hidden";
+      div.textContent = element.value.slice(0, position);
+      const span = document.createElement("span");
+      span.textContent = element.value.slice(position) || ".";
+      div.appendChild(span);
+      document.body.appendChild(div);
+      const lineHeight = span.offsetHeight || parseInt(style.lineHeight, 10) || 24;
+      const coordinates = {
+        top: span.offsetTop + parseInt(style.borderTopWidth, 10),
+        left: span.offsetLeft + parseInt(style.borderLeftWidth, 10),
+        height: lineHeight
+      };
+      document.body.removeChild(div);
+      return coordinates;
+    }
+
+    function positionSuggestBox() {
+      const start = suggestionState.start ?? els.input.selectionStart;
+      const caret = getCaretCoordinates(els.input, start);
+      const rect = els.input.getBoundingClientRect();
+      const box = els.manglishSuggest;
+      let left = rect.left + caret.left - els.input.scrollLeft;
+      let top = rect.top + caret.top - els.input.scrollTop + caret.height + 2;
+      const boxW = box.offsetWidth;
+      const boxH = box.offsetHeight;
+      if (left + boxW > window.innerWidth - 8) left = window.innerWidth - boxW - 8;
+      if (left < 8) left = 8;
+      if (top + boxH > window.innerHeight - 8) {
+        top = rect.top + caret.top - els.input.scrollTop - boxH - 4;
+      }
+      if (top < 8) top = 8;
+      box.style.left = `${Math.round(left)}px`;
+      box.style.top = `${Math.round(top)}px`;
+    }
+
+    function currentLatinWord() {
+      const pos = els.input.selectionStart;
+      if (pos !== els.input.selectionEnd) return null;
+      const before = els.input.value.slice(0, pos);
+      const match = before.match(/[A-Za-z]+$/);
+      if (!match) return null;
+      return { word: match[0], start: pos - match[0].length, end: pos };
+    }
+
+    function escapeHtml(value) {
+      return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    function renderSuggestions() {
+      const { items, index, word } = suggestionState;
+      if (!items.length) {
+        hideSuggestions();
+        return;
+      }
+      els.manglishCompose.textContent = word;
+      els.manglishList.innerHTML = items.map((item, i) => {
+        const keep = item === word;
+        return `<li class="suggest-item font-ml text-sm" role="option" data-index="${i}" aria-selected="${i === index}">
+          <span class="suggest-num font-mono text-[11px] text-outline w-4 shrink-0">${i + 1}.</span>
+          <span>${escapeHtml(item)}</span>
+          ${keep ? '<span class="font-mono text-[10px] uppercase tracking-wider text-outline ml-2">EN</span>' : ""}
+        </li>`;
+      }).join("");
+      els.manglishSuggest.classList.add("is-open");
+      positionSuggestBox();
+      const selected = els.manglishList.querySelector('[aria-selected="true"]');
+      if (selected) selected.scrollIntoView({ block: "nearest" });
+    }
+
+    async function fetchSuggestions(word) {
+      if (suggestionCache.has(word)) return suggestionCache.get(word);
+      if (suggestAbort) suggestAbort.abort();
+      suggestAbort = new AbortController();
+      const url = `https://inputtools.google.com/request?text=${encodeURIComponent(word)}&itc=${MANGLISH_ITC}&num=5&cp=0&cs=1&ie=utf-8&oe=utf-8&app=demopage`;
+      const res = await fetch(url, { signal: suggestAbort.signal });
+      const data = await res.json();
+      const list = data && data[0] === "SUCCESS" && data[1] && data[1][0] && data[1][0][1]
+        ? data[1][0][1].filter(Boolean)
+        : [];
+      const unique = [];
+      list.forEach((item) => {
+        if (!unique.includes(item)) unique.push(item);
+      });
+      if (!unique.includes(word)) unique.push(word);
+      suggestionCache.set(word, unique);
+      if (suggestionCache.size > 200) suggestionCache.delete(suggestionCache.keys().next().value);
+      return unique;
+    }
+
+    async function updateSuggestions() {
+      if (!manglishOn || direction !== "u2a") {
+        hideSuggestions();
+        return;
+      }
+      const current = currentLatinWord();
+      if (!current || current.word.length < 1) {
+        hideSuggestions();
+        return;
+      }
+      suggestionState = { ...suggestionState, ...current };
+      try {
+        const items = await fetchSuggestions(current.word);
+        const still = currentLatinWord();
+        if (!still || still.word !== current.word) return;
+        suggestionState.items = items;
+        suggestionState.index = 0;
+        renderSuggestions();
+      } catch (err) {
+        if (err.name !== "AbortError") hideSuggestions();
+      }
+    }
+
+    function scheduleSuggestions() {
+      clearTimeout(suggestTimer);
+      suggestTimer = setTimeout(updateSuggestions, 120);
+    }
+
+    function applySuggestion(index, suffix) {
+      const item = suggestionState.items[index];
+      if (!item) return false;
+      const { start, end } = suggestionState;
+      const value = els.input.value;
+      const insert = item + (suffix || "");
+      els.input.value = value.slice(0, start) + insert + value.slice(end);
+      const caret = start + insert.length;
+      els.input.setSelectionRange(caret, caret);
+      hideSuggestions();
+      convert();
+      return true;
+    }
+
+    els.input.addEventListener("input", () => {
+      convert();
+      scheduleSuggestions();
+    });
+    els.input.addEventListener("click", () => {
+      if (manglishOn) scheduleSuggestions();
+    });
+    els.input.addEventListener("keyup", (event) => {
+      if (!manglishOn) return;
+      if (event.key === "ArrowLeft" || event.key === "ArrowRight") scheduleSuggestions();
+    });
+    els.input.addEventListener("keydown", (event) => {
+      if (!manglishOn || direction !== "u2a" || event.isComposing) return;
+      const open = els.manglishSuggest.classList.contains("is-open") && suggestionState.items.length;
+      if (!open) return;
+      if (event.key === "ArrowDown") {
+        event.preventDefault();
+        suggestionState.index = (suggestionState.index + 1) % suggestionState.items.length;
+        renderSuggestions();
+      } else if (event.key === "ArrowUp") {
+        event.preventDefault();
+        suggestionState.index = (suggestionState.index - 1 + suggestionState.items.length) % suggestionState.items.length;
+        renderSuggestions();
+      } else if (event.key === "Enter" || event.key === "Tab") {
+        event.preventDefault();
+        applySuggestion(suggestionState.index, "");
+      } else if (event.key === " ") {
+        event.preventDefault();
+        applySuggestion(suggestionState.index, " ");
+      } else if (/^[.,!?;:]$/.test(event.key)) {
+        event.preventDefault();
+        applySuggestion(suggestionState.index, event.key + " ");
+      } else if (event.key === "Escape") {
+        event.preventDefault();
+        hideSuggestions();
+      } else if (/^[1-8]$/.test(event.key) && !event.metaKey && !event.ctrlKey) {
+        const idx = Number(event.key) - 1;
+        if (suggestionState.items[idx]) {
+          event.preventDefault();
+          applySuggestion(idx, "");
+        }
+      }
+    });
+    els.input.addEventListener("scroll", () => {
+      if (els.manglishSuggest.classList.contains("is-open")) positionSuggestBox();
+    });
+    window.addEventListener("resize", () => {
+      if (els.manglishSuggest.classList.contains("is-open")) positionSuggestBox();
+    });
+    window.addEventListener("scroll", () => {
+      if (els.manglishSuggest.classList.contains("is-open")) positionSuggestBox();
+    }, true);
+    els.manglishSuggest.addEventListener("mousedown", (event) => {
+      const item = event.target.closest(".suggest-item");
+      if (!item) return;
+      event.preventDefault();
+      applySuggestion(Number(item.dataset.index), " ");
+    });
+    document.addEventListener("click", (event) => {
+      if (!els.manglishSuggest.contains(event.target) && event.target !== els.input) {
+        hideSuggestions();
+      }
+    });
+    els.manglishToggle.addEventListener("click", () => {
+      setManglish(!manglishOn);
+      els.input.focus();
+    });
+
+    els.dirU2A.addEventListener("click", () => setDirection("u2a"));
+    els.dirA2U.addEventListener("click", () => setDirection("a2u"));
+
+    document.querySelectorAll(".sample-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (direction !== "u2a") setDirection("u2a");
+        hideSuggestions();
+        els.input.value = btn.dataset.sample;
+        convert();
+        els.input.focus();
+      });
+    });
+
+    els.copyBtn.addEventListener("click", async () => {
+      const text = els.output.value;
+      if (!text) {
+        flashStatus("Nothing to copy.", false);
+        return;
+      }
+      try {
+        await navigator.clipboard.writeText(text);
+        flashStatus("Copied.", true);
+      } catch {
+        els.output.select();
+        document.execCommand("copy");
+        flashStatus("Copied.", true);
+      }
+    });
+
+    els.downloadBtn.addEventListener("click", () => {
+      const text = els.output.value;
+      if (!text) {
+        flashStatus("Nothing to download.", false);
+        return;
+      }
+      const blob = new Blob([text], { type: "text/plain;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = direction === "u2a" ? "ml-tt-fml.txt" : "malayalam-unicode.txt";
+      a.click();
+      URL.revokeObjectURL(url);
+      flashStatus("Downloaded.", true);
+    });
+
+    els.clearBtn.addEventListener("click", () => {
+      els.input.value = "";
+      hideSuggestions();
+      convert();
+      els.input.focus();
+    });
+
+    setManglish(manglishOn, false);
+    convert();
+  </script>
+</body>
+</html>
