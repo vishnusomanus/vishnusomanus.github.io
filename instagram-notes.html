@@ -137,11 +137,11 @@
         table-layout: fixed;
       }
       .notes-table th:nth-child(1),
-      .notes-table td:nth-child(1) { width: 20%; }
+      .notes-table td:nth-child(1) { width: 18%; }
       .notes-table th:nth-child(2),
-      .notes-table td:nth-child(2) { width: 18%; }
+      .notes-table td:nth-child(2) { width: 22%; }
       .notes-table th:nth-child(3),
-      .notes-table td:nth-child(3) { width: 34%; }
+      .notes-table td:nth-child(3) { width: 32%; }
       .notes-table th:nth-child(4),
       .notes-table td:nth-child(4) { width: 14%; }
       .notes-table th:nth-child(5),
@@ -172,8 +172,8 @@
         </label>
 
         <label class="block">
-          <span class="block text-xs font-mono uppercase tracking-wider text-on-surface-variant mb-1.5">Suggested Name</span>
-          <input id="name" name="name" type="text" required autocomplete="off" placeholder="Display name" class="w-full rounded-lg px-3 py-3 min-h-[44px]" />
+          <span class="block text-xs font-mono uppercase tracking-wider text-on-surface-variant mb-1.5">Name Need to say in video</span>
+          <input id="name" name="name" type="text" required autocomplete="off" placeholder="Name to say in the video" class="w-full rounded-lg px-3 py-3 min-h-[44px]" />
         </label>
 
         <label class="block">
@@ -189,6 +189,18 @@
     </section>
 
     <section class="space-y-4 min-w-0">
+      <article id="next-video" class="glass rounded-2xl p-4 sm:p-5 border-electric-blue/30 hidden">
+        <div class="flex items-start justify-between gap-3 mb-3">
+          <div>
+            <p class="font-mono text-[11px] tracking-[0.14em] uppercase text-electric-blue">Next video</p>
+            <p class="text-xs text-on-surface-variant mt-0.5">Top row with empty status</p>
+          </div>
+          <span class="inline-flex items-center rounded-full border border-electric-blue/40 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-electric-blue">Pending</span>
+        </div>
+        <div id="next-video-body" class="space-y-3"></div>
+      </article>
+      <article id="next-video-empty" class="glass rounded-2xl px-4 py-4 text-sm text-on-surface-variant hidden">All rows have a status. No next video.</article>
+
       <div class="flex items-center gap-2 sm:gap-3">
         <div class="relative min-w-0 flex-1">
           <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px] pointer-events-none">search</span>
@@ -201,6 +213,8 @@
         </button>
       </div>
 
+      <div id="filters" class="flex flex-wrap gap-2" role="group" aria-label="Status filters"></div>
+
       <div id="list-status" class="glass rounded-2xl px-4 py-3 text-sm text-on-surface-variant hidden break-words"></div>
 
       <div class="table-shell glass rounded-2xl overflow-hidden">
@@ -208,7 +222,7 @@
           <thead class="bg-surface-container-high/60 text-[11px] font-mono uppercase tracking-wider text-on-surface-variant">
             <tr>
               <th class="px-4 py-3 font-medium">Instagram Username</th>
-              <th class="px-4 py-3 font-medium">Suggested Name</th>
+              <th class="px-4 py-3 font-medium">Name Need to say in video</th>
               <th class="px-4 py-3 font-medium">Dialogue / Note</th>
               <th class="px-4 py-3 font-medium">Date</th>
               <th class="px-4 py-3 font-medium">Status</th>
@@ -226,131 +240,62 @@
 
   <script type="text/plain" id="apps-script-source">
 const SHEET_ID = "1OtTTKI_xm9zx9_rkI3nVqtoxF1SA3l03XiQW4ORl0EQ";
-const SHEET_GID = 0;
-const HEADERS = ["Instagram Username", "Suggested Name", "Dialogue / Note", "Date", "Status"];
 
 function getSheet() {
-  const ss = SpreadsheetApp.openById(SHEET_ID);
-  return ss.getSheets().find(function (s) { return s.getSheetId() === SHEET_GID; }) || ss.getSheets()[0];
-}
-
-function headerIndex(headers, aliases) {
-  const lower = headers.map(function (h) { return String(h || "").trim().toLowerCase().replace(/\s+/g, " "); });
-  for (var i = 0; i < aliases.length; i++) {
-    var idx = lower.indexOf(aliases[i]);
-    if (idx >= 0) return idx;
-  }
-  return -1;
-}
-
-function ensureHeaders(sheet) {
-  const lastCol = Math.max(sheet.getLastColumn(), 5);
-  const first = sheet.getRange(1, 1, 1, lastCol).getValues()[0];
-  if (!String(first[0] || "").trim()) {
-    sheet.getRange(1, 1, 1, 5).setValues([HEADERS]);
-    return;
-  }
-  if (headerIndex(first, ["status"]) < 0) {
-    sheet.getRange(1, lastCol + (String(first[lastCol - 1] || "").trim() ? 1 : 0)).setValue("Status");
-  }
+  return SpreadsheetApp.openById(SHEET_ID).getSheets()[0];
 }
 
 function listRows() {
   const sheet = getSheet();
-  ensureHeaders(sheet);
-  const lastRow = sheet.getLastRow();
-  if (lastRow < 2) return { ok: true, rows: [] };
-  const lastCol = Math.max(sheet.getLastColumn(), 5);
-  const headers = sheet.getRange(1, 1, 1, lastCol).getDisplayValues()[0];
-  const iUser = Math.max(0, headerIndex(headers, ["instagram username", "username"]));
-  const iName = headerIndex(headers, ["suggested name", "name"]);
-  const iNote = headerIndex(headers, ["dialogue / note", "dialogue/note", "note"]);
-  const iDate = headerIndex(headers, ["date"]);
-  const iStatus = headerIndex(headers, ["status"]);
-  const values = sheet.getRange(2, 1, lastRow - 1, lastCol).getDisplayValues();
+  const last = sheet.getLastRow();
+  if (last < 2) return { ok: true, rows: [] };
+  const values = sheet.getRange(2, 1, last - 1, 5).getDisplayValues();
   const rows = [];
   for (var i = 0; i < values.length; i++) {
     var r = values[i];
-    var username = String(r[iUser] || "").trim();
-    var name = iName >= 0 ? String(r[iName] || "").trim() : "";
-    var note = iNote >= 0 ? String(r[iNote] || "").trim() : "";
-    var date = iDate >= 0 ? formatDate(r[iDate]) : "";
-    var status = iStatus >= 0 ? String(r[iStatus] || "").trim() : "";
-    if (username || name || note || date || status) {
-      rows.push({ row: i + 2, username: username, name: name, note: note, date: date, status: status });
-    }
+    var row = {
+      row: i + 2,
+      username: String(r[0] || "").trim(),
+      name: String(r[1] || "").trim(),
+      note: String(r[2] || "").trim(),
+      date: String(r[3] || "").trim(),
+      status: String(r[4] || "").trim()
+    };
+    if (row.username || row.name || row.note || row.date || row.status) rows.push(row);
   }
   return { ok: true, rows: rows };
 }
 
-function formatDate(value) {
-  if (!value) return "";
-  if (Object.prototype.toString.call(value) === "[object Date]" && !isNaN(value)) {
-    return Utilities.formatDate(value, Session.getScriptTimeZone(), "yyyy-MM-dd");
-  }
-  return String(value);
-}
-
-function todayStamp() {
-  return Utilities.formatDate(new Date(), Session.getScriptTimeZone(), "yyyy-MM-dd");
-}
-
 function saveRow(params) {
   const sheet = getSheet();
-  ensureHeaders(sheet);
-  const rowNum = parseInt(params.row, 10);
-  const existingDate = rowNum >= 2 ? formatDate(sheet.getRange(rowNum, 4).getValue()) : "";
-  const date = String(params.date || "").trim() || existingDate || todayStamp();
-  const record = [
+  sheet.appendRow([
     String(params.username || "").trim(),
     String(params.name || "").trim(),
     String(params.note || "").trim(),
-    date
-  ];
-  if (rowNum >= 2) {
-    sheet.getRange(rowNum, 1, 1, 4).setValues([record]);
-    return { ok: true, action: "updated", row: rowNum };
-  }
-  sheet.appendRow(record);
+    String(params.date || "").trim()
+  ]);
   return { ok: true, action: "added", row: sheet.getLastRow() };
 }
 
-function jsonp(e, payload) {
-  const out = JSON.stringify(payload);
-  const cb = e && e.parameter && e.parameter.callback;
-  if (cb && /^[A-Za-z_$][A-Za-z0-9_$]*$/.test(cb)) {
-    return ContentService.createTextOutput(cb + "(" + out + ")").setMimeType(ContentService.MimeType.JAVASCRIPT);
-  }
-  return ContentService.createTextOutput(out).setMimeType(ContentService.MimeType.JSON);
-}
-
-function readParams(e) {
-  const params = Object.assign({}, (e && e.parameter) || {});
-  if (e && e.postData && e.postData.contents) {
-    try {
-      const json = JSON.parse(e.postData.contents);
-      for (var key in json) params[key] = json[key];
-    } catch (err) {}
-  }
-  return params;
+function output(payload) {
+  return ContentService.createTextOutput(JSON.stringify(payload)).setMimeType(ContentService.MimeType.JSON);
 }
 
 function doGet(e) {
   try {
-    const params = readParams(e);
-    const action = String(params.action || "list").toLowerCase();
-    if (action === "save") return jsonp(e, saveRow(params));
-    return jsonp(e, listRows());
+    var action = e && e.parameter && e.parameter.action ? String(e.parameter.action).toLowerCase() : "list";
+    if (action === "save") return output(saveRow(e.parameter || {}));
+    return output(listRows());
   } catch (err) {
-    return jsonp(e, { ok: false, error: String(err) });
+    return output({ ok: false, error: String(err) });
   }
 }
 
 function doPost(e) {
   try {
-    return jsonp(e, saveRow(readParams(e)));
+    return output(saveRow((e && e.parameter) || {}));
   } catch (err) {
-    return jsonp(e, { ok: false, error: String(err) });
+    return output({ ok: false, error: String(err) });
   }
 }
   </script>
@@ -370,9 +315,14 @@ function doPost(e) {
       refreshBtn: document.getElementById("refresh-btn"),
       listStatus: document.getElementById("list-status"),
       rowsBody: document.getElementById("rows-body"),
+      filters: document.getElementById("filters"),
+      nextVideo: document.getElementById("next-video"),
+      nextVideoBody: document.getElementById("next-video-body"),
+      nextVideoEmpty: document.getElementById("next-video-empty"),
     };
 
     let rows = [];
+    let statusFilter = "all";
 
     const today = () => {
       const d = new Date();
@@ -446,34 +396,146 @@ function doPost(e) {
     }
 
     function statusBadge(status) {
-      if (!status) return `<span class="text-xs text-outline">—</span>`;
+      if (!status) return `<span class="text-xs text-outline">Pending</span>`;
       return `<span class="inline-flex max-w-full items-center rounded-full border border-outline-variant px-2 py-0.5 text-[11px] font-medium text-on-surface-variant break-all">${escapeHtml(status)}</span>`;
     }
 
-    function renderRows() {
+    function uniqueStatuses() {
+      const set = new Set();
+      rows.forEach((r) => {
+        const status = String(r.status || "").trim();
+        if (status) set.add(status);
+      });
+      return [...set].sort((a, b) => a.localeCompare(b));
+    }
+
+    function pendingCount() {
+      return rows.filter((r) => !String(r.status || "").trim()).length;
+    }
+
+    function nextVideoRow() {
+      return rows.find((r) => !String(r.status || "").trim()) || null;
+    }
+
+    function filterChipClass(active) {
+      return "filter-chip rounded-full px-3 py-1.5 min-h-[36px] text-xs font-medium transition-colors " +
+        (active
+          ? "bg-electric-blue text-white"
+          : "border border-outline-variant text-on-surface-variant hover:text-on-surface hover:border-electric-blue");
+    }
+
+    function renderFilters() {
+      const statuses = uniqueStatuses();
+      const pending = pendingCount();
+      const chips = [
+        { value: "all", label: `All (${rows.length})` },
+        { value: "pending", label: `Pending (${pending})` },
+        ...statuses.map((status) => {
+          const count = rows.filter((r) => r.status === status).length;
+          return { value: status, label: `${status} (${count})` };
+        }),
+      ];
+      els.filters.innerHTML = chips.map((chip) => `
+        <button type="button" class="${filterChipClass(statusFilter === chip.value)}" data-status="${escapeHtml(chip.value)}" aria-pressed="${statusFilter === chip.value}">
+          ${escapeHtml(chip.label)}
+        </button>
+      `).join("");
+    }
+
+    function filteredRows() {
       const q = els.search.value.trim().toLowerCase();
-      const filtered = rows.filter((r) => {
+      return rows.filter((r) => {
+        const status = String(r.status || "").trim();
+        if (statusFilter === "pending" && status) return false;
+        if (statusFilter !== "all" && statusFilter !== "pending" && status !== statusFilter) return false;
         if (!q) return true;
         return [r.username, r.name, r.note, r.date, r.status].join(" ").toLowerCase().includes(q);
       });
-      els.rowCount.textContent = q
+    }
+
+    function renderNextVideo() {
+      const next = nextVideoRow();
+      if (!rows.length) {
+        els.nextVideo.classList.add("hidden");
+        els.nextVideoEmpty.classList.add("hidden");
+        return;
+      }
+      if (!next) {
+        els.nextVideo.classList.add("hidden");
+        els.nextVideoEmpty.classList.remove("hidden");
+        els.nextVideoBody.innerHTML = "";
+        return;
+      }
+      els.nextVideoEmpty.classList.add("hidden");
+      els.nextVideo.classList.remove("hidden");
+      els.nextVideoBody.innerHTML = `
+        <div class="grid sm:grid-cols-2 gap-3 text-sm">
+          <div>
+            <p class="font-mono text-[10px] uppercase tracking-wider text-on-surface-variant mb-1">Instagram Username</p>
+            <p class="font-medium break-words">${escapeHtml(next.username) || "—"}</p>
+          </div>
+          <div>
+            <p class="font-mono text-[10px] uppercase tracking-wider text-on-surface-variant mb-1">Name Need to say in video</p>
+            <p class="font-semibold text-base break-words">${escapeHtml(next.name) || "—"}</p>
+          </div>
+        </div>
+        <div>
+          <p class="font-mono text-[10px] uppercase tracking-wider text-on-surface-variant mb-1">Dialogue / Note</p>
+          <p class="text-sm text-on-surface-variant whitespace-pre-wrap break-words">${escapeHtml(next.note) || "—"}</p>
+        </div>
+        <div class="flex flex-wrap items-center gap-2">
+          <p class="font-mono text-xs text-outline">${escapeHtml(next.date) || "No date"}</p>
+          <button type="button" id="copy-next-name" class="inline-flex items-center gap-1 rounded-lg border border-outline-variant min-h-[40px] px-3 text-xs text-on-surface-variant hover:text-on-surface hover:border-electric-blue transition-colors">
+            <span class="material-symbols-outlined text-[16px]">content_copy</span>
+            Copy name
+          </button>
+          <button type="button" id="copy-next-note" class="inline-flex items-center gap-1 rounded-lg border border-outline-variant min-h-[40px] px-3 text-xs text-on-surface-variant hover:text-on-surface hover:border-electric-blue transition-colors">
+            <span class="material-symbols-outlined text-[16px]">content_copy</span>
+            Copy note
+          </button>
+        </div>
+      `;
+      const copy = async (text, btn) => {
+        if (!text) return;
+        try {
+          await navigator.clipboard.writeText(text);
+          const label = btn.textContent;
+          btn.lastChild.textContent = " Copied";
+          setTimeout(() => { btn.lastChild.textContent = label.replace(/^\s*/, " "); }, 1200);
+        } catch {}
+      };
+      document.getElementById("copy-next-name")?.addEventListener("click", (e) => copy(next.name, e.currentTarget));
+      document.getElementById("copy-next-note")?.addEventListener("click", (e) => copy(next.note, e.currentTarget));
+    }
+
+    function renderRows() {
+      const filtered = filteredRows();
+      const next = nextVideoRow();
+      const active = statusFilter !== "all" || els.search.value.trim();
+      els.rowCount.textContent = active
         ? `${filtered.length} of ${rows.length}`
         : `${rows.length} ${rows.length === 1 ? "entry" : "entries"}`;
+
+      renderFilters();
+      renderNextVideo();
 
       if (!filtered.length) {
         els.rowsBody.innerHTML = `<tr class="is-placeholder"><td colspan="5" class="px-4 py-10 text-center text-on-surface-variant">${emptyMessage()}</td></tr>`;
         return;
       }
 
-      els.rowsBody.innerHTML = filtered.map((r) => `
-        <tr class="xl:hover:bg-white/[0.03]">
+      els.rowsBody.innerHTML = filtered.map((r) => {
+        const isNext = next && r.row === next.row;
+        return `
+        <tr class="xl:hover:bg-white/[0.03] ${isNext ? "ring-1 ring-inset ring-electric-blue/40 bg-electric-blue/[0.06]" : ""}">
           <td class="px-4 py-3 font-medium" data-label="Username">${escapeHtml(r.username) || "—"}</td>
-          <td class="px-4 py-3" data-label="Name">${escapeHtml(r.name) || "—"}</td>
-          <td class="px-4 py-3 text-on-surface-variant" data-label="Note"><span class="xl:line-clamp-3">${escapeHtml(r.note) || "—"}</span></td>
+          <td class="px-4 py-3 font-medium" data-label="Name Need to say in video">${escapeHtml(r.name) || "—"}</td>
+          <td class="px-4 py-3 text-on-surface-variant" data-label="Note"><span class="xl:line-clamp-3 whitespace-pre-wrap">${escapeHtml(r.note) || "—"}</span></td>
           <td class="px-4 py-3 font-mono text-xs" data-label="Date">${escapeHtml(r.date) || "—"}</td>
           <td class="px-4 py-3" data-label="Status">${statusBadge(r.status)}</td>
         </tr>
-      `).join("");
+      `;
+      }).join("");
     }
 
     async function loadRows() {
@@ -554,6 +616,12 @@ function doPost(e) {
     });
 
     els.search.addEventListener("input", renderRows);
+    els.filters.addEventListener("click", (event) => {
+      const btn = event.target.closest("[data-status]");
+      if (!btn) return;
+      statusFilter = btn.dataset.status;
+      renderRows();
+    });
     els.refreshBtn.addEventListener("click", loadRows);
 
     loadRows();
