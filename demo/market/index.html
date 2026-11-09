@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kiln &amp; Co. — Handmade stoneware for every day</title>
+  <meta name="description" content="Stoneware mugs, bowls, plates and vases thrown by hand in small batches in Tacoma, Washington. Free shipping over $75.">
+  <meta name="theme-color" content="#f6f1ea">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kiln &amp; Co.">
+  <meta property="og:title" content="Kiln &amp; Co. — Handmade stoneware for every day">
+  <meta property="og:description" content="Stoneware mugs, bowls, plates and vases thrown by hand in small batches in Tacoma, Washington. Free shipping over $75.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&amp;family=Inter:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="home" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm text-cream focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <p class="bg-ink px-4 py-2.5 text-center text-xs tracking-wide text-cream/90">Free shipping on orders over $75 · Thrown by hand in Tacoma, Washington</p>
+  <header id="site-header" class="sticky top-0 z-40 bg-paper/90 backdrop-blur-md transition-shadow duration-300">
+    <div class="container-x grid h-18 grid-cols-[1fr_auto_1fr] items-center gap-4">
+      <div class="flex items-center">
+        <button id="menu-toggle" type="button" class="-ml-2 grid h-11 w-11 place-items-center rounded-full hover:bg-sand lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <svg data-icon-open viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+        <nav aria-label="Main" class="hidden lg:block">
+          <ul class="flex items-center gap-7">
+            <li><a href="shop.html" class="link-underline text-sm aria-[current=page]:bg-[length:100%_1px]">Shop all</a></li>
+            <li><a href="shop.html?category=Vases" class="link-underline text-sm aria-[current=page]:bg-[length:100%_1px]">Vases</a></li>
+            <li><a href="shop.html?category=Mugs%20%26%20Cups" class="link-underline text-sm aria-[current=page]:bg-[length:100%_1px]">Mugs &amp; Cups</a></li>
+            <li><a href="about.html" class="link-underline text-sm aria-[current=page]:bg-[length:100%_1px]">Our studio</a></li>
+            <li><a href="faq.html" class="link-underline text-sm aria-[current=page]:bg-[length:100%_1px]">Help</a></li>
+          </ul>
+        </nav>
+      </div>
+      <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Kiln &amp; Co. home">
+          <svg viewBox="0 0 32 32" class="h-8 w-8 text-clay transition-transform duration-500 group-hover:-rotate-6" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M13 7.5h6v3c0 2 4.5 3.6 4.5 9.2 0 4.3-3 6.3-7.5 6.3s-7.5-2-7.5-6.3c0-5.6 4.5-7.2 4.5-9.2z" fill="#fbf8f3"/><path d="M8.6 21.5c3 1 11.8 1 14.8 0" stroke="#a1441d" stroke-width="1.4" fill="none"/></svg>
+          <span class="font-display text-[1.45rem] font-medium tracking-tight">Kiln &amp; Co.</span>
+        </a>
+      <div class="flex items-center justify-end gap-1">
+        <a href="faq.html#contact" class="hidden rounded-full px-3 py-2 text-sm hover:bg-sand sm:inline-block">Contact</a>
+        <a href="cart.html" data-cart-open class="relative grid h-11 w-11 place-items-center rounded-full hover:bg-sand" aria-controls="cart-drawer" aria-expanded="false" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+          <span data-cart-count hidden class="absolute right-0.5 top-0.5 grid h-5 min-w-5 place-items-center rounded-full bg-clay px-1 text-[11px] font-semibold text-white">0</span>
+        </a>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-line bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="shop.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl aria-[current=page]:text-clay">Shop all</a></li>
+          <li><a href="shop.html?category=Vases" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl aria-[current=page]:text-clay">Vases</a></li>
+          <li><a href="shop.html?category=Mugs%20%26%20Cups" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl aria-[current=page]:text-clay">Mugs &amp; Cups</a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl aria-[current=page]:text-clay">Our studio</a></li>
+          <li><a href="faq.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl aria-[current=page]:text-clay">Help</a></li>
+        </ul>
+        <p class="mt-6 text-sm text-stone">Questions? <a href="faq.html#contact" class="underline underline-offset-4">Write to the studio</a></p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="container-x grid items-center gap-12 pb-20 pt-10 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:pt-16">
+      <div class="reveal">
+        <p class="eyebrow">New collection</p>
+        <h1 class="mt-5 font-display text-[3.2rem] font-light leading-[0.98] tracking-tight sm:text-7xl xl:text-[5.6rem]">Made slowly.<br><em class="font-normal text-clay">Used every day.</em></h1>
+        <p class="mt-6 max-w-lg text-lg leading-relaxed text-stone">Stoneware mugs, bowls and vases thrown by hand in small batches, glazed in colors borrowed from Puget Sound — and made to be used, not kept for special occasions.</p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <a href="shop.html" class="btn-primary px-8 py-4">Shop the collection</a>
+          <a href="about.html" class="btn-outline px-8 py-4">Visit the studio</a>
+        </div>
+        <ul class="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-stone">
+          <li class="flex items-center gap-2"><span class="flex gap-0.5" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></span><span><strong class="font-semibold text-ink">4.9</strong> from 2,300+ reviews</span></li>
+          <li class="flex items-center gap-2"><svg viewBox="0 0 20 20" class="mt-0.5 h-4 w-4 shrink-0 text-moss" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 10.5 4 4 8-9"/></svg>Free shipping over $75</li>
+          <li class="flex items-center gap-2"><svg viewBox="0 0 20 20" class="mt-0.5 h-4 w-4 shrink-0 text-moss" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 10.5 4 4 8-9"/></svg>30-day returns</li>
+        </ul>
+      </div>
+      <div class="reveal relative grid grid-cols-5 grid-rows-[auto_auto] gap-4">
+        <a href="product.html?id=ridge-vase" class="art col-span-3 row-span-2 block aspect-[3/4.4] overflow-hidden rounded-[1.75rem] bg-sand sm:aspect-[3/4.2]" data-art="ridge-vase" data-glaze="1" data-view="2" aria-label="Ridge Vase in Moss"></a>
+        <a href="product.html?id=daily-mug" class="art col-span-2 block aspect-square overflow-hidden rounded-[1.75rem] bg-sand" data-art="daily-mug" data-glaze="1" aria-label="Daily Mug in Terracotta"></a>
+        <a href="product.html?id=bud-vase" class="art col-span-2 block aspect-[4/5] overflow-hidden rounded-[1.75rem] bg-sand" data-art="bud-vase" data-glaze="1" data-view="3" aria-label="Bud Vase in Celadon"></a>
+        <a href="product.html?id=ridge-vase" class="absolute bottom-5 left-5 flex items-center gap-3 rounded-2xl bg-cream/95 py-3 pl-3 pr-5 shadow-lg backdrop-blur transition hover:-translate-y-0.5">
+          <span class="h-9 w-9 rounded-full ring-1 ring-ink/10" style="background:#76855a"></span>
+          <span class="text-sm leading-tight"><span class="block font-medium">Ridge Vase · Moss</span><span class="text-stone">$68 — Shop now →</span></span>
+        </a>
+      </div>
+    </section>
+
+    <section aria-label="Press" class="border-y border-line">
+      <div class="container-x flex flex-wrap items-center justify-center gap-x-12 gap-y-4 py-7 text-stone">
+        <p class="text-xs uppercase tracking-[0.2em]">As seen in</p>
+        <p class="font-display text-xl italic">The Slow Table</p>
+        <p class="text-lg font-semibold tracking-[0.25em]">NORTHERN</p>
+        <p class="font-display text-xl">Maker Review</p>
+        <p class="text-lg font-medium tracking-tight">good morning.</p>
+        <p class="font-display text-xl italic">Dwell &amp; Dine</p>
+      </div>
+    </section>
+
+    <section class="container-x mt-24">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="eyebrow">Collections</p>
+          <h2 class="mt-3 font-display text-4xl sm:text-5xl">Start with a shape</h2>
+        </div>
+        <a href="shop.html" class="link-underline text-sm font-medium">Browse everything →</a>
+      </div>
+      <div class="mt-10 grid gap-5 md:grid-cols-3">
+        <a href="shop.html?category=Vases" class="reveal group relative block overflow-hidden rounded-[1.75rem]">
+          <span class="art block aspect-[4/5] transition duration-700 group-hover:scale-105" data-art="studio-vase" data-glaze="0" data-view="3"></span>
+          <span class="absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-ink/60 to-transparent p-6 pt-20 text-cream">
+            <span><span class="block font-display text-3xl">Vases</span><span class="text-sm text-cream/85">3 shapes · from $26</span></span>
+            <span class="grid h-11 w-11 place-items-center rounded-full bg-cream text-ink transition group-hover:translate-x-1" aria-hidden="true">→</span>
+          </span>
+        </a>
+        <a href="shop.html?category=Bowls" class="reveal group relative block overflow-hidden rounded-[1.75rem]">
+          <span class="art block aspect-[4/5] transition duration-700 group-hover:scale-105" data-art="everyday-bowl" data-glaze="2" data-view="2"></span>
+          <span class="absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-ink/60 to-transparent p-6 pt-20 text-cream">
+            <span><span class="block font-display text-3xl">Bowls</span><span class="text-sm text-cream/85">Everyday to serving · from $28</span></span>
+            <span class="grid h-11 w-11 place-items-center rounded-full bg-cream text-ink transition group-hover:translate-x-1" aria-hidden="true">→</span>
+          </span>
+        </a>
+        <a href="shop.html?category=Mugs%20%26%20Cups" class="reveal group relative block overflow-hidden rounded-[1.75rem]">
+          <span class="art block aspect-[4/5] transition duration-700 group-hover:scale-105" data-art="daily-mug" data-glaze="2" data-view="3"></span>
+          <span class="absolute inset-x-0 bottom-0 flex items-end justify-between bg-gradient-to-t from-ink/60 to-transparent p-6 pt-20 text-cream">
+            <span><span class="block font-display text-3xl">Mugs &amp; Cups</span><span class="text-sm text-cream/85">For coffee, tea and more · from $22</span></span>
+            <span class="grid h-11 w-11 place-items-center rounded-full bg-cream text-ink transition group-hover:translate-x-1" aria-hidden="true">→</span>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="container-x mt-28">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="eyebrow">Bestsellers</p>
+          <h2 class="mt-3 font-display text-4xl sm:text-5xl">Loved, chipped, reordered</h2>
+        </div>
+        <a href="shop.html" class="link-underline text-sm font-medium">Shop all 12 pieces →</a>
+      </div>
+      <div id="bestsellers" class="mt-10 grid grid-cols-2 gap-x-4 gap-y-12 sm:gap-x-6 lg:grid-cols-4"></div>
+    </section>
+
+    <section class="mt-28 bg-sand">
+      <div class="container-x grid items-center gap-12 py-20 lg:grid-cols-2 lg:gap-20">
+        <div class="reveal art aspect-[5/4] overflow-hidden rounded-[1.75rem]" data-art="morning-pitcher" data-glaze="0" data-view="2"></div>
+        <div class="reveal">
+          <p class="eyebrow">From our wheel to your table</p>
+          <h2 class="mt-3 font-display text-4xl leading-tight sm:text-5xl">Forty-one prototypes for one good pour.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-stone">Every piece starts as a lump of local clay on one of our six wheels. It is thrown, trimmed, dried for a week, bisque-fired, dipped in glaze by hand and fired again at 2300°F. Then we test it — in our own kitchens — before it ever reaches yours.</p>
+          <dl class="mt-10 grid grid-cols-3 gap-6 border-t border-line pt-8">
+            <div><dt class="text-sm text-stone">Potters</dt><dd class="mt-1 font-display text-4xl">12</dd></div>
+            <div><dt class="text-sm text-stone">Days per piece</dt><dd class="mt-1 font-display text-4xl">14</dd></div>
+            <div><dt class="text-sm text-stone">Kiln temp.</dt><dd class="mt-1 font-display text-4xl">2300°</dd></div>
+          </dl>
+          <a href="about.html" class="btn-outline mt-10">Read our story</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-x mt-28">
+      <h2 class="sr-only">Why Kiln &amp; Co.</h2>
+      <ul class="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <li class="reveal">
+          <svg viewBox="0 0 40 40" class="h-10 w-10 text-clay" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="20" cy="20" r="16"/><path d="M12 22c2 4 14 4 16 0M14 15h.01M26 15h.01"/></svg>
+          <h3 class="mt-5 font-display text-2xl">Thrown by hand</h3>
+          <p class="mt-2 text-stone">No molds, no factories. Small differences in every piece are the point.</p>
+        </li>
+        <li class="reveal">
+          <svg viewBox="0 0 40 40" class="h-10 w-10 text-clay" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 4c6 8 10 13 10 19a10 10 0 0 1-20 0c0-6 4-11 10-19z"/><path d="m15 24 4 4 7-8"/></svg>
+          <h3 class="mt-5 font-display text-2xl">Food-safe glazes</h3>
+          <p class="mt-2 text-stone">Lead-free and cadmium-free, tested by an independent lab every season.</p>
+        </li>
+        <li class="reveal">
+          <svg viewBox="0 0 40 40" class="h-10 w-10 text-clay" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 14 20 6l14 8v14l-14 8-14-8z"/><path d="M6 14l14 8 14-8M20 22v14"/></svg>
+          <h3 class="mt-5 font-display text-2xl">Plastic-free shipping</h3>
+          <p class="mt-2 text-stone">Packed in recycled paper and cornstarch peanuts. Breakages replaced, no questions.</p>
+        </li>
+        <li class="reveal">
+          <svg viewBox="0 0 40 40" class="h-10 w-10 text-clay" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 20a12 12 0 0 1 21-8l3 3M32 20a12 12 0 0 1-21 8l-3-3"/><path d="M32 8v7h-7M8 32v-7h7"/></svg>
+          <h3 class="mt-5 font-display text-2xl">Kintsugi repairs</h3>
+          <p class="mt-2 text-stone">Chipped a favorite? Send it back and we will mend it with gold, for life.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="container-x mt-28">
+      <div class="text-center">
+        <p class="eyebrow">Reviews</p>
+        <h2 class="mx-auto mt-3 max-w-2xl font-display text-4xl sm:text-5xl">Kept on the counter, not in the cabinet</h2>
+      </div>
+      <div class="mt-12 grid gap-5 md:grid-cols-3">
+        <figure class="reveal flex flex-col rounded-[1.75rem] bg-cream p-8 ring-1 ring-line">
+          <span class="flex gap-0.5" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></span>
+          <blockquote class="mt-5 flex-1 font-display text-xl leading-snug">“I bought one Daily Mug as a treat. I now own six and my partner has hidden two of them.”</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3 text-sm"><span class="grid h-10 w-10 place-items-center rounded-full bg-[#b65a33] font-semibold text-white">AN</span><span><span class="block font-medium">Ana N.</span><span class="text-stone">Daily Mug · Terracotta</span></span></figcaption>
+        </figure>
+        <figure class="reveal flex flex-col rounded-[1.75rem] bg-cream p-8 ring-1 ring-line">
+          <span class="flex gap-0.5" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></span>
+          <blockquote class="mt-5 flex-1 font-display text-xl leading-snug">“The serving bowl arrived wrapped like a gift. It has been on the table every Sunday since.”</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3 text-sm"><span class="grid h-10 w-10 place-items-center rounded-full bg-moss font-semibold text-white">JT</span><span><span class="block font-medium">James T.</span><span class="text-stone">Wide Serving Bowl · Celadon</span></span></figcaption>
+        </figure>
+        <figure class="reveal flex flex-col rounded-[1.75rem] bg-cream p-8 ring-1 ring-line">
+          <span class="flex gap-0.5" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4 fill-clay" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></span>
+          <blockquote class="mt-5 flex-1 font-display text-xl leading-snug">“One of mine cracked in the mail. A new one was on its way before I finished the email.”</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3 text-sm"><span class="grid h-10 w-10 place-items-center rounded-full bg-[#2e3a4b] font-semibold text-white">PR</span><span><span class="block font-medium">Priya R.</span><span class="text-stone">Ridge Vase · Ink</span></span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="container-x mt-28">
+      <div class="reveal relative overflow-hidden rounded-[2rem] bg-moss px-6 py-14 text-cream sm:px-14 sm:py-16">
+        <svg viewBox="0 0 400 400" class="pointer-events-none absolute -right-20 -top-24 h-96 w-96 text-cream/10" aria-hidden="true"><circle cx="200" cy="200" r="190" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="200" r="140" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="200" cy="200" r="90" fill="none" stroke="currentColor" stroke-width="2"/></svg>
+        <div class="relative grid items-center gap-8 lg:grid-cols-2">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-cream/90">Studio letters</p>
+            <h2 class="mt-3 font-display text-4xl leading-tight sm:text-5xl">10% off your first order.</h2>
+            <p class="mt-3 max-w-md text-cream/80">Join 40,000 people who hear first about new glazes, kiln openings and seconds sales. One email a month, never more.</p>
+          </div>
+          <form data-form="newsletter" data-dark class="on-dark" novalidate>
+            <label for="band-email" class="mb-2 block text-sm text-cream/85">Email address</label>
+            <div class="flex flex-col gap-3 sm:flex-row">
+              <input id="band-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@example.com" class="field border-transparent">
+              <button type="submit" class="btn-light shrink-0">Get 10% off</button>
+            </div>
+            <p class="mt-3 text-xs text-cream/90">Use code WELCOME10 at checkout. Unsubscribe anytime.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-24 bg-sand">
+    <div class="container-x grid gap-12 py-16 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Kiln &amp; Co. home">
+          <svg viewBox="0 0 32 32" class="h-8 w-8 text-clay transition-transform duration-500 group-hover:-rotate-6" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M13 7.5h6v3c0 2 4.5 3.6 4.5 9.2 0 4.3-3 6.3-7.5 6.3s-7.5-2-7.5-6.3c0-5.6 4.5-7.2 4.5-9.2z" fill="#fbf8f3"/><path d="M8.6 21.5c3 1 11.8 1 14.8 0" stroke="#a1441d" stroke-width="1.4" fill="none"/></svg>
+          <span class="font-display text-[1.45rem] font-medium tracking-tight">Kiln &amp; Co.</span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-stone">Stoneware for everyday rituals, thrown by hand by twelve potters in a small studio in Tacoma, Washington.</p>
+        <ul class="mt-6 flex gap-5 text-sm">
+          <li><a href="#" class="link-underline">Instagram</a></li>
+          <li><a href="#" class="link-underline">Pinterest</a></li>
+          <li><a href="#" class="link-underline">TikTok</a></li>
+        </ul>
+      </div>
+      <nav aria-label="Shop" class="lg:col-span-2">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-stone">Shop</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="shop.html" class="link-underline">All ceramics</a></li>
+          <li><a href="shop.html?category=Vases" class="link-underline">Vases</a></li>
+          <li><a href="shop.html?category=Mugs%20%26%20Cups" class="link-underline">Mugs &amp; Cups</a></li>
+          <li><a href="shop.html?category=Bowls" class="link-underline">Bowls</a></li>
+          <li><a href="shop.html?category=Plates" class="link-underline">Plates</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Help" class="lg:col-span-2">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-stone">Help</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="faq.html" class="link-underline">FAQ</a></li>
+          <li><a href="faq.html#shipping" class="link-underline">Shipping &amp; returns</a></li>
+          <li><a href="faq.html#care" class="link-underline">Care guide</a></li>
+          <li><a href="faq.html#contact" class="link-underline">Contact us</a></li>
+          <li><a href="about.html" class="link-underline">Our studio</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-4">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-stone">Studio letters</h2>
+        <p class="mt-4 text-sm text-stone">New glazes, kiln openings and the occasional seconds sale. Once a month.</p>
+        <form data-form="newsletter" class="mt-4" novalidate>
+          <label for="footer-email" class="sr-only">Email address</label>
+          <div class="flex gap-2">
+            <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@example.com" class="field">
+            <button type="submit" class="btn-primary shrink-0">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="border-t border-line">
+      <div class="container-x flex flex-col gap-3 py-6 text-xs text-stone sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Kiln &amp; Co. All prices in USD, before sales tax.</p>
+        <p>Orders leave the studio within 2–3 business days. Template by Freeframe.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cart-overlay" hidden class="fixed inset-0 z-50 bg-ink/40 opacity-0 backdrop-blur-[2px] transition-opacity duration-300"></div>
+  <aside id="cart-drawer" hidden role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title" class="fixed inset-y-0 right-0 z-50 flex w-full max-w-md translate-x-full flex-col bg-paper shadow-2xl transition-transform duration-300 ease-[var(--ease-soft)]">
+    <div class="flex items-center justify-between border-b border-line px-6 py-5">
+      <h2 id="cart-drawer-title" class="font-display text-2xl">Your cart</h2>
+      <button type="button" data-drawer-close class="grid h-10 w-10 place-items-center rounded-full hover:bg-sand" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div data-drawer-progress class="border-b border-line bg-sand/60 px-6 py-4"></div>
+    <div data-drawer-body class="flex-1 overflow-y-auto px-6"></div>
+    <div data-drawer-foot class="border-t border-line px-6 py-5">
+      <div class="flex justify-between text-base"><span>Subtotal</span><span data-drawer-subtotal class="font-medium tabular-nums">$0.00</span></div>
+      <p class="mt-1 text-xs text-stone">Shipping, sales tax and discounts are calculated at checkout.</p>
+      <div class="mt-4 grid grid-cols-2 gap-3">
+        <a href="cart.html" class="btn-outline">View cart</a>
+        <a href="checkout.html" class="btn-primary">Checkout</a>
+      </div>
+    </div>
+  </aside>
+  <div id="toast" role="status" aria-live="polite" class="pointer-events-none fixed inset-x-4 bottom-4 z-[55] mx-auto flex max-w-md translate-y-6 items-center gap-3 rounded-2xl bg-ink px-5 py-4 text-sm text-cream opacity-0 shadow-xl transition duration-300 sm:left-auto sm:right-6 sm:mx-0">
+    <svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-[#b9c79c]" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 10.5 4 4 8-9"/></svg>
+    <p data-toast-msg class="flex-1"></p>
+    <button type="button" data-toast-close class="grid h-7 w-7 place-items-center rounded-full text-cream/70 hover:text-cream" aria-label="Dismiss"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+  </div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Changelog — Prism</title>
+  <meta name="description" content="Every Prism release: new models, API endpoints, connectors, security updates and fixes. Filter by topic.">
+  <meta name="theme-color" content="#05060a">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Prism">
+  <meta property="og:title" content="Changelog — Prism">
+  <meta property="og:description" content="Every Prism release: new models, API endpoints, connectors, security updates and fixes. Filter by topic.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="changelog" class="grain flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[80] rounded-full bg-fg px-5 py-3 text-sm font-medium text-ink-950 focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 border-b border-transparent">
+    <div class="container-x flex h-16 items-center justify-between gap-6">
+      <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Prism home">
+        <svg viewBox="0 0 32 32" class="h-7 w-7 shrink-0 transition-transform duration-500 group-hover:rotate-[-8deg]" aria-hidden="true"><path d="M16 3.5 28.5 26.5H16z" fill="#7cf2c8"/><path d="M16 3.5 3.5 26.5H16z" fill="#ff7eb3"/><path d="M16 3.5 16 26.5 9.75 26.5z" fill="#ffb86b" opacity=".9"/><path d="M16 3.5 22.25 26.5H16z" fill="#6fb6ff" opacity=".9"/><path d="M16 3.5 28.5 26.5h-25z" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.2" stroke-linejoin="round"/></svg>
+        <span class="text-[17px] font-semibold tracking-[-0.02em]">Prism</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1">
+          <li><a href="product.html" class="nav-link">Product</a></li>
+          <li><a href="developers.html" class="nav-link">Developers</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="changelog.html" class="nav-link" aria-current="page">Changelog</a></li>
+          <li><a href="about.html" class="nav-link">Company</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="nav-link hidden sm:inline-flex">Talk to sales</a>
+        <a href="pricing.html" class="btn-primary hidden px-4 py-2 sm:inline-flex">Start free</a>
+        <button id="menu-toggle" type="button" class="grid h-10 w-10 place-items-center rounded-full border border-white/12 bg-white/[.03] text-fg lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-white/[.08] lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-8">
+        <ul>
+          <li><a href="product.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Product<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="developers.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Developers<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="pricing.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Pricing<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="changelog.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300" aria-current="page">Changelog<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Company<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="contact.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Talk to sales<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+        </ul>
+        <a href="pricing.html" class="btn-primary btn-lg mt-6 w-full">Start free</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="relative overflow-hidden">
+      <div class="bg-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="container-x relative pt-16 pb-14 sm:pt-24">
+        <p class="eyebrow reveal">Changelog</p>
+        <h1 class="h-display reveal reveal-d1 mt-5 max-w-3xl">What we <span class="serif text-spectrum pr-1">shipped</span>.</h1>
+        <p class="lead reveal reveal-d2 mt-6 max-w-xl">New models, API changes, connectors, security updates and fixes, newest first. <a href="#footer-email" class="link">Get them by email</a>.</p>
+        <div class="reveal reveal-d3 mt-10 flex flex-wrap gap-2" role="group" aria-label="Filter releases by topic" data-filter="changelog" data-filter-param="tag" data-filter-noun="releases">
+          <button type="button" class="seg" data-filter-value="all" aria-pressed="true">All <span class="seg-count"></span></button>
+          <button type="button" class="seg" data-filter-value="models" aria-pressed="false">Models <span class="seg-count"></span></button>
+          <button type="button" class="seg" data-filter-value="api" aria-pressed="false">API <span class="seg-count"></span></button>
+          <button type="button" class="seg" data-filter-value="product" aria-pressed="false">Product <span class="seg-count"></span></button>
+          <button type="button" class="seg" data-filter-value="connectors" aria-pressed="false">Connectors <span class="seg-count"></span></button>
+          <button type="button" class="seg" data-filter-value="security" aria-pressed="false">Security <span class="seg-count"></span></button>
+          <button type="button" class="seg" data-filter-value="fixes" aria-pressed="false">Fixes <span class="seg-count"></span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-x pb-24 sm:pb-32" aria-label="Releases">
+      <div class="relative pt-4">
+        <div class="absolute top-6 bottom-0 left-[4px] w-px bg-gradient-to-b from-white/20 via-white/10 to-transparent md:left-[11rem]" aria-hidden="true"></div>
+          <article data-filter-item="changelog" data-tags="models product" class="reveal relative grid gap-4 pb-14 pl-8 md:grid-cols-[11rem_minmax(0,1fr)] md:gap-0 md:pl-0" aria-labelledby="rel-0">
+            <div class="md:sticky md:top-24 md:self-start md:pr-10 md:text-right">
+              <time datetime="2026-10-08" class="block text-sm text-fg">October 8, 2026</time>
+              <p class="mt-1 font-mono text-xs text-subtle">v2.0</p>
+            </div>
+            <span class="absolute top-1.5 left-0 h-2.5 w-2.5 rounded-full bg-fg/70 ring-4 ring-ink-950 md:left-[calc(11rem-5px)]" aria-hidden="true"></span>
+            <div class="min-w-0 max-w-3xl md:pl-10">
+              <h2 id="rel-0" class="text-2xl font-medium tracking-tight">Prism 2 is generally available</h2>
+              <ul class="mt-3 flex flex-wrap gap-2" aria-label="Topics"><li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-rose" aria-hidden="true"></span>Models</li><li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-sky" aria-hidden="true"></span>Product</li></ul>
+              <p class="mt-5 leading-relaxed text-muted">Our new default model writes 41% fewer unsupported claims than Prism 1.5 on SourceQA-Hard, reads up to 1M tokens in one pass and starts answering in a median 380 ms.</p>
+              <ul class="mt-5 grid gap-2.5 text-muted">
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span><code class="text-[0.9em] text-fg">prism-2</code> replaces <code class="text-[0.9em] text-fg">prism-1.5</code> as the default in the app and the API.</span></li>
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span>Claims without a supporting passage are now underlined in drafts, with the reason.</span></li>
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span><code class="text-[0.9em] text-fg">prism-1.5</code> keeps working until April 30, 2027.</span></li>
+              </ul>
+            </div>
+          </article>
+          <article data-filter-item="changelog" data-tags="api" class="reveal relative grid gap-4 pb-14 pl-8 md:grid-cols-[11rem_minmax(0,1fr)] md:gap-0 md:pl-0" aria-labelledby="rel-1">
+            <div class="md:sticky md:top-24 md:self-start md:pr-10 md:text-right">
+              <time datetime="2026-09-24" class="block text-sm text-fg">September 24, 2026</time>
+              <p class="mt-1 font-mono text-xs text-subtle">v1.18</p>
+            </div>
+            <span class="absolute top-1.5 left-0 h-2.5 w-2.5 rounded-full bg-fg/70 ring-4 ring-ink-950 md:left-[calc(11rem-5px)]" aria-hidden="true"></span>
+            <div class="min-w-0 max-w-3xl md:pl-10">
+              <h2 id="rel-1" class="text-2xl font-medium tracking-tight">Sources stream before the answer</h2>
+              <ul class="mt-3 flex flex-wrap gap-2" aria-label="Topics"><li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-mint" aria-hidden="true"></span>API</li></ul>
+              <p class="mt-5 leading-relaxed text-muted">Streaming responses now send a <code class="text-[0.9em] text-fg">source</code> event for each passage before the first <code class="text-[0.9em] text-fg">text</code> event, so you can render citations as soon as they exist.</p>
+              <ul class="mt-5 grid gap-2.5 text-muted">
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span>New <code class="text-[0.9em] text-fg">source</code> event type with <code class="text-[0.9em] text-fg">index</code>, <code class="text-[0.9em] text-fg">title</code> and <code class="text-[0.9em] text-fg">quote</code>.</span></li>
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span>The final <code class="text-[0.9em] text-fg">done</code> event includes <code class="text-[0.9em] text-fg">unsupported_claims</code>.</span></li>
+              </ul>
+            </div>
+          </article>
+          <article data-filter-item="changelog" data-tags="connectors" class="reveal relative grid gap-4 pb-14 pl-8 md:grid-cols-[11rem_minmax(0,1fr)] md:gap-0 md:pl-0" aria-labelledby="rel-2">
+            <div class="md:sticky md:top-24 md:self-start md:pr-10 md:text-right">
+              <time datetime="2026-09-10" class="block text-sm text-fg">September 10, 2026</time>
+              <p class="mt-1 font-mono text-xs text-subtle">v1.17</p>
+            </div>
+            <span class="absolute top-1.5 left-0 h-2.5 w-2.5 rounded-full bg-fg/70 ring-4 ring-ink-950 md:left-[calc(11rem-5px)]" aria-hidden="true"></span>
+            <div class="min-w-0 max-w-3xl md:pl-10">
+              <h2 id="rel-2" class="text-2xl font-medium tracking-tight">Data warehouse connector</h2>
+              <ul class="mt-3 flex flex-wrap gap-2" aria-label="Topics"><li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-amber" aria-hidden="true"></span>Connectors</li></ul>
+              <p class="mt-5 leading-relaxed text-muted">Connect a warehouse with a read-only role and ask questions in plain language. Prism writes the SQL, shows it to you and cites the result table.</p>
+              <ul class="mt-5 grid gap-2.5 text-muted">
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span>Supports schemas up to 2,000 tables.</span></li>
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span>Queries time out after 60 seconds and never write.</span></li>
+              </ul>
+            </div>
+          </article>
+          <article data-filter-item="changelog" data-tags="security" class="reveal relative grid gap-4 pb-14 pl-8 md:grid-cols-[11rem_minmax(0,1fr)] md:gap-0 md:pl-0" aria-labelledby="rel-3">
+            <div class="md:sticky md:top-24 md:self-start md:pr-10 md:text-right">
+              <time datetime="2026-08-27" class="block text-sm text-fg">August 27, 2026</time>
+              <p class="mt-1 font-mono text-xs text-subtle">v1.16</p>
+            </div>
+            <span class="absolute top-1.5 left-0 h-2.5 w-2.5 rounded-full bg-fg/70 ring-4 ring-ink-950 md:left-[calc(11rem-5px)]" aria-hidden="true"></span>
+            <div class="min-w-0 max-w-3xl md:pl-10">
+              <h2 id="rel-3" class="text-2xl font-medium tracking-tight">SCIM provisioning and audit log export</h2>
+              <ul class="mt-3 flex flex-wrap gap-2" aria-label="Topics"><li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-violet" aria-hidden="true"></span>Security</li></ul>
+              <p class="mt-5 leading-relaxed text-muted">Enterprise workspaces can now provision and remove users from their identity provider, and stream the audit log to their own storage.</p>
+              <ul class="mt-5 grid gap-2.5 text-muted">
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span>SCIM 2.0 for users and groups (beta).</span></li>
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span>Daily audit log export as JSON Lines.</span></li>
+              </ul>
+            </div>
+          </article>
+          <article data-filter-item="changelog" data-tags="product api" class="reveal relative grid gap-4 pb-14 pl-8 md:grid-cols-[11rem_minmax(0,1fr)] md:gap-0 md:pl-0" aria-labelledby="rel-4">
+            <div class="md:sticky md:top-24 md:self-start md:pr-10 md:text-right">
+              <time datetime="2026-08-13" class="block text-sm text-fg">August 13, 2026</time>
+              <p class="mt-1 font-mono text-xs text-subtle">v1.15</p>
+            </div>
+            <span class="absolute top-1.5 left-0 h-2.5 w-2.5 rounded-full bg-fg/70 ring-4 ring-ink-950 md:left-[calc(11rem-5px)]" aria-hidden="true"></span>
+            <div class="min-w-0 max-w-3xl md:pl-10">
+              <h2 id="rel-4" class="text-2xl font-medium tracking-tight">Briefs can post to webhooks</h2>
+              <ul class="mt-3 flex flex-wrap gap-2" aria-label="Topics"><li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-sky" aria-hidden="true"></span>Product</li><li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-mint" aria-hidden="true"></span>API</li></ul>
+              <p class="mt-5 leading-relaxed text-muted">Scheduled briefs can now send their result to any HTTPS endpoint, signed with your workspace secret.</p>
+              <ul class="mt-5 grid gap-2.5 text-muted">
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span>Payloads include the answer, citations and what changed since the last run.</span></li>
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span>Retries for up to 24 hours with exponential backoff.</span></li>
+              </ul>
+            </div>
+          </article>
+          <article data-filter-item="changelog" data-tags="fixes api" class="reveal relative grid gap-4 pb-14 pl-8 md:grid-cols-[11rem_minmax(0,1fr)] md:gap-0 md:pl-0" aria-labelledby="rel-5">
+            <div class="md:sticky md:top-24 md:self-start md:pr-10 md:text-right">
+              <time datetime="2026-07-30" class="block text-sm text-fg">July 30, 2026</time>
+              <p class="mt-1 font-mono text-xs text-subtle">v1.14.2</p>
+            </div>
+            <span class="absolute top-1.5 left-0 h-2.5 w-2.5 rounded-full bg-fg/70 ring-4 ring-ink-950 md:left-[calc(11rem-5px)]" aria-hidden="true"></span>
+            <div class="min-w-0 max-w-3xl md:pl-10">
+              <h2 id="rel-5" class="text-2xl font-medium tracking-tight">Fixes for pagination and long PDFs</h2>
+              <ul class="mt-3 flex flex-wrap gap-2" aria-label="Topics"><li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-subtle" aria-hidden="true"></span>Fixes</li><li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-mint" aria-hidden="true"></span>API</li></ul>
+              <p class="mt-5 leading-relaxed text-muted">A round of fixes reported by API customers.</p>
+              <ul class="mt-5 grid gap-2.5 text-muted">
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span><code class="text-[0.9em] text-fg">/v1/search</code> cursors no longer skip results when documents change mid-page.</span></li>
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span>Citation offsets are correct in scanned PDFs over 500 pages.</span></li>
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span>The Python SDK no longer drops the last event of a stream on slow connections.</span></li>
+              </ul>
+            </div>
+          </article>
+          <article data-filter-item="changelog" data-tags="models" class="reveal relative grid gap-4 pb-14 pl-8 md:grid-cols-[11rem_minmax(0,1fr)] md:gap-0 md:pl-0" aria-labelledby="rel-6">
+            <div class="md:sticky md:top-24 md:self-start md:pr-10 md:text-right">
+              <time datetime="2026-07-16" class="block text-sm text-fg">July 16, 2026</time>
+              <p class="mt-1 font-mono text-xs text-subtle">v1.14</p>
+            </div>
+            <span class="absolute top-1.5 left-0 h-2.5 w-2.5 rounded-full bg-fg/70 ring-4 ring-ink-950 md:left-[calc(11rem-5px)]" aria-hidden="true"></span>
+            <div class="min-w-0 max-w-3xl md:pl-10">
+              <h2 id="rel-6" class="text-2xl font-medium tracking-tight">prism-2-flash gets 40% faster</h2>
+              <ul class="mt-3 flex flex-wrap gap-2" aria-label="Topics"><li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-rose" aria-hidden="true"></span>Models</li></ul>
+              <p class="mt-5 leading-relaxed text-muted">A new serving stack cuts median time to first token for <code class="text-[0.9em] text-fg">prism-2-flash</code> from 230 ms to 140 ms, with no change in price.</p>
+            </div>
+          </article>
+          <article data-filter-item="changelog" data-tags="api" class="reveal relative grid gap-4 pb-14 pl-8 md:grid-cols-[11rem_minmax(0,1fr)] md:gap-0 md:pl-0" aria-labelledby="rel-7">
+            <div class="md:sticky md:top-24 md:self-start md:pr-10 md:text-right">
+              <time datetime="2026-07-02" class="block text-sm text-fg">July 2, 2026</time>
+              <p class="mt-1 font-mono text-xs text-subtle">v1.13</p>
+            </div>
+            <span class="absolute top-1.5 left-0 h-2.5 w-2.5 rounded-full bg-fg/70 ring-4 ring-ink-950 md:left-[calc(11rem-5px)]" aria-hidden="true"></span>
+            <div class="min-w-0 max-w-3xl md:pl-10">
+              <h2 id="rel-7" class="text-2xl font-medium tracking-tight">Usage endpoint and spending caps</h2>
+              <ul class="mt-3 flex flex-wrap gap-2" aria-label="Topics"><li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-mint" aria-hidden="true"></span>API</li></ul>
+              <p class="mt-5 leading-relaxed text-muted">See token usage per key and per day, and set a hard monthly cap on any key.</p>
+              <ul class="mt-5 grid gap-2.5 text-muted">
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span>New <code class="text-[0.9em] text-fg">GET /v1/usage</code> endpoint.</span></li>
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span>Requests over a cap return <code class="text-[0.9em] text-fg">402</code> with <code class="text-[0.9em] text-fg">cap_reached</code>.</span></li>
+              </ul>
+            </div>
+          </article>
+          <article data-filter-item="changelog" data-tags="connectors product" class="reveal relative grid gap-4 pb-14 pl-8 md:grid-cols-[11rem_minmax(0,1fr)] md:gap-0 md:pl-0" aria-labelledby="rel-8">
+            <div class="md:sticky md:top-24 md:self-start md:pr-10 md:text-right">
+              <time datetime="2026-06-18" class="block text-sm text-fg">June 18, 2026</time>
+              <p class="mt-1 font-mono text-xs text-subtle">v1.12</p>
+            </div>
+            <span class="absolute top-1.5 left-0 h-2.5 w-2.5 rounded-full bg-fg/70 ring-4 ring-ink-950 md:left-[calc(11rem-5px)]" aria-hidden="true"></span>
+            <div class="min-w-0 max-w-3xl md:pl-10">
+              <h2 id="rel-8" class="text-2xl font-medium tracking-tight">Calendar and meeting notes</h2>
+              <ul class="mt-3 flex flex-wrap gap-2" aria-label="Topics"><li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-amber" aria-hidden="true"></span>Connectors</li><li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-sky" aria-hidden="true"></span>Product</li></ul>
+              <p class="mt-5 leading-relaxed text-muted">Prism can now read your calendar and the notes attached to meetings, so “what did we agree with Arcwell?” has an answer.</p>
+            </div>
+          </article>
+          <article data-filter-item="changelog" data-tags="security" class="reveal relative grid gap-4 pb-14 pl-8 md:grid-cols-[11rem_minmax(0,1fr)] md:gap-0 md:pl-0" aria-labelledby="rel-9">
+            <div class="md:sticky md:top-24 md:self-start md:pr-10 md:text-right">
+              <time datetime="2026-06-04" class="block text-sm text-fg">June 4, 2026</time>
+              <p class="mt-1 font-mono text-xs text-subtle">v1.11</p>
+            </div>
+            <span class="absolute top-1.5 left-0 h-2.5 w-2.5 rounded-full bg-fg/70 ring-4 ring-ink-950 md:left-[calc(11rem-5px)]" aria-hidden="true"></span>
+            <div class="min-w-0 max-w-3xl md:pl-10">
+              <h2 id="rel-9" class="text-2xl font-medium tracking-tight">Choose your US data region</h2>
+              <ul class="mt-3 flex flex-wrap gap-2" aria-label="Topics"><li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-violet" aria-hidden="true"></span>Security</li></ul>
+              <p class="mt-5 leading-relaxed text-muted">Choose where your index, chat history and logs are stored: US East (Virginia), US Central (Iowa) or US West (Oregon). Existing workspaces can migrate from the admin panel.</p>
+            </div>
+          </article>
+          <article data-filter-item="changelog" data-tags="fixes" class="reveal relative grid gap-4 pb-14 pl-8 md:grid-cols-[11rem_minmax(0,1fr)] md:gap-0 md:pl-0" aria-labelledby="rel-10">
+            <div class="md:sticky md:top-24 md:self-start md:pr-10 md:text-right">
+              <time datetime="2026-05-21" class="block text-sm text-fg">May 21, 2026</time>
+              <p class="mt-1 font-mono text-xs text-subtle">v1.10.1</p>
+            </div>
+            <span class="absolute top-1.5 left-0 h-2.5 w-2.5 rounded-full bg-fg/70 ring-4 ring-ink-950 md:left-[calc(11rem-5px)]" aria-hidden="true"></span>
+            <div class="min-w-0 max-w-3xl md:pl-10">
+              <h2 id="rel-10" class="text-2xl font-medium tracking-tight">Fixes for the editor and briefs</h2>
+              <ul class="mt-3 flex flex-wrap gap-2" aria-label="Topics"><li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-subtle" aria-hidden="true"></span>Fixes</li></ul>
+              <p class="mt-5 leading-relaxed text-muted">Smaller fixes across the app.</p>
+              <ul class="mt-5 grid gap-2.5 text-muted">
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span>Citations no longer disappear when you undo an edit.</span></li>
+                <li class="flex gap-3"><span class="mt-2.5 h-1 w-1 shrink-0 rounded-full bg-subtle" aria-hidden="true"></span><span>Briefs scheduled for the last day of the month run on shorter months.</span></li>
+              </ul>
+            </div>
+          </article>
+        <p data-filter-empty="changelog" hidden class="rounded-2xl border border-dashed border-white/15 p-8 text-center text-muted">No releases with this topic yet.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="relative mt-auto border-t border-white/[.07] bg-ink-950">
+    <div class="container-x grid gap-12 py-16 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="inline-flex items-center gap-2.5" aria-label="Prism home">
+          <svg viewBox="0 0 32 32" class="h-7 w-7 shrink-0" aria-hidden="true"><path d="M16 3.5 28.5 26.5H16z" fill="#7cf2c8"/><path d="M16 3.5 3.5 26.5H16z" fill="#ff7eb3"/><path d="M16 3.5 16 26.5 9.75 26.5z" fill="#ffb86b" opacity=".9"/><path d="M16 3.5 22.25 26.5H16z" fill="#6fb6ff" opacity=".9"/><path d="M16 3.5 28.5 26.5h-25z" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.2" stroke-linejoin="round"/></svg>
+          <span class="text-[17px] font-semibold tracking-[-0.02em]">Prism</span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-muted">The research assistant that shows its work. Made by Prism Labs in San Jose and Salt Lake City.</p>
+        <p class="mt-6 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[.03] px-3 py-1.5 text-xs text-muted"><span class="pulse-dot h-2 w-2 rounded-full bg-brand-400 text-brand-400" aria-hidden="true"></span>All systems normal</p>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-5">
+      <nav aria-label="Product">
+        <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">Product</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="product.html" class="text-muted transition hover:text-fg">Overview</a></li>
+          <li><a href="product.html#integrations" class="text-muted transition hover:text-fg">Integrations</a></li>
+          <li><a href="product.html#security" class="text-muted transition hover:text-fg">Security</a></li>
+          <li><a href="pricing.html" class="text-muted transition hover:text-fg">Pricing</a></li>
+          <li><a href="changelog.html" class="text-muted transition hover:text-fg">Changelog</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Developers">
+        <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">Developers</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="developers.html" class="text-muted transition hover:text-fg">API overview</a></li>
+          <li><a href="developers.html#quickstart" class="text-muted transition hover:text-fg">Quickstart</a></li>
+          <li><a href="developers.html#endpoints" class="text-muted transition hover:text-fg">Endpoints</a></li>
+          <li><a href="developers.html#sdks" class="text-muted transition hover:text-fg">SDKs</a></li>
+          <li><a href="developers.html#rate-limits" class="text-muted transition hover:text-fg">Rate limits</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">Company</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="about.html" class="text-muted transition hover:text-fg">About</a></li>
+          <li><a href="about.html#careers" class="text-muted transition hover:text-fg">Careers</a></li>
+          <li><a href="contact.html" class="text-muted transition hover:text-fg">Talk to sales</a></li>
+          <li><a href="pricing.html#faq" class="text-muted transition hover:text-fg">FAQ</a></li>
+        </ul>
+      </nav>
+      </div>
+      <div class="lg:col-span-3">
+        <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">Release notes by email</h2>
+        <p class="mt-4 text-sm text-muted">One email a month with everything we shipped. No marketing.</p>
+        <form data-form="newsletter" class="mt-4" novalidate>
+          <label for="footer-email" class="sr-only">Email address</label>
+          <div class="flex gap-2">
+            <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@company.example" class="input py-2 text-sm">
+            <button type="submit" class="btn-ghost shrink-0 px-4 py-2">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="divider">
+      <div class="container-x flex flex-col gap-2 py-6 text-xs text-subtle sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Prism Labs, Inc. Prism is a fictional product.</p>
+        <p>Website template by Freeframe.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

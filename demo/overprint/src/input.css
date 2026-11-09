@@ -1,0 +1,234 @@
+/* Pomelo Press (the Overprint template) — Tailwind CSS v4 source.
+   Edit the tokens below, then rebuild with `npm run build`. */
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+/* Dark mode is a class on <html>, set before paint by the inline script in each page's <head>. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Rammetto One", "Cooper Black", "Arial Black", ui-rounded, sans-serif;
+  --font-sans: "Quicksand", ui-rounded, "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "Courier Prime", "Courier New", ui-monospace, monospace;
+
+  /* Paper. */
+  --color-paper: #f7f0e1;       /* page: uncoated cream stock */
+  --color-paper-2: #efe4cc;     /* sunken bands */
+  --color-card: #fffaf0;        /* cards, inputs, the cart */
+  --color-line: #d8c9aa;        /* hairlines */
+  --color-ink: #24202e;         /* text: riso black */
+  --color-muted: #5b5468;       /* secondary text (AA on paper, paper-2 and card) */
+
+  /* The three spot inks. Artwork prints with these and overprints with multiply. */
+  --color-pink: #ff48b0;        /* fluorescent pink */
+  --color-blue: #3255a4;        /* federal blue */
+  --color-yellow: #ffe23a;      /* yellow */
+
+  /* Ink colors dark enough for text and for text on top of them. */
+  --color-pink-text: #b8146b;   /* pink text on paper (AA) */
+  --color-blue-text: #2b4a92;   /* blue text and links on paper (AA) */
+  --color-on-blue: #fffaf0;     /* text on a blue fill */
+  --color-on-ink: #23202e;      /* text on pink or yellow fills */
+  --color-danger: #b3261e;      /* errors */
+}
+
+/* Dark mode: the same inks on dark paper. Artwork switches from multiply to screen. */
+@layer base {
+  :root.dark {
+    --color-paper: #1c1a23;
+    --color-paper-2: #24212d;
+    --color-card: #2a2734;
+    --color-line: #433f51;
+    --color-ink: #f5eddc;
+    --color-muted: #bcb3c8;
+    --color-pink: #ff5cbb;
+    --color-blue: #6f8fe8;
+    --color-yellow: #ffe14d;
+    --color-pink-text: #ff8fcf;
+    --color-blue-text: #a8bcf5;
+    --color-on-blue: #16141c;
+    --color-danger: #ff9b8f;
+    color-scheme: dark;
+  }
+}
+
+@layer base {
+  html { -webkit-tap-highlight-color: transparent; color-scheme: light; }
+  @media (prefers-reduced-motion: no-preference) {
+    html:focus-within { scroll-behavior: smooth; }
+  }
+  body { @apply bg-paper font-sans text-[1.0625rem] leading-relaxed font-medium text-ink antialiased; }
+  ::selection { background: var(--color-yellow); color: #23202e; }
+  :focus-visible { outline: 3px solid var(--color-blue); outline-offset: 3px; border-radius: 4px; }
+  .on-blue :focus-visible { outline-color: currentColor; }
+  [id] { scroll-margin-top: 6rem; }
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  [hidden] { display: none !important; }
+  input[type="date"] { color-scheme: inherit; }
+  :root.dark input[type="date"] { color-scheme: dark; }
+
+  /* Paper grain over everything: an SVG noise tile, printed on top like real stock. */
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: 100; pointer-events: none; opacity: .14; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .3 0 0 0 0 .25 0 0 0 0 .2 0 0 0 .9 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  :root.dark body::before { mix-blend-mode: screen; opacity: .06; }
+  @media print { body::before { display: none; } }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-[80rem] px-5 sm:px-8 lg:px-10; }
+
+  /* Type. */
+  .h-display { @apply font-display text-[clamp(2.6rem,8.4vw,6.6rem)] leading-[0.98] tracking-[-0.01em]; }
+  .h-page { @apply font-display text-[clamp(2.3rem,6.4vw,4.75rem)] leading-[1.02]; }
+  .h-section { @apply font-display text-[clamp(1.7rem,3.6vw,2.6rem)] leading-[1.1]; }
+  .h-card { @apply font-display text-xl leading-snug; }
+  .lead { @apply text-lg leading-relaxed sm:text-xl; }
+  .stamp { @apply font-mono text-[0.82rem] font-bold tracking-[0.06em] uppercase; }
+
+  /* Misregistered headline: a pink plate printed a touch off the blue one. */
+  .misreg { @apply relative isolate text-blue-text; }
+  .misreg::after {
+    content: attr(data-ink) / ""; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+    color: var(--color-pink); mix-blend-mode: multiply; transform: translate(0.045em, 0.035em);
+  }
+  :root.dark .misreg::after { mix-blend-mode: screen; opacity: .8; }
+
+  /* Links. */
+  .link { @apply font-bold text-blue-text underline decoration-pink decoration-2 underline-offset-[0.22em] transition hover:decoration-blue-text; }
+
+  /* Buttons: rounded pills with a misregistered ink shadow. */
+  .btn { @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full border-2 border-ink px-6 py-2.5 text-center text-base font-bold transition select-none; }
+  .btn:disabled { @apply cursor-not-allowed opacity-50; }
+  .btn-blue { @apply bg-blue text-on-blue shadow-[4px_4px_0_var(--color-pink)] hover:-translate-y-0.5 hover:shadow-[5px_6px_0_var(--color-pink)]; }
+  .btn-pink { @apply bg-pink text-on-ink shadow-[4px_4px_0_var(--color-blue)] hover:-translate-y-0.5 hover:shadow-[5px_6px_0_var(--color-blue)]; }
+  .btn-line { @apply bg-card text-ink hover:bg-yellow hover:text-on-ink; }
+  .btn-sm { @apply min-h-10 px-4 py-1.5 text-sm; }
+
+  /* Navigation. */
+  .nav-link { @apply relative inline-flex min-h-11 items-center rounded-full px-3.5 text-[0.98rem] font-bold text-ink transition hover:bg-yellow hover:text-on-ink; }
+  .nav-link[aria-current="page"] { @apply bg-pink text-on-ink; }
+  .mnav-link { @apply flex min-h-14 items-center justify-between border-b-2 border-dashed border-line font-display text-[1.7rem]; }
+  .mnav-link[aria-current="page"] { @apply text-pink-text; }
+  .icon-btn { @apply relative grid size-11 shrink-0 place-items-center rounded-full border-2 border-ink bg-card text-ink transition hover:bg-yellow hover:text-on-ink; }
+
+  /* Stickers and tags. */
+  .sticker { @apply inline-flex items-center gap-1.5 rounded-full border-2 border-ink bg-yellow px-3 py-1 font-mono text-[0.78rem] font-bold tracking-wide text-on-ink uppercase shadow-[2px_2px_0_var(--color-pink)]; }
+  .tag { @apply inline-flex items-center rounded-full border border-ink/40 px-2.5 py-0.5 font-mono text-[0.78rem] font-bold tracking-wide uppercase; }
+
+  /* Cards with a torn-edge drop of ink. */
+  .card { @apply rounded-[1.25rem] border-2 border-ink bg-card; }
+  .art { @apply relative block overflow-hidden rounded-xl border-2 border-ink bg-paper; }
+  .art > svg { @apply block h-full w-full; }
+
+  /* Filter chips. */
+  .chip { @apply inline-flex min-h-11 items-center gap-2 rounded-full border-2 border-ink bg-card px-4 text-[0.95rem] font-bold text-ink transition hover:bg-yellow hover:text-on-ink; }
+  .chip[aria-pressed="true"], .chip[aria-selected="true"] { @apply bg-blue text-on-blue shadow-[3px_3px_0_var(--color-pink)]; }
+  .chip[aria-pressed="true"]:hover, .chip[aria-selected="true"]:hover { @apply bg-blue text-on-blue; }
+  .chip .count { @apply rounded-full bg-paper px-2 font-mono text-xs text-ink; }
+
+  /* Option cards (radios styled as tiles). */
+  .option { @apply relative flex h-full cursor-pointer flex-col gap-1 rounded-2xl border-2 border-ink/30 bg-card p-4 transition hover:border-ink; }
+  .option:has(input:checked) { @apply border-ink bg-yellow text-on-ink shadow-[4px_4px_0_var(--color-pink)]; }
+  .option:has(input:checked) .text-muted { @apply text-on-ink/80; }
+  .option:has(input:focus-visible) { outline: 3px solid var(--color-blue); outline-offset: 3px; }
+  .option:has(input:disabled) { @apply cursor-not-allowed opacity-60; }
+  .option input, .pill input { @apply sr-only; }
+  .pill { @apply relative inline-flex min-h-11 cursor-pointer items-center gap-2 rounded-full border-2 border-ink/30 bg-card px-3.5 text-sm font-bold transition hover:border-ink; }
+  .pill:has(input:checked) { @apply border-ink bg-yellow text-on-ink; }
+  .pill:has(input:checked) .text-muted { @apply text-on-ink/80; }
+  .pill:has(input:focus-visible) { outline: 3px solid var(--color-blue); outline-offset: 3px; }
+  .pill:has(input:disabled) { @apply cursor-not-allowed border-dashed line-through decoration-1 opacity-70 hover:border-ink/30; }
+
+  /* Forms. */
+  .label { @apply mb-1.5 block text-[0.98rem] font-bold text-ink; }
+  .hint { @apply mt-1.5 text-[0.95rem] text-muted; }
+  .input { @apply block min-h-12 w-full rounded-xl border-2 border-ink/40 bg-card px-3.5 py-2.5 text-base font-semibold text-ink transition placeholder:font-medium placeholder:text-muted focus:border-ink focus:outline-none; }
+  .input:focus-visible { outline: 3px solid var(--color-blue); outline-offset: 2px; }
+  .input[aria-invalid="true"] { @apply border-danger; }
+  textarea.input { @apply min-h-36; }
+  select.input { @apply cursor-pointer appearance-none pr-10; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='m5 8 5 5 5-5' fill='none' stroke='%23888' stroke-width='2'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right .85rem center; background-size: 1rem; }
+  .check { @apply mt-1 size-5 shrink-0 cursor-pointer accent-blue; }
+  .field-error { @apply mt-1.5 text-[0.95rem] font-bold text-danger; }
+  .field-error:empty { display: none; }
+
+  /* Quantity stepper. */
+  .qty { @apply inline-flex items-center rounded-full border-2 border-ink bg-card; }
+  .qty button { @apply grid size-10 place-items-center rounded-full text-lg font-bold hover:bg-yellow hover:text-on-ink disabled:opacity-40 disabled:hover:bg-transparent; }
+  .qty output { @apply min-w-8 text-center font-mono font-bold; }
+
+  /* Halftone dot fields for backgrounds. */
+  .halftone-pink { background-image: radial-gradient(var(--color-pink) 1.6px, transparent 1.9px); background-size: 9px 9px; }
+  .halftone-blue { background-image: radial-gradient(var(--color-blue) 1.6px, transparent 1.9px); background-size: 9px 9px; }
+  .halftone-yellow { background-image: radial-gradient(var(--color-yellow) 2px, transparent 2.3px); background-size: 9px 9px; }
+
+  /* Ink blobs used as section decoration. */
+  .blend { mix-blend-mode: multiply; }
+  :root.dark .blend { mix-blend-mode: screen; }
+
+  /* Wavy cut at the bottom of a band, like a torn sheet. */
+  .torn { clip-path: polygon(0 0, 100% 0, 100% 94%, 96% 100%, 91% 95%, 85% 100%, 79% 96%, 72% 100%, 66% 95%, 59% 100%, 52% 96%, 45% 100%, 38% 95%, 31% 100%, 24% 96%, 17% 100%, 10% 95%, 4% 100%, 0 96%); }
+
+  /* Cart drawer. */
+  .drawer { @apply fixed inset-y-0 right-0 left-auto m-0 h-dvh max-h-none w-full max-w-md border-l-2 border-ink bg-card p-0 text-ink; }
+  .drawer::backdrop { background: rgb(36 32 46 / .55); }
+
+  /* Toast. */
+  .toast { @apply pointer-events-none fixed bottom-5 left-1/2 z-[90] max-w-[calc(100%-2rem)] -translate-x-1/2 translate-y-4 rounded-full border-2 border-ink bg-yellow px-5 py-3 text-center text-sm font-bold text-on-ink opacity-0 shadow-[4px_4px_0_var(--color-pink)] transition duration-300; }
+  .toast.is-visible { @apply translate-y-0 opacity-100; }
+
+  /* Back to top. */
+  .back-to-top {
+    position: fixed; z-index: 40;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px) + var(--btt-lift, 0px));
+    display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; cursor: pointer;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, bottom .25s ease, visibility 0s linear .25s, background-color .2s, color .2s;
+    border: 2px solid var(--color-ink); border-radius: 999px;
+    background: var(--color-blue); color: var(--color-on-blue);
+    box-shadow: 3px 3px 0 var(--color-pink);
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; transition: transform .2s ease; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top.is-visible:hover { background: var(--color-pink); color: var(--color-on-ink); }
+  .back-to-top.is-visible:hover svg { transform: translateY(-2px); }
+  .back-to-top:focus-visible { outline: 3px solid var(--color-blue); outline-offset: 3px; }
+  .back-to-top-target:focus { outline: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top, .back-to-top svg { transition: opacity .01s linear, visibility 0s linear; transform: none !important; }
+  }
+  @media print { .back-to-top { display: none !important; } }
+}
+
+@layer utilities {
+  /* Artwork plates: multiply on cream paper, screen on dark paper. */
+  .plate { mix-blend-mode: multiply; }
+  :root.dark .plate { mix-blend-mode: screen; }
+  .plate[data-off] { display: none; }
+
+  /* The sketch stage: every plate drawn as a graphite line. */
+  .is-sketch .plate { mix-blend-mode: normal; transform: none; }
+  .is-sketch .plate * { fill: none !important; stroke: var(--color-muted) !important; stroke-width: 1.6px !important; stroke-dasharray: none; }
+  .is-sketch .paper-fill { fill: var(--color-card) !important; stroke: none !important; }
+
+  /* Scroll reveal: only when JavaScript runs and motion is allowed. */
+  @media (prefers-reduced-motion: no-preference) {
+    .js .reveal { opacity: 0; transform: translateY(16px) rotate(-.4deg); transition: opacity .6s ease, transform .6s cubic-bezier(.2, .8, .2, 1); }
+    .js .reveal.is-visible { opacity: 1; transform: none; }
+    .wobble { transition: transform .35s cubic-bezier(.34, 1.5, .64, 1); }
+    .group:hover .wobble, .group:focus-visible .wobble { transform: rotate(-1.5deg) scale(1.02); }
+    .group:hover .plate-shift, .group:focus-visible .plate-shift { transform: translate(3px, -2px); transition: transform .3s ease; }
+    .spin-slow { animation: spin 26s linear infinite; }
+    .badge-pop { animation: pop .45s cubic-bezier(.34, 1.6, .64, 1); }
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  @keyframes pop { 40% { transform: scale(1.35); } }
+}

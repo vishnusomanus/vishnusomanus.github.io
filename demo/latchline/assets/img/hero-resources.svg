@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 380" width="560" height="380">
+  <defs>
+    <pattern id="d" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1.3" fill="#0c1427" fill-opacity=".13"/></pattern>
+    <filter id="s" x="-15%" y="-15%" width="130%" height="140%"><feDropShadow dx="0" dy="6" stdDeviation="7" flood-color="#0c1427" flood-opacity=".15"/></filter>
+  </defs>
+  <rect x="8" y="8" width="544" height="364" rx="28" fill="#e6eaf1"/>
+  <rect x="8" y="8" width="544" height="364" rx="28" fill="url(#d)"/>
+  <!-- shelf -->
+  <path d="M50 300h460" stroke="#0c1427" stroke-width="4" stroke-linecap="round"/>
+  <g filter="url(#s)">
+    <rect x="70" y="120" width="44" height="180" rx="5" fill="#1f45d6"/>
+    <rect x="118" y="146" width="36" height="154" rx="5" fill="#ffcf3f"/>
+    <rect x="158" y="104" width="48" height="196" rx="5" fill="#0c1427"/>
+    <rect x="210" y="160" width="34" height="140" rx="5" fill="#186b48"/>
+    <rect x="252" y="132" width="40" height="168" rx="5" fill="#fff" stroke="#0c1427" stroke-width="2"/>
+  </g>
+  <path d="M80 140h24M80 152h24M168 124h28M262 150h20M262 162h20" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M262 150h20M262 162h20" stroke="#98a2b5"/>
+  <!-- leaning checklist -->
+  <g transform="rotate(14 330 220)" filter="url(#s)">
+    <rect x="300" y="140" width="96" height="160" rx="8" fill="#d6f0e2" stroke="#0c1427" stroke-width="2"/>
+    <path d="m314 172 6 6 10-12M314 206l6 6 10-12M314 240l6 6 10-12" fill="none" stroke="#186b48" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M340 172h40M340 206h40M340 240h30" stroke="#0c1427" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <!-- recording tile -->
+  <g filter="url(#s)">
+    <rect x="390" y="60" width="140" height="96" rx="14" fill="#fde3dc" stroke="#0c1427" stroke-width="2"/>
+    <circle cx="460" cy="108" r="26" fill="#b83218"/><path d="m452 96 18 12-18 12z" fill="#fff"/>
+  </g>
+  <!-- benchmark card -->
+  <g filter="url(#s)">
+    <rect x="420" y="176" width="110" height="112" rx="12" fill="#fff" stroke="#0c1427" stroke-width="2"/>
+    <path d="M440 266v-20M462 266v-42M484 266v-30M506 266v-56" stroke="#1f45d6" stroke-width="10" stroke-linecap="round"/>
+  </g>
+  <circle cx="110" cy="70" r="26" fill="#ffcf3f" stroke="#0c1427" stroke-width="2"/>
+  <path d="M110 56v14l9 6" fill="none" stroke="#0c1427" stroke-width="3" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mosaic | Community arts center in Holyoke, Massachusetts</title>
+  <meta name="description" content="Mosaic is a community arts center on Race Street, Holyoke: printmaking, ceramics, music, film, family making and free exhibitions. Most sessions need no experience.">
+  <meta name="theme-color" content="#f8f1e4">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Mosaic">
+  <meta property="og:title" content="Mosaic | Community arts center in Holyoke, Massachusetts">
+  <meta property="og:description" content="Mosaic is a community arts center on Race Street, Holyoke: printmaking, ceramics, music, film, family making and free exhibitions. Most sessions need no experience.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&amp;family=Epilogue:ital,wght@0,400..800;1,400..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm font-bold text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <div class="bg-ink text-white">
+    <div class="container-x flex min-h-10 items-center justify-between gap-4 py-2 text-[13px]">
+      <p class="flex items-center gap-2 font-semibold"><span data-open-dot class="size-2 rounded-full bg-leaf" aria-hidden="true"></span><span data-open-status>Open Tuesday to Sunday</span></p>
+      <p class="hidden items-center gap-5 text-white/85 md:flex"><span>The Old Dyeworks, Race Street, Holyoke</span><a href="visit.html" class="font-bold text-ochre underline-offset-4 hover:underline">First time? Plan your visit</a></p>
+    </div>
+  </div>
+  <header id="site-header" class="sticky top-0 z-40 bg-paper/95 backdrop-blur transition-shadow duration-300">
+    <div class="container-x flex h-20 items-center justify-between gap-4">
+      <a href="index.html" class="group inline-flex items-center gap-3" aria-current="page">
+        <svg viewBox="0 0 44 44" class="size-11 shrink-0 transition-transform duration-500 group-hover:rotate-[-6deg]" aria-hidden="true"><rect x="2" y="2" width="19" height="19" rx="3" fill="#5b34a8"/><circle cx="11.5" cy="11.5" r="5.5" fill="#f3b23a"/><path d="M23 2h19v19A19 19 0 0 1 23 2z" fill="#e0532f"/><path d="M2 23h19v19z" fill="#17685a"/><rect x="25" y="25" width="15" height="15" rx="2" transform="rotate(12 32.5 32.5)" fill="#f2a7bf"/></svg>
+        <span class="leading-none"><span class="block font-display text-[1.75rem] leading-none">mosaic</span><span class="mt-1 hidden whitespace-nowrap text-[10px] sm:block font-extrabold uppercase tracking-[0.2em] text-vermilion-dark">Arts center · Holyoke</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-0.5"><li><a href="whats-on.html" class="nav-link">What’s on</a></li><li><a href="workshops.html" class="nav-link">Workshops</a></li><li><a href="hire.html" class="nav-link">Rent a space</a></li><li><a href="get-involved.html" class="nav-link">Get involved</a></li><li><a href="about.html" class="nav-link">Our story</a></li><li><a href="visit.html" class="nav-link">Visit</a></li></ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="whats-on.html?saved=1" class="inline-flex items-center gap-2 rounded-full border-2 border-ink/15 bg-card px-3 py-2 text-sm font-bold transition hover:border-violet" aria-label="Saved: 0 events"><svg viewBox="0 0 20 20" class="size-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h10v14l-5-3.5L5 17z"/></svg><span class="hidden sm:inline">Saved</span> <span data-saved-count class="grid min-w-6 place-items-center rounded-full bg-ochre px-1.5 text-xs font-extrabold text-ink">0</span></a>
+        <button id="menu-toggle" type="button" class="grid size-11 place-items-center rounded-xl bg-ink text-white lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t-2 border-ink bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul><li><a href="whats-on.html" class="flex items-center justify-between border-b-2 border-dashed border-line py-4 font-display text-3xl aria-[current=page]:text-violet">What’s on<span aria-hidden="true" class="text-vermilion"><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></li><li><a href="workshops.html" class="flex items-center justify-between border-b-2 border-dashed border-line py-4 font-display text-3xl aria-[current=page]:text-violet">Workshops<span aria-hidden="true" class="text-vermilion"><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></li><li><a href="hire.html" class="flex items-center justify-between border-b-2 border-dashed border-line py-4 font-display text-3xl aria-[current=page]:text-violet">Rent a space<span aria-hidden="true" class="text-vermilion"><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></li><li><a href="get-involved.html" class="flex items-center justify-between border-b-2 border-dashed border-line py-4 font-display text-3xl aria-[current=page]:text-violet">Get involved<span aria-hidden="true" class="text-vermilion"><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></li><li><a href="about.html" class="flex items-center justify-between border-b-2 border-dashed border-line py-4 font-display text-3xl aria-[current=page]:text-violet">Our story<span aria-hidden="true" class="text-vermilion"><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></li><li><a href="visit.html" class="flex items-center justify-between border-b-2 border-dashed border-line py-4 font-display text-3xl aria-[current=page]:text-violet">Visit<span aria-hidden="true" class="text-vermilion"><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></li></ul>
+        <p class="mt-6 text-sm text-muted">The Old Dyeworks, Race Street, Holyoke · <a href="tel:+14135550173" class="font-bold text-ink">(413) 555-0173</a></p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+
+    <section class="relative overflow-hidden">
+      <div class="container-x grid items-center gap-12 pb-16 pt-10 lg:grid-cols-[1.05fr_1fr] lg:pb-24 lg:pt-14">
+        <div>
+          <p class="eyebrow reveal">Community arts center · Holyoke</p>
+          <h1 class="h-display reveal mt-5 text-[3.1rem] sm:text-7xl lg:text-[5.4rem]">Make something. <span class="relative inline-block text-violet">Meet someone<svg viewBox="0 0 300 20" class="absolute -bottom-2 left-0 h-3 w-full text-ochre" preserveAspectRatio="none" aria-hidden="true"><path d="M4 14c60-10 140-14 292-6" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round"/></svg></span>.</h1>
+          <p class="reveal mt-7 max-w-xl text-lg leading-relaxed text-ink/80 sm:text-xl">Printmaking, pottery, a choir that never auditions, film nights and free exhibitions, all under one roof in an old dye works on Race Street. Come on your own; most people do.</p>
+          <div class="reveal mt-8 flex flex-wrap gap-3">
+            <a href="whats-on.html" class="btn-primary">See what’s on <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+            <a href="visit.html" class="btn-outline">Plan your first visit</a>
+          </div>
+          <ul class="reveal mt-10 grid max-w-xl grid-cols-3 gap-3 text-sm">
+            <li class="rounded-2xl bg-card p-4 shadow-paper ring-1 ring-line"><span class="block font-display text-3xl text-vermilion-dark">17</span>regular sessions</li>
+            <li class="rounded-2xl bg-card p-4 shadow-paper ring-1 ring-line"><span class="block font-display text-3xl text-teal">Free</span>gallery, every day we’re open</li>
+            <li class="rounded-2xl bg-card p-4 shadow-paper ring-1 ring-line"><span class="block font-display text-3xl text-violet">$0+</span>pay-what-you-can spots</li>
+          </ul>
+        </div>
+        <div class="reveal relative mx-auto w-full max-w-xl">
+          <img src="assets/img/hero.svg" alt="Cut-paper collage: two people in front of an arched window looking out at the City Hall tower and the hills beyond, surrounded by a pot, a lino print, a record and bunting" width="640" height="600" class="h-auto w-full">
+          <a href="whats-on.html?price=pwyc" class="absolute -bottom-3 left-2 grid size-32 rotate-[-8deg] place-items-center rounded-full bg-vermilion-dark p-3 text-center text-white shadow-lift transition hover:rotate-0 sm:-left-4 sm:size-36">
+            <span class="leading-tight"><span class="block font-display text-2xl">Pay what you can</span><span class="mt-1 block text-xs font-bold">at three sessions</span></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="bg-ink py-5 text-white">
+      <ul class="container-x flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-display text-xl sm:text-2xl" aria-label="At Mosaic">
+        <li>Print</li><li aria-hidden="true" class="size-3 rotate-12 rounded-sm bg-vermilion"></li>
+        <li>Clay</li><li aria-hidden="true" class="size-3 rounded-full bg-ochre"></li>
+        <li>Stitch</li><li aria-hidden="true" class="size-3 rotate-45 bg-rose"></li>
+        <li>Sing</li><li aria-hidden="true" class="size-3 rounded-sm bg-lilac"></li>
+        <li>Watch</li><li aria-hidden="true" class="size-3 rounded-full bg-sky"></li>
+        <li>Mend</li><li aria-hidden="true" class="size-3 rotate-12 bg-leaf"></li>
+        <li>Belong</li>
+      </ul>
+    </div>
+
+    <section class="container-x mt-20 sm:mt-24" aria-labelledby="week-title">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <div>
+          <p class="eyebrow reveal">Coming up</p>
+          <h2 id="week-title" class="h-section reveal mt-4">This week at Mosaic</h2>
+          <p class="reveal mt-3 max-w-xl text-muted">The next few sessions, worked out from today. Save anything you like and find it again under <strong class="text-ink">Saved</strong>.</p>
+        </div>
+        <a href="whats-on.html" class="btn-outline reveal">The full program <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </div>
+      <div id="home-week" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <p class="text-muted">See <a href="whats-on.html" class="link">what’s on</a> for every upcoming date.</p>
+      </div>
+    </section>
+
+    <section class="container-x mt-24 sm:mt-28" aria-labelledby="cats-title">
+      <p class="eyebrow reveal">Find your thing</p>
+      <h2 id="cats-title" class="h-section reveal mt-4 max-w-2xl">Eight ways in, and no experience needed for any of them</h2>
+      <ul class="mt-10 grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4">
+        <li class="reveal tilt-l">
+          <a href="whats-on.html?cat=print" class="group block overflow-hidden rounded-[1.4rem] bg-card shadow-paper ring-1 ring-line transition hover:-translate-y-1 hover:shadow-lift">
+            <div class="art aspect-[4/3] overflow-hidden" data-art="print" data-variant="0"></div>
+            <div class="p-4 sm:p-5">
+              <h3 class="text-lg font-extrabold leading-snug group-hover:text-violet">Print & drawing</h3>
+              <p class="mt-1 text-sm text-muted">Lino, zines and life drawing</p>
+              <p class="mt-2 text-xs font-bold text-ink" data-cat-count="print"></p>
+            </div>
+          </a>
+        </li>
+        <li class="reveal tilt-r">
+          <a href="whats-on.html?cat=clay" class="group block overflow-hidden rounded-[1.4rem] bg-card shadow-paper ring-1 ring-line transition hover:-translate-y-1 hover:shadow-lift">
+            <div class="art aspect-[4/3] overflow-hidden" data-art="clay" data-variant="1"></div>
+            <div class="p-4 sm:p-5">
+              <h3 class="text-lg font-extrabold leading-snug group-hover:text-violet">Ceramics</h3>
+              <p class="mt-1 text-sm text-muted">Hand-building and the wheel</p>
+              <p class="mt-2 text-xs font-bold text-ink" data-cat-count="clay"></p>
+            </div>
+          </a>
+        </li>
+        <li class="reveal ">
+          <a href="whats-on.html?cat=textile" class="group block overflow-hidden rounded-[1.4rem] bg-card shadow-paper ring-1 ring-line transition hover:-translate-y-1 hover:shadow-lift">
+            <div class="art aspect-[4/3] overflow-hidden" data-art="textile" data-variant="0"></div>
+            <div class="p-4 sm:p-5">
+              <h3 class="text-lg font-extrabold leading-snug group-hover:text-violet">Textiles</h3>
+              <p class="mt-1 text-sm text-muted">Mending, stitching and dyeing</p>
+              <p class="mt-2 text-xs font-bold text-ink" data-cat-count="textile"></p>
+            </div>
+          </a>
+        </li>
+        <li class="reveal tilt-l">
+          <a href="whats-on.html?cat=music" class="group block overflow-hidden rounded-[1.4rem] bg-card shadow-paper ring-1 ring-line transition hover:-translate-y-1 hover:shadow-lift">
+            <div class="art aspect-[4/3] overflow-hidden" data-art="music" data-variant="1"></div>
+            <div class="p-4 sm:p-5">
+              <h3 class="text-lg font-extrabold leading-snug group-hover:text-violet">Music & words</h3>
+              <p class="mt-1 text-sm text-muted">Choir, folk, gigs and open mic</p>
+              <p class="mt-2 text-xs font-bold text-ink" data-cat-count="music"></p>
+            </div>
+          </a>
+        </li>
+        <li class="reveal tilt-r">
+          <a href="whats-on.html?cat=family" class="group block overflow-hidden rounded-[1.4rem] bg-card shadow-paper ring-1 ring-line transition hover:-translate-y-1 hover:shadow-lift">
+            <div class="art aspect-[4/3] overflow-hidden" data-art="family" data-variant="0"></div>
+            <div class="p-4 sm:p-5">
+              <h3 class="text-lg font-extrabold leading-snug group-hover:text-violet">Family</h3>
+              <p class="mt-1 text-sm text-muted">Saturday Makers and messy play</p>
+              <p class="mt-2 text-xs font-bold text-ink" data-cat-count="family"></p>
+            </div>
+          </a>
+        </li>
+        <li class="reveal ">
+          <a href="whats-on.html?cat=exhibition" class="group block overflow-hidden rounded-[1.4rem] bg-card shadow-paper ring-1 ring-line transition hover:-translate-y-1 hover:shadow-lift">
+            <div class="art aspect-[4/3] overflow-hidden" data-art="exhibition" data-variant="1"></div>
+            <div class="p-4 sm:p-5">
+              <h3 class="text-lg font-extrabold leading-snug group-hover:text-violet">Exhibitions</h3>
+              <p class="mt-1 text-sm text-muted">Free, in the Foyer Gallery</p>
+              <p class="mt-2 text-xs font-bold text-ink" data-cat-count="exhibition"></p>
+            </div>
+          </a>
+        </li>
+        <li class="reveal tilt-r">
+          <a href="whats-on.html?cat=film" class="group block overflow-hidden rounded-[1.4rem] bg-card shadow-paper ring-1 ring-line transition hover:-translate-y-1 hover:shadow-lift">
+            <div class="art aspect-[4/3] overflow-hidden" data-art="film" data-variant="0"></div>
+            <div class="p-4 sm:p-5">
+              <h3 class="text-lg font-extrabold leading-snug group-hover:text-violet">Film</h3>
+              <p class="mt-1 text-sm text-muted">Film club and family matinees</p>
+              <p class="mt-2 text-xs font-bold text-ink" data-cat-count="film"></p>
+            </div>
+          </a>
+        </li>
+        <li class="reveal tilt-l">
+          <a href="whats-on.html?cat=studio" class="group block overflow-hidden rounded-[1.4rem] bg-card shadow-paper ring-1 ring-line transition hover:-translate-y-1 hover:shadow-lift">
+            <div class="art aspect-[4/3] overflow-hidden" data-art="studio" data-variant="1"></div>
+            <div class="p-4 sm:p-5">
+              <h3 class="text-lg font-extrabold leading-snug group-hover:text-violet">Open studios & socials</h3>
+              <p class="mt-1 text-sm text-muted">Repair café and open days</p>
+              <p class="mt-2 text-xs font-bold text-ink" data-cat-count="studio"></p>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="home-gallery" class="mt-28 bg-teal text-white" aria-labelledby="gallery-title">
+      <div class="container-x grid items-center gap-10 py-16 lg:grid-cols-2 lg:py-20">
+        <div class="reveal tilt-l overflow-hidden rounded-[1.4rem] bg-card p-3 shadow-lift">
+          <div class="art aspect-[4/3] overflow-hidden rounded-xl" data-gal-art data-art="tide-lines" data-variant="1"></div>
+        </div>
+        <div class="on-dark">
+          <p class="eyebrow">In the Foyer Gallery</p>
+          <h2 id="gallery-title" class="h-section mt-4"><a data-gal-title href="event.html?id=tide-lines" class="underline decoration-ochre decoration-4 underline-offset-[6px] hover:decoration-white">River Lines: prints of the Connecticut</a></h2>
+          <p data-gal-when class="mt-4 inline-flex rounded-full bg-white/15 px-4 py-1.5 text-sm font-bold">Free entry, Tuesday to Sunday</p>
+          <p data-gal-summary class="mt-5 max-w-xl text-lg leading-relaxed text-white/90">Maud Kosinski’s large linocuts follow the Connecticut River past Holyoke, from the Hadley Falls dam to the three levels of the city’s canals.</p>
+          <p data-gal-next class="mt-4 text-sm text-white/80"></p>
+          <a href="whats-on.html?cat=exhibition" class="btn-light mt-8">All exhibitions <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-x mt-24 sm:mt-28" aria-labelledby="how-title">
+      <div class="grid gap-12 lg:grid-cols-[1fr_1.3fr] lg:items-center">
+        <div>
+          <p class="eyebrow reveal">How it works</p>
+          <h2 id="how-title" class="h-section reveal mt-4">Show up, try it, come back if you like it</h2>
+          <p class="reveal mt-5 max-w-lg text-lg leading-relaxed text-ink/80">You don’t need to be “arty”, bring gear or know anyone. Book the classes that have limited spots, drop in to the rest, and ask at the welcome desk if anything is unclear.</p>
+        </div>
+        <ol class="grid gap-5 sm:grid-cols-3">
+          <li class="reveal tilt-l rounded-[1.4rem] bg-blush p-6"><span class="font-display text-5xl text-vermilion-dark">1</span><h3 class="mt-3 text-lg font-extrabold">Pick a session</h3><p class="mt-2 text-sm leading-relaxed text-ink/80">Filter the program by what you like, who it’s for and what it costs.</p></li>
+          <li class="reveal tilt-r rounded-[1.4rem] bg-ochre-light p-6"><span class="font-display text-5xl text-ochre-dark">2</span><h3 class="mt-3 text-lg font-extrabold">Book or drop in</h3><p class="mt-2 text-sm leading-relaxed text-ink/80">Classes have small groups, so book ahead. Socials and the gallery are drop-in.</p></li>
+          <li class="reveal tilt-l rounded-[1.4rem] bg-lilac p-6"><span class="font-display text-5xl text-violet">3</span><h3 class="mt-3 text-lg font-extrabold">Pay what’s fair</h3><p class="mt-2 text-sm leading-relaxed text-ink/80">Three regular sessions are pay what you can, and we keep supported spots in every class.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="container-x mt-24 sm:mt-28" aria-labelledby="quote-title">
+      <div class="reveal relative overflow-hidden rounded-[2rem] bg-violet px-7 py-12 text-white sm:px-14 sm:py-16">
+        <svg viewBox="0 0 200 200" class="pointer-events-none absolute -right-10 -top-10 size-64 opacity-90" aria-hidden="true"><rect x="20" y="20" width="70" height="70" rx="8" fill="#f3b23a" transform="rotate(14 55 55)"/><circle cx="140" cy="60" r="34" fill="#e0532f"/><path d="M100 110h80v80z" fill="#f2a7bf"/></svg>
+        <h2 id="quote-title" class="sr-only">Why Mosaic exists</h2>
+        <blockquote class="relative max-w-3xl">
+          <p class="font-display text-3xl leading-tight sm:text-5xl">“You don’t have to be an artist to have a creative life. You just need somewhere to start.”</p>
+          <footer class="mt-6 text-white/85"><strong class="text-white">Yesenia Rigg</strong>, director, who has been making the coffee here since the first open day</footer>
+        </blockquote>
+        <dl class="relative mt-12 grid max-w-3xl grid-cols-2 gap-6 sm:grid-cols-4">
+          <div><dt class="text-sm text-white/80">Visits last year</dt><dd class="font-display text-4xl">41,200</dd></div>
+          <div><dt class="text-sm text-white/80">Volunteers</dt><dd class="font-display text-4xl">86</dd></div>
+          <div><dt class="text-sm text-white/80">Friends</dt><dd class="font-display text-4xl">640</dd></div>
+          <div><dt class="text-sm text-white/80">Coffee pots</dt><dd class="font-display text-4xl">3</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="container-x mt-24 grid gap-6 sm:mt-28 lg:grid-cols-2" aria-label="Get involved and rent">
+      <article class="reveal card relative grid overflow-hidden sm:grid-cols-[1fr_12rem]">
+        <div class="p-7 sm:p-9">
+          <p class="eyebrow">Get involved</p>
+          <h2 class="mt-3 font-display text-3xl leading-tight">Lend a hand, share a skill</h2>
+          <p class="mt-3 leading-relaxed text-muted">Welcome the Saturday crowd, host the gallery, fix toasters at the repair café or teach the thing you’re good at.</p>
+          <a href="get-involved.html" class="btn-primary mt-6">Ways to join in <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </div>
+        <div class="art hidden sm:block" data-art="studio" data-variant="1"></div>
+      </article>
+      <article class="reveal card relative grid overflow-hidden sm:grid-cols-[1fr_12rem]">
+        <div class="p-7 sm:p-9">
+          <p class="eyebrow">Rent a space</p>
+          <h2 class="mt-3 font-display text-3xl leading-tight">Rooms for meetings, makers and parties</h2>
+          <p class="mt-3 leading-relaxed text-muted">From the ten-seat Snug to the whole ground floor, with 30% off for community groups and nonprofits.</p>
+          <a href="hire.html" class="btn-warm mt-6">Get an estimate <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        </div>
+        <div class="art hidden sm:block" data-art="music" data-variant="0"></div>
+      </article>
+    </section>
+
+  </main>
+
+  <footer class="torn-top mt-28 bg-ink text-white">
+    <div class="container-x grid gap-12 pb-12 pt-16 lg:grid-cols-12">
+      <div class="lg:col-span-5">
+        <a href="index.html" class="group inline-flex items-center gap-3">
+          <svg viewBox="0 0 44 44" class="size-11 shrink-0 transition-transform duration-500 group-hover:rotate-[-6deg]" aria-hidden="true"><rect x="2" y="2" width="19" height="19" rx="3" fill="#5b34a8"/><circle cx="11.5" cy="11.5" r="5.5" fill="#f3b23a"/><path d="M23 2h19v19A19 19 0 0 1 23 2z" fill="#e0532f"/><path d="M2 23h19v19z" fill="#17685a"/><rect x="25" y="25" width="15" height="15" rx="2" transform="rotate(12 32.5 32.5)" fill="#f2a7bf"/></svg>
+          <span class="font-display text-[1.75rem] leading-none text-white">mosaic</span>
+        </a>
+        <p class="mt-5 max-w-sm leading-relaxed text-white/80">A community arts center in an old dye works on Race Street. Classes, gigs, films, exhibitions and a coffee pot that is always on.</p>
+        <form data-simple-form class="mt-7 max-w-md" novalidate>
+          <label for="nl-email" class="text-sm font-bold text-white">Get the Mosaic monthly in your inbox</label>
+          <div class="mt-2 flex flex-col gap-2 sm:flex-row">
+            <input id="nl-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com" class="field border-white/30 bg-white/10 text-white placeholder:text-white/60 focus:border-ochre" aria-describedby="nl-email-error">
+            <button type="submit" class="btn-warm shrink-0">Sign up</button>
+          </div>
+          <p id="nl-email-error" data-error="nl-email" class="mt-1.5 text-sm font-semibold text-[#ffc2b0]"></p>
+        </form>
+      </div>
+      <nav aria-label="Explore" class="lg:col-span-2">
+        <h2 class="text-xs font-extrabold uppercase tracking-[0.18em] text-ochre">Explore</h2>
+        <ul class="mt-4 space-y-2.5 text-[15px] text-white/90">
+          <li><a href="whats-on.html" class="underline-offset-4 hover:underline">What’s on</a></li>
+          <li><a href="workshops.html" class="underline-offset-4 hover:underline">Workshops</a></li>
+          <li><a href="whats-on.html?cat=exhibition" class="underline-offset-4 hover:underline">Exhibitions</a></li>
+          <li><a href="whats-on.html?cat=family" class="underline-offset-4 hover:underline">For families</a></li>
+          <li><a href="about.html" class="underline-offset-4 hover:underline">Our story</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Join in" class="lg:col-span-2">
+        <h2 class="text-xs font-extrabold uppercase tracking-[0.18em] text-ochre">Join in</h2>
+        <ul class="mt-4 space-y-2.5 text-[15px] text-white/90">
+          <li><a href="get-involved.html#volunteer" class="underline-offset-4 hover:underline">Volunteer</a></li>
+          <li><a href="get-involved.html#friends" class="underline-offset-4 hover:underline">Become a Friend</a></li>
+          <li><a href="get-involved.html#propose" class="underline-offset-4 hover:underline">Teach or exhibit</a></li>
+          <li><a href="hire.html" class="underline-offset-4 hover:underline">Rent a space</a></li>
+          <li><a href="visit.html#access" class="underline-offset-4 hover:underline">Access</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-3">
+        <h2 class="text-xs font-extrabold uppercase tracking-[0.18em] text-ochre">Find us</h2>
+        <address class="mt-4 not-italic leading-relaxed text-white/90">The Old Dyeworks<br>Race Street<br>Holyoke, MA 01040</address>
+        <p class="mt-3 text-[15px] leading-relaxed text-white/90"><a href="tel:+14135550173" class="underline-offset-4 hover:underline">(413) 555-0173</a><br><a href="mailto:hello@mosaic.example" class="underline-offset-4 hover:underline">hello@mosaic.example</a></p>
+        <a href="visit.html" class="btn-light btn-sm mt-6">Opening hours <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </div>
+    </div>
+    <div class="border-t border-white/15">
+      <div class="container-x flex flex-col gap-2 py-6 text-[13px] text-white/75 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Mosaic Community Arts Center. A fictional arts center.</p>
+        <p>Template by Freeframe</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

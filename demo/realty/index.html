@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Homes — Harbor & Co</title>
+<meta name="description" content="Harbor & Co lists a short set of houses, with the price, the place, and the awkward fact on the page." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }</style>
+</head>
+<body class="bg-[#f4f7f4] text-[#163028] font-sans antialiased">
+<header class="sticky top-0 z-30 bg-[#163028] text-[#f4f7f4]">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-2xl">Harbor &amp; Co</a>
+    <div class="flex items-center gap-3"><a href="contact.html" class="rounded-full bg-[#d7efe3] px-4 py-2 text-sm font-semibold text-[#163028]">Ask about a house</a><button id="menuBtn" class="rounded-full border border-white/30 px-3 py-1 text-sm md:hidden" aria-expanded="false">Menu</button></div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t border-white/15 pt-3 text-sm md:flex md:basis-auto md:flex-row md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html" aria-current="page">Homes</a><a href="about.html">The desk</a><a href="contact.html">Ask</a></nav>
+  </div>
+</header><section class="bg-[#163028] text-[#f4f7f4]"><div class="mx-auto grid max-w-6xl items-end gap-8 px-5 py-14 sm:px-8 lg:grid-cols-[1.1fr_0.9fr]"><div><p class="text-xs uppercase tracking-[0.22em] text-[#9dccb6]">A short list of houses</p><h1 class="mt-3 font-display text-5xl leading-[1.02] sm:text-6xl">Houses worth the trip, described without the fog.</h1><p class="mt-4 max-w-xl text-[#d7efe3]">Harbor &amp; Co keeps a small list. Each house has a place, a price, the awkward fact, and a packet you can read before you travel.</p></div><img src="images/hero.jpg" alt="A lake between mountains in the evening" class="aspect-[16/10] w-full rounded-3xl object-cover" /></div></section>
+<main id="list" class="mx-auto max-w-6xl px-5 py-10 sm:px-8">
+  <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+    <div><h2 class="font-display text-3xl">Open listings</h2><p id="count" class="text-sm text-[#3e554b]"></p></div>
+    <div id="filters" class="flex flex-wrap gap-2">
+      <button data-area="all" class="area rounded-full bg-[#163028] px-4 py-1.5 text-sm text-white">All</button>
+      <button data-area="woods" class="area rounded-full bg-white px-4 py-1.5 text-sm ring-1 ring-[#c5d5cc]">Woods</button>
+      <button data-area="shore" class="area rounded-full bg-white px-4 py-1.5 text-sm ring-1 ring-[#c5d5cc]">Shore</button>
+      <button data-area="warm" class="area rounded-full bg-white px-4 py-1.5 text-sm ring-1 ring-[#c5d5cc]">Warm</button>
+    </div>
+  </div>
+  <div id="cards" class="mt-8 grid gap-5 md:grid-cols-2"><a href="pine-lodge.html" data-area="woods" class="home block overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-[#d5e0d8]">
+      <img src="images/spruce.jpg" alt="A log house among pines in low morning light" class="aspect-[16/10] w-full object-cover" />
+      <div class="flex items-start justify-between gap-4 p-5"><div><p class="text-xs uppercase tracking-[0.16em] text-[#3d6b58]">Stowe, Vermont</p><h3 class="mt-1 font-display text-2xl">Pine lodge</h3><p class="mt-1 text-sm text-[#3e554b]">4 bedrooms · 3 baths · 2,400 sq ft</p></div><p class="font-semibold">$1,150,000</p></div>
+    </a><a href="shingle-house.html" data-area="shore" class="home block overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-[#d5e0d8]">
+      <img src="images/saltbox.jpg" alt="A grey shingle house with a white porch and a wide lawn" class="aspect-[16/10] w-full object-cover" />
+      <div class="flex items-start justify-between gap-4 p-5"><div><p class="text-xs uppercase tracking-[0.16em] text-[#3d6b58]">Chatham, Massachusetts</p><h3 class="mt-1 font-display text-2xl">Shingle house</h3><p class="mt-1 text-sm text-[#3e554b]">4 bedrooms · 3 baths · porch</p></div><p class="font-semibold">$2,400,000</p></div>
+    </a><a href="garden-house.html" data-area="warm" class="home block overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-[#d5e0d8]">
+      <img src="images/farm.jpg" alt="A white house with a balcony and a garden pool" class="aspect-[16/10] w-full object-cover" />
+      <div class="flex items-start justify-between gap-4 p-5"><div><p class="text-xs uppercase tracking-[0.16em] text-[#3d6b58]">Coral Gables, Florida</p><h3 class="mt-1 font-display text-2xl">Garden house</h3><p class="mt-1 text-sm text-[#3e554b]">4 bedrooms · pool · 3,100 sq ft</p></div><p class="font-semibold">$1,875,000</p></div>
+    </a><a href="glass-house.html" data-area="warm" class="home block overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-[#d5e0d8]">
+      <img src="images/lookout.jpg" alt="A modern concrete house with a pool and glass railings" class="aspect-[16/10] w-full object-cover" />
+      <div class="flex items-start justify-between gap-4 p-5"><div><p class="text-xs uppercase tracking-[0.16em] text-[#3d6b58]">Santa Barbara, California</p><h3 class="mt-1 font-display text-2xl">Glass house</h3><p class="mt-1 text-sm text-[#3e554b]">3 bedrooms · pool · roof terrace</p></div><p class="font-semibold">$3,200,000</p></div>
+    </a><a href="red-cottage.html" data-area="woods" class="home block overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-[#d5e0d8]">
+      <img src="images/boathouse.jpg" alt="A small red cottage alone on a green hill" class="aspect-[16/10] w-full object-cover" />
+      <div class="flex items-start justify-between gap-4 p-5"><div><p class="text-xs uppercase tracking-[0.16em] text-[#3d6b58]">Isle of Skye, Scotland</p><h3 class="mt-1 font-display text-2xl">Red cottage</h3><p class="mt-1 text-sm text-[#3e554b]">2 bedrooms · 1 bath · on the hill</p></div><p class="font-semibold">£420,000</p></div>
+    </a><a href="ridge-cabin.html" data-area="woods" class="home block overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-[#d5e0d8]">
+      <img src="images/cedar.jpg" alt="A wooden cabin on a ridge at sunset" class="aspect-[16/10] w-full object-cover" />
+      <div class="flex items-start justify-between gap-4 p-5"><div><p class="text-xs uppercase tracking-[0.16em] text-[#3d6b58]">White Mountains, New Hampshire</p><h3 class="mt-1 font-display text-2xl">Ridge cabin</h3><p class="mt-1 text-sm text-[#3e554b]">2 bedrooms · wood heat · 6 acres</p></div><p class="font-semibold">$640,000</p></div>
+    </a></div>
+</main>
+<script>
+const cards = [...document.querySelectorAll(".home")];
+const count = document.getElementById("count");
+function apply(area) {
+  let n = 0;
+  cards.forEach((card) => {
+    const show = area === "all" || card.dataset.area === area;
+    card.classList.toggle("hidden", !show);
+    if (show) n += 1;
+  });
+  count.textContent = n + (n === 1 ? " house" : " houses");
+}
+document.getElementById("filters").addEventListener("click", (event) => {
+  const button = event.target.closest("[data-area]");
+  if (!button) return;
+  document.querySelectorAll(".area").forEach((item) => {
+    item.classList.remove("bg-[#163028]", "text-white");
+    item.classList.add("bg-white", "ring-1", "ring-[#c5d5cc]");
+  });
+  button.classList.add("bg-[#163028]", "text-white");
+  button.classList.remove("bg-white", "ring-1", "ring-[#c5d5cc]");
+  apply(button.dataset.area);
+});
+apply("all");
+</script><footer class="bg-[#163028] text-[#d7efe3]"><div class="mx-auto grid max-w-6xl gap-6 px-5 py-10 text-sm sm:px-8 md:grid-cols-3"><div><p class="font-display text-2xl text-white">Harbor &amp; Co</p><p class="mt-2">21 Exchange Street<br />Portland, Maine 04101</p></div><div><p>The desk is Jonah Ellis. He answers the same day if you write before three.</p><p class="mt-2">desk@harborandco.com · (555) 018-4410</p></div><div class="space-y-1"><a href="index.html">Homes</a><br /><a href="about.html">The desk</a><br /><a href="contact.html">Ask</a></div></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

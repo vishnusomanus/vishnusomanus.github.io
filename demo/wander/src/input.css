@@ -1,0 +1,220 @@
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+/* Saltwind Journeys brand tokens. Change these to re-skin the whole site. */
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Caprasimo", "Cooper Black", ui-serif, Georgia, serif;
+  --font-hand: "Kalam", "Segoe Print", "Bradley Hand", cursive;
+
+  --color-paper: #fbf5ea;     /* page background */
+  --color-postcard: #fffaf1;  /* cards and fields */
+  --color-sand: #f4e6cc;      /* panels */
+  --color-dune: #ecd5ad;      /* deeper panels */
+  --color-line: #e2cfae;      /* borders */
+  --color-ink: #23180f;       /* text */
+  --color-muted: #66523f;     /* secondary text */
+  --color-clay: #b0431d;      /* brand accent: buttons, links */
+  --color-clay-dark: #8c3214;
+  --color-sun: #f4a62a;       /* marigold: highlights, stamps */
+  --color-sun-deep: #b86e00;  /* stars and icons on light backgrounds */
+  --color-sea: #0e5a5f;       /* deep teal */
+  --color-deep: #0a3b3f;      /* footer and dark bands */
+  --color-lagoon: #7cc4b8;    /* decorative teal */
+  --color-coral: #ef7b5a;     /* decorative */
+  --color-foam: #fff9ef;      /* text on dark */
+
+  --ease-soft: cubic-bezier(.2, .7, .2, 1);
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: no-preference) {
+    html:focus-within { scroll-behavior: smooth; }
+  }
+  body { @apply bg-paper font-sans text-ink antialiased; }
+  ::selection { background: var(--color-sun); color: var(--color-ink); }
+  :focus-visible { outline: 3px solid var(--color-clay); outline-offset: 3px; border-radius: 6px; }
+  .on-dark :focus-visible { outline-color: var(--color-sun); }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  [hidden] { display: none !important; }
+  h1, h2, h3 { text-wrap: balance; }
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[0.95rem] font-semibold transition duration-200 disabled:cursor-not-allowed disabled:opacity-45;
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-8; }
+
+  .btn-primary { @apply btn bg-clay text-foam shadow-[0_6px_0_-1px_var(--color-clay-dark)] hover:-translate-y-0.5 hover:bg-clay-dark active:translate-y-0.5 active:shadow-none; }
+  .btn-sun { @apply btn bg-sun text-ink shadow-[0_6px_0_-1px_#c07d10] hover:-translate-y-0.5 hover:bg-[#f7b445] active:translate-y-0.5 active:shadow-none; }
+  .btn-dark { @apply btn bg-ink text-foam hover:bg-sea; }
+  .btn-outline { @apply btn border-2 border-ink text-ink hover:bg-ink hover:text-foam; }
+  .btn-ghost-light { @apply btn border-2 border-foam/70 text-foam hover:bg-foam hover:text-ink; }
+  .btn-small { @apply inline-flex items-center rounded-full border-2 border-ink px-4 py-1.5 text-sm font-semibold transition hover:bg-ink hover:text-foam; }
+
+  .eyebrow { @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.24em] text-clay; }
+  .eyebrow::before { content: ""; @apply h-0.5 w-6 rounded-full bg-current; }
+  .on-dark .eyebrow { color: #ffc766; }
+  .display { @apply font-display font-normal leading-[0.98] tracking-[-0.01em]; }
+  .hand { @apply font-hand; }
+  .lead { @apply text-lg leading-relaxed text-muted sm:text-xl; }
+
+  .nav-link { @apply relative rounded-full px-3.5 py-2 text-[0.95rem] font-medium text-ink transition hover:bg-sand; }
+  .nav-link[aria-current="page"] { @apply bg-ink text-foam; }
+  .tour-link { @apply bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-[background-size] duration-300 hover:bg-[length:100%_2px]; }
+  .text-link { @apply font-semibold text-clay underline decoration-2 underline-offset-4 hover:text-clay-dark; }
+
+  .field-label { @apply mb-1.5 block text-sm font-semibold text-ink; }
+  .field {
+    @apply w-full rounded-2xl border-2 border-line bg-postcard px-4 py-3 text-base text-ink transition placeholder:text-muted/75 focus:border-sea focus:ring-4 focus:ring-sea/15 focus:outline-none;
+  }
+  select.field { @apply appearance-none bg-[url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%2323180f'%20stroke-width='2.4'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='m6%209%206%206%206-6'/%3E%3C/svg%3E")] bg-[length:1.1rem] bg-[right_1rem_center] bg-no-repeat pr-11; }
+  .field[aria-invalid="true"] { @apply border-clay ring-4 ring-clay/15; }
+  .field-error { @apply mt-1.5 text-sm font-medium text-clay-dark; }
+  .field-error:empty { display: none; }
+  .field-hint { @apply mt-1.5 text-sm text-muted; }
+  .check { @apply h-5 w-5 shrink-0 rounded border-2 border-line accent-clay; }
+
+  /* Postcard frame for illustrations */
+  .art-frame { @apply relative isolate overflow-hidden bg-sand; }
+  .art-frame::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none; mix-blend-mode: multiply; opacity: .18;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .4 0 0 0 0 .25 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .tour-card { @apply flex flex-col; }
+  .tour-card .art-frame svg { transition: transform .9s var(--ease-soft); }
+  .tour-card:hover .art-frame svg { transform: scale(1.04); }
+
+  /* Postage stamp with perforated edges */
+  .stamp {
+    @apply inline-block bg-postcard p-[7px] text-ink;
+    /* Solid center plus a row of half-circle bites along every edge. */
+    -webkit-mask: linear-gradient(#000 0 0) content-box, radial-gradient(circle at 5px 5px, transparent 3.2px, #000 3.6px) -5px -5px / 10px 10px;
+    mask: linear-gradient(#000 0 0) content-box, radial-gradient(circle at 5px 5px, transparent 3.2px, #000 3.6px) -5px -5px / 10px 10px;
+  }
+  .stamp-inner { @apply block min-w-16 border-2 border-dashed border-clay/60 bg-sun px-3 py-2 text-center; }
+
+  /* Airmail border */
+  .airmail { @apply rounded-[2rem] p-2.5; background: repeating-linear-gradient(-45deg, var(--color-clay) 0 18px, var(--color-postcard) 18px 30px, var(--color-sea) 30px 48px, var(--color-postcard) 48px 60px); }
+
+  .chip { @apply inline-flex items-center gap-1.5 rounded-full border border-line bg-postcard px-3 py-1 text-xs font-semibold text-muted; }
+  .badge { @apply inline-flex items-center whitespace-nowrap rounded-full px-2.5 py-1 text-xs font-semibold; }
+  .badge-open { @apply bg-sand text-ink; }
+  .badge-ok { @apply bg-sea/12 text-sea; }
+  .badge-low { @apply bg-sun/35 text-ink; }
+  .badge-full { @apply bg-ink/8 text-muted line-through; }
+
+  /* Filters */
+  .pill-check { @apply relative flex cursor-pointer items-center justify-between gap-3 rounded-2xl border-2 border-line bg-postcard px-4 py-2.5 text-[0.95rem] transition hover:border-ink; }
+  .pill-check:has(input:checked) { @apply border-ink bg-ink text-foam; }
+  .pill-check:has(input:focus-visible) { outline: 3px solid var(--color-clay); outline-offset: 2px; }
+  .pill-check .count { @apply rounded-full bg-sand px-2 py-0.5 text-xs font-semibold text-ink; }
+  .pill-check:has(input:checked) .count { @apply bg-sun text-ink; }
+  .filter-chip { @apply inline-flex items-center gap-2 rounded-full bg-ink px-3.5 py-1.5 text-sm font-medium text-foam transition hover:bg-clay; }
+  .topic-btn { @apply rounded-full border-2 border-line bg-postcard px-4 py-2 text-sm font-semibold text-ink transition hover:border-ink; }
+  .topic-btn[aria-pressed="true"] { @apply border-ink bg-ink text-foam; }
+
+  input[type="range"].range { @apply h-2 w-full cursor-pointer appearance-none rounded-full bg-dune accent-clay; }
+  input[type="range"].range::-webkit-slider-thumb { @apply h-6 w-6 appearance-none rounded-full border-4 border-postcard bg-clay shadow; }
+  input[type="range"].range::-moz-range-thumb { @apply h-5 w-5 rounded-full border-4 border-postcard bg-clay; }
+
+  /* Itinerary accordion */
+  .itinerary-item { @apply relative border-b-2 border-dashed border-line pl-10 sm:pl-14; }
+  .itinerary-item::before { content: ""; @apply absolute left-[0.6rem] top-[1.45rem] sm:top-7 h-4 w-4 rounded-full border-4 border-paper bg-clay sm:left-[1.1rem]; box-shadow: 0 0 0 2px var(--color-clay); }
+  .itinerary-btn { @apply flex w-full items-center gap-4 py-5 text-left; }
+  .itinerary-day { @apply shrink-0 text-xs font-semibold uppercase tracking-[0.18em] text-clay sm:w-24; }
+  .itinerary-btn[aria-expanded="true"] .itinerary-icon { transform: rotate(45deg); }
+  .itinerary-icon { transition: transform .25s var(--ease-soft); }
+  .itinerary-panel { @apply pb-6 text-[1.02rem] leading-relaxed text-muted sm:pl-28; }
+
+  tr.is-selected { @apply bg-sun/15; }
+
+  /* Seasonality */
+  .season-corner { @apply sticky left-0 z-10 bg-postcard py-3 pr-4 text-left text-sm font-semibold; }
+  .season-month { @apply px-1 py-3 text-center text-xs font-semibold uppercase tracking-wider text-muted; }
+  .season-month abbr { text-decoration: none; }
+  .season-region { @apply sticky left-0 z-10 whitespace-nowrap bg-postcard py-2 pr-4 text-left font-display text-lg font-normal; }
+  .season-cell { @apply px-1 py-2; }
+  .season-dot { @apply mx-auto block h-9 w-full min-w-9 rounded-xl; }
+  .season-cell[data-level="0"] .season-dot { background: repeating-linear-gradient(-45deg, var(--color-sand) 0 4px, transparent 4px 8px); }
+  .season-cell[data-level="1"] .season-dot { background: var(--color-dune); }
+  .season-cell[data-level="2"] .season-dot { background: var(--color-lagoon); }
+  .season-cell[data-level="3"] .season-dot { background: var(--color-sea); }
+  .legend-swatch { @apply inline-block h-4 w-6 rounded-md align-middle; }
+  .season-bar { @apply grid h-28 grid-cols-12 items-end gap-1; }
+  .season-step { @apply relative flex h-full flex-col justify-end; }
+  .season-fill { @apply block w-full rounded-t-lg rounded-b-sm; height: calc(var(--h) - 1.25rem); }
+  .season-step[data-level="0"] .season-fill { background: repeating-linear-gradient(-45deg, var(--color-dune) 0 3px, transparent 3px 6px); }
+  .season-step[data-level="1"] .season-fill { background: var(--color-dune); }
+  .season-step[data-level="2"] .season-fill { background: var(--color-lagoon); }
+  .season-step[data-level="3"] .season-fill { background: var(--color-sea); }
+  .season-label { @apply mt-1 block h-4 text-center text-xs font-semibold text-muted; }
+
+  /* Ticker */
+  .ticker { display: flex; width: max-content; animation: ticker 50s linear infinite; }
+  .ticker-wrap:hover .ticker { animation-play-state: paused; }
+
+  /* Article prose */
+  .prose-travel { @apply text-[1.12rem] leading-[1.75] text-ink/90; }
+  .prose-travel > * + * { @apply mt-6; }
+  .prose-travel h2 { @apply mt-14 scroll-mt-28 font-display text-3xl leading-tight text-ink sm:text-4xl; }
+  .prose-travel h3 { @apply mt-10 text-xl font-semibold text-ink; }
+  .prose-travel a { @apply font-semibold text-clay underline decoration-2 underline-offset-4 hover:text-clay-dark; }
+  .prose-travel ul { @apply list-disc space-y-2 pl-6 marker:text-clay; }
+  .prose-travel blockquote { @apply my-10 border-l-4 border-sun pl-6 font-display text-2xl leading-snug text-ink sm:text-3xl; }
+
+  /* Header */
+  #site-header.is-scrolled { @apply border-line shadow-[0_12px_30px_-26px_rgb(35_24_15/.6)]; }
+}
+
+@keyframes ticker { to { transform: translateX(-50%); } }
+@keyframes float { 0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); } 50% { transform: translateY(-10px) rotate(var(--r, 0deg)); } }
+.float { animation: float 7s ease-in-out infinite; }
+
+/* Scroll reveal: only hidden when JS is running and motion is allowed. */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s var(--ease-soft), transform .8s var(--ease-soft); }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .ticker, .float { animation: none; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+.menu-open { overflow: hidden; }
+.read-progress { transform: scaleX(0); transform-origin: left; }
+
+/* Toast */
+.toast { @apply pointer-events-none fixed bottom-6 left-1/2 z-50 max-w-[calc(100vw-2rem)] -translate-x-1/2 translate-y-4 rounded-full bg-ink px-5 py-3 text-center text-sm text-foam opacity-0 shadow-lg transition duration-300; }
+.toast.is-visible { @apply translate-y-0 opacity-100; }
+
+/* Back to top button (created by assets/js/main.js). Remove this block to drop it. */
+@layer components {
+  .back-to-top {
+    position: fixed; z-index: 40;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px) + var(--btt-lift, 0px));
+    display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; cursor: pointer;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, bottom .25s ease, visibility 0s linear .25s, background-color .2s;
+    border-radius: 999px; border: 2px solid var(--color-ink);
+    background: var(--color-sun); color: var(--color-ink);
+    box-shadow: 0 4px 0 0 var(--color-ink);
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; transition: transform .2s ease; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top.is-visible:hover svg { transform: translateY(-2px); }
+  .back-to-top:hover { background: #f7b445; }
+  .back-to-top:focus-visible { outline: 3px solid var(--color-clay); outline-offset: 3px; }
+  .back-to-top-target:focus { outline: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top, .back-to-top svg { transition: opacity .01s linear, visibility 0s linear; transform: none !important; }
+  }
+  @media print { .back-to-top { display: none !important; } }
+}

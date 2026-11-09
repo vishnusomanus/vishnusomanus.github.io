@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" width="640" height="460" fill="none" stroke="#18224a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Sky lines -->
+  <path d="M40 40h560M40 72h560M40 104h560" stroke="#d5deeb" stroke-width="1.2"/>
+  <!-- Tree behind -->
+  <path d="M572 150c-40 0-58 34-46 62-26 10-24 54 8 60 4 30 46 34 62 12 30 10 54-20 40-46 22-20 6-60-22-58-6-22-22-30-42-30Z" fill="#9fb99a"/>
+  <path d="M590 290v150M590 330l-18-22M590 312l16-18" stroke-width="3"/>
+  <!-- Facade -->
+  <rect x="110" y="70" width="420" height="352" fill="#e7b8a2"/>
+  <g stroke="#cf9c84" stroke-width="1.4">
+    <path d="M110 120h420M110 170h420M110 220h420M110 270h420M110 320h420M110 370h420"/>
+    <path d="M140 70v50M200 120v50M250 70v50M380 70v50M470 120v50M510 70v50M140 170v50M480 170v50M150 270v50M500 320v50M230 320v50"/>
+  </g>
+  <rect x="110" y="70" width="420" height="352"/>
+  <path d="M100 58h440v14H100Z" fill="#f2eee4"/>
+  <path d="M96 52h448" stroke-width="3"/>
+  <path d="M110 238h420" stroke="#f2eee4" stroke-width="8"/>
+  <path d="M110 234h420M110 242h420" stroke-width="1.2"/>
+  <!-- Upper windows -->
+  <g fill="#ffffff">
+    <rect x="152" y="96" width="64" height="112"/><rect x="288" y="96" width="64" height="112"/><rect x="424" y="96" width="64" height="112"/>
+  </g>
+  <g stroke-width="1.6">
+    <path d="M152 152h64M184 96v112M152 124h64M152 180h64"/>
+    <path d="M288 152h64M320 96v112M288 124h64M288 180h64"/>
+    <path d="M424 152h64M456 96v112M424 124h64M424 180h64"/>
+  </g>
+  <path d="M146 210h76M282 210h76M418 210h76" stroke-width="4"/>
+  <path d="M152 90h64l-4-8h-56ZM288 90h64l-4-8h-56ZM424 90h64l-4-8h-56Z" fill="#f2eee4" stroke-width="1.6"/>
+  <!-- Ground floor windows -->
+  <g fill="#ffffff"><rect x="152" y="262" width="64" height="110"/><rect x="424" y="262" width="64" height="110"/></g>
+  <g stroke-width="1.6"><path d="M152 317h64M184 262v110M152 290h64M152 344h64"/><path d="M424 317h64M456 262v110M424 290h64M424 344h64"/></g>
+  <path d="M146 374h76M418 374h76" stroke-width="4"/>
+  <!-- Door with fanlight -->
+  <path d="M282 300a38 38 0 0 1 76 0Z" fill="#ffffff"/>
+  <path d="M320 262v38M296 272l24 28M344 272l-24 28" stroke-width="1.4"/>
+  <rect x="284" y="300" width="72" height="120" fill="#2f6b4f"/>
+  <path d="M320 300v120" stroke-width="1.8"/>
+  <rect x="292" y="312" width="20" height="40" rx="1" stroke="#9fb99a" stroke-width="1.6"/><rect x="328" y="312" width="20" height="40" rx="1" stroke="#9fb99a" stroke-width="1.6"/>
+  <rect x="292" y="364" width="20" height="44" rx="1" stroke="#9fb99a" stroke-width="1.6"/><rect x="328" y="364" width="20" height="44" rx="1" stroke="#9fb99a" stroke-width="1.6"/>
+  <circle cx="320" cy="356" r="3.5" fill="#f6e46b" stroke-width="1.4"/>
+  <path d="M276 300h88" stroke-width="3"/>
+  <!-- Brass plate -->
+  <rect x="372" y="322" width="30" height="22" rx="2" fill="#f6e46b" stroke-width="1.8"/>
+  <path d="M378 330h18M378 336h12" stroke-width="1.4"/>
+  <!-- Plinth, ramp and handrail -->
+  <path d="M110 420h420" stroke-width="2"/>
+  <path d="M270 420h100l120 20H270Z" fill="#f2eee4"/>
+  <path d="M370 420l120 20" />
+  <path d="M370 396l120 20M384 398v26M436 407v24M486 415v24" stroke-width="2"/>
+  <!-- Railings -->
+  <path d="M110 396h150" stroke-width="2"/>
+  <path d="M118 396v44M132 396v44M146 396v44M160 396v44M174 396v44M188 396v44M202 396v44M216 396v44M230 396v44M244 396v44M258 396v44" stroke-width="1.8"/>
+  <path d="M118 392v-6M132 392v-6M146 392v-6M160 392v-6M174 392v-6M188 392v-6M202 392v-6M216 392v-6M230 392v-6M244 392v-6M258 392v-6" stroke-width="2"/>
+  <!-- Street lamp -->
+  <path d="M60 440V180" stroke-width="4"/>
+  <path d="M46 180h28l-4-26H50Z" fill="#fbf3b8"/>
+  <path d="M60 150v-8M44 180h32" stroke-width="2"/>
+  <!-- Pavement -->
+  <path d="M0 440h640v20H0Z" fill="#e8e3d7" stroke="none"/>
+  <path d="M0 440h640" stroke-width="2"/>
+  <path d="M80 452h40M200 452h40M340 452h40M500 452h40" stroke="#c9c1ae" stroke-width="1.5"/>
+</svg>

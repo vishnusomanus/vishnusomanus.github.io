@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — Crust Club</title>
+  <meta name="description" content="Choose delivery or pickup, ASAP or a time slot, and place your Crust Club order. Pay by card now or when your pizza reaches you.">
+  <meta name="theme-color" content="#fff4e2">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Crust Club">
+  <meta property="og:title" content="Checkout — Crust Club">
+  <meta property="og:description" content="Choose delivery or pickup, ASAP or a time slot, and place your Crust Club order. Pay by card now or when your pizza reaches you.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400..900;1,400..700&amp;family=Shrikhand&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="checkout" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[70] rounded-full bg-ink px-5 py-3 text-sm font-bold text-mozz focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <div class="bg-ink text-mozz">
+    <p class="container-x flex items-center justify-center gap-x-3 py-2 text-center text-[13px] font-semibold"><span>Free delivery over $50</span><span aria-hidden="true" class="text-cheese">✦</span><span class="hidden sm:inline">48-hour sourdough</span><span aria-hidden="true" class="hidden text-cheese sm:inline">✦</span><span>New Haven, CT</span></p>
+  </div>
+  <header id="site-header" class="sticky top-0 z-40 bg-mozz/95 backdrop-blur transition-shadow duration-300">
+    <div class="container-x flex h-[4.5rem] items-center justify-between gap-4">
+      <a href="index.html" class="group inline-flex shrink-0 items-center gap-2.5" aria-label="Crust Club home">
+          <svg viewBox="0 0 40 40" class="size-10 shrink-0 transition-transform duration-300 group-hover:-rotate-12" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#2a1209"/><path d="M9.5 14.5Q20 8 30.5 14.5L20.8 33.2a1 1 0 0 1-1.6 0Z" fill="#ffc23a"/><path d="M9 14.2Q20 7 31 14.2" fill="none" stroke="#e9a35a" stroke-width="4" stroke-linecap="round"/><circle cx="16.5" cy="19" r="2.6" fill="#cc2a16"/><circle cx="23" cy="22.5" r="2.3" fill="#cc2a16"/><circle cx="19.6" cy="27.6" r="1.8" fill="#cc2a16"/></svg>
+          <span class="font-display text-[1.6rem] leading-none text-tomato">Crust Club</span>
+        </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1">
+          <li><a href="menu.html" class="rounded-full px-4 py-2 text-[15px] font-bold transition hover:bg-flour aria-[current=page]:bg-tomato aria-[current=page]:text-mozz">Menu</a></li>
+          <li><a href="deals.html" class="rounded-full px-4 py-2 text-[15px] font-bold transition hover:bg-flour aria-[current=page]:bg-tomato aria-[current=page]:text-mozz">Deals</a></li>
+          <li><a href="locations.html" class="rounded-full px-4 py-2 text-[15px] font-bold transition hover:bg-flour aria-[current=page]:bg-tomato aria-[current=page]:text-mozz">Locations</a></li>
+          <li><a href="catering.html" class="rounded-full px-4 py-2 text-[15px] font-bold transition hover:bg-flour aria-[current=page]:bg-tomato aria-[current=page]:text-mozz">Catering</a></li>
+          <li><a href="about.html" class="rounded-full px-4 py-2 text-[15px] font-bold transition hover:bg-flour aria-[current=page]:bg-tomato aria-[current=page]:text-mozz">Our story</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button type="button" data-cart-open aria-controls="cart-drawer" aria-expanded="false" class="hidden items-center gap-2 rounded-full px-3 py-2 text-sm font-bold text-cocoa transition hover:bg-flour xl:inline-flex">
+          <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <span data-order-summary>Delivery or pickup?</span>
+        </button>
+        <a href="checkout.html" data-cart-open data-cart-label aria-controls="cart-drawer" aria-expanded="false" aria-label="Your order" class="relative inline-flex h-11 items-center gap-2 rounded-full bg-tomato pl-3.5 pr-4 font-extrabold text-mozz shadow-[0_3px_0_var(--color-tomato-deep)] transition hover:-translate-y-0.5 active:translate-y-0.5 active:shadow-none">
+          <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18l-2 11H5Z"/><path d="M3 9l9-6 9 6"/></svg>
+          <span data-cart-total class="text-sm tabular-nums">Order</span>
+          <span data-cart-count hidden class="absolute -right-2 -top-2 grid h-6 min-w-6 place-items-center rounded-full bg-cheese px-1 text-xs font-black text-ink ring-2 ring-mozz">0</span>
+        </a>
+        <button id="menu-toggle" type="button" class="grid size-11 place-items-center rounded-full bg-flour lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t-2 border-dashed border-ink/10 bg-mozz lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="index.html" class="flex items-center justify-between border-b-2 border-dashed border-ink/10 py-4 font-display text-2xl aria-[current=page]:text-tomato">Home<span aria-hidden="true" class="font-sans text-xl">→</span></a></li>
+          <li><a href="menu.html" class="flex items-center justify-between border-b-2 border-dashed border-ink/10 py-4 font-display text-2xl aria-[current=page]:text-tomato">Menu<span aria-hidden="true" class="font-sans text-xl">→</span></a></li>
+          <li><a href="deals.html" class="flex items-center justify-between border-b-2 border-dashed border-ink/10 py-4 font-display text-2xl aria-[current=page]:text-tomato">Deals<span aria-hidden="true" class="font-sans text-xl">→</span></a></li>
+          <li><a href="locations.html" class="flex items-center justify-between border-b-2 border-dashed border-ink/10 py-4 font-display text-2xl aria-[current=page]:text-tomato">Locations<span aria-hidden="true" class="font-sans text-xl">→</span></a></li>
+          <li><a href="catering.html" class="flex items-center justify-between border-b-2 border-dashed border-ink/10 py-4 font-display text-2xl aria-[current=page]:text-tomato">Catering<span aria-hidden="true" class="font-sans text-xl">→</span></a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b-2 border-dashed border-ink/10 py-4 font-display text-2xl aria-[current=page]:text-tomato">Our story<span aria-hidden="true" class="font-sans text-xl">→</span></a></li>
+        </ul>
+        <a href="menu.html" class="btn-primary mt-6 w-full py-3.5 text-base">Order now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <div class="container-x pt-10 sm:pt-14">
+      <a href="menu.html" class="inline-flex items-center gap-1.5 text-sm font-bold text-cocoa hover:text-ink"><span aria-hidden="true">←</span> Back to the menu</a>
+      <h1 class="h-display mt-3 text-5xl sm:text-6xl">Checkout</h1>
+    </div>
+    <div class="container-x mt-8" id="checkout-root">
+      <noscript><p class="rounded-2xl bg-cheese-soft p-5 font-semibold">Checkout needs JavaScript. Call Wooster Square at (203) 555-0118 or Westville at (203) 555-0132 to order by phone.</p></noscript>
+      <div id="checkout-empty" hidden class="mx-auto max-w-xl rounded-[2rem] bg-flour px-6 py-16 text-center">
+        <div class="art mx-auto w-40" data-pizza="margherita"></div>
+        <h2 class="h-display mt-6 text-4xl">Your box is empty</h2>
+        <p class="mt-3 text-cocoa">Add something from the menu and come back here to check out.</p>
+        <div class="mt-7 flex flex-wrap justify-center gap-3"><a href="menu.html" class="btn-primary">Browse the menu</a><a href="deals.html" class="btn-ghost">See deals</a></div>
+      </div>
+      <div id="checkout-done" hidden></div>
+      <form id="checkout-form" hidden novalidate class="grid items-start gap-8 lg:grid-cols-[minmax(0,1.35fr)_minmax(0,1fr)]">
+        <div class="grid min-w-0 gap-6">
+          <section class="card p-6 sm:p-8" aria-labelledby="co-step-1">
+            <h2 id="co-step-1" class="flex items-center gap-3 text-2xl font-extrabold"><span class="grid size-10 shrink-0 place-items-center rounded-full bg-tomato font-display text-lg text-mozz" aria-hidden="true">1</span>Delivery or pickup</h2>
+            <div class="mt-5" data-zone-checker></div>
+          </section>
+          <section class="card p-6 sm:p-8" aria-labelledby="co-step-2">
+            <h2 id="co-step-2" class="flex items-center gap-3 text-2xl font-extrabold"><span class="grid size-10 shrink-0 place-items-center rounded-full bg-tomato font-display text-lg text-mozz" aria-hidden="true">2</span>When</h2>
+            <fieldset class="mt-5"><legend class="sr-only">When do you want it?</legend>
+              <div class="grid gap-3 sm:grid-cols-2">
+                <label class="option flex-col gap-1"><input type="radio" class="sr-only" name="when" value="asap" id="co-asap"><span class="font-extrabold">As soon as possible</span><span class="text-sm text-cocoa" id="co-asap-note"></span></label>
+                <label class="option flex-col gap-1"><input type="radio" class="sr-only" name="when" value="later" id="co-later"><span class="font-extrabold">Schedule for later</span><span class="text-sm text-cocoa">Up to two days ahead</span></label>
+              </div>
+            </fieldset>
+            <div id="co-schedule" class="mt-5 grid gap-4 sm:grid-cols-2" hidden>
+              <div><label for="co-day" class="field-label">Day</label><select id="co-day" class="field"></select></div>
+              <div><label for="co-time" class="field-label">Time</label><select id="co-time" class="field" required data-label="A time"></select></div>
+              <p id="co-slot-note" class="hint sm:col-span-2"></p>
+            </div>
+          </section>
+          <section class="card p-6 sm:p-8" aria-labelledby="co-step-3">
+            <h2 id="co-step-3" class="flex items-center gap-3 text-2xl font-extrabold"><span class="grid size-10 shrink-0 place-items-center rounded-full bg-tomato font-display text-lg text-mozz" aria-hidden="true">3</span>Your details</h2>
+            <div class="mt-5 grid gap-5 sm:grid-cols-2">
+              <div class="sm:col-span-2"><label for="co-name" class="field-label">Full name</label><input id="co-name" class="field" name="name" autocomplete="name" required data-label="Your name"></div>
+              <div class=""><label for="co-phone" class="field-label">Cell number</label><input id="co-phone" class="field" name="phone" type="tel" autocomplete="tel" required data-label="Cell number" placeholder="(203) 555-0147"><p class="hint">We’ll text you if the rider can’t find you.</p></div>
+              <div class=""><label for="co-email" class="field-label">Email</label><input id="co-email" class="field" name="email" type="email" autocomplete="email" required data-label="Email" placeholder="you@example.com"><p class="hint">For your receipt.</p></div>
+              <div class="grid gap-5 sm:col-span-2 sm:grid-cols-2" data-delivery-only>
+                <div class="sm:col-span-2"><label for="co-address" class="field-label">Street address</label><input id="co-address" class="field" name="address" autocomplete="address-line1" required data-label="Street address" placeholder="12 Orange Street, Apt 4"></div>
+                <div class="sm:col-span-2"><label for="co-instructions" class="field-label">Instructions for the rider <span class="font-semibold text-cocoa">(optional)</span></label><textarea id="co-instructions" name="instructions" rows="2" maxlength="160" class="field resize-none" placeholder="Buzzer 4, side gate, please don’t knock: baby asleep…"></textarea></div>
+              </div>
+              <p class="rounded-2xl bg-flour px-4 py-3 text-sm sm:col-span-2" data-pickup-only>Pick up from <strong id="co-store-name" class="font-extrabold">Wooster Square</strong>. Give your name at the window; your box will be on the shelf by the door.</p>
+            </div>
+          </section>
+          <section class="card p-6 sm:p-8" aria-labelledby="co-step-4">
+            <h2 id="co-step-4" class="flex items-center gap-3 text-2xl font-extrabold"><span class="grid size-10 shrink-0 place-items-center rounded-full bg-tomato font-display text-lg text-mozz" aria-hidden="true">4</span>Payment</h2>
+            <p class="mt-4 flex items-start gap-3 rounded-2xl bg-cheese-soft px-4 py-3 text-sm font-semibold"><svg viewBox="0 0 20 20" class="mt-0.5 size-4 shrink-0" fill="currentColor" aria-hidden="true"><path d="M10 1.8a8.2 8.2 0 1 1 0 16.4 8.2 8.2 0 0 1 0-16.4Zm0 4.2a1 1 0 0 0-1 1v3.6a1 1 0 1 0 2 0V7a1 1 0 0 0-1-1Zm0 7.2a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2Z"/></svg>No payment is taken on this site, so any 16-digit card number will do.</p>
+            <fieldset class="mt-5"><legend class="sr-only">Payment method</legend>
+              <div class="grid gap-3 sm:grid-cols-2">
+                <label class="option items-center gap-3"><input type="radio" class="sr-only" name="pay" value="card" checked><svg viewBox="0 0 24 24" class="size-6 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 10h18M7 15h4"/></svg><span class="font-extrabold">Pay now by card</span></label>
+                <label class="option items-center gap-3"><input type="radio" class="sr-only" name="pay" value="door"><svg viewBox="0 0 24 24" class="size-6 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16v10H4Z"/><circle cx="12" cy="12" r="2.5"/></svg><span><span class="block font-extrabold" id="co-door-label">Pay the rider</span><span class="text-sm text-cocoa">Card or cash</span></span></label>
+              </div>
+            </fieldset>
+            <div id="co-card-fields" class="mt-5 grid gap-5 sm:grid-cols-[2fr_1fr_1fr]">
+              <div class="sm:col-span-3"><label for="co-card" class="field-label">Card number</label><input id="co-card" class="field" name="card" inputmode="numeric" autocomplete="cc-number" required data-label="Card number" data-validate="card" placeholder="1234 5678 9012 3456" maxlength="19"></div>
+              <div class=""><label for="co-cardname" class="field-label">Name on card</label><input id="co-cardname" class="field" name="cardname" autocomplete="cc-name" required data-label="Name on card"></div>
+              <div class=""><label for="co-exp" class="field-label">Expiration date</label><input id="co-exp" class="field" name="exp" inputmode="numeric" autocomplete="cc-exp" required data-label="Expiration date" data-validate="expiry" placeholder="MM / YY" maxlength="7"></div>
+              <div class=""><label for="co-cvc" class="field-label">CVC</label><input id="co-cvc" class="field" name="cvc" inputmode="numeric" autocomplete="cc-csc" required data-label="CVC" data-validate="cvc" placeholder="123" maxlength="4"></div>
+            </div>
+          </section>
+        </div>
+        <aside class="card min-w-0 p-6 sm:p-7 lg:sticky lg:top-24" aria-labelledby="co-summary-title">
+          <div class="flex items-center justify-between gap-3"><h2 id="co-summary-title" class="h-display text-3xl">Your order</h2><button type="button" data-cart-open class="text-sm font-bold underline decoration-2 underline-offset-4">Edit order</button></div>
+          <ul id="co-lines" class="mt-2 divide-y-2 divide-dashed divide-ink/10"></ul>
+          <p id="co-notes" hidden class="mt-2 rounded-2xl bg-flour px-4 py-3 text-sm"><span class="font-bold">Kitchen notes:</span> <span id="co-notes-text"></span></p>
+          <div id="co-promo" class="mt-5"></div>
+          <div id="co-notice" class="mt-5 empty:hidden"></div>
+          <div id="co-totals" class="mt-5 border-t-2 border-dashed border-ink/10 pt-4"></div>
+          <p id="co-status" role="alert" class="mt-4 text-sm font-bold text-tomato-deep empty:hidden"></p>
+          <button type="submit" class="btn-primary mt-5 w-full py-4 text-base"><span id="co-submit-label">Place order</span></button>
+          <p class="mt-3 text-center text-xs text-cocoa">Allergy? Add it to your notes for the kitchen or call the shop before you order. Prices and totals don’t include Connecticut sales tax.</p>
+        </aside>
+      </form>
+    </div>
+
+  </main>
+
+  <footer class="mt-28">
+    <div class="checker h-5" aria-hidden="true"></div>
+    <div class="on-dark bg-ink text-mozz">
+      <div class="container-x grid gap-12 py-16 lg:grid-cols-12">
+        <div class="lg:col-span-3">
+          <a href="index.html" class="group inline-flex shrink-0 items-center gap-2.5" aria-label="Crust Club home">
+          <svg viewBox="0 0 40 40" class="size-10 shrink-0 transition-transform duration-300 group-hover:-rotate-12" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#cc2a16"/><path d="M9.5 14.5Q20 8 30.5 14.5L20.8 33.2a1 1 0 0 1-1.6 0Z" fill="#ffc23a"/><path d="M9 14.2Q20 7 31 14.2" fill="none" stroke="#e9a35a" stroke-width="4" stroke-linecap="round"/><circle cx="16.5" cy="19" r="2.6" fill="#2a1209"/><circle cx="23" cy="22.5" r="2.3" fill="#2a1209"/><circle cx="19.6" cy="27.6" r="1.8" fill="#2a1209"/></svg>
+          <span class="font-display text-[1.6rem] leading-none text-mozz">Crust Club</span>
+        </a>
+          <p class="mt-5 max-w-xs text-sm leading-relaxed text-mozz/85">Sourdough pizza from two little shops in New Haven. Dough made daily, left alone for 48 hours, baked in 90 seconds.</p>
+          <ul class="mt-6 flex gap-5 text-sm font-bold">
+            <li><a href="#" class="underline-offset-4 hover:underline">Instagram</a></li>
+            <li><a href="#" class="underline-offset-4 hover:underline">TikTok</a></li>
+            <li><a href="#" class="underline-offset-4 hover:underline">Google reviews</a></li>
+          </ul>
+        </div>
+        <div class="grid gap-8 sm:grid-cols-2 lg:col-span-4">
+          <div>
+          <h2 class="font-extrabold text-cheese">Wooster Square</h2>
+          <p class="mt-2 text-sm leading-relaxed text-mozz/85">42 Franklin Street<br>New Haven, CT 06511</p>
+          <p class="mt-1 text-sm"><a href="tel:+12035550118" class="font-semibold underline-offset-4 hover:underline">(203) 555-0118</a></p>
+          <p class="mt-2 flex items-center gap-2 text-sm font-semibold" data-store-status="ancoats"></p>
+        </div>
+          <div>
+          <h2 class="font-extrabold text-cheese">Westville</h2>
+          <p class="mt-2 text-sm leading-relaxed text-mozz/85">317 Fountain Street<br>New Haven, CT 06515</p>
+          <p class="mt-1 text-sm"><a href="tel:+12035550132" class="font-semibold underline-offset-4 hover:underline">(203) 555-0132</a></p>
+          <p class="mt-2 flex items-center gap-2 text-sm font-semibold" data-store-status="chorlton"></p>
+        </div>
+        </div>
+        <nav aria-label="Footer" class="lg:col-span-2">
+          <h2 class="font-extrabold text-cheese">Eat</h2>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a href="menu.html" class="underline-offset-4 hover:underline">Menu</a></li>
+            <li><a href="menu.html?diet=vegan" class="underline-offset-4 hover:underline">Vegan</a></li>
+            <li><a href="deals.html" class="underline-offset-4 hover:underline">Deals</a></li>
+            <li><a href="catering.html" class="underline-offset-4 hover:underline">Catering</a></li>
+            <li><a href="locations.html" class="underline-offset-4 hover:underline">Delivery</a></li>
+            <li><a href="about.html" class="underline-offset-4 hover:underline">Our story</a></li>
+          </ul>
+        </nav>
+        <div class="lg:col-span-3">
+          <h2 class="font-extrabold text-cheese">The Pizza Post</h2>
+          <p class="mt-3 text-sm text-mozz/85">New specials and the odd free garlic knot, every other week.</p>
+          <form data-form="newsletter" class="mt-4" novalidate>
+            <label for="footer-email" class="sr-only">Email address</label>
+            <div class="flex flex-col gap-2 sm:flex-row lg:flex-col">
+              <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@example.com" class="field min-w-0 border-mozz/25 bg-mozz/10 text-mozz placeholder:text-mozz/60 focus:border-cheese">
+              <button type="submit" class="btn-cheese shrink-0">Sign me up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-mozz/15">
+        <div class="container-x flex flex-col gap-2 py-6 text-xs text-mozz/80 md:flex-row md:items-center md:justify-between">
+          <p>© <span data-year>2026</span> Crust Club Pizza LLC. Allergen info on the <a href="menu.html#allergens" class="underline underline-offset-2">menu</a>; ask us if you’re unsure.</p>
+          <p>Crust Club is a fictional pizzeria. Template by Freeframe.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cart-overlay" hidden class="fixed inset-0 z-50 bg-ink/55 opacity-0 transition-opacity duration-300"></div>
+  <aside id="cart-drawer" hidden role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title" class="fixed inset-y-0 right-0 z-50 flex w-full max-w-md translate-x-full flex-col bg-mozz shadow-2xl transition-transform duration-300 ease-[var(--ease-snap)]">
+    <div class="flex items-center justify-between gap-4 px-6 pb-4 pt-5">
+      <h2 id="cart-drawer-title" class="h-display text-3xl">Your order <span data-drawer-count class="ml-1 align-middle font-sans text-sm font-bold text-cocoa"></span></h2>
+      <button type="button" data-drawer-close class="grid size-11 place-items-center rounded-full bg-flour hover:bg-cheese" aria-label="Close your order">
+        <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="flex-1 overflow-y-auto overscroll-contain">
+      <div class="mx-6 rounded-3xl bg-flour p-3" data-zone-checker data-variant="compact"></div>
+      <div data-drawer-body class="px-6"></div>
+    </div>
+    <div data-drawer-foot class="space-y-4 border-t-2 border-dashed border-ink/15 bg-paper px-6 pb-6 pt-5">
+      <div data-drawer-notice></div>
+      <div data-drawer-totals></div>
+      <a href="checkout.html" data-drawer-checkout class="btn-primary w-full py-3.5 text-base"><span data-drawer-checkout-label>Checkout</span></a>
+    </div>
+  </aside>
+  <div id="toast" role="status" aria-live="polite" class="pointer-events-none fixed inset-x-4 bottom-4 z-[60] mx-auto flex max-w-md translate-y-6 items-center gap-3 rounded-3xl bg-ink px-5 py-4 text-sm text-mozz opacity-0 shadow-xl transition duration-300 sm:left-auto sm:right-6 sm:mx-0">
+    <svg viewBox="0 0 24 24" class="size-6 shrink-0 text-cheese" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+    <p data-toast-msg class="flex-1"></p>
+    <button type="button" data-toast-close class="grid size-8 place-items-center rounded-full text-mozz/80 hover:text-mozz" aria-label="Dismiss"><svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+  </div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

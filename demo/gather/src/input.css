@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+/* Riverbend Church brand tokens. Change these to re-skin the whole site. */
+@theme {
+  --font-sans: "Nunito Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Urbanist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-paper: #fbf6ee;         /* page background */
+  --color-shell: #fffdf9;         /* cards and fields */
+  --color-sand: #f4eadb;          /* soft panels */
+  --color-line: #e5d8c5;          /* hairlines */
+  --color-ink: #2b1b36;           /* text, dark bands */
+  --color-muted: #5f5468;         /* secondary text */
+  --color-plum: #5b2a6e;          /* brand */
+  --color-plum-dark: #431d52;
+  --color-lilac: #efe5f5;         /* plum tint */
+  --color-apricot: #f6a96b;       /* warm accent (backgrounds only) */
+  --color-apricot-light: #fde3cc;
+  --color-apricot-dark: #9a4716;  /* apricot text on light backgrounds */
+  --color-sage: #c9dcc0;
+  --color-sage-light: #e6efe0;
+  --color-sage-dark: #33603b;     /* success */
+  --color-river: #bcd9e8;
+  --color-river-light: #e3f0f6;
+  --color-river-dark: #1f5577;
+  --color-rose: #b3364a;          /* errors */
+
+  --shadow-soft: 0 1px 2px rgb(43 27 54 / .05), 0 10px 30px -12px rgb(43 27 54 / .16);
+  --shadow-lift: 0 2px 4px rgb(43 27 54 / .06), 0 22px 44px -18px rgb(43 27 54 / .28);
+  --ease-soft: cubic-bezier(.22, .8, .24, 1);
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body { @apply bg-paper font-sans text-ink antialiased; }
+  h1, h2, h3, h4 { text-wrap: balance; }
+  ::selection { background: var(--color-apricot); color: var(--color-ink); }
+  :focus-visible { outline: 3px solid var(--color-plum); outline-offset: 3px; border-radius: 6px; }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+  input[type="number"] { -moz-appearance: textfield; }
+  dialog { color: inherit; }
+  dialog::backdrop { background: rgb(43 27 54 / .55); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within { scroll-behavior: smooth; }
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[15px] font-bold transition duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+
+  .btn-primary { @apply btn bg-plum text-white shadow-soft hover:-translate-y-0.5 hover:bg-plum-dark hover:shadow-lift; }
+  .btn-warm { @apply btn bg-apricot text-ink shadow-soft hover:-translate-y-0.5 hover:bg-[#f39a55] hover:shadow-lift; }
+  .btn-outline { @apply btn bg-shell text-ink ring-1 ring-ink/20 ring-inset hover:bg-lilac hover:ring-plum/40; }
+  .btn-light { @apply btn bg-white/10 text-white ring-1 ring-white/40 ring-inset hover:bg-white hover:text-ink; }
+  .btn-sm { @apply px-4 py-2 text-sm; }
+
+  .eyebrow { @apply inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.16em] text-plum; }
+  .eyebrow::before { content: ""; @apply size-1.5 rounded-full bg-apricot; }
+  .h-display { @apply font-display font-extrabold tracking-[-0.025em]; }
+  .h-section { @apply font-display text-3xl font-extrabold leading-[1.08] tracking-[-0.02em] sm:text-[2.6rem]; }
+
+  .card { @apply rounded-[1.75rem] bg-shell shadow-soft ring-1 ring-line/80; }
+  .card-hover { @apply transition duration-300 hover:-translate-y-1 hover:shadow-lift; }
+  .tag { @apply inline-flex items-center gap-1.5 rounded-full bg-sand px-3 py-1 text-xs font-bold text-ink; }
+  .chip-dot { @apply inline-block size-2 shrink-0 rounded-full; }
+
+  .link { @apply font-bold text-plum underline decoration-apricot decoration-2 underline-offset-4 hover:text-plum-dark hover:decoration-plum; }
+  .prose-gather p { @apply mt-4 leading-relaxed text-ink/90; }
+  .prose-gather h3 { @apply mt-8 font-display text-xl font-extrabold; }
+  .prose-gather ul { @apply mt-4 list-disc space-y-2 pl-5 text-ink/90 marker:text-apricot-dark; }
+  .prose-gather blockquote { @apply mt-6 rounded-2xl border-l-4 border-apricot bg-apricot-light/50 px-5 py-4 font-display text-lg font-semibold leading-snug; }
+
+  .field-label { @apply mb-1.5 block text-sm font-bold text-ink; }
+  .field {
+    @apply w-full rounded-2xl border border-ink/20 bg-shell px-4 py-3 text-[15px] text-ink placeholder:text-muted/80 transition focus:border-plum focus:outline-none focus:ring-4 focus:ring-plum/15;
+  }
+  select.field { @apply appearance-none bg-no-repeat pr-10; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%232b1b36' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 8 4 4 4-4'/%3E%3C/svg%3E"); background-size: 1.1rem; background-position: right 1rem center; }
+  .field[aria-invalid="true"], [data-group][aria-invalid="true"] .pill { @apply border-rose ring-4 ring-rose/10; }
+  .field-error { @apply mt-1.5 flex items-center gap-1.5 text-sm font-semibold text-rose; }
+  .field-error:empty { display: none; }
+  .on-dark .field-error { color: #ffc9cf; }
+  .hint { @apply mt-1.5 text-sm text-muted; }
+
+  /* Radio and checkbox cards: <label class="option"><input class="sr-only">…</label> */
+  .option { @apply relative flex cursor-pointer rounded-2xl border border-ink/15 bg-shell p-4 transition hover:border-plum/50; }
+  .option:has(input:checked) { @apply border-plum bg-lilac ring-2 ring-plum; }
+  .option:has(input:focus-visible) { outline: 3px solid var(--color-plum); outline-offset: 3px; }
+  .pill { @apply relative inline-flex cursor-pointer select-none items-center gap-1.5 rounded-full border border-ink/15 bg-shell px-4 py-2 text-sm font-bold transition hover:border-plum/50; }
+  .pill:has(input:checked) { @apply border-plum bg-plum text-white; }
+  .pill:has(input:focus-visible) { outline: 3px solid var(--color-plum); outline-offset: 3px; }
+  .pill:has(input:disabled) { @apply cursor-not-allowed opacity-45 hover:border-ink/15; }
+
+  .check { @apply flex cursor-pointer items-start gap-3 text-sm; }
+  .check input { @apply mt-0.5 size-5 shrink-0 accent-plum; }
+
+  .art svg { display: block; width: 100%; height: 100%; }
+
+  /* Audio player range input */
+  .scrub { @apply h-2 w-full cursor-pointer appearance-none rounded-full bg-ink/15; background-image: linear-gradient(var(--color-plum), var(--color-plum)); background-size: var(--pct, 0%) 100%; background-repeat: no-repeat; }
+  .scrub::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 1.1rem; height: 1.1rem; border-radius: 999px; background: var(--color-plum); border: 3px solid var(--color-shell); box-shadow: 0 1px 4px rgb(43 27 54 / .35); }
+  .scrub::-moz-range-thumb { width: 1rem; height: 1rem; border-radius: 999px; background: var(--color-plum); border: 3px solid var(--color-shell); box-shadow: 0 1px 4px rgb(43 27 54 / .35); }
+  .scrub:focus-visible { outline-offset: 6px; }
+  .player-dark .scrub { @apply bg-white/20; background-image: linear-gradient(var(--color-apricot), var(--color-apricot)); }
+  .player-dark .scrub::-webkit-slider-thumb { background: var(--color-apricot); border-color: var(--color-ink); }
+  .player-dark .scrub::-moz-range-thumb { background: var(--color-apricot); border-color: var(--color-ink); }
+
+  /* FAQ accordion (<details class="faq">) */
+  .faq { @apply border-b border-line; }
+  .faq summary { @apply flex items-center justify-between gap-6 py-5 font-display text-lg font-bold; }
+  .faq summary::after { content: "+"; @apply grid size-9 shrink-0 place-items-center rounded-full bg-sand font-sans text-xl font-bold text-plum transition; }
+  .faq[open] summary::after { content: "–"; @apply bg-plum text-white; }
+  .faq > div { @apply pb-6 pr-12 leading-relaxed text-muted; }
+}
+
+/* Scroll reveal — only hidden when JS is running and motion is allowed. */
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s var(--ease-soft), transform .8s var(--ease-soft); }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+
+/* "Live now" pulse */
+@keyframes live-pulse { 0% { box-shadow: 0 0 0 0 rgb(179 54 74 / .55); } 70% { box-shadow: 0 0 0 10px rgb(179 54 74 / 0); } 100% { box-shadow: 0 0 0 0 rgb(179 54 74 / 0); } }
+.live-dot { animation: live-pulse 1.8s ease-out infinite; }
+/* Hero sun and river shimmer */
+@keyframes drift { from { transform: translateX(0); } to { transform: translateX(-14px); } }
+.drift { animation: drift 9s ease-in-out infinite alternate; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .live-dot, .drift { animation: none; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Back to top button (created by assets/js/main.js). Remove this block to drop it. */
+@layer components {
+  .back-to-top {
+    position: fixed; z-index: 40;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px) + var(--btt-lift, 0px));
+    display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; cursor: pointer;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, bottom .25s ease, visibility 0s linear .25s,
+      background-color .2s, color .2s, box-shadow .2s;
+    border-radius: 999px; border: 0;
+    background: var(--color-plum); color: #fff;
+    box-shadow: var(--shadow-lift);
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; transition: transform .2s ease; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top.is-visible:hover svg { transform: translateY(-2px); }
+  .back-to-top:hover { background: var(--color-plum-dark); }
+  .back-to-top:focus-visible { outline: 3px solid var(--color-apricot-dark); outline-offset: 3px; }
+  .back-to-top-target:focus { outline: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top, .back-to-top svg { transition: opacity .01s linear, visibility 0s linear; transform: none !important; }
+  }
+  @media print { .back-to-top { display: none !important; } }
+}

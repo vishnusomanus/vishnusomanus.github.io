@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#fffaf3"/>
+  <circle cx="60" cy="580" r="140" fill="#fff4c2"/>
+  <g transform="translate(40 52)">
+    <path d="M24 2c9 0 15 2.3 18.4 5.6C45.7 11 46 17 46 24s-.3 13-3.6 16.4C39 43.7 33 46 24 46S9 43.7 5.6 40.4C2.3 37 2 31 2 24S2.3 11 5.6 7.6C9 4.3 15 2 24 2Z" fill="#5146d4" transform="scale(1.4)"/>
+    <path d="M24 13.6c-2.6-2.1-8.6-2.7-10.2 2.6-1.2 4.3.7 7.3 1.6 10.8 1 3.8 1 9.9 3.6 9.9 2.7 0 2.2-6.7 5-6.7s2.3 6.7 5 6.7c2.6 0 2.6-6.1 3.6-9.9.9-3.5 2.8-6.5 1.6-10.8-1.6-5.3-7.6-4.7-10.2-2.6Z" fill="#fff" transform="scale(1.4)"/>
+    <path d="M19.5 21.5c1.3 2.2 7.7 2.2 9 0" fill="none" stroke="#5146d4" stroke-width="2.2" stroke-linecap="round" transform="scale(1.4)"/>
+    <circle cx="51" cy="16" r="5" fill="#ffdc4f"/>
+    <text x="84" y="34" font-family="Fredoka, Nunito, sans-serif" font-size="34" font-weight="600" fill="#1d1a4d">Grin Lane</text>
+    <text x="85" y="58" font-family="Nunito, sans-serif" font-size="14" font-weight="800" letter-spacing="3" fill="#5e5b85">DENTAL · BOISE</text>
+  </g>
+  <path d="M252 352C300 338 340 364 382 352S452 338 474 350" fill="none" stroke="#ffcc22" stroke-width="11" stroke-linecap="round"/>
+  <g font-family="Fredoka, Nunito, sans-serif" font-weight="600" fill="#1d1a4d" font-size="74" letter-spacing="-1">
+    <text x="40" y="250">Dentistry that’s</text>
+    <text x="40" y="332">worth <tspan fill="#5146d4">smiling</tspan></text>
+    <text x="40" y="414">about.</text>
+  </g>
+  <g font-family="Nunito, sans-serif" font-size="21" font-weight="800">
+    <rect x="40" y="470" width="150" height="46" rx="23" fill="#e6e4ff"/><text x="115" y="500" text-anchor="middle" fill="#352d8f">Family care</text>
+    <rect x="202" y="470" width="134" height="46" rx="23" fill="#fff4c2"/><text x="269" y="500" text-anchor="middle" fill="#8a6100">Cosmetic</text>
+    <rect x="348" y="470" width="238" height="46" rx="23" fill="#ffe2eb"/><text x="467" y="500" text-anchor="middle" fill="#8e1c44">Same-day emergency</text>
+    <rect x="40" y="528" width="196" height="46" rx="23" fill="#d0f5e7"/><text x="138" y="558" text-anchor="middle" fill="#115545">Book online 24/7</text>
+  </g>
+  <g transform="translate(610 40) scale(1.02)">
+  <defs>
+    <clipPath id="og-tooth-clip"><path d="M100 28C82 12 40 8 32 48c-6 32 8 56 16 80 8 28 10 68 26 72 16 4 14-40 26-50 12 10 10 54 26 50 16-4 18-44 26-72 8-24 22-48 16-80-8-40-50-36-68-20Z"/></clipPath>
+  </defs>
+  <!-- background shapes -->
+  <path d="M286 26c94-6 196 40 240 128 44 90 22 210-52 278-72 66-196 92-292 62C88 466 20 386 28 288 36 192 70 110 132 66c44-30 96-38 154-40Z" fill="#e6e4ff"/>
+  <circle cx="452" cy="104" r="58" fill="#ffdc4f"/>
+  <circle cx="452" cy="104" r="80" fill="none" stroke="#ffdc4f" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round"/>
+  <path d="M60 392c26-34 76-40 104-14 26 24 18 70-18 84-40 16-110-28-86-70Z" fill="#a3ead2"/>
+  <path d="M96 120c18-10 40-2 46 16 6 20-8 36-28 36-26 0-36-38-18-52Z" fill="#ffc6d7"/>
+  <!-- bubbles -->
+  <g fill="none" stroke="#aea8fb" stroke-width="3">
+    <circle cx="136" cy="250" r="14"/><circle cx="110" cy="214" r="8"/><circle cx="470" cy="300" r="12"/><circle cx="498" cy="262" r="7"/>
+  </g>
+  <g fill="#fff" opacity=".9"><circle cx="131" cy="245" r="3.5"/><circle cx="466" cy="296" r="3"/></g>
+  <!-- shadow -->
+  <ellipse cx="292" cy="470" rx="128" ry="16" fill="#cfcbff"/>
+  <!-- left arm waving -->
+  <path d="M236 252c-44 2-76-22-90-56" fill="none" stroke="#1d1a4d" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="142" cy="186" r="19" fill="#fff" stroke="#1d1a4d" stroke-width="6"/>
+  <path d="M112 160c-6 6-8 14-6 22M104 146c-10 10-14 26-10 40" fill="none" stroke="#5146d4" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- tooth body -->
+  <g transform="translate(178 120) scale(1.14)">
+    <path d="M100 28C82 12 40 8 32 48c-6 32 8 56 16 80 8 28 10 68 26 72 16 4 14-40 26-50 12 10 10 54 26 50 16-4 18-44 26-72 8-24 22-48 16-80-8-40-50-36-68-20Z" fill="#fff"/>
+    <g clip-path="url(#og-tooth-clip)">
+      <path d="M150 0c30 40 30 120-10 220h80V0Z" fill="#f3f2ff"/>
+      <path d="M44 40c6-14 20-20 34-18" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+    </g>
+    <path d="M100 28C82 12 40 8 32 48c-6 32 8 56 16 80 8 28 10 68 26 72 16 4 14-40 26-50 12 10 10 54 26 50 16-4 18-44 26-72 8-24 22-48 16-80-8-40-50-36-68-20Z" fill="none" stroke="#1d1a4d" stroke-width="5.5" stroke-linejoin="round"/>
+    <!-- face -->
+    <ellipse cx="78" cy="78" rx="7.5" ry="10" fill="#1d1a4d"/>
+    <ellipse cx="122" cy="78" rx="7.5" ry="10" fill="#1d1a4d"/>
+    <circle cx="80.5" cy="74" r="2.8" fill="#fff"/><circle cx="124.5" cy="74" r="2.8" fill="#fff"/>
+    <ellipse cx="62" cy="98" rx="11" ry="7" fill="#ffc6d7"/>
+    <ellipse cx="138" cy="98" rx="11" ry="7" fill="#ffc6d7"/>
+    <path d="M84 96c6 18 26 18 32 0Z" fill="#1d1a4d" stroke="#1d1a4d" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M91 104c5-4 13-4 18 0-4 5-14 5-18 0Z" fill="#fb6f97"/>
+  </g>
+  <!-- right arm with toothbrush -->
+  <path d="M350 252c40 2 70-8 84-26" fill="none" stroke="#1d1a4d" stroke-width="7" stroke-linecap="round"/>
+  <g transform="rotate(24 446 150)">
+    <rect x="436" y="120" width="20" height="150" rx="10" fill="#5146d4" stroke="#1d1a4d" stroke-width="5"/>
+    <rect x="432" y="76" width="28" height="52" rx="8" fill="#fff" stroke="#1d1a4d" stroke-width="5"/>
+    <path d="M432 88h-10M432 100h-10M432 112h-10" stroke="#1d1a4d" stroke-width="5" stroke-linecap="round"/>
+    <path d="M420 76c-10-4-12-18 0-22 6-12 24-10 26 2 12 2 12 18 0 20Z" fill="#a3ead2" stroke="#1d1a4d" stroke-width="4.5" stroke-linejoin="round"/>
+    <circle cx="444" cy="166" r="4" fill="#ffdc4f"/>
+  </g>
+  <rect x="420" y="208" width="36" height="34" rx="17" fill="#fff" stroke="#1d1a4d" stroke-width="6"/>
+  <!-- sparkles -->
+  <g fill="#ffcc22" stroke="#1d1a4d" stroke-width="4" stroke-linejoin="round">
+    <path d="M206 88c3 16 9 22 25 25-16 3-22 9-25 25-3-16-9-22-25-25 16-3 22-9 25-25Z"/>
+    <path d="M498 380c2 11 6 15 17 17-11 2-15 6-17 17-2-11-6-15-17-17 11-2 15-6 17-17Z"/>
+    <path d="M84 312c2 9 5 12 14 14-9 2-12 5-14 14-2-9-5-12-14-14 9-2 12-5 14-14Z"/>
+  </g>
+  <g fill="#fb6f97"><circle cx="372" cy="70" r="7"/><circle cx="518" cy="190" r="5"/><circle cx="196" cy="420" r="6"/></g>
+</g>
+</svg>

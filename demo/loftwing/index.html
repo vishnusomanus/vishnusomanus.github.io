@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loftwing: email marketing for newsletters and small shops</title>
+    <meta
+      name="description"
+      content="Loftwing is email marketing for independent newsletters and small online shops, built in Spokane, Washington. Now in private beta. Join the waitlist for the public launch."
+    />
+    <meta name="theme-color" content="#170c2c" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Loftwing" />
+    <meta property="og:title" content="Loftwing: email marketing for newsletters and small shops" />
+    <meta
+      property="og:description"
+      content="Loftwing is email marketing for independent newsletters and small online shops, built in Spokane, Washington. Now in private beta. Join the waitlist for the public launch."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;800;900&amp;family=Sen:wght@400;500;600;700&amp;family=Overpass+Mono:wght@400;600;700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="index" class="flex min-h-screen flex-col">
+    <a
+      href="#main"
+      class="sr-only z-50 rounded-lg bg-apricot px-4 py-3 font-bold text-night focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      >Skip to content</a
+    >
+    <div class="sky" aria-hidden="true"></div>
+    <header class="sticky top-0 z-40 pt-3">
+      <div class="wrap">
+        <div
+          class="relative flex min-h-16 items-center justify-between gap-3 rounded-2xl border border-white/15 bg-[#190e2e]/75 px-3 shadow-[0_18px_40px_-24px_rgba(4,0,18,0.9)] backdrop-blur-xl sm:px-4"
+        >
+          <a href="index.html" class="flex items-center gap-2.5 rounded-lg" aria-label="Loftwing home"
+            ><svg viewBox="0 0 40 40" class="size-9 shrink-0" aria-hidden="true">
+              <defs>
+                <linearGradient id="logo-sky" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ffcb9e" />
+                  <stop offset="1" stop-color="#ff8f70" />
+                </linearGradient>
+              </defs>
+              <rect width="40" height="40" rx="11" fill="url(#logo-sky)" />
+              <path
+                d="M6 28 20 10l14 18"
+                fill="none"
+                stroke="#241238"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path d="M13.5 28c1-6 4-9.5 8-11 .5 4.5 2.5 7 7 8-3.5 3-10 4.5-15 3Z" fill="#241238" />
+              <circle cx="20" cy="9" r="2" fill="#241238" /></svg
+            ><span class="font-display text-[1.4rem] font-extrabold tracking-tight">Loftwing</span></a
+          >
+          <nav class="hidden lg:block" aria-label="Main">
+            <ul class="flex items-center gap-0.5">
+              <li><a class="nav-link" href="product.html">Product</a></li>
+              <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+              <li><a class="nav-link" href="migrate.html">Switch</a></li>
+              <li><a class="nav-link" href="roadmap.html">Roadmap</a></li>
+              <li><a class="nav-link" href="journal.html">Journal</a></li>
+              <li><a class="nav-link" href="about.html">About</a></li>
+            </ul>
+          </nav>
+          <div class="flex items-center gap-2">
+            <a class="btn btn-sm hidden whitespace-nowrap sm:inline-flex" href="waitlist.html" data-spot-cta
+              >Join the waitlist</a
+            >
+            <button
+              type="button"
+              class="inline-flex size-11 items-center justify-center rounded-xl border border-white/25 lg:hidden"
+              data-menu-button
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              aria-label="Open menu"
+            >
+              <svg viewBox="0 0 24 24" class="size-6" aria-hidden="true" data-menu-open>
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="size-6" aria-hidden="true" data-menu-close hidden>
+                <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+          <nav
+            id="mobile-menu"
+            class="absolute inset-x-0 top-[calc(100%+0.5rem)] rounded-2xl border border-white/15 bg-plum p-3 lg:hidden"
+            aria-label="Mobile"
+            hidden
+          >
+            <ul class="grid gap-1">
+              <li><a class="nav-link !py-3 text-lg" href="product.html">Product</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="pricing.html">Pricing</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="migrate.html">Switch</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="roadmap.html">Roadmap</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="journal.html">Journal</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="about.html">About</a></li>
+              <li class="pt-2"><a class="btn w-full" href="waitlist.html" data-spot-cta>Join the waitlist</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="relative overflow-hidden pt-10 pb-16 lg:pt-14 lg:pb-24">
+        <svg
+          class="pointer-events-none absolute inset-x-0 bottom-0 h-48 w-full lg:h-64"
+          viewBox="0 0 1440 260"
+          preserveAspectRatio="xMidYMax slice"
+          aria-hidden="true"
+        >
+          <defs>
+            <linearGradient id="ridge-far" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#47205f" />
+              <stop offset="1" stop-color="#22103a" />
+            </linearGradient>
+            <linearGradient id="ridge-near" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2a1442" />
+              <stop offset="1" stop-color="#150c2a" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0 150c120-40 220-54 360-22s220 34 360-10 280-60 420-26 220 40 300 16v152H0Z"
+            fill="url(#ridge-far)"
+            fill-opacity=".75"
+          />
+          <path d="M0 208c180-32 340-30 520-6s340 20 500-8 280-26 420-4v70H0Z" fill="url(#ridge-near)" />
+          <g
+            class="hidden lg:block"
+            transform="translate(760 134)"
+            fill="#150c2a"
+            stroke="#ffcb9e"
+            stroke-opacity=".55"
+          >
+            <path d="M0 74V30L34 4l34 26v44Z" />
+            <path d="M-6 32 34-2l40 34" fill="none" stroke-width="3" />
+            <path d="M34-2v-14" stroke-width="2" />
+            <g fill="#ff8f70" stroke="none">
+              <rect x="14" y="36" width="12" height="11" rx="5.5" />
+              <rect x="42" y="36" width="12" height="11" rx="5.5" />
+              <rect x="28" y="54" width="12" height="11" rx="5.5" />
+            </g>
+          </g>
+        </svg>
+
+        <div class="wrap relative grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.04fr)] lg:gap-12">
+          <div class="relative min-w-0">
+            <p class="eyebrow">
+              <span class="size-2 rounded-full bg-leaf" aria-hidden="true"></span>Private beta, Cohort 4 flying now
+            </p>
+            <h1 class="mt-4 text-[clamp(2.7rem,5.5vw,4.5rem)] leading-[1.02] font-black">
+              Email that always finds its way home.
+            </h1>
+            <p class="mt-4 max-w-xl text-lg text-haze">
+              Loftwing is email marketing for independent newsletters and small online shops: a calm editor, automations
+              that know when to stop, and deliverability you can actually see.
+            </p>
+            <div class="mt-6 max-w-xl">
+              <div>
+                <form
+                  class="flex flex-col gap-2 rounded-2xl border border-white/20 bg-night/60 p-2 sm:flex-row"
+                  data-quick-join
+                  novalidate
+                >
+                  <label class="sr-only" for="hero-email">Your email address</label>
+                  <input
+                    id="hero-email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    required
+                    placeholder="you@yourpublication.example"
+                    aria-describedby="hero-email-error"
+                    class="min-h-12 w-full min-w-0 flex-1 rounded-xl bg-transparent px-3.5 text-mist placeholder:text-fog"
+                  />
+                  <button type="submit" class="btn whitespace-nowrap">Join the waitlist</button>
+                </form>
+                <span id="hero-email-error" class="error" data-error></span>
+                <p class="glass px-4 py-3" data-quick-spot hidden>
+                  You're in line at
+                  <strong class="font-mono text-apricot">No. <span data-quick-position>18,413</span></strong
+                  >. <a class="text-link" href="waitlist.html">See your spot and invite link</a>
+                </p>
+              </div>
+            </div>
+            <p class="mt-3 text-[0.95rem] text-haze">
+              <strong class="font-mono text-mist" data-line-count>18,412</strong> publications and shops are in line.
+              Founding members keep 25% off for as long as they stay.
+            </p>
+            <div class="mt-6 max-w-xl">
+              <p class="mb-2 text-[0.95rem] font-semibold">
+                Public launch:
+                <time data-date="launch" data-format="long" datetime="2027-03-09" class="text-apricot"
+                  >Tuesday, March 9, 2027</time
+                >, 9:00 AM PT
+              </p>
+              <div data-countdown role="timer" aria-label="Time left until public launch">
+                <div class="grid grid-cols-4 gap-2 sm:gap-3" data-cd-cells>
+                  <div class="pane px-1 py-2.5 text-center">
+                    <span class="block font-mono text-2xl font-bold text-apricot sm:text-[1.9rem]" data-cd="days"
+                      >125</span
+                    ><span class="mt-0.5 block text-xs text-haze">days</span>
+                  </div>
+                  <div class="pane px-1 py-2.5 text-center">
+                    <span class="block font-mono text-2xl font-bold text-apricot sm:text-[1.9rem]" data-cd="hours"
+                      >00</span
+                    ><span class="mt-0.5 block text-xs text-haze">hours</span>
+                  </div>
+                  <div class="pane px-1 py-2.5 text-center">
+                    <span class="block font-mono text-2xl font-bold text-apricot sm:text-[1.9rem]" data-cd="minutes"
+                      >00</span
+                    ><span class="mt-0.5 block text-xs text-haze">minutes</span>
+                  </div>
+                  <div class="pane px-1 py-2.5 text-center">
+                    <span class="block font-mono text-2xl font-bold text-apricot sm:text-[1.9rem]" data-cd="seconds"
+                      >00</span
+                    ><span class="mt-0.5 block text-xs text-haze">seconds</span>
+                  </div>
+                </div>
+                <p class="pane px-4 py-3 font-semibold text-leaf" data-cd-live hidden>
+                  Loftwing is live. Everyone on the waitlist is in.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="relative min-w-0">
+            <div
+              class="pointer-events-none absolute -top-8 -right-6 size-64 rounded-full bg-gradient-to-br from-apricot to-coral opacity-90 sm:size-80"
+              aria-hidden="true"
+            ></div>
+            <div
+              class="pointer-events-none absolute bottom-2 -left-6 size-40 rounded-full bg-iris-deep opacity-80"
+              aria-hidden="true"
+            ></div>
+            <svg
+              class="pointer-events-none absolute -top-24 left-2 hidden h-24 w-72 lg:block"
+              viewBox="0 0 288 96"
+              aria-hidden="true"
+            >
+              <path
+                d="M2 88C70 86 130 72 196 34"
+                fill="none"
+                stroke="#ffcb9e"
+                stroke-opacity=".5"
+                stroke-width="2"
+                stroke-dasharray="2 8"
+                stroke-linecap="round"
+              />
+              <g fill="#f7f1fb">
+                <path d="M198 28c6-5 13-6 20-5 4-4 10-5 14-3 3-1 6 0 7 2l6 2-6 2c-1 5-6 8-13 9-11 1-21-1-28-7Z" />
+              </g>
+              <path d="M215 23c2-10 8-17 21-21-1 10-5 17-12 23Z" fill="#b9b1ff" />
+              <g fill="#f7f1fb" opacity=".85">
+                <path d="M136 56c4-3 9-4 13-3 3-3 7-3 10-2 2-1 4 0 5 1l4 2-4 1c-1 3-4 6-9 6-7 1-14-1-19-5Z" />
+              </g>
+              <path d="M148 52c1-7 5-11 14-14-1 7-3 11-8 15Z" fill="#b9b1ff" opacity=".85" />
+            </svg>
+            <figure class="relative">
+              <figcaption class="sr-only">
+                The Loftwing campaign editor beside a phone showing the issue in an inbox.
+              </figcaption>
+              <div
+                class="overflow-hidden rounded-[1.4rem] border border-white/25 bg-[#190e2e]/75 shadow-[0_40px_70px_-30px_rgba(4,0,18,0.95)] backdrop-blur-xl sm:mr-16"
+              >
+                <div class="flex items-center justify-between gap-3 border-b border-white/15 px-4 py-2.5">
+                  <p class="flex min-w-0 items-center gap-2 text-sm font-semibold">
+                    <span class="size-2.5 rounded-full bg-coral" aria-hidden="true"></span
+                    ><span class="truncate">Issue No. 50, draft</span>
+                  </p>
+                  <p class="shrink-0 rounded-full bg-leaf/15 px-2.5 py-0.5 text-xs font-semibold text-leaf">
+                    Homing Check: all clear
+                  </p>
+                </div>
+                <div class="p-4 sm:p-5">
+                  <p class="mono-label">Subject</p>
+                  <p class="mt-1 font-display text-xl font-bold">The long way round the Palouse</p>
+                  <p class="mt-3 mono-label">To</p>
+                  <p class="mt-1 flex flex-wrap gap-1.5 text-sm">
+                    <span class="rounded-full bg-iris px-2.5 py-0.5 font-semibold text-night">Regular readers</span
+                    ><span class="rounded-full border border-white/30 px-2.5 py-0.5">7,738 people</span>
+                  </p>
+                  <div
+                    class="mt-4 space-y-2.5 rounded-xl border border-white/10 bg-night/40 p-3.5 text-[0.93rem] text-haze"
+                  >
+                    <p>
+                      Dear {{first_name}}, the wheat is in, the roads are empty and I've found a bakery in Colfax that's
+                      worth the drive.
+                    </p>
+                    <div class="flex items-center gap-3 rounded-lg border border-dashed border-white/25 p-2.5">
+                      <svg viewBox="0 0 64 44" class="h-9 w-14 shrink-0" aria-hidden="true">
+                        <rect width="64" height="44" rx="5" fill="#3a1d52" />
+                        <path d="M0 34c10-10 20-14 30-8s22 4 34-8v21a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5Z" fill="#ff8f70" />
+                        <circle cx="48" cy="12" r="5" fill="#ffcb9e" /></svg
+                      ><span class="text-sm">Photo block: the road out of Steptoe</span>
+                    </div>
+                    <p class="hidden sm:block sm:pr-28">
+                      This week: three small towns, one good pie and a note from a reader.
+                    </p>
+                  </div>
+                  <div class="mt-4 flex items-center justify-between gap-3 sm:justify-start sm:gap-5">
+                    <p class="text-sm text-haze">Sends <strong class="text-mist">Thursday, 7:00 AM</strong></p>
+                    <span class="btn btn-sm !min-h-9" aria-hidden="true">Schedule</span>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="glide absolute -right-1 -bottom-10 hidden w-[12.5rem] rounded-[1.6rem] border border-white/30 bg-[#120a24] p-2.5 shadow-[0_30px_50px_-20px_rgba(4,0,18,0.95)] sm:block"
+              >
+                <p class="flex items-center justify-between px-1.5 pb-1.5 text-[0.7rem] font-semibold text-haze">
+                  <span>Inbox</span><span class="font-mono">7:02</span>
+                </p>
+                <ul class="space-y-1.5 text-[0.72rem] leading-snug">
+                  <li class="rounded-xl bg-white/15 p-2">
+                    <strong class="block text-mist">The Palouse Ledger</strong
+                    ><span class="block truncate text-mist">The long way round the Palouse</span>
+                  </li>
+                  <li class="rounded-xl bg-white/5 p-2 text-haze">
+                    <strong class="block">Spool &amp; Flint</strong
+                    ><span class="block truncate">New linen just came in</span>
+                  </li>
+                  <li class="rounded-xl bg-white/5 p-2 text-haze">
+                    <strong class="block">Marmot Press</strong><span class="block truncate">Your book has shipped</span>
+                  </li>
+                </ul>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal wrap" aria-labelledby="proof-heading">
+        <div class="glass p-6 sm:p-8">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <h2 id="proof-heading" class="max-w-xl text-2xl font-extrabold sm:text-3xl">
+              Already flying with 412 beta publications and shops
+            </h2>
+            <dl class="flex flex-wrap gap-x-8 gap-y-3">
+              <div>
+                <dt class="text-sm text-haze">Emails a month</dt>
+                <dd class="font-mono text-2xl font-bold text-apricot">2.6M</dd>
+              </div>
+              <div>
+                <dt class="text-sm text-haze">Reached the inbox</dt>
+                <dd class="font-mono text-2xl font-bold text-apricot">97.1%</dd>
+              </div>
+              <div>
+                <dt class="text-sm text-haze">Hard bounces</dt>
+                <dd class="font-mono text-2xl font-bold text-apricot">0.3%</dd>
+              </div>
+            </dl>
+          </div>
+          <ul
+            class="mt-7 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-white/15 pt-6 text-lg text-mist md:grid-cols-4"
+          >
+            <li class="font-display font-black">The Palouse Ledger</li>
+            <li class="font-mono font-semibold">Tideline Notes</li>
+            <li class="font-sans font-bold">Sidestreet Bindery</li>
+            <li class="font-display italic font-medium">Hollowbrook Yarn</li>
+            <li class="font-display font-extrabold tracking-tight">The Slow Ferry</li>
+            <li class="font-mono font-bold">Marmot Press</li>
+            <li class="font-sans font-semibold italic">Thistledown Tea</li>
+            <li class="font-display font-bold">Okanogan Field Notes</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="reveal wrap mt-20 scroll-mt-24" id="subject-tester" aria-labelledby="tester-heading">
+        <div class="max-w-2xl">
+          <p class="eyebrow">Try a real piece of the product</p>
+          <h2 id="tester-heading" class="mt-3 text-[clamp(2rem,4vw,3rem)] leading-tight font-extrabold">
+            Will your subject line make it?
+          </h2>
+          <p class="mt-3 text-lg text-haze">
+            This is the same check that runs in the Loft Editor. Type a subject and watch it score length, shouting,
+            spam filter words and how a phone will cut it off.
+          </p>
+        </div>
+        <div class="mt-8 grid gap-5 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)]">
+          <div class="glass p-5 sm:p-7">
+            <form data-subject-form novalidate>
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <label class="label" for="subject-input">Subject line</label>
+                <span class="font-mono text-sm text-fog" data-subject-count>0 characters</span>
+              </div>
+              <input
+                id="subject-input"
+                name="subject"
+                type="text"
+                class="field"
+                maxlength="200"
+                autocomplete="off"
+                value="Five small fixes for a quieter inbox"
+              />
+            </form>
+            <div class="mt-3 flex flex-wrap items-center gap-2">
+              <span class="text-sm text-haze">Try one:</span>
+              <button
+                type="button"
+                class="chip !min-h-9 text-sm"
+                data-subject-sample="ACT NOW!! Free cash for your list $$"
+              >
+                A spammy one
+              </button>
+              <button type="button" class="chip !min-h-9 text-sm" data-subject-sample="Hi">A short one</button>
+              <button
+                type="button"
+                class="chip !min-h-9 text-sm"
+                data-subject-sample="{{first_name}}, 3 bakeries worth the drive this fall"
+              >
+                A good one
+              </button>
+            </div>
+            <div class="mt-6 flex flex-col gap-5 sm:flex-row sm:items-start">
+              <div class="relative mx-auto size-36 shrink-0 sm:mx-0">
+                <svg viewBox="0 0 120 120" class="size-full -rotate-90" aria-hidden="true">
+                  <circle cx="60" cy="60" r="52" fill="none" stroke="#3a1d52" stroke-width="10" />
+                  <circle
+                    cx="60"
+                    cy="60"
+                    r="52"
+                    fill="none"
+                    stroke="#ff8f70"
+                    stroke-width="10"
+                    stroke-linecap="round"
+                    data-subject-gauge
+                    style="transition: stroke-dashoffset 0.3s"
+                  />
+                </svg>
+                <p class="absolute inset-0 flex flex-col items-center justify-center">
+                  <span class="font-display text-[2.6rem] leading-none font-black" data-subject-score>96</span
+                  ><span class="text-xs text-haze">out of 100</span>
+                </p>
+              </div>
+              <div class="min-w-0 flex-1" aria-live="polite">
+                <p class="font-display text-xl font-bold" data-subject-grade>Ready to send</p>
+                <ul class="mt-3 space-y-2" data-subject-flags></ul>
+              </div>
+            </div>
+          </div>
+          <div class="glass flex flex-col gap-4 p-5 sm:p-7">
+            <div>
+              <h3 class="mono-label">On a phone</h3>
+              <div class="pane mx-auto mt-2 max-w-[20rem] overflow-hidden p-3">
+                <p class="flex justify-between text-sm">
+                  <strong>The Palouse Ledger</strong><span class="font-mono text-xs text-fog">7:02</span>
+                </p>
+                <p class="mt-0.5 break-words text-[0.95rem] font-semibold text-mist" data-subject-mobile>
+                  Five small fixes for a quieter inbox
+                </p>
+                <p class="truncate text-sm text-fog">Dear reader, this week we finally...</p>
+              </div>
+            </div>
+            <div>
+              <h3 class="mono-label">On a desktop</h3>
+              <div class="pane mt-2 flex flex-wrap items-baseline gap-x-3 p-3 text-[0.95rem]">
+                <strong>The Palouse Ledger</strong
+                ><span class="min-w-0 break-words" data-subject-desktop>Five small fixes for a quieter inbox</span>
+              </div>
+            </div>
+            <p class="text-[0.95rem] text-haze" data-subject-cut aria-live="polite">
+              Fits on a phone without being cut.
+            </p>
+            <p class="mt-auto border-t border-white/15 pt-4 text-[0.95rem] text-haze">
+              Founding members get this before every send, along with the rest of
+              <a class="text-link" href="product.html?tab=deliverability">Homing Check</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal wrap mt-20" aria-labelledby="features-heading">
+        <div class="max-w-2xl">
+          <h2 id="features-heading" class="text-[clamp(2rem,4vw,3rem)] leading-tight font-extrabold">
+            Everything a small list needs, and nothing it doesn't
+          </h2>
+          <p class="mt-3 text-lg text-haze">
+            Six tools that work the way one writer or one shop owner works. No funnels, no lead scores, no 40-tab
+            settings page.
+          </p>
+        </div>
+        <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <li class="glass flex flex-col p-5">
+            <svg viewBox="0 0 120 84" class="h-24 w-36" aria-hidden="true">
+              <rect x="10" y="10" width="74" height="64" rx="8" fill="#241238" stroke="#b9b1ff" stroke-width="1.5" />
+              <path d="M22 26h50M22 38h38M22 50h46M22 62h24" stroke="#d6cbe3" stroke-width="3" stroke-linecap="round" />
+              <path
+                d="M112 8C96 12 82 26 72 46l-3 11 10-5c6-2 11-7 15-13-4 1-7 1-9 0 6-2 11-6 15-12-3 1-6 1-8 0 8-3 15-9 20-19Z"
+                fill="#ff8f70"
+              />
+              <path d="M69 57 94 22" stroke="#241238" stroke-width="1.5" />
+            </svg>
+            <h3 class="mt-3 text-xl font-extrabold">Loft Editor</h3>
+            <p class="mt-1.5 text-[0.97rem] text-haze">
+              A blank page and a blinking cursor. Blocks when you ask for them, and honest plain-text beside every
+              issue.
+            </p>
+            <a class="text-link mt-3 self-start" href="product.html?tab=editor"
+              >See Loft Editor<span class="sr-only"> in the product tour</span></a
+            >
+          </li>
+          <li class="glass flex flex-col p-5">
+            <svg viewBox="0 0 120 84" class="h-24 w-36" aria-hidden="true">
+              <path
+                d="M18 42c20 0 20-24 42-24s18 0 42 0M18 42c20 0 20 24 42 24s18 0 42 0"
+                fill="none"
+                stroke="#b9b1ff"
+                stroke-width="2"
+                stroke-dasharray="4 5"
+                stroke-linecap="round"
+              />
+              <circle cx="16" cy="42" r="10" fill="#ff8f70" />
+              <rect x="50" y="8" width="20" height="20" rx="5" fill="#241238" stroke="#ffcb9e" stroke-width="1.5" />
+              <rect x="50" y="56" width="20" height="20" rx="5" fill="#241238" stroke="#ffcb9e" stroke-width="1.5" />
+              <path d="M98 8 112 18 98 28Zm0 48 14 10-14 10Z" fill="#ffcb9e" />
+            </svg>
+            <h3 class="mt-3 text-xl font-extrabold">Flightpaths</h3>
+            <p class="mt-1.5 text-[0.97rem] text-haze">
+              Welcome series, cart reminders and win-backs that stop the moment a person replies or buys.
+            </p>
+            <a class="text-link mt-3 self-start" href="product.html?tab=automations"
+              >See Flightpaths<span class="sr-only"> in the product tour</span></a
+            >
+          </li>
+          <li class="glass flex flex-col p-5">
+            <svg viewBox="0 0 120 84" class="h-24 w-36" aria-hidden="true">
+              <circle cx="46" cy="42" r="30" fill="#6f61e8" fill-opacity=".4" stroke="#b9b1ff" stroke-width="1.5" />
+              <circle cx="76" cy="42" r="30" fill="#ff8f70" fill-opacity=".35" stroke="#ffcb9e" stroke-width="1.5" />
+              <g fill="#f7f1fb">
+                <circle cx="30" cy="30" r="3.5" />
+                <circle cx="36" cy="54" r="3.5" />
+                <circle cx="60" cy="30" r="3.5" />
+                <circle cx="62" cy="44" r="3.5" />
+                <circle cx="60" cy="58" r="3.5" />
+                <circle cx="88" cy="28" r="3.5" />
+                <circle cx="92" cy="50" r="3.5" />
+              </g>
+            </svg>
+            <h3 class="mt-3 text-xl font-extrabold">Flocks</h3>
+            <p class="mt-1.5 text-[0.97rem] text-haze">
+              Group readers by what they open, click and buy. Flocks update themselves as people change.
+            </p>
+            <a class="text-link mt-3 self-start" href="product.html?tab=segments"
+              >See Flocks<span class="sr-only"> in the product tour</span></a
+            >
+          </li>
+          <li class="glass flex flex-col p-5">
+            <svg viewBox="0 0 120 84" class="h-24 w-36" aria-hidden="true">
+              <ellipse cx="60" cy="42" rx="44" ry="24" fill="none" stroke="#ffcb9e" stroke-width="10" />
+              <ellipse cx="60" cy="42" rx="44" ry="24" fill="none" stroke="#241238" stroke-width="2" />
+              <rect x="42" y="27" width="36" height="30" rx="4" fill="#241238" stroke="#9be8c2" stroke-width="2" />
+              <path
+                d="m50 42 7 7 13-14"
+                fill="none"
+                stroke="#9be8c2"
+                stroke-width="3.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <h3 class="mt-3 text-xl font-extrabold">Homing Check</h3>
+            <p class="mt-1.5 text-[0.97rem] text-haze">
+              SPF, DKIM, DMARC and broken links are checked before the send button unlocks.
+            </p>
+            <a class="text-link mt-3 self-start" href="product.html?tab=deliverability"
+              >See Homing Check<span class="sr-only"> in the product tour</span></a
+            >
+          </li>
+          <li class="glass flex flex-col p-5">
+            <svg viewBox="0 0 120 84" class="h-24 w-36" aria-hidden="true">
+              <path d="M8 74h104" stroke="#8c7da6" stroke-width="1.5" />
+              <path
+                d="M12 74c10-26 20-40 30-40s14 22 20 22 14-38 22-38 14 22 26 28"
+                fill="none"
+                stroke="#ffcb9e"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <circle cx="42" cy="34" r="4" fill="#ff8f70" />
+              <circle cx="84" cy="18" r="4" fill="#ff8f70" />
+              <path d="M96 10h14M103 3v14" stroke="#b9b1ff" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <h3 class="mt-3 text-xl font-extrabold">Logbook</h3>
+            <p class="mt-1.5 text-[0.97rem] text-haze">
+              Opens, clicks and sales for the last ten issues, and the readers behind them, with no dashboard maze.
+            </p>
+            <a class="text-link mt-3 self-start" href="product.html?tab=analytics"
+              >See Logbook<span class="sr-only"> in the product tour</span></a
+            >
+          </li>
+          <li class="glass flex flex-col p-5">
+            <svg viewBox="0 0 120 84" class="h-24 w-36" aria-hidden="true">
+              <path d="M14 40h60v32H14Z" fill="#241238" stroke="#ffcb9e" stroke-width="1.5" />
+              <path d="M14 50h60M14 60h60M29 40v32M44 40v32M59 40v32" stroke="#8c7da6" />
+              <path d="M8 40 44 22l36 18" fill="none" stroke="#ffcb9e" stroke-width="2" />
+              <path d="M84 18c8 0 16 4 22 12" fill="none" stroke="#b9b1ff" stroke-width="2" stroke-dasharray="3 4" />
+              <path d="M84 28c4-5 8-9 14-10-1 5-3 9-8 13Z" fill="#ff8f70" />
+            </svg>
+            <h3 class="mt-3 text-xl font-extrabold">An easy move</h3>
+            <p class="mt-1.5 text-[0.97rem] text-haze">
+              Bring your list, your archive and your unsubscribes. Most moves take an afternoon, and we'll show you
+              exactly how long yours should.
+            </p>
+            <a class="text-link mt-3 self-start" href="migrate.html">Estimate your move</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="reveal wrap mt-20" aria-labelledby="quotes-heading">
+        <h2 id="quotes-heading" class="text-[clamp(1.8rem,3.5vw,2.6rem)] leading-tight font-extrabold">
+          What the beta says
+        </h2>
+        <div class="mt-6 grid gap-4 lg:grid-cols-3">
+          <figure class="glass flex flex-col p-6">
+            <blockquote class="text-lg leading-relaxed">
+              We moved 9,400 readers on a Tuesday afternoon, and nobody noticed. That's the highest praise I can give an
+              email tool.
+            </blockquote>
+            <figcaption class="mt-auto pt-4 text-[0.95rem]">
+              <strong class="block font-display font-bold">Hestia Quincy</strong
+              ><span class="text-haze">Editor, The Palouse Ledger</span>
+            </figcaption>
+          </figure>
+          <figure class="glass flex flex-col p-6">
+            <blockquote class="text-lg leading-relaxed">
+              The cart reminder is one plain note with the skein in it. It brought back more than the three-email series
+              it replaced.
+            </blockquote>
+            <figcaption class="mt-auto pt-4 text-[0.95rem]">
+              <strong class="block font-display font-bold">Ikaika Mirembe</strong
+              ><span class="text-haze">Owner, Hollowbrook Yarn</span>
+            </figcaption>
+          </figure>
+          <figure class="glass flex flex-col p-6">
+            <blockquote class="text-lg leading-relaxed">
+              I used to dread the send button. Homing Check found a broken link in my first issue and a DKIM mistake I'd
+              had for two years.
+            </blockquote>
+            <figcaption class="mt-auto pt-4 text-[0.95rem]">
+              <strong class="block font-display font-bold">Leda Castellan</strong
+              ><span class="text-haze">Writer, The Slow Ferry</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="reveal wrap mt-20" aria-labelledby="timeline-heading">
+        <div class="glass grid gap-8 p-6 sm:p-8 lg:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
+          <div>
+            <h2 id="timeline-heading" class="text-[clamp(1.8rem,3.5vw,2.6rem)] leading-tight font-extrabold">
+              How we're opening the loft
+            </h2>
+            <p class="mt-3 text-haze">
+              We let people in by cohort so every list gets a proper warm-up and a real person to ask. Your place in
+              line decides your cohort, and every invite moves you up.
+            </p>
+            <a class="btn btn-ghost mt-5" href="waitlist.html">See how invites work</a>
+          </div>
+          <ol class="relative space-y-4 border-l border-white/25 pl-6">
+            <li>
+              <span class="absolute -left-1.5 mt-1.5 size-3 rounded-full bg-iris" aria-hidden="true"></span>
+              <p class="font-mono text-sm text-apricot">
+                <time data-date="cohort5" data-format="medium" datetime="2026-12-15">Dec 15, 2026</time>
+              </p>
+              <h3 class="font-bold">Cohort 5 opens</h3>
+              <p class="text-[0.95rem] text-haze">The first 12,000 in line, including every Lead bird.</p>
+            </li>
+            <li>
+              <span class="absolute -left-1.5 mt-1.5 size-3 rounded-full bg-iris" aria-hidden="true"></span>
+              <p class="font-mono text-sm text-apricot">
+                <time data-date="cohort6" data-format="medium" datetime="2027-01-12">Jan 12, 2027</time>
+              </p>
+              <h3 class="font-bold">Cohort 6 opens</h3>
+              <p class="text-[0.95rem] text-haze">Places up to 17,000.</p>
+            </li>
+            <li>
+              <span class="absolute -left-1.5 mt-1.5 size-3 rounded-full bg-iris" aria-hidden="true"></span>
+              <p class="font-mono text-sm text-apricot">
+                <time data-date="cohort7" data-format="medium" datetime="2027-02-09">Feb 9, 2027</time>
+              </p>
+              <h3 class="font-bold">Cohort 7 opens</h3>
+              <p class="text-[0.95rem] text-haze">Places up to 18,000, the last before launch.</p>
+            </li>
+            <li>
+              <span class="absolute -left-1.5 mt-1.5 size-3 rounded-full bg-coral" aria-hidden="true"></span>
+              <p class="font-mono text-sm text-apricot">
+                <time data-date="launch" data-format="medium" datetime="2027-03-09">Mar 9, 2027</time>
+              </p>
+              <h3 class="font-bold">Public launch</h3>
+              <p class="text-[0.95rem] text-haze">
+                Everyone on the waitlist is in. Founding pricing closes the day before.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="reveal wrap mt-20" aria-labelledby="cta-heading">
+        <div
+          class="relative overflow-hidden rounded-[1.75rem] border border-white/20 bg-gradient-to-br from-[#4b1f58]/80 via-[#2b1544]/80 to-[#1b1036]/80 p-7 text-center sm:p-12"
+        >
+          <svg
+            class="pointer-events-none absolute top-6 right-12 hidden h-24 w-40 opacity-90 md:block"
+            viewBox="0 0 160 90"
+            aria-hidden="true"
+          >
+            <g fill="#ffcb9e">
+              <path d="M30 60c6-5 14-7 22-6 5-5 12-6 17-4 3-1 5-1 7 2l6 2-6 2c-2 5-7 10-16 11-11 1-22-1-30-7Z" />
+              <path d="M50 56c3-11 9-19 22-22-1 10-6 18-14 25Z" />
+            </g>
+            <g fill="#ff8f70">
+              <path d="M90 30c4-3 9-4 14-4 3-3 8-4 11-2 2-1 4-1 5 1l4 2-4 1c-1 3-5 6-11 7-7 1-14-1-19-5Z" />
+              <path d="M103 26c2-7 6-12 14-14-1 6-4 12-9 16Z" />
+            </g>
+          </svg>
+          <h2 id="cta-heading" class="mx-auto max-w-2xl text-[clamp(2rem,4.2vw,3.2rem)] leading-tight font-black">
+            Take your spot before the loft fills up
+          </h2>
+          <p class="mx-auto mt-3 max-w-xl text-lg text-haze">
+            Founding pricing closes
+            <time data-date="foundingEnd" data-format="monthDay" datetime="2027-03-08">March 8</time>. It takes a
+            minute, and you get a place in line and an invite link to move up.
+          </p>
+          <div class="mx-auto mt-6 max-w-xl text-left">
+            <div>
+              <form
+                class="flex flex-col gap-2 rounded-2xl border border-white/20 bg-night/60 p-2 sm:flex-row"
+                data-quick-join
+                novalidate
+              >
+                <label class="sr-only" for="closing-email">Your email address</label>
+                <input
+                  id="closing-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  placeholder="you@yourpublication.example"
+                  aria-describedby="closing-email-error"
+                  class="min-h-12 w-full min-w-0 flex-1 rounded-xl bg-transparent px-3.5 text-mist placeholder:text-fog"
+                />
+                <button type="submit" class="btn whitespace-nowrap">Take my spot</button>
+              </form>
+              <span id="closing-email-error" class="error" data-error></span>
+              <p class="glass px-4 py-3" data-quick-spot hidden>
+                You're in line at
+                <strong class="font-mono text-apricot">No. <span data-quick-position>18,413</span></strong
+                >. <a class="text-link" href="waitlist.html">See your spot and invite link</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-auto pt-16">
+      <div class="wrap pb-8">
+        <div class="glass grid gap-8 p-6 sm:grid-cols-2 sm:p-8 lg:grid-cols-[1.6fr_1fr_1fr_1.2fr]">
+          <div>
+            <a href="index.html" class="inline-flex items-center gap-2.5 rounded-lg" aria-label="Loftwing home"
+              ><svg viewBox="0 0 40 40" class="size-9 shrink-0" aria-hidden="true">
+                <defs>
+                  <linearGradient id="logo-sky-footer" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#ffcb9e" />
+                    <stop offset="1" stop-color="#ff8f70" />
+                  </linearGradient>
+                </defs>
+                <rect width="40" height="40" rx="11" fill="url(#logo-sky-footer)" />
+                <path
+                  d="M6 28 20 10l14 18"
+                  fill="none"
+                  stroke="#241238"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path d="M13.5 28c1-6 4-9.5 8-11 .5 4.5 2.5 7 7 8-3.5 3-10 4.5-15 3Z" fill="#241238" />
+                <circle cx="20" cy="9" r="2" fill="#241238" /></svg
+              ><span class="font-display text-xl font-extrabold">Loftwing</span></a
+            >
+            <p class="mt-3 max-w-xs text-[0.95rem] text-haze">
+              Email marketing for independent newsletters and small online shops, built in Spokane, Washington.
+            </p>
+            <p class="mt-3 text-[0.95rem] text-haze">
+              Public launch <time data-date="launch" data-format="medium" datetime="2027-03-09">Mar 9, 2027</time>
+            </p>
+          </div>
+          <div>
+            <h2 class="mono-label !text-apricot">Product</h2>
+            <ul class="mt-3 space-y-1.5 text-[0.95rem] text-haze">
+              <li><a class="hover:text-mist hover:underline" href="product.html">Tour the tools</a></li>
+              <li><a class="hover:text-mist hover:underline" href="pricing.html">Founding pricing</a></li>
+              <li><a class="hover:text-mist hover:underline" href="migrate.html">Switch to Loftwing</a></li>
+              <li><a class="hover:text-mist hover:underline" href="roadmap.html">Roadmap</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mono-label !text-apricot">Company</h2>
+            <ul class="mt-3 space-y-1.5 text-[0.95rem] text-haze">
+              <li><a class="hover:text-mist hover:underline" href="about.html">About us</a></li>
+              <li><a class="hover:text-mist hover:underline" href="journal.html">Build journal</a></li>
+              <li><a class="hover:text-mist hover:underline" href="waitlist.html">Waitlist</a></li>
+              <li><a class="hover:text-mist hover:underline" href="about.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mono-label !text-apricot">Find us</h2>
+            <address class="mt-3 text-[0.95rem] text-haze not-italic">
+              218 W Sprague Ave, Suite 4<br />Spokane, WA 99201
+            </address>
+            <p class="mt-2 text-[0.95rem] text-haze">
+              <a class="hover:text-mist hover:underline" href="mailto:hello@loftwing.example">hello@loftwing.example</a
+              ><br /><a class="hover:text-mist hover:underline" href="tel:+15095550147">(509) 555-0147</a>
+            </p>
+          </div>
+        </div>
+        <p class="mt-5 flex flex-wrap justify-between gap-x-6 gap-y-1 px-1 text-sm text-fog">
+          <span>&copy; <span data-year>2026</span> Loftwing, Inc.</span><span>Loftwing is a fictional company.</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

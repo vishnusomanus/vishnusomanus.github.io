@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="v" x1="0" x2="1"><stop offset="0" stop-color="#47512f"/><stop offset=".3" stop-color="#76855a"/><stop offset=".45" stop-color="#a7b38e"/><stop offset=".65" stop-color="#76855a"/><stop offset="1" stop-color="#47512f"/></linearGradient>
+    <linearGradient id="m" x1="0" x2="1"><stop offset="0" stop-color="#6a3420"/><stop offset=".3" stop-color="#b65a33"/><stop offset=".45" stop-color="#d79a7f"/><stop offset=".65" stop-color="#b65a33"/><stop offset="1" stop-color="#6a3420"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#f6f1ea"/>
+  <rect x="640" y="0" width="560" height="630" fill="#ebe3d6"/>
+  <ellipse cx="840" cy="540" rx="120" ry="14" fill="#2a2016" opacity=".14"/>
+  <path d="M812 140 C812 130 868 130 868 140 L867 175 C867 205 935 232 935 330 C935 470 900 540 840 540 C780 540 745 470 745 330 C745 232 813 205 813 175 Z" fill="url(#v)"/>
+  <ellipse cx="840" cy="140" rx="28" ry="6" fill="#a7b38e"/>
+  <ellipse cx="1040" cy="542" rx="80" ry="10" fill="#2a2016" opacity=".14"/>
+  <path d="M1088 410 C1140 408 1144 500 1086 498" fill="none" stroke="#7c3d22" stroke-width="20" stroke-linecap="round"/>
+  <path d="M970 380 L1090 380 L1086 520 C1085 534 1076 542 1062 542 L998 542 C984 542 975 534 974 520 Z" fill="url(#m)"/>
+  <ellipse cx="1030" cy="380" rx="60" ry="11" fill="#d79a7f"/>
+  <text x="80" y="250" font-family="Georgia, serif" font-size="92" fill="#1f1c19">Kiln &amp; Co.</text>
+  <text x="80" y="330" font-family="Georgia, serif" font-style="italic" font-size="48" fill="#a1441d">Made slowly. Used every day.</text>
+  <text x="80" y="420" font-family="Helvetica, Arial, sans-serif" font-size="26" fill="#645d54">Handmade stoneware from Tacoma, WA</text>
+</svg>

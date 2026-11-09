@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About — Atelier North</title>
+<meta name="description" content="Atelier North is the Oslo studio of photographer Sigrid Holm." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current='page'] { text-decoration: underline; text-underline-offset: 4px; }</style>
+
+</head>
+<body class="bg-[#141812] text-[#f3eee4] font-sans antialiased">
+<header class="sticky top-0 z-30 border-b border-white/10 bg-[#141812]/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-6 gap-y-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-xl">Atelier North</a>
+    <div class="flex items-center gap-3">
+      
+      <button id="menuBtn" class="rounded-full border border-white/20 px-3 py-1 text-sm md:hidden" aria-expanded="false" aria-controls="nav">Menu</button>
+    </div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t pt-4 text-sm md:flex md:basis-auto md:flex-row md:items-center md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html">Work</a><a href="about.html" aria-current="page">About</a><a href="contact.html">Contact</a></nav>
+  </div>
+</header>
+<main>
+  <section class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 sm:px-8 lg:grid-cols-2">
+    <img src="images/about.jpg" alt="A camera held up into the late light" class="aspect-[4/5] w-full rounded-2xl object-cover" />
+    <div>
+      <p class="text-xs uppercase tracking-[0.22em] text-[#c9b48a]">The studio</p>
+      <h1 class="mt-3 font-display text-5xl leading-none">A small practice on Markveien.</h1>
+      <div class="mt-6 space-y-4 text-[#d8d2c6]">
+        <p>Atelier North is the studio of Sigrid Holm. The work is houses, portraits, and long looks at weather. Assignments come from architects, families, and the occasional magazine that still prints photographs large.</p>
+        <p>The studio has been in Grünerløkka since 2016. Film is processed down the street. Digital files are delivered as a sequenced set, not a dump of the day.</p>
+        <p>Sigrid takes a limited number of commissions each season and spends part of the winter on the coastal series, which is not for sale until the book is finished.</p>
+      </div>
+      <dl class="mt-8 grid grid-cols-2 gap-4 text-sm">
+        <div><dt class="text-[#c9b48a]">Based</dt><dd>Oslo</dd></div>
+        <div><dt class="text-[#c9b48a]">Working since</dt><dd>2014</dd></div>
+        <div><dt class="text-[#c9b48a]">Prints</dt><dd>Made to order</dd></div>
+        <div><dt class="text-[#c9b48a]">Books</dt><dd>One published, one in dummy</dd></div>
+      </dl>
+    </div>
+  </section>
+</main>
+<footer class="border-t border-white/10">
+  <div class="mx-auto grid max-w-6xl gap-8 px-5 py-12 text-sm text-[#c9c2b4] sm:px-8 md:grid-cols-3">
+    <div><p class="font-display text-2xl text-[#f3eee4]">Atelier North</p><p class="mt-2">Markveien 42<br />0554 Oslo, Norway</p></div>
+    <div><p>The studio is open Tuesday to Friday, 10:00–16:00.</p><p class="mt-2"><span class="text-[#e4c48a] underline underline-offset-4" >studio@ateliernorth.com</span></p></div>
+    <div class="space-y-1"><a href="index.html">Selected work</a><br /><a href="about.html">About the studio</a><br /><a href="contact.html">Commission a story</a></div>
+  </div>
+</footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

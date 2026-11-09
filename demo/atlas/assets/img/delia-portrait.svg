@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" width="480" height="600">
+  <!-- Illustrated portrait of Delia Quintero (fictional). Replace with a 4:5 photo. -->
+  <rect width="480" height="600" fill="#e4552b"/>
+  <circle cx="372" cy="128" r="74" fill="#f2cf63"/>
+  <g fill="none" stroke="#f69673" stroke-width="3" opacity=".9">
+    <path d="M24 200 96 140l72 60"/><path d="M24 240 96 180l72 60"/><path d="M24 280 96 220l72 60"/>
+  </g>
+  <!-- hair, back -->
+  <path d="M120 300c-14-108 44-196 128-196s146 76 134 186c-6 58 18 104 34 150 12 34-10 70-50 78l-232 6c-40-4-58-44-44-82 18-48 36-84 30-142Z" fill="#2a1712"/>
+  <!-- neck -->
+  <path d="M206 382h68l8 92h-84Z" fill="#b97b55"/>
+  <path d="M206 400c22 16 46 16 68 0v24c-22 12-46 12-68 0Z" fill="#a0653f" opacity=".7"/>
+  <!-- blazer and top -->
+  <path d="M58 600c4-74 34-120 96-138l58-16 28 54 28-54 58 16c62 18 92 64 96 138Z" fill="#1f34a8"/>
+  <path d="M212 446 240 500l28-54 18 6-46 98-46-98Z" fill="#f6f2ea"/>
+  <path d="M154 462l58-16-20 40 30 114h-38L150 520Z" fill="#18245f"/>
+  <path d="M326 462l-58-16 20 40-30 114h38l34-80Z" fill="#18245f"/>
+  <circle cx="352" cy="540" r="7" fill="#f2cf63"/>
+  <!-- face -->
+  <ellipse cx="240" cy="288" rx="76" ry="96" fill="#c98a62"/>
+  <ellipse cx="166" cy="296" rx="12" ry="20" fill="#b97b55"/>
+  <ellipse cx="314" cy="296" rx="12" ry="20" fill="#b97b55"/>
+  <circle cx="164" cy="326" r="7" fill="#f2cf63"/>
+  <circle cx="316" cy="326" r="7" fill="#f2cf63"/>
+  <!-- hair, front -->
+  <path d="M164 262c-6-74 36-122 92-122 54 0 90 36 92 98-34-8-68-34-86-66-20 44-58 76-98 90Z" fill="#2a1712"/>
+  <path d="M164 262c-14 40-14 86 4 132-30-34-42-86-30-132Z" fill="#2a1712"/>
+  <path d="M340 236c14 46 10 104-14 150 40-36 52-100 34-150Z" fill="#2a1712"/>
+  <!-- features -->
+  <path d="M196 268c10-6 22-6 32 0M256 268c10-6 22-6 32 0" fill="none" stroke="#2a1712" stroke-width="5" stroke-linecap="round"/>
+  <path d="M200 292c6 6 16 6 22 0M262 292c6 6 16 6 22 0" fill="none" stroke="#2a1712" stroke-width="4" stroke-linecap="round"/>
+  <path d="M242 296c-2 18-6 28-14 32 6 4 14 4 20 0" fill="none" stroke="#a0653f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M214 344c16 14 40 14 56 0" fill="none" stroke="#7f2b16" stroke-width="5" stroke-linecap="round"/>
+  <ellipse cx="200" cy="322" rx="14" ry="8" fill="#e4552b" opacity=".25"/>
+  <ellipse cx="284" cy="322" rx="14" ry="8" fill="#e4552b" opacity=".25"/>
+</svg>

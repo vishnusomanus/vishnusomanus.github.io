@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop all ceramics — Kiln &amp; Co.</title>
+  <meta name="description" content="Browse handmade stoneware: vases, mugs, bowls, plates, serveware and planters. Filter by category and price.">
+  <meta name="theme-color" content="#f6f1ea">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kiln &amp; Co.">
+  <meta property="og:title" content="Shop all ceramics — Kiln &amp; Co.">
+  <meta property="og:description" content="Browse handmade stoneware: vases, mugs, bowls, plates, serveware and planters. Filter by category and price.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&amp;family=Inter:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="shop" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm text-cream focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <p class="bg-ink px-4 py-2.5 text-center text-xs tracking-wide text-cream/90">Free shipping on orders over $75 · Thrown by hand in Tacoma, Washington</p>
+  <header id="site-header" class="sticky top-0 z-40 bg-paper/90 backdrop-blur-md transition-shadow duration-300">
+    <div class="container-x grid h-18 grid-cols-[1fr_auto_1fr] items-center gap-4">
+      <div class="flex items-center">
+        <button id="menu-toggle" type="button" class="-ml-2 grid h-11 w-11 place-items-center rounded-full hover:bg-sand lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <svg data-icon-open viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+        <nav aria-label="Main" class="hidden lg:block">
+          <ul class="flex items-center gap-7">
+            <li><a href="shop.html" class="link-underline text-sm aria-[current=page]:bg-[length:100%_1px]" aria-current="page">Shop all</a></li>
+            <li><a href="shop.html?category=Vases" class="link-underline text-sm aria-[current=page]:bg-[length:100%_1px]">Vases</a></li>
+            <li><a href="shop.html?category=Mugs%20%26%20Cups" class="link-underline text-sm aria-[current=page]:bg-[length:100%_1px]">Mugs &amp; Cups</a></li>
+            <li><a href="about.html" class="link-underline text-sm aria-[current=page]:bg-[length:100%_1px]">Our studio</a></li>
+            <li><a href="faq.html" class="link-underline text-sm aria-[current=page]:bg-[length:100%_1px]">Help</a></li>
+          </ul>
+        </nav>
+      </div>
+      <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Kiln &amp; Co. home">
+          <svg viewBox="0 0 32 32" class="h-8 w-8 text-clay transition-transform duration-500 group-hover:-rotate-6" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M13 7.5h6v3c0 2 4.5 3.6 4.5 9.2 0 4.3-3 6.3-7.5 6.3s-7.5-2-7.5-6.3c0-5.6 4.5-7.2 4.5-9.2z" fill="#fbf8f3"/><path d="M8.6 21.5c3 1 11.8 1 14.8 0" stroke="#a1441d" stroke-width="1.4" fill="none"/></svg>
+          <span class="font-display text-[1.45rem] font-medium tracking-tight">Kiln &amp; Co.</span>
+        </a>
+      <div class="flex items-center justify-end gap-1">
+        <a href="faq.html#contact" class="hidden rounded-full px-3 py-2 text-sm hover:bg-sand sm:inline-block">Contact</a>
+        <a href="cart.html" data-cart-open class="relative grid h-11 w-11 place-items-center rounded-full hover:bg-sand" aria-controls="cart-drawer" aria-expanded="false" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+          <span data-cart-count hidden class="absolute right-0.5 top-0.5 grid h-5 min-w-5 place-items-center rounded-full bg-clay px-1 text-[11px] font-semibold text-white">0</span>
+        </a>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-line bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="shop.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl aria-[current=page]:text-clay" aria-current="page">Shop all</a></li>
+          <li><a href="shop.html?category=Vases" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl aria-[current=page]:text-clay">Vases</a></li>
+          <li><a href="shop.html?category=Mugs%20%26%20Cups" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl aria-[current=page]:text-clay">Mugs &amp; Cups</a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl aria-[current=page]:text-clay">Our studio</a></li>
+          <li><a href="faq.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl aria-[current=page]:text-clay">Help</a></li>
+        </ul>
+        <p class="mt-6 text-sm text-stone">Questions? <a href="faq.html#contact" class="underline underline-offset-4">Write to the studio</a></p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="container-x pt-8">
+      <nav aria-label="Breadcrumb"><ol class="flex flex-wrap items-center gap-2 text-sm text-stone"><li><a href="index.html" class="hover:text-ink">Home</a></li><li aria-hidden="true">/</li><li aria-current="page" class="text-ink">Shop</li></ol></nav>
+      <div class="mt-6 flex flex-wrap items-end justify-between gap-6 border-b border-line pb-8">
+        <div>
+          <h1 id="shop-heading" class="font-display text-5xl tracking-tight sm:text-6xl">All ceramics</h1>
+          <p class="mt-3 max-w-xl text-stone">Every piece is thrown by hand, so glazes vary a little from what you see here. That is how you know it is real.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-x mt-8 grid gap-10 lg:grid-cols-[230px_1fr]">
+      <div>
+        <button id="filters-toggle" type="button" class="btn-outline w-full lg:hidden" aria-expanded="false" aria-controls="filters">
+          <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4"/></svg>
+          Filters
+        </button>
+        <form id="filters" class="mt-6 hidden space-y-8 lg:mt-0 lg:block lg:sticky lg:top-24" aria-label="Product filters">
+          <fieldset>
+            <legend class="text-xs font-semibold uppercase tracking-[0.2em] text-stone">Category</legend>
+            <ul class="mt-3 space-y-1">
+              <li><label class="flex cursor-pointer items-center justify-between gap-3 rounded-lg px-3 py-2 text-sm transition hover:bg-sand has-[:checked]:bg-ink has-[:checked]:text-cream has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-clay">
+                <span class="flex items-center gap-3"><input type="radio" name="category" value="all" class="sr-only" checked>All ceramics</span>
+                <span data-count-for="all" class="text-xs opacity-70"></span>
+              </label></li>
+              <li><label class="flex cursor-pointer items-center justify-between gap-3 rounded-lg px-3 py-2 text-sm transition hover:bg-sand has-[:checked]:bg-ink has-[:checked]:text-cream has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-clay">
+                <span class="flex items-center gap-3"><input type="radio" name="category" value="Vases" class="sr-only">Vases</span>
+                <span data-count-for="Vases" class="text-xs opacity-70"></span>
+              </label></li>
+              <li><label class="flex cursor-pointer items-center justify-between gap-3 rounded-lg px-3 py-2 text-sm transition hover:bg-sand has-[:checked]:bg-ink has-[:checked]:text-cream has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-clay">
+                <span class="flex items-center gap-3"><input type="radio" name="category" value="Mugs & Cups" class="sr-only">Mugs &amp; Cups</span>
+                <span data-count-for="Mugs & Cups" class="text-xs opacity-70"></span>
+              </label></li>
+              <li><label class="flex cursor-pointer items-center justify-between gap-3 rounded-lg px-3 py-2 text-sm transition hover:bg-sand has-[:checked]:bg-ink has-[:checked]:text-cream has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-clay">
+                <span class="flex items-center gap-3"><input type="radio" name="category" value="Bowls" class="sr-only">Bowls</span>
+                <span data-count-for="Bowls" class="text-xs opacity-70"></span>
+              </label></li>
+              <li><label class="flex cursor-pointer items-center justify-between gap-3 rounded-lg px-3 py-2 text-sm transition hover:bg-sand has-[:checked]:bg-ink has-[:checked]:text-cream has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-clay">
+                <span class="flex items-center gap-3"><input type="radio" name="category" value="Plates" class="sr-only">Plates</span>
+                <span data-count-for="Plates" class="text-xs opacity-70"></span>
+              </label></li>
+              <li><label class="flex cursor-pointer items-center justify-between gap-3 rounded-lg px-3 py-2 text-sm transition hover:bg-sand has-[:checked]:bg-ink has-[:checked]:text-cream has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-clay">
+                <span class="flex items-center gap-3"><input type="radio" name="category" value="Serveware" class="sr-only">Serveware</span>
+                <span data-count-for="Serveware" class="text-xs opacity-70"></span>
+              </label></li>
+              <li><label class="flex cursor-pointer items-center justify-between gap-3 rounded-lg px-3 py-2 text-sm transition hover:bg-sand has-[:checked]:bg-ink has-[:checked]:text-cream has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-clay">
+                <span class="flex items-center gap-3"><input type="radio" name="category" value="Planters" class="sr-only">Planters</span>
+                <span data-count-for="Planters" class="text-xs opacity-70"></span>
+              </label></li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend class="text-xs font-semibold uppercase tracking-[0.2em] text-stone">Price</legend>
+            <label for="price-max" class="sr-only">Maximum price</label>
+            <input id="price-max" name="max_price" type="range" min="20" max="100" step="2" value="100" class="mt-4 w-full accent-clay">
+            <div class="mt-1 flex justify-between text-xs text-stone"><span>$20</span><output id="price-max-value" for="price-max" class="font-medium text-ink">Any price</output></div>
+          </fieldset>
+          <button id="reset-filters" type="button" class="text-sm underline underline-offset-4 hover:text-clay">Reset filters</button>
+        </form>
+      </div>
+
+      <div>
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <p id="result-count" class="text-sm text-stone" role="status" aria-live="polite">12 products</p>
+          <label class="flex items-center gap-3 text-sm">
+            <span class="text-stone">Sort by</span>
+            <select id="sort" name="sort" class="rounded-full border border-line bg-cream py-2 pl-4 pr-9 text-sm focus:border-ink focus:outline-none">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="rating">Top rated</option>
+              <option value="name">Name A–Z</option>
+            </select>
+          </label>
+        </div>
+        <div id="product-grid" class="mt-8 grid grid-cols-2 gap-x-4 gap-y-12 sm:gap-x-6 xl:grid-cols-3"></div>
+        <div id="no-results" hidden class="rounded-[1.75rem] border border-dashed border-line px-6 py-16 text-center">
+          <p class="font-display text-2xl">Nothing on this shelf.</p>
+          <p class="mt-2 text-stone">Try a higher price or another category.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-x mt-24">
+      <div class="grid gap-6 rounded-[1.75rem] bg-sand p-8 sm:grid-cols-3 sm:p-10">
+        <div class="flex gap-4"><span class="font-display text-3xl text-clay">01</span><p class="text-sm text-stone"><strong class="block font-display text-lg font-normal text-ink">Free shipping over $75</strong>Flat $8 below that, anywhere in the US.</p></div>
+        <div class="flex gap-4"><span class="font-display text-3xl text-clay">02</span><p class="text-sm text-stone"><strong class="block font-display text-lg font-normal text-ink">30-day returns</strong>Unused pieces back for a full refund.</p></div>
+        <div class="flex gap-4"><span class="font-display text-3xl text-clay">03</span><p class="text-sm text-stone"><strong class="block font-display text-lg font-normal text-ink">Breakage promise</strong>Arrives broken? We replace it free.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-24 bg-sand">
+    <div class="container-x grid gap-12 py-16 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Kiln &amp; Co. home">
+          <svg viewBox="0 0 32 32" class="h-8 w-8 text-clay transition-transform duration-500 group-hover:-rotate-6" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M13 7.5h6v3c0 2 4.5 3.6 4.5 9.2 0 4.3-3 6.3-7.5 6.3s-7.5-2-7.5-6.3c0-5.6 4.5-7.2 4.5-9.2z" fill="#fbf8f3"/><path d="M8.6 21.5c3 1 11.8 1 14.8 0" stroke="#a1441d" stroke-width="1.4" fill="none"/></svg>
+          <span class="font-display text-[1.45rem] font-medium tracking-tight">Kiln &amp; Co.</span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-stone">Stoneware for everyday rituals, thrown by hand by twelve potters in a small studio in Tacoma, Washington.</p>
+        <ul class="mt-6 flex gap-5 text-sm">
+          <li><a href="#" class="link-underline">Instagram</a></li>
+          <li><a href="#" class="link-underline">Pinterest</a></li>
+          <li><a href="#" class="link-underline">TikTok</a></li>
+        </ul>
+      </div>
+      <nav aria-label="Shop" class="lg:col-span-2">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-stone">Shop</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="shop.html" class="link-underline">All ceramics</a></li>
+          <li><a href="shop.html?category=Vases" class="link-underline">Vases</a></li>
+          <li><a href="shop.html?category=Mugs%20%26%20Cups" class="link-underline">Mugs &amp; Cups</a></li>
+          <li><a href="shop.html?category=Bowls" class="link-underline">Bowls</a></li>
+          <li><a href="shop.html?category=Plates" class="link-underline">Plates</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Help" class="lg:col-span-2">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-stone">Help</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="faq.html" class="link-underline">FAQ</a></li>
+          <li><a href="faq.html#shipping" class="link-underline">Shipping &amp; returns</a></li>
+          <li><a href="faq.html#care" class="link-underline">Care guide</a></li>
+          <li><a href="faq.html#contact" class="link-underline">Contact us</a></li>
+          <li><a href="about.html" class="link-underline">Our studio</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-4">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-stone">Studio letters</h2>
+        <p class="mt-4 text-sm text-stone">New glazes, kiln openings and the occasional seconds sale. Once a month.</p>
+        <form data-form="newsletter" class="mt-4" novalidate>
+          <label for="footer-email" class="sr-only">Email address</label>
+          <div class="flex gap-2">
+            <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@example.com" class="field">
+            <button type="submit" class="btn-primary shrink-0">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="border-t border-line">
+      <div class="container-x flex flex-col gap-3 py-6 text-xs text-stone sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Kiln &amp; Co. All prices in USD, before sales tax.</p>
+        <p>Orders leave the studio within 2–3 business days. Template by Freeframe.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cart-overlay" hidden class="fixed inset-0 z-50 bg-ink/40 opacity-0 backdrop-blur-[2px] transition-opacity duration-300"></div>
+  <aside id="cart-drawer" hidden role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title" class="fixed inset-y-0 right-0 z-50 flex w-full max-w-md translate-x-full flex-col bg-paper shadow-2xl transition-transform duration-300 ease-[var(--ease-soft)]">
+    <div class="flex items-center justify-between border-b border-line px-6 py-5">
+      <h2 id="cart-drawer-title" class="font-display text-2xl">Your cart</h2>
+      <button type="button" data-drawer-close class="grid h-10 w-10 place-items-center rounded-full hover:bg-sand" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div data-drawer-progress class="border-b border-line bg-sand/60 px-6 py-4"></div>
+    <div data-drawer-body class="flex-1 overflow-y-auto px-6"></div>
+    <div data-drawer-foot class="border-t border-line px-6 py-5">
+      <div class="flex justify-between text-base"><span>Subtotal</span><span data-drawer-subtotal class="font-medium tabular-nums">$0.00</span></div>
+      <p class="mt-1 text-xs text-stone">Shipping, sales tax and discounts are calculated at checkout.</p>
+      <div class="mt-4 grid grid-cols-2 gap-3">
+        <a href="cart.html" class="btn-outline">View cart</a>
+        <a href="checkout.html" class="btn-primary">Checkout</a>
+      </div>
+    </div>
+  </aside>
+  <div id="toast" role="status" aria-live="polite" class="pointer-events-none fixed inset-x-4 bottom-4 z-[55] mx-auto flex max-w-md translate-y-6 items-center gap-3 rounded-2xl bg-ink px-5 py-4 text-sm text-cream opacity-0 shadow-xl transition duration-300 sm:left-auto sm:right-6 sm:mx-0">
+    <svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-[#b9c79c]" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 10.5 4 4 8-9"/></svg>
+    <p data-toast-msg class="flex-1"></p>
+    <button type="button" data-toast-close class="grid h-7 w-7 place-items-center rounded-full text-cream/70 hover:text-cream" aria-label="Dismiss"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+  </div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <radialGradient id="table" cx="50%" cy="40%" r="80%"><stop offset="0" stop-color="#3a2b22"/><stop offset="1" stop-color="#130d0a"/></radialGradient>
+    <linearGradient id="board" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b8834f"/><stop offset=".5" stop-color="#9a6a3c"/><stop offset="1" stop-color="#7a4f2b"/></linearGradient>
+    <radialGradient id="meat" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#a8582f"/><stop offset=".6" stop-color="#6e3218"/><stop offset="1" stop-color="#3d1a0c"/></radialGradient>
+    <radialGradient id="potato" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#ffe2a1"/><stop offset=".7" stop-color="#e2a24c"/><stop offset="1" stop-color="#a6611f"/></radialGradient>
+    <radialGradient id="bowl" cx="50%" cy="45%" r="55%"><stop offset="0" stop-color="#4f7a24"/><stop offset=".8" stop-color="#3a5d18"/><stop offset="1" stop-color="#e9dfcf"/></radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="16"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <rect width="800" height="800" fill="url(#table)"/>
+  <rect x="110" y="140" width="600" height="540" rx="60" fill="#000" opacity=".5" filter="url(#shadow)" transform="rotate(-8 400 400)"/>
+  <rect x="100" y="125" width="600" height="540" rx="60" fill="url(#board)" transform="rotate(-8 400 400)"/>
+  <g stroke="#6b4325" stroke-width="2" opacity=".35" fill="none" transform="rotate(-8 400 400)">
+    <path d="M120 200c200 10 380-10 560 0M120 300c200 15 380-15 560 0M120 420c200 10 380-10 560 0M120 540c200 12 380-12 560 0"/>
+  </g>
+  <!-- lamb shoulder -->
+  <path d="M220 400c-10-120 120-200 250-170s180 140 120 230-170 110-260 80-100-80-110-140z" fill="url(#meat)"/>
+  <path d="M260 360c40-60 140-90 210-50" fill="none" stroke="#d98a52" stroke-width="10" stroke-linecap="round" opacity=".5" filter="url(#soft)"/>
+  <g fill="#2a0f06" opacity=".5" filter="url(#soft)"><circle cx="330" cy="450" r="16"/><circle cx="470" cy="380" r="18"/><circle cx="540" cy="460" r="14"/><circle cx="400" cy="520" r="12"/></g>
+  <g fill="#fbd9a8" opacity=".6"><ellipse cx="380" cy="300" rx="30" ry="7" transform="rotate(-20 380 300)"/><ellipse cx="520" cy="350" rx="20" ry="5" transform="rotate(30 520 350)"/></g>
+  <path d="M560 300l90-90" stroke="#efe4d0" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="660" cy="200" r="20" fill="#efe4d0"/>
+  <!-- rosemary -->
+  <g stroke="#3f5f22" stroke-width="4" stroke-linecap="round">
+    <path d="M250 560c60-20 120-10 170 20"/>
+    <path d="M280 554l-8-20M300 550l-6-22M320 550l-2-22M340 552l2-22M360 556l6-20M380 562l8-20M290 556l6 18M330 552l8 18M370 560l10 16"/>
+  </g>
+  <!-- potatoes -->
+  <path d="M180 560c0-30 30-45 55-35s30 45 10 60-65 5-65-25z" fill="url(#potato)"/>
+  <path d="M470 580c0-28 30-42 55-32s28 42 8 55-63 5-63-23z" fill="url(#potato)"/>
+  <path d="M560 560c0-24 26-36 46-28s24 36 7 47-53 5-53-19z" fill="url(#potato)"/>
+  <!-- green sauce -->
+  <circle cx="600" cy="230" r="0" fill="none"/>
+  <circle cx="200" cy="230" r="62" fill="#e9dfcf"/>
+  <circle cx="200" cy="230" r="50" fill="url(#bowl)"/>
+  <g fill="#8fb45a" opacity=".8"><circle cx="190" cy="220" r="4"/><circle cx="212" cy="240" r="3"/><circle cx="205" cy="212" r="3"/></g>
+  <g fill="#fff" opacity=".5"><circle cx="180" cy="215" r="5"/></g>
+  <g fill="#e8dcc6" opacity=".9"><circle cx="440" cy="300" r="3"/><circle cx="420" cy="420" r="3"/><circle cx="500" cy="420" r="3"/><circle cx="340" cy="380" r="3"/></g>
+</svg>

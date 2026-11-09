@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Placement test — Lingua</title>
+  <meta name="description" content="Find your language level in five minutes: a free ten-question self-assessment that recommends the right course.">
+  <meta name="theme-color" content="#fbf8f1">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lingua">
+  <meta property="og:title" content="Placement test — Lingua">
+  <meta property="og:description" content="Find your language level in five minutes: a free ten-question self-assessment that recommends the right course.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300..700&amp;family=Young+Serif&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="placement" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm text-white focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+  <header id="site-header" class="site-header sticky top-0 z-40 border-b-2 border-transparent bg-paper/95 backdrop-blur-md transition-colors duration-300">
+    <div class="container-x flex h-18 items-center justify-between gap-4">
+      <a href="index.html" class="inline-flex items-center gap-3"><img src="assets/img/logo.svg" alt="" width="40" height="40" class="size-10 shrink-0"><span class="leading-none"><span class="block font-display text-[1.65rem]">Lingua</span><span class="mt-1 block text-[0.65rem] font-semibold tracking-[0.2em] text-muted uppercase">Language school</span></span></a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1"><li><a href="courses.html" class="nav-link">Courses</a></li><li><a href="timetable.html" class="nav-link">Schedule</a></li><li><a href="placement.html" class="nav-link" aria-current="page">Placement test</a></li><li><a href="teachers.html" class="nav-link">Teachers</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="enrol.html" class="btn-primary hidden px-5 py-2.5 sm:inline-flex">Enroll now</a>
+        <button id="menu-toggle" type="button" class="-mr-2 grid size-11 place-items-center rounded-full hover:bg-paper-2 lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <span data-icon-open><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></span>
+          <span data-icon-close class="hidden"><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t-2 border-ink bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-10">
+        <ul><li><a href="index.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Home</a></li><li><a href="courses.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Courses</a></li><li><a href="timetable.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Schedule</a></li><li><a href="placement.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink" aria-current="page">Placement test</a></li><li><a href="teachers.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Teachers</a></li><li><a href="about.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">About</a></li><li><a href="contact.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Contact</a></li><li><a href="enrol.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Fees & enrollment</a></li></ul>
+        <a href="enrol.html" class="btn-primary mt-8 w-full py-4">Enroll now</a>
+        <p class="mt-6 text-sm text-muted">Call us: <a href="tel:+12105550147" class="link">(210) 555-0147</a></p>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="border-b-2 border-ink bg-paper-2">
+      <div class="container-x grid gap-10 py-14 sm:py-20 lg:grid-cols-[1.4fr_1fr] lg:items-end">
+        <div>
+          <p class="reveal eyebrow">Free placement test</p>
+          <h1 class="reveal display mt-4 text-5xl sm:text-6xl">Find your level in five minutes</h1>
+          <p class="reveal mt-5 max-w-2xl text-lg leading-relaxed text-muted">Ten honest questions about what you can already do. We'll estimate your level on the international CEFR scale and suggest the course that fits.</p>
+        </div>
+        <ul class="reveal grid gap-3 text-sm font-medium">
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg>About five minutes, no sign-up</li>
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>Levels A1 to C1, in six languages</li>
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg>Your result stays on this device</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container-x py-12 sm:py-16" aria-label="Placement test">
+      <!-- The test: see initPlacement() in assets/js/main.js. Questions and levels are in PLACEMENT there. -->
+      <div class="card mx-auto max-w-3xl p-6 sm:p-10" data-placement>
+        <form id="placement-form" novalidate data-placement-form>
+          <div class="flex items-center justify-between gap-4 text-sm font-medium"><p data-placement-step>Step 1 of 11</p><p class="text-muted" data-placement-lang></p></div>
+          <div class="progress mt-3" aria-hidden="true"><span style="width:9.09%" data-placement-bar></span></div>
+
+          <div class="mt-8" data-q="0">
+            <h2 class="font-display text-3xl" tabindex="-1" data-q-title>Which language are you learning?</h2>
+            <fieldset class="mt-6">
+              <legend class="sr-only">Language</legend>
+              <div class="grid gap-3 sm:grid-cols-2">
+                <label class="choice items-center"><input type="radio" name="lang" value="spanish" aria-describedby="q0-error"><span class="tone-es grid size-10 shrink-0 place-items-center rounded-xl border-2 border-ink font-display">ES</span><span class="font-medium">Spanish</span></label>
+                <label class="choice items-center"><input type="radio" name="lang" value="french" aria-describedby="q0-error"><span class="tone-fr grid size-10 shrink-0 place-items-center rounded-xl border-2 border-ink font-display">FR</span><span class="font-medium">French</span></label>
+                <label class="choice items-center"><input type="radio" name="lang" value="italian" aria-describedby="q0-error"><span class="tone-it grid size-10 shrink-0 place-items-center rounded-xl border-2 border-ink font-display">IT</span><span class="font-medium">Italian</span></label>
+                <label class="choice items-center"><input type="radio" name="lang" value="german" aria-describedby="q0-error"><span class="tone-de grid size-10 shrink-0 place-items-center rounded-xl border-2 border-ink font-display">DE</span><span class="font-medium">German</span></label>
+                <label class="choice items-center"><input type="radio" name="lang" value="japanese" aria-describedby="q0-error"><span class="tone-ja grid size-10 shrink-0 place-items-center rounded-xl border-2 border-ink font-display">JA</span><span class="font-medium">Japanese</span></label>
+                <label class="choice items-center"><input type="radio" name="lang" value="portuguese" aria-describedby="q0-error"><span class="tone-pt grid size-10 shrink-0 place-items-center rounded-xl border-2 border-ink font-display">PT</span><span class="font-medium">Portuguese</span></label>
+              </div>
+            </fieldset>
+            <p id="q0-error" class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="mt-8" data-q="1" hidden>
+            <p class="text-sm font-semibold tracking-[0.16em] text-tomato-ink uppercase">Question 1 of 10</p>
+            <h2 class="mt-3 font-display text-3xl" tabindex="-1" data-q-title>I can introduce myself and say where I'm from.</h2>
+            <fieldset class="mt-6">
+              <legend class="sr-only">How true is this for you?</legend>
+              <div class="grid gap-3 sm:grid-cols-3">
+                <label class="choice"><input type="radio" name="q1" value="0" aria-describedby="q1-error"><span class="font-medium">Not yet</span></label>
+                <label class="choice"><input type="radio" name="q1" value="1" aria-describedby="q1-error"><span class="font-medium">With some effort</span></label>
+                <label class="choice"><input type="radio" name="q1" value="2" aria-describedby="q1-error"><span class="font-medium">Easily</span></label>
+              </div>
+            </fieldset>
+            <p id="q1-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="mt-8" data-q="2" hidden>
+            <p class="text-sm font-semibold tracking-[0.16em] text-tomato-ink uppercase">Question 2 of 10</p>
+            <h2 class="mt-3 font-display text-3xl" tabindex="-1" data-q-title>I can ask about prices and times and understand the answer.</h2>
+            <fieldset class="mt-6">
+              <legend class="sr-only">How true is this for you?</legend>
+              <div class="grid gap-3 sm:grid-cols-3">
+                <label class="choice"><input type="radio" name="q2" value="0" aria-describedby="q2-error"><span class="font-medium">Not yet</span></label>
+                <label class="choice"><input type="radio" name="q2" value="1" aria-describedby="q2-error"><span class="font-medium">With some effort</span></label>
+                <label class="choice"><input type="radio" name="q2" value="2" aria-describedby="q2-error"><span class="font-medium">Easily</span></label>
+              </div>
+            </fieldset>
+            <p id="q2-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="mt-8" data-q="3" hidden>
+            <p class="text-sm font-semibold tracking-[0.16em] text-tomato-ink uppercase">Question 3 of 10</p>
+            <h2 class="mt-3 font-display text-3xl" tabindex="-1" data-q-title>I can describe my family, my job and my daily routine.</h2>
+            <fieldset class="mt-6">
+              <legend class="sr-only">How true is this for you?</legend>
+              <div class="grid gap-3 sm:grid-cols-3">
+                <label class="choice"><input type="radio" name="q3" value="0" aria-describedby="q3-error"><span class="font-medium">Not yet</span></label>
+                <label class="choice"><input type="radio" name="q3" value="1" aria-describedby="q3-error"><span class="font-medium">With some effort</span></label>
+                <label class="choice"><input type="radio" name="q3" value="2" aria-describedby="q3-error"><span class="font-medium">Easily</span></label>
+              </div>
+            </fieldset>
+            <p id="q3-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="mt-8" data-q="4" hidden>
+            <p class="text-sm font-semibold tracking-[0.16em] text-tomato-ink uppercase">Question 4 of 10</p>
+            <h2 class="mt-3 font-display text-3xl" tabindex="-1" data-q-title>I can talk about my last vacation or what I did last weekend.</h2>
+            <fieldset class="mt-6">
+              <legend class="sr-only">How true is this for you?</legend>
+              <div class="grid gap-3 sm:grid-cols-3">
+                <label class="choice"><input type="radio" name="q4" value="0" aria-describedby="q4-error"><span class="font-medium">Not yet</span></label>
+                <label class="choice"><input type="radio" name="q4" value="1" aria-describedby="q4-error"><span class="font-medium">With some effort</span></label>
+                <label class="choice"><input type="radio" name="q4" value="2" aria-describedby="q4-error"><span class="font-medium">Easily</span></label>
+              </div>
+            </fieldset>
+            <p id="q4-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="mt-8" data-q="5" hidden>
+            <p class="text-sm font-semibold tracking-[0.16em] text-tomato-ink uppercase">Question 5 of 10</p>
+            <h2 class="mt-3 font-display text-3xl" tabindex="-1" data-q-title>I can explain why I agree or disagree with someone.</h2>
+            <fieldset class="mt-6">
+              <legend class="sr-only">How true is this for you?</legend>
+              <div class="grid gap-3 sm:grid-cols-3">
+                <label class="choice"><input type="radio" name="q5" value="0" aria-describedby="q5-error"><span class="font-medium">Not yet</span></label>
+                <label class="choice"><input type="radio" name="q5" value="1" aria-describedby="q5-error"><span class="font-medium">With some effort</span></label>
+                <label class="choice"><input type="radio" name="q5" value="2" aria-describedby="q5-error"><span class="font-medium">Easily</span></label>
+              </div>
+            </fieldset>
+            <p id="q5-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="mt-8" data-q="6" hidden>
+            <p class="text-sm font-semibold tracking-[0.16em] text-tomato-ink uppercase">Question 6 of 10</p>
+            <h2 class="mt-3 font-display text-3xl" tabindex="-1" data-q-title>I can deal with most situations on a trip without switching to English.</h2>
+            <fieldset class="mt-6">
+              <legend class="sr-only">How true is this for you?</legend>
+              <div class="grid gap-3 sm:grid-cols-3">
+                <label class="choice"><input type="radio" name="q6" value="0" aria-describedby="q6-error"><span class="font-medium">Not yet</span></label>
+                <label class="choice"><input type="radio" name="q6" value="1" aria-describedby="q6-error"><span class="font-medium">With some effort</span></label>
+                <label class="choice"><input type="radio" name="q6" value="2" aria-describedby="q6-error"><span class="font-medium">Easily</span></label>
+              </div>
+            </fieldset>
+            <p id="q6-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="mt-8" data-q="7" hidden>
+            <p class="text-sm font-semibold tracking-[0.16em] text-tomato-ink uppercase">Question 7 of 10</p>
+            <h2 class="mt-3 font-display text-3xl" tabindex="-1" data-q-title>I can follow the main points of a TV series without subtitles.</h2>
+            <fieldset class="mt-6">
+              <legend class="sr-only">How true is this for you?</legend>
+              <div class="grid gap-3 sm:grid-cols-3">
+                <label class="choice"><input type="radio" name="q7" value="0" aria-describedby="q7-error"><span class="font-medium">Not yet</span></label>
+                <label class="choice"><input type="radio" name="q7" value="1" aria-describedby="q7-error"><span class="font-medium">With some effort</span></label>
+                <label class="choice"><input type="radio" name="q7" value="2" aria-describedby="q7-error"><span class="font-medium">Easily</span></label>
+              </div>
+            </fieldset>
+            <p id="q7-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="mt-8" data-q="8" hidden>
+            <p class="text-sm font-semibold tracking-[0.16em] text-tomato-ink uppercase">Question 8 of 10</p>
+            <h2 class="mt-3 font-display text-3xl" tabindex="-1" data-q-title>I can write a clear email to complain about a service.</h2>
+            <fieldset class="mt-6">
+              <legend class="sr-only">How true is this for you?</legend>
+              <div class="grid gap-3 sm:grid-cols-3">
+                <label class="choice"><input type="radio" name="q8" value="0" aria-describedby="q8-error"><span class="font-medium">Not yet</span></label>
+                <label class="choice"><input type="radio" name="q8" value="1" aria-describedby="q8-error"><span class="font-medium">With some effort</span></label>
+                <label class="choice"><input type="radio" name="q8" value="2" aria-describedby="q8-error"><span class="font-medium">Easily</span></label>
+              </div>
+            </fieldset>
+            <p id="q8-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="mt-8" data-q="9" hidden>
+            <p class="text-sm font-semibold tracking-[0.16em] text-tomato-ink uppercase">Question 9 of 10</p>
+            <h2 class="mt-3 font-display text-3xl" tabindex="-1" data-q-title>I can join a fast group conversation on an unfamiliar topic.</h2>
+            <fieldset class="mt-6">
+              <legend class="sr-only">How true is this for you?</legend>
+              <div class="grid gap-3 sm:grid-cols-3">
+                <label class="choice"><input type="radio" name="q9" value="0" aria-describedby="q9-error"><span class="font-medium">Not yet</span></label>
+                <label class="choice"><input type="radio" name="q9" value="1" aria-describedby="q9-error"><span class="font-medium">With some effort</span></label>
+                <label class="choice"><input type="radio" name="q9" value="2" aria-describedby="q9-error"><span class="font-medium">Easily</span></label>
+              </div>
+            </fieldset>
+            <p id="q9-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <div class="mt-8" data-q="10" hidden>
+            <p class="text-sm font-semibold tracking-[0.16em] text-tomato-ink uppercase">Question 10 of 10</p>
+            <h2 class="mt-3 font-display text-3xl" tabindex="-1" data-q-title>I can understand jokes, wordplay and changes of tone.</h2>
+            <fieldset class="mt-6">
+              <legend class="sr-only">How true is this for you?</legend>
+              <div class="grid gap-3 sm:grid-cols-3">
+                <label class="choice"><input type="radio" name="q10" value="0" aria-describedby="q10-error"><span class="font-medium">Not yet</span></label>
+                <label class="choice"><input type="radio" name="q10" value="1" aria-describedby="q10-error"><span class="font-medium">With some effort</span></label>
+                <label class="choice"><input type="radio" name="q10" value="2" aria-describedby="q10-error"><span class="font-medium">Easily</span></label>
+              </div>
+            </fieldset>
+            <p id="q10-error" class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="mt-10 flex items-center justify-between gap-3 border-t-2 border-dashed border-ink/15 pt-6">
+            <button type="button" class="btn-secondary" data-q-back disabled><svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Back</button>
+            <button type="submit" class="btn-primary" data-q-next>Next <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          </div>
+        </form>
+
+        <div class="hidden" data-placement-result>
+          <p class="eyebrow">Your result</p>
+          <div class="mt-5 flex items-center gap-5">
+            <span class="grid size-20 shrink-0 place-items-center rounded-full border-2 border-ink bg-sun font-display text-3xl" data-result-code>A1</span>
+            <h2 class="font-display text-3xl sm:text-4xl" tabindex="-1" data-result-title>Spanish: A1 Beginner</h2>
+          </div>
+          <p class="mt-6 text-lg leading-relaxed" data-result-about></p>
+          <p class="mt-3 text-muted" data-result-note></p>
+          <div class="mt-8 grid gap-6 sm:grid-cols-2" data-result-courses></div>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="enrol.html" class="btn-primary" data-result-enrol>Enroll</a>
+            <a href="courses.html" class="btn-secondary" data-result-all>See all courses</a>
+            <button type="button" class="link ml-1" data-placement-restart>Start again</button>
+          </div>
+          <p class="mt-8 text-sm text-muted">This is a self-assessment, so treat it as a starting point. Your teacher checks your level in the first class, and you can move up or down for free in the first two weeks.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-t-2 border-ink bg-paper-2 py-20" aria-labelledby="levels-note">
+      <div class="container-x grid gap-10 lg:grid-cols-3">
+        <div><h2 id="levels-note" class="display text-4xl">Rather talk to someone?</h2><p class="mt-4 text-lg text-muted">Book a free ten-minute chat with a teacher in the language you're learning, in person or on video.</p><a href="contact.html?topic=placement" class="btn-secondary mt-8">Book a level chat <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
+        <div class="rounded-2xl border-2 border-ink bg-white p-6"><h3 class="font-display text-2xl">Be honest, not modest</h3><p class="mt-3 text-muted">Answer for what you can do today, without a dictionary. "With some effort" means you'd manage, with a few pauses and mistakes.</p></div>
+        <div class="rounded-2xl border-2 border-ink bg-white p-6"><h3 class="font-display text-2xl">Between two levels?</h3><p class="mt-3 text-muted">Most people are. We'll suggest the lower one if in doubt: it's easier to move up in week two than to catch up.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="on-dark mt-auto bg-ink text-white">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-[1.3fr_1fr_1fr] lg:grid-cols-[1.4fr_0.8fr_0.8fr_1.4fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-3"><img src="assets/img/logo.svg" alt="" width="40" height="40" class="size-10 shrink-0"><span class="font-display text-[1.65rem]">Lingua</span></a>
+        <address class="mt-5 leading-relaxed text-white/80 not-italic">14 Villita Lane<br>San Antonio, TX 78205</address>
+        <p class="mt-4 text-white/80"><a href="tel:+12105550147" class="hover:text-white hover:underline">(210) 555-0147</a><br><a href="mailto:hello@lingua.example" class="hover:text-white hover:underline">hello@lingua.example</a></p>
+      </div>
+      <div><h2 class="text-xs font-semibold tracking-[0.2em] text-sun uppercase">Learn</h2><ul class="mt-4 space-y-2.5"><li><a href="courses.html" class="text-white/85 hover:text-white hover:underline">Courses</a></li><li><a href="timetable.html" class="text-white/85 hover:text-white hover:underline">Schedule</a></li><li><a href="placement.html" class="text-white/85 hover:text-white hover:underline">Placement test</a></li><li><a href="enrol.html" class="text-white/85 hover:text-white hover:underline">Fees &amp; enrollment</a></li></ul></div>
+      <div><h2 class="text-xs font-semibold tracking-[0.2em] text-sun uppercase">School</h2><ul class="mt-4 space-y-2.5"><li><a href="teachers.html" class="text-white/85 hover:text-white hover:underline">Teachers</a></li><li><a href="about.html" class="text-white/85 hover:text-white hover:underline">About us</a></li><li><a href="contact.html" class="text-white/85 hover:text-white hover:underline">Contact</a></li></ul></div>
+      <div class="md:col-span-3 lg:col-span-1">
+        <h2 class="text-xs font-semibold tracking-[0.2em] text-sun uppercase">The Lingua letter</h2>
+        <p class="mt-4 text-white/80">New courses, free trial evenings and a word of the month, once a month.</p>
+        <!-- Demo form: connect it to your email provider in assets/js/main.js (initForms). -->
+        <form class="mt-5 flex flex-col gap-3 sm:flex-row" data-form="newsletter" novalidate>
+          <div class="flex-1">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input id="newsletter-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" class="field" aria-describedby="newsletter-email-error">
+            <p id="newsletter-email-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <button type="submit" class="btn-sun h-[3.25rem] shrink-0">Subscribe</button>
+        </form>
+        <p class="mt-3 hidden text-sm text-sun" data-form-success role="status">Thank you! Look out for a confirmation email from us; click the link inside and the next Lingua letter is yours.</p>
+      </div>
+    </div>
+    <div class="container-x flex flex-col gap-3 border-t border-white/15 py-6 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; <span data-year>2026</span> Lingua Language School, San Antonio. A fictional school.</p>
+      <ul class="flex gap-6"><li><a href="#" class="hover:text-white hover:underline">Instagram</a></li><li><a href="#" class="hover:text-white hover:underline">Privacy</a></li><li><a href="#" class="hover:text-white hover:underline">Terms</a></li></ul>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

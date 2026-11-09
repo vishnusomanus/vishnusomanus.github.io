@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Build an assessment scope — Guardmere</title>
+    <meta
+      name="description"
+      content="Build a security assessment scope, compare consulting time and fees and save a planning estimate."
+    />
+    <meta name="theme-color" content="#601e2d" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Build an assessment scope — Guardmere" />
+    <meta
+      property="og:description"
+      content="Build a security assessment scope, compare consulting time and fees and save a planning estimate."
+    />
+    <meta property="og:site_name" content="Guardmere" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600&amp;family=Overpass:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="flex min-h-screen flex-col font-sans antialiased" data-page="assessment">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 bg-oxblood px-4 py-3 text-white"
+      >Skip to content</a
+    >
+    <header class="border-b border-rule">
+      <div class="bg-oxblood text-paper">
+        <div class="wrap flex min-h-9 items-center justify-between gap-4 text-xs">
+          <p>Independent security advice · Huntsville</p>
+          <a href="tel:+12565550148" class="underline underline-offset-4">(256) 555-0148</a>
+        </div>
+      </div>
+      <div class="wrap flex min-h-24 items-center justify-between gap-5">
+        <a href="index.html" class="flex items-center gap-3 text-oxblood"
+          ><svg
+            viewBox="0 0 40 40"
+            class="size-9"
+            aria-hidden="true"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+          >
+            <path d="M20 3 35 10v11c0 8-15 16-15 16S5 29 5 21V10Z" />
+            <path d="M12 20h16M20 11v18M12 12l16 16M28 12 12 28" /></svg
+          ><span class="font-display text-[1.65rem] font-semibold tracking-tight">Guardmere</span></a
+        >
+        <nav aria-label="Main" class="hidden gap-1 xl:flex">
+          <a href="services.html" class="nav-link">Our work</a
+          ><a href="assessment.html" class="nav-link" aria-current="page">Scope & estimate</a
+          ><a href="readiness.html" class="nav-link">Readiness</a
+          ><a href="case-studies.html" class="nav-link">In practice</a
+          ><a href="company.html" class="nav-link">Company</a>
+        </nav>
+        <div class="flex gap-3">
+          <a href="contact.html" class="btn hidden sm:inline-flex"
+            >Talk to a consultant
+            <svg
+              viewBox="0 0 24 24"
+              class="size-4 shrink-0"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+            >
+              <path d="M4 12h15m-6-6 6 6-6 6" /></svg></a
+          ><button
+            data-menu-toggle
+            class="grid size-11 place-items-center border border-ink xl:hidden"
+            aria-label="Open menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" class="wrap border-t border-rule py-5 xl:hidden" aria-label="Mobile" hidden>
+        <div class="grid gap-2 sm:grid-cols-2">
+          <a href="services.html" class="nav-link">Our work</a
+          ><a href="assessment.html" class="nav-link" aria-current="page">Scope & estimate</a
+          ><a href="readiness.html" class="nav-link">Readiness</a
+          ><a href="case-studies.html" class="nav-link">In practice</a
+          ><a href="company.html" class="nav-link">Company</a><a href="resources.html" class="nav-link">Field notes</a
+          ><a href="contact.html" class="nav-link">Talk to a consultant</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1" class="flex-1">
+      <section class="border-b border-rule">
+        <div class="wrap grid items-center gap-8 py-12 lg:grid-cols-[1.25fr_.75fr] lg:py-16">
+          <div>
+            <p class="eyebrow text-oxblood">02 / Scope & estimate</p>
+            <h1 class="mt-5 font-display text-[clamp(2.8rem,5.5vw,5rem)] leading-[1.07] tracking-[-.045em]">
+              Start with a scope.<br />See the shape of the work.
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+              This planning estimate separates the scope, coordination and complexity so the conversation starts with
+              something concrete.
+            </p>
+          </div>
+          <img src="assets/img/hero-assessment.svg" width="600" height="420" class="mx-auto w-full max-w-md" alt="" />
+        </div>
+      </section>
+      <section class="wrap grid items-start gap-9 py-12 lg:grid-cols-[1.25fr_.75fr]">
+        <form data-assessment-form class="min-w-0">
+          <fieldset>
+            <legend class="font-display text-2xl">01 / The organization</legend>
+            <div class="mt-6 grid gap-5 sm:grid-cols-2">
+              <label class="label"
+                >Team size<select name="size" class="field">
+                  <option value="small">Up to 50 people</option>
+                  <option value="growing">51–150 people</option>
+                  <option value="distributed">151–500 people</option>
+                </select></label
+              ><label class="label"
+                >Locations<input name="locations" class="field" type="number" value="1" min="1" max="5" /></label
+              ><label class="label"
+                >Cloud workloads<input name="cloud" class="field" type="number" value="2" min="0" max="12" /></label
+              ><label class="label"
+                >Timing<select name="timing" class="field">
+                  <option value="standard">Planned engagement</option>
+                  <option value="priority">Priority start, subject to availability</option>
+                </select></label
+              >
+            </div>
+          </fieldset>
+          <fieldset class="mt-9 border-t border-rule pt-7">
+            <legend class="font-display text-2xl">02 / Areas to examine</legend>
+            <div data-scope-options class="mt-6 grid gap-3 sm:grid-cols-2"></div>
+          </fieldset>
+          <div
+            data-assessment-sticky
+            class="sticky bottom-0 z-30 -mx-5 mt-6 flex items-center justify-between gap-4 border-t border-oxblood bg-card px-5 py-3 shadow-[0_-6px_18px_rgb(45_38_37/.12)] sm:-mx-8 sm:px-8 lg:hidden"
+          >
+            <p class="min-w-0 text-sm leading-snug">
+              <span data-sticky-total class="block font-display text-2xl text-oxblood"></span
+              ><span data-sticky-summary class="block text-muted"></span>
+            </p>
+            <a href="#estimate" class="text-link shrink-0 text-sm">See breakdown</a>
+          </div>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <button type="button" data-save-assessment class="btn">Save this scope</button
+            ><button type="button" data-reset-assessment class="btn-outline">Start a fresh scope</button>
+          </div>
+          <p data-assessment-status role="status" class="mt-4 text-sm text-muted"></p>
+          <section data-saved-assessment class="mt-7 border border-rule bg-wash p-6" hidden>
+            <h2 class="font-display text-2xl">Your saved starting point</h2>
+            <p data-saved-scope class="mt-3 text-sm leading-relaxed"></p>
+            <button type="button" data-delete-assessment class="text-link mt-4 text-sm">Remove saved scope</button>
+          </section>
+        </form>
+        <aside id="estimate" tabindex="-1" class="scroll-mt-6 border border-oxblood bg-card p-6 sm:p-8">
+          <p class="eyebrow text-oxblood">Planning estimate / GM–02</p>
+          <h2 class="mt-4 font-display text-3xl">A clear starting point.</h2>
+          <dl data-assessment-breakdown class="mt-7 space-y-4 text-sm"></dl>
+          <div class="mt-7 border-t border-rule pt-5">
+            <p class="text-sm text-muted">Professional fees, excluding any sales tax</p>
+            <p data-assessment-total class="mt-2 font-display text-4xl text-oxblood" aria-live="polite"></p>
+            <p data-assessment-days class="mt-3 text-sm text-muted"></p>
+          </div>
+          <div class="mt-6 border-t border-rule pt-5">
+            <h3 class="font-semibold">Our suggested sequence</h3>
+            <p data-assessment-advice class="mt-3 text-sm leading-relaxed text-muted"></p>
+          </div>
+          <p class="mt-6 text-xs leading-relaxed text-muted">
+            A guide for scoping, not a binding quote. Final fees follow a conversation about your systems and evidence.
+            Remediation, travel and third-party licenses are agreed separately.
+          </p>
+          <a href="contact.html?topic=assessment" class="btn mt-6 w-full">Discuss this assessment</a>
+        </aside>
+      </section>
+      <section class="wrap border-t border-rule py-12">
+        <h2 class="font-display text-3xl">What happens after the estimate?</h2>
+        <div class="mt-7 grid gap-7 md:grid-cols-3">
+          <p class="leading-relaxed text-muted">
+            <strong class="block text-ink">01 / Discuss</strong>Check assumptions, business context and people involved.
+          </p>
+          <p class="leading-relaxed text-muted">
+            <strong class="block text-ink">02 / Agree</strong>A written proposal confirms deliverables, access, timing
+            and the final fee.
+          </p>
+          <p class="leading-relaxed text-muted">
+            <strong class="block text-ink">03 / Begin</strong>With authorization in place, we gather evidence and keep
+            you informed.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-20 bg-ink py-12 text-paper">
+      <div class="wrap grid gap-10 md:grid-cols-[1.3fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="font-display text-3xl">Guardmere.</a>
+          <p class="mt-5 max-w-sm leading-relaxed text-paper/80">
+            Clearer decisions. Better foundations.<br />Security work you can understand, act on and keep moving.
+          </p>
+        </div>
+        <div>
+          <h2 class="eyebrow text-paper/70">The practice</h2>
+          <ul class="mt-5 space-y-3">
+            <li><a href="services.html" class="footer-link">Security services</a></li>
+            <li><a href="assessment.html" class="footer-link">Scope an assessment</a></li>
+            <li><a href="readiness.html" class="footer-link">Your readiness checklist</a></li>
+            <li><a href="resources.html" class="footer-link">Field notes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="eyebrow text-paper/70">A conversation first</h2>
+          <p class="mt-5 leading-relaxed text-paper/80">
+            Eustis Avenue SE, Suite 4<br />Huntsville, AL 35801<br />Mon–Thu 9 a.m.–5 p.m. · Fri 9 a.m.–3 p.m.
+          </p>
+          <p class="mt-4">hello@guardmere.example</p>
+          <a href="contact.html" class="footer-link mt-4 inline-block">Find the right starting point</a>
+        </div>
+      </div>
+      <div class="wrap mt-10 flex flex-wrap justify-between gap-3 border-t border-paper/20 pt-5 text-xs text-paper/70">
+        <p>© <span data-year></span> Guardmere.</p>
+        <p>Guardmere is a fictional business.</p>
+      </div>
+    </footer>
+    <p
+      data-toast
+      role="status"
+      aria-live="polite"
+      class="fixed right-5 bottom-5 left-5 z-50 mx-auto max-w-xl border border-rule bg-paper px-5 py-4 text-sm shadow-lg"
+      hidden
+    ></p>
+    <dialog
+      data-service-dialog
+      aria-labelledby="service-dialog-title"
+      class="m-auto w-[min(92vw,800px)] border border-ink bg-paper p-0"
+    >
+      <div class="flex items-center justify-between border-b border-rule px-6 py-4">
+        <p class="eyebrow">The work, in detail</p>
+        <button type="button" data-close-service class="text-link">Close</button>
+      </div>
+      <div data-service-detail class="p-6 sm:p-9">
+        <h2 id="service-dialog-title" class="font-display text-3xl">Security service</h2>
+      </div>
+    </dialog>
+    <dialog
+      data-case-dialog
+      aria-labelledby="case-dialog-title"
+      class="m-auto w-[min(92vw,800px)] border border-ink bg-paper p-0"
+    >
+      <div class="flex items-center justify-between border-b border-rule px-6 py-4">
+        <p class="eyebrow">In practice</p>
+        <button type="button" data-close-case class="text-link">Close</button>
+      </div>
+      <div data-case-detail class="p-6 sm:p-9">
+        <h2 id="case-dialog-title" class="font-display text-3xl">Engagement details</h2>
+      </div>
+    </dialog>
+  </body>
+</html>

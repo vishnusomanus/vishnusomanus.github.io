@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — Pomelo Press shop</title>
+  <meta name="description" content="Check out your Pomelo Press order: riso prints, zines and stickers shipped from Louisville, or picked up at the studio.">
+  <meta name="theme-color" content="#f7f0e1">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pomelo Press">
+  <meta property="og:title" content="Checkout — Pomelo Press shop">
+  <meta property="og:description" content="Check out your Pomelo Press order: riso prints, zines and stickers shipped from Louisville, or picked up at the studio.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&amp;family=Quicksand:wght@500;600;700&amp;family=Rammetto+One&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>(function(){var d=document.documentElement,t=null;d.classList.add('js');try{t=localStorage.getItem('overprint-theme');}catch(e){}if(t!=='light'&&t!=='dark')t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';if(t==='dark')d.classList.add('dark');})();</script>
+</head>
+<body class="flex min-h-screen flex-col" data-page="checkout">
+  <a href="#main" class="sr-only z-[70] rounded-full bg-ink px-5 py-3 font-bold text-paper focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+
+  <header id="site-header" class="sticky top-0 z-50 border-b-2 border-ink bg-paper/95 backdrop-blur-sm transition-shadow">
+    <div class="wrap flex h-[4.5rem] items-center justify-between gap-3">
+      <a href="index.html" class="flex items-center gap-2.5 rounded-full">
+        <svg class="size-10 shrink-0" viewBox="0 0 40 40" aria-hidden="true"><circle cx="16" cy="21" r="13" class="fill-yellow"/><circle cx="24" cy="18" r="12" class="fill-pink blend"/><circle cx="19" cy="22" r="6" class="fill-blue blend"/></svg>
+        <span class="leading-none"><span class="block font-display text-[1.3rem] sm:text-[1.45rem]">Pomelo Press</span><span class="stamp mt-1 hidden text-[0.7rem] text-muted sm:block">Pipa Valdespino · Illustration</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1">
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="commissions.html" class="nav-link">Commissions</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Dark paper">
+          <svg data-icon-moon class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+          <svg data-icon-sun class="hidden size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        </button>
+        <a href="checkout.html" class="icon-btn" data-cart-open aria-label="Cart, 0 items">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span data-cart-count class="absolute -top-1.5 -right-1.5 grid h-5 min-w-5 place-items-center rounded-full border-2 border-ink bg-pink px-1 font-mono text-[0.72rem] font-bold text-on-ink" hidden>0</span>
+        </a>
+        <a href="commissions.html" class="btn btn-pink btn-sm hidden xl:inline-flex">Commission me</a>
+        <button type="button" id="menu-button" class="icon-btn lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span data-icon-open><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h13"/></svg></span>
+          <span data-icon-close class="hidden"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t-2 border-ink bg-paper lg:hidden" hidden>
+      <nav aria-label="Mobile" class="wrap pt-3 pb-12">
+        <ul>
+          <li><a href="index.html" class="mnav-link">Home</a></li>
+          <li><a href="work.html" class="mnav-link">Work</a></li>
+          <li><a href="shop.html" class="mnav-link">Shop</a></li>
+          <li><a href="commissions.html" class="mnav-link">Commissions</a></li>
+          <li><a href="about.html" class="mnav-link">About</a></li>
+          <li><a href="contact.html" class="mnav-link">Contact</a></li>
+        </ul>
+        <a href="commissions.html" class="btn btn-pink mt-8 w-full">Commission me</a>
+        <p class="mt-6 text-muted">Louisville, Kentucky · <a href="mailto:hello@pomelopress.example" class="link">hello@pomelopress.example</a></p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <div class="wrap pt-10 pb-20 sm:pt-14">
+      <p class="stamp text-pink-text"><a href="shop.html" class="hover:underline">← Back to the shop</a></p>
+      <h1 class="h-page misreg mt-3" data-ink="Checkout">Checkout</h1>
+      <div class="card mt-10 max-w-2xl p-8 text-center" data-checkout-empty hidden>
+        <h2 class="h-section">Your cart is empty</h2>
+        <p class="mt-3">The prints, zines and stickers are waiting in the shop.</p>
+        <a href="shop.html" class="btn btn-pink mt-6">Visit the shop</a>
+      </div>
+      <div class="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:items-start" data-checkout-main>
+        <form id="checkout-form" class="space-y-8" aria-label="Checkout">
+          <fieldset class="card p-6 sm:p-7">
+            <legend class="float-left mb-4 w-full font-display text-xl">1. Contact</legend>
+            <div class="clear-both grid gap-4 sm:grid-cols-2">
+              <div><label for="co-name" class="label">Full name</label><input id="co-name" class="input" autocomplete="name" required data-label="Full name" maxlength="80"></div>
+              <div><label for="co-email" class="label">Email</label><input id="co-email" type="email" class="input" autocomplete="email" required data-label="Email"></div>
+            </div>
+          </fieldset>
+          <fieldset class="card p-6 sm:p-7" data-group id="co-ship-group" data-msg="Choose how you’d like it delivered.">
+            <legend class="float-left mb-4 w-full font-display text-xl">2. Delivery</legend>
+            <div class="clear-both grid gap-3" data-ship-options></div>
+          </fieldset>
+          <fieldset class="card p-6 sm:p-7" data-address-fields>
+            <legend class="float-left mb-4 w-full font-display text-xl">3. Shipping address</legend>
+            <div class="clear-both grid gap-4 sm:grid-cols-6">
+              <div class="sm:col-span-6"><label for="co-address" class="label">Street address</label><input id="co-address" class="input" autocomplete="address-line1" required data-label="Street address" maxlength="120"></div>
+              <div class="sm:col-span-6"><label for="co-address2" class="label">Apartment, suite <span class="font-medium text-muted">(optional)</span></label><input id="co-address2" class="input" autocomplete="address-line2" maxlength="80"></div>
+              <div class="sm:col-span-3"><label for="co-city" class="label">City</label><input id="co-city" class="input" autocomplete="address-level2" required data-label="City" maxlength="60"></div>
+              <div class="sm:col-span-1"><label for="co-state" class="label">State</label><select id="co-state" class="input" autocomplete="address-level1" required data-label="State"><option value="">–</option></select></div>
+              <div class="sm:col-span-2"><label for="co-zip" class="label">ZIP code</label><input id="co-zip" class="input" inputmode="numeric" autocomplete="postal-code" required data-label="ZIP code" data-validate="zip" maxlength="10"></div>
+            </div>
+          </fieldset>
+          <fieldset class="card p-6 sm:p-7">
+            <legend class="float-left mb-2 w-full font-display text-xl">4. Payment</legend>
+            <p class="clear-both mb-5 rounded-xl border-2 border-dashed border-line p-3 text-[0.95rem]">This is a test checkout and no card is charged. Use <span class="font-mono font-bold">4242 4242 4242 4242</span>, any future date and any three digits.</p>
+            <div class="grid gap-4 sm:grid-cols-4">
+              <div class="sm:col-span-4"><label for="co-cardname" class="label">Name on card</label><input id="co-cardname" class="input" autocomplete="cc-name" required data-label="Name on card" maxlength="80"></div>
+              <div class="sm:col-span-4"><label for="co-card" class="label">Card number</label><input id="co-card" class="input font-mono" inputmode="numeric" autocomplete="cc-number" required data-label="Card number" data-validate="card" maxlength="19" placeholder="1234 1234 1234 1234"></div>
+              <div class="sm:col-span-2"><label for="co-exp" class="label">Expiry</label><input id="co-exp" class="input font-mono" inputmode="numeric" autocomplete="cc-exp" required data-label="Expiry" data-validate="expiry" maxlength="7" placeholder="MM / YY"></div>
+              <div class="sm:col-span-2"><label for="co-cvc" class="label">Security code</label><input id="co-cvc" class="input font-mono" inputmode="numeric" autocomplete="cc-csc" required data-label="Security code" data-validate="cvc" maxlength="4" placeholder="123"></div>
+            </div>
+          </fieldset>
+          <div>
+            <button type="submit" class="btn btn-blue w-full sm:w-auto">Place order · <span data-pay-total>$0</span></button>
+            <p class="mt-3 font-bold text-danger" data-form-status aria-live="polite"></p>
+          </div>
+        </form>
+        <aside class="card p-6 shadow-[6px_6px_0_var(--color-pink)] sm:p-7 lg:sticky lg:top-28" aria-labelledby="summary-title" data-back-to-top-hide>
+          <h2 id="summary-title" class="h-card">Your order</h2>
+          <div data-summary-lines></div>
+          <dl class="mt-2 space-y-2 border-t-2 border-dashed border-line pt-4" data-totals></dl>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="on-blue relative mt-auto overflow-hidden border-t-2 border-ink bg-blue text-on-blue">
+    <div class="halftone-pink blend pointer-events-none absolute -top-24 -right-24 size-80 rounded-full opacity-70" aria-hidden="true"></div>
+    <div class="halftone-yellow blend pointer-events-none absolute -bottom-28 left-[30%] size-72 rounded-full opacity-60" aria-hidden="true"></div>
+    <div class="wrap relative pt-16 pb-10">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.3fr]">
+        <div>
+          <p class="font-display text-[clamp(2rem,4vw,2.8rem)] leading-none">Pomelo Press</p>
+          <p class="mt-4 max-w-sm text-lg">Illustration by Pipa Valdespino for magazines, picture books, packaging and posters. Drawn in plates, printed in three inks, mailed from Louisville.</p>
+          <a href="index.html#stickers" class="mt-5 inline-flex items-center gap-2 rounded-full border-2 border-current px-4 py-2 font-bold hover:bg-yellow hover:text-on-ink">Get a free sticker sheet <span aria-hidden="true">→</span></a>
+        </div>
+        <div>
+          <h2 class="stamp">Pages</h2>
+          <ul class="mt-4 space-y-2 font-bold">
+            <li><a href="work.html" class="underline-offset-4 hover:underline">Work</a></li>
+            <li><a href="shop.html" class="underline-offset-4 hover:underline">Shop</a></li>
+            <li><a href="commissions.html" class="underline-offset-4 hover:underline">Commissions</a></li>
+            <li><a href="about.html" class="underline-offset-4 hover:underline">About and events</a></li>
+            <li><a href="contact.html" class="underline-offset-4 hover:underline">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="stamp">The work</h2>
+          <ul class="mt-4 space-y-2 font-bold">
+            <li><a href="work.html?type=editorial" class="underline-offset-4 hover:underline">Editorial</a></li>
+            <li><a href="work.html?type=picture-books" class="underline-offset-4 hover:underline">Picture books</a></li>
+            <li><a href="work.html?type=packaging" class="underline-offset-4 hover:underline">Packaging</a></li>
+            <li><a href="work.html?type=posters" class="underline-offset-4 hover:underline">Posters</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="stamp">Studio</h2>
+          <address class="mt-4 not-italic">Studio 4, 1830 Frankfort Ave<br>Louisville, KY 40206</address>
+          <p class="mt-3"><a href="mailto:hello@pomelopress.example" class="font-bold underline underline-offset-4">hello@pomelopress.example</a><br><a href="tel:+15025550184" class="font-bold underline underline-offset-4">(502) 555-0184</a></p>
+          <p class="mt-3">Weekdays 10am to 5pm Eastern. Open studio on the first Saturday of the month.</p>
+        </div>
+      </div>
+      <div class="stamp mt-14 flex flex-col gap-2 border-t-2 border-dashed border-current/50 pt-6 sm:flex-row sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Pomelo Press. Printed in Louisville.</p>
+        <p>Pomelo Press, Pipa Valdespino and the clients shown are fictional.</p>
+      </div>
+    </div>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

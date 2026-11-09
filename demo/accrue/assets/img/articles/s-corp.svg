@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <rect width="640" height="400" fill="#4f5b1c"/>
+  <g opacity=".18" stroke="#fffcf4" stroke-width="2"><path d="M0 80h640M0 160h640M0 240h640M0 320h640"/></g>
+  <g transform="translate(200 200)">
+    <circle r="120" fill="#e8b13a" stroke="#1f2316" stroke-width="3"/>
+    <path d="M0 0V-120A120 120 0 0 1 104 60Z" fill="#fffcf4" stroke="#1f2316" stroke-width="3" stroke-linejoin="round"/>
+    <circle r="40" fill="#4f5b1c" stroke="#1f2316" stroke-width="3"/>
+  </g>
+  <g transform="translate(400 96)" stroke="#1f2316" stroke-width="3" stroke-linejoin="round">
+    <rect width="170" height="96" rx="10" fill="#fffcf4"/>
+    <rect x="18" y="18" width="70" height="12" rx="2" fill="#1f2316"/>
+    <rect x="18" y="52" width="134" height="26" rx="4" fill="#e1e5c8"/>
+    <rect y="124" width="170" height="96" rx="10" fill="#f8e7bb"/>
+    <rect x="18" y="142" width="54" height="12" rx="2" fill="#1f2316"/>
+    <rect x="18" y="176" width="100" height="26" rx="4" fill="#e8b13a"/>
+  </g>
+  <path d="M330 140c30 0 40 4 60 4M330 264c30 0 40-4 60-4" fill="none" stroke="#fffcf4" stroke-width="3" stroke-dasharray="6 7"/>
+</svg>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The case for slower software — The Ledger</title>
+  <meta name="description" content="Speed is a feature, but so is the time to think. Notes on building tools that respect attention.">
+  <meta name="theme-color" content="#faf7f2" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#14130f" media="(prefers-color-scheme: dark)">
+  <!-- Open Graph: replace the image path with an absolute URL once the site is live. -->
+  <meta property="og:site_name" content="The Ledger">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="The case for slower software — The Ledger">
+  <meta property="og:description" content="Speed is a feature, but so is the time to think. Notes on building tools that respect attention.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..600&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('ledger-theme');if(t==='dark'||(t!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches))d.classList.add('dark')}catch(e){}})();</script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body class="min-h-screen">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="hidden border-b border-line text-xs text-muted sm:block" role="region" aria-label="About The Ledger">
+    <div class="wrap flex h-9 items-center justify-between">
+      <p>Est. 2019 · Essays on tools, craft and attention</p>
+      <p class="flex items-center gap-4"><a href="#" class="inline-flex items-center gap-1.5 hover:text-ink"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1.2" fill="currentColor"/></svg> RSS</a><a href="index.html#newsletter" class="hover:text-ink">Newsletter</a></p>
+    </div>
+  </div>
+  <header class="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur-md">
+    <div class="wrap flex h-16 items-center gap-8">
+      <a href="index.html" class="font-serif text-[1.7rem] font-semibold tracking-tight" aria-label="The Ledger, home">The Ledger<span class="text-accent">.</span></a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-7 text-[.92rem] font-medium text-muted">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="archive.html">Archive</a></li>
+          <li><a class="nav-link" href="topics.html">Topics</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="ml-auto flex items-center gap-1">
+        <a href="archive.html" class="icon-btn" aria-label="Search the archive"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></a>
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><svg aria-hidden="true" class="dark:hidden" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg aria-hidden="true" class="hidden dark:block" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+        <a href="index.html#newsletter" class="btn ml-2 hidden sm:inline-flex">Subscribe</a>
+        <button type="button" class="icon-btn lg:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><svg aria-hidden="true" data-menu-icon="open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg aria-hidden="true" data-menu-icon="close" hidden width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="border-t border-line bg-paper lg:hidden" hidden>
+      <nav aria-label="Mobile" class="wrap pb-8 pt-2">
+        <ul>
+          <li><a class="block border-b border-line py-4 font-serif text-2xl font-medium" href="index.html">Home</a></li>
+          <li><a class="block border-b border-line py-4 font-serif text-2xl font-medium" href="archive.html">Archive</a></li>
+          <li><a class="block border-b border-line py-4 font-serif text-2xl font-medium" href="topics.html">Topics</a></li>
+          <li><a class="block border-b border-line py-4 font-serif text-2xl font-medium" href="about.html">About</a></li>
+          <li><a class="block border-b border-line py-4 font-serif text-2xl font-medium" href="contact.html">Contact</a></li>
+        </ul>
+        <a href="index.html#newsletter" class="btn mt-6 w-full">Subscribe to the newsletter</a>
+      </nav>
+    </div>
+  </header>
+  <div class="fixed inset-x-0 top-0 z-50 h-[3px]" aria-hidden="true"><div data-progress class="h-full origin-left scale-x-0 bg-accent"></div></div>
+
+  <main id="main">
+    <article>
+      <header class="wrap max-w-4xl pt-12 text-center md:pt-20">
+        <p class="kicker"><a href="archive.html?topic=Design" class="hover:underline">Design</a> · Essay</p>
+        <h1 class="mt-5 font-serif text-[2.7rem] font-semibold leading-[1.02] tracking-tight sm:text-6xl md:text-7xl">The case for slower software</h1>
+        <p class="mx-auto mt-6 max-w-2xl font-serif text-xl italic leading-relaxed text-muted sm:text-2xl">Speed is a feature, but so is the time to think. Notes on building tools that respect attention.</p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-4 text-sm">
+          <div class="flex items-center gap-3 text-left">
+            <img src="assets/img/avatar-jonah-reyes.svg" alt="" width="44" height="44" class="h-11 w-11 rounded-full">
+            <p><span class="font-semibold">By Jonah Reyes</span><br><span class="text-muted"><time datetime="2026-09-14">September 14, 2026</time> · <span data-reading-time>4 min read</span></span></p>
+          </div>
+        </div>
+      </header>
+
+      <figure class="wrap mt-12 max-w-6xl">
+        <div class="cover aspect-[16/9] sm:aspect-[2/1]"><img src="assets/img/cover-sun.svg" alt="An abstract illustration of a low sun setting over still water and dark hills." width="1200" height="800"></div>
+        <figcaption class="mt-3 text-sm text-muted">Illustration by Hana Sato for The Ledger.</figcaption>
+      </figure>
+
+      <div class="wrap mt-12 grid max-w-6xl grid-cols-[minmax(0,1fr)] gap-10 lg:grid-cols-[220px_minmax(0,680px)] lg:justify-between xl:grid-cols-[220px_minmax(0,680px)_120px]">
+        <aside class="lg:sticky lg:top-24 lg:self-start" aria-label="Table of contents">
+          <details class="rounded-lg border border-line bg-surface px-4 py-3 lg:hidden">
+            <summary class="cursor-pointer text-sm font-semibold">In this essay</summary>
+            <ul class="mt-2 border-l border-line" data-toc></ul>
+          </details>
+          <div class="hidden lg:block">
+            <p class="text-xs font-bold uppercase tracking-[.14em] text-muted">In this essay</p>
+            <ul class="mt-4 border-l border-line" data-toc></ul>
+            <div class="mt-8 border-t border-line pt-6">
+              <p class="text-xs font-bold uppercase tracking-[.14em] text-muted">Share</p>
+              <div class="mt-3"><div class="flex flex-wrap items-center gap-2">
+              <a data-share="x" href="#" target="_blank" rel="noopener" class="icon-btn border border-line" aria-label="Share on X"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg></a>
+              <a data-share="linkedin" href="#" target="_blank" rel="noopener" class="icon-btn border border-line" aria-label="Share on LinkedIn"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V21h-4z"/></svg></a>
+              <a data-share="email" href="#" class="icon-btn border border-line" aria-label="Share by email"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+              <button type="button" data-copy-link class="btn-ghost !py-2 text-sm"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg> Copy link</button>
+            </div></div>
+            </div>
+          </div>
+        </aside>
+
+        <div>
+          <div class="prose-ledger" data-article>
+
+          <p class="lede">Every few years the software we use gets faster, and every few years we find new ways to fill the time it saves. Notifications arrive before we finish reading the last one. Feeds refresh themselves while we are still scrolling. The tools are quick; we are the ones who feel slow.</p>
+          <p>This is not an argument against performance. A fast interface is a kind of respect: it tells the person on the other side of the screen that their time matters. But there is a difference between software that <em>responds</em> quickly and software that <em>demands</em> quickly, and a great deal of what we build today has drifted toward the second.</p>
+          <p>Over the past year I have interviewed forty-two people who build and use productivity tools for a living. Almost all of them described the same feeling: a low, constant hum of obligation coming from the apps they rely on. Very few of them could point to a single feature that caused it.</p>
+          <p>That is the strange thing about the problem. No product manager ever set out to make their users anxious. Each badge, banner and reminder was added for a sensible reason, approved in a sensible meeting and measured with a sensible metric. It is only when you add them all together, across every app on someone&rsquo;s phone, that the sum stops making sense.</p>
+
+          <h2>Attention is the real budget</h2>
+          <p>When we design a feature we count clicks, milliseconds and pixels. We rarely count interruptions. Yet the cost of a single badge or banner is paid every time someone glances at it, multiplied across every person who uses the product, every day they use it.</p>
+          <p>Teams measure engagement because it is easy to measure. Nobody has a dashboard for <strong>the afternoon a user did not lose</strong>. So the incentives quietly push every product toward more pings, more red dots and more reasons to come back, whether or not coming back helps anyone.<sup><a href="#fn1" id="ref1" aria-describedby="notes-label">1</a></sup></p>
+          <p>Psychologists have a useful name for what happens next: <em>attention residue</em>. When you switch away from a task, part of your mind stays with it for minutes afterwards. A notification that takes two seconds to dismiss can cost twenty minutes of thinking at full depth. Multiply that by the forty or fifty interruptions a typical knowledge worker receives in a day and the arithmetic becomes uncomfortable.</p>
+          <p>If attention is the scarce resource, then every interface is spending someone else&rsquo;s budget. The question is not whether a feature is useful in isolation. It is whether it is worth what it costs, paid in the only currency that never comes back.</p>
+
+          <h2>The cost of a single badge</h2>
+          <p>To make this concrete, one team I spoke to ran a simple experiment. For two weeks they moved every non-urgent notification in their internal tools into a twice-daily digest. Nothing else changed: same people, same projects, same deadlines.</p>
+          <figure>
+            <div class="rounded-lg border border-line bg-surface p-5 sm:p-7">
+              <svg viewBox="0 0 640 300" class="h-auto w-full" role="img" aria-labelledby="chart-title chart-desc">
+                <title id="chart-title">Interruptions per working hour, before and after batching</title>
+                <desc id="chart-desc">A bar chart comparing five weekdays. Before batching, interruptions ranged from 11 to 14 per hour. After batching they fell to between 3 and 4 per hour.</desc>
+                <g font-family="Inter, system-ui, sans-serif" font-size="13" fill="currentColor">
+                  <g stroke="currentColor" stroke-opacity=".12"><line x1="40" y1="40" x2="630" y2="40"/><line x1="40" y1="110" x2="630" y2="110"/><line x1="40" y1="180" x2="630" y2="180"/><line x1="40" y1="250" x2="630" y2="250"/></g>
+                  <g opacity=".6" text-anchor="end"><text x="30" y="254">0</text><text x="30" y="184">5</text><text x="30" y="114">10</text><text x="30" y="44">15</text></g>
+                  <g fill="currentColor" fill-opacity=".22">
+                    <rect x="70" y="82" width="38" height="168" rx="3"/><rect x="190" y="68" width="38" height="182" rx="3"/><rect x="310" y="54" width="38" height="196" rx="3"/><rect x="430" y="96" width="38" height="154" rx="3"/><rect x="550" y="96" width="38" height="154" rx="3"/>
+                  </g>
+                  <g fill="var(--accent)">
+                    <rect x="112" y="208" width="38" height="42" rx="3"/><rect x="232" y="194" width="38" height="56" rx="3"/><rect x="352" y="208" width="38" height="42" rx="3"/><rect x="472" y="194" width="38" height="56" rx="3"/><rect x="592" y="208" width="38" height="42" rx="3"/>
+                  </g>
+                  <g text-anchor="middle" opacity=".7"><text x="110" y="276">Mon</text><text x="230" y="276">Tue</text><text x="350" y="276">Wed</text><text x="470" y="276">Thu</text><text x="590" y="276">Fri</text></g>
+                  <g font-size="12"><rect x="400" y="6" width="12" height="12" rx="2" fill-opacity=".22"/><text x="418" y="16">Before</text><rect x="480" y="6" width="12" height="12" rx="2" fill="var(--accent)"/><text x="498" y="16">After batching</text></g>
+                </g>
+              </svg>
+            </div>
+            <figcaption>Figure 1. Self-reported interruptions per working hour across one team of 14 people, before and after moving non-urgent alerts into a digest.</figcaption>
+          </figure>
+          <p>Interruptions fell by roughly seventy percent. More surprising was what did <em>not</em> happen: no deadline slipped, no customer complained, and only two alerts in the whole two weeks turned out to need a faster response. Both were already marked as urgent.</p>
+
+          <h2>Designing for the second visit</h2>
+          <p>First impressions get most of the design attention, but people live in the hundredth visit. The onboarding flow is seen once; the inbox is seen every morning for years. Slower software is software that still feels calm on the hundredth day: predictable, legible and patient.</p>
+          <blockquote class="pull">
+            <p>&ldquo;The best tools disappear while you use them, and are still there when you look up.&rdquo;</p>
+            <cite>Ana Ferreira, deputy editor</cite>
+          </blockquote>
+          <p>Calm is not the same as empty. A calm interface can be dense with information, as long as nothing in it is shouting. Typography, spacing and restraint with color do most of the work. The rest is deciding, feature by feature, what deserves to interrupt someone.</p>
+          <p>Some of the calmest software I know is also some of the oldest. A good text editor, a well-made calendar, a command line that does exactly what it is told. None of them try to bring you back. They wait, patiently, until you have something to do, and then they get out of the way as quickly as they can.</p>
+
+          <h2>A practical playbook</h2>
+          <p>None of this requires new technology. Here are the habits that came up again and again in my interviews:</p>
+          <ol>
+            <li><strong>Batch by default.</strong> Let people opt into real-time, not out of it.</li>
+            <li><strong>Prefer pull over push.</strong> Show what changed when someone arrives, not the moment it happens.</li>
+            <li><strong>Make the quiet state beautiful.</strong> An empty inbox should feel finished, not broken.</li>
+            <li><strong>Respect the clock.</strong> Quiet hours should be on by default and match the user&rsquo;s time zone.</li>
+          </ol>
+          <p>In code, the change is often tiny. This is roughly how the team above configured their digest:</p>
+          <pre tabindex="0"><code><span class="tok-c">// Batch non-urgent events into a twice-daily digest.</span>
+<span class="tok-k">const</span> digest = <span class="tok-f">createDigest</span>({
+  schedule: [<span class="tok-s">'09:00'</span>, <span class="tok-s">'15:00'</span>],
+  quietHours: { start: <span class="tok-s">'19:00'</span>, end: <span class="tok-s">'08:00'</span> },
+  <span class="tok-c">// Only genuinely urgent events skip the queue.</span>
+  urgent: (event) =&gt; event.severity === <span class="tok-s">'critical'</span>,
+});</code></pre>
+          <aside class="callout"><strong>A note on measurement.</strong> If you try this, ask people how their day felt, not just how many notifications they received. The second number is easy to move; the first is the one that matters.</aside>
+
+          <h2>What we give up, and what we get back</h2>
+          <p>There is a real cost. Slower software will sometimes deliver news a few hours late. A few metrics on a growth dashboard will dip. Somebody, somewhere, will ask why the red dot went away.</p>
+          <p>That is a trade worth making in the open. Tell your team why the change is happening, tell your users what to expect, and give anyone who genuinely needs real-time updates an easy way to turn them back on. Most will not. The few who do will be grateful you asked.</p>
+          <p>What we get back is harder to chart: the long, uninterrupted stretch of an afternoon in which someone does the best work of their week. That is what most of our tools promised in the first place. It might be time we let them keep the promise.<sup><a href="#fn2" id="ref2" aria-describedby="notes-label">2</a></sup></p>
+
+          </div>
+
+          <section aria-labelledby="notes-label" class="mt-14 border-t border-line pt-6 font-sans text-sm leading-relaxed text-muted">
+            <h2 id="notes-label" data-toc-skip class="text-xs font-bold uppercase tracking-[.14em] text-ink">Notes</h2>
+            <ol class="mt-3 list-decimal space-y-2 pl-5">
+              <li id="fn1">Several product managers I spoke to described this as &ldquo;borrowing attention from next quarter.&rdquo; <a href="#ref1" class="text-accent underline underline-offset-2" aria-label="Back to reference 1">↩</a></li>
+              <li id="fn2">An earlier version of this essay appeared in our March newsletter. It has been substantially revised. <a href="#ref2" class="text-accent underline underline-offset-2" aria-label="Back to reference 2">↩</a></li>
+            </ol>
+          </section>
+
+          <div class="mt-12 flex flex-col gap-6 border-y border-line py-6 sm:flex-row sm:items-center sm:justify-between">
+            <ul class="flex flex-wrap gap-2" aria-label="Tags">
+              <li><a href="archive.html?topic=Design" class="chip">Design</a></li>
+              <li><a href="archive.html?q=attention" class="chip">Attention</a></li>
+              <li><a href="archive.html?q=notifications" class="chip">Notifications</a></li>
+            </ul>
+            <div class="flex flex-wrap items-center gap-2">
+              <a data-share="x" href="#" target="_blank" rel="noopener" class="icon-btn border border-line" aria-label="Share on X"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.3L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8L17.8 3zm-1.1 16.2h1.7L7.4 4.7H5.6l11.1 14.5z"/></svg></a>
+              <a data-share="linkedin" href="#" target="_blank" rel="noopener" class="icon-btn border border-line" aria-label="Share on LinkedIn"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2.1 1.4-2.1 2.8V21h-4z"/></svg></a>
+              <a data-share="email" href="#" class="icon-btn border border-line" aria-label="Share by email"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+              <button type="button" data-copy-link class="btn-ghost !py-2 text-sm"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.5.5l3-3a5 5 0 0 0-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 0 0-7.5-.5l-3 3a5 5 0 0 0 7 7l1.7-1.7"/></svg> Copy link</button>
+            </div>
+          </div>
+
+          <section class="mt-12 flex flex-col gap-6 rounded-2xl bg-surface p-7 sm:flex-row sm:p-8 border border-line" aria-label="About the author">
+            <img src="assets/img/avatar-jonah-reyes.svg" alt="" width="88" height="88" class="h-20 w-20 shrink-0 rounded-full">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[.14em] text-muted">Written by</p>
+              <p class="mt-1 font-serif text-2xl font-semibold">Jonah Reyes</p>
+              <p class="mt-2 font-serif text-lg leading-relaxed text-muted">Jonah founded The Ledger in 2019 after a decade designing productivity software. He writes about defaults, attention and the ethics of interfaces.</p>
+              <a href="archive.html?q=Jonah" class="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold hover:text-accent">More from Jonah <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <section class="wrap mt-24" aria-labelledby="related-title">
+      <div class="flex items-end justify-between gap-4 border-b border-ink pb-4">
+        <h2 id="related-title" class="font-serif text-4xl font-semibold tracking-tight">Keep reading</h2>
+        <a href="archive.html" class="inline-flex items-center gap-1.5 text-sm font-semibold hover:text-accent">Archive <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="mt-10 grid gap-x-10 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="reveal group">
+          <a href="article.html" class="block">
+            <div class="cover aspect-[3/2]"><img src="assets/img/cover-blocks.svg" alt="" width="1200" height="800" loading="lazy"></div>
+            <p class="kicker mt-5">Design</p>
+            <h3 class="mt-2 font-serif text-[1.45rem] font-semibold leading-[1.15] tracking-tight transition-colors group-hover:text-accent">Defaults are decisions</h3>
+            <p class="mt-2 font-serif text-lg leading-relaxed text-muted">Every setting you ship unchanged is a choice made on behalf of millions of people.</p>
+            <p class="mt-3 text-xs text-muted">Jonah Reyes · <time datetime="2026-08-12">Aug 12</time> · 9 min read</p>
+          </a>
+        </article>
+        <article class="reveal group">
+          <a href="article.html" class="block">
+            <div class="cover aspect-[3/2]"><img src="assets/img/cover-waves.svg" alt="" width="1200" height="800" loading="lazy"></div>
+            <p class="kicker mt-5">Design</p>
+            <h3 class="mt-2 font-serif text-[1.45rem] font-semibold leading-[1.15] tracking-tight transition-colors group-hover:text-accent">A field guide to calm notifications</h3>
+            <p class="mt-2 font-serif text-lg leading-relaxed text-muted">Batching, digests and quiet hours: the patterns that let people opt in to urgency.</p>
+            <p class="mt-3 text-xs text-muted">Priya Nair · <time datetime="2025-12-03">Dec 3</time> · 8 min read</p>
+          </a>
+        </article>
+        <article class="reveal group">
+          <a href="article.html" class="block">
+            <div class="cover aspect-[3/2]"><img src="assets/img/cover-grid.svg" alt="" width="1200" height="800" loading="lazy"></div>
+            <p class="kicker mt-5">Craft</p>
+            <h3 class="mt-2 font-serif text-[1.45rem] font-semibold leading-[1.15] tracking-tight transition-colors group-hover:text-accent">Why every team needs a changelog</h3>
+            <p class="mt-2 font-serif text-lg leading-relaxed text-muted">A changelog is a promise you keep in public. It is also the cheapest marketing you will ever do.</p>
+            <p class="mt-3 text-xs text-muted">Ana Ferreira · <time datetime="2026-06-18">Jun 18</time> · 5 min read</p>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap mt-24" aria-labelledby="article-nl-title">
+      <div class="reveal rounded-2xl bg-ink px-6 py-12 text-paper sm:px-12">
+        <div class="grid items-center gap-8 lg:grid-cols-2">
+          <div>
+            <h2 id="article-nl-title" class="font-serif text-3xl font-semibold leading-tight sm:text-4xl">Liked this essay?</h2>
+            <p class="mt-3 font-serif text-lg opacity-75">Get the next one in your inbox. One email a month, nothing else.</p>
+          </div>
+          <a href="index.html#newsletter" class="btn !bg-paper !text-ink hover:!bg-accent hover:!text-paper justify-self-start lg:justify-self-end">Subscribe to the letter <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-24 border-t border-line">
+    <div class="wrap grid gap-12 py-16 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <div>
+        <a href="index.html" class="font-serif text-3xl font-semibold tracking-tight">The Ledger<span class="text-accent">.</span></a>
+        <p class="mt-4 max-w-xs font-serif text-lg leading-relaxed text-muted">A slow magazine about fast tools. Independent, reader-funded and ad-free since 2019.</p>
+      </div>
+      <div>
+        <h2 class="text-xs font-bold uppercase tracking-[.14em]">Topics</h2>
+        <ul class="mt-4 space-y-2.5 text-sm text-muted"><li><a href="archive.html?topic=Design" class="hover:text-ink">Design</a></li><li><a href="archive.html?topic=Craft" class="hover:text-ink">Craft</a></li><li><a href="archive.html?topic=Writing" class="hover:text-ink">Writing</a></li><li><a href="archive.html?topic=Culture" class="hover:text-ink">Culture</a></li><li><a href="archive.html?topic=Engineering" class="hover:text-ink">Engineering</a></li></ul>
+      </div>
+      <div>
+        <h2 class="text-xs font-bold uppercase tracking-[.14em]">Publication</h2>
+        <ul class="mt-4 space-y-2.5 text-sm text-muted">
+          <li><a href="archive.html" class="hover:text-ink">Archive</a></li>
+          <li><a href="about.html" class="hover:text-ink">About &amp; masthead</a></li>
+          <li><a href="contact.html" class="hover:text-ink">Write for us</a></li>
+          <li><a href="contact.html" class="hover:text-ink">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-xs font-bold uppercase tracking-[.14em]">Follow</h2>
+        <ul class="mt-4 space-y-2.5 text-sm text-muted">
+          <li><a href="index.html#newsletter" class="hover:text-ink">Newsletter</a></li>
+          <li><a href="#" class="hover:text-ink">RSS feed</a></li>
+          <li><a href="#" class="hover:text-ink">Mastodon</a></li>
+          <li><a href="#" class="hover:text-ink">Bluesky</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-line">
+      <div class="wrap flex flex-col gap-2 py-6 text-xs text-muted sm:flex-row sm:justify-between">
+        <p>© <span data-year>2026</span> The Ledger. All rights reserved.</p>
+        <p>Set in Newsreader &amp; Inter.</p>
+      </div>
+    </div>
+  </footer>
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+</body>
+</html>

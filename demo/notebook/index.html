@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Imke Vos — Notes from the machine room</title>
+  <meta name="description" content="The notebook of Imke Vos, a backend engineer in Paducah: long posts and short notes about databases, build tools and debugging.">
+  <meta name="theme-color" content="#f6f6f1" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101214" media="(prefers-color-scheme: dark)">
+  <!-- Open Graph: replace the image path with an absolute URL once the site is live. -->
+  <meta property="og:site_name" content="Imke Vos">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Imke Vos — Notes from the machine room">
+  <meta property="og:description" content="The notebook of Imke Vos, a backend engineer in Paducah: long posts and short notes about databases, build tools and debugging.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:wght@400..600&amp;family=Atkinson+Hyperlegible+Next:ital,wght@0,400..700;1,400..700&amp;family=Martian+Mono:wdth,wght@75..112.5,400..700&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('notebook-theme');if(t==='dark'||(t!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches))d.classList.add('dark')}catch(e){}})();</script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body class="min-h-screen">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="sticky top-0 z-40 border-b border-line bg-paper/90 backdrop-blur-md">
+    <div class="wrap flex h-16 items-center gap-6">
+      <a href="index.html" class="flex shrink-0 items-center gap-2.5">
+        <img src="assets/img/logo.svg" alt="" width="32" height="32" class="h-8 w-8">
+        <span class="display text-[1.05rem] font-bold">Imke Vos</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1 font-display text-[.82rem] font-medium text-muted [font-stretch:87.5%]">
+          <li><a class="nav-link" href="archive.html">Archive</a></li>
+          <li><a class="nav-link" href="series.html">Series</a></li>
+          <li><a class="nav-link" href="tags.html">Tags</a></li>
+          <li><a class="nav-link" href="projects.html">Projects</a></li>
+          <li><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <div class="ml-auto flex items-center gap-1">
+        <a href="search.html" class="inline-flex h-10 min-w-10 items-center justify-center gap-2 rounded-md px-2 text-muted transition-colors hover:bg-line hover:text-ink sm:px-2.5" data-search-link aria-label="Search (press /)"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="hidden text-sm font-bold text-ink sm:inline">Search</span><kbd class="hidden sm:inline">/</kbd></a>
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Switch to dark theme" aria-pressed="false"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="dark:hidden"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="hidden dark:block"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button>
+        <a href="subscribe.html" class="btn ml-2 hidden !py-2 sm:inline-flex">Subscribe</a>
+        <button type="button" class="icon-btn lg:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu"><svg aria-hidden="true" data-menu-icon="open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg aria-hidden="true" data-menu-icon="close" hidden width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="border-t border-line bg-paper lg:hidden" hidden>
+      <nav aria-label="Mobile" class="wrap pb-8 pt-2">
+        <ul>
+          <li><a class="display block border-b border-dashed border-line py-4 text-xl font-semibold" href="archive.html">Archive</a></li>
+          <li><a class="display block border-b border-dashed border-line py-4 text-xl font-semibold" href="series.html">Series</a></li>
+          <li><a class="display block border-b border-dashed border-line py-4 text-xl font-semibold" href="tags.html">Tags</a></li>
+          <li><a class="display block border-b border-dashed border-line py-4 text-xl font-semibold" href="projects.html">Projects</a></li>
+          <li><a class="display block border-b border-dashed border-line py-4 text-xl font-semibold" href="about.html">About</a></li>
+        </ul>
+        <a href="subscribe.html" class="btn mt-6 w-full">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+<section class="wrap pt-12 md:pt-20" aria-labelledby="intro-title">
+      <div class="grid items-center gap-12 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,.9fr)]">
+        <div class="margin-rule pl-5 sm:pl-8">
+          <p class="kicker">the notebook of imke vos</p>
+          <h1 id="intro-title" class="display mt-4 text-[2.15rem] font-bold leading-[1.1] sm:text-5xl lg:text-[3.35rem]">Notes from the <span class="marker">machine room</span>.</h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted sm:text-xl">I&rsquo;m Imke, a backend engineer in Paducah. This is where I write down what I learn about databases, build tools and the bugs in between, usually with a terminal still open.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="post.html" class="btn">Read the latest <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="series.html" class="btn-ghost">Browse the series</a>
+          </div>
+          <p class="mt-8 font-mono text-sm text-muted"><span class="font-semibold text-pen">now:</span> reading the Postgres source, one page at a time. <a href="about.html#now" class="link text-ink">What else</a></p>
+        </div>
+        <div class="reveal">
+          <img src="assets/img/notebook-page.svg" alt="A page of graph paper with a hand-drawn B-tree: a root box, two branch boxes and a row of leaves, with a yellow sticky note reading “3 reads!”." width="560" height="440" class="h-auto w-full">
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap mt-20" aria-labelledby="latest-title">
+      <div class="flex items-end justify-between gap-4 border-b-2 border-ink pb-3">
+        <h2 id="latest-title" class="display text-2xl font-bold sm:text-3xl">Latest posts</h2>
+        <a href="archive.html" class="link text-sm">The archive</a>
+      </div>
+      <article class="sheet reveal mt-8 p-6 sm:p-8">
+        <p class="flex flex-wrap items-center gap-3"><span class="series-badge">Postgres from the inside · part 3</span><time datetime="2026-10-05" class="font-mono text-sm text-muted">2026-10-05</time></p>
+        <h3 class="post-title mt-4 !text-2xl sm:!text-[1.9rem] !leading-tight"><a href="post.html">Vacuum, seen from the page</a></h3>
+        <p class="mt-3 max-w-2xl text-lg text-muted">Dead tuples, the free space map and why VACUUM almost never gives disk space back.</p>
+        <div class="mt-5 flex flex-wrap items-center gap-x-4 gap-y-3">
+          <p class="flex flex-wrap gap-1.5"><a class="tag" href="tags.html?tag=databases">databases</a><a class="tag" href="tags.html?tag=postgres">postgres</a></p>
+          <p class="post-meta">10 min read</p>
+        </div>
+      </article>
+      <ol class="mt-4">
+        <li class="post-row">
+          <time datetime="2026-09-28">2026-09-28</time>
+          <div class="min-w-0">
+            <h3 class="post-title"><a href="post.html">Reading a B-tree page by hand</a></h3>
+            <p class="mt-1 text-muted">Open an index with pageinspect, walk from the root to a single row and see what an index actually promises.</p>
+            <p class="mt-2.5 flex flex-wrap items-center gap-1.5"><span class="series-badge">Postgres from the inside · part 2</span><a class="tag" href="tags.html?tag=databases">databases</a><a class="tag" href="tags.html?tag=debugging">debugging</a><a class="tag" href="tags.html?tag=postgres">postgres</a></p>
+          </div>
+          <span class="post-meta">5 min</span>
+        </li>
+        <li class="post-row">
+          <time datetime="2026-09-09">2026-09-09</time>
+          <div class="min-w-0">
+            <h3 class="post-title"><a href="post.html">The flaky test was a time zone</a></h3>
+            <p class="mt-1 text-muted">A test that only failed after 5 pm, and the one-line date parse behind it.</p>
+            <p class="mt-2.5 flex flex-wrap items-center gap-1.5"><a class="tag" href="tags.html?tag=debugging">debugging</a><a class="tag" href="tags.html?tag=javascript">javascript</a><a class="tag" href="tags.html?tag=testing">testing</a></p>
+          </div>
+          <span class="post-meta">6 min</span>
+        </li>
+        <li class="post-row">
+          <time datetime="2026-08-17">2026-08-17</time>
+          <div class="min-w-0">
+            <h3 class="post-title"><a href="post.html">What actually happens on INSERT</a></h3>
+            <p class="mt-1 text-muted">From the parser to the write-ahead log: following one row into a Postgres table.</p>
+            <p class="mt-2.5 flex flex-wrap items-center gap-1.5"><span class="series-badge">Postgres from the inside · part 1</span><a class="tag" href="tags.html?tag=databases">databases</a><a class="tag" href="tags.html?tag=postgres">postgres</a></p>
+          </div>
+          <span class="post-meta">12 min</span>
+        </li>
+        <li class="post-row">
+          <time datetime="2026-07-30">2026-07-30</time>
+          <div class="min-w-0">
+            <h3 class="post-title"><a href="post.html">A build system in 200 lines: the graph</a></h3>
+            <p class="mt-1 text-muted">Topological order, cycles that explain themselves and running independent steps in parallel.</p>
+            <p class="mt-2.5 flex flex-wrap items-center gap-1.5"><span class="series-badge">A build system in 200 lines · part 3</span><a class="tag" href="tags.html?tag=rust">rust</a><a class="tag" href="tags.html?tag=tooling">tooling</a></p>
+          </div>
+          <span class="post-meta">10 min</span>
+        </li>
+        <li class="post-row">
+          <time datetime="2026-06-22">2026-06-22</time>
+          <div class="min-w-0">
+            <h3 class="post-title"><a href="post.html">Make your errors boring</a></h3>
+            <p class="mt-1 text-muted">A good error says what happened, where, and what to do next. Everything else is decoration.</p>
+            <p class="mt-2.5 flex flex-wrap items-center gap-1.5"><a class="tag" href="tags.html?tag=api-design">api-design</a><a class="tag" href="tags.html?tag=rust">rust</a></p>
+          </div>
+          <span class="post-meta">7 min</span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="wrap mt-20" aria-labelledby="series-title">
+      <div class="flex items-end justify-between gap-4 border-b-2 border-ink pb-3">
+        <h2 id="series-title" class="display text-2xl font-bold sm:text-3xl">Series</h2>
+        <a href="series.html" class="link text-sm">All series</a>
+      </div>
+      <div class="mt-8 grid gap-6 md:grid-cols-3">
+        <article class="sheet reveal flex flex-col p-6">
+          <p class="font-mono text-xs text-muted">3 parts · 27 min</p>
+          <h3 class="display mt-3 text-lg font-bold leading-snug"><a href="series.html#postgres-from-the-inside" class="hover:text-pen">Postgres from the inside</a></h3>
+          <p class="mt-2 text-muted">A slow walk through the storage layer, with pageinspect open the whole time: heap pages, B-tree indexes and vacuum.</p>
+          <ol class="mt-5 space-y-1.5 border-t border-dashed border-line pt-4 font-mono text-sm">
+            <li class="flex gap-2"><span class="text-pen">01</span><span>What actually happens on INSERT</span></li>
+            <li class="flex gap-2"><span class="text-pen">02</span><span>Reading a B-tree page by hand</span></li>
+            <li class="flex gap-2"><span class="text-pen">03</span><span>Vacuum, seen from the page</span></li>
+          </ol>
+        </article>
+        <article class="sheet reveal flex flex-col p-6">
+          <p class="font-mono text-xs text-muted">3 parts · 23 min</p>
+          <h3 class="display mt-3 text-lg font-bold leading-snug"><a href="series.html#build-system-in-200-lines" class="hover:text-pen">A build system in 200 lines</a></h3>
+          <p class="mt-2 text-muted">Writing a small, correct build tool in Rust, one idea per post: why, content hashing and the dependency graph.</p>
+          <ol class="mt-5 space-y-1.5 border-t border-dashed border-line pt-4 font-mono text-sm">
+            <li class="flex gap-2"><span class="text-pen">01</span><span>why bother</span></li>
+            <li class="flex gap-2"><span class="text-pen">02</span><span>hashing inputs</span></li>
+            <li class="flex gap-2"><span class="text-pen">03</span><span>the graph</span></li>
+          </ol>
+        </article>
+        <article class="sheet reveal flex flex-col p-6">
+          <p class="font-mono text-xs text-muted">2 parts · 16 min</p>
+          <h3 class="display mt-3 text-lg font-bold leading-snug"><a href="series.html#css-for-backend-people" class="hover:text-pen">CSS for backend people</a></h3>
+          <p class="mt-2 text-muted">The parts of CSS I wish someone had explained to me in terms I already knew: precedence rules and layout algorithms.</p>
+          <ol class="mt-5 space-y-1.5 border-t border-dashed border-line pt-4 font-mono text-sm">
+            <li class="flex gap-2"><span class="text-pen">01</span><span>the cascade</span></li>
+            <li class="flex gap-2"><span class="text-pen">02</span><span>layout without tears</span></li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap mt-20" aria-labelledby="tags-title">
+      <div class="grid gap-6 border-y border-line py-8 md:grid-cols-[12rem_1fr] md:items-baseline">
+        <h2 id="tags-title" class="kicker !text-sm">browse by tag</h2>
+        <ul class="flex flex-wrap gap-2">
+          <li><a class="tag" href="tags.html?tag=databases">databases <span class="count">4</span></a></li>
+          <li><a class="tag" href="tags.html?tag=debugging">debugging <span class="count">3</span></a></li>
+          <li><a class="tag" href="tags.html?tag=postgres">postgres <span class="count">3</span></a></li>
+          <li><a class="tag" href="tags.html?tag=rust">rust <span class="count">3</span></a></li>
+          <li><a class="tag" href="tags.html?tag=tooling">tooling <span class="count">3</span></a></li>
+          <li><a class="tag" href="tags.html?tag=css">css <span class="count">2</span></a></li>
+          <li><a class="tag" href="tags.html?tag=api-design">api-design <span class="count">1</span></a></li>
+          <li><a class="tag" href="tags.html?tag=career">career <span class="count">1</span></a></li>
+          <li><a class="tag" href="tags.html?tag=devops">devops <span class="count">1</span></a></li>
+          <li><a class="tag" href="tags.html?tag=javascript">javascript <span class="count">1</span></a></li>
+          <li><a class="tag" href="tags.html?tag=meta">meta <span class="count">1</span></a></li>
+          <li><a class="tag" href="tags.html?tag=performance">performance <span class="count">1</span></a></li>
+          <li><a class="tag" href="tags.html?tag=sqlite">sqlite <span class="count">1</span></a></li>
+          <li><a class="tag" href="tags.html?tag=testing">testing <span class="count">1</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="wrap mt-20" id="newsletter" aria-labelledby="nl-title">
+      <div class="sheet reveal grid gap-8 p-6 sm:p-10 lg:grid-cols-2 lg:items-center">
+        <div>
+          <p class="kicker">newsletter</p>
+          <h2 id="nl-title" class="display mt-3 text-2xl font-bold sm:text-3xl">New posts, by email</h2>
+          <p class="mt-3 text-lg text-muted">One email when a post goes up, about twice a month. Plain text, no tracking pixels, one-click unsubscribe. Prefer a feed reader? There&rsquo;s <a href="subscribe.html#rss" class="link text-ink">RSS</a>.</p>
+        </div>
+        <form data-validate novalidate aria-label="Newsletter sign-up" class="min-w-0">
+          <label for="nl-email" class="label">Email address</label>
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <input id="nl-email" name="email" type="email" required autocomplete="email" data-label="your email address" class="input" placeholder="you@example.com" aria-describedby="nl-email-error">
+            <button type="submit" class="btn shrink-0">Subscribe</button>
+          </div>
+          <p class="error" id="nl-email-error" hidden></p>
+          <div class="mt-5 flex gap-3 rounded-md border border-line bg-paper p-4 text-sm" data-form-success tabindex="-1" role="status" hidden>
+            <span class="mt-0.5 text-pen"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div><p class="font-bold">You are on the list (almost).</p><p class="mt-1 text-muted">Look out for a confirmation email from me. Click the link inside and the next post lands in your inbox.</p></div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-24 border-t border-line bg-paper">
+    <div class="wrap grid gap-10 py-14 md:grid-cols-[1.6fr_1fr_1fr_1fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-2.5">
+          <img src="assets/img/logo.svg" alt="" width="32" height="32" class="h-8 w-8">
+          <span class="display text-[1.05rem] font-bold">Imke Vos</span>
+        </a>
+        <p class="mt-4 max-w-xs text-muted">Notes from the machine room: databases, build tools and the bugs in between. Written in Paducah.</p>
+      </div>
+      <div>
+        <h2 class="kicker">read</h2>
+        <ul class="mt-4 space-y-2.5 text-sm text-muted">
+          <li><a href="archive.html" class="hover:text-ink">Archive</a></li>
+          <li><a href="series.html" class="hover:text-ink">Series</a></li>
+          <li><a href="tags.html" class="hover:text-ink">Tags</a></li>
+          <li><a href="search.html" class="hover:text-ink">Search</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="kicker">about</h2>
+        <ul class="mt-4 space-y-2.5 text-sm text-muted">
+          <li><a href="about.html" class="hover:text-ink">About</a></li>
+          <li><a href="about.html#now" class="hover:text-ink">Now</a></li>
+          <li><a href="projects.html" class="hover:text-ink">Projects</a></li>
+          <li><a href="subscribe.html" class="hover:text-ink">Subscribe</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="kicker">elsewhere</h2>
+        <ul class="mt-4 space-y-2.5 text-sm text-muted">
+          <li><a href="subscribe.html#rss" class="hover:text-ink">RSS feed</a></li>
+          <li><a href="#" class="hover:text-ink">GitHub</a></li>
+          <li><a href="#" class="hover:text-ink">Mastodon</a></li>
+          <li><a href="mailto:hello@imkevos.example" class="hover:text-ink">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-line">
+      <div class="wrap flex flex-col gap-2 py-6 font-mono text-xs text-muted sm:flex-row sm:justify-between">
+        <p>© <span data-year>2026</span> Imke Vos. Words CC BY 4.0, code MIT.</p>
+        <p>Set in Martian Mono &amp; Atkinson Hyperlegible.</p>
+      </div>
+    </div>
+  </footer>
+  <div class="toast" data-toast role="status" aria-live="polite"></div>
+</body>
+</html>

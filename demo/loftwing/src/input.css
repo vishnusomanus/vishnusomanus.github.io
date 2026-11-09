@@ -1,0 +1,342 @@
+@import "tailwindcss" source("../");
+
+/* Loftwing brand tokens. Utilities such as bg-night, text-apricot and font-display come from these. */
+@theme {
+  --font-display: "Red Hat Display", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-sans: "Sen", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Overpass Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --color-night: #0f0a1e; /* page background, button text */
+  --color-plum: #241238; /* raised solid surfaces: menus, table heads */
+  --color-dusk: #3a1d52; /* tracks and quiet fills */
+  --color-mist: #f7f1fb; /* headings and body text */
+  --color-haze: #d6cbe3; /* secondary text (AA on every glass panel) */
+  --color-fog: #b8abc9; /* captions and meta (AA on every glass panel) */
+  --color-wire: #8c7da6; /* field borders, chart axes (3:1 on glass) */
+  --color-coral: #ff8f70; /* the warm accent: buttons, marks, charts */
+  --color-apricot: #ffcb9e; /* warm accent for text on glass */
+  --color-iris: #b9b1ff; /* cool accent for text and marks on glass */
+  --color-iris-deep: #6f61e8; /* cool accent for fills */
+  --color-leaf: #9be8c2; /* success, always with a word */
+  --color-rose: #ffb4bc; /* errors, always with a word */
+  --color-honey: #ffe08a; /* caution, always with a word */
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+  html {
+    -webkit-text-size-adjust: 100%;
+    background: var(--color-night);
+  }
+  body {
+    /* No background here: the page color is on html, so the fixed .sky layer shows through. */
+    color: var(--color-mist);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: -0.015em;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  :focus-visible {
+    outline: 2px solid var(--color-apricot);
+    outline-offset: 3px;
+    border-radius: 0.25rem;
+  }
+  ::selection {
+    background: var(--color-coral);
+    color: var(--color-night);
+  }
+  button,
+  summary,
+  select,
+  label:has(input[type="checkbox"]),
+  label:has(input[type="radio"]) {
+    cursor: pointer;
+  }
+  input,
+  select,
+  textarea {
+    min-width: 0;
+  }
+  select option {
+    background: var(--color-plum);
+    color: var(--color-mist);
+  }
+  table {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@layer components {
+  .wrap {
+    width: min(1200px, calc(100% - 2.5rem));
+    margin-inline: auto;
+  }
+  /* The dusk sky behind every page: one fixed layer of soft gradients that drifts very slowly. */
+  .sky {
+    position: fixed;
+    inset: -12%;
+    z-index: -1;
+    pointer-events: none;
+    background:
+      radial-gradient(52% 40% at 80% 6%, rgb(255 143 112 / 0.26), transparent 72%),
+      radial-gradient(46% 46% at 8% 18%, rgb(111 97 232 / 0.3), transparent 72%),
+      radial-gradient(70% 46% at 46% 104%, rgb(168 56 128 / 0.26), transparent 72%),
+      linear-gradient(172deg, #21103a 0%, #170c2c 46%, #0f0a1e 100%);
+  }
+  /* A translucent panel with a hairline edge. Blur is added in markup, on a few panels only. */
+  .glass {
+    border: 1px solid rgb(255 255 255 / 0.16);
+    border-radius: 1.25rem;
+    background:
+      linear-gradient(155deg, rgb(255 255 255 / 0.11), rgb(255 255 255 / 0.04)),
+      rgb(24 13 44 / 0.5);
+    box-shadow:
+      inset 0 1px 0 rgb(255 255 255 / 0.12),
+      0 24px 50px -30px rgb(4 0 18 / 0.85);
+  }
+  /* A darker pane for mock-ups and forms that sit on bright parts of the sky. */
+  .pane {
+    border: 1px solid rgb(255 255 255 / 0.14);
+    border-radius: 0.875rem;
+    background: rgb(19 11 38 / 0.72);
+  }
+  /* Soft side edges for artwork that sits directly on the sky. */
+  .art-fade {
+    mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgb(255 255 255 / 0.18);
+    border-radius: 999px;
+    background: rgb(19 11 38 / 0.45);
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--color-apricot);
+  }
+  .mono-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-fog);
+  }
+  .btn {
+    display: inline-flex;
+    min-height: 2.875rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 0.875rem;
+    padding: 0.65rem 1.25rem;
+    background: linear-gradient(120deg, var(--color-apricot), var(--color-coral));
+    color: var(--color-night);
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    transition:
+      filter 0.16s,
+      background-color 0.16s;
+  }
+  .btn:hover:not(:disabled) {
+    filter: brightness(1.08);
+  }
+  .btn[aria-current="page"] {
+    box-shadow:
+      0 0 0 2px var(--color-night),
+      0 0 0 4px var(--color-apricot);
+  }
+  .btn-ghost {
+    background: rgb(255 255 255 / 0.07);
+    color: var(--color-mist);
+    box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.3);
+  }
+  .btn-ghost:hover:not(:disabled) {
+    background: rgb(255 255 255 / 0.15);
+    filter: none;
+  }
+  .btn-sm {
+    min-height: 2.5rem;
+    padding: 0.45rem 0.95rem;
+    font-size: 0.9375rem;
+  }
+  .nav-link {
+    display: block;
+    border-radius: 0.6rem;
+    padding: 0.5rem 0.7rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--color-haze);
+  }
+  .nav-link:hover {
+    color: var(--color-mist);
+    background: rgb(255 255 255 / 0.08);
+  }
+  .nav-link[aria-current="page"] {
+    color: var(--color-night);
+    background: var(--color-apricot);
+  }
+  .label {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 600;
+  }
+  .field {
+    display: block;
+    width: 100%;
+    margin-top: 0.4rem;
+    min-height: 2.875rem;
+    border: 1px solid var(--color-wire);
+    border-radius: 0.75rem;
+    background: rgb(15 10 30 / 0.7);
+    padding: 0.6rem 0.85rem;
+    color: var(--color-mist);
+  }
+  .field::placeholder {
+    color: var(--color-fog);
+  }
+  .field[aria-invalid="true"] {
+    border-color: var(--color-rose);
+    box-shadow: inset 0 0 0 1px var(--color-rose);
+  }
+  .error {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--color-rose);
+    font-size: 0.875rem;
+  }
+  .error:empty {
+    display: none;
+  }
+  /* A pill: a label around a hidden radio or checkbox, or a button with aria-pressed. */
+  .chip {
+    display: inline-flex;
+    min-height: 2.5rem;
+    align-items: center;
+    gap: 0.4rem;
+    border: 1px solid rgb(255 255 255 / 0.3);
+    border-radius: 999px;
+    background: rgb(15 10 30 / 0.45);
+    padding: 0.35rem 0.95rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    color: var(--color-mist);
+  }
+  .chip:hover {
+    background: rgb(255 255 255 / 0.13);
+  }
+  .chip:has(:checked),
+  .chip[aria-pressed="true"] {
+    border-color: var(--color-apricot);
+    background: var(--color-apricot);
+    color: var(--color-night);
+  }
+  .chip:has(:focus-visible) {
+    outline: 2px solid var(--color-apricot);
+    outline-offset: 2px;
+  }
+  .text-link {
+    color: var(--color-apricot);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.25em;
+  }
+  .text-link:hover {
+    text-decoration-thickness: 2px;
+  }
+  .tab {
+    border-radius: 0.75rem;
+    padding: 0.55rem 1rem;
+    min-height: 2.75rem;
+    font-weight: 600;
+    color: var(--color-haze);
+    white-space: nowrap;
+  }
+  .tab:hover {
+    background: rgb(255 255 255 / 0.1);
+    color: var(--color-mist);
+  }
+  .tab[aria-selected="true"] {
+    background: var(--color-apricot);
+    color: var(--color-night);
+  }
+  .range {
+    width: 100%;
+    min-height: 2rem;
+    accent-color: var(--color-coral);
+  }
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  details[open] .faq-mark {
+    transform: rotate(45deg);
+  }
+  .reveal {
+    opacity: 1;
+  }
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 0.55s ease,
+      transform 0.55s ease;
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  .sky {
+    animation: sky-drift 48s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+  .glide {
+    animation: glide 7s ease-in-out infinite alternate;
+  }
+  @keyframes sky-drift {
+    to {
+      transform: translate3d(-4%, 3%, 0) scale(1.06);
+    }
+  }
+  @keyframes glide {
+    to {
+      transform: translateY(-8px);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

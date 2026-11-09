@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" width="400" height="330" fill="none">
+  <defs>
+    <linearGradient id="bar" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#7d6233"/><stop offset=".35" stop-color="#e3c98c"/><stop offset=".55" stop-color="#c4a463"/><stop offset="1" stop-color="#86693a"/>
+    </linearGradient>
+    <radialGradient id="rose" cx=".4" cy=".35" r=".7">
+      <stop offset="0" stop-color="#ecd59d"/><stop offset=".6" stop-color="#b39050"/><stop offset="1" stop-color="#7d6233"/>
+    </radialGradient>
+    <linearGradient id="side" x1="0" x2="1">
+      <stop offset="0" stop-color="#8a6d3b"/><stop offset=".5" stop-color="#d9bd7f"/><stop offset="1" stop-color="#8a6d3b"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="330" fill="#e9e4d8"/>
+  <path d="M28 300h344M28 296v8m344-8v8M365 38v240m-4-240h8m-8 240h8" stroke="#b9b7a6"/>
+  <path d="M30 24h35m-35 7h18" stroke="#929783"/>
+  <!-- cupboard door edge behind, with old pencil center line -->
+  <rect x="88" y="44" width="122" height="246" fill="#d9cfb9" stroke="#b9ab8c"/>
+  <path d="M149 52v230" stroke="#a99c7f" stroke-dasharray="3 5"/>
+  <!-- front elevation: rose, bar, rose -->
+  <g stroke="#514f3f" stroke-width="2">
+    <path d="M140 78h24v176h-24z" fill="url(#bar)" stroke-linejoin="round"/>
+    <circle cx="152" cy="78" r="19" fill="url(#rose)"/>
+    <circle cx="152" cy="254" r="19" fill="url(#rose)"/>
+  </g>
+  <g fill="#5d4a28">
+    <circle cx="152" cy="78" r="4"/><circle cx="152" cy="254" r="4"/>
+  </g>
+  <path d="M152 74v8m-4-4h8M148 250h8m-4-4v8" stroke="#e9d9ad" stroke-width="1.5"/>
+  <!-- worn highlights on the shoulders -->
+  <path d="M147 100v-4m0 140v-4" stroke="#f4e6be" stroke-width="3" stroke-linecap="round"/><path d="M147 104v124" stroke="#f1dfae" stroke-width="1.5" stroke-linecap="round" opacity=".7"/>
+  <!-- dimension: screw centers -->
+  <path d="M70 78v176m-6-176h12m-12 176h12" stroke="#7e4035" stroke-width="1.5"/>
+  <text x="62" y="170" fill="#7e4035" font-family="Sarabun, Arial, sans-serif" font-size="12" letter-spacing="1" transform="rotate(-90 62 170)">5 IN</text>
+  <!-- side elevation of the second pull -->
+  <g stroke="#514f3f" stroke-width="2" stroke-linejoin="round">
+    <path d="M250 56v220" stroke="#9a937c" stroke-dasharray="2 4" stroke-width="1.5"/>
+    <path d="M250 68h14q14 0 14 10t-14 10h-14z" fill="url(#side)"/>
+    <path d="M250 244h14q14 0 14 10t-14 10h-14z" fill="url(#side)"/>
+    <path d="M270 70q26 0 26 22v148q0 22-26 22v-14q12 0 12-12V96q0-12-12-12z" fill="url(#bar)"/>
+  </g>
+  <path d="M291 104v122" stroke="#f1dfae" stroke-width="2" stroke-linecap="round"/>
+  <path d="M250 290h46m-46-4v8m46-8v8" stroke="#7e4035" stroke-width="1.5"/>
+  <text x="304" y="294" fill="#7e4035" font-family="Sarabun, Arial, sans-serif" font-size="12" letter-spacing="1">1¼ IN</text>
+  <!-- the replacement screws -->
+  <g stroke="#514f3f" stroke-width="1.5" fill="#c7a970">
+    <path d="M318 150h28l6 3-6 3h-28z"/><path d="M318 174h28l6 3-6 3h-28z"/>
+    <rect x="312" y="146" width="7" height="14" rx="2"/><rect x="312" y="170" width="7" height="14" rx="2"/>
+  </g>
+  <path d="M322 150l3 6m4-6 3 6m4-6 3 6m4-6 3 6M322 174l3 6m4-6 3 6m4-6 3 6m4-6 3 6" stroke="#7d6233"/>
+  <text x="312" y="206" fill="#596450" font-family="Sarabun, Arial, sans-serif" font-size="11" letter-spacing="1">×4 SCREWS</text>
+  <text x="250" y="48" fill="#596450" font-family="Sarabun, Arial, sans-serif" font-size="11" letter-spacing="1">SIDE</text>
+  <text x="96" y="40" fill="#596450" font-family="Sarabun, Arial, sans-serif" font-size="11" letter-spacing="1">FRONT</text>
+</svg>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pricing — Nimbus</title>
+<meta name="description" content="Nimbus plans: Solo is free, Studio is $12 a person, Floor is $29." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }</style>
+</head>
+<body class="bg-[#f4f8fb] text-[#102433] font-sans font-sans antialiased">
+<header class="sticky top-0 z-30 border-b border-[#d5e4ee] bg-[#f4f8fb]/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-xl font-bold">Nimbus</a>
+    <div class="flex items-center gap-3"><button id="menuBtn" class="rounded-lg border border-[#c5d7e4] px-3 py-1 text-sm md:hidden" aria-expanded="false">Menu</button></div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t pt-3 text-sm md:flex md:basis-auto md:flex-row md:items-center md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html">Home</a><a href="product.html">Product</a><a href="pricing.html" aria-current="page">Pricing</a><a href="customers.html">Customers</a><a href="start.html">Start</a></nav>
+  </div>
+</header><main class="mx-auto max-w-6xl px-5 py-14 sm:px-8">
+  <h1 class="font-display text-5xl font-bold">Pricing that stays on one page.</h1>
+  <p class="mt-3 max-w-xl text-[#3d5566]">Every plan includes the board and the morning digest. You pay for the people who need to move cards.</p>
+  <div class="mt-10 grid gap-4 md:grid-cols-3">
+    <article class="rounded-3xl bg-white p-6 ring-1 ring-[#d5e4ee]"><h2 class="font-display text-2xl font-bold">Solo</h2><p class="mt-2 text-4xl font-bold">$0</p><p class="mt-3 text-sm text-[#3d5566]">One board, unlimited cards, the morning digest. For a practice of one.</p><a href="start.html" class="mt-6 inline-block text-sm font-semibold text-[#0b6e8a]">Start</a></article>
+    <article class="rounded-3xl bg-[#12324a] p-6 text-white"><h2 class="font-display text-2xl font-bold">Studio</h2><p class="mt-2 text-4xl font-bold">$12</p><p class="text-sm text-[#c5e4f7]">per person / month</p><p class="mt-3 text-sm text-[#c5e4f7]">Shared boards, the client view, and file notes. Billed monthly. Cancel any time.</p><a href="start.html" class="mt-6 inline-block text-sm font-semibold text-[#9ad7ff]">Start Studio</a></article>
+    <article class="rounded-3xl bg-white p-6 ring-1 ring-[#d5e4ee]"><h2 class="font-display text-2xl font-bold">Floor</h2><p class="mt-2 text-4xl font-bold">$29</p><p class="text-sm">per person / month</p><p class="mt-3 text-sm text-[#3d5566]">SSO, an audit log, and a named person at Nimbus who knows your studio.</p><a href="start.html" class="mt-6 inline-block text-sm font-semibold text-[#0b6e8a]">Talk to us</a></article>
+  </div>
+  <div class="mt-12 overflow-x-auto">
+    <table class="w-full min-w-[36rem] text-left text-sm"><thead><tr class="border-b border-[#d5e4ee]"><th class="py-3"> </th><th>Solo</th><th>Studio</th><th>Floor</th></tr></thead><tbody>
+      <tr class="border-b border-[#d5e4ee]"><td class="py-3">Boards</td><td>1</td><td>Unlimited</td><td>Unlimited</td></tr>
+      <tr class="border-b border-[#d5e4ee]"><td class="py-3">Client view</td><td>—</td><td>Yes</td><td>Yes</td></tr>
+      <tr class="border-b border-[#d5e4ee]"><td class="py-3">Morning digest</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td class="py-3">SSO and audit log</td><td>—</td><td>—</td><td>Yes</td></tr>
+    </tbody></table>
+  </div>
+</main><footer class="border-t border-[#d5e4ee]"><div class="mx-auto grid max-w-6xl gap-6 px-5 py-10 text-sm text-[#3d5566] sm:px-8 md:grid-cols-3"><div><p class="font-display text-xl font-bold text-[#102433]">Nimbus</p><p class="mt-2">440 Brannan Street<br />San Francisco, CA 94107</p></div><div><p>Weekday support, 9:00–17:00 Pacific.</p><p class="mt-2"><span class="underline underline-offset-4" >hello@nimbusboard.com</span></p></div><div class="space-y-1"><a href="product.html">Product</a><br /><a href="pricing.html">Pricing</a><br /><a href="customers.html">Customers</a></div></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

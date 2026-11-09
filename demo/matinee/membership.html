@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Membership — $8 tickets and free popcorn | The Garnet Theater</title>
+  <meta name="description" content="Join The Garnet from $9 a month: $8 tickets, free popcorn, early booking for Q&As and a vote in the Cinema Club. Monthly or annual, gift memberships too.">
+  <meta name="theme-color" content="#3d0a17">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Garnet Theater">
+  <meta property="og:title" content="Membership — $8 tickets and free popcorn | The Garnet Theater">
+  <meta property="og:description" content="Join The Garnet from $9 a month: $8 tickets, free popcorn, early booking for Q&As and a vote in the Cinema Club. Monthly or annual, gift memberships too.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400..800;1,400&amp;family=Limelight&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="membership" class="flex min-h-screen flex-col bg-cream font-sans text-ink antialiased">
+  <a href="#main" class="sr-only z-[60] rounded-sm bg-gold px-5 py-3 text-sm font-bold text-velvet focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <div class="on-dark bg-velvet-deep text-cream">
+    <div class="container-x flex min-h-9 items-center justify-between gap-4 py-1.5 text-[13px]">
+      <p data-boxoffice class="flex items-center gap-2 font-semibold"><span class="inline-block size-2 rounded-full bg-gold" aria-hidden="true"></span>Box office: (406) 555-0120</p>
+      <p class="hidden items-center gap-5 text-cream/80 md:flex"><span>318 North Higgins Avenue, Missoula</span><a href="tel:+14065550120" class="font-bold text-gold underline-offset-4 hover:underline">(406) 555-0120</a></p>
+    </div>
+  </div>
+  <header id="site-header" class="on-dark sticky top-0 z-40 bg-velvet text-cream transition-shadow duration-300">
+    <div class="container-x flex h-20 items-center justify-between gap-4">
+      <a href="index.html" class="group inline-flex items-center gap-3">
+        <svg viewBox="0 0 48 48" class="h-11 w-11 shrink-0" aria-hidden="true"><defs><clipPath id="logo-h"><path d="M2 30a22 22 0 0 1 44 0z"/></clipPath></defs><g clip-path="url(#logo-h)"><path d="M2 30a22 22 0 0 1 44 0z" fill="#5e1124"/><g stroke="#c8a046" stroke-width="1.6"><path d="M24 30 4 18M24 30 10 10M24 30 18 6M24 30 30 6M24 30 38 10M24 30 44 18"/></g></g><path d="M2 30h44" stroke="#c8a046" stroke-width="1.5"/><path d="M15 30l4-8h10l4 8-9 13z" fill="#c22a45"/><path d="M19 22l5 8 5-8M15 30h18M24 30v13" fill="none" stroke="#f4b7c2" stroke-width="1" opacity=".8"/><path d="M15 30l4-8h10l4 8-9 13z" fill="none" stroke="#e8c874" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        <span class="leading-none"><span class="block font-display text-[1.6rem] text-gold">The Garnet</span><span class="mt-1 block whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.2em] text-cream/80 sm:tracking-[0.32em]">Missoula · Since 1931</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-7">
+          <li><a href="whats-on.html" class="nav-link">What’s on</a></li>
+          <li><a href="events.html" class="nav-link">Events</a></li>
+          <li><a href="membership.html" class="nav-link" aria-current="page">Membership</a></li>
+          <li><a href="visit.html" class="nav-link">Visit</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2.5">
+        <a href="whats-on.html#watchlist" data-watch-link class="relative grid h-11 w-11 place-items-center rounded-full text-gold ring-1 ring-brass/60 transition hover:bg-wine" aria-label="Watchlist, 0 films">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>
+          <span data-watch-count class="count-badge absolute -right-1 -top-1" hidden>0</span>
+        </a>
+        <a href="tickets.html" class="btn btn-brass btn-sm hidden sm:inline-flex">Tickets</a>
+        <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-full ring-1 ring-brass/60 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="h-1.5 bg-[repeating-linear-gradient(90deg,var(--color-brass)_0_14px,transparent_14px_20px)] opacity-80" aria-hidden="true"></div>
+    <div id="mobile-menu" hidden class="border-t border-brass/30 bg-velvet lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="index.html" class="flex items-center justify-between border-b border-brass/30 py-4 font-display text-2xl text-cream aria-[current=page]:text-gold">Home<span aria-hidden="true" class="text-gold">→</span></a></li>
+          <li><a href="whats-on.html" class="flex items-center justify-between border-b border-brass/30 py-4 font-display text-2xl text-cream aria-[current=page]:text-gold">What’s on<span aria-hidden="true" class="text-gold">→</span></a></li>
+          <li><a href="events.html" class="flex items-center justify-between border-b border-brass/30 py-4 font-display text-2xl text-cream aria-[current=page]:text-gold">Events<span aria-hidden="true" class="text-gold">→</span></a></li>
+          <li><a href="membership.html" class="flex items-center justify-between border-b border-brass/30 py-4 font-display text-2xl text-cream aria-[current=page]:text-gold" aria-current="page">Membership<span aria-hidden="true" class="text-gold">→</span></a></li>
+          <li><a href="visit.html" class="flex items-center justify-between border-b border-brass/30 py-4 font-display text-2xl text-cream aria-[current=page]:text-gold">Visit<span aria-hidden="true" class="text-gold">→</span></a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b border-brass/30 py-4 font-display text-2xl text-cream aria-[current=page]:text-gold">About<span aria-hidden="true" class="text-gold">→</span></a></li>
+          <li><a href="tickets.html" class="flex items-center justify-between border-b border-brass/30 py-4 font-display text-2xl text-cream aria-[current=page]:text-gold">Tickets<span aria-hidden="true" class="text-gold">→</span></a></li>
+        </ul>
+        <p class="mt-6 text-sm text-cream/80">318 North Higgins Avenue, Missoula, MT · (406) 555-0120</p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="on-dark relative overflow-hidden bg-velvet text-cream">
+      <div class="sunburst pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="container-x relative pb-36 pt-14 text-center lg:pt-20">
+        <p class="eyebrow">Membership</p>
+        <h1 class="deco-title mx-auto mt-5 max-w-3xl text-5xl sm:text-6xl">Your seat at The Garnet, every week of the year</h1>
+        <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-cream/85">The Garnet is a nonprofit. Memberships pay for the projectionist, the organ tuner and the films nobody else in Montana will show. You get cheaper tickets, free popcorn and a say in the program.</p>
+        <div class="mt-10 inline-flex items-center gap-4 rounded-full bg-velvet-deep/70 px-5 py-2.5 ring-1 ring-brass/50">
+          <button type="button" class="text-sm font-bold uppercase tracking-widest" data-billing-label="monthly">Monthly</button>
+          <button type="button" class="switch" role="switch" aria-checked="false" aria-label="Pay annually, two months free" data-billing-switch></button>
+          <button type="button" class="text-sm font-bold uppercase tracking-widest" data-billing-label="annual">Annual <span class="ml-1 rounded-sm bg-gold px-1.5 py-0.5 text-[10px] text-velvet">2 months free</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="tiers-h" class="container-x relative -mt-24">
+      <h2 id="tiers-h" class="sr-only">Membership levels</h2>
+      <ul data-tiers class="grid gap-6 lg:grid-cols-3 lg:items-stretch"></ul>
+    </section>
+
+    <section aria-labelledby="calc-h" class="container-x grid gap-10 py-24 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+      <div class="reveal">
+        <p class="eyebrow">Worth it?</p>
+        <h2 id="calc-h" class="deco-title mt-4 text-4xl text-garnet">How often do you come to the movies?</h2>
+        <p class="mt-4 text-lg leading-relaxed text-muted">Members pay $8 instead of $13 at evening shows. Slide to see what a membership saves you on tickets alone, before the popcorn.</p>
+      </div>
+      <div class="reveal deco-frame card-velvet p-8 sm:p-10" style="--d: 100ms">
+        <label for="visits" class="block text-sm font-bold uppercase tracking-[.2em] text-gold">Films a month</label>
+        <input id="visits" type="range" min="0" max="12" step="1" value="3" class="mt-5 w-full accent-[var(--color-gold)]" aria-describedby="visits-out">
+        <p id="visits-out" class="mt-3 font-display text-3xl" data-visits-out>3 visits a month</p>
+        <p class="mt-4 text-lg leading-relaxed text-cream/90" data-member-savings aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section aria-labelledby="compare-h" class="bg-sand/60 py-24">
+      <div class="container-x">
+        <h2 id="compare-h" class="deco-title text-4xl text-garnet">Compare the levels</h2>
+        <div class="relative mt-10 overflow-x-auto rounded-md bg-paper shadow-[var(--shadow-deco)]" tabindex="0" role="region" aria-label="Membership comparison, scroll sideways for more">
+          <table class="w-full min-w-[40rem] text-left text-[15px]">
+            <caption class="sr-only">What each membership level includes</caption>
+            <thead>
+              <tr class="bg-velvet text-cream">
+                <th scope="col" class="px-5 py-4 font-bold">Benefit</th>
+                <th scope="col" class="px-5 py-4 text-center font-display text-lg text-gold">Usher</th>
+                <th scope="col" class="px-5 py-4 text-center font-display text-lg text-gold">Projectionist</th>
+                <th scope="col" class="px-5 py-4 text-center font-display text-lg text-gold">Marquee Circle</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-brass/30">
+              <tr><th scope="row" class="px-5 py-4 font-semibold">Ticket price</th><td class="px-5 py-4 text-center">$8</td><td class="px-5 py-4 text-center">$8</td><td class="px-5 py-4 text-center">Free (regular screenings)</td></tr>
+              <tr><th scope="row" class="px-5 py-4 font-semibold">Free tickets a month</th><td class="px-5 py-4 text-center">–</td><td class="px-5 py-4 text-center">2</td><td class="px-5 py-4 text-center">Unlimited for you</td></tr>
+              <tr><th scope="row" class="px-5 py-4 font-semibold">Concession stand</th><td class="px-5 py-4 text-center">10% off</td><td class="px-5 py-4 text-center">Free popcorn</td><td class="px-5 py-4 text-center">Free popcorn</td></tr>
+              <tr><th scope="row" class="px-5 py-4 font-semibold">Early booking for Q&amp;As and openings</th><td class="px-5 py-4 text-center">–</td><td class="px-5 py-4 text-center">Yes</td><td class="px-5 py-4 text-center">Yes</td></tr>
+              <tr><th scope="row" class="px-5 py-4 font-semibold">Vote on Cinema Club picks</th><td class="px-5 py-4 text-center">Yes</td><td class="px-5 py-4 text-center">Yes</td><td class="px-5 py-4 text-center">Yes</td></tr>
+              <tr><th scope="row" class="px-5 py-4 font-semibold">Projection booth tour</th><td class="px-5 py-4 text-center">–</td><td class="px-5 py-4 text-center">For two</td><td class="px-5 py-4 text-center">For two</td></tr>
+              <tr><th scope="row" class="px-5 py-4 font-semibold">A line on the marquee</th><td class="px-5 py-4 text-center">–</td><td class="px-5 py-4 text-center">–</td><td class="px-5 py-4 text-center">One night a year</td></tr>
+              <tr><th scope="row" class="px-5 py-4 font-semibold">Tax-deductible portion</th><td class="px-5 py-4 text-center">$40 a year</td><td class="px-5 py-4 text-center">$70 a year</td><td class="px-5 py-4 text-center">$200 a year</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="join" aria-labelledby="join-h" class="container-x grid gap-12 py-24 lg:grid-cols-[1fr_1.15fr] lg:gap-16">
+      <div>
+        <p class="eyebrow">Join today</p>
+        <h2 id="join-h" class="deco-title mt-4 text-4xl text-garnet">Become a member</h2>
+        <p class="mt-4 text-lg leading-relaxed text-muted">Fill this in and our membership desk sets up payment with you by phone, usually the same day. Member prices start from your very next visit.</p>
+        <ul class="mt-8 space-y-4">
+          <li class="flex gap-4"><span class="grid size-10 shrink-0 place-items-center rounded-full bg-velvet font-display text-gold">1</span><p><strong>Choose a level.</strong> Change or cancel any time; annual members can switch at renewal.</p></li>
+          <li class="flex gap-4"><span class="grid size-10 shrink-0 place-items-center rounded-full bg-velvet font-display text-gold">2</span><p><strong>Get your number.</strong> Use it at the box office and when booking online.</p></li>
+          <li class="flex gap-4"><span class="grid size-10 shrink-0 place-items-center rounded-full bg-velvet font-display text-gold">3</span><p><strong>Your card arrives by mail</strong> with a free popcorn voucher and this season’s program.</p></li>
+        </ul>
+      </div>
+      <form data-form="join" class="card p-6 sm:p-8" novalidate>
+        <div class="grid gap-5 sm:grid-cols-2">
+          <div class="sm:col-span-2">
+            <label for="jn-tier" class="label">Membership level</label>
+            <select id="jn-tier" name="tier" class="field">
+              <option value="usher">Usher</option>
+              <option value="projectionist" selected>Projectionist</option>
+              <option value="marquee-circle">Marquee Circle</option>
+            </select>
+            <p class="hint" data-join-price aria-live="polite"></p>
+          </div>
+          <div>
+            <label for="jn-name" class="label">Full name</label>
+            <input id="jn-name" name="name" type="text" required data-label="Your name" autocomplete="name" class="field">
+          </div>
+          <div>
+            <label for="jn-email" class="label">Email</label>
+            <input id="jn-email" name="email" type="email" required data-label="Email" autocomplete="email" class="field" placeholder="you@example.com">
+          </div>
+          <div>
+            <label for="jn-phone" class="label">Phone <span class="font-normal text-muted">(optional)</span></label>
+            <input id="jn-phone" name="phone" type="tel" autocomplete="tel" class="field" placeholder="(406) 555-0128">
+          </div>
+          <div>
+            <label for="jn-zip" class="label">ZIP code</label>
+            <input id="jn-zip" name="zip" type="text" inputmode="numeric" required data-zip data-label="ZIP code" autocomplete="postal-code" class="field" placeholder="59802">
+          </div>
+          <div class="sm:col-span-2">
+            <label class="flex items-center gap-3 font-semibold"><input id="jn-gift" type="checkbox" class="check">This membership is a gift</label>
+          </div>
+          <div data-gift-fields hidden class="sm:col-span-2">
+            <label for="jn-recipient" class="label">Who is it for?</label>
+            <input id="jn-recipient" name="recipient" type="text" class="field" placeholder="Their name; we’ll mail the card to you">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-garnet mt-7 w-full sm:w-auto">Join The Garnet</button>
+        <p data-form-status role="status" class="mt-3 text-sm font-semibold text-garnet"></p>
+      </form>
+    </section>
+
+    <section aria-labelledby="faq-h" class="border-t border-brass/40 bg-sand/50 py-20">
+      <div class="container-x max-w-3xl">
+        <h2 id="faq-h" class="deco-title text-4xl text-garnet">Member questions</h2>
+        <div class="mt-8 divide-y divide-brass/40 border-y border-brass/40">
+          <details class="faq group py-5"><summary class="flex items-center justify-between gap-4 text-lg font-bold">Can I bring a guest at the member price?<span class="faq-icon text-2xl text-garnet" aria-hidden="true">+</span></summary><p class="mt-3 leading-relaxed text-muted">Yes, one guest per visit at every level. Projectionist members also get two free tickets each month to use however they like.</p></details>
+          <details class="faq group py-5"><summary class="flex items-center justify-between gap-4 text-lg font-bold">Is my membership tax-deductible?<span class="faq-icon text-2xl text-garnet" aria-hidden="true">+</span></summary><p class="mt-3 leading-relaxed text-muted">Part of it. The Garnet Theater is a 501(c)(3) nonprofit, and we send a receipt each January showing the deductible portion. This is general information, not tax advice.</p></details>
+          <details class="faq group py-5"><summary class="flex items-center justify-between gap-4 text-lg font-bold">Do member prices apply to special events?<span class="faq-icon text-2xl text-garnet" aria-hidden="true">+</span></summary><p class="mt-3 leading-relaxed text-muted">For screenings with an intro or Q&amp;A, yes. Organ Loft Silents and private events have their own prices, with a member discount listed on each.</p></details>
+          <details class="faq group py-5"><summary class="flex items-center justify-between gap-4 text-lg font-bold">How do I cancel?<span class="faq-icon text-2xl text-garnet" aria-hidden="true">+</span></summary><p class="mt-3 leading-relaxed text-muted">Call (406) 555-0125 or tell the box office. Monthly memberships stop at the end of the month; annual memberships simply don’t renew.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="on-dark relative mt-auto overflow-hidden bg-velvet-deep text-cream">
+    <div class="sunburst pointer-events-none absolute inset-x-0 top-0 h-64 opacity-60" aria-hidden="true"></div>
+    <div class="relative h-1.5 bg-[repeating-linear-gradient(90deg,var(--color-brass)_0_14px,transparent_14px_20px)] opacity-80" aria-hidden="true"></div>
+    <div class="container-x relative grid gap-12 pb-12 pt-16 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="inline-flex items-center gap-3">
+          <svg viewBox="0 0 48 48" class="h-11 w-11 shrink-0" aria-hidden="true"><defs><clipPath id="logo-f"><path d="M2 30a22 22 0 0 1 44 0z"/></clipPath></defs><g clip-path="url(#logo-f)"><path d="M2 30a22 22 0 0 1 44 0z" fill="#5e1124"/><g stroke="#c8a046" stroke-width="1.6"><path d="M24 30 4 18M24 30 10 10M24 30 18 6M24 30 30 6M24 30 38 10M24 30 44 18"/></g></g><path d="M2 30h44" stroke="#c8a046" stroke-width="1.5"/><path d="M15 30l4-8h10l4 8-9 13z" fill="#c22a45"/><path d="M19 22l5 8 5-8M15 30h18M24 30v13" fill="none" stroke="#f4b7c2" stroke-width="1" opacity=".8"/><path d="M15 30l4-8h10l4 8-9 13z" fill="none" stroke="#e8c874" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          <span class="leading-none"><span class="block font-display text-[1.6rem] text-gold">The Garnet</span><span class="mt-1 block whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.2em] text-cream/80 sm:tracking-[0.32em]">Missoula · Since 1931</span></span>
+        </a>
+        <p class="mt-5 max-w-sm leading-relaxed text-cream/80">A nonprofit, single-screen movie palace on Higgins Avenue. New films, old films, foreign films and the occasional very strange one, every day of the year.</p>
+        <address class="mt-6 not-italic leading-relaxed text-cream/90">318 North Higgins Avenue<br>Missoula, MT 59802</address>
+        <p class="mt-3 text-[15px]"><a href="tel:+14065550120" class="underline-offset-4 hover:text-gold hover:underline">(406) 555-0120</a> · <a href="mailto:boxoffice@garnettheater.example" class="underline-offset-4 hover:text-gold hover:underline">boxoffice@garnettheater.example</a></p>
+      </div>
+      <nav aria-label="The program" class="lg:col-span-2 lg:col-start-6">
+        <h2 class="text-xs font-bold uppercase tracking-[0.22em] text-gold">The program</h2>
+        <ul class="mt-4 space-y-2.5 text-[15px] text-cream/90">
+          <li><a href="whats-on.html" class="underline-offset-4 hover:underline">What’s on</a></li>
+          <li><a href="whats-on.html?view=week" class="underline-offset-4 hover:underline">Week at a glance</a></li>
+          <li><a href="whats-on.html?access=cc" class="underline-offset-4 hover:underline">Captioned screenings</a></li>
+          <li><a href="events.html" class="underline-offset-4 hover:underline">Series &amp; events</a></li>
+          <li><a href="tickets.html" class="underline-offset-4 hover:underline">Book tickets</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="The theater" class="lg:col-span-2">
+        <h2 class="text-xs font-bold uppercase tracking-[0.22em] text-gold">The theater</h2>
+        <ul class="mt-4 space-y-2.5 text-[15px] text-cream/90">
+          <li><a href="visit.html" class="underline-offset-4 hover:underline">Plan your visit</a></li>
+          <li><a href="visit.html#access" class="underline-offset-4 hover:underline">Accessibility</a></li>
+          <li><a href="membership.html" class="underline-offset-4 hover:underline">Membership</a></li>
+          <li><a href="events.html#hire" class="underline-offset-4 hover:underline">Private hire</a></li>
+          <li><a href="about.html" class="underline-offset-4 hover:underline">Our story</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-3">
+        <h2 class="text-xs font-bold uppercase tracking-[0.22em] text-gold">The Garnet Gazette</h2>
+        <p class="mt-4 text-[15px] leading-relaxed text-cream/80">Next week’s program in your inbox every Tuesday.</p>
+        <form data-form="newsletter" class="mt-4" novalidate>
+          <label for="nl-email" class="sr-only">Email address</label>
+          <div class="flex gap-2">
+            <input id="nl-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@example.com" class="field min-w-0 flex-1">
+            <button type="submit" class="btn btn-brass shrink-0">Sign up</button>
+          </div>
+          <p data-form-status role="status" class="mt-2 text-sm font-semibold text-gold"></p>
+        </form>
+      </div>
+    </div>
+    <div class="relative border-t border-brass/25">
+      <div class="container-x flex flex-col gap-2 py-6 text-[13px] text-cream/75 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> The Garnet Theater, Missoula, Montana. A fictional theater: films, people and bookings are made up.</p>
+        <p>Template by Freeframe</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

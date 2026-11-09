@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-label="Illustrated portrait of Tariq Bell">
+<rect width="400" height="480" fill="#f2ead9"/>
+<path d="M200 230L620.0 230.0L618.4 266.6ZM200 230L594.7 373.6L580.6 407.5ZM200 230L521.7 500.0L497.0 527.0ZM200 230L410.0 593.7L377.5 610.6ZM200 230L272.9 643.6L236.6 648.4ZM200 230L127.1 643.6L91.3 635.7ZM200 230L-10.0 593.7L-40.9 574.0ZM200 230L-121.7 500.0L-144.0 470.9ZM200 230L-194.7 373.6L-205.7 338.7ZM200 230L-220.0 230.0L-218.4 193.4ZM200 230L-194.7 86.4L-180.6 52.5ZM200 230L-121.7 -40.0L-97.0 -67.0ZM200 230L-10.0 -133.7L22.5 -150.6ZM200 230L127.1 -183.6L163.4 -188.4ZM200 230L272.9 -183.6L308.7 -175.7ZM200 230L410.0 -133.7L440.9 -114.0ZM200 230L521.7 -40.0L544.0 -10.9ZM200 230L594.7 86.4L605.7 121.3Z" fill="#e8dcc4"/>
+<circle cx="200" cy="230" r="150" fill="#b5281c" opacity=".9"/>
+<circle cx="200" cy="230" r="150" fill="none" stroke="#151515" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round" opacity=".5"/>
+<path d="M30 480C46 392 120 362 200 362C280 362 354 392 370 480Z" fill="#1d3557"/>
+<path d="M164 362L200 420L236 362Z" fill="#f2ead9"/>
+<path d="M172 300h56v62c0 18-56 18-56 0Z" fill="#4b2e1f"/>
+<path d="M164 362L200 420L182 440L150 372Z M236 362L200 420L218 440L250 372Z" fill="#172a46"/>
+<rect x="284" y="414" width="34" height="8" rx="2" fill="#f2ead9" transform="rotate(-8 300 418)"/>
+<path d="M286 412v-26M292 412v-26M298 412v-26M304 412v-26M310 412v-26" stroke="#f2ead9" stroke-width="3" transform="rotate(-8 300 418)"/>
+<ellipse cx="129" cy="228" rx="13" ry="20" fill="#4b2e1f"/>
+<ellipse cx="271" cy="228" rx="13" ry="20" fill="#4b2e1f"/>
+<ellipse cx="200" cy="216" rx="71" ry="92" fill="#5b3826"/>
+
+<path d="M134 236C136 296 164 326 200 328C236 326 264 296 266 236C258 266 248 280 236 284C222 272 178 272 164 284C152 280 142 266 134 236Z" fill="#100b09"/>
+<path d="M170 270C184 261 216 261 230 270C224 277 214 278 200 277C186 278 176 277 170 270Z" fill="#100b09"/>
+<path d="M133 196C128 144 160 118 200 117C242 117 274 144 267 196L262 186C254 170 240 162 200 160C160 162 146 170 138 186Z" fill="#100b09"/>
+<path d="M154 150q12-8 24 0t24 0t24 0t24 0M150 168q12-8 24 0t24 0t24 0t24 0t20 0M164 134q10-6 20 0t20 0t20 0t18 0" stroke="#585453" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M160 196q12-8 26-2M214 194q14-6 26 2" stroke="#100b09" stroke-width="6" fill="none" stroke-linecap="round"/>
+<ellipse cx="173" cy="222" rx="5.5" ry="6.5" fill="#151515"/>
+<ellipse cx="227" cy="222" rx="5.5" ry="6.5" fill="#151515"/>
+<path d="M200 232c-4 14-8 22-12 26q10 6 22 0" stroke="#3b2419" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+<path d="M186 290q14 7 28 0" stroke="#321f15" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+</svg>

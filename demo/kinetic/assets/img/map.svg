@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" width="600" height="420">
+  <rect width="600" height="420" fill="#eceae3"/>
+  <path d="M380 0h220v170c-60 20-120 10-170-20-30-20-50-80-50-150Z" fill="#cdeedd"/>
+  <path d="M0 330c90 10 170 50 230 90H0Z" fill="#cdeedd"/>
+  <g fill="#e2dfd5"><rect x="40" y="40" width="110" height="80" rx="6"/><rect x="40" y="160" width="90" height="110" rx="6"/><rect x="250" y="210" width="120" height="70" rx="6"/><rect x="430" y="250" width="130" height="120" rx="6"/><rect x="200" y="40" width="120" height="70" rx="6"/></g>
+  <path d="M-20 300 620 60" stroke="#fff" stroke-width="30"/>
+  <path d="M-20 300 620 60" stroke="#ffd23f" stroke-width="3" stroke-dasharray="14 12"/>
+  <path d="M180 -10c20 120 60 260 160 440" fill="none" stroke="#fff" stroke-width="22"/>
+  <path d="M600 210C470 230 380 270 300 420" fill="none" stroke="#fff" stroke-width="16"/>
+  <path d="M0 140h600" stroke="#9aa0bd" stroke-width="6" stroke-dasharray="2 10" stroke-linecap="round"/>
+  <path d="M0 140h600" stroke="#9aa0bd" stroke-width="2"/>
+  <g font-family="Sofia Sans, Arial, sans-serif" font-weight="800" fill="#575c7c" font-size="14">
+    <text x="40" y="262" transform="rotate(-20.6 40 262)" letter-spacing="2">W. CUCHARRAS ST</text>
+    <text x="452" y="40" letter-spacing="1">BANCROFT PARK</text>
+    <text x="30" y="132" letter-spacing="1">MIDLAND TRAIL</text>
+    <text x="330" y="395" transform="rotate(-48 330 395)" letter-spacing="1">W. COLORADO AVE</text>
+  </g>
+  <g transform="translate(286 170)">
+    <ellipse cx="0" cy="44" rx="22" ry="6" fill="#0f1330" opacity=".2"/>
+    <path d="M0 44C-6 30-30 14-30-8a30 30 0 0 1 60 0c0 22-24 38-30 52Z" fill="#2b3be0" stroke="#fff" stroke-width="4"/>
+    <path d="M-7-20h17M-8-9h11M-9-20l-5 26" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(330 132)"><rect width="146" height="34" rx="6" fill="#0f1330"/><text x="73" y="22" text-anchor="middle" font-family="Sofia Sans, Arial, sans-serif" font-weight="800" font-size="14" fill="#fff">Foothill · Suite 3</text></g>
+</svg>

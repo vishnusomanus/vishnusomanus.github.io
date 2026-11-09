@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marigold Static — Weather for Two, the new album, out November 13</title>
+  <meta name="description" content="Marigold Static is a four-piece indie band from Lincoln, Nebraska. Pre-save the new album Weather for Two, hear the single Glasshouse, see tour dates and shop vinyl and merch.">
+  <meta name="theme-color" content="#f4efe6">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Marigold Static">
+  <meta property="og:title" content="Marigold Static — Weather for Two, the new album, out November 13">
+  <meta property="og:description" content="Marigold Static is a four-piece indie band from Lincoln, Nebraska. Pre-save the new album Weather for Two, hear the single Glasshouse, see tour dates and shop vinyl and merch.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700..900&amp;family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&amp;family=Space+Mono:wght@400;700&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="home" class="grain flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[100] rounded-full border-2 border-ink bg-sun px-5 py-3 text-sm font-bold text-ink focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+  <div class="on-ink bg-ink text-paper">
+    <p class="container-x flex min-h-10 items-center justify-center gap-2 py-2 text-center text-sm">
+      <span class="font-mono text-[0.72rem] font-bold tracking-[0.12em] text-sun uppercase">New album</span>
+      <span><span class="hidden sm:inline" data-release-note>Weather for Two is out November 13. </span><a href="music.html?release=weather-for-two#release" class="font-bold underline decoration-pink decoration-2 underline-offset-4 hover:text-pink" data-release-cta="listen-now">Hear the first single</a></span>
+    </p>
+  </div>
+  <header id="site-header" class="sticky top-0 z-50 border-b-2 border-transparent bg-paper transition-colors duration-300">
+    <div class="container-x flex h-[4.5rem] items-center justify-between gap-4">
+      <a href="index.html" class="group inline-flex shrink-0 items-center gap-2.5" aria-label="Marigold Static home">
+        <svg viewBox="0 0 32 32" class="h-9 w-9 shrink-0 transition-transform duration-500 group-hover:rotate-90" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="2.2 3"/><circle cx="16" cy="16" r="9" fill="#ff4d94" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="16" r="2.4" fill="currentColor"/></svg>
+        <span class="poster text-[1.7rem] leading-none tracking-[0.01em]">Marigold Static</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center">
+          <li><a href="music.html" class="nav-link">Music</a></li>
+          <li><a href="tour.html" class="nav-link">Tour</a></li>
+          <li><a href="merch.html" class="nav-link">Merch</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="press.html" class="nav-link">Press kit</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button type="button" class="icon-btn relative" data-cart-open aria-haspopup="dialog" aria-controls="cart" aria-label="Open bag, 0 items"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg><span class="cart-count" data-cart-count hidden>0</span></button>
+        <a href="index.html#presave" class="btn-primary hidden sm:inline-flex" data-release-cta="listen">Pre-save</a>
+        <button id="menu-toggle" type="button" class="icon-btn lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t-2 border-ink bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-10">
+        <ul>
+          <li><a href="index.html" class="mobile-link" aria-current="page">Home<svg viewBox="0 0 20 20" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="music.html" class="mobile-link">Music<svg viewBox="0 0 20 20" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="tour.html" class="mobile-link">Tour<svg viewBox="0 0 20 20" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="merch.html" class="mobile-link">Merch<svg viewBox="0 0 20 20" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="about.html" class="mobile-link">About<svg viewBox="0 0 20 20" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="press.html" class="mobile-link">Press kit<svg viewBox="0 0 20 20" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="contact.html" class="mobile-link">Contact<svg viewBox="0 0 20 20" class="h-7 w-7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+        </ul>
+        <div class="mt-8 grid gap-3 sm:grid-cols-2">
+          <a href="index.html#presave" class="btn-primary btn-lg" data-release-cta="listen-album">Pre-save the album</a>
+          <button type="button" class="btn-ghost btn-lg" data-cart-open aria-haspopup="dialog" aria-controls="cart"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>Your bag</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section id="presave" class="relative overflow-hidden border-b-2 border-ink" aria-labelledby="hero-title">
+      <svg class="pointer-events-none absolute -top-40 -right-56 h-[46rem] w-[46rem] text-ink/10 lg:-right-24" viewBox="0 0 400 400" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="200" cy="200" r="198"/><circle cx="200" cy="200" r="168"/><circle cx="200" cy="200" r="138"/><circle cx="200" cy="200" r="108"/><circle cx="200" cy="200" r="78"/></svg>
+      <div class="container-x relative grid items-center gap-12 pt-10 pb-16 sm:pt-14 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] lg:gap-10 lg:pt-16 lg:pb-24">
+        <div class="min-w-0">
+          <p class="eyebrow">Marigold Static · The new album</p>
+          <h1 id="hero-title" class="h-hero mt-5"><span class="block">Weather</span><span class="block"><span class="stroke-text">for</span> Two</span></h1>
+          <div data-release-state="soon">
+            <p class="lead mt-6 max-w-xl">Eleven songs written through one long Lincoln winter. Out <strong class="text-ink" data-release-date>Friday, November 13</strong> on Lantern House Records. The first single, <em>Glasshouse</em>, is out now.</p>
+            <div class="mt-7 flex flex-wrap items-stretch gap-2.5" data-countdown role="timer" aria-label="Countdown to release day">
+              <div class="card min-w-[4.75rem] px-3 py-2 text-center"><span class="block font-display text-[2.6rem] leading-none font-black tabular-nums" data-cd="d">30</span><span class="meta">Days</span></div>
+              <div class="card min-w-[4.75rem] px-3 py-2 text-center"><span class="block font-display text-[2.6rem] leading-none font-black tabular-nums" data-cd="h">00</span><span class="meta">Hours</span></div>
+              <div class="card min-w-[4.75rem] px-3 py-2 text-center"><span class="block font-display text-[2.6rem] leading-none font-black tabular-nums" data-cd="m">00</span><span class="meta">Mins</span></div>
+              <div class="card hidden min-w-[4.75rem] bg-sun px-3 py-2 text-center sm:block"><span class="block font-display text-[2.6rem] leading-none font-black tabular-nums" data-cd="s">00</span><span class="meta text-ink">Secs</span></div>
+            </div>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <button type="button" class="btn-primary btn-lg" data-presave aria-pressed="false"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 20h14"/></svg><span data-label>Pre-save the album</span></button>
+              <button type="button" class="btn-ghost btn-lg" data-play-release="weather-for-two" data-play-track="weather-for-two-2" data-label-play="Play “Glasshouse”" aria-pressed="false"><svg viewBox="0 0 24 24" class="i-play h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></svg><svg viewBox="0 0 24 24" class="i-pause hidden h-5 w-5" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4.2" height="14" rx="1.2"/><rect x="13.8" y="5" width="4.2" height="14" rx="1.2"/></svg><span data-label>Play “Glasshouse”</span></button>
+            </div>
+          </div>
+          <div data-release-state="out" hidden>
+            <p class="lead mt-6 max-w-xl">The new album is out now on Lantern House Records: eleven songs written through one long Lincoln winter.</p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <button type="button" class="btn-primary btn-lg" data-play-release="weather-for-two" data-label-play="Play the album" aria-pressed="false"><svg viewBox="0 0 24 24" class="i-play h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></svg><svg viewBox="0 0 24 24" class="i-pause hidden h-5 w-5" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4.2" height="14" rx="1.2"/><rect x="13.8" y="5" width="4.2" height="14" rx="1.2"/></svg><span data-label>Play the album</span></button>
+              <a href="merch.html#p-wft-lp" class="btn-ghost btn-lg">Buy the vinyl</a>
+            </div>
+          </div>
+          <div class="mt-9">
+            <p class="meta">Pre-save or listen on</p>
+            <ul class="mt-3 flex flex-wrap gap-2">
+              <li><a href="https://spindle.example/marigold-static" class="chip chip-paper py-1.5 pr-3.5 text-[0.75rem] transition hover:bg-ink hover:text-paper"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M7.5 10c3-1 6-.8 9 .6M8 13.4c2.4-.7 4.8-.5 7 .5M8.6 16.6c1.8-.4 3.6-.3 5.2.4"/></svg>Spindle</a></li>
+              <li><a href="https://groovemarket.example/marigold-static" class="chip chip-paper py-1.5 pr-3.5 text-[0.75rem] transition hover:bg-ink hover:text-paper"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/></svg>Groove Market</a></li>
+              <li><a href="https://tubeline.example/@marigoldstatic" class="chip chip-paper py-1.5 pr-3.5 text-[0.75rem] transition hover:bg-ink hover:text-paper"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="3.5"/><path d="M10.5 9.5v5l4-2.5z" fill="currentColor"/></svg>Tubeline</a></li>
+              <li><a href="https://airwave.example/artist/marigold-static" class="chip chip-paper py-1.5 pr-3.5 text-[0.75rem] transition hover:bg-ink hover:text-paper"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M5 19a10 10 0 0 1 0-14M19 5a10 10 0 0 1 0 14M8.5 15.5a5 5 0 0 1 0-7M15.5 8.5a5 5 0 0 1 0 7"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>Airwave</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="hero-art relative mx-auto w-full max-w-[34rem] lg:mr-0" data-playing-when="weather-for-two">
+          <svg viewBox="0 0 400 400" class="vinyl absolute top-[6%] left-[6%] w-[88%]" aria-hidden="true">
+            <g class="vinyl-disc">
+              <circle cx="200" cy="200" r="196" fill="#15130f"/>
+              <g fill="none" stroke="#f4efe6" stroke-opacity=".14"><circle cx="200" cy="200" r="180"/><circle cx="200" cy="200" r="164"/><circle cx="200" cy="200" r="148"/><circle cx="200" cy="200" r="132"/><circle cx="200" cy="200" r="116"/><circle cx="200" cy="200" r="100"/></g>
+              <path d="M200 30a170 170 0 0 1 150 92" fill="none" stroke="#f4efe6" stroke-opacity=".35" stroke-width="5" stroke-linecap="round"/>
+              <circle cx="200" cy="200" r="64" fill="#ff4d94"/><circle cx="200" cy="200" r="64" fill="none" stroke="#15130f" stroke-width="3"/>
+              <text x="200" y="186" text-anchor="middle" font-family="Big Shoulders Display, sans-serif" font-weight="900" font-size="20" fill="#15130f">WEATHER</text>
+              <text x="200" y="230" text-anchor="middle" font-family="Space Mono, monospace" font-weight="700" font-size="11" fill="#15130f">LHR031 · SIDE A</text>
+              <circle cx="200" cy="200" r="5" fill="#f4efe6"/>
+            </g>
+          </svg>
+          <div class="cover relative -rotate-2 shadow-[10px_10px_0_var(--color-ink)]" data-cover="weather-for-two" data-cover-label="Cover art for Weather for Two: a sun, waves and rain printed in pink, yellow and blue"></div>
+          <div class="sticker absolute -top-5 -left-4 h-24 w-24 rotate-[-12deg] bg-sun text-[1.35rem] sm:-left-7 sm:h-28 sm:w-28 sm:text-[1.6rem]" aria-hidden="true"><span data-release-state="soon">Out<br>11/13</span><span data-release-state="out" hidden>Out<br>now</span></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker-wrap on-ink overflow-hidden border-b-2 border-ink bg-ink py-4 text-paper" aria-hidden="true">
+      <div class="ticker">
+        <p class="poster flex shrink-0 items-center gap-6 pr-6 text-[2.5rem] whitespace-nowrap">Lincoln <span class="text-pink">✶</span> Omaha <span class="text-sun">✶</span> Kansas City <span class="text-pink">✶</span> Des Moines <span class="text-sun">✶</span> Minneapolis <span class="text-pink">✶</span> Chicago <span class="text-sun">✶</span> Milwaukee <span class="text-pink">✶</span> Madison <span class="text-sun">✶</span> Amsterdam <span class="text-pink">✶</span> Berlin <span class="text-sun">✶</span> Paris <span class="text-pink">✶</span> Toronto <span class="text-sun">✶</span> Brooklyn <span class="text-pink">✶</span> Philadelphia <span class="text-sun">✶</span> Los Angeles <span class="text-pink">✶</span></p>
+        <p class="poster flex shrink-0 items-center gap-6 pr-6 text-[2.5rem] whitespace-nowrap">Lincoln <span class="text-pink">✶</span> Omaha <span class="text-sun">✶</span> Kansas City <span class="text-pink">✶</span> Des Moines <span class="text-sun">✶</span> Minneapolis <span class="text-pink">✶</span> Chicago <span class="text-sun">✶</span> Milwaukee <span class="text-pink">✶</span> Madison <span class="text-sun">✶</span> Amsterdam <span class="text-pink">✶</span> Berlin <span class="text-sun">✶</span> Paris <span class="text-pink">✶</span> Toronto <span class="text-sun">✶</span> Brooklyn <span class="text-pink">✶</span> Philadelphia <span class="text-sun">✶</span> Los Angeles <span class="text-pink">✶</span></p>
+      </div>
+    </div>
+
+    <section class="container-x py-20 sm:py-28" aria-labelledby="record-title">
+      <div class="grid gap-12 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-20">
+        <div class="reveal min-w-0">
+          <p class="eyebrow">The record</p>
+          <h2 id="record-title" class="h-section mt-4">Eleven songs for <span class="hl">bad weather</span></h2>
+          <p class="lead mt-6">Recorded live to tape in nine days at Antelope Hall with producer Ailsa Braid. Bigger synths, closer vocals, strings on two songs and, for the first time, Callum singing.</p>
+          <figure class="mt-10 border-l-4 border-pink pl-5">
+            <blockquote class="text-xl leading-snug font-bold">“Every song on it is two people waiting for the rain to stop and secretly hoping it won’t.”</blockquote>
+            <figcaption class="meta mt-3">Isla Carrick, vocals</figcaption>
+          </figure>
+          <div class="mt-10 flex flex-wrap gap-3">
+            <a href="music.html?release=weather-for-two#release" class="btn-dark">Album details</a>
+            <a href="merch.html#p-wft-lp" class="btn-ghost" data-release-cta="buy-lp">Pre-order the LP</a>
+          </div>
+        </div>
+        <div class="reveal min-w-0">
+          <div class="card card-shadow p-4 sm:p-6">
+            <div class="flex flex-wrap items-baseline justify-between gap-3 border-b-2 border-ink pb-3">
+              <h3 class="font-display text-2xl font-extrabold uppercase">Weather for Two</h3>
+              <p class="meta">LP · 11 tracks · 41 min</p>
+            </div>
+            <div data-new-tracklist></div>
+            <p class="mt-4 rounded-xl bg-paper-2 px-4 py-3 text-sm text-soft"><strong class="text-ink">Glasshouse</strong> is out now. The other ten songs unlock on release day. Previews are 30 seconds long.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="on-ink bg-ink py-20 text-paper sm:py-28" aria-labelledby="video-title">
+      <div class="container-x">
+        <div class="reveal flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <p class="eyebrow">Watch</p>
+            <h2 id="video-title" class="h-section mt-4">Glasshouse <span class="text-pink">(official video)</span></h2>
+          </div>
+          <p class="max-w-sm text-fog">Shot in one take in an old Lincoln greenhouse, directed by Mhairi Lennox. 3 min 41 sec.</p>
+        </div>
+        <div class="reveal group relative mt-10 aspect-video overflow-hidden rounded-2xl border-2 border-paper/80 bg-pink" data-video data-video-embed="" data-video-title="Marigold Static: Glasshouse (official video)" data-video-release="glasshouse" data-playing-when="glasshouse">
+          <div class="absolute inset-0" data-video-stage>
+            <svg viewBox="0 0 1600 900" class="absolute inset-0 h-full w-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <rect width="1600" height="900" fill="#ff4d94"/>
+              <g style="mix-blend-mode:multiply">
+                <rect x="180" y="120" width="360" height="760" rx="180" fill="#2b3fd6"/>
+                <rect x="620" y="60" width="360" height="820" rx="180" fill="#ffcf33"/>
+                <rect x="1060" y="160" width="360" height="720" rx="180" fill="#2b3fd6"/>
+              </g>
+              <g fill="none" stroke="#15130f" stroke-width="6">
+                <rect x="196" y="136" width="360" height="760" rx="180"/><rect x="636" y="76" width="360" height="820" rx="180"/><rect x="1076" y="176" width="360" height="720" rx="180"/>
+                <path d="M376 136v760M816 76v820M1256 176v720M196 420h360M636 360h360M1076 460h360"/>
+              </g>
+              <g class="video-bars" fill="#15130f">
+                <rect x="120" y="800" width="26" height="100" rx="4"/><rect x="160" y="760" width="26" height="140" rx="4"/><rect x="200" y="820" width="26" height="80" rx="4"/><rect x="1400" y="780" width="26" height="120" rx="4"/><rect x="1440" y="740" width="26" height="160" rx="4"/><rect x="1480" y="810" width="26" height="90" rx="4"/>
+              </g>
+              <text x="70" y="110" font-family="Big Shoulders Display, sans-serif" font-weight="900" font-size="88" fill="#15130f">MARIGOLD STATIC</text>
+              <text x="1530" y="110" text-anchor="end" font-family="Space Mono, monospace" font-weight="700" font-size="30" fill="#15130f">DIR. MHAIRI LENNOX</text>
+            </svg>
+            <button type="button" class="absolute inset-0 grid w-full place-items-center focus:outline-none" data-video-play aria-label="Play the Glasshouse video">
+              <span class="grid h-24 w-24 place-items-center rounded-full border-2 border-ink bg-paper text-ink shadow-[6px_6px_0_var(--color-ink)] transition duration-300 group-hover:scale-105 group-focus-within:outline group-focus-within:outline-4 group-focus-within:outline-offset-4 group-focus-within:outline-sun sm:h-32 sm:w-32">
+                <svg viewBox="0 0 24 24" class="v-play ml-1.5 h-10 w-10 sm:h-12 sm:w-12" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></svg><svg viewBox="0 0 24 24" class="v-pause h-10 w-10 sm:h-12 sm:w-12" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4.2" height="14" rx="1.2"/><rect x="13.8" y="5" width="4.2" height="14" rx="1.2"/></svg>
+              </span>
+            </button>
+          </div>
+        </div>
+        <p class="mt-4 text-sm text-fog" data-video-note hidden aria-live="polite">Demo: this poster plays the single’s audio preview instead of loading a video. Add your video’s embed address to <code class="font-mono text-xs text-paper">data-video-embed</code> and the player will load only after someone presses play.</p>
+      </div>
+    </section>
+
+    <section class="container-x py-20 sm:py-28" aria-labelledby="dates-title">
+      <div class="reveal flex flex-wrap items-end justify-between gap-6 border-b-2 border-ink pb-6">
+        <div>
+          <p class="eyebrow">Live</p>
+          <h2 id="dates-title" class="h-section mt-4">Next on the road</h2>
+        </div>
+        <a href="tour.html" class="btn-dark">All tour dates<svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+      </div>
+      <ul class="reveal" data-next-shows aria-label="Next four shows"></ul>
+    </section>
+
+    <section class="border-y-2 border-ink bg-paper-2 py-20 sm:py-28" aria-labelledby="merch-title">
+      <div class="container-x">
+        <div class="reveal flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <p class="eyebrow">Merch table</p>
+            <h2 id="merch-title" class="h-section mt-4">Records, tees &amp; posters</h2>
+          </div>
+          <a href="merch.html" class="btn-dark">Shop everything<svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+        </div>
+        <ul class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3" data-merch-preview></ul>
+      </div>
+    </section>
+
+    <section class="overflow-hidden bg-pink py-20 sm:py-24" aria-label="What the press says">
+      <div class="container-x reveal">
+        <figure class="mx-auto max-w-5xl text-center">
+          <blockquote class="poster text-[clamp(2.4rem,6.2vw,5rem)] leading-[0.92]">“The most quietly enormous record to come out of Nebraska in years.”</blockquote>
+          <figcaption class="mt-6 font-mono text-sm font-bold tracking-[0.1em] uppercase">The Northern Review, on Lowland Signal · ★★★★★</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="join" class="on-ink bg-cobalt py-20 text-paper sm:py-28" aria-labelledby="join-title">
+      <div class="container-x grid gap-12 lg:grid-cols-2 lg:gap-20">
+        <div class="reveal">
+          <p class="eyebrow">Fan club</p>
+          <h2 id="join-title" class="h-section mt-4">Join the Static Club</h2>
+          <p class="mt-6 max-w-lg text-lg leading-relaxed text-paper">One email a month from the band. No spam, no algorithm, just us.</p>
+          <ul class="mt-8 space-y-3.5">
+            <li class="flex gap-3"><span class="mt-1 grid h-6 w-6 shrink-0 place-items-center rounded-full border-2 border-ink bg-sun text-ink" aria-hidden="true"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span>Tour presale codes 48 hours before general sale</span></li>
+            <li class="flex gap-3"><span class="mt-1 grid h-6 w-6 shrink-0 place-items-center rounded-full border-2 border-ink bg-sun text-ink" aria-hidden="true"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span>First pick of limited vinyl colors and test pressings</span></li>
+            <li class="flex gap-3"><span class="mt-1 grid h-6 w-6 shrink-0 place-items-center rounded-full border-2 border-ink bg-sun text-ink" aria-hidden="true"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span><span>Voice-memo demos and the stories behind the songs</span></li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <form id="join-form" class="rounded-2xl border-2 border-ink bg-ink p-6 shadow-[8px_8px_0_var(--color-ink)] sm:p-8" data-validate data-success="join-success" novalidate>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div data-field>
+                <label for="join-name" class="field-label">First name <span class="font-normal text-haze">(optional)</span></label>
+                <input id="join-name" name="first_name" type="text" autocomplete="given-name" class="field">
+              </div>
+              <div data-field>
+                <label for="join-country" class="field-label">Where are you?</label>
+                <select id="join-country" name="region" class="field" required data-name="Your region" aria-describedby="join-country-error">
+                  <option value="">Choose one</option>
+                  <option>Nebraska</option>
+                  <option>Rest of the Midwest</option>
+                  <option>Rest of the US</option>
+                  <option>Europe</option>
+                  <option>Canada</option>
+                  <option>Somewhere else</option>
+                </select>
+                <p id="join-country-error" class="field-error"></p>
+              </div>
+              <div class="sm:col-span-2" data-field>
+                <label for="join-email" class="field-label">Email</label>
+                <input id="join-email" name="email" type="email" autocomplete="email" class="field" required data-name="Your email" placeholder="you@example.com" aria-describedby="join-email-error">
+                <p id="join-email-error" class="field-error"></p>
+              </div>
+              <div class="sm:col-span-2" data-field>
+                <label class="flex items-start gap-3 text-sm leading-relaxed text-fog">
+                  <input type="checkbox" name="consent" class="check" required data-required-msg="Tick the box so we can email you." aria-describedby="join-consent-error">
+                  <span>Send me the Static Club email. I can unsubscribe with one click.</span>
+                </label>
+                <p id="join-consent-error" class="field-error"></p>
+              </div>
+            </div>
+            <button type="submit" class="btn-sun btn-lg mt-6 w-full">Join the club</button>
+          </form>
+          <div id="join-success" class="rounded-2xl border-2 border-ink bg-sun p-6 text-ink shadow-[8px_8px_0_var(--color-ink)] sm:p-8" data-success-box hidden>
+            <p class="poster text-5xl">Almost in<span data-success-name></span>!</p>
+            <p class="mt-3 leading-relaxed">Look out for a confirmation email from us; once you click the link, you’re in the Static Club.</p>
+            <button type="button" class="mt-5 font-bold underline decoration-2 underline-offset-4" data-form-again>Sign up another address</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="on-ink relative overflow-hidden bg-ink text-paper">
+    <div class="container-x pt-16 pb-10 sm:pt-20">
+      <div class="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
+        <div>
+          <a href="index.html" class="inline-flex items-center gap-2.5 text-paper" aria-label="Marigold Static home"><svg viewBox="0 0 32 32" class="h-9 w-9 shrink-0" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="2.2 3"/><circle cx="16" cy="16" r="9" fill="#ff4d94" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="16" r="2.4" fill="currentColor"/></svg><span class="poster text-3xl leading-none">Marigold Static</span></a>
+          <p class="mt-5 max-w-sm text-fog">A four-piece from Lincoln, Nebraska, making synth-lit indie rock about weather, night buses and the people you wait out the rain with.</p>
+          <p class="mt-6 inline-flex items-center gap-2 rounded-full border-2 border-paper/30 px-3.5 py-1.5 text-sm text-fog"><span class="h-2.5 w-2.5 rounded-full bg-pink" aria-hidden="true"></span>On tour: November to February</p>
+        </div>
+        <div class="grid grid-cols-2 gap-10 sm:grid-cols-3">
+          <div>
+            <h2 class="meta">The band</h2>
+            <ul class="mt-4 space-y-2.5">
+              <li><a href="music.html" class="text-fog transition hover:text-paper">Music</a></li>
+              <li><a href="tour.html" class="text-fog transition hover:text-paper">Tour dates</a></li>
+              <li><a href="merch.html" class="text-fog transition hover:text-paper">Merch</a></li>
+              <li><a href="about.html" class="text-fog transition hover:text-paper">About</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="meta">Work with us</h2>
+            <ul class="mt-4 space-y-2.5">
+              <li><a href="press.html" class="text-fog transition hover:text-paper">Press kit</a></li>
+              <li><a href="contact.html?topic=booking" class="text-fog transition hover:text-paper">Booking</a></li>
+              <li><a href="contact.html?topic=sync" class="text-fog transition hover:text-paper">Sync &amp; licensing</a></li>
+              <li><a href="contact.html" class="text-fog transition hover:text-paper">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-span-2 sm:col-span-1">
+            <h2 class="meta">Follow</h2>
+            <ul class="mt-4 space-y-2.5">
+              <li><a href="https://listen.example/marigold-static" class="text-fog transition hover:text-paper">Streaming</a></li>
+              <li><a href="https://video.example/@marigoldstatic" class="text-fog transition hover:text-paper">Video channel</a></li>
+              <li><a href="https://photos.example/marigoldstatic" class="text-fog transition hover:text-paper">Photo journal</a></li>
+              <li><a href="index.html#join" class="text-fog transition hover:text-paper">The Static Club newsletter</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="poster mt-16 text-[clamp(3rem,13.4vw,12.5rem)] leading-[0.8] whitespace-nowrap text-paper select-none" aria-hidden="true">Marigold <span class="text-pink">Static</span></p>
+      <div class="mt-8 flex flex-col gap-3 border-t-2 border-paper/20 pt-6 text-sm text-haze sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Marigold Static. Released by Lantern House Records.</p>
+        <p>Made in Lincoln, mostly in the wind.</p>
+      </div>
+    </div>
+  </footer>
+  <section id="player" class="player-bar is-tucked on-ink fixed inset-x-0 bottom-0 z-[55] px-2 pb-2 sm:px-4 sm:pb-4" aria-label="Audio player" data-back-to-top-avoid hidden>
+    <div class="mx-auto max-w-6xl rounded-2xl border-2 border-ink bg-ink text-paper shadow-[6px_6px_0_var(--color-pink)]">
+      <div class="flex items-center gap-2.5 p-2 sm:gap-4 sm:p-2.5 sm:pr-4">
+        <div class="h-14 w-14 shrink-0 overflow-hidden rounded-md border-2 border-paper/20 [&>svg]:block [&>svg]:h-full [&>svg]:w-full" data-np-cover aria-hidden="true"></div>
+        <div class="min-w-0 flex-1 lg:w-60 lg:flex-none">
+          <p class="truncate font-bold" data-np-title>Glasshouse</p>
+          <p class="truncate text-sm text-fog" data-np-release>Weather for Two</p>
+        </div>
+        <div class="flex items-center gap-1 sm:gap-2">
+          <button type="button" class="hidden h-10 w-10 place-items-center rounded-full hover:bg-ink-2 disabled:opacity-40 sm:grid" data-act="prev" aria-label="Previous track" aria-keyshortcuts="Shift+P"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M6 5h2.5v14H6zM19 5.9v12.2a.9.9 0 0 1-1.4.75L9.5 13.2a1.4 1.4 0 0 1 0-2.4l8.1-5.65A.9.9 0 0 1 19 5.9Z"/></svg></button>
+          <button type="button" class="grid h-12 w-12 place-items-center rounded-full border-2 border-paper bg-pink text-ink transition hover:scale-105" data-act="toggle" aria-label="Play" aria-keyshortcuts="Space"><svg viewBox="0 0 24 24" class="i-play h-6 w-6" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></svg><svg viewBox="0 0 24 24" class="i-pause hidden h-6 w-6" fill="currentColor" aria-hidden="true"><rect x="6" y="5" width="4.2" height="14" rx="1.2"/><rect x="13.8" y="5" width="4.2" height="14" rx="1.2"/></svg></button>
+          <button type="button" class="grid h-10 w-10 place-items-center rounded-full hover:bg-ink-2 disabled:opacity-40" data-act="next" aria-label="Next track" aria-keyshortcuts="Shift+N"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="currentColor" aria-hidden="true"><path d="M18 5h-2.5v14H18zM5 5.9v12.2a.9.9 0 0 0 1.4.75l8.1-5.65a1.4 1.4 0 0 0 0-2.4L6.4 5.15A.9.9 0 0 0 5 5.9Z"/></svg></button>
+        </div>
+        <div class="hidden min-w-0 flex-1 items-center gap-3 md:flex">
+          <span class="w-10 text-right font-mono text-xs text-fog tabular-nums" data-cur>0:00</span>
+          <input type="range" class="range min-w-0 flex-1" min="0" max="30" step="1" value="0" data-seek aria-label="Seek">
+          <span class="w-10 font-mono text-xs text-haze tabular-nums" data-dur>0:30</span>
+        </div>
+        <span class="chip hidden border-paper/40 text-fog xl:inline-flex">Preview</span>
+        <button type="button" class="hidden h-10 w-10 place-items-center rounded-full hover:bg-ink-2 sm:grid" data-act="mute" aria-label="Mute" aria-pressed="false"><svg data-icon-sound viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg><svg data-icon-muted viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="m16 9.5 5 5M21 9.5l-5 5"/></svg></button>
+        <button type="button" class="grid h-10 w-10 place-items-center rounded-full text-fog hover:bg-ink-2 hover:text-paper" data-act="close" aria-label="Close player"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      </div>
+      <p id="player-status" class="sr-only" aria-live="polite"></p>
+    </div>
+  </section>
+  <div id="cart" class="drawer fixed inset-0 z-[80]" hidden>
+    <div class="drawer-backdrop absolute inset-0 bg-ink/55" data-cart-close></div>
+    <div class="drawer-panel absolute inset-y-0 right-0 flex w-full max-w-md flex-col border-l-2 border-ink bg-card focus:outline-none" role="dialog" aria-modal="true" aria-labelledby="cart-title" tabindex="-1">
+      <div class="flex items-center justify-between gap-4 border-b-2 border-ink px-5 py-4">
+        <h2 id="cart-title" class="poster text-4xl" data-cart-title>Your bag</h2>
+        <button type="button" class="icon-btn" data-cart-close aria-label="Close bag"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      </div>
+      <div class="flex min-h-0 flex-1 flex-col" data-cart-view="bag">
+        <div class="border-b-2 border-ink bg-paper-2 px-5 py-3">
+          <p class="text-sm font-bold" data-ship aria-live="polite">Spend $60 more for free US shipping.</p>
+          <div class="mt-2 h-2.5 overflow-hidden rounded-full border-2 border-ink bg-card"><span class="block h-full bg-pink transition-[width] duration-500" data-ship-bar style="width:0%"></span></div>
+        </div>
+        <div class="min-h-0 flex-1 overflow-y-auto px-5">
+          <ul data-cart-items aria-label="Items in your bag"></ul>
+          <div class="py-14 text-center" data-cart-empty>
+            <svg viewBox="0 0 120 120" class="mx-auto h-24 w-24" aria-hidden="true"><circle cx="60" cy="60" r="50" fill="#ffcf33" stroke="#15130f" stroke-width="3"/><g fill="none" stroke="#15130f" stroke-opacity=".3"><circle cx="60" cy="60" r="40"/><circle cx="60" cy="60" r="30"/></g><circle cx="60" cy="60" r="14" fill="#ff4d94" stroke="#15130f" stroke-width="3"/><circle cx="60" cy="60" r="3" fill="#15130f"/></svg>
+            <p class="poster mt-5 text-4xl">Nothing here yet</p>
+            <p class="mx-auto mt-2 max-w-xs text-soft">Records, tees and tour posters are a click away.</p>
+            <a href="merch.html" class="btn-dark mt-6">Browse the merch</a>
+          </div>
+        </div>
+        <div class="border-t-2 border-ink px-5 py-5" data-cart-footer hidden>
+          <dl class="space-y-1.5 text-sm">
+            <div class="flex justify-between"><dt>Subtotal</dt><dd class="font-mono font-bold" data-cart-subtotal>$0</dd></div>
+            <div class="flex justify-between"><dt>US shipping</dt><dd class="font-mono" data-cart-shipping>$6</dd></div>
+          </dl>
+          <button type="button" class="btn-primary btn-lg mt-4 w-full" data-checkout>Checkout</button>
+          <p class="mt-3 text-center text-xs text-subtle">Prices exclude sales tax. International shipping is calculated at checkout.</p>
+        </div>
+      </div>
+      <div class="min-h-0 flex-1 overflow-y-auto px-5 py-6" data-cart-view="checkout" hidden>
+        <p class="eyebrow">Step 2 of 2</p>
+        <h3 class="mt-3 font-display text-3xl font-extrabold uppercase">Order summary</h3>
+        <ul class="mt-4 divide-y divide-ink/15 border-y-2 border-ink text-sm" data-checkout-lines></ul>
+        <dl class="mt-4 space-y-1.5 text-sm">
+          <div class="flex justify-between"><dt>Subtotal</dt><dd class="font-mono" data-cart-subtotal>$0</dd></div>
+          <div class="flex justify-between"><dt>US shipping</dt><dd class="font-mono" data-cart-shipping>$0</dd></div>
+          <div class="flex justify-between border-t-2 border-ink pt-2 text-base font-bold"><dt>Total</dt><dd class="font-mono" data-cart-total>$0</dd></div>
+        </dl>
+        <div class="mt-6 rounded-xl border-2 border-dashed border-ink bg-sun/40 p-4 text-sm leading-relaxed">
+          <p class="font-bold">Packed in Lincoln.</p>
+          <p class="mt-1">US orders ship within three business days. Pre-orders ship together on release week.</p>
+        </div>
+        <button type="button" class="btn-primary btn-lg mt-6 w-full" data-place-order>Place order</button>
+        <button type="button" class="btn-ghost mt-3 w-full" data-back-to-bag>Back to bag</button>
+      </div>
+      <div class="flex-1 px-5 py-10 text-center" data-cart-view="done" hidden>
+        <svg viewBox="0 0 120 120" class="mx-auto h-24 w-24" aria-hidden="true"><circle cx="60" cy="60" r="50" fill="#ff4d94" stroke="#15130f" stroke-width="3"/><path d="m38 62 15 15 30-32" fill="none" stroke="#15130f" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <p class="poster mt-5 text-4xl">Order placed</p>
+        <p class="mx-auto mt-3 max-w-xs text-soft">Thanks! Your order reference is <strong class="text-ink" data-order-ref></strong>. US orders ship within three business days; pre-orders ship together on release week. Mention the reference if you need to get in touch.</p>
+        <button type="button" class="btn-dark mt-6" data-cart-close>Keep browsing</button>
+      </div>
+    </div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

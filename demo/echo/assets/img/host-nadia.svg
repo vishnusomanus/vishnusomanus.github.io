@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-label="Illustrated portrait of Nadia Ferreira">
+  <rect width="400" height="480" fill="#ff6b4a"/>
+  <g fill="none" stroke="#0e0c13" stroke-opacity=".14" stroke-width="3"><circle cx="200" cy="215" r="150"/><circle cx="200" cy="215" r="185"/><circle cx="200" cy="215" r="220"/></g>
+  <!-- shoulders -->
+  <path d="M52 480c6-86 64-128 148-128s142 42 148 128z" fill="#1c1826"/>
+  <path d="M168 352h64l-6 34c-8 12-44 12-52 0z" fill="#8a5a3f"/>
+  <path d="M150 360c14 22 86 22 100 0" fill="none" stroke="#b9a4ff" stroke-width="10" stroke-linecap="round"/>
+  <!-- hair back (curls) -->
+  <g fill="#1a1012">
+    <circle cx="200" cy="150" r="96"/><circle cx="118" cy="190" r="52"/><circle cx="282" cy="190" r="52"/>
+    <circle cx="112" cy="250" r="44"/><circle cx="288" cy="250" r="44"/><circle cx="130" cy="300" r="34"/><circle cx="270" cy="300" r="34"/>
+    <circle cx="150" cy="96" r="46"/><circle cx="250" cy="96" r="46"/><circle cx="200" cy="78" r="48"/>
+  </g>
+  <!-- neck + face -->
+  <rect x="172" y="290" width="56" height="70" rx="20" fill="#9b6646"/>
+  <ellipse cx="200" cy="232" rx="74" ry="90" fill="#a86f4e"/>
+  <!-- fringe curls -->
+  <g fill="#1a1012"><circle cx="150" cy="162" r="30"/><circle cx="186" cy="150" r="30"/><circle cx="224" cy="150" r="30"/><circle cx="256" cy="166" r="26"/></g>
+  <!-- glasses -->
+  <g fill="none" stroke="#0e0c13" stroke-width="6"><rect x="140" y="214" width="50" height="38" rx="14"/><rect x="210" y="214" width="50" height="38" rx="14"/><path d="M190 230h20"/></g>
+  <g fill="#0e0c13"><circle cx="166" cy="234" r="5"/><circle cx="234" cy="234" r="5"/></g>
+  <path d="M150 204c10-6 22-7 32-3M218 201c10-4 22-3 32 3" fill="none" stroke="#1a1012" stroke-width="5" stroke-linecap="round"/>
+  <path d="M200 244c-4 14-6 22 2 24" fill="none" stroke="#7a4a32" stroke-width="4" stroke-linecap="round"/>
+  <path d="M178 286c12 10 32 10 44 0" fill="none" stroke="#5a2a1e" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="150" cy="268" r="10" fill="#ff6b4a" opacity=".25"/><circle cx="250" cy="268" r="10" fill="#ff6b4a" opacity=".25"/>
+  <!-- headphones -->
+  <path d="M106 240c-8-110 196-110 188 0" fill="none" stroke="#b9a4ff" stroke-width="16" stroke-linecap="round"/>
+  <rect x="88" y="216" width="40" height="66" rx="18" fill="#b9a4ff"/><rect x="272" y="216" width="40" height="66" rx="18" fill="#b9a4ff"/>
+  <rect x="98" y="226" width="20" height="46" rx="10" fill="#8f74ff"/><rect x="282" y="226" width="20" height="46" rx="10" fill="#8f74ff"/>
+</svg>

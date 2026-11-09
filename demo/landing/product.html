@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Product — Nimbus</title>
+<meta name="description" content="How a Nimbus board, morning digest, and client view fit a small studio week." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }</style>
+</head>
+<body class="bg-[#f4f8fb] text-[#102433] font-sans font-sans antialiased">
+<header class="sticky top-0 z-30 border-b border-[#d5e4ee] bg-[#f4f8fb]/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-xl font-bold">Nimbus</a>
+    <div class="flex items-center gap-3"><button id="menuBtn" class="rounded-lg border border-[#c5d7e4] px-3 py-1 text-sm md:hidden" aria-expanded="false">Menu</button></div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t pt-3 text-sm md:flex md:basis-auto md:flex-row md:items-center md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html">Home</a><a href="product.html" aria-current="page">Product</a><a href="pricing.html">Pricing</a><a href="customers.html">Customers</a><a href="start.html">Start</a></nav>
+  </div>
+</header><main>
+  <section class="mx-auto max-w-6xl px-5 py-14 sm:px-8">
+    <p class="text-xs font-semibold uppercase tracking-wider text-[#0b6e8a]">Product</p>
+    <h1 class="mt-3 max-w-3xl font-display text-5xl font-bold leading-none">A board, a digest, and a door for clients.</h1>
+    <p class="mt-4 max-w-2xl text-[#3d5566]">Nimbus does not try to be the place you write, draw, or bill. It is the list. Everything else can stay where it is.</p>
+  </section>
+  <section class="mx-auto grid max-w-6xl items-center gap-10 px-5 pb-8 sm:px-8 lg:grid-cols-2">
+    <img src="images/board.jpg" alt="A laptop showing charts of the last seven days" class="rounded-3xl object-cover" />
+    <div class="space-y-4"><h2 class="font-display text-3xl font-bold">Leave the dashboard in the other tab.</h2><p class="text-[#3d5566]">Studios already have a place for traffic, revenue, and the numbers. Nimbus does not redraw them. The board is for the work those numbers depend on: who is doing it, and whether it will be done on Thursday.</p><p class="text-[#3d5566]">Cards have a name, a due time, and a lane. Files can be attached. Comments are a thread, not a second meeting.</p></div>
+  </section>
+  <section class="bg-white"><div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 md:grid-cols-2">
+    <img src="images/team.jpg" alt="Four people working around a table" class="aspect-[4/3] rounded-3xl object-cover" />
+    <div><h2 class="font-display text-3xl font-bold">What a week looks like</h2><ol class="mt-4 space-y-3 text-sm text-[#3d5566]"><li><strong class="text-[#102433]">Monday.</strong> The digest lists what is due and what moved over the weekend.</li><li><strong class="text-[#102433]">Midweek.</strong> Review lives on the card. The client lane updates when you move a card into it, not before.</li><li><strong class="text-[#102433]">Friday.</strong> Finished cards archive themselves after seven days, so the board does not become a scrapbook.</li></ol><p class="mt-6"><a href="pricing.html" class="font-semibold text-[#0b6e8a] underline underline-offset-4">Compare plans</a></p></div>
+  </div></section>
+</main><footer class="border-t border-[#d5e4ee]"><div class="mx-auto grid max-w-6xl gap-6 px-5 py-10 text-sm text-[#3d5566] sm:px-8 md:grid-cols-3"><div><p class="font-display text-xl font-bold text-[#102433]">Nimbus</p><p class="mt-2">440 Brannan Street<br />San Francisco, CA 94107</p></div><div><p>Weekday support, 9:00–17:00 Pacific.</p><p class="mt-2"><span class="underline underline-offset-4" >hello@nimbusboard.com</span></p></div><div class="space-y-1"><a href="product.html">Product</a><br /><a href="pricing.html">Pricing</a><br /><a href="customers.html">Customers</a></div></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

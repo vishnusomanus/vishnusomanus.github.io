@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product: one board from signed contract to first value | Latchline</title>
+    <meta
+      name="description"
+      content="See how Latchline runs an onboarding in six stages, what your customer sees at each one, and preview a plan with real dates from any playbook."
+    />
+    <meta name="theme-color" content="#f2f4f7" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Latchline" />
+    <meta property="og:title" content="Product: one board from signed contract to first value | Latchline" />
+    <meta
+      property="og:description"
+      content="See how Latchline runs an onboarding in six stages, what your customer sees at each one, and preview a plan with real dates from any playbook."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500;600;700&amp;family=Funnel+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=Spline+Sans+Mono:wght@500&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="product" class="flex min-h-screen flex-col">
+    <a
+      href="#main"
+      class="sr-only z-50 rounded-lg bg-ink px-4 py-3 text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      >Skip to content</a
+    >
+    <header class="sticky top-0 z-40 border-b border-line bg-card/95 backdrop-blur">
+      <div class="wrap flex min-h-16 items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center gap-2.5" aria-label="Latchline home"
+          ><svg viewBox="0 0 32 32" class="size-8 shrink-0" aria-hidden="true">
+            <rect x="1.5" y="1.5" width="29" height="29" rx="8" fill="#0c1427" />
+            <path
+              d="M9 9v14h8"
+              fill="none"
+              stroke="#fff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M17 16h6.5a2.5 2.5 0 0 1 0 5H21"
+              fill="none"
+              stroke="#ffcf3f"
+              stroke-width="3"
+              stroke-linecap="round"
+            /></svg
+          ><span class="font-display text-xl font-semibold tracking-tight">Latchline</span></a
+        >
+        <nav class="hidden lg:block" aria-label="Main">
+          <ul class="flex items-center gap-1">
+            <li><a class="nav-link" href="product.html" aria-current="page">Product</a></li>
+            <li><a class="nav-link" href="playbooks.html">Playbooks</a></li>
+            <li><a class="nav-link" href="customers.html">Customers</a></li>
+            <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li><a class="nav-link" href="resources.html">Resources</a></li>
+            <li><a class="nav-link" href="company.html">Company</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a href="contact.html#demo" class="nav-link hidden sm:block">Book a demo</a>
+          <a href="contact.html" class="btn btn-sm hidden sm:inline-flex"
+            >Talk to sales
+            <svg
+              viewBox="0 0 20 20"
+              class="size-4 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" /></svg
+          ></a>
+          <button
+            id="menu-toggle"
+            type="button"
+            class="grid size-11 place-items-center rounded-lg border border-line-strong lg:hidden"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              class="size-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path d="M4 7h16M4 12h16M4 17h10" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" class="wrap border-t border-line py-4 lg:hidden" aria-label="Mobile" hidden>
+        <ul class="grid gap-1">
+          <li><a class="nav-link text-base" href="product.html" aria-current="page">Product</a></li>
+          <li><a class="nav-link text-base" href="playbooks.html">Playbooks</a></li>
+          <li><a class="nav-link text-base" href="customers.html">Customers</a></li>
+          <li><a class="nav-link text-base" href="pricing.html">Pricing</a></li>
+          <li><a class="nav-link text-base" href="resources.html">Resources</a></li>
+          <li><a class="nav-link text-base" href="company.html">Company</a></li>
+          <li><a class="nav-link text-base" href="contact.html#demo">Book a demo</a></li>
+        </ul>
+        <a href="contact.html" class="btn mt-3 w-full"
+          >Talk to sales
+          <svg
+            viewBox="0 0 20 20"
+            class="size-4 shrink-0"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" /></svg
+        ></a>
+      </nav>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="border-b border-line bg-card">
+        <div class="wrap grid gap-10 py-14 lg:grid-cols-[1fr_1fr] lg:items-center lg:py-16">
+          <div class="reveal">
+            <p class="tick text-cobalt">Product</p>
+            <h1 class="mt-3 text-[clamp(2.4rem,5vw,4rem)] leading-[1.04] font-semibold tracking-[-0.03em]">
+              One board. Every promise visible.
+            </h1>
+            <p class="mt-5 max-w-xl text-lg leading-relaxed text-ink-soft">
+              Owners, customer tasks, blockers and the first-value forecast, in one view your team and your customer
+              share. Six stages, the same on every playbook, so a new CSM can pick up any account on any day.
+            </p>
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a class="btn" href="#stages">Explore the stages</a>
+              <a class="btn btn-quiet" href="#plan">Preview a plan with dates</a>
+            </div>
+          </div>
+          <img class="reveal w-full" src="assets/img/hero-product.svg" alt="" width="640" height="440" />
+        </div>
+      </section>
+
+      <section id="stages" aria-labelledby="stages-heading" class="scroll-mt-20 py-16">
+        <div class="wrap">
+          <div class="reveal max-w-2xl">
+            <p class="tick text-cobalt">The six stages</p>
+            <h2 id="stages-heading" class="mt-3 text-4xl font-semibold tracking-tight">Step through an onboarding.</h2>
+            <p class="mt-4 text-ink-soft">
+              Choose a stage to see what happens in it, who does what, and the signal Latchline watches for. Use the
+              arrow keys to move between stages.
+            </p>
+          </div>
+          <div class="relative mt-8">
+            <div
+              class="flex gap-2 overflow-x-auto pb-2"
+              role="tablist"
+              aria-label="Onboarding stages"
+              data-stage-tabs
+            ></div>
+            <div class="mt-3 h-1 overflow-hidden rounded-full bg-mist" aria-hidden="true">
+              <div class="h-full rounded-full bg-cobalt transition-[width] duration-300" data-stage-progress></div>
+            </div>
+          </div>
+          <div
+            id="stage-panel"
+            role="tabpanel"
+            aria-labelledby="tab-outcome"
+            tabindex="0"
+            class="panel mt-6 grid overflow-hidden lg:grid-cols-[1.1fr_1fr]"
+            data-stage-panel
+          >
+            <div class="min-w-0 p-6 sm:p-8">
+              <p class="tick text-ink-faint" data-stage-number></p>
+              <h3 class="mt-2 text-3xl font-semibold" data-stage-name></h3>
+              <p class="mt-3 text-lg leading-relaxed text-ink-soft" data-stage-summary></p>
+              <div
+                class="mt-6 inline-flex rounded-lg border border-line-strong p-1"
+                role="group"
+                aria-label="Point of view"
+              >
+                <button
+                  type="button"
+                  class="rounded-md px-3 py-1.5 text-sm font-semibold aria-pressed:bg-ink aria-pressed:text-white"
+                  data-view="customer"
+                  aria-pressed="true"
+                >
+                  Customer view
+                </button>
+                <button
+                  type="button"
+                  class="rounded-md px-3 py-1.5 text-sm font-semibold aria-pressed:bg-ink aria-pressed:text-white"
+                  data-view="team"
+                  aria-pressed="false"
+                >
+                  Team view
+                </button>
+              </div>
+              <p class="tick mt-5 text-cobalt" data-stage-view-label></p>
+              <p class="mt-1 leading-relaxed" data-stage-view aria-live="polite"></p>
+              <h4 class="tick mt-7 text-ink-faint">Automations in this stage</h4>
+              <ul class="mt-3 grid gap-2 text-sm" data-stage-automations></ul>
+              <div
+                class="mt-7 flex flex-wrap items-center justify-between gap-4 rounded-xl border border-flare/30 bg-flare-soft px-4 py-3"
+              >
+                <p class="text-sm">
+                  <span class="font-semibold text-flare">Risk signal:</span> <span data-stage-signal></span>
+                </p>
+                <button type="button" class="btn btn-quiet btn-sm" data-stage-step>Next stage</button>
+              </div>
+            </div>
+            <div class="dotgrid min-w-0 border-t border-line p-6 sm:p-8 lg:border-t-0 lg:border-l">
+              <p class="tick text-ink-faint">This stage on the board</p>
+              <div class="mt-4 grid gap-4 sm:grid-cols-2">
+                <div class="min-w-0 rounded-xl border border-line bg-card/90 p-3">
+                  <h4 class="tick flex items-center gap-2 text-ink-soft">
+                    <span class="size-2 rounded-full bg-sun"></span>Customer lane
+                  </h4>
+                  <ul class="mt-3 grid gap-2" data-lane-customer></ul>
+                </div>
+                <div class="min-w-0 rounded-xl border border-line bg-card/90 p-3">
+                  <h4 class="tick flex items-center gap-2 text-ink-soft">
+                    <span class="size-2 rounded-full bg-cobalt"></span>Your team's lane
+                  </h4>
+                  <ul class="mt-3 grid gap-2" data-lane-team></ul>
+                </div>
+              </div>
+              <ul class="mt-5 flex flex-wrap gap-x-4 gap-y-1 text-xs text-ink-soft" aria-label="Status key">
+                <li class="flex items-center gap-1.5"><span class="size-2 rounded-full bg-moss"></span>Done</li>
+                <li class="flex items-center gap-1.5">
+                  <span class="size-2 rounded-full bg-cobalt"></span>In progress
+                </li>
+                <li class="flex items-center gap-1.5"><span class="size-2 rounded-full bg-flare"></span>Blocked</li>
+                <li class="flex items-center gap-1.5">
+                  <span class="size-2 rounded-full bg-line-strong"></span>Up next
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="plan" aria-labelledby="plan-heading" class="scroll-mt-20 border-y border-line bg-card py-16">
+        <div class="wrap grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+          <div class="reveal">
+            <p class="tick text-cobalt">Plan preview</p>
+            <h2 id="plan-heading" class="mt-3 text-4xl font-semibold tracking-tight">
+              Pick a playbook and a kickoff date.
+            </h2>
+            <p class="mt-4 leading-relaxed text-ink-soft">
+              Latchline spreads each milestone across the playbook's target days and moves anything that lands on a
+              weekend or an office closure to the next business day. This is the same calculation a new board uses.
+            </p>
+            <form class="mt-8 grid gap-5" data-plan-form>
+              <div>
+                <label class="label" for="plan-playbook">Playbook</label>
+                <select id="plan-playbook" name="playbook" class="field"></select>
+              </div>
+              <div>
+                <label class="label" for="plan-kickoff">Kickoff date</label>
+                <input
+                  id="plan-kickoff"
+                  name="kickoff"
+                  type="date"
+                  class="field"
+                  aria-describedby="plan-kickoff-hint"
+                />
+                <span id="plan-kickoff-hint" class="mt-1 block text-xs text-ink-faint"
+                  >Dates follow Reno office days, Pacific time.</span
+                >
+                <span class="error" data-kickoff-error></span>
+              </div>
+            </form>
+          </div>
+          <div class="reveal panel dotgrid min-w-0 p-6 sm:p-8" aria-live="polite">
+            <p class="tick text-ink-faint">Your plan</p>
+            <p class="mt-2 font-display text-2xl font-semibold" data-plan-summary></p>
+            <p class="mt-1 text-sm text-ink-soft" data-plan-detail></p>
+            <p class="mt-2 text-sm text-flare" data-plan-note></p>
+            <ol
+              class="relative mt-6 before:absolute before:top-2 before:bottom-2 before:left-[1.05rem] before:w-0.5 before:bg-line-strong"
+              data-plan-list
+            ></ol>
+            <a class="text-link mt-6 inline-block text-sm" href="playbooks.html" data-plan-link
+              >See this playbook in the library</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="platform-heading" class="py-16">
+        <div class="wrap">
+          <div class="reveal max-w-2xl">
+            <p class="tick text-cobalt">Around the board</p>
+            <h2 id="platform-heading" class="mt-3 text-4xl font-semibold tracking-tight">
+              The parts that keep it honest.
+            </h2>
+          </div>
+          <div class="mt-10 grid gap-6 md:grid-cols-3">
+            <article class="reveal panel p-6">
+              <h3 class="text-xl font-semibold">Customer portal</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-soft">
+                A page per customer with their tasks, the people involved and what happens next. Magic-link sign-in,
+                uploads with proof and no seat to buy.
+              </p>
+              <p class="tick mt-5 text-ink-faint">Every plan · branding on Enterprise</p>
+            </article>
+            <article class="reveal panel p-6">
+              <h3 class="text-xl font-semibold">First-value forecast</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-soft">
+                Each task move recalculates the date the customer reaches their outcome, against the plan and the
+                playbook's median.
+              </p>
+              <p class="tick mt-5 text-ink-faint">Growth and Enterprise</p>
+            </article>
+            <article class="reveal panel p-6">
+              <h3 class="text-xl font-semibold">CRM and help desk sync</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-soft">
+                A closed deal opens a board with the sales notes attached; milestones write back to the account so sales
+                sees progress too.
+              </p>
+              <p class="tick mt-5 text-ink-faint">Add-on on any plan</p>
+            </article>
+            <article class="reveal panel p-6">
+              <h3 class="text-xl font-semibold">Security answer library</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-soft">
+                Approved answers to the questions every questionnaire asks, attached to the access stage with their
+                review date.
+              </p>
+              <p class="tick mt-5 text-ink-faint">Every plan</p>
+            </article>
+            <article class="reveal panel p-6">
+              <h3 class="text-xl font-semibold">Coverage and handover</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-soft">
+                Out-of-office dates move tasks to a named cover, and a handover note is drafted from the board when
+                onboarding ends.
+              </p>
+              <p class="tick mt-5 text-ink-faint">Every plan</p>
+            </article>
+            <article class="reveal panel p-6">
+              <h3 class="text-xl font-semibold">Time-to-value reporting</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-soft">
+                Median days to first value by playbook, segment and owner, with the stalls that cost the most time
+                called out.
+              </p>
+              <p class="tick mt-5 text-ink-faint">Growth and Enterprise</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-20">
+        <div class="wrap">
+          <div class="reveal panel flex flex-col gap-6 p-8 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h2 class="text-2xl font-semibold">See it with one of your own onboardings.</h2>
+              <p class="mt-1 text-ink-soft">Thirty minutes with an implementation lead, Pacific time.</p>
+            </div>
+            <a class="btn" href="contact.html#demo">Book a demo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="dotgrid-ink mt-auto text-white">
+      <div class="wrap grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div>
+          <a href="index.html" class="inline-flex items-center gap-2.5" aria-label="Latchline home"
+            ><svg viewBox="0 0 32 32" class="size-8 shrink-0" aria-hidden="true">
+              <rect x="1.5" y="1.5" width="29" height="29" rx="8" fill="#1f45d6" />
+              <path
+                d="M9 9v14h8"
+                fill="none"
+                stroke="#fff"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17 16h6.5a2.5 2.5 0 0 1 0 5H21"
+                fill="none"
+                stroke="#ffcf3f"
+                stroke-width="3"
+                stroke-linecap="round"
+              /></svg
+            ><span class="font-display text-xl font-semibold">Latchline</span></a
+          >
+          <p class="mt-4 max-w-xs text-sm leading-relaxed text-haze">
+            Customer onboarding software for teams who want every new customer to feel expected, from signed contract to
+            first value.
+          </p>
+        </div>
+        <div>
+          <h2 class="tick text-sky">Platform</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a class="hover:underline" href="product.html">How it works</a></li>
+            <li><a class="hover:underline" href="playbooks.html">Playbooks</a></li>
+            <li><a class="hover:underline" href="pricing.html">Pricing</a></li>
+            <li><a class="hover:underline" href="customers.html">Customer stories</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="tick text-sky">Company</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a class="hover:underline" href="company.html">About us</a></li>
+            <li><a class="hover:underline" href="resources.html">Resources</a></li>
+            <li><a class="hover:underline" href="contact.html">Contact sales</a></li>
+            <li><a class="hover:underline" href="contact.html#demo">Book a demo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="tick text-sky">Reno office</h2>
+          <address class="mt-4 text-sm leading-relaxed not-italic text-haze">
+            38 N Sierra St, Suite 310<br />Reno, NV 89501<br />Mon–Fri, 7:00 a.m.–5:00 p.m. PT
+          </address>
+          <p class="mt-3 text-sm">
+            <a class="hover:underline" href="mailto:hello@latchline.example">hello@latchline.example</a><br /><a
+              class="hover:underline"
+              href="tel:+17755550162"
+              >(775) 555-0162</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="wrap flex flex-wrap justify-between gap-3 border-t border-white/15 py-6 text-xs text-haze">
+        <p>© <span data-year></span> Latchline, Inc. Reno, Nevada.</p>
+        <p>Latchline is a fictional company.</p>
+      </div>
+    </footer>
+    <p
+      id="notice"
+      class="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-md rounded-xl bg-ink px-5 py-3.5 text-sm text-white shadow-xl"
+      role="status"
+      aria-live="polite"
+      hidden
+    ></p>
+  </body>
+</html>

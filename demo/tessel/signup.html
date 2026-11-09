@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Start free or sign in | Tessel</title>
+    <meta name="description" content="Create a free Tessel account in under a minute, or start a 14-day Team trial with no card. Already have a workspace? Sign in here." />
+    <meta name="theme-color" content="#fbf3e4" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tessel" />
+    <meta property="og:title" content="Start free or sign in | Tessel" />
+    <meta property="og:description" content="Create a free Tessel account in under a minute, or start a 14-day Team trial with no card. Already have a workspace? Sign in here." />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&amp;family=Ubuntu+Sans:ital,wght@0,400..800;1,400&amp;family=Ubuntu+Sans+Mono:wght@400;600&amp;display=swap" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      (function () {
+        var d = document.documentElement, t = null;
+        d.classList.add("js");
+        try { t = localStorage.getItem("tessel:theme"); } catch (e) {}
+        if (t === "dark" || (t !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches)) d.classList.add("dark");
+      })();
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="signup" class="flex min-h-screen flex-col">
+    <a href="#main" class="sr-only z-[90] rounded-lg border-2 border-line bg-butter px-4 py-3 font-bold text-coal focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+    <header class="sticky top-0 z-40 border-b-[2.5px] border-line bg-bg">
+      <div class="wrap flex min-h-[4.5rem] items-center justify-between gap-3">
+        <a href="index.html" class="wiggle flex items-center gap-2.5" aria-label="Tessel home"><svg viewBox="0 0 40 40" class="size-10 shrink-0" aria-hidden="true"><rect x="5" y="5" width="33" height="33" rx="5" fill="var(--color-line)"/><rect x="2" y="2" width="33" height="33" rx="5" fill="var(--color-card)" stroke="var(--color-line)" stroke-width="2.5"/><path d="M2 18.5h33M18.5 2v33" stroke="var(--color-line)" stroke-width="2.5"/><path d="M4.6 4.6h12.6v12.6H4.6z" fill="#ff6b42"/><path d="M19.8 4.6h12.6v12.6H19.8z" fill="#ffd84a"/><path d="M4.6 19.8h12.6v12.6H4.6z" fill="#a9b2ff"/><path d="M19.8 19.8h12.6v12.6H19.8z" fill="#86e2b6"/><circle cx="26.1" cy="26.1" r="3.2" fill="#16130f"/></svg><span class="font-display text-2xl tracking-tight">tessel</span></a>
+        <nav class="hidden xl:block" aria-label="Main">
+          <ul class="flex items-center gap-1">
+            <li><a class="nav-link" href="features.html">Features</a></li>
+            <li><a class="nav-link" href="templates.html">Templates</a></li>
+            <li><a class="nav-link" href="integrations.html">Integrations</a></li>
+            <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li><a class="nav-link" href="customers.html">Customers</a></li>
+            <li><a class="nav-link" href="changelog.html">Changelog</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Dark mode">
+            <svg data-icon-moon viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+            <svg data-icon-sun viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>
+          </button>
+          <a href="signup.html#signin" class="nav-link hidden sm:block">Sign in</a>
+          <a href="signup.html" class="btn btn-sm btn-tomato hidden sm:inline-flex">Start free</a>
+          <button id="menu-toggle" type="button" class="icon-btn xl:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+            <svg data-icon-open viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+            <svg data-icon-close viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" hidden class="border-t-[2.5px] border-line bg-bg-2 xl:hidden">
+        <nav class="wrap pt-2 pb-6" aria-label="Mobile">
+          <ul>
+          <li><a class="m-link" href="features.html">Features<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="templates.html">Templates<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="integrations.html">Integrations<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="pricing.html">Pricing<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="customers.html">Customers<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="changelog.html">Changelog<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="contact.html">Talk to sales<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          </ul>
+          <div class="mt-5 grid grid-cols-2 gap-3">
+            <a href="signup.html#signin" class="btn btn-plain">Sign in</a>
+            <a href="signup.html" class="btn btn-tomato">Start free</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+      <section class="grid-paper min-h-full py-12 sm:py-16">
+        <h1 class="sr-only">Start free or sign in to Tessel</h1>
+        <div class="wrap grid items-start gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+          <div class="card mx-auto w-full max-w-xl overflow-hidden shadow-brut-lg">
+            <div class="grid grid-cols-2 border-b-[2.5px] border-line" role="tablist" aria-label="Account" data-auth-tabs>
+              <button type="button" role="tab" id="tab-signup" aria-controls="panel-signup" aria-selected="true" class="border-r-[2.5px] border-line px-4 py-4 font-extrabold aria-selected:bg-butter aria-selected:text-coal" data-auth-tab="signup">Create account</button>
+              <button type="button" role="tab" id="tab-signin" aria-controls="panel-signin" aria-selected="false" tabindex="-1" class="px-4 py-4 font-extrabold aria-selected:bg-butter aria-selected:text-coal" data-auth-tab="signin">Sign in</button>
+            </div>
+
+            <div id="panel-signup" role="tabpanel" aria-labelledby="tab-signup" class="p-5 sm:p-8" data-auth-panel="signup">
+              <h2 class="font-display text-3xl leading-tight sm:text-4xl">Start free. Stay as long as you like.</h2>
+              <p class="mt-3 rounded-lg border-2 border-line bg-mint px-3 py-2 text-sm font-semibold text-coal" data-plan-banner>Free plan: 100 responses a month, unlimited forms.</p>
+              <form class="mt-6 grid gap-5" novalidate data-signup-form>
+                <div>
+                  <label class="label" for="u-name">Your name</label>
+                  <input id="u-name" name="name" class="field" type="text" autocomplete="name" required aria-describedby="u-name-error">
+                  <span id="u-name-error" class="error" data-error-for="name"></span>
+                </div>
+                <div>
+                  <label class="label" for="u-email">Work email</label>
+                  <input id="u-email" name="email" class="field" type="email" autocomplete="email" required aria-describedby="u-email-error">
+                  <span id="u-email-error" class="error" data-error-for="email"></span>
+                </div>
+                <div>
+                  <label class="label" for="u-password">Password</label>
+                  <div class="relative">
+                    <input id="u-password" name="password" class="field pr-20" type="password" autocomplete="new-password" required aria-describedby="u-password-hint u-password-error">
+                    <button type="button" class="absolute top-1/2 right-2 mt-0.5 -translate-y-1/2 rounded-md border-2 border-line bg-bg-2 px-2 py-0.5 text-sm font-bold" aria-pressed="false" data-show-password="u-password">Show</button>
+                  </div>
+                  <div class="mt-2 grid grid-cols-4 gap-1.5" aria-hidden="true" data-strength-bars><span class="h-2 rounded-full border-2 border-line"></span><span class="h-2 rounded-full border-2 border-line"></span><span class="h-2 rounded-full border-2 border-line"></span><span class="h-2 rounded-full border-2 border-line"></span></div>
+                  <p id="u-password-hint" class="mt-1.5 text-sm text-ink-soft" data-strength-text>At least 8 characters, with a number.</p>
+                  <span id="u-password-error" class="error" data-error-for="password"></span>
+                </div>
+                <div>
+                  <label class="label" for="u-use">What will you build first? <span class="font-normal text-ink-soft">(optional)</span></label>
+                  <select id="u-use" name="use" class="field">
+                    <option value="">Choose one</option>
+                    <option>Event registration</option>
+                    <option>Survey or feedback</option>
+                    <option>Job application</option>
+                    <option>Order or payment form</option>
+                    <option>Something else</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="flex items-start gap-3"><input name="terms" type="checkbox" class="mt-1 size-5 shrink-0 accent-tomato" required aria-describedby="u-terms-error"><span>I agree to Tessel's terms of service and privacy policy.</span></label>
+                  <span id="u-terms-error" class="error" data-error-for="terms"></span>
+                </div>
+                <button type="submit" class="btn btn-lg btn-tomato w-full">Create my workspace</button>
+              </form>
+              <div class="grid gap-4" role="status" tabindex="-1" data-signup-done hidden>
+                <p class="sticker w-fit bg-mint!">Workspace ready</p>
+                <h2 class="font-display text-3xl leading-tight" data-signup-done-title>Welcome aboard!</h2>
+                <p class="text-lg" data-signup-done-text></p>
+                <p class="rounded-lg border-[2.5px] border-line bg-bg-2 px-4 py-3 font-mono text-sm font-semibold" data-signup-workspace></p>
+                <a href="templates.html" class="btn w-fit">Pick a template to start</a>
+              </div>
+            </div>
+
+            <div id="panel-signin" role="tabpanel" aria-labelledby="tab-signin" class="p-5 sm:p-8" data-auth-panel="signin" hidden>
+              <h2 class="font-display text-3xl leading-tight sm:text-4xl">Welcome back.</h2>
+              <form class="mt-6 grid gap-5" novalidate data-signin-form>
+                <div>
+                  <label class="label" for="i-email">Email</label>
+                  <input id="i-email" name="email" class="field" type="email" autocomplete="username" required aria-describedby="i-email-error">
+                  <span id="i-email-error" class="error" data-error-for="email"></span>
+                </div>
+                <div>
+                  <label class="label" for="i-password">Password</label>
+                  <input id="i-password" name="password" class="field" type="password" autocomplete="current-password" required aria-describedby="i-password-error">
+                  <span id="i-password-error" class="error" data-error-for="password"></span>
+                </div>
+                <button type="submit" class="btn btn-lg w-full">Sign in</button>
+                <button type="button" class="justify-self-start font-semibold underline decoration-2 underline-offset-4" aria-expanded="false" aria-controls="reset-box" data-reset-toggle>Forgot your password?</button>
+              </form>
+              <div class="grid gap-3" role="status" tabindex="-1" data-signin-done hidden>
+                <h3 class="font-display text-2xl" data-signin-done-title>Signed in.</h3>
+                <p class="text-lg">Your forms are right where you left them. Opening your workspace&hellip;</p>
+                <a href="templates.html" class="btn w-fit">Continue to templates</a>
+              </div>
+              <div id="reset-box" class="mt-6 rounded-xl border-[2.5px] border-dashed border-line p-5" hidden>
+                <form class="grid gap-4" novalidate data-reset-form>
+                  <div>
+                    <label class="label" for="r-email">Email for the reset link</label>
+                    <input id="r-email" name="email" class="field" type="email" autocomplete="email" required aria-describedby="r-email-error">
+                    <span id="r-email-error" class="error" data-error-for="email"></span>
+                  </div>
+                  <button type="submit" class="btn btn-sm btn-plain w-fit">Send reset link</button>
+                </form>
+                <p class="mt-3 font-semibold" role="status" data-reset-done></p>
+              </div>
+            </div>
+          </div>
+
+          <aside class="grid gap-6" aria-label="Why teams pick Tessel">
+            <div class="card bg-butter! p-6 text-coal sm:p-8">
+              <h2 class="font-display text-2xl sm:text-3xl">What you get on day one</h2>
+              <ul class="mt-5 grid gap-3 font-semibold">
+                <li class="flex gap-3"><span class="grid size-6 shrink-0 place-items-center rounded-md border-2 border-coal bg-cream" aria-hidden="true">1</span>18 templates to start from</li>
+                <li class="flex gap-3"><span class="grid size-6 shrink-0 place-items-center rounded-md border-2 border-coal bg-cream" aria-hidden="true">2</span>Logic, payments and analytics on every plan</li>
+                <li class="flex gap-3"><span class="grid size-6 shrink-0 place-items-center rounded-md border-2 border-coal bg-cream" aria-hidden="true">3</span>A real person on chat if you get stuck</li>
+              </ul>
+            </div>
+            <figure class="card p-6 sm:p-8">
+              <blockquote class="text-xl font-bold leading-snug">&ldquo;Intake used to take twelve minutes at the front desk. Now patients finish it at home in four.&rdquo;</blockquote>
+              <figcaption class="mt-4 text-ink-soft"><span class="font-extrabold text-ink">Zuri Venkataraman</span>, Patient experience manager, Quillfern Health</figcaption>
+            </figure>
+            <svg viewBox="0 0 420 160" class="hidden w-full lg:block" aria-hidden="true"><g stroke="var(--color-line)" stroke-width="3.5" stroke-linejoin="round"><rect x="10" y="20" width="120" height="120" rx="12" fill="#ff6b42" transform="rotate(-6 70 80)"/><rect x="150" y="20" width="120" height="120" rx="60" fill="#86e2b6"/><path d="M350 20l60 120H290z" fill="#a9b2ff"/></g><path d="M40 80h60M180 80h60M330 110h40" stroke="#16130f" stroke-width="4" stroke-linecap="round"/></svg>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-auto border-t-[2.5px] border-line bg-bg-2">
+      <div class="wrap grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div>
+          <a href="index.html" class="flex items-center gap-2.5" aria-label="Tessel home"><svg viewBox="0 0 40 40" class="size-10 shrink-0" aria-hidden="true"><rect x="5" y="5" width="33" height="33" rx="5" fill="var(--color-line)"/><rect x="2" y="2" width="33" height="33" rx="5" fill="var(--color-card)" stroke="var(--color-line)" stroke-width="2.5"/><path d="M2 18.5h33M18.5 2v33" stroke="var(--color-line)" stroke-width="2.5"/><path d="M4.6 4.6h12.6v12.6H4.6z" fill="#ff6b42"/><path d="M19.8 4.6h12.6v12.6H19.8z" fill="#ffd84a"/><path d="M4.6 19.8h12.6v12.6H4.6z" fill="#a9b2ff"/><path d="M19.8 19.8h12.6v12.6H19.8z" fill="#86e2b6"/><circle cx="26.1" cy="26.1" r="3.2" fill="#16130f"/></svg><span class="font-display text-2xl tracking-tight">tessel</span></a>
+          <p class="mt-4 max-w-xs text-ink-soft">Online forms and surveys that people actually finish. Built in Omaha, Nebraska, since 2019.</p>
+          <p class="mt-5 inline-flex items-center gap-2 rounded-full border-2 border-line bg-card px-3 py-1 font-mono text-sm font-semibold"><span class="size-2.5 rounded-full border-2 border-line bg-mint" aria-hidden="true"></span>All systems normal</p>
+        </div>
+        <div>
+          <h2 class="eyebrow text-ink-soft">Product</h2>
+          <ul class="mt-4 grid gap-2.5 font-semibold">
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="features.html">Features</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="templates.html">Templates</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="integrations.html">Integrations</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="pricing.html">Pricing</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="changelog.html">Changelog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="eyebrow text-ink-soft">Company</h2>
+          <ul class="mt-4 grid gap-2.5 font-semibold">
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="customers.html">Customers</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="contact.html">Talk to sales</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="signup.html">Start free</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="signup.html#signin">Sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="eyebrow text-ink-soft">Say hello</h2>
+          <address class="mt-4 grid gap-2.5 not-italic">
+            <span>1110 Harney Street, Suite 400<br>Omaha, NE 68102</span>
+            <a class="font-semibold hover:underline" href="tel:+14025550134">(402) 555-0134</a>
+            <a class="font-semibold hover:underline" href="mailto:hello@tessel.example">hello@tessel.example</a>
+          </address>
+        </div>
+      </div>
+      <div class="border-t-2 border-line">
+        <div class="wrap flex flex-col gap-2 py-5 text-sm text-ink-soft sm:flex-row sm:items-center sm:justify-between">
+          <p>&copy; <span data-year>2026</span> Tessel Forms, Inc. Tessel is a fictional company.</p>
+          <p class="font-mono">Made on the prairie, one field at a time.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

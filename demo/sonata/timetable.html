@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weekly schedule | Sonata Music Rooms</title>
+    <meta
+      name="description"
+      content="Find a weekly music lesson by day, instrument, age, level and teacher. View the next available teaching week at Sonata Music Rooms."
+    />
+    <meta name="theme-color" content="#30213f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sonata Music Rooms" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Weekly schedule | Sonata Music Rooms" />
+    <meta
+      property="og:description"
+      content="Find a weekly music lesson by day, instrument, age, level and teacher. View the next available teaching week at Sonata Music Rooms."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Asap:wght@400..700&amp;family=Lora:ital,wght@0,400..700;1,400..700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body data-page="timetable" class="flex min-h-screen flex-col">
+    <a
+      class="sr-only z-50 bg-butter px-6 py-3 text-ink focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+      href="#main"
+      >Skip to content</a
+    >
+    <header class="border-b border-line bg-paper">
+      <div class="wrap flex min-h-24 items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center gap-3"
+          ><img src="assets/img/favicon.svg" alt="" width="42" height="42" /><span
+            ><span class="block font-display text-3xl tracking-tight">Sonata</span
+            ><span class="block text-[10px] font-semibold uppercase tracking-[.2em]">Music Rooms · Bloomington</span></span
+          ></a
+        >
+        <nav aria-label="Main" class="hidden items-center gap-1 xl:flex">
+          <a class="nav-link" href="courses.html">Courses</a><a class="nav-link" href="tutors.html">Our teachers</a
+          ><a class="nav-link" href="timetable.html" aria-current="page">Schedule</a
+          ><a class="nav-link" href="fees.html">Fees</a><a class="nav-link" href="approach.html">Our approach</a
+          ><a class="nav-link" href="contact.html">Visit us</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="enrol.html" class="btn hidden sm:inline-flex">Find your lesson</a
+          ><button
+            type="button"
+            id="menu-toggle"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            class="flex size-12 items-center justify-center rounded-full border border-ink xl:hidden"
+          >
+            <span class="sr-only">Menu</span
+            ><svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              class="size-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" aria-label="Mobile" hidden class="wrap border-t border-line py-6 xl:hidden">
+        <div class="grid gap-2">
+          <a class="nav-link" href="courses.html">Courses</a><a class="nav-link" href="tutors.html">Our teachers</a
+          ><a class="nav-link" href="timetable.html" aria-current="page">Schedule</a
+          ><a class="nav-link" href="fees.html">Fees</a><a class="nav-link" href="approach.html">Our approach</a
+          ><a class="nav-link" href="contact.html">Visit us</a
+          ><a href="enrol.html" class="btn mt-3">Find your lesson</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="bg-butter border-b border-ink/15">
+        <div class="wrap grid gap-8 py-12 sm:py-16 lg:grid-cols-[1.5fr_1fr] lg:items-end">
+          <div>
+            <p class="eyebrow">Make room for music</p>
+            <h1 class="display mt-6 max-w-3xl text-5xl sm:text-6xl lg:text-7xl">
+              Your week, with<br />a little more rhythm.
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-relaxed">
+              After school, after work, or a gentle Saturday morning. Filter our regular sessions and find a time you
+              can look forward to.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-ink/25 bg-paper/60 p-6">
+            <p class="eyebrow" data-week-heading>This teaching week</p>
+            <p data-week-label class="font-display mt-4 text-3xl"></p>
+            <p class="mt-3 text-sm" data-term-summary></p>
+            <p class="mt-2 text-sm font-semibold" data-join-date></p>
+          </div>
+        </div>
+      </section>
+      <section class="section reveal">
+        <div class="wrap">
+          <button
+            id="filters-toggle"
+            type="button"
+            class="btn-line w-full justify-between lg:hidden"
+            aria-expanded="false"
+            aria-controls="timetable-filters"
+          >
+            <span>Filter the schedule</span><span id="filters-active" class="text-sm font-normal">All sessions</span>
+          </button>
+          <form
+            id="timetable-filters"
+            class="grid gap-4 rounded-2xl border border-line bg-white p-5 max-lg:mt-3 max-lg:hidden sm:grid-cols-2 lg:grid-cols-5"
+          >
+            <label class="label"
+              >Day<select id="schedule-day" class="field">
+                <option value="all">Any day</option>
+                <option value="1">Monday</option>
+                <option value="2">Tuesday</option>
+                <option value="3">Wednesday</option>
+                <option value="4">Thursday</option>
+                <option value="5">Friday</option>
+                <option value="6">Saturday</option>
+              </select></label
+            ><label class="label"
+              >Instrument<select id="schedule-family" class="field">
+                <option value="all">All instruments</option>
+                <option value="piano">Piano</option>
+                <option value="guitar">Guitar</option>
+                <option value="voice">Singing</option>
+                <option value="violin">Strings</option>
+                <option value="drums">Drums</option>
+                <option value="ensemble">Ensemble</option>
+              </select></label
+            ><label class="label"
+              >Age group<select id="schedule-age" class="field">
+                <option value="all">Any age</option>
+                <option value="child">Children</option>
+                <option value="teen">Teenagers</option>
+                <option value="adult">Adults</option>
+              </select></label
+            ><label class="label"
+              >Level<select id="schedule-level" class="field">
+                <option value="all">All levels</option>
+                <option value="beginner">Beginner</option>
+                <option value="developing">Developing</option>
+                <option value="confident">Confident</option>
+              </select></label
+            ><label class="label"
+              >Teacher<select id="schedule-tutor" class="field">
+                <option value="all">All teachers</option>
+              </select></label
+            >
+          </form>
+          <div class="my-6 flex flex-wrap justify-between gap-3">
+            <p id="schedule-count" role="status" aria-live="polite"></p>
+            <button id="schedule-reset" class="link" type="button">Clear filters</button>
+          </div>
+          <div id="schedule-list" class="space-y-9"></div>
+          <p class="mt-8 text-sm text-muted">
+            Spots are confirmed by the school after a conversation. Your chosen session is a preference until we reply.
+          </p>
+        </div>
+      </section>
+      <section class="section reveal border-t border-line">
+        <div class="wrap grid gap-8 lg:grid-cols-[1fr_2fr]">
+          <h2 class="display text-4xl">Finding your time</h2>
+          <div>
+            <details class="faq">
+              <summary>Do lessons run during school breaks?</summary>
+              <p>
+                Our regular groups follow a ten-week teaching term. Your confirmation includes every lesson date and the
+                break week. Individual sessions during breaks are arranged directly with your teacher.
+              </p>
+            </details>
+            <details class="faq">
+              <summary>Can siblings come at the same time?</summary>
+              <p>
+                We try to match parallel lessons where the schedule allows. Tell us both instruments and ages in your
+                inquiry. The waiting room has books, coloring materials and a small table.
+              </p>
+            </details>
+            <details class="faq">
+              <summary>What if I miss a lesson?</summary>
+              <p>
+                Please let us know as soon as possible. With 48 hours’ notice, individual lessons can be rearranged once
+                per term subject to your teacher’s availability. Group lessons cannot be refunded individually, but we
+                share the practice notes.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-auto bg-ink text-paper">
+      <div class="wrap grid gap-10 py-14 md:grid-cols-[1.3fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="font-display text-4xl">Sonata Music Rooms</a>
+          <p class="mt-4 max-w-sm text-paper/80">
+            A place for the first note, the hard part, and the joy of playing together.
+          </p>
+          <p class="mt-5 text-sm text-paper/80">The Courtyard, North Walnut Street<br />Bloomington, IN 47404</p>
+        </div>
+        <div>
+          <p class="eyebrow text-butter">Make a little time for music</p>
+          <ul class="mt-5 space-y-3">
+            <li><a href="courses.html" class="underline underline-offset-4">Explore our courses</a></li>
+            <li><a href="timetable.html" class="underline underline-offset-4">Plan your week</a></li>
+            <li><a href="approach.html#practice" class="underline underline-offset-4">Your practice planner</a></li>
+            <li><a href="fees.html" class="underline underline-offset-4">Fees &amp; scholarships</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow text-butter">Come and say hello</p>
+          <p class="mt-5">
+            <a href="mailto:hello@sonata.example" class="underline underline-offset-4">hello@sonata.example</a>
+          </p>
+          <p class="mt-3"><a href="tel:+18125550172" class="underline underline-offset-4">(812) 555-0172</a></p>
+          <p class="mt-5 text-sm text-paper/80">Mon–Fri 10am–8pm<br />Saturday 9am–4pm · Sunday closed</p>
+        </div>
+      </div>
+      <div class="wrap flex flex-wrap justify-between gap-4 border-t border-paper/20 py-6 text-xs text-paper/70">
+        <p>© <span data-year></span> Sonata Music Rooms.</p>
+        <p>Sonata Music Rooms is a fictional business.</p>
+      </div>
+    </footer>
+    <div
+      id="toast"
+      role="status"
+      aria-live="polite"
+      class="fixed bottom-5 left-5 right-5 z-50 mx-auto max-w-md rounded-xl bg-ink px-5 py-4 text-center text-paper shadow-lg"
+      hidden
+    ></div>
+  </body>
+</html>

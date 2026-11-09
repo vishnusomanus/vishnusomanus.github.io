@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="1200" height="800" role="img" aria-label="Illustrated group portrait of Marigold Static: Fenna, Isla, Reuben and Callum">
+<defs>
+  <pattern id="dots-band" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(28)"><circle cx="4.5" cy="4.5" r="2.1" fill="#15130f"/></pattern>
+  <pattern id="fine-band" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-20)"><circle cx="3" cy="3" r="1.15" fill="#15130f"/></pattern>
+  <filter id="grain-band" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch" result="n"/><feColorMatrix in="n" values="0 0 0 0 .08 0 0 0 0 .07 0 0 0 0 .06 0 0 0 .55 -.18"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+</defs>
+<rect width="1200" height="800" fill="#c9cff7"/>
+<circle cx="600" cy="300" r="300" fill="#ffcf33"/>
+<circle cx="600" cy="300" r="300" fill="url(#dots-band)" opacity=".1"/>
+<g fill="none" stroke="#15130f" stroke-width="2.5" opacity=".45"><path d="M0 80 H230"/><path d="M970 80 H1200"/><path d="M0 98 H230"/><path d="M970 98 H1200"/><path d="M0 116 H230"/><path d="M970 116 H1200"/><path d="M0 134 H230"/><path d="M970 134 H1200"/><path d="M0 152 H230"/><path d="M970 152 H1200"/><path d="M0 170 H230"/><path d="M970 170 H1200"/><path d="M0 188 H230"/><path d="M970 188 H1200"/><path d="M0 206 H230"/><path d="M970 206 H1200"/></g>
+<circle cx="1050" cy="110" r="54" fill="#ff4d94" style="mix-blend-mode:multiply"/>
+<g transform="translate(215 330) scale(0.95)">
+    <g>
+      <path d="M-150 260 C-140 150 -80 112 0 112 C80 112 140 150 150 260 L150 700 L-150 700Z" fill="#2b3fd6"/>
+      <path d="M-150 260 C-140 150 -80 112 0 112 C80 112 140 150 150 260 L150 700 L-150 700Z" fill="url(#dots-band)" opacity=".22"/>
+      <rect x="-26" y="62" width="52" height="66" rx="20" fill="#f4efe6"/>
+      <ellipse cx="0" cy="0" rx="70" ry="86" fill="#f4efe6"/>
+      <ellipse cx="-22" cy="10" rx="44" ry="70" fill="url(#fine-band)" opacity=".18"/>
+      <g fill="#ff4d94"><path d="M-70 -18 C-74 -78 -38 -104 4 -104 C46 -104 76 -80 72 -22 C58 -48 30 -60 0 -60 C-30 -60 -56 -46 -70 -18Z"/></g>
+      
+      
+    </g>
+    <path d="M-150 260 C-140 150 -80 112 0 112 C80 112 140 150 150 260" fill="none" stroke="#15130f" stroke-width="5" transform="translate(7 6)" opacity=".9"/>
+    <ellipse cx="0" cy="0" rx="70" ry="86" fill="none" stroke="#15130f" stroke-width="5" transform="translate(8 6)" opacity=".9"/>
+  </g>
+<g transform="translate(985 322) scale(1)">
+    <g>
+      <path d="M-150 260 C-140 150 -80 112 0 112 C80 112 140 150 150 260 L150 700 L-150 700Z" fill="#ffcf33"/>
+      <path d="M-150 260 C-140 150 -80 112 0 112 C80 112 140 150 150 260 L150 700 L-150 700Z" fill="url(#dots-band)" opacity=".22"/>
+      <rect x="-26" y="62" width="52" height="66" rx="20" fill="#ffc2da"/>
+      <ellipse cx="0" cy="0" rx="70" ry="86" fill="#ffc2da"/>
+      <ellipse cx="-22" cy="10" rx="44" ry="70" fill="url(#fine-band)" opacity=".18"/>
+      <g fill="#15130f"><path d="M-78 -26 C-80 -96 -40 -122 0 -122 C40 -122 80 -96 78 -26 Z"/><rect x="-84" y="-40" width="168" height="26" rx="8"/><circle cx="0" cy="-128" r="14"/></g>
+      <path d="M-60 20 C-56 84 -24 104 0 104 C24 104 56 84 60 20 C40 52 -40 52 -60 20Z" fill="#15130f"/>
+      
+    </g>
+    <path d="M-150 260 C-140 150 -80 112 0 112 C80 112 140 150 150 260" fill="none" stroke="#15130f" stroke-width="5" transform="translate(7 6)" opacity=".9"/>
+    <ellipse cx="0" cy="0" rx="70" ry="86" fill="none" stroke="#15130f" stroke-width="5" transform="translate(8 6)" opacity=".9"/>
+  </g>
+<g transform="translate(465 296) scale(1.04)">
+    <g>
+      <path d="M-150 260 C-140 150 -80 112 0 112 C80 112 140 150 150 260 L150 700 L-150 700Z" fill="#15130f"/>
+      <path d="M-150 260 C-140 150 -80 112 0 112 C80 112 140 150 150 260 L150 700 L-150 700Z" fill="url(#dots-band)" opacity=".22"/>
+      <rect x="-26" y="62" width="52" height="66" rx="20" fill="#ffc2da"/>
+      <ellipse cx="0" cy="0" rx="70" ry="86" fill="#ffc2da"/>
+      <ellipse cx="-22" cy="10" rx="44" ry="70" fill="url(#fine-band)" opacity=".18"/>
+      <g fill="#2b3fd6"><path d="M-84 30 C-96 -60 -60 -112 0 -112 C62 -112 98 -62 86 30 C82 58 70 70 58 66 L58 -20 C30 -40 -20 -46 -58 -24 L-58 66 C-72 70 -82 58 -84 30Z"/></g>
+      
+      
+    </g>
+    <path d="M-150 260 C-140 150 -80 112 0 112 C80 112 140 150 150 260" fill="none" stroke="#15130f" stroke-width="5" transform="translate(7 6)" opacity=".9"/>
+    <ellipse cx="0" cy="0" rx="70" ry="86" fill="none" stroke="#15130f" stroke-width="5" transform="translate(8 6)" opacity=".9"/>
+  </g>
+<g transform="translate(735 286) scale(1.06)">
+    <g>
+      <path d="M-150 260 C-140 150 -80 112 0 112 C80 112 140 150 150 260 L150 700 L-150 700Z" fill="#ff4d94"/>
+      <path d="M-150 260 C-140 150 -80 112 0 112 C80 112 140 150 150 260 L150 700 L-150 700Z" fill="url(#dots-band)" opacity=".22"/>
+      <rect x="-26" y="62" width="52" height="66" rx="20" fill="#ffcf33"/>
+      <ellipse cx="0" cy="0" rx="70" ry="86" fill="#ffcf33"/>
+      <ellipse cx="-22" cy="10" rx="44" ry="70" fill="url(#fine-band)" opacity=".18"/>
+      <g fill="#15130f"><g><circle cx="-81.4" cy="-17.8" r="24"/><circle cx="-85.1" cy="-35.9" r="28"/><circle cx="-70.3" cy="-48.1" r="32"/><circle cx="-66.0" cy="-66.1" r="24"/><circle cx="-47.4" cy="-71.6" r="28"/><circle cx="-35.7" cy="-86.5" r="32"/><circle cx="-16.4" cy="-84.3" r="24"/><circle cx="0.6" cy="-93.5" r="28"/><circle cx="17.4" cy="-84.1" r="32"/><circle cx="36.8" cy="-86.0" r="24"/><circle cx="48.2" cy="-71.0" r="28"/><circle cx="66.8" cy="-65.3" r="32"/><circle cx="70.8" cy="-47.2" r="24"/><circle cx="85.4" cy="-34.9" r="28"/><circle cx="81.5" cy="-16.8" r="32"/><ellipse cx="0" cy="-58" rx="70" ry="44"/></g></g>
+      
+      <g fill="none" stroke="#15130f" stroke-width="7"><circle cx="-28" cy="4" r="20"/><circle cx="28" cy="4" r="20"/><path d="M-8 4h16"/></g>
+    </g>
+    <path d="M-150 260 C-140 150 -80 112 0 112 C80 112 140 150 150 260" fill="none" stroke="#15130f" stroke-width="5" transform="translate(7 6)" opacity=".9"/>
+    <ellipse cx="0" cy="0" rx="70" ry="86" fill="none" stroke="#15130f" stroke-width="5" transform="translate(8 6)" opacity=".9"/>
+  </g>
+<rect width="1200" height="800" filter="url(#grain-band)" opacity=".9"/>
+</svg>

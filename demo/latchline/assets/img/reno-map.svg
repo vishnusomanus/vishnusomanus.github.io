@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="720" height="440" font-family="Arial, Helvetica, sans-serif">
+  <rect width="720" height="440" fill="#f2f4f7"/>
+  <!-- blocks -->
+  <g fill="#e6eaf1">
+    <rect x="20" y="20" width="150" height="90" rx="6"/><rect x="200" y="20" width="150" height="90" rx="6"/><rect x="380" y="20" width="150" height="90" rx="6"/><rect x="560" y="20" width="140" height="90" rx="6"/>
+    <rect x="20" y="140" width="150" height="90" rx="6"/><rect x="200" y="140" width="150" height="90" rx="6"/><rect x="380" y="140" width="150" height="90" rx="6"/><rect x="560" y="140" width="140" height="90" rx="6"/>
+    <rect x="20" y="340" width="150" height="80" rx="6"/><rect x="200" y="340" width="150" height="80" rx="6"/><rect x="380" y="340" width="150" height="80" rx="6"/><rect x="560" y="340" width="140" height="80" rx="6"/>
+  </g>
+  <rect x="200" y="140" width="72" height="90" rx="6" fill="#d6f0e2"/>
+  <!-- streets -->
+  <g stroke="#fff" stroke-width="16">
+    <path d="M0 125h720M0 245h720M0 325h720"/>
+    <path d="M185 0v440M365 0v440M545 0v440"/>
+  </g>
+  <!-- river -->
+  <path d="M0 288c80-18 140 12 230 0s150-28 250-10 160 20 240 0v34c-80 18-150 2-240-12s-160 14-250 12S70 296 0 318z" fill="#8fb0ff"/>
+  <path d="M30 300c40-6 70 0 110 4M420 292c50 4 90 12 140 10" stroke="#fff" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  <!-- labels -->
+  <g fill="#3b4660" font-size="13" font-weight="700" letter-spacing="1">
+    <text x="372" y="420" transform="rotate(-90 372 420)">N SIERRA ST</text>
+    <text x="192" y="100" transform="rotate(-90 192 100)">N WEST ST</text>
+    <text x="552" y="420" transform="rotate(-90 552 420)">N VIRGINIA ST</text>
+    <text x="20" y="250">W 1ST ST</text>
+    <text x="20" y="130">W 2ND ST</text>
+  </g>
+  <text x="600" y="306" fill="#15329f" font-size="14" font-style="italic" font-weight="700">Truckee River</text>
+  <!-- office pin -->
+  <g>
+    <circle cx="365" cy="185" r="34" fill="#1f45d6" fill-opacity=".15"/>
+    <path d="M365 196c-16-18-24-28-24-40a24 24 0 0 1 48 0c0 12-8 22-24 40z" fill="#0c1427"/>
+    <circle cx="365" cy="156" r="9" fill="#ffcf3f"/>
+    <rect x="392" y="152" width="122" height="42" rx="10" fill="#fff" stroke="#0c1427" stroke-width="2"/>
+    <text x="404" y="170" fill="#0c1427" font-size="13" font-weight="700">Latchline</text>
+    <text x="404" y="186" fill="#3b4660" font-size="12">38 N Sierra St</text>
+  </g>
+  <!-- compass -->
+  <g transform="translate(660 70)"><circle r="24" fill="#fff" stroke="#0c1427" stroke-width="2"/><path d="M0-16 6 4H-6z" fill="#b83218"/><text x="-5" y="18" font-size="12" font-weight="700" fill="#0c1427">N</text></g>
+</svg>

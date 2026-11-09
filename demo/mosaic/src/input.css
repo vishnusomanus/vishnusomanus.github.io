@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+/* Mosaic brand tokens. Change these to re-skin the whole site (see DOCS.md, Brand and colors). */
+@theme {
+  --font-sans: "Epilogue", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Bagel Fat One", "Epilogue", ui-sans-serif, system-ui, sans-serif;
+
+  --color-paper: #f8f1e4;        /* page background */
+  --color-card: #fffaf1;         /* cards and fields */
+  --color-sand: #efe4d0;         /* soft panels */
+  --color-line: #e2d5bf;         /* hairlines */
+  --color-ink: #1f1d36;          /* text and dark bands */
+  --color-muted: #57536b;        /* secondary text */
+  --color-violet: #5b34a8;       /* brand */
+  --color-violet-dark: #432580;
+  --color-lilac: #e9e0fa;
+  --color-vermilion: #e0532f;    /* printmaking, accents (backgrounds and large text) */
+  --color-vermilion-dark: #a8361a;
+  --color-blush: #fbe0d5;
+  --color-ochre: #f3b23a;        /* ceramics */
+  --color-ochre-light: #fde8bd;
+  --color-ochre-dark: #8a5a06;
+  --color-rose: #f2a7bf;         /* textiles */
+  --color-rose-light: #fbe3eb;
+  --color-rose-dark: #9c2f57;
+  --color-teal: #17685a;         /* exhibitions, success */
+  --color-teal-light: #d5ece4;
+  --color-sky: #8ec5e6;          /* family */
+  --color-sky-light: #ddeef8;
+  --color-sky-dark: #1d5a80;
+  --color-leaf: #7fb069;         /* open studios */
+  --color-leaf-light: #e3f0da;
+  --color-leaf-dark: #3d6a28;
+  --color-error: #b3261e;
+
+  --shadow-paper: 0 1px 0 rgb(31 29 54 / .06), 0 14px 28px -16px rgb(31 29 54 / .35);
+  --shadow-lift: 0 2px 0 rgb(31 29 54 / .06), 0 24px 40px -18px rgb(31 29 54 / .42);
+  --ease-soft: cubic-bezier(.22, .8, .24, 1);
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body { @apply bg-paper font-sans text-ink antialiased; }
+  h1, h2, h3 { text-wrap: balance; }
+  ::selection { background: var(--color-ochre); color: var(--color-ink); }
+  :focus-visible { outline: 3px solid var(--color-violet); outline-offset: 3px; border-radius: 6px; }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  input[type="date"]::-webkit-calendar-picker-indicator { cursor: pointer; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within { scroll-behavior: smooth; }
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[15px] font-bold transition duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+
+  .btn-primary { @apply btn bg-violet text-white shadow-paper hover:-translate-y-0.5 hover:bg-violet-dark hover:shadow-lift; }
+  .btn-warm { @apply btn bg-ochre text-ink shadow-paper hover:-translate-y-0.5 hover:bg-[#eba325] hover:shadow-lift; }
+  .btn-outline { @apply btn bg-card text-ink ring-2 ring-ink/80 ring-inset hover:bg-lilac; }
+  .btn-light { @apply btn bg-white/10 text-white ring-2 ring-white/60 ring-inset hover:bg-white hover:text-ink; }
+  .btn-sm { @apply px-4 py-2 text-sm; }
+
+  .eyebrow { @apply inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-[0.16em] text-violet; }
+  .eyebrow::before { content: ""; @apply size-2.5 rotate-12 rounded-[3px] bg-vermilion; }
+  .on-dark .eyebrow { @apply text-white; }
+  .h-display { @apply font-display font-normal leading-[0.98] tracking-[-0.01em]; }
+  .h-section { @apply font-display text-[2.15rem] font-normal leading-[1.02] sm:text-5xl; }
+
+  .card { @apply rounded-[1.4rem] bg-card shadow-paper ring-1 ring-line; }
+  .card-hover { @apply transition duration-300 hover:-translate-y-1 hover:shadow-lift; }
+  .tag { @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-bold; }
+  .link { @apply font-bold text-violet underline decoration-ochre decoration-[3px] underline-offset-4 hover:text-violet-dark hover:decoration-violet; }
+
+  /* Cut-paper tiles: a slight tilt that straightens on hover. */
+  .tilt-l { transform: rotate(-1.4deg); }
+  .tilt-r { transform: rotate(1.2deg); }
+  .art svg { display: block; width: 100%; height: 100%; }
+
+  .field-label { @apply mb-1.5 block text-sm font-bold text-ink; }
+  .field { @apply w-full rounded-xl border-2 border-ink/20 bg-card px-4 py-3 text-[15px] text-ink placeholder:text-muted transition focus:border-violet focus:outline-none focus:ring-4 focus:ring-violet/15; }
+  select.field { @apply appearance-none bg-no-repeat pr-10; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%231f1d36' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 8 4 4 4-4'/%3E%3C/svg%3E"); background-size: 1.1rem; background-position: right 1rem center; }
+  .field[aria-invalid="true"], fieldset[aria-invalid="true"] .pill { @apply border-error ring-4 ring-error/10; }
+  .field-error { @apply mt-1.5 text-sm font-semibold text-error; }
+  .field-error:empty { display: none; }
+  .hint { @apply mt-1.5 text-sm text-muted; }
+
+  .pill { @apply relative inline-flex cursor-pointer select-none items-center gap-1.5 rounded-full border-2 border-ink/15 bg-card px-4 py-2 text-sm font-bold transition hover:border-violet/60; }
+  .pill:has(input:checked) { @apply border-ink bg-ink text-white; }
+  .pill:has(input:focus-visible) { outline: 3px solid var(--color-violet); outline-offset: 3px; }
+  .check { @apply flex cursor-pointer items-start gap-3 text-[15px]; }
+  .check input { @apply mt-0.5 size-5 shrink-0 accent-violet; }
+
+  .nav-link { @apply rounded-full px-3 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-ink aria-[current=page]:text-white; }
+
+  .faq { @apply border-b-2 border-dashed border-line; }
+  .faq summary { @apply flex items-center justify-between gap-6 py-5 text-lg font-bold; }
+  .faq summary::after { content: "+"; @apply grid size-9 shrink-0 place-items-center rounded-lg bg-ochre text-xl font-bold text-ink transition; }
+  .faq[open] summary::after { content: "–"; @apply rotate-6 bg-violet text-white; }
+  .faq > div { @apply pb-6 pr-4 leading-relaxed text-muted sm:pr-12; }
+
+  .prose-mosaic p { @apply mt-4 leading-relaxed text-ink/90; }
+  .prose-mosaic ul { @apply mt-4 list-disc space-y-2 pl-5 text-ink/90 marker:text-vermilion; }
+}
+
+/* Torn-paper edge at the top of a colored band: <div class="torn-top text-ink"> */
+.torn-top { position: relative; }
+.torn-top::before {
+  content: ""; position: absolute; left: 0; right: 0; top: -13px; height: 14px; background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 14' preserveAspectRatio='none'%3E%3Cpath d='M0 14V8l6-3 7 4 9-6 8 5 7-3 9 4 6-6 10 5 8-2 7 4 9-5 6 3 8-4 7 5 6-3v12z'/%3E%3C/svg%3E") 0 0 / 240px 14px repeat-x;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 14' preserveAspectRatio='none'%3E%3Cpath d='M0 14V8l6-3 7 4 9-6 8 5 7-3 9 4 6-6 10 5 8-2 7 4 9-5 6 3 8-4 7 5 6-3v12z'/%3E%3C/svg%3E") 0 0 / 240px 14px repeat-x;
+}
+
+/* Scroll reveal: only hidden when JS runs and motion is allowed. */
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s var(--ease-soft), transform .7s var(--ease-soft); }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+.js .reveal.tilt-l.is-visible { transform: rotate(-1.4deg); }
+.js .reveal.tilt-r.is-visible { transform: rotate(1.2deg); }
+
+@keyframes bob { from { transform: translateY(0) rotate(0); } to { transform: translateY(-8px) rotate(3deg); } }
+.bob { animation: bob 5s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center; }
+.bob-slow { animation: bob 7s ease-in-out infinite alternate-reverse; transform-box: fill-box; transform-origin: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .bob, .bob-slow { animation: none; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Toast (created by assets/js/main.js) */
+@layer components {
+  .toast { @apply pointer-events-none fixed bottom-5 left-1/2 z-50 -translate-x-1/2 translate-y-4 rounded-full bg-ink px-5 py-3 text-sm font-bold text-white opacity-0 shadow-lift transition duration-300; }
+  .toast.is-visible { @apply translate-y-0 opacity-100; }
+}
+
+/* Back to top button (created by assets/js/main.js). Remove this block to drop it. */
+@layer components {
+  .back-to-top {
+    position: fixed; z-index: 40; right: calc(1.25rem + env(safe-area-inset-right, 0px)); bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+    display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; cursor: pointer; border: 0; border-radius: .9rem;
+    background: var(--color-ink); color: #fff; box-shadow: var(--shadow-lift); transform: rotate(-6deg) translateY(.75rem);
+    opacity: 0; visibility: hidden; transition: opacity .25s ease, transform .25s ease, visibility 0s linear .25s, background-color .2s;
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: rotate(-6deg); transition-delay: 0s; }
+  .back-to-top:hover { background: var(--color-violet); }
+  @media print { .back-to-top { display: none !important; } }
+}

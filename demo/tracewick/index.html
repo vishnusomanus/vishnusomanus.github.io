@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>One signal. The whole story. — Tracewick</title>
+    <meta
+      name="description"
+      content="Tracewick brings requests, service health and engineering decisions together. Observe the route from first request to final response."
+    />
+    <meta name="theme-color" content="#091721" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tracewick" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="One signal. The whole story. — Tracewick" />
+    <meta
+      property="og:description"
+      content="Tracewick brings requests, service health and engineering decisions together. Observe the route from first request to final response."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&amp;family=Golos+Text:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="index" class="flex min-h-screen flex-col font-sans">
+    <a
+      class="sr-only z-50 bg-cyan px-5 py-3 text-ink focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      href="#main"
+      >Skip to content</a
+    >
+    <header class="border-b border-line bg-ink">
+      <div class="wrap flex min-h-20 items-center justify-between gap-4">
+        <a class="flex items-center gap-3" href="index.html"
+          ><svg class="size-9 shrink-0" viewBox="0 0 40 40" aria-hidden="true">
+            <path d="M3 8h34M20 8v26M7 18h26M10 29h20" fill="none" stroke="#6ce9e0" stroke-width="3" />
+            <circle cx="20" cy="18" r="5" fill="#091721" stroke="#e9f3f7" stroke-width="2" /></svg
+          ><span class="font-display text-3xl font-semibold tracking-[.035em]">TRACEWICK</span></a
+        >
+        <nav class="hidden lg:block" aria-label="Main">
+          <div class="flex items-center gap-1">
+            <a class="nav-link" href="platform.html">Platform</a><a class="nav-link" href="console.html">Console</a
+            ><a class="nav-link" href="pricing.html">Pricing</a><a class="nav-link" href="docs.html">Docs</a
+            ><a class="nav-link" href="status.html">Reliability</a>
+          </div>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="contact.html" class="btn hidden sm:inline-flex"
+            >Talk to an engineer
+            <svg
+              viewBox="0 0 24 24"
+              class="size-4 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              aria-hidden="true"
+            >
+              <path d="M4 12h15m-6-6 6 6-6 6" /></svg></a
+          ><button
+            class="grid size-11 place-items-center border border-line lg:hidden"
+            type="button"
+            data-menu-button
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="size-5" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" class="wrap grid gap-2 pb-6 lg:hidden" aria-label="Mobile" hidden>
+        <a class="nav-link" href="platform.html">Platform</a><a class="nav-link" href="console.html">Console</a
+        ><a class="nav-link" href="pricing.html">Pricing</a><a class="nav-link" href="docs.html">Docs</a
+        ><a class="nav-link" href="status.html">Reliability</a
+        ><a class="btn mt-3" href="contact.html"
+          >Talk to an engineer
+          <svg
+            viewBox="0 0 24 24"
+            class="size-4 shrink-0"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path d="M4 12h15m-6-6 6 6-6 6" /></svg
+        ></a>
+      </nav>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="signal-grid border-b border-line">
+        <div class="wrap grid gap-10 py-12 lg:grid-cols-[1.1fr_1fr] lg:py-20">
+          <div class="reveal">
+            <p class="eyebrow text-cyan">OBSERVABILITY / WITHOUT THE SCAVENGER HUNT</p>
+            <h1
+              class="mt-6 font-display text-[clamp(3.8rem,8.1vw,7.8rem)] font-semibold leading-[.91] tracking-[-.035em]"
+            >
+              ONE SIGNAL.<br />THE WHOLE<br /><span class="text-cyan">STORY.</span>
+            </h1>
+            <p class="mt-7 max-w-lg text-lg leading-relaxed text-muted">
+              A slow checkout is never just a slow checkout. Follow the request through every service, keep the context
+              and know where to look next.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a class="btn" href="console.html"
+                >Explore the console
+                <svg
+                  viewBox="0 0 24 24"
+                  class="size-4 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  aria-hidden="true"
+                >
+                  <path d="M4 12h15m-6-6 6 6-6 6" /></svg></a
+              ><a class="btn btn-line" href="platform.html">See the platform</a>
+            </div>
+            <p class="mt-6 text-xs uppercase tracking-widest text-muted">Traces / Metrics / Logs / One useful view</p>
+          </div>
+          <div class="reveal lg:pt-12">
+            <figure class="self-center border border-line bg-deep p-5">
+              <figcaption
+                class="flex justify-between border-b border-line pb-4 font-display text-sm tracking-wider text-muted"
+              >
+                <span>REQUEST / CHECKOUT</span><span class="text-cyan">120 ms</span>
+              </figcaption>
+              <div
+                class="mt-5"
+                role="img"
+                aria-label="A request trace showing gateway, identity, checkout and ledger spans in sequence, 120 milliseconds in all."
+              >
+                <div class="grid grid-cols-[4.5rem_1fr] items-center gap-3 py-2 text-sm sm:grid-cols-[5.5rem_1fr]">
+                  <span class="text-muted">gateway</span>
+                  <div class="relative h-8 border-x border-line bg-[repeating-linear-gradient(90deg,transparent_0_calc(25%-1px),#35515e_calc(25%-1px)_25%)]">
+                    <span
+                      class="absolute inset-y-0 left-0 w-full overflow-hidden whitespace-nowrap bg-cyan px-2 text-xs font-semibold leading-8 text-ink"
+                      >120 ms / complete request</span
+                    >
+                  </div>
+                </div>
+                <div class="grid grid-cols-[4.5rem_1fr] items-center gap-3 py-2 text-sm sm:grid-cols-[5.5rem_1fr]">
+                  <span class="text-muted">identity</span>
+                  <div class="relative h-8 border-x border-line bg-[repeating-linear-gradient(90deg,transparent_0_calc(25%-1px),#35515e_calc(25%-1px)_25%)]">
+                    <span
+                      class="absolute inset-y-0 left-[6.7%] w-[21.7%] overflow-hidden whitespace-nowrap bg-cyan px-2 text-xs font-semibold leading-8 text-ink"
+                      >26 ms</span
+                    >
+                  </div>
+                </div>
+                <div class="grid grid-cols-[4.5rem_1fr] items-center gap-3 py-2 text-sm sm:grid-cols-[5.5rem_1fr]">
+                  <span class="text-muted">checkout</span>
+                  <div class="relative h-8 border-x border-line bg-[repeating-linear-gradient(90deg,transparent_0_calc(25%-1px),#35515e_calc(25%-1px)_25%)]">
+                    <span
+                      class="absolute inset-y-0 left-[32.5%] w-[51.6%] overflow-hidden whitespace-nowrap bg-cyan px-2 text-xs font-semibold leading-8 text-ink"
+                      >62 ms</span
+                    >
+                  </div>
+                </div>
+                <div class="grid grid-cols-[4.5rem_1fr] items-center gap-3 py-2 text-sm sm:grid-cols-[5.5rem_1fr]">
+                  <span class="text-muted">ledger</span>
+                  <div class="relative h-8 border-x border-line bg-[repeating-linear-gradient(90deg,transparent_0_calc(25%-1px),#35515e_calc(25%-1px)_25%)]">
+                    <span
+                      class="absolute inset-y-0 left-[45%] w-[33.3%] overflow-hidden whitespace-nowrap bg-cyan px-2 text-xs font-semibold leading-8 text-ink"
+                      >40 ms</span
+                    >
+                  </div>
+                </div>
+                <div class="grid grid-cols-[4.5rem_1fr] items-center gap-3 py-2 text-sm sm:grid-cols-[5.5rem_1fr]">
+                  <span class="text-muted">response</span>
+                  <div class="relative h-8 border-x border-line bg-[repeating-linear-gradient(90deg,transparent_0_calc(25%-1px),#35515e_calc(25%-1px)_25%)]">
+                    <span
+                      class="absolute inset-y-0 left-[90.5%] w-[9.5%] overflow-hidden whitespace-nowrap bg-cyan px-2 text-xs font-semibold leading-8 text-ink"
+                      ></span
+                    >
+                  </div>
+                </div>
+                <div class="grid grid-cols-[4.5rem_1fr] gap-3 pt-1 text-xs text-muted sm:grid-cols-[5.5rem_1fr]">
+                  <span></span><span class="flex justify-between"><span>0 ms</span><span>60 ms</span><span>120 ms</span></span>
+                </div>
+              </div>
+              <p class="mt-4 text-xs text-muted">Every span in its place. Every delay with a name.</p>
+            </figure>
+          </div>
+        </div>
+        <dl class="wrap grid grid-cols-2 border-t border-line sm:grid-cols-4">
+          <div class="py-6">
+            <dt class="eyebrow text-muted">One request</dt>
+            <dd class="mt-2 font-display text-3xl">The full journey</dd>
+          </div>
+          <div class="border-l border-line py-6 pl-5">
+            <dt class="eyebrow text-muted">One query</dt>
+            <dd class="mt-2 font-display text-3xl">Connected context</dd>
+          </div>
+          <div class="border-t border-line py-6 sm:border-t-0 sm:border-l sm:pl-5">
+            <dt class="eyebrow text-muted">Your retention</dt>
+            <dd class="mt-2 font-display text-3xl">7–90 days</dd>
+          </div>
+          <div class="border-l border-t border-line py-6 pl-5 sm:border-t-0">
+            <dt class="eyebrow text-muted">Your data</dt>
+            <dd class="mt-2 font-display text-3xl">Exportable</dd>
+          </div>
+        </dl>
+      </section>
+      <section class="wrap py-16">
+        <div class="flex flex-wrap items-end justify-between gap-5">
+          <div>
+            <p class="eyebrow text-cyan">01 / KNOW THE ROUTE</p>
+            <h2 class="mt-4 font-display text-4xl font-semibold">Start with the service. Stay for the context.</h2>
+          </div>
+          <a class="text-link" href="console.html">Open service explorer</a>
+        </div>
+        <div data-home-services class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"></div>
+      </section>
+      <section class="border-y border-line bg-cyan py-16 text-ink">
+        <div class="wrap grid gap-10 md:grid-cols-[1fr_1.1fr]">
+          <div>
+            <p class="eyebrow">02 / A CALMER ON-CALL</p>
+            <h2 class="mt-4 font-display text-5xl font-semibold leading-tight">
+              Less alert volume.<br />More signal value.
+            </h2>
+          </div>
+          <div class="space-y-5 text-lg leading-relaxed">
+            <p>
+              Give every service an explicit error budget. Compare latency against the work it does, rather than a
+              single threshold copied across every service.
+            </p>
+            <p>
+              Tracewick keeps those decisions beside the evidence, so the next engineer starts with context instead of a
+              wall of red.
+            </p>
+            <a class="btn mt-3" href="platform.html"
+              >How the pieces connect
+              <svg
+                viewBox="0 0 24 24"
+                class="size-4 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                aria-hidden="true"
+              >
+                <path d="M4 12h15m-6-6 6 6-6 6" /></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+      <section class="wrap grid gap-6 py-16 md:grid-cols-3">
+        <article class="border border-line bg-panel p-6">
+          <p class="eyebrow text-cyan">03 / INSTRUMENT</p>
+          <h2 class="mt-4 font-display text-3xl font-semibold">Begin with one route.</h2>
+          <p class="mt-4 leading-relaxed text-muted">
+            Start at the gateway, propagate a trace identifier and bring one critical journey into focus before
+            expanding coverage.
+          </p>
+        </article>
+        <article class="border border-line bg-panel p-6">
+          <p class="eyebrow text-cyan">04 / UNDERSTAND</p>
+          <h2 class="mt-4 font-display text-3xl font-semibold">A useful cost boundary.</h2>
+          <p class="mt-4 leading-relaxed text-muted">
+            Choose ingestion, retention and seats together. The pricing calculator separates each part of your monthly
+            estimate.
+          </p>
+        </article>
+        <article class="border border-line bg-panel p-6">
+          <p class="eyebrow text-cyan">05 / MAKE IT YOURS</p>
+          <h2 class="mt-4 font-display text-3xl font-semibold">Keep your working view.</h2>
+          <p class="mt-4 leading-relaxed text-muted">
+            Save services and alert budgets in the console, then return to the comparisons that matter to your team.
+          </p>
+        </article>
+      </section>
+      <section class="wrap mb-16 border border-line bg-panel p-8 sm:p-12">
+        <div class="grid gap-6 md:grid-cols-[1fr_auto] md:items-center">
+          <div>
+            <h2 class="font-display text-4xl font-semibold">Bring a service map. We’ll bring questions.</h2>
+            <p class="mt-4 max-w-2xl text-muted">
+              A practical conversation about your workloads, your retention needs and what your on-call team is trying
+              to find.
+            </p>
+          </div>
+          <a class="btn" href="contact.html"
+            >Talk it through
+            <svg
+              viewBox="0 0 24 24"
+              class="size-4 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              aria-hidden="true"
+            >
+              <path d="M4 12h15m-6-6 6 6-6 6" /></svg
+          ></a>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-auto border-t border-line bg-deep py-12">
+      <div class="wrap grid gap-9 md:grid-cols-[1.3fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="font-display text-3xl font-semibold tracking-wider">TRACEWICK</a>
+          <p class="mt-4 max-w-sm text-sm leading-relaxed text-muted">
+            One connected view of the systems you build.<br />Less noise. More context. A better next step.
+          </p>
+        </div>
+        <div>
+          <h2 class="eyebrow text-cyan">Explore the signal</h2>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a class="text-link" href="console.html">Service console</a></li>
+            <li><a class="text-link" href="docs.html">Engineering guides</a></li>
+            <li><a class="text-link" href="status.html">Reliability & maintenance</a></li>
+            <li><a class="text-link" href="company.html">Our company</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="eyebrow text-cyan">The people behind it</h2>
+          <p class="mt-4 text-sm leading-relaxed text-muted">
+            The signal room, Academy Street<br />Cary, NC 27511<br />Monday–Friday, 9 a.m.–5:30 p.m.<br />hello@tracewick.example
+          </p>
+          <a class="mt-4 inline-block text-link text-sm" href="tel:+19195550182">(919) 555-0182</a>
+        </div>
+      </div>
+      <div class="wrap mt-10 flex flex-wrap justify-between gap-3 border-t border-line pt-5 text-xs text-muted">
+        <p>© <span data-year></span> Tracewick. Follow the whole request.</p>
+        <p>Tracewick is a fictional business.</p>
+      </div>
+    </footer>
+    <p
+      data-toast
+      class="fixed bottom-5 left-5 right-5 z-50 mx-auto max-w-xl border border-cyan bg-panel p-4 text-sm shadow-xl"
+      role="status"
+      aria-live="polite"
+      hidden
+    ></p>
+  </body>
+</html>

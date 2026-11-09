@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Savings and carbon estimator — Heatloop</title>
+  <meta name="description" content="Estimate what a Heatloop could change in your yearly heating cost and carbon, from your home, current heating, rate plan and region. The formula is shown in full.">
+  <meta name="theme-color" content="#f5f2ea" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0c1511" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Heatloop">
+  <meta property="og:title" content="Savings and carbon estimator — Heatloop">
+  <meta property="og:description" content="Estimate what a Heatloop could change in your yearly heating cost and carbon, from your home, current heating, rate plan and region. The formula is shown in full.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&amp;family=Hedvig+Letters+Serif:opsz@12..24&amp;family=Source+Code+Pro:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>(function(){var d=document.documentElement;d.classList.add('js');var t=null;try{t=window.localStorage.getItem('heatloop:theme')}catch(e){}if(t==='dark'||(t!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches))d.classList.add('dark')})();</script>
+</head>
+<body data-page="estimator" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] border border-ink bg-paper px-5 py-3 font-mono text-sm uppercase tracking-[0.08em] focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-40 border-b border-rule bg-paper/95 backdrop-blur-sm">
+    <div class="container-x flex h-16 items-center justify-between gap-6">
+      <a href="index.html" class="inline-flex items-center gap-2.5 text-ink"><svg viewBox="0 0 32 32" class="h-8 w-8 shrink-0" aria-hidden="true"><path d="M23.6 8.4A11 11 0 1 0 27 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M27 10.2 27 16 21.4 14.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 20.5c1.6-1.8 1.6-3.6 0-5.4s-1.6-3.6 0-5.4M16 20.5c1.6-1.8 1.6-3.6 0-5.4s-1.6-3.6 0-5.4" fill="none" stroke="var(--ochre)" stroke-width="1.8" stroke-linecap="round"/></svg><span class="font-serif text-[1.6rem] leading-none tracking-[-0.02em]">Heatloop</span></a>
+      <nav aria-label="Main" class="hidden lg:block"><ul class="flex items-center gap-7"><li><a href="technology.html" class="relative py-2 text-[0.98rem] text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-px aria-[current=page]:after:bg-copper">Technology</a></li><li><a href="estimator.html" aria-current="page" class="relative py-2 text-[0.98rem] text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-px aria-[current=page]:after:bg-copper">Estimator</a></li><li><a href="company.html" class="relative py-2 text-[0.98rem] text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-px aria-[current=page]:after:bg-copper">Company</a></li><li><a href="careers.html" class="relative py-2 text-[0.98rem] text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-px aria-[current=page]:after:bg-copper">Careers</a></li><li><a href="news.html" class="relative py-2 text-[0.98rem] text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-px aria-[current=page]:after:bg-copper">News</a></li><li><a href="contact.html" class="relative py-2 text-[0.98rem] text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-px aria-[current=page]:after:bg-copper">Contact</a></li></ul></nav>
+      <div class="flex items-center gap-2.5">
+        <button type="button" class="grid h-10 w-10 place-items-center border border-rule text-ink transition hover:border-ink" data-theme-toggle aria-pressed="false">
+          <span class="sr-only">Dark theme</span>
+          <svg viewBox="0 0 24 24" class="h-[1.15rem] w-[1.15rem] dark:hidden" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+          <svg viewBox="0 0 24 24" class="hidden h-[1.15rem] w-[1.15rem] dark:block" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>
+        </button>
+        <a href="reserve.html" class="btn-primary btn-sm hidden sm:inline-flex" data-reserve-cta>Reserve</a>
+        <button id="menu-toggle" type="button" class="grid h-10 w-10 place-items-center border border-rule text-ink lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <span data-icon-open><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></span>
+          <span data-icon-close class="hidden"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="h-[calc(100dvh-4rem)] overflow-y-auto border-t border-rule bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-10 pt-2">
+        <ul><li><a href="index.html" class="flex items-baseline gap-4 border-b border-rule py-3.5 font-serif text-[1.7rem] leading-tight aria-[current=page]:text-copper"><span class="font-mono text-[0.75rem] text-muted" aria-hidden="true">00</span>Home</a></li><li><a href="technology.html" class="flex items-baseline gap-4 border-b border-rule py-3.5 font-serif text-[1.7rem] leading-tight aria-[current=page]:text-copper"><span class="font-mono text-[0.75rem] text-muted" aria-hidden="true">01</span>Technology</a></li><li><a href="estimator.html" aria-current="page" class="flex items-baseline gap-4 border-b border-rule py-3.5 font-serif text-[1.7rem] leading-tight aria-[current=page]:text-copper"><span class="font-mono text-[0.75rem] text-muted" aria-hidden="true">02</span>Estimator</a></li><li><a href="company.html" class="flex items-baseline gap-4 border-b border-rule py-3.5 font-serif text-[1.7rem] leading-tight aria-[current=page]:text-copper"><span class="font-mono text-[0.75rem] text-muted" aria-hidden="true">03</span>Company</a></li><li><a href="careers.html" class="flex items-baseline gap-4 border-b border-rule py-3.5 font-serif text-[1.7rem] leading-tight aria-[current=page]:text-copper"><span class="font-mono text-[0.75rem] text-muted" aria-hidden="true">04</span>Careers</a></li><li><a href="news.html" class="flex items-baseline gap-4 border-b border-rule py-3.5 font-serif text-[1.7rem] leading-tight aria-[current=page]:text-copper"><span class="font-mono text-[0.75rem] text-muted" aria-hidden="true">05</span>News</a></li><li><a href="contact.html" class="flex items-baseline gap-4 border-b border-rule py-3.5 font-serif text-[1.7rem] leading-tight aria-[current=page]:text-copper"><span class="font-mono text-[0.75rem] text-muted" aria-hidden="true">06</span>Contact</a></li><li><a href="reserve.html" class="flex items-baseline gap-4 border-b border-rule py-3.5 font-serif text-[1.7rem] leading-tight aria-[current=page]:text-copper"><span class="font-mono text-[0.75rem] text-muted" aria-hidden="true">07</span>Reserve</a></li></ul>
+        <p class="mt-8 text-muted">Call the Bangor office: <a href="tel:+12075550176" class="link">(207) 555-0176</a></p>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="container-x pb-10 pt-10 sm:pt-14">
+      <div class="grid gap-8 lg:grid-cols-[1.3fr_1fr] lg:items-end lg:gap-16">
+        <div>
+          <p class="label">Savings and carbon estimator</p>
+          <h1 class="display mt-5 text-[2.7rem] sm:text-6xl lg:text-[4.2rem]">What could a Heatloop change for your home?</h1>
+        </div>
+        <p class="lede">Four questions, one honest estimate of yearly running cost and carbon, with the formula shown underneath. Sometimes the answer is &ldquo;not much&rdquo;, and we&rsquo;d rather you knew.</p>
+      </div>
+    </section>
+
+    <section class="container-x pb-20" aria-label="Estimator">
+      <div class="grid gap-10 border-t border-ink pt-10 lg:grid-cols-[1.15fr_1fr] lg:gap-16">
+        <!-- Driven by initEstimator() in assets/js/main.js: HOMES, HEATING, TARIFFS, REGIONS. -->
+        <form class="grid content-start gap-10" data-estimator novalidate>
+          <fieldset>
+            <legend class="flex items-baseline gap-3 font-serif text-2xl"><span class="font-mono text-sm text-copper">01</span>Your home</legend>
+            <div class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <label class="choice items-center text-center"><input type="radio" name="size" value="apartment" class="sr-only"><svg viewBox="0 0 64 56" class="h-12 w-auto text-ink" aria-hidden="true"><path class="draw" d="M14 52V8h36v44M14 52h36M22 16h6v6h-6zM36 16h6v6h-6zM22 28h6v6h-6zM36 28h6v6h-6zM29 52V42h6v10"/><rect x="36" y="28" width="6" height="6" fill="var(--ochre)" opacity=".6"/></svg><span class="mt-2">Apartment<span class="block text-muted">under 1,000 sq ft</span></span></label>
+              <label class="choice items-center text-center"><input type="radio" name="size" value="small" class="sr-only"><svg viewBox="0 0 64 56" class="h-12 w-auto text-ink" aria-hidden="true"><path class="draw" d="M14 52V28L32 12l18 16v24M14 52h36M28 52V42h8v10"/><rect x="27" y="28" width="10" height="7" fill="var(--ochre)" opacity=".6"/></svg><span class="mt-2">Small home<span class="block text-muted">1,000&ndash;1,500 sq ft</span></span></label>
+              <label class="choice items-center text-center"><input type="radio" name="size" value="midsize" class="sr-only"><svg viewBox="0 0 64 56" class="h-12 w-auto text-ink" aria-hidden="true"><path class="draw" d="M6 52V26L24 10l18 16v26M6 52h52M42 34h16v18M15 52V40h8v12"/><rect x="46" y="39" width="8" height="6" fill="var(--ochre)" opacity=".6"/></svg><span class="mt-2">Mid-size home<span class="block text-muted">1,500&ndash;2,500 sq ft</span></span></label>
+              <label class="choice items-center text-center"><input type="radio" name="size" value="large" class="sr-only"><svg viewBox="0 0 64 56" class="h-12 w-auto text-ink" aria-hidden="true"><path class="draw" d="M8 52V24L32 6l24 18v28M8 52h48M28 52V40h8v12M14 28h10v8H14zM40 28h10v8H40zM44 8v8"/><rect x="40" y="28" width="10" height="8" fill="var(--ochre)" opacity=".6"/></svg><span class="mt-2">Large home<span class="block text-muted">over 2,500 sq ft</span></span></label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend class="flex items-baseline gap-3 font-serif text-2xl"><span class="font-mono text-sm text-copper">02</span>How you heat it now</legend>
+            <div class="mt-5 grid gap-2 sm:grid-cols-2">
+              <label class="choice flex-row items-center gap-3 py-3.5"><input type="radio" name="heat" value="gas" class="h-4 w-4 accent-[var(--forest)]">Natural gas boiler</label>
+              <label class="choice flex-row items-center gap-3 py-3.5"><input type="radio" name="heat" value="oil" class="h-4 w-4 accent-[var(--forest)]">Oil boiler</label>
+              <label class="choice flex-row items-center gap-3 py-3.5"><input type="radio" name="heat" value="propane" class="h-4 w-4 accent-[var(--forest)]">Propane boiler</label>
+              <label class="choice flex-row items-center gap-3 py-3.5"><input type="radio" name="heat" value="storage" class="h-4 w-4 accent-[var(--forest)]">Electric thermal storage heaters</label>
+              <label class="choice flex-row items-center gap-3 py-3.5 sm:col-span-2"><input type="radio" name="heat" value="electric" class="h-4 w-4 accent-[var(--forest)]">Electric baseboard or panel heaters</label>
+            </div>
+          </fieldset>
+          <div class="grid gap-6 sm:grid-cols-2">
+            <div>
+              <label for="est-tariff" class="flex items-baseline gap-3 font-serif text-2xl"><span class="font-mono text-sm text-copper">03</span>Rate plan with a Heatloop</label>
+              <select id="est-tariff" name="tariff" class="field mt-4"><option value="tou">Time-of-use rate</option><option value="offpeak">Off-peak heating rate</option><option value="single">Standard flat rate</option></select>
+            </div>
+            <div>
+              <label for="est-region" class="flex items-baseline gap-3 font-serif text-2xl"><span class="font-mono text-sm text-copper">04</span>Region</label>
+              <select id="est-region" name="region" class="field mt-4"><option value="eastern">Bangor and eastern Maine</option><option value="northern">Northern Maine</option><option value="central">Central Maine</option><option value="western">Western Maine mountains</option><option value="midcoast">Midcoast and Downeast</option><option value="southern">Southern Maine and coastal New Hampshire</option></select>
+            </div>
+          </div>
+          <noscript><p class="text-muted">The estimator needs JavaScript to calculate.</p></noscript>
+        </form>
+
+        <aside class="lg:sticky lg:top-24 lg:self-start" aria-labelledby="result-title">
+          <div class="figure p-6 sm:p-8" aria-live="polite">
+            <div class="flex items-center justify-between gap-3"><h2 id="result-title" class="label-muted">Your estimate, per year</h2><span class="chip text-copper">Estimate</span></div>
+            <p class="mt-4 font-serif text-4xl leading-tight sm:text-5xl" data-est="saving">$134 less a year</p>
+            <p class="mt-2 text-muted" data-est="saving-note">Estimated yearly running cost with a Heatloop compared with your oil boiler.</p>
+            <div class="mt-8 grid gap-6">
+              <div>
+                <p class="label-muted">Running cost</p>
+                <svg viewBox="0 0 300 52" class="mt-2 h-auto w-full" aria-hidden="true"><rect x="0" y="2" width="300" height="20" fill="var(--paper-3)" data-est="bar-cur-cost"/><rect x="0" y="30" width="289" height="20" fill="var(--forest)" data-est="bar-hl-cost"/></svg>
+                <dl class="mt-2 grid grid-cols-2 gap-3 text-[0.98rem]"><div><dt class="text-muted" data-est="cur-label">Oil boiler</dt><dd class="font-serif text-2xl" data-est="cur-cost">$3,666</dd></div><div><dt class="text-muted">Heatloop</dt><dd class="font-serif text-2xl" data-est="hl-cost">$3,532</dd></div></dl>
+              </div>
+              <div>
+                <p class="label-muted">Carbon, CO&#8322;e</p>
+                <svg viewBox="0 0 300 52" class="mt-2 h-auto w-full" aria-hidden="true"><rect x="0" y="2" width="300" height="20" fill="var(--paper-3)" data-est="bar-cur-co2"/><rect x="0" y="30" width="271" height="20" fill="var(--ochre)" data-est="bar-hl-co2"/></svg>
+                <dl class="mt-2 grid grid-cols-2 gap-3 text-[0.98rem]"><div><dt class="text-muted">Now</dt><dd class="font-serif text-2xl" data-est="cur-co2">7.1 tons</dd></div><div><dt class="text-muted">Heatloop</dt><dd class="font-serif text-2xl" data-est="hl-co2">6.5 tons</dd></div></dl>
+                <p class="mt-2 text-forest" data-est="co2-saving">0.7 tons less CO&#8322;e (10%)</p>
+              </div>
+            </div>
+            <div class="mt-8 border-t border-rule pt-5">
+              <p class="text-[0.98rem]">Suggested model: <span class="font-serif text-xl" data-est="model">Heatloop 28</span></p>
+              <div class="mt-4 flex flex-wrap gap-3"><a href="reserve.html?model=hl28" class="btn-primary btn-sm" data-est="model-link">Reserve this model</a><button type="button" class="btn-line btn-sm" data-est-share>Copy link to this estimate</button></div>
+              <p class="mt-3 text-[0.95rem] text-muted" role="status" data-est-share-status></p>
+            </div>
+          </div>
+          <p class="mt-4 text-[0.92rem] text-muted">An estimate only, not financial advice. It uses sample prices and covers running costs for heating and hot water, not monthly customer charges, installation, maintenance, or any rebate or tax credit. Real bills depend on your home, habits, weather and prices.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="border-t border-rule bg-paper-2/60" aria-labelledby="formula-title">
+      <div class="container-x py-20 lg:py-24">
+        <div class="section-head"><span class="section-no">05</span><span class="label-muted">How we worked it out</span></div>
+        <div class="mt-6 grid gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
+          <div>
+            <h2 id="formula-title" class="display text-4xl sm:text-5xl">The formula, with your numbers in it.</h2>
+            <p class="lede mt-5">No hidden factors. Every price and efficiency below is a sample assumption you can argue with, so swap in the numbers from your own bills.</p>
+          </div>
+          <ol class="grid gap-0 border-t border-ink">
+            <li class="grid gap-2 border-b border-rule py-5 sm:grid-cols-[10rem_1fr]"><p class="font-mono text-sm uppercase tracking-[0.08em] text-copper">1 &middot; Heat</p><div><p>Typical yearly heat for your home size, adjusted for your region&rsquo;s climate.</p><p class="mt-2 font-mono text-[0.92rem] text-muted" data-est="f-heat">22,000 kWh &times; 1.00 = 22,000 kWh</p></div></li>
+            <li class="grid gap-2 border-b border-rule py-5 sm:grid-cols-[10rem_1fr]"><p class="font-mono text-sm uppercase tracking-[0.08em] text-copper">2 &middot; Now</p><div><p>Fuel needed at your system&rsquo;s efficiency, times its unit price and its carbon factor.</p><p class="mt-2 font-mono text-[0.92rem] text-muted" data-est="f-cur">&ndash;</p></div></li>
+            <li class="grid gap-2 border-b border-rule py-5 sm:grid-cols-[10rem_1fr]"><p class="font-mono text-sm uppercase tracking-[0.08em] text-copper">3 &middot; Blend</p><div><p>The price a Heatloop pays on average: the share bought at the cheap rate, and the rest at the day rate.</p><p class="mt-2 font-mono text-[0.92rem] text-muted" data-est="f-price">&ndash;</p></div></li>
+            <li class="grid gap-2 border-b border-rule py-5 sm:grid-cols-[10rem_1fr]"><p class="font-mono text-sm uppercase tracking-[0.08em] text-copper">4 &middot; Heatloop</p><div><p>Electricity needed at 95% overall efficiency (store losses included), times the blended price. Carbon uses illustrative New England grid figures of 0.55&nbsp;lb/kWh at night and 0.60&nbsp;lb/kWh by day.</p><p class="mt-2 font-mono text-[0.92rem] text-muted" data-est="f-hl">&ndash;</p></div></li>
+          </ol>
+        </div>
+        <div class="relative mt-14 overflow-x-auto">
+          <table class="spec w-full min-w-[36rem] text-[0.98rem]">
+            <caption class="mb-4 text-left font-serif text-2xl">Assumptions used</caption>
+            <thead><tr><th scope="col">Heating</th><th scope="col">Sample price</th><th scope="col">Efficiency</th><th scope="col">lb CO&#8322;e per kWh</th></tr></thead>
+            <tbody>
+              <tr><td>Natural gas boiler</td><td>$1.75 per therm</td><td>85%</td><td>0.399</td></tr>
+              <tr><td>Oil boiler</td><td>$5.75 per gallon</td><td>85%</td><td>0.552</td></tr>
+              <tr><td>Propane boiler</td><td>$3.50 per gallon</td><td>85%</td><td>0.470</td></tr>
+              <tr><td>Electric thermal storage heaters</td><td>20&cent; per kWh (blended)</td><td>90%</td><td>0.570</td></tr>
+              <tr><td>Electric baseboard or panel</td><td>28&cent; per kWh</td><td>100%</td><td>0.580</td></tr>
+              <tr><td>Heatloop, time-of-use</td><td>13&cent; night, 28&cent; day; 85% at night</td><td>95%</td><td>0.55 / 0.60</td></tr>
+              <tr><td>Heatloop, off-peak heating rate</td><td>15&cent; night, 30&cent; day; 75% at night</td><td>95%</td><td>0.55 / 0.60</td></tr>
+              <tr><td>Heatloop, flat rate</td><td>28&cent; per kWh</td><td>95%</td><td>0.60</td></tr>
+            </tbody>
+          </table>
+          <p class="mt-4 text-[0.92rem] text-muted">Sample prices, labeled as estimates: they aren&rsquo;t quotes or today&rsquo;s market rates, and Maine fuel prices move a lot from season to season. One therm of natural gas is 29.3&nbsp;kWh, a gallon of heating oil 40.6&nbsp;kWh and a gallon of propane 26.8&nbsp;kWh. Typical heat use: apartment 9,000&nbsp;kWh, small home 15,000&nbsp;kWh, mid-size home 22,000&nbsp;kWh, large home 32,000&nbsp;kWh a year.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="mt-auto bg-pine text-cream">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_0.8fr_1.5fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-2.5 text-cream"><svg viewBox="0 0 32 32" class="h-9 w-9 shrink-0" aria-hidden="true"><path d="M23.6 8.4A11 11 0 1 0 27 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M27 10.2 27 16 21.4 14.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 20.5c1.6-1.8 1.6-3.6 0-5.4s-1.6-3.6 0-5.4M16 20.5c1.6-1.8 1.6-3.6 0-5.4s-1.6-3.6 0-5.4" fill="none" stroke="var(--ochre)" stroke-width="1.8" stroke-linecap="round"/></svg><span class="font-serif text-[1.8rem] leading-none">Heatloop</span></a>
+        <p class="mt-5 max-w-xs text-cream/80">Thermal batteries for homes. Designed in Bangor, built in Hermon.</p>
+        <address class="mt-5 not-italic leading-relaxed text-cream/80">Heatloop, Inc., Exchange Street<br>Bangor, ME 04401</address>
+        <p class="mt-3 leading-relaxed"><a href="tel:+12075550176" class="underline decoration-cream/40 underline-offset-4 hover:decoration-cream">(207) 555-0176</a><br><a href="mailto:hello@heatloop.example" class="underline decoration-cream/40 underline-offset-4 hover:decoration-cream">hello@heatloop.example</a></p>
+      </div>
+      <div><h2 class="font-mono text-[0.78rem] uppercase tracking-[0.14em] text-wheat">Product</h2><ul class="mt-4 space-y-2 text-cream/85"><li><a href="technology.html" class="hover:text-cream hover:underline">Technology</a></li><li><a href="estimator.html" class="hover:text-cream hover:underline">Estimator</a></li><li><a href="reserve.html" class="hover:text-cream hover:underline">Reserve</a></li><li><a href="technology.html#specs" class="hover:text-cream hover:underline">Specifications</a></li></ul></div>
+      <div><h2 class="font-mono text-[0.78rem] uppercase tracking-[0.14em] text-wheat">Company</h2><ul class="mt-4 space-y-2 text-cream/85"><li><a href="company.html" class="hover:text-cream hover:underline">About us</a></li><li><a href="careers.html" class="hover:text-cream hover:underline">Careers</a></li><li><a href="news.html" class="hover:text-cream hover:underline">News</a></li><li><a href="company.html#press" class="hover:text-cream hover:underline">Press kit</a></li><li><a href="contact.html" class="hover:text-cream hover:underline">Contact</a></li></ul></div>
+      <div>
+        <h2 class="font-mono text-[0.78rem] uppercase tracking-[0.14em] text-wheat">Field notes</h2>
+        <p class="mt-4 text-cream/85">One letter a month: install news, what the pilot homes are telling us and when the next open house is.</p>
+        <!-- Connect this form in assets/js/main.js (initForms); see DOCS.md "Forms". -->
+        <form id="newsletter" class="mt-4 flex flex-col gap-3 sm:flex-row sm:items-start" data-validate data-success="newsletter-success" data-hide-on-success novalidate>
+          <div class="flex-1">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input id="newsletter-email" name="email" type="email" autocomplete="email" required data-required-msg="Enter your email address." placeholder="you@example.com" class="w-full border border-cream/50 bg-pine-deep px-3.5 py-2.5 text-cream placeholder:text-cream/60 focus:border-cream focus:outline-none" aria-describedby="newsletter-email-error">
+            <p id="newsletter-email-error" class="mt-1.5 text-[0.95rem] text-[#ffb59f] empty:hidden" aria-live="polite"></p>
+          </div>
+          <button type="submit" class="btn-cream shrink-0">Subscribe</button>
+        </form>
+        <div id="newsletter-success" class="mt-4 border border-cream/40 p-3" tabindex="-1" role="status" hidden data-success-panel><p>Thanks for subscribing. Look out for a short email asking you to confirm; the next Field notes follows.</p></div>
+      </div>
+    </div>
+    <div class="border-t border-cream/15">
+      <div class="container-x flex flex-col gap-2 py-5 font-mono text-[0.78rem] uppercase tracking-[0.08em] text-cream/70 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Heatloop, Inc., Bangor, Maine. A fictional company.</p>
+        <p>Estimates on this site are illustrative, not financial advice.</p>
+      </div>
+    </div>
+  </footer>
+  <p id="live-region" class="sr-only" aria-live="polite"></p>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

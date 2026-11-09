@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <radialGradient id="table" cx="50%" cy="40%" r="80%"><stop offset="0" stop-color="#2c3b45"/><stop offset="1" stop-color="#10171c"/></radialGradient>
+    <radialGradient id="plate" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#f4ede2"/><stop offset=".85" stop-color="#e3d6c2"/><stop offset="1" stop-color="#c9b89c"/></radialGradient>
+    <linearGradient id="tent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b8443a"/><stop offset=".5" stop-color="#8e2a32"/><stop offset="1" stop-color="#5e1a22"/></linearGradient>
+    <radialGradient id="potato" cx="40%" cy="35%" r="70%"><stop offset="0" stop-color="#fbe2a0"/><stop offset=".7" stop-color="#e3b25a"/><stop offset="1" stop-color="#a86d2c"/></radialGradient>
+    <radialGradient id="sauce" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#e86a2a"/><stop offset="1" stop-color="#e86a2a" stop-opacity="0"/></radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="16"/></filter>
+    <filter id="char"><feGaussianBlur stdDeviation="2.5"/></filter>
+  </defs>
+  <rect width="800" height="800" fill="url(#table)"/>
+  <circle cx="410" cy="420" r="320" fill="#000" opacity=".5" filter="url(#shadow)"/>
+  <circle cx="400" cy="400" r="320" fill="url(#plate)"/>
+  <circle cx="400" cy="400" r="250" fill="none" stroke="#cdbda3" stroke-width="2" opacity=".6"/>
+  <!-- paprika oil -->
+  <ellipse cx="400" cy="410" rx="210" ry="180" fill="url(#sauce)" opacity=".55"/>
+  <!-- potatoes -->
+  <g>
+    <path d="M250 470c-10-40 30-70 70-60s50 50 30 80-90 20-100-20z" fill="url(#potato)"/>
+    <path d="M500 520c-5-35 30-60 65-50s40 50 20 72-80 13-85-22z" fill="url(#potato)"/>
+    <path d="M470 280c0-30 30-50 60-40s35 45 15 62-75 8-75-22z" fill="url(#potato)"/>
+    <path d="M300 280c5-25 35-38 58-28s25 40 8 52-70 6-66-24z" fill="url(#potato)"/>
+    <g fill="#7a4518" opacity=".45" filter="url(#char)"><circle cx="300" cy="460" r="8"/><circle cx="545" cy="520" r="7"/><circle cx="510" cy="270" r="6"/></g>
+  </g>
+  <!-- tentacles -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M330 520c40-80 140-110 200-60s10 140-60 120-50-90 10-80" stroke="url(#tent)" stroke-width="44"/>
+    <path d="M330 520c40-80 140-110 200-60s10 140-60 120-50-90 10-80" stroke="#f3c2b5" stroke-width="8" stroke-dasharray="2 26" opacity=".7"/>
+    <path d="M250 360c60-60 170-70 220-10s-10 110-60 90-20-70 20-60" stroke="url(#tent)" stroke-width="36"/>
+    <path d="M250 360c60-60 170-70 220-10s-10 110-60 90-20-70 20-60" stroke="#f3c2b5" stroke-width="6" stroke-dasharray="2 22" opacity=".7"/>
+  </g>
+  <g fill="#2a0c0c" opacity=".55" filter="url(#char)">
+    <circle cx="380" cy="440" r="9"/><circle cx="450" cy="420" r="11"/><circle cx="530" cy="480" r="9"/>
+    <circle cx="300" cy="330" r="8"/><circle cx="380" cy="300" r="10"/><circle cx="460" cy="320" r="7"/>
+  </g>
+  <!-- capers, parsley, lemon -->
+  <g fill="#5f7d2a"><circle cx="420" cy="500" r="9"/><circle cx="560" cy="400" r="8"/><circle cx="290" cy="420" r="8"/><circle cx="440" cy="240" r="7"/><circle cx="360" cy="560" r="8"/></g>
+  <g fill="#2f5d1a">
+    <path d="M590 350c15-15 40-15 50 0-15 15-40 15-50 0z"/><path d="M220 400c5-20 25-30 40-22-5 20-25 30-40 22z"/><path d="M400 590c15-12 35-10 45 3-15 12-35 10-45-3z"/>
+  </g>
+  <path d="M600 560a70 70 0 0 1 70 70h-70z" fill="#f5d547" transform="rotate(200 620 580)"/>
+  <g fill="#c2271c"><circle cx="350" cy="380" r="2.5"/><circle cx="480" cy="370" r="2.5"/><circle cx="420" cy="460" r="2.5"/><circle cx="520" cy="440" r="2.5"/></g>
+</svg>

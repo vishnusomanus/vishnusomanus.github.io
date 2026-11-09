@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The drawers behind the counter — Field Issue</title>
+<meta name="description" content="A spice counter keeps the color out front and the weight in the back." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; } </style>
+</head>
+<body class="bg-[#f6f3ec] text-[#1a1a1a] font-sans antialiased">
+<header class="border-b-4 border-[#1a1a1a] bg-[#f6f3ec]">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-3xl leading-none">Field Issue</a>
+    <button id="menuBtn" class="border border-[#1a1a1a] px-3 py-1 text-xs uppercase tracking-wider md:hidden" aria-expanded="false">Menu</button>
+    <nav id="nav" class="hidden basis-full flex-col gap-2 border-t border-[#1a1a1a]/20 pt-3 text-sm md:flex md:basis-auto md:flex-row md:gap-6 md:border-0 md:pt-0 flex"><a href="index.html">Issue 19</a><a href="spices.html" aria-current="page">Spices</a><a href="boat.html">Boat</a><a href="violin.html">Violin</a><a href="masthead.html">Masthead</a></nav>
+  </div>
+</header><main class="mx-auto max-w-3xl px-5 py-12 sm:px-8">
+  <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#b42318]">Cover</p>
+  <h1 class="mt-3 font-display text-5xl leading-[0.95] sm:text-6xl">The drawers behind the counter</h1>
+  <p class="mt-4 text-sm uppercase tracking-[0.14em]">Leela Nair · 8 min</p>
+  <img src="images/spices.jpg" alt="Spices, ginger, chili, and herbs laid out on a pale table" class="mt-8 aspect-[16/10] w-full object-cover" />
+  <div class="mt-8 space-y-4 text-lg leading-relaxed"><p>The counter is the part customers photograph. Turmeric in a hill, chili in a ribbon, coriander still on the stem. Behind it, the work is drawers. Each drawer is a weight, a price, and a name written in pencil because the supplier changes and the pencil can be rubbed out.</p><p>We spent four mornings with the two people who open the shop. They do not grind to order after ten. The grinders run before the shutter comes up, when the street is only delivery bikes and the man who brings ice for the fish shop next door. By the time the first customer asks for a hundred grams of cumin, the jar is already full.</p></div>
+<div class="mt-8 space-y-4 text-lg leading-relaxed"><p>The ledger is a school notebook. One line is the sack that came in, the next is what left in paper twists. At the end of the week the numbers are copied into a book that lives in the back room, on a shelf above the spare grinder. Nobody we asked could remember the book being taken off the premises.</p><p>What looks like abundance on the table is a careful poverty in the drawers. They do not keep more than the week will sell. A torn sack of chili is a loss they talk about for days. The color in the photograph is the color of something that has to move.</p></div>
+  <p class="mt-12 border-t border-[#1a1a1a]/15 pt-6"><a class="underline underline-offset-4" href="boat.html">Next: Across the still water</a></p>
+</main><footer class="border-t border-[#1a1a1a]/20"><div class="mx-auto flex max-w-6xl flex-wrap justify-between gap-4 px-5 py-8 text-sm sm:px-8"><p>Field Issue, No. 19 · November. Edited in Kochi.</p><p><span class="underline underline-offset-4" >desk@fieldissue.com</span></p></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

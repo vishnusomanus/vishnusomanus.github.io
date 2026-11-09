@@ -1,0 +1,145 @@
+@import "tailwindcss" source("../");
+@source not "../*.md";
+@source not "../*.json";
+@theme {
+  --font-sans: "Cabin", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bree Serif", ui-serif, Georgia, serif;
+  --color-ink: #173d38;
+  --color-teal: #104b46;
+  --color-deep: #0a3633;
+  --color-acid: #d8ed75;
+  --color-orange: #f58243;
+  --color-cloud: #f1f5ed;
+  --color-muted: #52665e;
+  --color-line: #d5dfd4;
+  --color-rust: #a3331c;
+}
+@layer base {
+  body {
+    @apply bg-white font-sans text-ink antialiased;
+    font-size: 17px;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  button,
+  a,
+  input,
+  select,
+  textarea,
+  summary {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button:not(:disabled),
+  summary {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 3px solid #ba4e18;
+    outline-offset: 4px;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  ::selection {
+    background: #d8ed75;
+    color: #104b46;
+  }
+}
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-[1400px] px-5 sm:px-8 lg:px-12;
+  }
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[.18em];
+  }
+  .display {
+    @apply font-display font-normal leading-[1.02] tracking-[-.035em];
+  }
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-full bg-teal px-6 py-3 text-base font-bold text-white transition hover:bg-deep disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-light {
+    @apply bg-acid text-teal hover:bg-white;
+  }
+  .btn-outline {
+    @apply border border-teal bg-transparent text-teal hover:bg-cloud;
+  }
+  .field {
+    @apply min-h-12 w-full rounded-xl border border-line bg-white px-4 py-3 text-base text-ink;
+  }
+  .label {
+    @apply mb-2 block text-sm font-bold;
+  }
+  .error {
+    @apply mt-2 text-sm font-bold text-rust;
+  }
+  .error:empty {
+    display: none;
+  }
+  .link {
+    @apply font-bold underline decoration-teal/40 underline-offset-4 hover:decoration-teal;
+  }
+  .pill {
+    @apply inline-flex items-center rounded-full border border-teal/20 px-3 py-1 text-xs font-bold;
+  }
+  .card {
+    @apply overflow-hidden rounded-[1.5rem] border border-line bg-white;
+  }
+  .tab {
+    @apply rounded-full border border-line px-5 py-3 text-sm font-bold aria-selected:bg-teal aria-selected:text-white;
+  }
+  .choice {
+    @apply flex cursor-pointer items-center gap-3 rounded-2xl border border-line bg-white p-4 text-base has-checked:border-teal has-checked:bg-cloud;
+  }
+  .choice input {
+    @apply size-5 accent-teal;
+  }
+  .prose-copy {
+    @apply space-y-5 leading-relaxed text-muted;
+  }
+  .prose-copy h2 {
+    @apply font-display text-3xl text-teal;
+  }
+  .prose-copy h3 {
+    @apply text-lg font-bold text-ink;
+  }
+  .reveal {
+    opacity: 1;
+  }
+  .js.motion .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+  .js.motion .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  #mobile-menu a {
+    @apply block border-b border-line py-3 text-xl;
+  }
+  .nav-link {
+    @apply border-b-2 border-transparent py-2 text-sm font-bold hover:border-teal aria-[current=page]:border-teal;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Customers — Nimbus</title>
+<meta name="description" content="How Harbor Press and Field Office run their week on Nimbus." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }</style>
+</head>
+<body class="bg-[#f4f8fb] text-[#102433] font-sans font-sans antialiased">
+<header class="sticky top-0 z-30 border-b border-[#d5e4ee] bg-[#f4f8fb]/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-xl font-bold">Nimbus</a>
+    <div class="flex items-center gap-3"><button id="menuBtn" class="rounded-lg border border-[#c5d7e4] px-3 py-1 text-sm md:hidden" aria-expanded="false">Menu</button></div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t pt-3 text-sm md:flex md:basis-auto md:flex-row md:items-center md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html">Home</a><a href="product.html">Product</a><a href="pricing.html">Pricing</a><a href="customers.html" aria-current="page">Customers</a><a href="start.html">Start</a></nav>
+  </div>
+</header><main class="mx-auto max-w-6xl px-5 py-14 sm:px-8">
+  <h1 class="font-display text-5xl font-bold">Studios already on a board.</h1>
+  <div class="mt-10 grid gap-8 lg:grid-cols-2">
+    <article class="overflow-hidden rounded-3xl bg-white ring-1 ring-[#d5e4ee]"><img src="images/customer.jpg" alt="Two colleagues talking across a desk" class="aspect-[16/9] w-full object-cover" /><div class="p-6"><p class="text-xs font-semibold uppercase tracking-wider text-[#0b6e8a]">Harbor Press</p><h2 class="mt-2 font-display text-3xl font-bold">The second list is gone.</h2><p class="mt-3 text-[#3d5566]">Harbor Press used a document for the week and a board for the clients, and the two drifted. They moved the week onto Nimbus and kept the client lane as the only thing a client can open. Mina Ortiz, the studio lead, checks the digest and does not open the board again until after lunch.</p></div></article>
+    <article class="overflow-hidden rounded-3xl bg-white ring-1 ring-[#d5e4ee]"><img src="images/team.jpg" alt="A small team around a laptop" class="aspect-[16/9] w-full object-cover" /><div class="p-6"><p class="text-xs font-semibold uppercase tracking-wider text-[#0b6e8a]">Field Office</p><h2 class="mt-2 font-display text-3xl font-bold">Eight people, one lane each.</h2><p class="mt-3 text-[#3d5566]">The architecture office in Oakland gave every person a lane and stopped assigning tasks to “the team.” Reviews happen on the card. The Friday archive means last month’s site photos are not still sitting in Today.</p></div></article>
+  </div>
+</main><footer class="border-t border-[#d5e4ee]"><div class="mx-auto grid max-w-6xl gap-6 px-5 py-10 text-sm text-[#3d5566] sm:px-8 md:grid-cols-3"><div><p class="font-display text-xl font-bold text-[#102433]">Nimbus</p><p class="mt-2">440 Brannan Street<br />San Francisco, CA 94107</p></div><div><p>Weekday support, 9:00–17:00 Pacific.</p><p class="mt-2"><span class="underline underline-offset-4" >hello@nimbusboard.com</span></p></div><div class="space-y-1"><a href="product.html">Product</a><br /><a href="pricing.html">Pricing</a><br /><a href="customers.html">Customers</a></div></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

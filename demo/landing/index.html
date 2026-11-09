@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Home — Nimbus</title>
+<meta name="description" content="Nimbus is a shared board for small studios: one owner per card, a morning digest, and a client view." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }</style>
+</head>
+<body class="bg-[#f4f8fb] text-[#102433] font-sans font-sans antialiased">
+<header class="sticky top-0 z-30 border-b border-[#d5e4ee] bg-[#f4f8fb]/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-xl font-bold">Nimbus</a>
+    <div class="flex items-center gap-3"><button id="menuBtn" class="rounded-lg border border-[#c5d7e4] px-3 py-1 text-sm md:hidden" aria-expanded="false">Menu</button></div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t pt-3 text-sm md:flex md:basis-auto md:flex-row md:items-center md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html" aria-current="page">Home</a><a href="product.html">Product</a><a href="pricing.html">Pricing</a><a href="customers.html">Customers</a><a href="start.html">Start</a></nav>
+  </div>
+</header><main>
+  <section class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 sm:px-8 lg:grid-cols-2">
+    <div>
+      <p class="inline-flex rounded-full bg-[#dff3fb] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-[#0b6e8a]">For studios of 2 to 20</p>
+      <h1 class="mt-4 font-display text-5xl font-bold leading-[0.98] sm:text-6xl">The board your week actually fits on.</h1>
+      <p class="mt-4 max-w-lg text-[#3d5566]">Nimbus is a shared board for deadlines, owners, and the note that used to live in someone’s head. One owner per card. A morning digest. A client view that does not invite them into the mess.</p>
+      <div class="mt-6 flex flex-wrap gap-3"><a href="start.html" class="rounded-full bg-[#0b6e8a] px-5 py-3 text-sm font-semibold text-white">Open a board</a><a href="product.html" class="rounded-full border border-[#b7cedb] px-5 py-3 text-sm font-semibold">See how it works</a></div>
+    </div>
+    <div class="rounded-3xl bg-[#12324a] p-4 text-white shadow-xl sm:p-6">
+      <div class="mb-4 flex items-center justify-between text-xs text-[#9ad7ff]"><span>Sprint 14 · Design</span><span>4 open</span></div>
+      <div class="space-y-3">
+        <div class="rounded-2xl bg-white/10 p-4"><p class="text-xs text-[#9ad7ff]">Today</p><p class="mt-1 font-semibold">Rewrite the empty state</p><p class="mt-2 text-xs text-[#c5e4f7]">Leah · Due 16:00</p></div>
+        <div class="rounded-2xl bg-[#9ad7ff] p-4 text-[#102433]"><p class="text-xs font-semibold uppercase tracking-wider">In review</p><p class="mt-1 font-semibold">Pricing page</p></div>
+        <div class="rounded-2xl bg-white/10 p-4"><p class="text-xs text-[#9ad7ff]">Later</p><p class="mt-1 font-semibold">Archive the old client lane</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-white"><div class="mx-auto grid max-w-6xl gap-8 px-5 py-14 sm:px-8 md:grid-cols-3">
+    <article><h2 class="font-display text-2xl font-bold">One owner</h2><p class="mt-2 text-sm text-[#3d5566]">A card without a name cannot be saved. Shared work is still someone’s to move.</p></article>
+    <article><h2 class="font-display text-2xl font-bold">Morning digest</h2><p class="mt-2 text-sm text-[#3d5566]">One email, before the day starts. What is due, what slipped, and nothing else.</p></article>
+    <article><h2 class="font-display text-2xl font-bold">Client view</h2><p class="mt-2 text-sm text-[#3d5566]">A read-only lane with the cards you choose. Clients do not get a login to the studio.</p></article>
+  </div></section>
+  <section class="mx-auto grid max-w-6xl items-center gap-8 px-5 py-14 sm:px-8 lg:grid-cols-2">
+    <img src="images/office.jpg" alt="A bright studio office with long tables" class="aspect-[4/3] w-full rounded-3xl object-cover" />
+    <div><h2 class="font-display text-4xl font-bold">Built for rooms like this, not for a headquarters.</h2><p class="mt-3 text-[#3d5566]">Nimbus is used by design studios, a small press, and two architecture offices. If your week already lives in a dozen tools, start with one board and leave the rest alone.</p><p class="mt-4"><a class="font-semibold text-[#0b6e8a] underline underline-offset-4" href="customers.html">Read how Harbor Press uses it</a></p></div>
+  </section>
+</main><footer class="border-t border-[#d5e4ee]"><div class="mx-auto grid max-w-6xl gap-6 px-5 py-10 text-sm text-[#3d5566] sm:px-8 md:grid-cols-3"><div><p class="font-display text-xl font-bold text-[#102433]">Nimbus</p><p class="mt-2">440 Brannan Street<br />San Francisco, CA 94107</p></div><div><p>Weekday support, 9:00–17:00 Pacific.</p><p class="mt-2"><span class="underline underline-offset-4" >hello@nimbusboard.com</span></p></div><div class="space-y-1"><a href="product.html">Product</a><br /><a href="pricing.html">Pricing</a><br /><a href="customers.html">Customers</a></div></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

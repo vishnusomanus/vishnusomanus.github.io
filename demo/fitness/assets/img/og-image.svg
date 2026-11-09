@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0a0b0c"/>
+  <circle cx="930" cy="315" r="250" fill="#c8ff2e" fill-opacity=".08"/>
+  <circle cx="930" cy="315" r="250" fill="none" stroke="#c8ff2e" stroke-opacity=".3" stroke-width="3"/>
+  <g transform="translate(790 150) scale(1.4)"><g fill="#c8ff2e" stroke="#c8ff2e" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero"><g fill="none" stroke-width="17"><polyline points="100,70 80,48 70,20"/><polyline points="100,70 120,48 130,20"/><polyline points="100,116 84,150 80,186"/><polyline points="100,116 116,150 120,186"/><polyline points="100,64 100,116" stroke-width="24"/></g><circle cx="100" cy="46" r="14" stroke="none"/><path d="M28 20H172" stroke-width="6"/><rect x="34" y="2" width="10" height="36" rx="3" stroke="none"/><rect x="156" y="2" width="10" height="36" rx="3" stroke="none"/><rect x="22" y="8" width="8" height="24" rx="3" stroke="none"/><rect x="170" y="8" width="8" height="24" rx="3" stroke="none"/></g></g>
+  <text x="80" y="250" font-family="Anton, Impact, sans-serif" font-size="128" fill="#f3f4f1">FORGE YOUR</text>
+  <text x="80" y="380" font-family="Anton, Impact, sans-serif" font-size="128" fill="#c8ff2e">STRONGEST SELF</text>
+  <text x="84" y="470" font-family="Inter, Arial, sans-serif" font-size="34" fill="#9ca3a9">Keel Athletic Club · Strength, HIIT, Boxing, Ride &amp; Mobility</text>
+</svg>

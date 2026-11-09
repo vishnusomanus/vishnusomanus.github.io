@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Browse architectural salvage stock | Quoin</title>
+    <meta
+      name="description"
+      content="Browse sixteen carefully measured salvage lots: doors, glazing, fireplaces, garden pieces and useful hardware. Search and filter by kind of piece and price."
+    />
+    <meta name="theme-color" content="#f3efe5" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Quoin" />
+    <meta property="og:title" content="Browse architectural salvage stock | Quoin" />
+    <meta
+      property="og:description"
+      content="Browse sixteen carefully measured salvage lots: doors, glazing, fireplaces, garden pieces and useful hardware. Search and filter by kind of piece and price."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Antic+Didone&amp;family=Sarabun:wght@400;600&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body data-page="stock" class="flex min-h-screen flex-col">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 z-50 bg-ink text-white p-4"
+      >Skip to content</a
+    >
+    <div class="border-b border-line bg-wash">
+      <div class="wrap flex justify-between gap-4 py-2 text-xs tracking-wide">
+        <p>Architectural salvage, carefully considered.</p>
+        <p class="hidden sm:block">Troy · Wednesday–Saturday, 10–5</p>
+      </div>
+    </div>
+    <header class="border-b border-line bg-paper" id="site-header">
+      <div class="wrap flex min-h-24 items-center justify-between gap-4">
+        <a href="index.html" class="font-display text-5xl tracking-tight" aria-label="Quoin home"
+          >Quoin<span class="text-rust">.</span></a
+        >
+        <nav aria-label="Main" class="hidden lg:flex items-center gap-3">
+          <a
+            href="stock.html"
+            aria-current="page"
+            class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+            >Stock</a
+          ><a
+            href="projects.html"
+            class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+            >Project board</a
+          ><a
+            href="care.html"
+            class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+            >Care notes</a
+          ><a
+            href="yard.html"
+            class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+            >The yard</a
+          ><a
+            href="visit.html"
+            class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+            >Visit & delivery</a
+          >
+        </nav>
+        <div class="flex items-center gap-3">
+          <a
+            href="basket.html"
+            data-basket-link
+            aria-label="Cart, 0 items"
+            class="flex min-h-11 items-center border-l border-line pl-4 text-sm"
+            >Cart <span data-basket-count class="ml-2 rounded-full bg-moss px-2 py-1 text-xs text-white">0</span></a
+          ><button
+            type="button"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open menu"
+            class="border border-line p-3 lg:hidden"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              class="size-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" hidden aria-label="Mobile" class="wrap grid gap-1 border-t border-line py-4 lg:hidden">
+        <a
+          href="stock.html"
+          aria-current="page"
+          class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+          >Stock</a
+        ><a
+          href="projects.html"
+          class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+          >Project board</a
+        ><a
+          href="care.html"
+          class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+          >Care notes</a
+        ><a
+          href="yard.html"
+          class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+          >The yard</a
+        ><a
+          href="visit.html"
+          class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+          >Visit & delivery</a
+        >
+      </nav>
+    </header>
+    <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+      <section class="wrap grid gap-8 border-b border-line py-12 md:grid-cols-[1.3fr_1fr] md:items-end lg:py-16">
+        <div>
+          <p class="eyebrow">The inventory</p>
+          <h1 class="mt-5 text-5xl leading-[1.06] tracking-tight sm:text-6xl lg:text-7xl">
+            Old things.<br />New possibilities.
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+            One-off pieces and small runs, with measurements and condition notes before the beautiful bits.
+          </p>
+        </div>
+        <div>
+          <p class="measure">16 lots / collected, cleaned, recorded</p>
+          <p class="mt-5 text-sm leading-relaxed text-muted">
+            Prices don’t include sales tax. Availability is checked with you before any payment. Save pieces to a project
+            board while you make up your mind.
+          </p>
+        </div>
+      </section>
+      <section class="wrap py-10">
+        <form
+          data-stock-filters
+          class="grid items-end gap-5 border-b border-line pb-8 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]"
+        >
+          <label class="label"
+            >Find a piece<input
+              type="search"
+              name="q"
+              class="field"
+              placeholder="Door, slate, brass…"
+              maxlength="80" /></label
+          ><label class="label"
+            >Kind of piece<select name="category" class="field">
+              <option value="all">All categories</option>
+              <option>Doors</option>
+              <option>Glass</option>
+              <option>Fireplaces</option>
+              <option>Hardware</option>
+              <option>Garden</option>
+              <option>Lighting</option>
+              <option>Surfaces</option>
+              <option>Wood</option>
+            </select></label
+          ><label class="label"
+            >Price ceiling<select name="max" class="field">
+              <option value="all">Any price</option>
+              <option value="100">Up to $100</option>
+              <option value="300">Up to $300</option>
+              <option value="500">Up to $500</option>
+            </select></label
+          ><label class="label"
+            >Order by<select name="sort" class="field">
+              <option value="lot">Lot number</option>
+              <option value="low">Price: low first</option>
+              <option value="high">Price: high first</option>
+              <option value="name">Name</option>
+            </select></label
+          >
+        </form>
+        <div class="my-6 flex items-center justify-between gap-4">
+          <p data-stock-count aria-live="polite" class="text-sm text-muted"></p>
+          <button data-reset-filters class="text-link text-sm" type="button">Clear filters</button>
+        </div>
+        <div data-stock-grid class="grid gap-x-7 gap-y-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"></div>
+        <p data-stock-empty hidden class="border border-line p-10 text-center">
+          No pieces meet those filters. Try a wider price range or another material.
+        </p>
+      </section>
+      <dialog
+        data-quick-dialog
+        aria-labelledby="quick-title"
+        class="m-auto w-[min(900px,calc(100%-32px))] overflow-y-auto border border-line bg-paper p-0 text-ink"
+      >
+        <div class="flex justify-end border-b border-line p-3">
+          <button data-close-dialog class="btn-outline min-h-10 py-2" type="button">Close preview</button>
+        </div>
+        <div data-quick-content class="grid gap-7 p-5 sm:grid-cols-2 sm:p-8">
+          <h2 id="quick-title" class="sr-only">Lot preview</h2>
+        </div>
+      </dialog>
+    </main>
+    <footer class="mt-auto bg-ink text-paper">
+      <div class="wrap grid gap-10 py-14 sm:grid-cols-3">
+        <div>
+          <a href="index.html" class="font-display text-5xl">Quoin.</a>
+          <p class="mt-5 max-w-xs text-sm leading-relaxed">
+            Good old things, ready for the next chapter. Come with a measurement, leave with a possibility.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-sans text-xs uppercase tracking-widest">Find the yard</h2>
+          <p class="mt-4 text-sm leading-relaxed">
+            The old freight yard, Ferry Street<br />Troy, New York<br />Wednesday–Saturday · 10am–5pm
+          </p>
+          <a href="visit.html" class="mt-4 inline-block text-sm underline underline-offset-4">Plan your visit</a>
+        </div>
+        <div>
+          <h2 class="font-sans text-xs uppercase tracking-widest">Talk a piece through</h2>
+          <a href="mailto:hello@quoin.example" class="mt-4 block break-all text-sm underline underline-offset-4"
+            >hello@quoin.example</a
+          ><a href="tel:+15185550142" class="mt-3 block text-sm">(518) 555-0142</a>
+          <p class="mt-4 text-sm">Bring photographs. We like a good puzzle.</p>
+        </div>
+      </div>
+      <div class="wrap flex flex-col justify-between gap-3 border-t border-paper/20 py-6 text-xs sm:flex-row">
+        <p>© <span data-year></span> Quoin. Materials with more to give.</p>
+        <p class="text-paper/75">Quoin is a fictional business.</p>
+      </div>
+    </footer>
+    <div
+      class="fixed bottom-5 left-5 right-5 z-50 mx-auto max-w-md bg-moss px-5 py-4 text-sm text-white shadow-lg"
+      role="status"
+      data-toast
+      hidden
+    ></div>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

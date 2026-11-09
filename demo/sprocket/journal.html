@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Build log — Production updates from Bonfield Bikes</title>
+  <meta name="description" content="Production updates, engineering notes and winter test results from the Bonfield Bikes shop in Duluth: how the Portage cargo e-bike is designed, tested and built.">
+  <meta name="theme-color" content="#14171a">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bonfield Bikes">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Build log — Production updates from Bonfield Bikes">
+  <meta property="og:description" content="Production updates, engineering notes and winter test results from the Bonfield Bikes shop in Duluth: how the Portage cargo e-bike is designed, tested and built.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400..700&amp;family=Kanit:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="journal" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-md bg-ore px-5 py-3 font-semibold text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <header id="site-header" class="site-header">
+    <div class="batch-bar">
+      <div class="wrap flex min-h-9 items-center justify-between gap-4 py-1.5">
+        <p class="min-w-0 truncate" data-batch-line><a href="reserve.html" class="hover:text-snow"><span class="font-semibold text-ember">Batch 6 is open</span> · ships January 2027 · 11 of 120 spots left</a></p>
+        <a href="tel:+12185550147" class="hidden shrink-0 items-center gap-1.5 font-medium text-snow num hover:text-ember md:flex"><svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg>(218) 555-0147</a>
+      </div>
+    </div>
+    <div class="wrap flex h-[4.5rem] items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <svg viewBox="0 0 40 40" class="size-10 shrink-0" aria-hidden="true" focusable="false"><path d="M33.18 17.6L36.94 18.53L36.94 21.47L33.18 22.4L32.62 24.51L35.4 27.2L33.93 29.74L30.22 28.67L28.67 30.22L29.74 33.93L27.2 35.4L24.51 32.62L22.4 33.18L21.47 36.94L18.53 36.94L17.6 33.18L15.49 32.62L12.8 35.4L10.26 33.93L11.33 30.22L9.78 28.67L6.07 29.74L4.6 27.2L7.38 24.51L6.82 22.4L3.06 21.47L3.06 18.53L6.82 17.6L7.38 15.49L4.6 12.8L6.07 10.26L9.78 11.33L11.33 9.78L10.26 6.07L12.8 4.6L15.49 7.38L17.6 6.82L18.53 3.06L21.47 3.06L22.4 6.82L24.51 7.38L27.2 4.6L29.74 6.07L28.67 9.78L30.22 11.33L33.93 10.26L35.4 12.8L32.62 15.49Z" fill="#c63d1f"/><circle cx="20" cy="20" r="9" fill="#f3f2ed"/><path d="M17 15.5h4.2a2.6 2.6 0 0 1 0 5.2H17Zm0 5.2h4.8a2.6 2.6 0 0 1 0 5.2H17Z" fill="none" stroke="#14171a" stroke-width="2.2" stroke-linejoin="round"/></svg>
+        <span class="flex flex-col leading-none"><span class="headline text-[1.6rem]">Bonfield</span><span class="mt-0.5 font-display text-[11px] font-semibold uppercase tracking-[0.24em] text-muted">Bikes · Duluth, MN</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center">
+          <li><a href="bike.html" class="nav-link">Build yours</a></li>
+          <li><a href="range.html" class="nav-link">Range</a></li>
+          <li><a href="specs.html" class="nav-link">Specs</a></li>
+          <li><a href="journal.html" class="nav-link" aria-current="page">Journal</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="support.html" class="nav-link">Support</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="reserve.html" class="btn-ore btn-sm hidden sm:inline-flex">Reserve</a>
+        <button id="menu-toggle" type="button" class="menu-toggle lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <svg data-icon-open viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10"/></svg><svg data-icon-close viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="mobile-menu lg:hidden">
+      <nav aria-label="Mobile" class="wrap pb-10 pt-2">
+        <ul>
+          <li><a href="bike.html" class="mobile-link">Build yours<span aria-hidden="true" class="text-ore">→</span></a></li>
+          <li><a href="range.html" class="mobile-link">Range<span aria-hidden="true" class="text-ore">→</span></a></li>
+          <li><a href="specs.html" class="mobile-link">Specs<span aria-hidden="true" class="text-ore">→</span></a></li>
+          <li><a href="journal.html" class="mobile-link" aria-current="page">Journal<span aria-hidden="true" class="text-ore">→</span></a></li>
+          <li><a href="about.html" class="mobile-link">About<span aria-hidden="true" class="text-ore">→</span></a></li>
+          <li><a href="support.html" class="mobile-link">Support<span aria-hidden="true" class="text-ore">→</span></a></li>
+        </ul>
+        <a href="reserve.html" class="btn-ore mt-8 w-full">Reserve a Portage</a>
+        <a href="tel:+12185550147" class="mt-6 flex items-center gap-2 text-link num"><svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg>(218) 555-0147</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="flex-1">
+
+    <section class="pb-16 pt-10 lg:pb-24 lg:pt-14" aria-labelledby="page-title">
+      <div class="wrap">
+        <div class="grid gap-4 lg:grid-cols-[1.2fr_1fr] lg:items-end lg:gap-10">
+          <div>
+            <p class="eyebrow">Journal</p>
+            <h1 id="page-title" class="display mt-4">Build <span class="slash">log</span></h1>
+          </div>
+          <p class="lede">What we’re making, what broke and what we changed. Written by the people in the shop, usually twice a month.</p>
+        </div>
+        <div class="mt-10 flex flex-wrap gap-2" role="group" aria-label="Filter by category" data-journal-filters></div>
+        <p class="mt-4 text-sm text-muted" aria-live="polite" data-journal-count>8 posts</p>
+        <div class="mt-8" data-journal-featured></div>
+        <ul class="mt-12 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3" data-journal-list></ul>
+      </div>
+    </section>
+  </main>
+  <footer class="on-dark mt-auto bg-ink">
+    <div class="tread-ore" aria-hidden="true"></div>
+    <div class="wrap grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.3fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-2.5"><svg viewBox="0 0 40 40" class="size-10 shrink-0" aria-hidden="true" focusable="false"><path d="M33.18 17.6L36.94 18.53L36.94 21.47L33.18 22.4L32.62 24.51L35.4 27.2L33.93 29.74L30.22 28.67L28.67 30.22L29.74 33.93L27.2 35.4L24.51 32.62L22.4 33.18L21.47 36.94L18.53 36.94L17.6 33.18L15.49 32.62L12.8 35.4L10.26 33.93L11.33 30.22L9.78 28.67L6.07 29.74L4.6 27.2L7.38 24.51L6.82 22.4L3.06 21.47L3.06 18.53L6.82 17.6L7.38 15.49L4.6 12.8L6.07 10.26L9.78 11.33L11.33 9.78L10.26 6.07L12.8 4.6L15.49 7.38L17.6 6.82L18.53 3.06L21.47 3.06L22.4 6.82L24.51 7.38L27.2 4.6L29.74 6.07L28.67 9.78L30.22 11.33L33.93 10.26L35.4 12.8L32.62 15.49Z" fill="#c63d1f"/><circle cx="20" cy="20" r="9" fill="#14171a"/><path d="M17 15.5h4.2a2.6 2.6 0 0 1 0 5.2H17Zm0 5.2h4.8a2.6 2.6 0 0 1 0 5.2H17Z" fill="none" stroke="#f3f2ed" stroke-width="2.2" stroke-linejoin="round"/></svg><span class="headline text-2xl">Bonfield Bikes</span></a>
+        <p class="mt-4 max-w-sm leading-relaxed text-frost">Compact cargo e-bikes designed, welded and painted in Duluth, Minnesota. Built for hills, kids, groceries and January.</p>
+        <a href="reserve.html" class="btn-ore btn-sm mt-6">Reserve a Portage</a>
+      </div>
+      <nav aria-label="Portage">
+        <h2 class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-frost">The Portage</h2>
+        <ul class="mt-4 space-y-2.5">
+          <li><a href="bike.html" class="hover:text-ember">Build yours</a></li>
+          <li><a href="range.html" class="hover:text-ember">Range estimator</a></li>
+          <li><a href="specs.html" class="hover:text-ember">Specs &amp; cost calculator</a></li>
+          <li><a href="reserve.html" class="hover:text-ember">Reserve</a></li>
+          <li><a href="support.html#delivery" class="hover:text-ember">Delivery zones</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <h2 class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-frost">Company</h2>
+        <ul class="mt-4 space-y-2.5">
+          <li><a href="about.html" class="hover:text-ember">About us</a></li>
+          <li><a href="journal.html" class="hover:text-ember">Build log</a></li>
+          <li><a href="about.html#careers" class="hover:text-ember">Careers</a></li>
+          <li><a href="support.html" class="hover:text-ember">Support &amp; FAQ</a></li>
+          <li><a href="support.html#warranty" class="hover:text-ember">Warranty</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="font-display text-sm font-semibold uppercase tracking-[0.16em] text-frost">Shop &amp; test rides</h2>
+        <address class="mt-4 not-italic leading-relaxed">5124 Raleigh Street<br>Duluth, MN 55807</address>
+        <p class="mt-3 text-frost">Tue–Fri 10 AM–6 PM<br>Sat 9 AM–4 PM · Central time</p>
+        <p class="mt-3 grid gap-1"><a href="tel:+12185550147" class="text-link num">(218) 555-0147</a><a href="mailto:hello@bonfield.example" class="text-link break-all">hello@bonfield.example</a></p>
+      </div>
+    </div>
+    <div class="border-t border-ink-3">
+      <div class="wrap flex flex-col gap-2 py-6 text-sm text-frost md:flex-row md:items-center md:justify-between">
+        <p>© <span data-year>2026</span> Bonfield Bikes, Inc. Duluth, Minnesota.</p>
+        <p class="max-w-2xl md:text-right">Bonfield Bikes is a fictional company. Reservations on this site are a demo: no payment is taken.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0b1a2c"/>
+  <g stroke="#ffffff" stroke-opacity="0.06">
+    <path d="M100 0v630M200 0v630M300 0v630M400 0v630M500 0v630M600 0v630M700 0v630M800 0v630M900 0v630M1000 0v630M1100 0v630"/>
+  </g>
+  <g transform="translate(72 70)">
+    <rect width="48" height="48" rx="9" fill="#0b6f80"/>
+    <path d="M24 8.25 37.5 13.5V24c0 8.25-5.7 13.95-13.5 16.5C16.2 37.95 10.5 32.25 10.5 24V13.5Z" fill="none" stroke="#fff" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M5.25 24.75h37.5" stroke="#0b1a2c" stroke-width="3.3"/>
+    <text x="64" y="36" font-family="Anek Latin" font-size="36" font-weight="600" fill="#fff">Wardline</text>
+  </g>
+  <text x="72" y="200" font-family="Roboto Mono" font-size="18" font-weight="500" fill="#5fd0d8" letter-spacing="1.5">COMPLIANCE AUTOMATION</text>
+  <text font-family="Anek Latin" font-size="64" font-weight="600" fill="#fff">
+    <tspan x="72" y="282">Audit-ready security,</tspan>
+    <tspan x="72" y="350">checked every hour.</tspan>
+  </text>
+  <text font-family="'Source Sans 3', sans-serif" font-size="26" fill="#a9b8ca">
+    <tspan x="72" y="420">SOC 2 · ISO 27001 · HIPAA · GDPR · PCI DSS · NIST CSF</tspan>
+    <tspan x="72" y="458">One control library, tested continuously.</tspan>
+  </text>
+  <text x="72" y="566" font-family="'Source Sans 3', sans-serif" font-size="20" fill="#a9b8ca">Independent auditors issue the reports and certificates.</text>
+  <g transform="translate(760 150)">
+    <rect width="380" height="330" rx="10" fill="#ffffff"/>
+    <rect width="380" height="44" rx="10" fill="#edf1f5"/>
+    <rect y="34" width="380" height="10" fill="#edf1f5"/>
+    <circle cx="22" cy="22" r="5" fill="#93a1b3"/><circle cx="38" cy="22" r="5" fill="#93a1b3"/><circle cx="54" cy="22" r="5" fill="#93a1b3"/>
+    <text x="72" y="28" font-family="'Source Sans 3', sans-serif" font-size="16" font-weight="600" fill="#0b1a2c">Compliance overview</text>
+    <text x="24" y="84" font-family="Roboto Mono" font-size="13" fill="#566376">AUDIT READINESS · SOC 2</text>
+    <text x="24" y="146" font-family="Anek Latin" font-size="64" font-weight="600" fill="#0b1a2c">93%</text>
+    <rect x="24" y="168" width="332" height="12" rx="2" fill="#edf1f5"/>
+    <rect x="24" y="168" width="309" height="12" rx="2" fill="#0b6f80"/>
+    <g font-family="'Source Sans 3', sans-serif" font-size="16" font-weight="600">
+      <rect x="24" y="204" width="104" height="28" rx="3" fill="#def3e6"/><text x="36" y="224" fill="#17703f">✓ Passing 57</text>
+      <rect x="138" y="204" width="122" height="28" rx="3" fill="#fdf1d8"/><text x="150" y="224" fill="#8a5300">▲ Attention 3</text>
+      <rect x="270" y="204" width="86" height="28" rx="3" fill="#fde6e3"/><text x="282" y="224" fill="#b3261e">✕ Failing 1</text>
+    </g>
+    <path d="M24 258h332" stroke="#dbe2ea"/>
+    <text x="24" y="290" font-family="Roboto Mono" font-size="14" fill="#08525f">AC-02</text>
+    <text x="82" y="290" font-family="'Source Sans 3', sans-serif" font-size="16" fill="#0b1a2c">MFA on workforce accounts</text>
+    <text x="24" y="316" font-family="Roboto Mono" font-size="14" fill="#08525f">BC-02</text>
+    <text x="82" y="316" font-family="'Source Sans 3', sans-serif" font-size="16" fill="#0b1a2c">Restore test this month</text>
+  </g>
+</svg>

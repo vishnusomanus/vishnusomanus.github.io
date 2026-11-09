@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <pattern id="d" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="12" cy="12" r="1.5" fill="#ffffff" fill-opacity=".14"/></pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#0c1427"/>
+  <rect width="1200" height="630" fill="url(#d)"/>
+  <g transform="translate(80 80)">
+    <rect width="64" height="64" rx="16" fill="#1f45d6"/>
+    <path d="M18 18v28h16" fill="none" stroke="#fff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M34 32h13a5 5 0 0 1 0 10h-5" fill="none" stroke="#ffcf3f" stroke-width="6" stroke-linecap="round"/>
+    <text x="84" y="46" font-family="Funnel Display, sans-serif" font-size="40" font-weight="600" fill="#fff">Latchline</text>
+  </g>
+  <text font-family="Funnel Display, sans-serif" font-size="66" font-weight="600" fill="#fff" letter-spacing="-1.5">
+    <tspan x="80" y="300">Make every new</tspan>
+    <tspan x="80" y="378">customer feel <tspan fill="#ffcf3f">expected.</tspan></tspan>
+  </text>
+  <text x="80" y="470" font-family="Funnel Sans, sans-serif" font-size="30" fill="#aeb8cc">Customer onboarding software · Reno, Nevada</text>
+  <!-- mini board -->
+  <g transform="translate(840 150)">
+    <rect width="280" height="330" rx="22" fill="#18223a" stroke="#ffffff" stroke-opacity=".18" stroke-width="2"/>
+    <rect x="24" y="28" width="150" height="14" rx="7" fill="#fff"/>
+    <rect x="24" y="72" width="232" height="52" rx="12" fill="#186b48"/>
+    <rect x="24" y="136" width="232" height="52" rx="12" fill="#b83218"/>
+    <rect x="24" y="200" width="232" height="52" rx="12" fill="#1f45d6"/>
+    <rect x="44" y="92" width="120" height="12" rx="6" fill="#fff" fill-opacity=".85"/>
+    <rect x="44" y="156" width="150" height="12" rx="6" fill="#fff" fill-opacity=".85"/>
+    <rect x="44" y="220" width="100" height="12" rx="6" fill="#fff" fill-opacity=".85"/>
+    <rect x="24" y="282" width="232" height="12" rx="6" fill="#ffffff" fill-opacity=".15"/>
+    <rect x="24" y="282" width="140" height="12" rx="6" fill="#ffcf3f"/>
+  </g>
+</svg>

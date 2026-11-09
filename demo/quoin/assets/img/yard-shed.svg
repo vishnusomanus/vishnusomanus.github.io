@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 440" width="560" height="440" fill="none">
+  <rect width="560" height="440" fill="#e6e5d7"/>
+  <path d="M0 300q80-30 150-20t130-10 140 6 140-16v40H0z" fill="#d3d4c0"/>
+  <!-- slate roof -->
+  <path d="M86 156L280 60l194 96z" fill="#56604b" stroke="#2f4335" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M122 138h316M160 119h240M198 100h164M236 81h88" stroke="#6c7663" stroke-width="2"/>
+  <!-- chimney -->
+  <path d="M370 74h26v52h-26z" fill="#bdb196" stroke="#8f876f"/><path d="M366 68h34v8h-34z" fill="#a89e84"/>
+  <path d="M374 58h18l-2 10h-14z" fill="#ac7955" stroke="#725b42"/>
+  <!-- stone wall -->
+  <rect x="104" y="150" width="352" height="232" fill="#b3a88e"/>
+  <rect x="112" y="170" width="38" height="20" fill="#bdb196"/><rect x="152" y="170" width="32" height="20" fill="#c9bea4"/><rect x="186" y="170" width="32" height="20" fill="#cfc5ac"/><rect x="220" y="170" width="32" height="20" fill="#c3b79c"/><rect x="254" y="170" width="32" height="20" fill="#c9bea4"/><rect x="288" y="170" width="50" height="20" fill="#bdb196"/><rect x="340" y="170" width="32" height="20" fill="#c3b79c"/><rect x="374" y="170" width="32" height="20" fill="#bdb196"/><rect x="408" y="170" width="32" height="20" fill="#c9bea4"/><rect x="112" y="192" width="14" height="22" fill="#bdb196"/><rect x="128" y="192" width="32" height="22" fill="#c3b79c"/><rect x="162" y="192" width="32" height="22" fill="#c3b79c"/><rect x="196" y="192" width="44" height="22" fill="#bdb196"/><rect x="242" y="192" width="38" height="22" fill="#c9bea4"/><rect x="282" y="192" width="44" height="22" fill="#c3b79c"/><rect x="328" y="192" width="32" height="22" fill="#c3b79c"/><rect x="362" y="192" width="44" height="22" fill="#c9bea4"/><rect x="408" y="192" width="32" height="22" fill="#c9bea4"/><rect x="112" y="216" width="50" height="20" fill="#cfc5ac"/><rect x="164" y="216" width="50" height="20" fill="#bdb196"/><rect x="216" y="216" width="44" height="20" fill="#cfc5ac"/><rect x="262" y="216" width="38" height="20" fill="#c3b79c"/><rect x="302" y="216" width="38" height="20" fill="#c9bea4"/><rect x="342" y="216" width="44" height="20" fill="#bdb196"/><rect x="388" y="216" width="44" height="20" fill="#bdb196"/><rect x="434" y="216" width="12" height="20" fill="#c9bea4"/><rect x="112" y="238" width="32" height="18" fill="#c3b79c"/><rect x="146" y="238" width="44" height="18" fill="#c3b79c"/><rect x="192" y="238" width="50" height="18" fill="#bdb196"/><rect x="244" y="238" width="32" height="18" fill="#c9bea4"/><rect x="278" y="238" width="44" height="18" fill="#cfc5ac"/><rect x="324" y="238" width="44" height="18" fill="#bdb196"/><rect x="370" y="238" width="50" height="18" fill="#c9bea4"/><rect x="422" y="238" width="24" height="18" fill="#cfc5ac"/><rect x="112" y="258" width="32" height="20" fill="#c9bea4"/><rect x="146" y="258" width="44" height="20" fill="#bdb196"/><rect x="192" y="258" width="44" height="20" fill="#bdb196"/><rect x="238" y="258" width="44" height="20" fill="#c9bea4"/><rect x="284" y="258" width="50" height="20" fill="#cfc5ac"/><rect x="336" y="258" width="38" height="20" fill="#c9bea4"/><rect x="376" y="258" width="50" height="20" fill="#c9bea4"/><rect x="428" y="258" width="18" height="20" fill="#cfc5ac"/><rect x="112" y="280" width="20" height="18" fill="#bdb196"/><rect x="134" y="280" width="50" height="18" fill="#bdb196"/><rect x="186" y="280" width="32" height="18" fill="#c3b79c"/><rect x="220" y="280" width="50" height="18" fill="#bdb196"/><rect x="272" y="280" width="44" height="18" fill="#c3b79c"/><rect x="318" y="280" width="50" height="18" fill="#cfc5ac"/><rect x="370" y="280" width="50" height="18" fill="#cfc5ac"/><rect x="422" y="280" width="24" height="18" fill="#c3b79c"/><rect x="112" y="300" width="32" height="18" fill="#c3b79c"/><rect x="146" y="300" width="38" height="18" fill="#c3b79c"/><rect x="186" y="300" width="38" height="18" fill="#c9bea4"/><rect x="226" y="300" width="50" height="18" fill="#c3b79c"/><rect x="278" y="300" width="44" height="18" fill="#cfc5ac"/><rect x="324" y="300" width="32" height="18" fill="#c3b79c"/><rect x="358" y="300" width="50" height="18" fill="#cfc5ac"/><rect x="410" y="300" width="36" height="18" fill="#c3b79c"/><rect x="112" y="320" width="14" height="22" fill="#bdb196"/><rect x="128" y="320" width="50" height="22" fill="#bdb196"/><rect x="180" y="320" width="50" height="22" fill="#bdb196"/><rect x="232" y="320" width="32" height="22" fill="#bdb196"/><rect x="266" y="320" width="50" height="22" fill="#c9bea4"/><rect x="318" y="320" width="38" height="22" fill="#c9bea4"/><rect x="358" y="320" width="38" height="22" fill="#bdb196"/><rect x="398" y="320" width="38" height="22" fill="#c9bea4"/><rect x="438" y="320" width="8" height="22" fill="#c9bea4"/><rect x="112" y="344" width="32" height="18" fill="#c3b79c"/><rect x="146" y="344" width="32" height="18" fill="#cfc5ac"/><rect x="180" y="344" width="32" height="18" fill="#c9bea4"/><rect x="214" y="344" width="38" height="18" fill="#bdb196"/><rect x="254" y="344" width="38" height="18" fill="#cfc5ac"/><rect x="294" y="344" width="44" height="18" fill="#cfc5ac"/><rect x="340" y="344" width="50" height="18" fill="#c9bea4"/><rect x="392" y="344" width="32" height="18" fill="#bdb196"/><rect x="426" y="344" width="20" height="18" fill="#bdb196"/><rect x="112" y="364" width="26" height="20" fill="#c9bea4"/><rect x="140" y="364" width="38" height="20" fill="#c9bea4"/><rect x="180" y="364" width="44" height="20" fill="#cfc5ac"/><rect x="226" y="364" width="50" height="20" fill="#c3b79c"/><rect x="278" y="364" width="32" height="20" fill="#c3b79c"/><rect x="312" y="364" width="44" height="20" fill="#c3b79c"/><rect x="358" y="364" width="32" height="20" fill="#cfc5ac"/><rect x="392" y="364" width="32" height="20" fill="#cfc5ac"/><rect x="426" y="364" width="20" height="20" fill="#c3b79c"/>
+  <rect x="104" y="150" width="34" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="422" y="150" width="34" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="104" y="176" width="20" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="436" y="176" width="20" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="104" y="202" width="34" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="422" y="202" width="34" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="104" y="228" width="20" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="436" y="228" width="20" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="104" y="254" width="34" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="422" y="254" width="34" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="104" y="280" width="20" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="436" y="280" width="20" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="104" y="306" width="34" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="422" y="306" width="34" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="104" y="332" width="20" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="436" y="332" width="20" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="104" y="358" width="34" height="24" fill="#e2dccb" stroke="#9f977f"/><rect x="422" y="358" width="34" height="24" fill="#e2dccb" stroke="#9f977f"/>
+  <!-- big arched doorway -->
+  <path d="M206 382V250a74 74 0 0 1 148 0v132z" fill="#e2dccb" stroke="#9f977f" stroke-width="2"/>
+  <path d="M218 382V252a62 62 0 0 1 124 0v130z" fill="#3c4238"/>
+  <!-- things inside -->
+  <path d="M232 382V300h26v82zm68-62h30v62h-30z" fill="#4e554a"/>
+  <path d="M262 382v-52h32v52z" fill="#7a6248"/>
+  <path d="M296 270h30v6h-30zm2 10h26v4h-26z" fill="#6a7066"/>
+  <!-- open wood door leaf -->
+  <path d="M342 382V246l40 8v128z" fill="#7a5b3c" stroke="#514f3f" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M350 262v114m10-112v114m10-110v114" stroke="#5e452d"/>
+  <!-- sign board -->
+  <rect x="226" y="164" width="108" height="30" fill="#2f4335"/>
+  <text x="280" y="185" text-anchor="middle" fill="#f3efe5" font-family="Antic Didone, Georgia, serif" font-size="18" letter-spacing="2">QUOIN</text>
+  <!-- small window -->
+  <path d="M138 214h40v50h-40z" fill="#c9d5cc" stroke="#514f3f" stroke-width="2"/><path d="M158 214v50m-20-25h40" stroke="#514f3f" stroke-width="2"/>
+  <path d="M134 266h48v6h-48z" fill="#e2dccb"/>
+  <!-- doors leaning on the wall -->
+  <g stroke="#514f3f" stroke-width="2" stroke-linejoin="round">
+    <path d="M40 392l10-122 46 4-6 118z" fill="#7e4035"/>
+    <path d="M52 386l8-100 26 2-6 98z" fill="#94584a"/>
+    <path d="M70 394l14-140 50 5-10 135z" fill="#6e795a"/>
+    <path d="M84 274h32v42H84zm-2 52h32v50H82z" fill="#7f8a6b"/>
+    <path d="M120 396l8-112 44 4-6 108z" fill="#b7976d"/>
+  </g>
+  <!-- pallet of slates -->
+  <g stroke="#514f3f" stroke-width="2" stroke-linejoin="round">
+    <path d="M396 384h122v12H396z" fill="#a8845e"/>
+    <path d="M400 340h114v44H400z" fill="#5f6a68"/>
+    <path d="M400 340l6-8h114l-6 8z" fill="#737d78"/>
+  </g>
+  <path d="M400 348h114M400 356h114M400 364h114M400 372h114" stroke="#7d8885"/>
+  <!-- chimney pot on the ground -->
+  <path d="M474 340h22v-46h-22z" fill="#ac7955" stroke="#725b42" stroke-width="2"/><path d="M470 286h30v10h-30z" fill="#bd8c63" stroke="#725b42" stroke-width="2"/>
+  <!-- gravel -->
+  <path d="M0 396h560v44H0z" fill="#d9d3c0"/>
+  <g fill="#bdb6a0"><circle cx="40" cy="414" r="2"/><circle cx="96" cy="426" r="1.5"/><circle cx="170" cy="410" r="2"/><circle cx="250" cy="430" r="1.5"/><circle cx="330" cy="416" r="2"/><circle cx="420" cy="428" r="1.5"/><circle cx="500" cy="412" r="2"/></g>
+  <path d="M0 396h560" stroke="#a69f88"/>
+  <text x="24" y="30" fill="#596450" font-family="Sarabun, Arial, sans-serif" font-size="12" letter-spacing="2">THE FREIGHT SHED / FERRY STREET</text>
+</svg>

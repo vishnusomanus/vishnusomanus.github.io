@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout — First Crack Coffee</title>
+  <meta name="description" content="Check out in three steps: your details, delivery and payment.">
+  <meta name="theme-color" content="#fff6df">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="First Crack Coffee">
+  <meta property="og:title" content="Checkout — First Crack Coffee">
+  <meta property="og:description" content="Check out in three steps: your details, delivery and payment.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Onest:wght@400..700&amp;family=Unbounded:wght@500..800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="checkout" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-navy px-5 py-3 text-sm font-semibold text-butter focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <p class="bg-navy px-4 py-2.5 text-center text-xs font-medium tracking-wide text-butter">Free shipping over $45 · Roasted every Monday, shipped Tuesday</p>
+  <header id="site-header" class="sticky top-0 z-40 border-b-2 border-navy bg-butter transition-shadow duration-300">
+    <div class="container-x flex h-18 items-center justify-between gap-4">
+      <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="First Crack Coffee home">
+          <svg viewBox="0 0 40 40" class="h-9 w-9 shrink-0 transition-transform duration-300 group-hover:-rotate-12" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#2338b5" stroke="#141a3c" stroke-width="2.5"/><ellipse cx="20" cy="20" rx="8.5" ry="12.5" transform="rotate(32 20 20)" fill="#ffcd4a" stroke="#141a3c" stroke-width="2.2"/><path d="M14.6 13.4c5.6 3.4-.6 10.6 10.8 13.2" fill="none" stroke="#141a3c" stroke-width="2.2" stroke-linecap="round"/></svg>
+          <span class="font-display text-lg font-bold tracking-tight">First Crack</span>
+        </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1">
+          <li><a href="shop.html" class="rounded-full px-3.5 py-2 text-sm font-semibold transition hover:bg-oat aria-[current=page]:bg-navy aria-[current=page]:text-butter">Shop coffee</a></li>
+          <li><a href="subscribe.html" class="rounded-full px-3.5 py-2 text-sm font-semibold transition hover:bg-oat aria-[current=page]:bg-navy aria-[current=page]:text-butter">Subscribe</a></li>
+          <li><a href="brew.html" class="rounded-full px-3.5 py-2 text-sm font-semibold transition hover:bg-oat aria-[current=page]:bg-navy aria-[current=page]:text-butter">Brew guides</a></li>
+          <li><a href="wholesale.html" class="rounded-full px-3.5 py-2 text-sm font-semibold transition hover:bg-oat aria-[current=page]:bg-navy aria-[current=page]:text-butter">Wholesale</a></li>
+          <li><a href="about.html" class="rounded-full px-3.5 py-2 text-sm font-semibold transition hover:bg-oat aria-[current=page]:bg-navy aria-[current=page]:text-butter">Our sourcing</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="hidden rounded-full px-3.5 py-2 text-sm font-semibold transition hover:bg-oat aria-[current=page]:bg-navy aria-[current=page]:text-butter sm:inline-block">Contact</a>
+        <a href="checkout.html" data-cart-open class="relative grid h-11 w-11 place-items-center rounded-full border-2 border-navy bg-cream transition hover:bg-sun" aria-controls="cart-drawer" aria-expanded="false" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l1 13H5z"/><path d="M9 10V6a3 3 0 0 1 6 0v4"/></svg>
+          <span data-cart-count hidden class="absolute -right-1.5 -top-1.5 grid h-5 min-w-5 place-items-center rounded-full border-2 border-navy bg-tomato-dark px-1 text-[11px] font-bold text-white">0</span>
+        </a>
+        <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-full border-2 border-navy bg-cream lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t-2 border-navy bg-butter lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="shop.html" class="flex items-center justify-between border-b-2 border-navy/10 py-4 font-display text-xl font-semibold aria-[current=page]:text-cobalt">Shop coffee<span aria-hidden="true">→</span></a></li>
+          <li><a href="subscribe.html" class="flex items-center justify-between border-b-2 border-navy/10 py-4 font-display text-xl font-semibold aria-[current=page]:text-cobalt">Subscribe<span aria-hidden="true">→</span></a></li>
+          <li><a href="brew.html" class="flex items-center justify-between border-b-2 border-navy/10 py-4 font-display text-xl font-semibold aria-[current=page]:text-cobalt">Brew guides<span aria-hidden="true">→</span></a></li>
+          <li><a href="wholesale.html" class="flex items-center justify-between border-b-2 border-navy/10 py-4 font-display text-xl font-semibold aria-[current=page]:text-cobalt">Wholesale<span aria-hidden="true">→</span></a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b-2 border-navy/10 py-4 font-display text-xl font-semibold aria-[current=page]:text-cobalt">Our sourcing<span aria-hidden="true">→</span></a></li>
+          <li><a href="contact.html" class="flex items-center justify-between border-b-2 border-navy/10 py-4 font-display text-xl font-semibold aria-[current=page]:text-cobalt">Contact<span aria-hidden="true">→</span></a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="container-x pt-12">
+      <p class="eyebrow">Secure checkout</p>
+      <h1 class="mt-3 font-display text-4xl font-bold tracking-tight sm:text-5xl">Checkout</h1>
+      <p class="mt-4 flex max-w-2xl items-start gap-3 rounded-2xl border-2 border-navy bg-sky p-4 text-sm"><svg viewBox="0 0 20 20" class="mt-0.5 h-5 w-5 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM10 9v5M10 6h.01"/></svg><span>Payments are in test mode, so please don’t enter real card details. Use the test card 4242 4242 4242 4242 with any future expiry date and any security code.</span></p>
+    </section>
+
+    <section id="checkout-done" hidden class="container-x mt-10" aria-labelledby="done-title">
+      <div class="card mx-auto max-w-2xl p-8 text-center sm:p-12">
+        <svg viewBox="0 0 64 64" class="mx-auto h-16 w-16 text-leaf" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M32 60a28 28 0 1 0 0-56 28 28 0 0 0 0 56z"/><path d="m20 33 8 8 16-18"/></svg>
+        <h2 id="done-title" class="mt-6 font-display text-3xl font-bold">Order received</h2>
+        <p class="mt-4 text-lg">Order <strong id="confirm-number" class="font-semibold">FC-7K2Q</strong> · <strong id="confirm-total" class="font-semibold">$0.00</strong></p>
+        <p class="mt-3 text-muted">A confirmation is on its way to <strong id="confirm-email" class="font-semibold text-navy">you@example.com</strong>. We roast your coffee on Monday and ship it on Tuesday, and we’ll email you the tracking link when it leaves the roastery. Quote your order number if you need to change anything.</p>
+        <a href="shop.html" class="btn-primary mt-8">Back to the shop</a>
+      </div>
+    </section>
+
+    <section id="checkout-empty" hidden class="container-x mt-10" aria-labelledby="empty-title">
+      <div class="mx-auto max-w-2xl rounded-3xl border-2 border-dashed border-navy/40 p-10 text-center">
+        <h2 id="empty-title" class="font-display text-2xl font-bold">Your cart is empty</h2>
+        <p class="mt-3 text-muted">Add a bag or two from the shop, then come back here to check out.</p>
+        <a href="shop.html" class="btn-primary mt-7">Shop coffee</a>
+      </div>
+    </section>
+
+    <section id="checkout-main" class="container-x mt-10 grid gap-10 lg:grid-cols-[1fr_24rem] lg:gap-14" aria-label="Checkout">
+      <div class="min-w-0">
+        <ol class="grid grid-cols-3 gap-2 text-sm font-semibold" aria-label="Checkout steps">
+          <li data-step-marker class="rounded-full border-2 border-navy/25 px-3 py-2 text-center text-muted aria-[current=step]:border-navy aria-[current=step]:bg-navy aria-[current=step]:text-butter [&.is-done]:border-navy [&.is-done]:bg-sky [&.is-done]:text-navy">1. Details</li>
+          <li data-step-marker class="rounded-full border-2 border-navy/25 px-3 py-2 text-center text-muted aria-[current=step]:border-navy aria-[current=step]:bg-navy aria-[current=step]:text-butter [&.is-done]:border-navy [&.is-done]:bg-sky [&.is-done]:text-navy">2. Delivery</li>
+          <li data-step-marker class="rounded-full border-2 border-navy/25 px-3 py-2 text-center text-muted aria-[current=step]:border-navy aria-[current=step]:bg-navy aria-[current=step]:text-butter [&.is-done]:border-navy [&.is-done]:bg-sky [&.is-done]:text-navy">3. Payment</li>
+        </ol>
+
+        <form id="checkout-form" class="mt-8" novalidate>
+          <div data-step class="space-y-5">
+            <h2 class="font-display text-2xl font-bold focus:outline-none">Your details</h2>
+            <div><label for="email" class="field-label">Email</label><input id="email" name="email" type="email" required data-label="Email" autocomplete="email" class="field"><p class="hint">For your receipt and delivery updates.</p></div>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div><label for="first-name" class="field-label">First name</label><input id="first-name" name="first-name" type="text" required data-label="First name" autocomplete="given-name" class="field"></div>
+              <div><label for="last-name" class="field-label">Last name</label><input id="last-name" name="last-name" type="text" required data-label="Last name" autocomplete="family-name" class="field"></div>
+            </div>
+            <div><label for="address" class="field-label">Street address</label><input id="address" name="address" type="text" required data-label="Street address" autocomplete="street-address" class="field"></div>
+            <div class="grid gap-5 sm:grid-cols-[1.4fr_1fr_1fr]">
+              <div><label for="city" class="field-label">City</label><input id="city" name="city" type="text" required data-label="City" autocomplete="address-level2" class="field"></div>
+              <div><label for="state" class="field-label">State</label><input id="state" name="state" type="text" required data-label="State" autocomplete="address-level1" class="field"></div>
+              <div><label for="zip" class="field-label">ZIP code</label><input id="zip" name="zip" type="text" required data-label="ZIP code" data-validate="zip" inputmode="numeric" autocomplete="postal-code" class="field"></div>
+            </div>
+            <div><label for="phone" class="field-label">Phone <span class="font-normal text-muted">(optional)</span></label><input id="phone" name="phone" type="tel" data-label="Phone" autocomplete="tel" class="field"></div>
+            <div class="flex justify-end pt-2"><button type="submit" class="btn-primary px-8 py-3.5">Continue to delivery</button></div>
+          </div>
+
+          <div data-step hidden class="space-y-5">
+            <h2 class="font-display text-2xl font-bold focus:outline-none">Delivery</h2>
+            <fieldset>
+              <legend class="sr-only">Delivery method</legend>
+              <div class="grid gap-3">
+                <label class="option items-center gap-4"><input type="radio" name="delivery" value="standard" class="sr-only" checked><span class="flex-1"><span class="block font-semibold">Standard</span><span class="text-sm text-muted">2–4 business days · free over $45</span></span><span data-ship-price="standard" class="font-semibold tabular-nums">$6.00</span></label>
+                <label class="option items-center gap-4"><input type="radio" name="delivery" value="express" class="sr-only"><span class="flex-1"><span class="block font-semibold">Express</span><span class="text-sm text-muted">Next business day after roasting</span></span><span data-ship-price="express" class="font-semibold tabular-nums">$12.00</span></label>
+                <label class="option items-center gap-4"><input type="radio" name="delivery" value="pickup" class="sr-only"><span class="flex-1"><span class="block font-semibold">Pick up at the roastery</span><span class="text-sm text-muted">2101 Falls Road, Baltimore · from Tuesday 8 am</span></span><span data-ship-price="pickup" class="font-semibold tabular-nums">Free</span></label>
+              </div>
+            </fieldset>
+            <div><label for="note" class="field-label">Note for the carrier <span class="font-normal text-muted">(optional)</span></label><textarea id="note" name="note" rows="3" data-label="Note" class="field" placeholder="Leave it with the neighbor at number 12"></textarea></div>
+            <div class="flex flex-wrap justify-between gap-3 pt-2"><button type="button" data-back class="btn-outline">Back</button><button type="submit" class="btn-primary px-8 py-3.5">Continue to payment</button></div>
+          </div>
+
+          <div data-step hidden class="space-y-5">
+            <h2 class="font-display text-2xl font-bold focus:outline-none">Payment</h2>
+            <div class="rounded-2xl border-2 border-navy/20 bg-cream p-5 text-sm">
+              <div class="flex items-start justify-between gap-4"><p><span class="block font-semibold">Contact</span><span id="review-contact" class="text-muted"></span></p><button type="button" data-goto="0" class="text-cobalt underline underline-offset-4">Edit<span class="sr-only"> contact</span></button></div>
+              <div class="mt-4 flex items-start justify-between gap-4"><p><span class="block font-semibold">Ship to</span><span id="review-address" class="text-muted"></span></p><button type="button" data-goto="0" class="text-cobalt underline underline-offset-4">Edit<span class="sr-only"> address</span></button></div>
+              <div class="mt-4 flex items-start justify-between gap-4"><p><span class="block font-semibold">Delivery</span><span id="review-delivery" class="text-muted"></span></p><button type="button" data-goto="1" class="text-cobalt underline underline-offset-4">Edit<span class="sr-only"> delivery</span></button></div>
+            </div>
+            <div><label for="card-name" class="field-label">Name on card</label><input id="card-name" name="card-name" type="text" required data-label="Name on card" autocomplete="cc-name" class="field"></div>
+            <div><label for="card-number" class="field-label">Card number</label><input id="card-number" name="card-number" type="text" required data-label="Card number" data-validate="card" inputmode="numeric" autocomplete="cc-number" placeholder="4242 4242 4242 4242" class="field"></div>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div><label for="card-expiry" class="field-label">Expiry</label><input id="card-expiry" name="card-expiry" type="text" required data-label="Expiry date" data-validate="expiry" inputmode="numeric" autocomplete="cc-exp" placeholder="MM / YY" class="field"></div>
+              <div><label for="card-cvc" class="field-label">Security code</label><input id="card-cvc" name="card-cvc" type="text" required data-label="Security code" data-validate="cvc" inputmode="numeric" autocomplete="cc-csc" placeholder="123" class="field"></div>
+            </div>
+            <div class="flex flex-wrap justify-between gap-3 pt-2"><button type="button" data-back class="btn-outline">Back</button><button type="submit" class="btn-primary px-8 py-3.5">Place order</button></div>
+          </div>
+          <p data-form-status class="mt-4 text-sm font-medium text-tomato-dark" role="status"></p>
+        </form>
+      </div>
+
+      <aside class="lg:sticky lg:top-28 lg:self-start" aria-labelledby="summary-title">
+        <div class="card p-6">
+          <h2 id="summary-title" class="font-display text-lg font-bold">Order summary</h2>
+          <ul id="co-lines" class="mt-3 divide-y-2 divide-navy/10"></ul>
+          <div id="co-progress" class="mt-3 rounded-2xl bg-oat p-4"></div>
+          <dl class="mt-5 space-y-2 text-sm">
+            <div class="flex justify-between"><dt>Subtotal</dt><dd id="co-subtotal" class="font-semibold tabular-nums">$0.00</dd></div>
+            <div class="flex justify-between"><dt>Shipping</dt><dd id="co-shipping" class="font-semibold tabular-nums">$0.00</dd></div>
+            <div class="flex justify-between border-t-2 border-navy pt-3 text-base"><dt class="font-semibold">Total</dt><dd id="co-total" class="font-display font-bold tabular-nums">$0.00</dd></div>
+          </dl>
+          <p class="mt-3 text-xs text-muted">Prices include sales tax. Coffee is roasted to order on Monday.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="mt-24 bg-navy text-butter">
+    <div class="container-x grid gap-12 py-16 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="First Crack Coffee home">
+          <svg viewBox="0 0 40 40" class="h-9 w-9 shrink-0 transition-transform duration-300 group-hover:-rotate-12" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#2338b5" stroke="#141a3c" stroke-width="2.5"/><ellipse cx="20" cy="20" rx="8.5" ry="12.5" transform="rotate(32 20 20)" fill="#ffcd4a" stroke="#141a3c" stroke-width="2.2"/><path d="M14.6 13.4c5.6 3.4-.6 10.6 10.8 13.2" fill="none" stroke="#141a3c" stroke-width="2.2" stroke-linecap="round"/></svg>
+          <span class="font-display text-lg font-bold tracking-tight text-butter">First Crack</span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-butter/80">Small-batch specialty coffee, roasted every Monday in an old trolley barn in Baltimore, Maryland.</p>
+        <ul class="mt-6 flex gap-5 text-sm font-semibold">
+          <li><a href="#" class="underline-offset-4 hover:underline">Instagram</a></li>
+          <li><a href="#" class="underline-offset-4 hover:underline">YouTube</a></li>
+          <li><a href="#" class="underline-offset-4 hover:underline">Strava club</a></li>
+        </ul>
+      </div>
+      <nav aria-label="Coffee" class="lg:col-span-2">
+        <h2 class="font-display text-xs font-bold uppercase tracking-[0.18em] text-sun">Coffee</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="shop.html" class="underline-offset-4 hover:underline">All coffee</a></li>
+          <li><a href="shop.html?roast=light" class="underline-offset-4 hover:underline">Light roasts</a></li>
+          <li><a href="shop.html?roast=medium" class="underline-offset-4 hover:underline">Medium roasts</a></li>
+          <li><a href="shop.html?roast=dark" class="underline-offset-4 hover:underline">Dark roasts</a></li>
+          <li><a href="shop.html?process=decaf" class="underline-offset-4 hover:underline">Decaf</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Help" class="lg:col-span-2">
+        <h2 class="font-display text-xs font-bold uppercase tracking-[0.18em] text-sun">Help</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="subscribe.html" class="underline-offset-4 hover:underline">Subscriptions</a></li>
+          <li><a href="brew.html" class="underline-offset-4 hover:underline">Brew guides</a></li>
+          <li><a href="wholesale.html" class="underline-offset-4 hover:underline">Wholesale</a></li>
+          <li><a href="contact.html#faq" class="underline-offset-4 hover:underline">Shipping &amp; FAQ</a></li>
+          <li><a href="contact.html" class="underline-offset-4 hover:underline">Contact us</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-4">
+        <h2 class="font-display text-xs font-bold uppercase tracking-[0.18em] text-sun">The Monday letter</h2>
+        <p class="mt-4 text-sm text-butter/80">What we roasted, who grew it and how we brewed it. One short email a week.</p>
+        <form data-form="newsletter" class="on-dark mt-4" novalidate>
+          <label for="footer-email" class="sr-only">Email address</label>
+          <div class="flex flex-col gap-2 sm:flex-row">
+            <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@example.com" class="field border-butter/40">
+            <button type="submit" class="btn-sun shrink-0">Sign up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="border-t-2 border-butter/15">
+      <div class="container-x flex flex-col gap-3 py-6 text-xs text-butter/80 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> First Crack Coffee Co. All prices in USD.</p>
+        <p>Order by Sunday night, and it ships on Tuesday. Template by Freeframe.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cart-overlay" hidden class="fixed inset-0 z-50 bg-navy/50 opacity-0 transition-opacity duration-300"></div>
+  <aside id="cart-drawer" hidden role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title" class="fixed inset-y-0 right-0 z-50 flex w-full max-w-md translate-x-full flex-col border-l-2 border-navy bg-butter transition-transform duration-300 ease-[var(--ease-snap)]">
+    <div class="flex items-center justify-between border-b-2 border-navy px-6 py-5">
+      <h2 id="cart-drawer-title" class="font-display text-xl font-bold">Your cart</h2>
+      <button type="button" data-drawer-close class="grid h-10 w-10 place-items-center rounded-full border-2 border-navy bg-cream hover:bg-sun" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div data-drawer-progress class="border-b-2 border-navy bg-oat px-6 py-4"></div>
+    <div data-drawer-body class="flex-1 overflow-y-auto px-6"></div>
+    <div data-drawer-foot class="border-t-2 border-navy px-6 py-5">
+      <div class="flex justify-between font-semibold"><span>Subtotal</span><span data-drawer-subtotal class="tabular-nums">$0.00</span></div>
+      <p class="mt-1 text-xs text-muted">Shipping is worked out at checkout.</p>
+      <a href="checkout.html" class="btn-primary mt-4 w-full py-3.5 text-base">Go to checkout</a>
+    </div>
+  </aside>
+  <div id="toast" role="status" aria-live="polite" class="pointer-events-none fixed inset-x-4 bottom-4 z-[55] mx-auto flex max-w-md translate-y-6 items-center gap-3 rounded-2xl border-2 border-navy bg-navy px-5 py-4 text-sm text-butter opacity-0 transition duration-300 sm:left-auto sm:right-6 sm:mx-0">
+    <svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-sun" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10.5 4 4 8-9"/></svg>
+    <p data-toast-msg class="flex-1"></p>
+    <button type="button" data-toast-close class="grid h-8 w-8 place-items-center rounded-full text-butter/80 hover:text-butter" aria-label="Dismiss"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+  </div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

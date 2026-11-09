@@ -1,0 +1,200 @@
+/* Accrue (Fernley Whitcomb CPAs) — Tailwind CSS v4 source.
+   Edit the brand tokens below, then rebuild with `npm run build`. */
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+@theme {
+  --font-sans: "Geologica", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-serif: "Hahmlet", ui-serif, Georgia, "Times New Roman", serif;
+
+  /* Paper and ink */
+  --color-paper: #f5f1e6;      /* page background (oat linen) */
+  --color-paper-2: #ebe5d3;    /* sunken bands, table stripes */
+  --color-card: #fffcf4;       /* cards and forms */
+  --color-line: #d9d2bd;       /* hairlines on paper */
+  --color-line-strong: #b9b096;
+  --color-ink: #1f2316;        /* text and dark bands (olive black) */
+  --color-ink-2: #2c3220;      /* raised panels on ink */
+  --color-ink-3: #3a4129;      /* borders on ink */
+  --color-muted: #575a48;      /* secondary text on paper and card (AA) */
+  --color-sage: #c9ceb1;       /* secondary text on ink (AA) */
+
+  /* Brand */
+  --color-olive: #4f5b1c;      /* buttons, links, brand marks (white text on it is AA) */
+  --color-olive-deep: #3b4513; /* hover */
+  --color-olive-soft: #e1e5c8; /* tints */
+  --color-marigold: #e8b13a;   /* highlights and fills; ink text on it, never marigold text on paper */
+  --color-marigold-deep: #d49a1f;
+  --color-marigold-soft: #f8e7bb;
+
+  /* Signals */
+  --color-due: #9a3b1e;        /* errors, "due soon" (AA on paper and card) */
+  --color-due-soft: #f6dccf;
+  --color-done: #3d6b2f;       /* filed, ready (AA on paper and card) */
+
+  --ease-calm: cubic-bezier(.22, .8, .25, 1);
+}
+
+@utility serif-tight { @apply font-serif font-semibold leading-[1.04] tracking-[-0.015em]; }
+
+/* Tabular, lining figures for every amount, date and count. */
+@utility num { font-variant-numeric: tabular-nums lining-nums; }
+
+@utility btn {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 py-3 text-[15px] font-semibold whitespace-nowrap transition duration-150 active:translate-y-px disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@utility field {
+  @apply block min-h-12 w-full rounded-lg border border-line-strong bg-white px-3.5 py-2.5 text-base text-ink placeholder:text-muted/70 focus:border-olive focus:outline-3 focus:outline-offset-1 focus:outline-olive/35 aria-[invalid=true]:border-due;
+}
+
+@layer base {
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+  @media (prefers-reduced-motion: no-preference) { html:focus-within { scroll-behavior: smooth; } }
+  body { @apply bg-paper font-sans text-ink antialiased; font-optical-sizing: auto; }
+  ::selection { background: var(--color-marigold); color: var(--color-ink); }
+  :focus-visible { outline: 3px solid var(--color-olive); outline-offset: 3px; }
+  .on-dark :focus-visible { outline-color: var(--color-marigold); }
+  [id] { scroll-margin-top: 7rem; }
+  #main:focus { outline: none; }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  [hidden] { display: none !important; }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-7xl px-4 sm:px-8; }
+  .on-dark { @apply text-paper; }
+
+  /* Header */
+  .dateline { @apply border-b border-ink-3 bg-ink text-[13px] text-sage; }
+  .site-header { @apply sticky top-0 z-40 border-b border-line bg-paper/95 backdrop-blur; }
+  .site-header.is-scrolled { box-shadow: 0 6px 18px -14px rgb(31 35 22 / .5); }
+  .nav-link { @apply relative inline-flex min-h-11 items-center px-2.5 text-[15px] font-medium text-ink/80 transition hover:text-ink; }
+  .nav-link::after { content: ""; @apply absolute inset-x-2.5 bottom-2 h-[3px] origin-left scale-x-0 rounded-full bg-marigold transition-transform duration-200; }
+  .nav-link:hover::after, .nav-link[aria-current="page"]::after { @apply scale-x-100; }
+  .nav-link[aria-current="page"] { @apply text-ink; }
+  .menu-toggle { @apply grid size-11 place-items-center rounded-full border border-line-strong text-ink transition hover:border-olive; }
+  .mobile-menu { @apply fixed inset-x-0 bottom-0 overflow-y-auto border-t border-line bg-paper; }
+  .mobile-link { @apply flex items-center justify-between border-b border-line py-4 font-serif text-[1.65rem] font-semibold leading-none; }
+  .mobile-link[aria-current="page"] { @apply text-olive; }
+  .menu-is-open { overflow: hidden; }
+  /* A backdrop-filter makes the header the containing block for the fixed menu, which then gets no height. */
+  .menu-is-open .site-header { -webkit-backdrop-filter: none; backdrop-filter: none; }
+
+  /* Buttons and links */
+  .btn-olive { @apply btn bg-olive text-white hover:bg-olive-deep; }
+  .btn-marigold { @apply btn bg-marigold text-ink hover:bg-marigold-deep; }
+  .btn-line { @apply btn border border-ink/30 bg-transparent text-ink hover:border-ink hover:bg-ink hover:text-paper; }
+  .btn-line-light { @apply btn border border-paper/40 bg-transparent text-paper hover:bg-paper hover:text-ink; }
+  .btn-sm { @apply min-h-10 px-4 py-2 text-sm; }
+  .text-link { @apply font-medium text-olive underline decoration-olive/35 decoration-2 underline-offset-4 transition hover:decoration-olive; }
+  .on-dark .text-link { @apply text-marigold decoration-marigold/40 hover:decoration-marigold; }
+  .link-arrow { @apply inline-flex items-center gap-2 font-semibold text-olive transition-[gap] hover:gap-3; }
+  .link-arrow::after { content: "→"; }
+  .on-dark .link-arrow { @apply text-marigold; }
+
+  /* Type */
+  .eyebrow { @apply inline-flex items-center gap-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-muted; }
+  .eyebrow::before { content: ""; @apply h-px w-7 bg-current; }
+  .on-dark .eyebrow { @apply text-sage; }
+  .kicker { @apply font-serif text-sm font-semibold text-olive num; }
+  .on-dark .kicker { @apply text-marigold; }
+  .display { @apply serif-tight text-[clamp(2.5rem,5.4vw,4.4rem)]; }
+  .section-title { @apply serif-tight text-[clamp(2rem,4.2vw,3.25rem)]; }
+  .lede { @apply text-lg leading-relaxed text-muted; }
+  .on-dark .lede { @apply text-sage; }
+  /* A marigold highlighter stroke under a word in a headline. */
+  .mark { background: linear-gradient(transparent 62%, var(--color-marigold) 62%, var(--color-marigold) 90%, transparent 90%); padding: 0 .06em; }
+  .on-dark .mark { background: none; @apply text-marigold; }
+  .prose-article p { @apply mt-5 text-[1.075rem] leading-[1.75] text-ink/90; }
+  .prose-article h2 { @apply mt-12 font-serif text-[1.65rem] font-semibold leading-tight; }
+  .prose-article ul { @apply mt-5 space-y-2.5 pl-1; }
+  .prose-article li { @apply relative pl-6 text-[1.05rem] leading-relaxed text-ink/90; }
+  .prose-article li::before { content: ""; @apply absolute left-0 top-[0.7em] h-[3px] w-3 rounded-full bg-marigold-deep; }
+  .prose-article blockquote { @apply mt-8 border-l-4 border-marigold pl-5 font-serif text-xl leading-snug; }
+
+  /* File-folder cards: a tab on the top edge, the firm's recurring motif. */
+  .folder { @apply relative rounded-2xl rounded-tl-none border border-line bg-card; }
+  .folder::before {
+    content: ""; position: absolute; left: -1px; top: -14px; height: 15px; width: 42%; max-width: 9rem;
+    border: 1px solid var(--color-line); border-bottom: 0; border-radius: 10px 14px 0 0; background: var(--color-card);
+  }
+  .folder-ink { @apply border-ink bg-ink; }
+  .folder-ink::before { border-color: var(--color-ink); background: var(--color-ink); }
+  .folder-olive { @apply bg-olive-soft; }
+  .folder-olive::before { background: var(--color-olive-soft); }
+  .card { @apply rounded-2xl border border-line bg-card; }
+  .chip { @apply inline-flex min-h-10 items-center gap-2 rounded-full border border-line-strong bg-card px-4 text-sm font-medium text-ink transition hover:border-olive aria-pressed:border-olive aria-pressed:bg-olive aria-pressed:text-white; }
+  .tag { @apply inline-flex items-center rounded-full bg-olive-soft px-2.5 py-0.5 text-xs font-semibold text-olive-deep; }
+  .tag-due { @apply bg-due-soft text-due; }
+  .tag-gold { @apply bg-marigold-soft text-ink; }
+  .rule-num { @apply flex items-baseline gap-4 border-t border-ink pt-3; }
+
+  /* Forms */
+  .label { @apply mb-1.5 block text-sm font-semibold; }
+  .hint { @apply mt-1 text-sm text-muted; }
+  .error { @apply mt-1.5 text-sm font-semibold text-due empty:hidden; }
+  .choice { @apply flex cursor-pointer items-start gap-3 rounded-xl border border-line-strong bg-white p-4 transition hover:border-olive has-[:checked]:border-olive has-[:checked]:bg-olive-soft has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-olive; }
+  .range { @apply h-2 w-full cursor-pointer appearance-none rounded-full bg-line accent-olive; }
+
+  /* Slot grid */
+  .day-btn { @apply flex min-h-16 flex-col items-center justify-center rounded-xl border border-line-strong bg-white px-1 py-2 text-center transition hover:border-olive aria-pressed:border-olive aria-pressed:bg-olive aria-pressed:text-white disabled:cursor-not-allowed disabled:border-line disabled:bg-paper-2 disabled:text-muted; }
+  .slot-btn { @apply min-h-11 rounded-lg border border-line-strong bg-white px-3 text-sm font-semibold num transition hover:border-olive aria-pressed:border-olive aria-pressed:bg-olive aria-pressed:text-white disabled:cursor-not-allowed disabled:border-dashed disabled:bg-transparent disabled:font-normal disabled:text-muted disabled:line-through; }
+
+  /* Receipt edge for the estimator total */
+  .receipt { position: relative; }
+  .receipt::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: -10px; height: 10px;
+    background: linear-gradient(-45deg, transparent 7px, var(--color-ink) 0) 0 0 / 14px 10px, linear-gradient(45deg, transparent 7px, var(--color-ink) 0) 0 0 / 14px 10px;
+    background-repeat: repeat-x;
+  }
+
+  /* Checklist */
+  .check-row { @apply flex cursor-pointer items-start gap-3.5 border-b border-line py-3.5 last:border-b-0; }
+  .check-box { @apply mt-0.5 grid size-6 shrink-0 place-items-center rounded-md border-2 border-line-strong bg-white text-transparent transition; }
+  .check-row input:checked + .check-box { @apply border-olive bg-olive text-white; }
+  .check-row input:focus-visible + .check-box { @apply outline-3 outline-offset-2 outline-olive; }
+  .check-row input:checked ~ .check-text { @apply text-muted line-through decoration-olive/60; }
+
+  /* Details / FAQ */
+  .faq-item { @apply border-b border-line; }
+  .faq-item summary { @apply flex min-h-14 items-center justify-between gap-4 py-4 font-serif text-lg font-semibold; }
+  .faq-icon { @apply relative size-5 shrink-0; }
+  .faq-icon::before, .faq-icon::after { content: ""; @apply absolute left-0 top-1/2 h-0.5 w-5 -translate-y-1/2 rounded bg-olive; }
+  .faq-icon::after { transition: transform .2s ease; transform: translateY(-50%) rotate(90deg); }
+  details[open] .faq-icon::after { transform: translateY(-50%) rotate(0); }
+
+  /* Reveal */
+  .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s var(--ease-calm), transform .7s var(--ease-calm); }
+  .js .reveal.is-visible { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .js .reveal { opacity: 1; transform: none; transition: none; }
+    .nav-link::after, .faq-icon::after { transition: none; }
+  }
+
+  /* Back to top */
+  .back-to-top {
+    position: fixed; z-index: 40;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px) + var(--btt-lift, 0px));
+    display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; cursor: pointer; border-radius: 9999px;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, bottom .25s ease, visibility 0s linear .25s, background-color .2s;
+    border: 1px solid var(--color-olive-deep);
+    background: var(--color-olive); color: #fff;
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; transition: transform .2s ease; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top.is-visible:hover svg { transform: translateY(-2px); }
+  .back-to-top:hover { background: var(--color-olive-deep); }
+  .back-to-top:focus-visible { outline: 3px solid var(--color-marigold-deep); outline-offset: 3px; }
+  .back-to-top-target:focus { outline: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top, .back-to-top svg { transition: none; }
+  }
+}

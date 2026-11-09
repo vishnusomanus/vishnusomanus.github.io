@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orders · Northstar Admin</title>
+  <meta name="description" content="Northstar Admin orders: search, filter by status, sort, paginate and update orders in bulk.">
+  <meta name="theme-color" content="#fafafa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Northstar Admin">
+  <meta property="og:title" content="Orders · Northstar Admin">
+  <meta property="og:description" content="Northstar Admin orders: search, filter by status, sort, paginate and update orders in bulk.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <script>
+    // Apply saved theme and sidebar state before first paint (no flash).
+    (function () {
+      try {
+        var d = document.documentElement, t = localStorage.getItem('ns-theme');
+        if (t === 'dark' || (!t && matchMedia('(prefers-color-scheme: dark)').matches)) d.classList.add('dark');
+        if (localStorage.getItem('ns-sidebar') === 'collapsed') d.classList.add('sb-collapsed');
+      } catch (e) {}
+    })();
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="h-full bg-zinc-50 font-sans text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div class="flex min-h-full">
+
+  <div class="overlay lg:hidden" data-drawer-backdrop hidden></div>
+  <aside id="sidebar" aria-label="Sidebar" class="sidebar fixed inset-y-0 left-0 z-[70] flex -translate-x-full flex-col border-r border-zinc-200 bg-zinc-50 lg:sticky lg:top-0 lg:z-30 lg:h-screen lg:translate-x-0 dark:border-zinc-800 dark:bg-zinc-950">
+    <div class="flex h-16 shrink-0 items-center gap-2.5 px-4">
+      <a href="index.html" class="flex min-w-0 items-center gap-2.5 font-semibold tracking-tight text-zinc-900 dark:text-white"><svg class="size-8 shrink-0" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#4f46e5"/><path d="M16 6.5 18.4 13.6 25.5 16 18.4 18.4 16 25.5 13.6 18.4 6.5 16 13.6 13.6Z" fill="#fff"/></svg><span class="sb-label truncate">Northstar</span></a>
+      <button type="button" class="icon-btn ml-auto lg:hidden" data-drawer-close aria-label="Close navigation"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="sb-hide px-3 pb-2">
+      <button type="button" class="flex w-full items-center gap-3 rounded-lg border border-zinc-200 bg-white px-2.5 py-2 text-left shadow-sm hover:bg-zinc-50 dark:border-zinc-800 dark:bg-zinc-900 dark:hover:bg-zinc-800" data-toast-msg="Trailhead Co. is your only workspace">
+        <span class="grid size-7 place-items-center rounded-md bg-gradient-to-br from-amber-400 to-pink-500 text-xs font-bold text-white" aria-hidden="true">TC</span>
+        <span class="min-w-0 flex-1"><span class="block truncate text-sm font-medium text-zinc-900 dark:text-white">Trailhead Co.</span><span class="block text-xs text-zinc-500 dark:text-zinc-400">Growth plan</span></span>
+        <svg class="size-4 text-zinc-500 dark:text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+      </button>
+    </div>
+    <nav aria-label="Main" class="flex-1 overflow-y-auto px-3 pb-4">
+      <p class="nav-heading sb-hide">Workspace</p>
+      <ul class="grid gap-0.5">
+            <li><a href="index.html" class="nav-item"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg><span class="sb-label truncate">Overview</span></a></li>
+            <li><a href="analytics.html" class="nav-item"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span class="sb-label truncate">Analytics</span></a></li>
+            <li><a href="orders.html" class="nav-item" aria-current="page"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2.4 11.2a1 1 0 0 0 1 .8h9.2a1 1 0 0 0 1-.8L21 8H6.2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg><span class="sb-label truncate">Orders</span><span class="sb-label ml-auto rounded-full bg-brand-600 px-1.5 py-px text-[0.7rem] font-semibold text-white">6</span></a></li>
+            <li><a href="customers.html" class="nav-item"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.5A6.5 6.5 0 0 1 21.5 20"/></svg><span class="sb-label truncate">Customers</span></a></li>
+            <li><a href="products.html" class="nav-item"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m21 8-9-5-9 5v8l9 5 9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg><span class="sb-label truncate">Products</span></a></li>
+      </ul>
+      <p class="nav-heading sb-hide">Account</p>
+      <ul class="grid gap-0.5">
+        <li><a href="settings.html" class="nav-item"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span class="sb-label truncate">Settings</span></a></li>
+        <li><a href="#" class="nav-item" data-toast-msg="Opening the help center…"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"/></svg><span class="sb-label">Help &amp; docs</span></a></li>
+      </ul>
+    </nav>
+    <div class="sb-hide mx-3 mb-3 rounded-xl border border-zinc-200 bg-white p-4 dark:border-zinc-800 dark:bg-zinc-900">
+      <p class="text-sm font-semibold text-zinc-900 dark:text-white">Storage almost full</p>
+      <p class="mt-1 text-xs text-zinc-500 dark:text-zinc-400">You've used 8.2 GB of your 10 GB.</p>
+      <div class="mt-3 h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800"><div class="h-full w-[82%] rounded-full bg-amber-500"></div></div>
+      <a href="settings.html#billing" class="mt-3 inline-block text-xs font-semibold text-brand-600 hover:text-brand-500 dark:text-brand-400">Upgrade plan &rarr;</a>
+    </div>
+    <div class="hidden border-t border-zinc-200 p-3 lg:block dark:border-zinc-800">
+      <button type="button" class="nav-item w-full" data-sidebar-collapse aria-expanded="true" aria-controls="sidebar">
+        <svg class="collapse-icon size-5 shrink-0 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16M15 10l-2 2 2 2"/></svg>
+        <span class="sb-label">Collapse sidebar</span>
+      </button>
+    </div>
+  </aside>
+  <div class="flex min-w-0 flex-1 flex-col bg-white lg:my-2 lg:mr-2 lg:rounded-2xl lg:border lg:border-zinc-200 dark:bg-zinc-950 lg:dark:border-zinc-800 dark:lg:bg-zinc-900/40">
+
+    <header class="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-2 border-b border-zinc-200 bg-white/80 px-4 backdrop-blur-lg sm:gap-3 sm:px-6 dark:border-zinc-800 dark:bg-zinc-950/80">
+      <button type="button" class="icon-btn -ml-1.5 lg:hidden" data-drawer-open aria-expanded="false" aria-controls="sidebar" aria-label="Open navigation"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <div class="relative min-w-0 flex-1 sm:max-w-md">
+        <label for="global-search" class="sr-only">Search</label>
+        <span class="pointer-events-none absolute inset-y-0 left-3 grid place-items-center text-zinc-500 dark:text-zinc-400"><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+        <input id="global-search" type="search" autocomplete="off" placeholder="Search orders, customers, products…" class="field rounded-lg bg-zinc-100/70 py-2 pr-14 pl-9 shadow-none ring-transparent dark:bg-zinc-900 dark:ring-transparent" data-global-search role="combobox" aria-expanded="false" aria-controls="search-results" aria-autocomplete="list">
+        <kbd class="pointer-events-none absolute inset-y-0 right-2.5 my-auto hidden h-6 items-center rounded-md border border-zinc-200 bg-white px-1.5 font-sans text-[0.7rem] font-medium text-zinc-500 sm:flex dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-400">Ctrl K</kbd>
+        <ul id="search-results" role="listbox" aria-label="Search results" class="menu right-auto left-0 w-full max-w-[calc(100vw-2rem)] min-w-64" data-search-results hidden></ul>
+      </div>
+      <div class="ml-auto flex items-center gap-1">
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Dark mode">
+          <span class="dark:hidden"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg></span><span class="hidden dark:inline"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span>
+        </button>
+        <div class="relative" data-dropdown>
+          <button type="button" class="icon-btn" data-dropdown-button aria-haspopup="menu" aria-expanded="false" aria-controls="notif-menu" aria-label="Notifications, 3 unread">
+            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg><span class="absolute top-2 right-2 size-2 rounded-full bg-red-500 ring-2 ring-white dark:ring-zinc-950" data-notif-badge></span>
+          </button>
+          <div id="notif-menu" class="menu w-[min(22rem,calc(100vw-2rem))] p-0" data-dropdown-panel hidden>
+            <div class="flex items-center justify-between border-b border-zinc-200 px-4 py-3 dark:border-zinc-800">
+              <p class="text-sm font-semibold text-zinc-900 dark:text-white">Notifications</p>
+              <button type="button" class="text-xs font-medium text-brand-600 hover:text-brand-500 dark:text-brand-400" data-mark-read>Mark all as read</button>
+            </div>
+            <ul role="menu" aria-label="Notifications" class="grid gap-0.5 p-1.5">
+              <li><a href="#" role="menuitem" class="menu-item items-start bg-brand-50/60 dark:bg-brand-500/5" data-unread data-toast-msg="Opening notification…"><span class="mt-1.5 size-2 shrink-0 rounded-full bg-brand-500" data-unread-dot></span><span class="min-w-0"><span class="block text-sm text-zinc-600 dark:text-zinc-300"><b class="font-medium text-zinc-900 dark:text-white">Olivia Martin</b> placed order <b class="font-medium text-zinc-900 dark:text-white">NS-4821</b> for $412.00</span><span class="mt-0.5 block text-xs text-zinc-500 dark:text-zinc-400">2 min ago</span></span></a></li>
+              <li><a href="#" role="menuitem" class="menu-item items-start bg-brand-50/60 dark:bg-brand-500/5" data-unread data-toast-msg="Opening notification…"><span class="mt-1.5 size-2 shrink-0 rounded-full bg-brand-500" data-unread-dot></span><span class="min-w-0"><span class="block text-sm text-zinc-600 dark:text-zinc-300"><b class="font-medium text-zinc-900 dark:text-white">Stock alert</b> <b class="font-medium text-zinc-900 dark:text-white">Trail Runner Pro</b> is down to 8 units</span><span class="mt-0.5 block text-xs text-zinc-500 dark:text-zinc-400">1 hour ago</span></span></a></li>
+              <li><a href="#" role="menuitem" class="menu-item items-start bg-brand-50/60 dark:bg-brand-500/5" data-unread data-toast-msg="Opening notification…"><span class="mt-1.5 size-2 shrink-0 rounded-full bg-brand-500" data-unread-dot></span><span class="min-w-0"><span class="block text-sm text-zinc-600 dark:text-zinc-300"><b class="font-medium text-zinc-900 dark:text-white">Jackson Lee</b> left a 5-star review on Summit 40L Backpack</span><span class="mt-0.5 block text-xs text-zinc-500 dark:text-zinc-400">3 hours ago</span></span></a></li>
+              <li><a href="#" role="menuitem" class="menu-item items-start" data-toast-msg="Opening notification…"><span class="size-2 shrink-0"></span><span class="min-w-0"><span class="block text-sm text-zinc-600 dark:text-zinc-300"><b class="font-medium text-zinc-900 dark:text-white">Payout sent</b> $12,480.00 was sent to your bank account</span><span class="mt-0.5 block text-xs text-zinc-500 dark:text-zinc-400">Yesterday</span></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="relative ml-1" data-dropdown>
+          <button type="button" class="flex items-center gap-2 rounded-full p-0.5 hover:bg-zinc-100 sm:rounded-lg sm:py-1 sm:pr-2 sm:pl-1 dark:hover:bg-zinc-800" data-dropdown-button aria-haspopup="menu" aria-expanded="false" aria-controls="user-menu" aria-label="AM Alex Morgan, Owner: account menu">
+            <span class="grid size-8 place-items-center rounded-full bg-gradient-to-br from-brand-500 to-cyan-400 text-xs font-semibold text-white" aria-hidden="true">AM</span>
+            <span class="hidden text-left sm:block"><span class="block text-sm leading-tight font-medium text-zinc-900 dark:text-white">Alex Morgan</span> <span class="block text-xs leading-tight text-zinc-500 dark:text-zinc-400">Owner</span></span>
+            <svg class="hidden size-4 text-zinc-500 sm:block dark:text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div id="user-menu" class="menu w-56" data-dropdown-panel hidden>
+            <div class="px-2.5 py-2"><p class="text-sm font-medium text-zinc-900 dark:text-white">Alex Morgan</p><p class="truncate text-xs text-zinc-500 dark:text-zinc-400">alex@trailhead.example</p></div>
+            <ul role="menu" aria-label="Account" class="border-t border-zinc-100 pt-1 dark:border-zinc-800">
+              <li><a role="menuitem" href="settings.html" class="menu-item"><svg class="size-4 text-zinc-500 dark:text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>Profile</a></li>
+              <li><a role="menuitem" href="settings.html#billing" class="menu-item"><svg class="size-4 text-zinc-500 dark:text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg>Billing</a></li>
+              <li><a role="menuitem" href="settings.html#team" class="menu-item"><svg class="size-4 text-zinc-500 dark:text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0M16 4.5a3.5 3.5 0 0 1 0 7M18.5 14.5A6.5 6.5 0 0 1 21.5 20"/></svg>Team</a></li>
+              <li class="mt-1 border-t border-zinc-100 pt-1 dark:border-zinc-800"><a role="menuitem" href="login.html" class="menu-item"><svg class="size-4 text-zinc-500 dark:text-zinc-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>Sign out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="flex-1 px-4 py-6 sm:px-6 lg:px-8 lg:py-8">
+      <div class="mx-auto max-w-7xl">
+
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div class="min-w-0">
+            <h1 class="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-white">Orders</h1>
+            <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">Track, filter and update every order in one place.</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-2">
+            <button type="button" class="btn btn-secondary" data-toast-msg="Exporting all 48 orders. The CSV will arrive by email."><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>Export</button>
+            <button type="button" class="btn btn-primary" data-toast-msg="Draft order created"><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Create order</button></div>
+        </div>
+
+        <div class="mt-6 overflow-x-auto border-b border-zinc-200 dark:border-zinc-800">
+          <div class="flex gap-6" aria-label="Filter by status" role="group"><button type="button" class="tab inline-flex items-center gap-2" data-status-tab="All" aria-pressed="true">All<span class="rounded-full bg-zinc-100 px-1.5 py-px text-xs text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300" data-status-count="All">0</span></button><button type="button" class="tab inline-flex items-center gap-2" data-status-tab="Paid" aria-pressed="false">Paid<span class="rounded-full bg-zinc-100 px-1.5 py-px text-xs text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300" data-status-count="Paid">0</span></button><button type="button" class="tab inline-flex items-center gap-2" data-status-tab="Pending" aria-pressed="false">Pending<span class="rounded-full bg-zinc-100 px-1.5 py-px text-xs text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300" data-status-count="Pending">0</span></button><button type="button" class="tab inline-flex items-center gap-2" data-status-tab="Refunded" aria-pressed="false">Refunded<span class="rounded-full bg-zinc-100 px-1.5 py-px text-xs text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300" data-status-count="Refunded">0</span></button><button type="button" class="tab inline-flex items-center gap-2" data-status-tab="Failed" aria-pressed="false">Failed<span class="rounded-full bg-zinc-100 px-1.5 py-px text-xs text-zinc-600 dark:bg-zinc-800 dark:text-zinc-300" data-status-count="Failed">0</span></button></div>
+        </div>
+
+        <section class="card mt-6 min-w-0" aria-label="Orders">
+          <div class="flex flex-wrap items-center gap-3 border-b border-zinc-200 px-4 py-3 dark:border-zinc-800">
+            <div class="relative min-w-0 flex-1 sm:max-w-xs">
+              <label for="orders-search" class="sr-only">Search orders</label>
+              <span class="pointer-events-none absolute inset-y-0 left-3 grid place-items-center text-zinc-500 dark:text-zinc-400"><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+              <input id="orders-search" type="search" class="field pl-9" placeholder="Search by order, customer, product" data-orders-search>
+            </div>
+            <label for="orders-status" class="sr-only">Status</label>
+            <select id="orders-status" class="field w-auto pr-8" data-orders-status>
+              <option>All</option><option>Paid</option><option>Pending</option><option>Refunded</option><option>Failed</option>
+            </select>
+          </div>
+
+          <div class="flex flex-wrap items-center gap-3 border-b border-brand-200 bg-brand-50 px-4 py-2.5 text-sm dark:border-brand-500/20 dark:bg-brand-500/10" data-bulk-bar hidden>
+            <span class="font-medium text-brand-900 dark:text-brand-200" data-bulk-count role="status">0 orders selected</span>
+            <div class="ml-auto flex flex-wrap gap-2">
+              <button type="button" class="btn btn-secondary py-1.5" data-bulk-paid><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>Mark as paid</button>
+              <button type="button" class="btn btn-secondary py-1.5" data-bulk-export><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>Export</button>
+              <button type="button" class="btn btn-ghost py-1.5" data-bulk-clear>Clear</button>
+            </div>
+          </div>
+
+          <div class="relative overflow-x-auto">
+            <table class="table">
+              <thead class="bg-zinc-50/80 dark:bg-zinc-900/60">
+                <tr>
+                  <th scope="col" class="w-10"><input type="checkbox" class="checkbox" data-select-all aria-label="Select all orders on this page"></th>
+                  <th scope="col" data-sort="id" aria-sort="none" class=""><button type="button" class="sort-btn">Order<svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 10 5-5 5 5M7 14l5 5 5-5" /></svg></button></th>
+                  <th scope="col" data-sort="customer" aria-sort="none" class=""><button type="button" class="sort-btn">Customer<svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 10 5-5 5 5M7 14l5 5 5-5" /></svg></button></th>
+                  <th scope="col" data-sort="date" aria-sort="none" class=""><button type="button" class="sort-btn">Date<svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 10 5-5 5 5M7 14l5 5 5-5" /></svg></button></th>
+                  <th scope="col" data-sort="status" aria-sort="none" class=""><button type="button" class="sort-btn">Status<svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 10 5-5 5 5M7 14l5 5 5-5" /></svg></button></th>
+                  <th scope="col">Channel</th>
+                  <th scope="col" data-sort="total" aria-sort="none" class="text-right"><button type="button" class="sort-btn">Total<svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 10 5-5 5 5M7 14l5 5 5-5" /></svg></button></th>
+                  <th scope="col" class="w-10"><span class="sr-only">Actions</span></th>
+                </tr>
+              </thead>
+              <tbody data-orders-body></tbody>
+            </table>
+          </div>
+          <div class="px-4 py-16 text-center" data-orders-empty hidden>
+            <div class="mx-auto grid size-12 place-items-center rounded-full bg-zinc-100 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></div>
+            <p class="mt-4 font-medium text-zinc-900 dark:text-white">No orders found</p>
+            <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">Try a different search or status filter.</p>
+          </div>
+          <nav class="flex items-center justify-between gap-3 border-t border-zinc-200 px-4 py-3 dark:border-zinc-800" aria-label="Pagination">
+            <p class="text-sm text-zinc-500 dark:text-zinc-400"><span data-orders-range>0 results</span></p>
+            <div class="flex items-center gap-1">
+              <button type="button" class="btn btn-secondary px-2.5 py-1.5" data-page-prev aria-label="Previous page"><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
+              <div class="flex gap-1" data-page-numbers></div>
+              <button type="button" class="btn btn-secondary px-2.5 py-1.5" data-page-next aria-label="Next page"><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+            </div>
+          </nav>
+        </section>
+      </div>
+    </main>
+    <footer class="flex flex-wrap items-center justify-between gap-2 border-t border-zinc-200 px-4 py-4 text-xs text-zinc-500 sm:px-6 lg:px-8 dark:border-zinc-800 dark:text-zinc-400">
+      <p>&copy; <span data-year>2026</span> Northstar Labs. Northstar Admin v4.2.0</p>
+      <p class="flex items-center gap-1.5"><span class="size-1.5 rounded-full bg-emerald-500"></span> All systems normal</p>
+    </footer>
+  </div>
+  </div>
+
+  <div class="toast" role="status" aria-live="polite" data-toast>
+    <svg class="size-4 text-emerald-400 dark:text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5L20 7"/></svg>
+    <span data-toast-text></span>
+  </div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

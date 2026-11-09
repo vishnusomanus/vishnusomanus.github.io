@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 440" width="400" height="440">
+  <title>Illustrated portrait of Marnie Ashdown</title>
+  <defs>
+    <clipPath id="top"><path d="M60 440c4-68 50-104 140-106 90 2 136 38 140 106Z"/></clipPath>
+  </defs>
+  <g stroke="#1d1626" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- hair, back -->
+    <path d="M110 200c-6-80 40-120 95-118 57 2 95 44 91 118-2 50 4 90 10 112-36 8-66 4-80-6h-46c-16 10-48 14-84 6 8-24 16-62 14-112Z" fill="#a8432c"/>
+    <!-- striped top -->
+    <g clip-path="url(#top)">
+      <path d="M60 440c4-68 50-104 140-106 90 2 136 38 140 106Z" fill="#fffefa" stroke="none"/>
+      <path d="M40 356h320M40 386h320M40 416h320" stroke="#6d93ff" stroke-width="14"/>
+    </g>
+    <path d="M60 440c4-68 50-104 140-106 90 2 136 38 140 106" fill="none"/>
+    <!-- neck -->
+    <path d="M178 286h44v50c-12 12-32 12-44 0Z" fill="#f2c4a0"/>
+    <!-- ears -->
+    <circle cx="124" cy="218" r="14" fill="#f2c4a0"/>
+    <circle cx="276" cy="218" r="14" fill="#f2c4a0"/>
+    <!-- face -->
+    <ellipse cx="200" cy="208" rx="76" ry="86" fill="#f6cfae"/>
+    <!-- fringe -->
+    <path d="M122 196c-4-58 34-88 84-88 52 0 82 34 76 88-18-14-34-34-42-56-18 28-62 44-118 56Z" fill="#a8432c"/>
+    <!-- stylus tucked behind the ear -->
+    <path d="M268 172 316 92" stroke-width="16"/>
+    <path d="M268 172 316 92" stroke="#ffd84a" stroke-width="7"/>
+    <path d="M316 92l8-14" stroke="#ff6fae" stroke-width="9"/>
+    <!-- glasses -->
+    <circle cx="168" cy="214" r="23" fill="#fff" fill-opacity=".35"/>
+    <circle cx="234" cy="214" r="23" fill="#fff" fill-opacity=".35"/>
+    <path d="M191 212q10-6 20 0M145 210l-20-4M257 210l18-4" fill="none"/>
+    <!-- happy eyes -->
+    <path d="M159 218q9-10 18 0M225 218q9-10 18 0" fill="none"/>
+    <!-- nose, smile -->
+    <path d="M201 228q-7 14 4 16" fill="none" stroke-width="4"/>
+    <path d="M178 258q22 22 46 0" fill="#fff" />
+    <!-- earring -->
+    <path d="M124 238l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1Z" fill="#ffd84a" stroke-width="3"/>
+  </g>
+  <!-- cheeks and freckles -->
+  <circle cx="148" cy="248" r="13" fill="#ff6fae" opacity=".45"/>
+  <circle cx="254" cy="248" r="13" fill="#ff6fae" opacity=".45"/>
+  <g fill="#a8432c"><circle cx="186" cy="240" r="2.5"/><circle cx="178" cy="236" r="2.5"/><circle cx="216" cy="240" r="2.5"/><circle cx="224" cy="236" r="2.5"/></g>
+</svg>

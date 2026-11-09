@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>A planning rhythm for your team — Planwick</title>
+    <meta
+      name="description"
+      content="A practical roadmap approach for product, engineering, operations, research, customer teams and founders."
+    />
+    <meta name="theme-color" content="#1c2752" />
+    <meta name="color-scheme" content="light" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Planwick" />
+    <meta property="og:title" content="A planning rhythm for your team — Planwick" />
+    <meta
+      property="og:description"
+      content="A practical roadmap approach for product, engineering, operations, research, customer teams and founders."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="use-cases" class="flex min-h-screen flex-col">
+    <a
+      href="#main"
+      class="sr-only z-50 rounded-full bg-sun px-5 py-3 text-ink focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      >Skip to content</a
+    >
+    <header class="relative z-30 border-b border-line bg-paper">
+      <div class="wrap flex min-h-24 items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center gap-2.5"
+          ><svg class="size-9 shrink-0" viewBox="0 0 40 40" aria-hidden="true">
+            <rect width="40" height="40" rx="13" fill="#1c2752" />
+            <path
+              d="M12 29V11h9a7 7 0 0 1 0 14h-4"
+              fill="none"
+              stroke="#ffc65c"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+            <circle cx="21" cy="18" r="2" fill="#ffc65c" /></svg
+          ><span class="font-display text-4xl font-bold tracking-tight">planwick</span></a
+        >
+        <nav aria-label="Main" class="hidden lg:block">
+          <ul class="flex items-center">
+            <li><a href="product.html" class="nav-link">Product</a></li>
+            <li><a href="workspace.html" class="nav-link">Workspace</a></li>
+            <li><a href="use-cases.html" class="nav-link" aria-current="page">Use cases</a></li>
+            <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li><a href="integrations.html" class="nav-link">Integrations</a></li>
+            <li><a href="resources.html" class="nav-link">Resources</a></li>
+          </ul>
+        </nav>
+        <a href="contact.html" class="btn hidden sm:inline-flex"
+          >Let’s make a plan
+          <svg
+            class="size-5 shrink-0"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path d="M4 12h16m-6-6 6 6-6 6" /></svg></a
+        ><button
+          id="menu-toggle"
+          type="button"
+          class="rounded-full border border-ink p-3 lg:hidden"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="size-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+      <nav id="mobile-menu" aria-label="Mobile" hidden class="wrap pb-6 lg:hidden">
+        <ul class="grid grid-cols-2 gap-2">
+          <li><a href="product.html" class="nav-link">Product</a></li>
+          <li><a href="workspace.html" class="nav-link">Workspace</a></li>
+          <li><a href="use-cases.html" class="nav-link" aria-current="page">Use cases</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="integrations.html" class="nav-link">Integrations</a></li>
+          <li><a href="resources.html" class="nav-link">Resources</a></li>
+        </ul>
+        <a href="contact.html" class="btn mt-5 w-full"
+          >Let’s make a plan
+          <svg
+            class="size-5 shrink-0"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path d="M4 12h16m-6-6 6 6-6 6" /></svg
+        ></a>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+      <section class="wrap grid gap-8 pt-12 pb-12 lg:grid-cols-[.85fr_1.15fr] lg:items-center lg:pt-16">
+        <img src="assets/img/team.svg" width="540" height="400" alt="" class="order-last w-full rounded-[2rem] lg:order-first" />
+        <div>
+          <p class="eyebrow">Different teams, shared direction</p>
+          <h1 class="mt-5 font-display text-[clamp(3.8rem,6vw,6.7rem)] font-bold leading-[.92] tracking-[-.045em]">
+            There’s more than<br />one way to plan.
+          </h1>
+          <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+            Start with the conversation your team needs. Keep the useful structure and leave the ceremony behind.
+          </p>
+        </div>
+      </section>
+      <section class="wrap py-8">
+        <div class="flex flex-wrap gap-2" aria-label="Choose a team" data-usecase-tabs></div>
+        <div class="mt-8" data-usecase-detail></div>
+        <p data-scope-feedback class="mt-5 rounded-2xl bg-mist p-5 text-sm" role="status" hidden></p>
+      </section>
+      <section class="wrap grid gap-6 py-12 md:grid-cols-3">
+        <article class="rounded-[2rem] border border-line bg-white p-7">
+          <p class="eyebrow">Before you start</p>
+          <h2 class="mt-4 font-display text-3xl font-bold">Name the decision.</h2>
+          <p class="mt-4 text-muted">
+            Are you deciding what to discover, build or release? Agree on that first, then choose the smallest useful
+            planning view.
+          </p>
+        </article>
+        <article class="rounded-[2rem] border border-line bg-white p-7">
+          <p class="eyebrow">Bring the right people</p>
+          <h2 class="mt-4 font-display text-3xl font-bold">Make the trade-off together.</h2>
+          <p class="mt-4 text-muted">
+            Invite people who know the customer, system and constraints. A shared assumption is easier to challenge than
+            a hidden one.
+          </p>
+        </article>
+        <article class="rounded-[2rem] border border-line bg-white p-7">
+          <p class="eyebrow">Keep it useful</p>
+          <h2 class="mt-4 font-display text-3xl font-bold">Review, don’t recreate.</h2>
+          <p class="mt-4 text-muted">
+            Keep a short cadence. Update the evidence, move the work and leave the discussion in the same place for next
+            time.
+          </p>
+        </article>
+      </section>
+      <section id="stories" class="bg-mist py-16" aria-labelledby="stories-title">
+        <div class="wrap">
+          <p class="eyebrow">Customer stories</p>
+          <h2 id="stories-title" class="mt-3 max-w-2xl font-display text-5xl leading-[.95] font-bold">
+            Three teams, three ways of planning.
+          </h2>
+          <div class="mt-9 grid gap-6 lg:grid-cols-3">
+          <article class="flex flex-col overflow-hidden rounded-[2rem] border border-line bg-white">
+            <div class="bg-sun px-7 py-5">
+              <p class="font-display text-3xl font-bold">Larkgrove Health</p>
+              <p class="text-sm">Product · 38 people · Start → Team</p>
+            </div>
+            <div class="flex flex-1 flex-col p-7">
+              <h3 class="font-display text-3xl leading-none font-bold">Three planning meetings became one.</h3>
+              <p class="mt-4 flex-1 text-sm leading-relaxed text-muted">The product team kept priorities in a spreadsheet that only two people edited. They moved the backlog in an afternoon, scored the top twenty initiatives together and now run a single 30-minute review each Wednesday.</p>
+              <dl class="mt-6 grid grid-cols-2 gap-4 border-t border-line pt-5">
+                <div class="flex flex-col">
+                  <dt class="text-sm text-muted">planning meetings every two weeks</dt>
+                  <dd class="order-first font-display text-5xl leading-none font-bold">3 → 1</dd>
+                </div>
+                <div class="flex flex-col">
+                  <dt class="text-sm text-muted">initiatives scored in week one</dt>
+                  <dd class="order-first font-display text-5xl leading-none font-bold">20</dd>
+                </div>
+              </dl>
+              <p class="mt-5 text-xs text-muted">Imelda Fenwright, Head of Product</p>
+            </div>
+          </article>
+          <article class="flex flex-col overflow-hidden rounded-[2rem] border border-line bg-white">
+            <div class="bg-rose px-7 py-5">
+              <p class="font-display text-3xl font-bold">Stillwell Freight</p>
+              <p class="text-sm">Engineering · 54 people · Team</p>
+            </div>
+            <div class="flex flex-1 flex-col p-7">
+              <h3 class="font-display text-3xl leading-none font-bold">Dates that engineering signs off.</h3>
+              <p class="mt-4 flex-1 text-sm leading-relaxed text-muted">Release dates used to leave sales calls before anyone checked capacity. The engineering managers now set weekly capacity per squad, and nothing gets a date until it fits.</p>
+              <dl class="mt-6 grid grid-cols-2 gap-4 border-t border-line pt-5">
+                <div class="flex flex-col">
+                  <dt class="text-sm text-muted">of releases landed in the planned week</dt>
+                  <dd class="order-first font-display text-5xl leading-none font-bold">92%</dd>
+                </div>
+                <div class="flex flex-col">
+                  <dt class="text-sm text-muted">late-scope changes a quarter</dt>
+                  <dd class="order-first font-display text-5xl leading-none font-bold">6 → 2</dd>
+                </div>
+              </dl>
+              <p class="mt-5 text-xs text-muted">Rukmini Aster, Engineering Manager</p>
+            </div>
+          </article>
+          <article class="flex flex-col overflow-hidden rounded-[2rem] border border-line bg-white">
+            <div class="bg-mist px-7 py-5">
+              <p class="font-display text-3xl font-bold">Sourwood Learning</p>
+              <p class="text-sm">Operations · 120 people · Scale</p>
+            </div>
+            <div class="flex flex-1 flex-col p-7">
+              <h3 class="font-display text-3xl leading-none font-bold">Four teams, one roadmap.</h3>
+              <p class="mt-4 flex-1 text-sm leading-relaxed text-muted">Course operations, support, product and engineering each kept their own list. A shared stage vocabulary and one owner per initiative let them plan in one place without losing team ownership.</p>
+              <dl class="mt-6 grid grid-cols-2 gap-4 border-t border-line pt-5">
+                <div class="flex flex-col">
+                  <dt class="text-sm text-muted">teams on a shared roadmap</dt>
+                  <dd class="order-first font-display text-5xl leading-none font-bold">4</dd>
+                </div>
+                <div class="flex flex-col">
+                  <dt class="text-sm text-muted">fewer duplicate requests</dt>
+                  <dd class="order-first font-display text-5xl leading-none font-bold">35%</dd>
+                </div>
+              </dl>
+              <p class="mt-5 text-xs text-muted">Stellan Brannagh, Operations Lead</p>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+      <section class="wrap pt-14">
+        <div class="flex flex-wrap items-center justify-between gap-6 border-y border-line py-8">
+          <p class="max-w-xl font-display text-4xl leading-none font-bold">Planning across more than 75 people?</p>
+          <a href="pricing.html?plan=scale&amp;seats=80" class="btn">See the Scale plan</a>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-16 bg-ink py-12 text-white">
+      <div class="wrap grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="font-display text-5xl font-bold tracking-tight">planwick</a>
+          <p class="mt-4 max-w-xs text-white/80">A little less noise.<br />A much clearer next step.</p>
+          <a href="workspace.html" class="btn btn-sun mt-6"
+            >Open your roadmap
+            <svg
+              class="size-5 shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              aria-hidden="true"
+            >
+              <path d="M4 12h16m-6-6 6 6-6 6" /></svg
+          ></a>
+        </div>
+        <div>
+          <h2 class="eyebrow text-sun">Make room for good work</h2>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a class="underline underline-offset-4" href="product.html">See the product</a></li>
+            <li><a class="underline underline-offset-4" href="pricing.html">Plans & pricing</a></li>
+            <li><a class="underline underline-offset-4" href="integrations.html">Bring your tools together</a></li>
+            <li><a class="underline underline-offset-4" href="resources.html">The planning library</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="eyebrow text-sun">Come say hello</h2>
+          <p class="mt-5 text-sm leading-relaxed">
+            The Courtyard, West Rosemary Street<br />Chapel Hill, North Carolina<br />Monday–Friday, 9 AM–5 PM
+          </p>
+          <a href="contact.html" class="mt-4 inline-block underline underline-offset-4">Contact the team</a>
+          <p class="mt-3 text-sm">hello@planwick.example<br />(919) 555-0186</p>
+        </div>
+      </div>
+      <div class="wrap mt-10 flex flex-wrap justify-between gap-3 border-t border-white/20 pt-5 text-xs text-white/75">
+        <p>© <span data-year></span> Planwick.</p>
+        <p>Planwick is a fictional business.</p>
+      </div>
+    </footer>
+    <p id="announcement" role="status" aria-live="polite" class="sr-only"></p>
+  </body>
+</html>

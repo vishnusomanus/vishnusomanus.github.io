@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480" fill="none" stroke="#18224a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Appointment card -->
+  <g transform="rotate(-8 120 360)">
+    <rect x="40" y="300" width="168" height="104" rx="4" fill="#ffffff"/>
+    <rect x="54" y="314" width="26" height="26" rx="2" fill="#ffffff" stroke-width="1.8"/>
+    <path d="M60 316v22" stroke="#dc6f62" stroke-width="1.4"/>
+    <path d="M66 320v14h8" stroke-width="2.4"/>
+    <path d="M90 322h70M90 334h48" stroke="#586079" stroke-width="3"/>
+    <path d="M54 360h132M54 374h132M54 388h132" stroke="#d5deeb" stroke-width="1.5"/>
+    <path d="M60 356h60M60 370h40" stroke="#2a3b81" stroke-width="2" opacity=".8"/>
+  </g>
+  <!-- Receipt -->
+  <path d="M232 24h196v420l-14-10-14 10-14-10-14 10-14-10-14 10-14-10-14 10-14-10-14 10-14-10-14 10-14-10-14 10Z" fill="#ffffff"/>
+  <path d="M296 52h68" stroke-width="4"/>
+  <path d="M276 66h108" stroke="#97a7d8" stroke-width="2"/>
+  <path d="M252 92h156" stroke="#d5deeb" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <g stroke="#586079" stroke-width="3">
+    <path d="M254 118h90M254 146h76M254 174h96M254 202h70"/>
+    <path d="M378 118h28M384 146h22M378 174h28M384 202h22"/>
+  </g>
+  <path d="M254 130h52M254 158h40M254 186h60M254 214h44" stroke="#c0cbea" stroke-width="2"/>
+  <path d="M252 236h156" stroke="#d5deeb" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M248 262h164" stroke="#f6e46b" stroke-width="20"/>
+  <path d="M256 262h64M370 262h36" stroke-width="4"/>
+  <path d="M252 288h156" stroke="#d5deeb" stroke-width="1.5" stroke-dasharray="4 4"/>
+  <path d="M254 314h110M254 332h86" stroke="#97a7d8" stroke-width="2"/>
+  <g stroke-width="2"><path d="M266 366v34M272 366v34M280 366v34M284 366v34M292 366v34M300 366v34M304 366v34M312 366v34M320 366v34M326 366v34M332 366v34M340 366v34M346 366v34M354 366v34M360 366v34M368 366v34M376 366v34M382 366v34M390 366v34"/></g>
+  <!-- Card reader -->
+  <rect x="452" y="190" width="132" height="230" rx="16" fill="#2a3b81"/>
+  <rect x="470" y="210" width="96" height="64" rx="4" fill="#dfe5f5"/>
+  <path d="M484 232h44M484 250h64" stroke="#2a3b81" stroke-width="3"/>
+  <g fill="#ffffff" stroke-width="1.6">
+    <rect x="472" y="292" width="24" height="18" rx="3"/><rect x="506" y="292" width="24" height="18" rx="3"/><rect x="540" y="292" width="24" height="18" rx="3"/>
+    <rect x="472" y="318" width="24" height="18" rx="3"/><rect x="506" y="318" width="24" height="18" rx="3"/><rect x="540" y="318" width="24" height="18" rx="3"/>
+    <rect x="472" y="344" width="24" height="18" rx="3"/><rect x="506" y="344" width="24" height="18" rx="3"/><rect x="540" y="344" width="24" height="18" rx="3" fill="#f6e46b"/>
+  </g>
+  <path d="M500 392h36" stroke="#97a7d8" stroke-width="4"/>
+  <!-- Table edge -->
+  <path d="M0 452h640" stroke-width="2"/>
+  <path d="M0 452h640v28H0Z" fill="#e3ddcf" stroke="none"/>
+</svg>

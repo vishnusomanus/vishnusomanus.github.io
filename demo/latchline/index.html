@@ -1,0 +1,703 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Latchline: customer onboarding software for B2B teams</title>
+    <meta
+      name="description"
+      content="Latchline turns the weeks after a signed contract into one shared plan: playbooks, a customer portal and a forecast of first value. Made in Reno, Nevada."
+    />
+    <meta name="theme-color" content="#f2f4f7" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Latchline" />
+    <meta property="og:title" content="Latchline: customer onboarding software for B2B teams" />
+    <meta
+      property="og:description"
+      content="Latchline turns the weeks after a signed contract into one shared plan: playbooks, a customer portal and a forecast of first value. Made in Reno, Nevada."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500;600;700&amp;family=Funnel+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=Spline+Sans+Mono:wght@500&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="index" class="flex min-h-screen flex-col">
+    <a
+      href="#main"
+      class="sr-only z-50 rounded-lg bg-ink px-4 py-3 text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      >Skip to content</a
+    >
+    <header class="sticky top-0 z-40 border-b border-line bg-card/95 backdrop-blur">
+      <div class="wrap flex min-h-16 items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center gap-2.5" aria-label="Latchline home"
+          ><svg viewBox="0 0 32 32" class="size-8 shrink-0" aria-hidden="true">
+            <rect x="1.5" y="1.5" width="29" height="29" rx="8" fill="#0c1427" />
+            <path
+              d="M9 9v14h8"
+              fill="none"
+              stroke="#fff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M17 16h6.5a2.5 2.5 0 0 1 0 5H21"
+              fill="none"
+              stroke="#ffcf3f"
+              stroke-width="3"
+              stroke-linecap="round"
+            /></svg
+          ><span class="font-display text-xl font-semibold tracking-tight">Latchline</span></a
+        >
+        <nav class="hidden lg:block" aria-label="Main">
+          <ul class="flex items-center gap-1">
+            <li><a class="nav-link" href="product.html">Product</a></li>
+            <li><a class="nav-link" href="playbooks.html">Playbooks</a></li>
+            <li><a class="nav-link" href="customers.html">Customers</a></li>
+            <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li><a class="nav-link" href="resources.html">Resources</a></li>
+            <li><a class="nav-link" href="company.html">Company</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a href="contact.html#demo" class="nav-link hidden sm:block">Book a demo</a>
+          <a href="contact.html" class="btn btn-sm hidden sm:inline-flex"
+            >Talk to sales
+            <svg
+              viewBox="0 0 20 20"
+              class="size-4 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" /></svg
+          ></a>
+          <button
+            id="menu-toggle"
+            type="button"
+            class="grid size-11 place-items-center rounded-lg border border-line-strong lg:hidden"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              class="size-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path d="M4 7h16M4 12h16M4 17h10" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" class="wrap border-t border-line py-4 lg:hidden" aria-label="Mobile" hidden>
+        <ul class="grid gap-1">
+          <li><a class="nav-link text-base" href="product.html">Product</a></li>
+          <li><a class="nav-link text-base" href="playbooks.html">Playbooks</a></li>
+          <li><a class="nav-link text-base" href="customers.html">Customers</a></li>
+          <li><a class="nav-link text-base" href="pricing.html">Pricing</a></li>
+          <li><a class="nav-link text-base" href="resources.html">Resources</a></li>
+          <li><a class="nav-link text-base" href="company.html">Company</a></li>
+          <li><a class="nav-link text-base" href="contact.html#demo">Book a demo</a></li>
+        </ul>
+        <a href="contact.html" class="btn mt-3 w-full"
+          >Talk to sales
+          <svg
+            viewBox="0 0 20 20"
+            class="size-4 shrink-0"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" /></svg
+        ></a>
+      </nav>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="relative overflow-hidden border-b border-line bg-card">
+        <div class="wrap grid gap-12 py-14 lg:grid-cols-[1fr_1.15fr] lg:items-center lg:py-20">
+          <div class="reveal">
+            <p
+              class="tick inline-flex items-center gap-2 rounded-full border border-line bg-paper px-3 py-1.5 text-ink-soft"
+            >
+              <span class="size-2 rounded-full bg-moss" aria-hidden="true"></span> Customer onboarding platform
+            </p>
+            <h1 class="mt-6 text-[clamp(2.7rem,5.6vw,4.6rem)] leading-[1.02] font-semibold tracking-[-0.035em]">
+              Make every new customer feel <span class="marker">expected.</span>
+            </h1>
+            <p class="mt-6 max-w-xl text-lg leading-relaxed text-ink-soft">
+              Latchline replaces the kickoff deck, the tracker spreadsheet and the chasing emails with one shared plan,
+              from signed contract to first value. Your team sees what needs attention. Your customer sees what happens
+              next.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="contact.html#demo" class="btn">Book a 30-minute demo</a>
+              <a href="product.html" class="btn btn-quiet">See how the board works</a>
+            </div>
+            <dl class="mt-10 grid max-w-lg grid-cols-3 gap-4 border-t border-line pt-6">
+              <div>
+                <dt class="tick text-ink-faint">Median time to value</dt>
+                <dd class="mt-1 font-display text-3xl font-semibold">−38%</dd>
+              </div>
+              <div>
+                <dt class="tick text-ink-faint">Onboardings run</dt>
+                <dd class="mt-1 font-display text-3xl font-semibold">24k</dd>
+              </div>
+              <div>
+                <dt class="tick text-ink-faint">Teams onboarding</dt>
+                <dd class="mt-1 font-display text-3xl font-semibold">410</dd>
+              </div>
+            </dl>
+          </div>
+
+          <figure class="reveal min-w-0" aria-labelledby="hero-board-caption">
+            <div class="panel dotgrid overflow-hidden shadow-[0_24px_60px_-28px_rgb(12_20_39/0.45)]">
+              <div class="flex flex-wrap items-center justify-between gap-3 border-b border-line bg-card px-5 py-3.5">
+                <div class="min-w-0">
+                  <p class="text-sm font-semibold">Kindred Desk · B2B software kickoff</p>
+                  <p class="tick text-ink-faint">Day 9 of 21 · Owner: Asha F.</p>
+                </div>
+                <p class="tick rounded-full bg-moss-soft px-2.5 py-1 text-moss">Forecast: on track</p>
+              </div>
+              <div class="grid grid-cols-2 gap-3 p-4 sm:grid-cols-4">
+                <div class="min-w-0">
+                  <p class="tick flex items-center gap-1.5 text-ink-soft">
+                    <span class="size-2 rounded-full bg-moss"></span>Outcome
+                  </p>
+                  <ul class="mt-2 space-y-2 text-xs">
+                    <li class="rounded-lg border border-moss/30 bg-moss-soft p-2.5">
+                      <span class="block font-semibold text-moss">Goal agreed</span>Cut first reply time to 2h
+                    </li>
+                    <li class="rounded-lg border border-moss/30 bg-moss-soft p-2.5">
+                      <span class="block font-semibold text-moss">Sponsor named</span>J. Okimura, VP Support
+                    </li>
+                  </ul>
+                </div>
+                <div class="min-w-0">
+                  <p class="tick flex items-center gap-1.5 text-ink-soft">
+                    <span class="size-2 rounded-full bg-moss"></span>People
+                  </p>
+                  <ul class="mt-2 space-y-2 text-xs">
+                    <li class="rounded-lg border border-moss/30 bg-moss-soft p-2.5">
+                      <span class="block font-semibold text-moss">Admins invited</span>3 of 3 joined
+                    </li>
+                    <li class="rounded-lg border border-moss/30 bg-moss-soft p-2.5">
+                      <span class="block font-semibold text-moss">Trainer</span>Booked Thursday
+                    </li>
+                  </ul>
+                </div>
+                <div class="min-w-0">
+                  <p class="tick flex items-center gap-1.5 text-ink-soft">
+                    <span class="size-2 rounded-full bg-flare"></span>Access
+                  </p>
+                  <ul class="mt-2 space-y-2 text-xs">
+                    <li class="rounded-lg border border-flare/30 bg-flare-soft p-2.5">
+                      <span class="block font-semibold text-flare">SSO metadata</span>Waiting on customer IT · 2d
+                    </li>
+                    <li class="rounded-lg border border-cobalt/30 bg-cobalt-soft p-2.5">
+                      <span class="block font-semibold text-cobalt-deep">Data export</span>In progress
+                    </li>
+                  </ul>
+                </div>
+                <div class="min-w-0">
+                  <p class="tick flex items-center gap-1.5 text-ink-soft">
+                    <span class="size-2 rounded-full bg-line-strong"></span>Build
+                  </p>
+                  <ul class="mt-2 space-y-2 text-xs">
+                    <li class="rounded-lg border border-line-strong bg-card p-2.5">
+                      <span class="block font-semibold">Routing rules</span>Up next
+                    </li>
+                    <li class="rounded-lg border border-dashed border-line-strong bg-card p-2.5 text-ink-faint">
+                      <span class="block font-semibold">First value</span>Forecast: day 19
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="border-t border-line bg-card px-5 py-3">
+                <div class="flex items-center justify-between text-xs text-ink-soft">
+                  <span>Progress to first value</span><span class="font-mono">43%</span>
+                </div>
+                <div class="mt-2 h-2 overflow-hidden rounded-full bg-mist">
+                  <div class="h-full w-[43%] rounded-full bg-cobalt"></div>
+                </div>
+              </div>
+            </div>
+            <figcaption id="hero-board-caption" class="mt-3 text-sm text-ink-faint">
+              One customer's board on day 9: the blocker is visible to both sides, and the first-value forecast still
+              holds.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="logos-heading" class="border-b border-line">
+        <div class="wrap flex flex-col gap-5 py-8 md:flex-row md:items-center md:justify-between">
+          <h2 id="logos-heading" class="tick shrink-0 font-sans text-ink-faint">Onboarding with Latchline</h2>
+          <ul
+            class="grid grid-cols-2 gap-x-6 gap-y-3 font-display text-base font-semibold text-ink-soft sm:flex sm:flex-wrap sm:items-center sm:gap-x-8 sm:text-lg"
+          >
+            <li class="flex items-center gap-2">
+              <svg viewBox="0 0 32 32" class="size-6" aria-hidden="true">
+                <circle cx="16" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="4" />
+                <circle cx="16" cy="16" r="3" fill="currentColor" /></svg
+              >Kindred Desk
+            </li>
+            <li class="flex items-center gap-2">
+              <svg viewBox="0 0 32 32" class="size-6" aria-hidden="true">
+                <rect x="5" y="6" width="22" height="5" rx="2" fill="currentColor" />
+                <rect x="5" y="13.5" width="16" height="5" rx="2" fill="currentColor" opacity=".7" />
+                <rect x="5" y="21" width="10" height="5" rx="2" fill="currentColor" opacity=".45" /></svg
+              >Northmill Systems
+            </li>
+            <li class="flex items-center gap-2">
+              <svg viewBox="0 0 32 32" class="size-6" aria-hidden="true">
+                <path d="M6 26C6 13 13 6 26 6c0 13-7 20-20 20z" fill="currentColor" /></svg
+              >Goodfield Care
+            </li>
+            <li class="flex items-center gap-2">
+              <svg viewBox="0 0 32 32" class="size-6" aria-hidden="true">
+                <path d="m16 3 13 13-13 13L3 16z" fill="currentColor" /></svg
+              >Sablecrest Payroll
+            </li>
+            <li class="flex items-center gap-2">
+              <svg viewBox="0 0 32 32" class="size-6" aria-hidden="true">
+                <path d="m4 8 8 8-8 8M14 8l8 8-8 8" fill="none" stroke="currentColor" stroke-width="3.2" /></svg
+              >Ironpine Freight
+            </li>
+            <li class="flex items-center gap-2">
+              <svg viewBox="0 0 32 32" class="size-6" aria-hidden="true">
+                <rect
+                  x="5"
+                  y="5"
+                  width="22"
+                  height="22"
+                  rx="3"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="4"
+                /></svg
+              >Quarrystone Mutual
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section aria-labelledby="gap-heading" class="py-20">
+        <div class="wrap">
+          <div class="reveal max-w-2xl">
+            <p class="tick text-cobalt">The gap after “yes”</p>
+            <h2 id="gap-heading" class="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
+              Most onboardings don't stall on the hard part.
+            </h2>
+            <p class="mt-5 text-lg leading-relaxed text-ink-soft">
+              They stall between people: a login nobody requested, a decision with no owner, a sponsor who stopped
+              reading the updates. Latchline makes those handoffs visible, on both sides of the deal.
+            </p>
+          </div>
+          <figure class="reveal panel mt-12 overflow-hidden">
+            <div
+              class="relative overflow-x-auto"
+              tabindex="0"
+              role="img"
+              aria-label="Two timelines of the same onboarding. Without a shared plan it takes 41 days across nine tools, with three stalls: waiting on SSO access, a decision with no owner and a sponsor who went quiet. With Latchline it takes 18 days on one board, with access, build and training running in parallel."
+            >
+              <svg viewBox="0 0 1200 400" class="w-full min-w-[760px]" aria-hidden="true">
+                <defs>
+                  <pattern
+                    id="stall"
+                    width="10"
+                    height="10"
+                    patternUnits="userSpaceOnUse"
+                    patternTransform="rotate(45)"
+                  >
+                    <rect width="10" height="10" fill="#fde3dc" />
+                    <path d="M0 0v10" stroke="#b83218" stroke-opacity=".25" stroke-width="4" />
+                  </pattern>
+                </defs>
+                <rect width="1200" height="400" fill="#fff" />
+                <path d="M220.0 40V350" stroke="#d3d9e3" stroke-dasharray="3 5" />
+                <text x="220.0" y="378" font-size="13" text-anchor="middle" fill="#56607a" class="font-mono">
+                  Day 0
+                </text>
+                <path d="M370.0 40V350" stroke="#d3d9e3" stroke-dasharray="3 5" />
+                <text x="370.0" y="378" font-size="13" text-anchor="middle" fill="#56607a" class="font-mono">
+                  Day 7
+                </text>
+                <path d="M520.0 40V350" stroke="#d3d9e3" stroke-dasharray="3 5" />
+                <text x="520.0" y="378" font-size="13" text-anchor="middle" fill="#56607a" class="font-mono">
+                  Day 14
+                </text>
+                <path d="M670.0 40V350" stroke="#d3d9e3" stroke-dasharray="3 5" />
+                <text x="670.0" y="378" font-size="13" text-anchor="middle" fill="#56607a" class="font-mono">
+                  Day 21
+                </text>
+                <path d="M820.0 40V350" stroke="#d3d9e3" stroke-dasharray="3 5" />
+                <text x="820.0" y="378" font-size="13" text-anchor="middle" fill="#56607a" class="font-mono">
+                  Day 28
+                </text>
+                <path d="M970.0 40V350" stroke="#d3d9e3" stroke-dasharray="3 5" />
+                <text x="970.0" y="378" font-size="13" text-anchor="middle" fill="#56607a" class="font-mono">
+                  Day 35
+                </text>
+                <path d="M1120.0 40V350" stroke="#d3d9e3" stroke-dasharray="3 5" />
+                <text x="1120.0" y="378" font-size="13" text-anchor="middle" fill="#56607a" class="font-mono">
+                  Day 42
+                </text>
+                <text x="32" y="86" font-size="18" font-weight="700" fill="#0c1427">Without a shared plan</text>
+                <text x="32" y="110" font-size="14" fill="#56607a">41 days · 9 tools</text>
+                <rect x="220.0" y="70" width="61.3" height="40" rx="6" fill="#1f45d6" />
+                <text x="230.0" y="95.0" font-size="14" font-weight="600" fill="#fff">Kickoff</text>
+                <rect
+                  x="284.3"
+                  y="70"
+                  width="189.8"
+                  height="40"
+                  rx="6"
+                  fill="url(#stall)"
+                  stroke="#b83218"
+                  stroke-width="1.5"
+                />
+                <text x="294.3" y="95.0" font-size="14" font-weight="600" fill="#b83218">Waiting on SSO access</text>
+                <rect x="477.1" y="70" width="211.3" height="40" rx="6" fill="#1f45d6" />
+                <text x="487.1" y="95.0" font-size="14" font-weight="600" fill="#fff">Build and import</text>
+                <rect
+                  x="691.4"
+                  y="70"
+                  width="147.0"
+                  height="40"
+                  rx="6"
+                  fill="url(#stall)"
+                  stroke="#b83218"
+                  stroke-width="1.5"
+                />
+                <text x="701.4" y="95.0" font-size="14" font-weight="600" fill="#b83218">No owner</text>
+                <rect x="841.4" y="70" width="125.6" height="40" rx="6" fill="#1f45d6" />
+                <text x="851.4" y="95.0" font-size="14" font-weight="600" fill="#fff">Training</text>
+                <rect
+                  x="970.0"
+                  y="70"
+                  width="125.6"
+                  height="40"
+                  rx="6"
+                  fill="url(#stall)"
+                  stroke="#b83218"
+                  stroke-width="1.5"
+                />
+                <text x="980.0" y="95.0" font-size="14" font-weight="600" fill="#b83218">Quiet sponsor</text>
+                <path d="M1098.6 56v68" stroke="#0c1427" stroke-width="2.5" />
+                <circle cx="1098.6" cy="56" r="8" fill="#98a2b5" stroke="#0c1427" stroke-width="2" />
+                <text x="1112.6" y="61" font-size="14" font-weight="700" fill="#0c1427">Day 41</text>
+                <path d="M20 160h1160" stroke="#d3d9e3" />
+                <text x="32" y="222" font-size="18" font-weight="700" fill="#0c1427">With Latchline</text>
+                <text x="32" y="246" font-size="14" fill="#56607a">18 days · 1 board</text>
+                <rect x="220.0" y="184" width="39.9" height="32" rx="6" fill="#1f45d6" />
+                <text x="270.9" y="205.0" font-size="14" font-weight="600" fill="#0c1427">Kickoff</text>
+                <rect x="241.4" y="224" width="104.2" height="32" rx="6" fill="#1f45d6" />
+                <text x="356.6" y="245.0" font-size="14" font-weight="600" fill="#0c1427">Access, in parallel</text>
+                <rect x="305.7" y="264" width="211.3" height="32" rx="6" fill="#1f45d6" />
+                <text x="315.7" y="285.0" font-size="14" font-weight="600" fill="#fff">Build and import</text>
+                <rect x="434.3" y="304" width="125.6" height="32" rx="6" fill="#1f45d6" />
+                <text x="444.3" y="325.0" font-size="14" font-weight="600" fill="#fff">Training</text>
+                <path d="M605.7 176v170" stroke="#0c1427" stroke-width="2.5" />
+                <circle cx="605.7" cy="176" r="10" fill="#ffcf3f" stroke="#0c1427" stroke-width="2.5" />
+                <text x="623.7" y="200" font-size="15" font-weight="700" fill="#0c1427">First value, day 18</text>
+                <text x="623.7" y="220" font-size="14" fill="#3b4660">23 days sooner</text>
+                <path
+                  d="M625.7 240h462.9"
+                  stroke="#186b48"
+                  stroke-width="2.5"
+                  stroke-dasharray="2 6"
+                  stroke-linecap="round"
+                />
+                <path d="m1084.6 233 8 7-8 7" fill="none" stroke="#186b48" stroke-width="2.5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <figcaption class="border-t border-line px-6 py-4 text-sm text-ink-faint">
+              Kindred Desk's kickoff path before and after Latchline. Median across 2026 onboardings.
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section aria-labelledby="pillars-heading" class="border-y border-line bg-card py-20">
+        <div class="wrap">
+          <div class="reveal flex flex-wrap items-end justify-between gap-6">
+            <div class="max-w-2xl">
+              <p class="tick text-cobalt">How it works</p>
+              <h2 id="pillars-heading" class="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
+                Plan it, share it, chase less, prove it.
+              </h2>
+            </div>
+            <a class="text-link" href="product.html">Walk through the six stages</a>
+          </div>
+          <ol
+            class="mt-12 grid gap-px overflow-hidden rounded-2xl border border-line bg-line md:grid-cols-2 lg:grid-cols-4"
+          >
+            <li class="reveal bg-card p-6">
+              <svg viewBox="0 0 64 64" class="size-14" aria-hidden="true">
+                <rect x="6" y="10" width="52" height="44" rx="6" fill="#dfe6ff" />
+                <path d="M6 22h52" stroke="#1f45d6" stroke-width="2" />
+                <rect x="13" y="28" width="12" height="8" rx="2" fill="#1f45d6" />
+                <rect x="29" y="28" width="12" height="8" rx="2" fill="#98a2b5" />
+                <rect x="13" y="40" width="20" height="8" rx="2" fill="#98a2b5" />
+              </svg>
+              <p class="tick mt-5 text-ink-faint">01 Plan</p>
+              <h3 class="mt-1 text-xl font-semibold">Start from a playbook</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-soft">
+                Fifteen tested playbooks, or your own. A board opens the moment the deal closes, with dates worked out
+                from kickoff.
+              </p>
+            </li>
+            <li class="reveal bg-card p-6">
+              <svg viewBox="0 0 64 64" class="size-14" aria-hidden="true">
+                <rect x="4" y="12" width="34" height="40" rx="5" fill="#fff3c7" />
+                <rect x="26" y="8" width="34" height="40" rx="5" fill="#fff" stroke="#0c1427" stroke-width="2" />
+                <path d="M33 20h20M33 27h20M33 34h12" stroke="#1f45d6" stroke-width="2.4" stroke-linecap="round" />
+              </svg>
+              <p class="tick mt-5 text-ink-faint">02 Share</p>
+              <h3 class="mt-1 text-xl font-semibold">Give the customer a portal</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-soft">
+                Customers see their tasks in plain language, upload proof and know who to ask, without a login to your
+                tools.
+              </p>
+            </li>
+            <li class="reveal bg-card p-6">
+              <svg viewBox="0 0 64 64" class="size-14" aria-hidden="true">
+                <circle cx="32" cy="32" r="24" fill="#fde3dc" />
+                <path d="M32 18v15l9 6" fill="none" stroke="#b83218" stroke-width="3" stroke-linecap="round" />
+                <path d="m46 8 6 6M18 8l-6 6" stroke="#0c1427" stroke-width="2.4" stroke-linecap="round" />
+              </svg>
+              <p class="tick mt-5 text-ink-faint">03 Chase less</p>
+              <h3 class="mt-1 text-xl font-semibold">Let blockers escalate themselves</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-soft">
+                Polite reminders, coverage when someone is away and an escalation after two business days. Nobody has to
+                be the nag.
+              </p>
+            </li>
+            <li class="reveal bg-card p-6">
+              <svg viewBox="0 0 64 64" class="size-14" aria-hidden="true">
+                <rect x="6" y="6" width="52" height="52" rx="6" fill="#d6f0e2" />
+                <path
+                  d="M14 44l10-10 8 6 16-18"
+                  fill="none"
+                  stroke="#186b48"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <circle cx="48" cy="22" r="4" fill="#186b48" />
+              </svg>
+              <p class="tick mt-5 text-ink-faint">04 Prove</p>
+              <h3 class="mt-1 text-xl font-semibold">Measure time to first value</h3>
+              <p class="mt-2 text-sm leading-relaxed text-ink-soft">
+                The outcome you agreed on day one becomes the finish line, tracked per playbook, team and segment.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section aria-labelledby="featured-heading" class="py-20">
+        <div class="wrap">
+          <div class="reveal flex flex-wrap items-end justify-between gap-6">
+            <div class="max-w-2xl">
+              <p class="tick text-cobalt">Playbooks</p>
+              <h2 id="featured-heading" class="mt-3 text-4xl font-semibold tracking-tight sm:text-5xl">
+                A strong start, without starting from zero.
+              </h2>
+            </div>
+            <a class="text-link" href="playbooks.html">Browse all fifteen playbooks</a>
+          </div>
+          <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3" data-featured-playbooks></div>
+        </div>
+      </section>
+
+      <section aria-labelledby="numbers-heading" class="dotgrid-ink py-20 text-white">
+        <div class="wrap grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-center">
+          <div class="reveal">
+            <p class="tick text-sky">From the 2026 benchmark</p>
+            <h2 id="numbers-heading" class="mt-3 text-4xl font-semibold tracking-tight">
+              What changes when the plan is shared.
+            </h2>
+            <p class="mt-5 leading-relaxed text-haze">
+              Calder Ostrow's team compared 2,400 onboardings run on Latchline with the same customers' previous
+              quarter.
+            </p>
+            <a
+              class="mt-6 inline-flex items-center gap-2 font-semibold text-sky underline underline-offset-4"
+              href="resources.html?type=benchmark"
+              >Read the benchmark</a
+            >
+          </div>
+          <dl class="reveal grid gap-px overflow-hidden rounded-2xl border border-white/15 bg-white/15 sm:grid-cols-2">
+            <div class="bg-ink-2 p-6">
+              <dt class="text-sm text-haze">Median days to first value</dt>
+              <dd class="mt-2 font-display text-5xl font-semibold">
+                23 <span class="text-xl text-haze">from 37</span>
+              </dd>
+            </div>
+            <div class="bg-ink-2 p-6">
+              <dt class="text-sm text-haze">Customer tasks done on time</dt>
+              <dd class="mt-2 font-display text-5xl font-semibold">
+                87% <span class="text-xl text-haze">from 61%</span>
+              </dd>
+            </div>
+            <div class="bg-ink-2 p-6">
+              <dt class="text-sm text-haze">Status meetings per onboarding</dt>
+              <dd class="mt-2 font-display text-5xl font-semibold">2 <span class="text-xl text-haze">from 7</span></dd>
+            </div>
+            <div class="bg-ink-2 p-6">
+              <dt class="text-sm text-haze">Onboardings per CSM, same quality</dt>
+              <dd class="mt-2 font-display text-5xl font-semibold">+40%</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section aria-labelledby="quote-heading" class="py-20">
+        <div class="wrap grid gap-10 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+          <figure class="reveal">
+            <h2 id="quote-heading" class="sr-only">What customers say</h2>
+            <blockquote class="font-display text-3xl leading-snug font-medium tracking-tight sm:text-4xl">
+              “The customer knew where we were, our team knew what mattered, and nobody needed a status meeting.”
+            </blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 text-sm">
+              <span
+                class="grid size-11 place-items-center rounded-full bg-sun font-display font-semibold"
+                aria-hidden="true"
+                >AF</span
+              >
+              <span
+                ><span class="block font-semibold">Asha Ferreby</span
+                ><span class="text-ink-faint">VP of Customer Success, Kindred Desk</span></span
+              >
+            </figcaption>
+          </figure>
+          <div class="reveal panel p-6">
+            <p class="tick text-ink-faint">Kindred Desk, in numbers</p>
+            <p class="mt-3 font-display text-6xl font-semibold text-cobalt">18 days</p>
+            <p class="text-ink-soft">to first value, down from 41</p>
+            <a class="text-link mt-6 inline-block" href="customers.html?story=kindred-desk">Read how they did it</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="pb-20">
+        <div class="wrap">
+          <div
+            class="reveal flex flex-col gap-8 rounded-3xl bg-cobalt p-8 text-white sm:p-12 lg:flex-row lg:items-center lg:justify-between"
+          >
+            <div class="max-w-xl">
+              <h2 class="text-3xl font-semibold tracking-tight sm:text-4xl">
+                Bring one onboarding that went sideways.
+              </h2>
+              <p class="mt-3 text-white/85">
+                In 30 minutes we'll rebuild it as a Latchline board with you, and show where it would have slowed down.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <a href="contact.html#demo" class="btn bg-white text-ink hover:bg-sun!">Book a demo</a>
+              <a href="pricing.html" class="btn border border-white/50 bg-transparent hover:bg-white/10!"
+                >See pricing</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="dotgrid-ink mt-auto text-white">
+      <div class="wrap grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div>
+          <a href="index.html" class="inline-flex items-center gap-2.5" aria-label="Latchline home"
+            ><svg viewBox="0 0 32 32" class="size-8 shrink-0" aria-hidden="true">
+              <rect x="1.5" y="1.5" width="29" height="29" rx="8" fill="#1f45d6" />
+              <path
+                d="M9 9v14h8"
+                fill="none"
+                stroke="#fff"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17 16h6.5a2.5 2.5 0 0 1 0 5H21"
+                fill="none"
+                stroke="#ffcf3f"
+                stroke-width="3"
+                stroke-linecap="round"
+              /></svg
+            ><span class="font-display text-xl font-semibold">Latchline</span></a
+          >
+          <p class="mt-4 max-w-xs text-sm leading-relaxed text-haze">
+            Customer onboarding software for teams who want every new customer to feel expected, from signed contract to
+            first value.
+          </p>
+        </div>
+        <div>
+          <h2 class="tick text-sky">Platform</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a class="hover:underline" href="product.html">How it works</a></li>
+            <li><a class="hover:underline" href="playbooks.html">Playbooks</a></li>
+            <li><a class="hover:underline" href="pricing.html">Pricing</a></li>
+            <li><a class="hover:underline" href="customers.html">Customer stories</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="tick text-sky">Company</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a class="hover:underline" href="company.html">About us</a></li>
+            <li><a class="hover:underline" href="resources.html">Resources</a></li>
+            <li><a class="hover:underline" href="contact.html">Contact sales</a></li>
+            <li><a class="hover:underline" href="contact.html#demo">Book a demo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="tick text-sky">Reno office</h2>
+          <address class="mt-4 text-sm leading-relaxed not-italic text-haze">
+            38 N Sierra St, Suite 310<br />Reno, NV 89501<br />Mon–Fri, 7:00 a.m.–5:00 p.m. PT
+          </address>
+          <p class="mt-3 text-sm">
+            <a class="hover:underline" href="mailto:hello@latchline.example">hello@latchline.example</a><br /><a
+              class="hover:underline"
+              href="tel:+17755550162"
+              >(775) 555-0162</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="wrap flex flex-wrap justify-between gap-3 border-t border-white/15 py-6 text-xs text-haze">
+        <p>© <span data-year></span> Latchline, Inc. Reno, Nevada.</p>
+        <p>Latchline is a fictional company.</p>
+      </div>
+    </footer>
+    <p
+      id="notice"
+      class="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-md rounded-xl bg-ink px-5 py-3.5 text-sm text-white shadow-xl"
+      role="status"
+      aria-live="polite"
+      hidden
+    ></p>
+  </body>
+</html>

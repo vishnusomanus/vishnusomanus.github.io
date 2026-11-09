@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Let’s find a useful starting point — Praxlet</title>
+    <meta
+      name="description"
+      content="Talk to Praxlet about a kit, school project, module specification or workshop visit. Share a question and we will help you plan the next step."
+    />
+    <meta name="theme-color" content="#b92e20" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Praxlet" />
+    <meta property="og:title" content="Let’s find a useful starting point — Praxlet" />
+    <meta
+      property="og:description"
+      content="Talk to Praxlet about a kit, school project, module specification or workshop visit. Share a question and we will help you plan the next step."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mada:wght@400;600;700&amp;family=Teko:wght@400;500;600&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script defer src="assets/js/data.js"></script>
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body data-page="contact" class="flex min-h-screen flex-col">
+    <a
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 z-50 bg-red p-3 font-semibold text-white"
+      href="#main"
+      >Skip to content</a
+    >
+    <header class="border-b border-ink">
+      <div class="bg-red text-white">
+        <div class="wrap flex min-h-8 items-center justify-between gap-4 text-xs">
+          <p>Modular robotics / Nashua, New Hampshire</p>
+          <p class="hidden sm:block">Low voltage. Open connections. Useful questions.</p>
+        </div>
+      </div>
+      <div class="wrap flex min-h-24 items-center justify-between gap-4">
+        <a href="index.html" class="font-display text-5xl font-semibold tracking-tight"
+          >PRAXLET<span class="text-red">/</span></a
+        >
+        <nav class="hidden lg:block" aria-label="Main">
+          <ul class="flex gap-1">
+            <li><a class="nav-link" href="modules.html">Modules</a></li>
+            <li><a class="nav-link" href="configurator.html">Build a kit</a></li>
+            <li><a class="nav-link" href="projects.html">Projects</a></li>
+            <li><a class="nav-link" href="docs.html">Field notes</a></li>
+            <li><a class="nav-link" href="company.html">Company</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="contact.html" class="btn btn-small hidden sm:inline-flex"
+            >Talk through a build
+            <svg
+              class="size-4 shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M4 12h16m-7-7 7 7-7 7" /></svg></a
+          ><button
+            type="button"
+            data-menu-toggle
+            class="border border-ink p-3 lg:hidden"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <svg
+              class="size-5"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" class="wrap pb-6 lg:hidden" aria-label="Mobile" hidden>
+        <ul class="grid grid-cols-2 gap-2">
+          <li><a class="nav-link" href="modules.html">Modules</a></li>
+          <li><a class="nav-link" href="configurator.html">Build a kit</a></li>
+          <li><a class="nav-link" href="projects.html">Projects</a></li>
+          <li><a class="nav-link" href="docs.html">Field notes</a></li>
+          <li><a class="nav-link" href="company.html">Company</a></li>
+        </ul>
+        <a href="contact.html" class="btn mt-4 w-full">Talk through a build</a>
+      </nav>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="border-b border-ink">
+        <div class="wrap grid items-center gap-8 py-10 md:grid-cols-[1.25fr_.75fr] lg:py-14">
+          <div>
+            <p class="eyebrow text-red">INQUIRIES &amp; QUOTES</p>
+            <h1 class="mt-5 max-w-4xl text-[clamp(3.6rem,7vw,6.8rem)] uppercase leading-[.95] tracking-tight">
+              Tell us the<br />useful question.
+            </h1>
+            <p class="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
+              A first classroom kit, a club project or a particular connection you want to understand. Give us a little
+              context and we will help you find a sensible next step.
+            </p>
+          </div>
+          <figure>
+            <img
+              src="assets/img/hero-contact.svg"
+              class="w-full"
+              width="420"
+              height="320"
+              alt="An envelope holding a parts list, a speech bubble with a question mark and a taped package."
+            />
+          </figure>
+        </div>
+      </section>
+      <section class="wrap grid gap-10 py-12 lg:grid-cols-[1.2fr_.8fr]">
+        <div>
+          <form data-contact-form novalidate>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <label
+                ><span class="label">Your name</span
+                ><input
+                  class="field"
+                  name="name"
+                  autocomplete="name"
+                  maxlength="100"
+                  aria-describedby="contact-name-error" /><span
+                  id="contact-name-error"
+                  data-error="name"
+                  class="error"
+                ></span></label
+              ><label
+                ><span class="label">Email address</span
+                ><input
+                  class="field"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  maxlength="160"
+                  aria-describedby="contact-email-error" /><span
+                  id="contact-email-error"
+                  data-error="email"
+                  class="error"
+                ></span
+              ></label>
+            </div>
+            <label class="mt-5 block"
+              ><span class="label">What are we talking about?</span
+              ><select class="field" name="topic" data-contact-topic aria-describedby="contact-topic-error">
+                <option value="kit">A kit or classroom set</option>
+                <option value="quote">A quote for my kit bench parts list</option>
+                <option value="module">A module specification</option>
+                <option value="project">A project question</option>
+                <option value="visit">A workbench visit</option>
+                <option value="support">Build support</option>
+              </select
+              ><span id="contact-topic-error" data-error="topic" class="error"></span></label
+            >
+            <fieldset data-quote-kit class="mt-5 border border-ink bg-wash p-5" hidden>
+              <legend class="bg-paper px-2 font-display text-2xl uppercase">Your kit for this quote</legend>
+              <div data-quote-parts></div>
+              <div data-quote-fields class="mt-4 grid items-end gap-4 sm:grid-cols-[10rem_1fr]">
+                <label
+                  ><span class="label">Number of kits</span
+                  ><input
+                    class="field"
+                    name="kits"
+                    type="number"
+                    min="1"
+                    max="12"
+                    inputmode="numeric"
+                    data-quote-count
+                    aria-describedby="contact-kits-hint contact-kits-error" /></label
+                ><dl class="text-sm" data-quote-totals></dl>
+              </div>
+              <p id="contact-kits-hint" class="mt-2 text-xs text-muted">
+                Up to 12 kits on this form. For a larger class set, say how many in the message.
+              </p>
+              <p id="contact-kits-error" data-error="kits" class="error"></p>
+              <p class="mt-3 text-xs font-semibold" data-age-note>Recommended for ages 11+. Contains small parts.</p>
+              <a href="configurator.html" class="text-link mt-3 inline-block text-sm">Change the parts list</a>
+              <input type="hidden" name="partsList" data-quote-list />
+            </fieldset><label class="mt-5 block"
+              ><span class="label">Organization or club (optional)</span
+              ><input class="field" name="organisation" maxlength="100" autocomplete="organization" /></label
+            ><label class="mt-5 block"
+              ><span class="label">A little context</span
+              ><textarea
+                name="message"
+                class="field"
+                rows="5"
+                maxlength="2000"
+                aria-describedby="contact-message-hint contact-message-error"
+              ></textarea
+              ><span id="contact-message-hint" class="mt-2 block text-sm text-muted"
+                >A question, age range, session length or module code is a useful start. Please keep student names,
+                photographs and private account details out of the message.</span
+              ><span id="contact-message-error" data-error="message" class="error"></span></label
+            ><label class="mt-5 flex items-start gap-3 text-sm"
+              ><input
+                name="reply"
+                type="checkbox"
+                class="mt-1 size-4 shrink-0 accent-red"
+                aria-describedby="contact-reply-error"
+              /><span>Praxlet may reply to me about this request.</span></label
+            >
+            <p id="contact-reply-error" data-error="reply" class="error"></p>
+            <p data-form-summary class="error" role="alert" tabindex="-1" hidden></p>
+            <button type="submit" class="btn btn-red mt-6">Send your request</button>
+          </form>
+          <div data-contact-success class="border border-ink bg-wash p-7" tabindex="-1" hidden>
+            <p class="eyebrow text-red" data-success-eyebrow>A USEFUL NEXT STEP</p>
+            <h2 class="mt-3 text-4xl uppercase" data-success-title>Your question is with the team.</h2>
+            <p data-success-message class="mt-4 leading-relaxed"></p>
+            <p class="mt-4 text-sm">Your reference: <strong data-reference></strong></p>
+            <div data-quote-summary class="mt-5 border-t border-ink pt-5" hidden></div>
+            <p class="mt-4 text-sm text-muted">
+              For an existing build that needs a quick conversation, call (603) 555-0173 during workshop hours and mention
+              the reference.
+            </p>
+            <button type="button" data-contact-another class="btn btn-line mt-6">Ask another question</button>
+          </div>
+        </div>
+        <aside class="min-w-0">
+          <div class="border border-ink p-6">
+            <p class="eyebrow text-red">A HUMAN AT THE WORKBENCH</p>
+            <h2 class="mt-3 text-4xl uppercase">Small team.<br />Clear next steps.</h2>
+            <p class="mt-4 leading-relaxed text-muted">
+              We normally reply within two business days. A detailed technical question may need a little bench time; we
+              will explain what we need to check.
+            </p>
+            <dl class="mt-6 text-sm">
+              <div class="spec-line">
+                <dt>Workshop</dt>
+                <dd>Mon–Fri / 9am–5pm</dd>
+              </div>
+              <div class="spec-line">
+                <dt>Call</dt>
+                <dd><a class="underline" href="tel:+16035550173">(603) 555-0173</a></dd>
+              </div>
+              <div class="spec-line">
+                <dt>Email</dt>
+                <dd class="break-all">hello@praxlet.example</dd>
+              </div>
+            </dl>
+          </div>
+          <div data-contact-kit class="mt-6 border border-line bg-wash p-6"></div>
+        </aside>
+      </section>
+    </main>
+    <footer class="mt-auto bg-ink text-paper">
+      <div class="wrap grid gap-9 py-12 md:grid-cols-[1.2fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="font-display text-5xl font-semibold">PRAXLET/</a>
+          <p class="mt-3 max-w-xs text-sm text-paper/80">
+            Small modules for the questions you can build, test and explain.
+          </p>
+        </div>
+        <div>
+          <h2 class="eyebrow">Find the workbench</h2>
+          <p class="mt-4 text-sm leading-relaxed">
+            Studio 4, 46 Bobbin Way<br />Nashua, NH 03060<br />Monday–Friday, 9am–5pm
+          </p>
+          <a class="text-link mt-3 inline-block" href="company.html#visit">Plan a visit</a>
+        </div>
+        <div>
+          <h2 class="eyebrow">Build with us</h2>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a class="underline underline-offset-4" href="contact.html">hello@praxlet.example</a></li>
+            <li><a class="underline underline-offset-4" href="tel:+16035550173">(603) 555-0173</a></li>
+            <li><a class="underline underline-offset-4" href="docs.html">Project & safety field notes</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap flex flex-wrap justify-between gap-3 border-t border-paper/25 py-5 text-xs text-paper/70">
+        <p>© <span data-year></span> Praxlet. A useful way to learn.</p>
+        <p>Praxlet is a fictional business.</p>
+      </div>
+    </footer>
+    <p
+      data-announcement
+      role="status"
+      aria-live="polite"
+      class="fixed bottom-4 left-4 right-4 z-40 mx-auto max-w-xl border border-ink bg-paper px-5 py-4 text-sm font-semibold shadow-lg"
+      hidden
+    ></p>
+  </body>
+</html>

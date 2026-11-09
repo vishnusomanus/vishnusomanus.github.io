@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 460" role="img" aria-label="A room with a sunny window: one plant sits close to the glass, a second further back in softer light and a third in the shady corner">
+<defs><linearGradient id="beam" x2="1" y2="0"><stop stop-color="#fff6b8" stop-opacity=".95"/><stop offset=".55" stop-color="#fff6b8" stop-opacity=".35"/><stop offset="1" stop-color="#fff6b8" stop-opacity="0"/></linearGradient><linearGradient id="wall" x2="1" y2="0"><stop stop-color="#e9f1d6"/><stop offset="1" stop-color="#cbd8c2"/></linearGradient></defs>
+<rect width="720" height="460" fill="url(#wall)"/>
+<path d="M0 360h720v100H0Z" fill="#c7b392"/><path d="M0 360h720" stroke="#a8946f" stroke-width="4"/>
+<rect x="34" y="60" width="150" height="230" rx="8" fill="#104b46"/><rect x="46" y="72" width="126" height="206" rx="4" fill="#bfe0ea"/>
+<circle cx="88" cy="118" r="26" fill="#ffd65c"/><path d="M88 80v-8M88 164v-8M50 118h-8M134 118h-8M61 91l-6-6M121 151l-6-6M61 145l-6 6M121 85l-6 6" stroke="#ffd65c" stroke-width="5" stroke-linecap="round"/>
+<path d="M109 72v206M46 175h126" stroke="#104b46" stroke-width="7"/>
+<path d="M24 290h170v14H24Z" fill="#0a3633"/>
+<path d="M184 72 720 300v60H470L184 290Z" fill="url(#beam)"/>
+<g transform="translate(140 214)"><path d="M14 76h52l-6-40H20Z" fill="#f58243"/><g fill="#267052"><ellipse cx="40" cy="6" rx="12" ry="18"/><ellipse cx="18" cy="16" rx="11" ry="16" transform="rotate(-40 18 16)"/><ellipse cx="62" cy="16" rx="11" ry="16" transform="rotate(40 62 16)"/></g><circle cx="40" cy="22" r="10" fill="#9bc86d"/><path d="M40 36V18" stroke="#134b3f" stroke-width="3"/></g>
+<g transform="translate(340 236)"><rect x="-8" y="86" width="96" height="38" rx="6" fill="#f5efda"/><path d="M14 86h52l-6-38H20Z" fill="#104b46"/><path d="M40 50C30 20 6 6-10 6c10 18 28 32 50 44Zm0 0c10-30 34-44 50-44-10 18-28 32-50 44Zm0 0c-4-30 0-48 0-58" fill="#267052" stroke="#267052" stroke-width="3"/></g>
+<g transform="translate(560 248)"><path d="M14 112h60l-6-48H20Z" fill="#f5efda"/><path d="M44 66V0M44 66 18 14M44 66 70 10M44 66 4 40M44 66 84 36" stroke="#267052" stroke-width="9" stroke-linecap="round"/></g>
+<g fill="none" stroke="#104b46" stroke-width="3" stroke-dasharray="2 10" stroke-linecap="round"><path d="M180 404h120M400 404h120"/></g>
+<circle cx="180" cy="404" r="10" fill="#ffd65c" stroke="#104b46" stroke-width="3"/><circle cx="380" cy="404" r="10" fill="#fff3c2" stroke="#104b46" stroke-width="3"/><circle cx="604" cy="404" r="10" fill="#e4e8dc" stroke="#104b46" stroke-width="3"/>
+</svg>

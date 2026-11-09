@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="glow" cx="0.82" cy="0.2" r="0.7"><stop offset="0" stop-color="#ffe17a"/><stop offset="1" stop-color="#fbf7ee" stop-opacity="0"/></radialGradient>
+    <linearGradient id="bezel" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#22352e"/><stop offset="0.55" stop-color="#0a1612"/><stop offset="1" stop-color="#1d2f28"/></linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#fbf7ee"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+  <g transform="translate(80 92)">
+    <rect width="56" height="56" rx="17" fill="#0f7457"/>
+    <rect x="15" y="15" width="26" height="26" rx="5" fill="#ffd23f"/>
+    <path d="M15 20.5h26" stroke="#0f7457" stroke-width="3.6"/>
+    <circle cx="34.5" cy="33" r="3" fill="#0f7457"/>
+    <text x="74" y="40" font-family="Sora, Arial, sans-serif" font-size="34" font-weight="800" fill="#0a1612">Pocket</text>
+  </g>
+  <text x="80" y="290" font-family="Sora, Arial, sans-serif" font-size="78" font-weight="800" fill="#0a1612" letter-spacing="-2">Money, finally</text>
+  <text x="80" y="380" font-family="Sora, Arial, sans-serif" font-size="78" font-weight="800" fill="#0f7457" letter-spacing="-2">on your side.</text>
+  <path d="M84 404c120-14 330-18 470-8" fill="none" stroke="#ffd23f" stroke-width="10" stroke-linecap="round"/>
+  <text x="80" y="470" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="30" fill="#2c3b35">Budgets, bills and savings goals</text>
+  <text x="80" y="512" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="30" fill="#2c3b35">that look after themselves.</text>
+  <g transform="translate(830 70) rotate(6)">
+    <rect width="260" height="540" rx="44" fill="url(#bezel)"/>
+    <rect x="9" y="9" width="242" height="522" rx="36" fill="#fbf7ee"/>
+    <rect x="96" y="22" width="68" height="18" rx="9" fill="#050b09"/>
+    <text x="30" y="88" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="14" font-weight="600" fill="#3d4d47">Good morning, Maya</text>
+    <rect x="24" y="106" width="212" height="128" rx="22" fill="#0f7457"/>
+    <text x="42" y="138" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="13" font-weight="600" fill="#e6f2ec">Safe to spend this week</text>
+    <text x="42" y="182" font-family="Sora, Arial, sans-serif" font-size="38" font-weight="800" fill="#ffffff">$412.80</text>
+    <rect x="42" y="202" width="176" height="9" rx="4.5" fill="#ffffff" fill-opacity="0.22"/>
+    <rect x="42" y="202" width="110" height="9" rx="4.5" fill="#ffd23f"/>
+    <rect x="24" y="250" width="102" height="66" rx="16" fill="#ffffff"/>
+    <rect x="134" y="250" width="102" height="66" rx="16" fill="#ffffff"/>
+    <text x="38" y="276" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="12" fill="#3d4d47">Bills due</text>
+    <text x="38" y="300" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="16" font-weight="800" fill="#0a1612">3 this week</text>
+    <text x="148" y="276" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="12" fill="#3d4d47">Saved in Oct</text>
+    <text x="148" y="300" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="16" font-weight="800" fill="#0d5c47">+$320</text>
+    <g font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="13">
+      <rect x="24" y="340" width="34" height="34" rx="11" fill="#ffe9a6"/><text x="70" y="362" font-weight="700" fill="#0a1612">Brightside Bakery</text><text x="236" y="362" text-anchor="end" font-weight="700" fill="#0a1612">−$8.40</text>
+      <rect x="24" y="390" width="34" height="34" rx="11" fill="#d2efe3"/><text x="70" y="412" font-weight="700" fill="#0a1612">Salary</text><text x="236" y="412" text-anchor="end" font-weight="700" fill="#0d5c47">+$2,450</text>
+      <rect x="24" y="440" width="34" height="34" rx="11" fill="#ffd9cc"/><text x="70" y="462" font-weight="700" fill="#0a1612">City Transit</text><text x="236" y="462" text-anchor="end" font-weight="700" fill="#0a1612">−$2.75</text>
+    </g>
+  </g>
+</svg>

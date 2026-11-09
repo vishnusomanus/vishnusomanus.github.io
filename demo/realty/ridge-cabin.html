@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ridge cabin — Harbor & Co</title>
+<meta name="description" content="Ridge cabin in White Mountains, New Hampshire, listed by Harbor & Co at $640,000." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }</style>
+</head>
+<body class="bg-[#f4f7f4] text-[#163028] font-sans antialiased">
+<header class="sticky top-0 z-30 bg-[#163028] text-[#f4f7f4]">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-2xl">Harbor &amp; Co</a>
+    <div class="flex items-center gap-3"><a href="contact.html" class="rounded-full bg-[#d7efe3] px-4 py-2 text-sm font-semibold text-[#163028]">Ask about a house</a><button id="menuBtn" class="rounded-full border border-white/30 px-3 py-1 text-sm md:hidden" aria-expanded="false">Menu</button></div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t border-white/15 pt-3 text-sm md:flex md:basis-auto md:flex-row md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html">Homes</a><a href="about.html">The desk</a><a href="contact.html">Ask</a></nav>
+  </div>
+</header><main class="mx-auto max-w-6xl px-5 py-10 sm:px-8">
+  <p class="text-sm text-[#3e554b]"><a class="underline underline-offset-4" href="index.html">Homes</a> / White Mountains, New Hampshire</p>
+  <img src="images/cedar.jpg" alt="A wooden cabin on a ridge at sunset" class="mt-4 aspect-[16/9] w-full rounded-3xl object-cover" />
+  <div class="mt-8 grid gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+    <div>
+      <p class="text-xs uppercase tracking-[0.16em] text-[#3d6b58]">White Mountains, New Hampshire</p>
+      <h1 class="mt-2 font-display text-5xl">Ridge cabin</h1>
+      <p class="mt-2 text-xl">$640,000</p>
+      <p class="mt-1 text-sm text-[#3e554b]">2 bedrooms · wood heat · 6 acres</p>
+      <p class="mt-6 text-[#3e554b]">A cabin on a ridge, with the evening coming straight at the porch.</p>
+      <p class="mt-3 text-[#3e554b]">Six acres, mostly slope and trees. The cabin is two bedrooms and a room with a stove that is the heat. The metal roof was replaced four winters ago. Access is a shared drive that is plowed by arrangement, not by the town. If you need the road clear before seven, this is the wrong house. If you want the ridge and can wait for the plow, the packet has the survey and the agreement with the neighbor who plows.</p>
+    </div>
+    <form id="ask" class="h-fit rounded-3xl bg-white p-6 shadow-sm ring-1 ring-[#d5e0d8]">
+      <h2 class="font-display text-2xl">Ask for the packet</h2>
+      <p class="mt-2 text-sm text-[#3e554b]">Survey, taxes, and the thing we would not want you to discover on the drive.</p>
+      <label class="mt-4 block text-sm font-semibold">Name<input required name="name" class="mt-1 w-full rounded-xl border border-[#c5d5cc] px-3 py-3 font-normal" /></label>
+      <label class="mt-3 block text-sm font-semibold">Email<input required type="email" name="email" class="mt-1 w-full rounded-xl border border-[#c5d5cc] px-3 py-3 font-normal" /></label>
+      <button class="mt-4 w-full rounded-xl bg-[#163028] py-3 text-sm font-semibold text-white">Send</button>
+    </form>
+  </div>
+</main>
+<script>
+document.getElementById("ask").addEventListener("submit", (event) => {
+  event.preventDefault();
+  const data = Object.fromEntries(new FormData(event.currentTarget));
+  data.house = 'Ridge cabin';
+  sessionStorage.setItem("harbor-ask", JSON.stringify(data));
+  location.href = "sent.html";
+});
+</script><footer class="bg-[#163028] text-[#d7efe3]"><div class="mx-auto grid max-w-6xl gap-6 px-5 py-10 text-sm sm:px-8 md:grid-cols-3"><div><p class="font-display text-2xl text-white">Harbor &amp; Co</p><p class="mt-2">21 Exchange Street<br />Portland, Maine 04101</p></div><div><p>The desk is Jonah Ellis. He answers the same day if you write before three.</p><p class="mt-2">desk@harborandco.com · (555) 018-4410</p></div><div class="space-y-1"><a href="index.html">Homes</a><br /><a href="about.html">The desk</a><br /><a href="contact.html">Ask</a></div></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

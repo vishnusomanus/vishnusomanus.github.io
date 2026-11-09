@@ -1,0 +1,177 @@
+/* Tamarack Pines Campground & Cabins — Canopy template. Tailwind CSS v4 source.
+   Rebuild with: npm run build   (writes assets/css/style.css) */
+@import "tailwindcss" source(none);
+@source "../*.html";
+@source "../assets/js";
+
+/* Brand tokens: change these to re-skin the whole site. */
+@theme {
+  --font-display: "Arvo", "Rockwell", "Roboto Slab", Georgia, serif;
+  --font-sans: "Overpass", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+
+  --color-birch: #f6f4ec;      /* page background, birch white */
+  --color-birch-2: #ebe8dc;    /* panels */
+  --color-birch-3: #dcd8c7;    /* deeper panels, rules */
+  --color-bark: #1c2420;       /* text and map ink */
+  --color-lichen: #4c5850;     /* secondary text */
+  --color-pine: #1f4b37;       /* forest green */
+  --color-pine-2: #2c6249;
+  --color-pine-dark: #12301f;
+  --color-moss: #7f9a5c;       /* decorative */
+  --color-lake: #1b5c86;       /* Lake Superior blue */
+  --color-lake-deep: #0e3a57;
+  --color-lake-light: #d5e6ef;
+  --color-blaze: #f26a21;      /* safety orange: backgrounds with bark text, decoration */
+  --color-blaze-dark: #b23f0a; /* orange text on birch */
+  --color-blaze-light: #ffcfae;/* orange text on dark green and blue */
+  --color-sand: #eadfbf;
+  --color-topo: #c8d1c0;       /* contour lines */
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: no-preference) {
+    html:focus-within { scroll-behavior: smooth; }
+  }
+  body { @apply bg-birch font-sans text-[1.0625rem] leading-relaxed text-bark antialiased; }
+  ::selection { background: var(--color-blaze); color: var(--color-bark); }
+  :focus-visible { outline: 3px solid var(--color-lake); outline-offset: 3px; border-radius: 4px; }
+  .on-dark :focus-visible { outline-color: var(--color-blaze-light); }
+  h1, h2, h3 { text-wrap: balance; }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  img, svg { max-width: 100%; }
+  [hidden] { display: none !important; }
+}
+
+/* Buttons: trail-sign plates with a routed inner border */
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 font-sans text-[0.98rem] font-extrabold leading-none tracking-[0.01em] transition duration-150 disabled:cursor-not-allowed disabled:opacity-50;
+  box-shadow: inset 0 0 0 2px currentColor, inset 0 0 0 4px var(--btn-bg, transparent), 0 3px 0 rgb(18 48 31 / .35);
+  &:hover:not(:disabled) { transform: translateY(-1px); }
+  &:active:not(:disabled) { transform: translateY(1px); box-shadow: inset 0 0 0 2px currentColor, inset 0 0 0 4px var(--btn-bg, transparent); }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+
+  /* Contour-line backgrounds (inline SVG tiles, no external request) */
+  .topo {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='300' viewBox='0 0 420 300'%3E%3Cg fill='none' stroke='%23c8d1c0' stroke-width='1.2'%3E%3Cpath d='M-20 60C60 20 120 90 210 50S340 10 440 60'/%3E%3Cpath d='M-20 100C70 60 130 130 220 92S350 52 440 100'/%3E%3Cpath d='M-20 142C80 104 140 172 228 136S356 96 440 140'/%3E%3Cpath d='M-20 250C60 214 120 280 210 244S340 206 440 250'/%3E%3Cellipse cx='300' cy='196' rx='46' ry='22'/%3E%3Cellipse cx='300' cy='196' rx='24' ry='10'/%3E%3Cellipse cx='80' cy='200' rx='34' ry='16'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  .topo-dark {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='300' viewBox='0 0 420 300'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.09' stroke-width='1.2'%3E%3Cpath d='M-20 60C60 20 120 90 210 50S340 10 440 60'/%3E%3Cpath d='M-20 100C70 60 130 130 220 92S350 52 440 100'/%3E%3Cpath d='M-20 142C80 104 140 172 228 136S356 96 440 140'/%3E%3Cpath d='M-20 250C60 214 120 280 210 244S340 206 440 250'/%3E%3Cellipse cx='300' cy='196' rx='46' ry='22'/%3E%3Cellipse cx='300' cy='196' rx='24' ry='10'/%3E%3Cellipse cx='80' cy='200' rx='34' ry='16'/%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  /* Type */
+  .display { @apply font-display font-bold leading-[1.08] tracking-[-0.015em]; }
+  .eyebrow { @apply inline-flex items-center gap-2 font-sans text-[0.78rem] font-extrabold uppercase tracking-[0.2em] text-pine; }
+  .eyebrow::before { content: ""; @apply inline-block h-3.5 w-2 shrink-0 rounded-[2px] bg-blaze; }
+  .on-dark .eyebrow { color: var(--color-blaze-light); }
+  .lede { @apply text-lg leading-relaxed text-lichen sm:text-xl; }
+  .on-dark .lede { @apply text-birch/85; }
+
+  .btn-blaze { @apply btn bg-blaze text-bark hover:bg-[#ff7d38]; --btn-bg: var(--color-blaze); }
+  .btn-pine { @apply btn bg-pine text-birch hover:bg-pine-dark; --btn-bg: var(--color-pine); }
+  .btn-lake { @apply btn bg-lake text-white hover:bg-lake-deep; --btn-bg: var(--color-lake); }
+  .btn-birch { @apply btn bg-birch text-bark hover:bg-white; --btn-bg: var(--color-birch); }
+  .btn-sm { @apply px-3.5 py-2 text-sm; }
+
+  .link { @apply font-semibold underline decoration-blaze decoration-2 underline-offset-4 transition hover:decoration-pine; }
+  .on-dark .link { @apply decoration-blaze-light hover:decoration-white; }
+
+  /* Cards: map-legend panels */
+  .card { @apply rounded-xl border border-bark/15 bg-white/80 shadow-[0_1px_0_rgb(28_36_32/.06),0_10px_24px_-14px_rgb(28_36_32/.35)]; }
+  .panel { @apply rounded-xl border border-bark/10 bg-birch-2; }
+  .tag { @apply inline-flex items-center gap-1.5 rounded-full border border-current px-2.5 py-0.5 text-[0.74rem] font-extrabold uppercase tracking-[0.12em]; }
+  .blaze-mark { @apply inline-block h-4 w-2.5 shrink-0 rounded-[2px] bg-blaze; }
+  .grid-ticks { background-image: repeating-linear-gradient(90deg, rgb(28 36 32 / .35) 0 1px, transparent 1px 48px); }
+
+  /* Forms */
+  .field-label { @apply mb-1.5 block text-sm font-extrabold text-bark; }
+  .field-hint { @apply mt-1 text-sm text-lichen; }
+  .field {
+    @apply w-full rounded-lg border-2 border-bark/25 bg-white px-3.5 py-2.5 font-sans text-base text-bark transition placeholder:text-lichen/80 focus:border-lake focus:outline-none focus:ring-4 focus:ring-lake/20;
+  }
+  .field[aria-invalid="true"] { @apply border-blaze-dark ring-4 ring-blaze/20; }
+  .field-error { @apply mt-1.5 text-[0.95rem] font-bold text-blaze-dark; }
+  .field-error:empty { display: none; }
+  .on-dark .field-label { color: var(--color-birch); }
+  .on-dark .field { @apply border-white/40 bg-pine-dark text-birch placeholder:text-birch/60 focus:border-white; }
+  .on-dark .field-error { color: var(--color-blaze-light); }
+
+  /* Filter chips */
+  .chip {
+    @apply inline-flex items-center gap-2 rounded-full border-2 border-bark/25 bg-white px-3.5 py-1.5 text-sm font-bold text-bark transition hover:border-bark/60;
+  }
+  .chip[aria-pressed="true"] { @apply border-pine bg-pine text-birch; }
+  .chip .tick { @apply hidden; }
+  .chip[aria-pressed="true"] .tick { @apply inline; }
+
+  /* Site map pins */
+  .site-pin { cursor: pointer; outline: none; transition: opacity .2s; }
+  .site-pin .pin-ring { fill: none; stroke: transparent; stroke-width: 4; }
+  .site-pin:hover .pin-ring { stroke: var(--color-blaze); }
+  .site-pin:focus-visible .pin-ring { stroke: var(--color-lake); stroke-width: 5; }
+  .site-pin[aria-pressed="true"] .pin-ring { stroke: var(--color-blaze); stroke-width: 5; }
+  .site-pin[data-dim] { opacity: .22; cursor: default; }
+
+  /* Calendar */
+  .cal-day {
+    @apply relative flex h-12 w-full flex-col items-center justify-center rounded-md text-[0.95rem] font-bold leading-none tabular-nums text-bark transition sm:h-14;
+  }
+  .cal-day .cal-price { @apply mt-1 text-[0.68rem] font-semibold text-lichen; }
+  .cal-day[data-kind="free"] { @apply bg-white hover:bg-lake-light; box-shadow: inset 0 0 0 1px rgb(28 36 32 / .14); }
+  .cal-day[data-kind="free"][data-peak] { @apply bg-[#eef5ea]; }
+  .cal-day[data-kind="booked"] { @apply cursor-not-allowed bg-birch-3/70 text-lichen line-through; }
+  .cal-day[data-kind="closed"] { @apply cursor-not-allowed bg-transparent text-lichen/70; }
+  .cal-day[data-kind="closed"] .cal-price, .cal-day[data-kind="booked"] .cal-price { @apply no-underline; }
+  .cal-day[data-kind="checkout"] { @apply bg-white; box-shadow: inset 0 0 0 1px rgb(28 36 32 / .14); }
+  .cal-day[data-in-range] { @apply bg-lake-light text-lake-deep; }
+  .cal-day[data-end] { @apply bg-lake text-white; }
+  .cal-day[data-end] .cal-price { @apply text-white/85; }
+  .cal-day[data-today]::after { content: ""; @apply absolute bottom-1 h-1 w-1 rounded-full bg-blaze; }
+
+  /* Steps and timeline */
+  .step-num { @apply grid h-9 w-9 shrink-0 place-items-center rounded-full bg-pine font-display text-lg font-bold text-birch; }
+
+  /* Status dot */
+  .status-dot { @apply relative inline-block h-2.5 w-2.5 shrink-0 rounded-full bg-moss; }
+  [data-state="open"] .status-dot { background: #8fd16a; }
+  [data-state="open"] .status-dot::after { content: ""; @apply absolute inset-0 rounded-full bg-[#8fd16a]; animation: pulse 2.4s ease-out infinite; }
+  [data-state="closed"] .status-dot { background: var(--color-blaze-light); }
+
+  /* Art frames */
+  .art { @apply block overflow-hidden; }
+  .art img { display: block; width: 100%; height: 100%; object-fit: cover; }
+}
+
+@keyframes pulse { from { transform: scale(1); opacity: .7; } to { transform: scale(2.6); opacity: 0; } }
+
+/* Scroll reveal: only hidden when JS is running and motion is allowed. */
+.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s cubic-bezier(.2,.8,.2,1), transform .7s cubic-bezier(.2,.8,.2,1); }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+.menu-open { overflow: hidden; }
+
+/* Back to top button (created by assets/js/main.js). Remove this block to drop it. */
+@layer components {
+  .back-to-top {
+    position: fixed; z-index: 40;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+    display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; cursor: pointer;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, visibility 0s linear .25s, background-color .2s;
+    border-radius: 999px; border: 0; background: var(--color-pine); color: var(--color-birch);
+    box-shadow: inset 0 0 0 2px var(--color-birch), inset 0 0 0 4px var(--color-pine), 0 4px 10px rgb(0 0 0 / .25);
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top:hover { background: var(--color-pine-dark); }
+  .back-to-top-target:focus { outline: none; }
+  @media print { .back-to-top { display: none !important; } }
+}

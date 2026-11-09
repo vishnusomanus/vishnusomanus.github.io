@@ -1,0 +1,849 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Wardline: compliance automation for SOC 2, ISO 27001 and HIPAA</title>
+    <meta
+      name="description"
+      content="Wardline monitors your security controls every hour, collects audit evidence and maps one control library to SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS and NIST CSF. Based in Richmond, Virginia."
+    />
+    <meta name="theme-color" content="#0b1a2c" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Wardline" />
+    <meta property="og:title" content="Wardline: compliance automation for SOC 2, ISO 27001 and HIPAA" />
+    <meta
+      property="og:description"
+      content="Wardline monitors your security controls every hour, collects audit evidence and maps one control library to SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS and NIST CSF. Based in Richmond, Virginia."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@500;600;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=Roboto+Mono:wght@400;500&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="index" class="flex min-h-screen flex-col">
+    <a
+      href="#main"
+      class="sr-only z-50 bg-ink px-4 py-3 text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      >Skip to content</a
+    >
+    <header class="sticky top-0 z-40">
+      <div class="bg-ink text-sm text-frost">
+        <div class="wrap flex min-h-9 items-center justify-between gap-4">
+          <a href="trust.html" class="inline-flex items-center gap-2 hover:text-white"
+            ><span class="pulse size-2 rounded-full bg-teal-bright" aria-hidden="true"></span>Trust center: every
+            Wardline control monitored hourly</a
+          >
+          <p class="hidden items-center gap-5 md:flex">
+            <a class="hover:text-white" href="assessment.html">Readiness assessment</a
+            ><a class="hover:text-white" href="tel:+18045550142">(804) 555-0142</a>
+          </p>
+        </div>
+      </div>
+      <div class="border-b border-line bg-card/95 backdrop-blur">
+        <div class="wrap flex min-h-16 items-center justify-between gap-4">
+          <a href="index.html" class="flex items-center gap-2.5" aria-label="Wardline home"
+            ><svg viewBox="0 0 32 32" class="size-8 shrink-0" aria-hidden="true">
+              <rect width="32" height="32" rx="6" fill="#0b1a2c" />
+              <path
+                d="M16 5.5 25 9v7c0 5.5-3.8 9.3-9 11-5.2-1.7-9-5.5-9-11V9Z"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+              <path d="M3.5 16.5h25" stroke="#5fd0d8" stroke-width="2.2" /></svg
+            ><span class="font-display text-[1.45rem] font-semibold tracking-tight">Wardline</span></a
+          >
+          <nav class="hidden lg:block" aria-label="Main">
+            <ul class="flex items-center gap-0.5">
+              <li><a class="nav-link" href="platform.html">Platform</a></li>
+              <li><a class="nav-link" href="frameworks.html">Frameworks</a></li>
+              <li><a class="nav-link" href="integrations.html">Integrations</a></li>
+              <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+              <li><a class="nav-link" href="customers.html">Customers</a></li>
+              <li><a class="nav-link" href="trust.html">Trust center</a></li>
+            </ul>
+          </nav>
+          <div class="flex items-center gap-2">
+            <a href="contact.html" class="btn btn-sm hidden sm:inline-flex"
+              >Book a demo
+              <svg
+                viewBox="0 0 20 20"
+                class="size-4 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" /></svg
+            ></a>
+            <button
+              id="menu-toggle"
+              type="button"
+              class="grid size-11 place-items-center rounded border border-line-strong lg:hidden"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                class="size-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                aria-hidden="true"
+              >
+                <path d="M4 7h16M4 12h16M4 17h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <nav
+          id="mobile-menu"
+          class="wrap max-h-[calc(100vh-6.5rem)] overflow-y-auto pb-5 lg:hidden"
+          aria-label="Mobile"
+          hidden
+        >
+          <ul class="grid">
+            <li><a class="nav-link border-b border-line py-3 text-base" href="platform.html">Platform</a></li>
+            <li><a class="nav-link border-b border-line py-3 text-base" href="frameworks.html">Frameworks</a></li>
+            <li><a class="nav-link border-b border-line py-3 text-base" href="integrations.html">Integrations</a></li>
+            <li><a class="nav-link border-b border-line py-3 text-base" href="pricing.html">Pricing</a></li>
+            <li><a class="nav-link border-b border-line py-3 text-base" href="customers.html">Customers</a></li>
+            <li><a class="nav-link border-b border-line py-3 text-base" href="trust.html">Trust center</a></li>
+            <li>
+              <a class="nav-link border-b border-line py-3 text-base" href="assessment.html">Readiness assessment</a>
+            </li>
+          </ul>
+          <a href="contact.html" class="btn mt-4 w-full"
+            >Book a demo
+            <svg
+              viewBox="0 0 20 20"
+              class="size-4 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" /></svg
+          ></a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="columns relative border-b border-line bg-card">
+        <div class="wrap grid gap-12 py-14 lg:grid-cols-12 lg:items-center lg:py-20">
+          <div class="lg:col-span-5">
+            <p class="eyebrow">Compliance automation</p>
+            <h1 class="mt-5 text-[2.6rem] leading-[1.05] font-semibold sm:text-6xl">
+              Audit-ready security, checked every hour.
+            </h1>
+            <p class="mt-6 max-w-xl text-lg leading-relaxed text-slate">
+              Wardline connects to the tools you already run, tests <span data-stat="controls">81</span> common controls
+              against SOC 2, ISO 27001, HIPAA, GDPR, PCI DSS and NIST CSF, and keeps the evidence your auditor will ask
+              for.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="contact.html" class="btn"
+                >Book a demo
+                <svg
+                  viewBox="0 0 20 20"
+                  class="size-4 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" /></svg
+              ></a>
+              <a href="assessment.html" class="btn btn-ghost">Take the readiness assessment</a>
+            </div>
+            <p class="mt-8 max-w-md border-l-2 border-teal pl-4 text-[0.97rem] leading-relaxed text-slate">
+              Wardline prepares you for the audit. Your SOC 2 report comes from a licensed CPA firm and your ISO 27001
+              certificate from an accredited certification body.
+            </p>
+          </div>
+          <div class="min-w-0 lg:col-span-7" data-hero-dash>
+            <div class="frame">
+              <div class="flex flex-wrap items-center justify-between gap-3 border-b border-line bg-cloud px-4 py-2.5">
+                <p class="flex items-center gap-2 text-sm font-semibold">
+                  <span class="flex gap-1" aria-hidden="true"
+                    ><span class="size-2.5 rounded-full bg-line-strong"></span
+                    ><span class="size-2.5 rounded-full bg-line-strong"></span
+                    ><span class="size-2.5 rounded-full bg-line-strong"></span></span
+                  >Kelvara · Compliance overview
+                </p>
+                <div class="flex gap-1" role="group" aria-label="Framework shown">
+                  <button
+                    type="button"
+                    class="rounded px-2.5 py-1 text-sm font-semibold text-slate aria-pressed:bg-ink aria-pressed:text-white"
+                    data-dash-fw="soc2"
+                    aria-pressed="true"
+                  >
+                    SOC 2
+                  </button>
+                  <button
+                    type="button"
+                    class="rounded px-2.5 py-1 text-sm font-semibold text-slate aria-pressed:bg-ink aria-pressed:text-white"
+                    data-dash-fw="iso27001"
+                    aria-pressed="false"
+                  >
+                    ISO 27001
+                  </button>
+                  <button
+                    type="button"
+                    class="rounded px-2.5 py-1 text-sm font-semibold text-slate aria-pressed:bg-ink aria-pressed:text-white"
+                    data-dash-fw="hipaa"
+                    aria-pressed="false"
+                  >
+                    HIPAA
+                  </button>
+                </div>
+              </div>
+              <div class="grid gap-px bg-line sm:grid-cols-3">
+                <div class="bg-card p-5 sm:col-span-2">
+                  <p class="mono-label text-slate-2">Audit readiness · <span data-dash-name>SOC 2</span></p>
+                  <p class="mt-2 flex items-baseline gap-3">
+                    <span class="font-display text-5xl font-semibold" data-dash-ready>93%</span
+                    ><span class="text-sm text-slate">of controls passing with current evidence</span>
+                  </p>
+                  <div class="mt-4 h-2.5 rounded-sm bg-cloud" aria-hidden="true">
+                    <div class="h-2.5 rounded-sm bg-teal" style="width: 93%" data-dash-meter></div>
+                  </div>
+                  <div class="mt-6 flex h-3 overflow-hidden rounded-sm" aria-hidden="true">
+                    <span class="bg-pass" data-dash-bar-pass style="width: 93%"></span
+                    ><span class="bg-attn-mark" data-dash-bar-attn style="width: 5%"></span
+                    ><span class="bg-fail" data-dash-bar-fail style="width: 2%"></span>
+                  </div>
+                  <ul class="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm">
+                    <li class="flex items-center gap-1.5">
+                      <span class="status status-pass">✓ Passing</span><span class="font-mono" data-dash-pass>57</span>
+                    </li>
+                    <li class="flex items-center gap-1.5">
+                      <span class="status status-attn">▲ Needs attention</span
+                      ><span class="font-mono" data-dash-attn>3</span>
+                    </li>
+                    <li class="flex items-center gap-1.5">
+                      <span class="status status-fail">✕ Failing</span><span class="font-mono" data-dash-fail>1</span>
+                    </li>
+                    <li class="flex items-center gap-1.5 text-slate-2">
+                      of <span class="font-mono" data-dash-total>61</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-card p-5">
+                  <p class="mono-label text-slate-2">Audit window opens</p>
+                  <p class="mt-2 font-display text-lg leading-snug font-semibold" data-dash-window>in 46 days</p>
+                  <p class="mono-label mt-6 text-slate-2">Evidence this week</p>
+                  <p class="mt-1 font-display text-3xl font-semibold">1,284</p>
+                  <p class="text-sm text-slate">records from 14 integrations</p>
+                </div>
+              </div>
+              <div class="relative overflow-x-auto border-t border-line">
+                <table class="w-full min-w-[30rem] text-left text-sm">
+                  <caption class="sr-only">
+                    Recently tested controls
+                  </caption>
+                  <thead class="bg-cloud text-slate-2">
+                    <tr>
+                      <th scope="col" class="mono-label px-4 py-2 font-medium">Control</th>
+                      <th scope="col" class="mono-label px-4 py-2 font-medium">Owner</th>
+                      <th scope="col" class="mono-label px-4 py-2 font-medium">Tested</th>
+                      <th scope="col" class="mono-label px-4 py-2 font-medium">Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-t border-line">
+                      <td class="px-4 py-2.5">
+                        <span class="font-mono text-xs text-teal-deep">AC-02</span> MFA on workforce accounts
+                      </td>
+                      <td class="px-4 py-2.5">IT</td>
+                      <td class="px-4 py-2.5 font-mono text-xs">9 min ago</td>
+                      <td class="px-4 py-2.5"><span class="status status-pass">✓ Passing</span></td>
+                    </tr>
+                    <tr class="border-t border-line">
+                      <td class="px-4 py-2.5">
+                        <span class="font-mono text-xs text-teal-deep">VL-03</span> Patch timelines by severity
+                      </td>
+                      <td class="px-4 py-2.5">Platform</td>
+                      <td class="px-4 py-2.5 font-mono text-xs">22 min ago</td>
+                      <td class="px-4 py-2.5"><span class="status status-attn">▲ 2 hosts late</span></td>
+                    </tr>
+                    <tr class="border-t border-line">
+                      <td class="px-4 py-2.5">
+                        <span class="font-mono text-xs text-teal-deep">BC-02</span> Restore test this month
+                      </td>
+                      <td class="px-4 py-2.5">SRE</td>
+                      <td class="px-4 py-2.5 font-mono text-xs">41 min ago</td>
+                      <td class="px-4 py-2.5"><span class="status status-pass">✓ Passing</span></td>
+                    </tr>
+                    <tr class="border-t border-line">
+                      <td class="px-4 py-2.5">
+                        <span class="font-mono text-xs text-teal-deep">AC-06</span> Ex-employee access removed
+                      </td>
+                      <td class="px-4 py-2.5">People</td>
+                      <td class="px-4 py-2.5 font-mono text-xs">1 hr ago</td>
+                      <td class="px-4 py-2.5"><span class="status status-fail">✕ 1 account open</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <p class="mt-3 text-sm text-slate-2">
+              Workspace shown with sample data. Switch frameworks to see how one set of tests serves each.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-b border-line bg-paper" aria-labelledby="logos-heading">
+        <div class="wrap py-10">
+          <h2 id="logos-heading" class="text-center text-[0.97rem] font-semibold text-slate">
+            Security and engineering teams at growing companies prepare with Wardline
+          </h2>
+          <ul class="mt-6 grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-4">
+            <li class="flex min-h-16 items-center justify-center gap-2 text-slate">
+              <svg viewBox="0 0 28 28" class="size-7" aria-hidden="true">
+                <path d="M4 4h6v8l8-8h7L15 14l10 10h-7l-8-8v8H4Z" fill="currentColor" /></svg
+              ><span class="font-display text-xl font-bold tracking-tight">Kelvara</span>
+            </li>
+            <li class="flex min-h-16 items-center justify-center gap-2 text-slate">
+              <svg viewBox="0 0 28 28" class="size-7" aria-hidden="true">
+                <circle cx="14" cy="14" r="11" fill="none" stroke="currentColor" stroke-width="2.5" />
+                <path d="M14 8v12M8 14h12" stroke="currentColor" stroke-width="2.5" /></svg
+              ><span class="text-xl font-semibold">Mendwell</span>
+            </li>
+            <li class="flex min-h-16 items-center justify-center gap-2 text-slate">
+              <svg viewBox="0 0 28 28" class="size-7" aria-hidden="true">
+                <path
+                  d="M3 22 14 4l11 18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linejoin="round"
+                />
+                <path d="M9 22h10" stroke="currentColor" stroke-width="2.5" /></svg
+              ><span class="font-mono text-lg font-medium lowercase">hirebeam</span>
+            </li>
+            <li class="flex min-h-16 items-center justify-center gap-2 text-slate">
+              <svg viewBox="0 0 28 28" class="size-7" aria-hidden="true">
+                <rect x="4" y="4" width="20" height="20" rx="10" fill="currentColor" />
+                <path d="M17 17l6 6" stroke="currentColor" stroke-width="3" />
+                <circle cx="14" cy="14" r="5" fill="#fff" /></svg
+              ><span class="font-display text-lg font-semibold tracking-[0.2em]">QUORVI</span>
+            </li>
+            <li class="flex min-h-16 items-center justify-center gap-2 text-slate">
+              <svg viewBox="0 0 28 28" class="size-7" aria-hidden="true">
+                <path d="M6 6h16v4h-6v14h-4V10H6Z" fill="currentColor" /></svg
+              ><span class="text-xl font-bold italic">Tallowby</span>
+            </li>
+            <li class="flex min-h-16 items-center justify-center gap-2 text-slate">
+              <svg viewBox="0 0 28 28" class="size-7" aria-hidden="true">
+                <path d="M2 16c4-6 8-6 12 0s8 6 12 0" fill="none" stroke="currentColor" stroke-width="2.5" />
+                <path
+                  d="M2 10c4-6 8-6 12 0s8 6 12 0"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  opacity=".5"
+                /></svg
+              ><span class="font-display text-xl font-medium">Otterline</span>
+            </li>
+            <li class="flex min-h-16 items-center justify-center gap-2 text-slate">
+              <svg viewBox="0 0 28 28" class="size-7" aria-hidden="true">
+                <path d="M3 5h7l4 12 4-12h7L17 24h-6Z" fill="currentColor" /></svg
+              ><span class="text-xl font-semibold tracking-wide uppercase">Vellmont</span>
+            </li>
+            <li class="flex min-h-16 items-center justify-center gap-2 text-slate">
+              <svg viewBox="0 0 28 28" class="size-7" aria-hidden="true">
+                <path
+                  d="M14 3v22M14 14l-8 9M14 14l8 9M14 9l-6-5M14 9l6-5"
+                  stroke="currentColor"
+                  stroke-width="2.3"
+                  stroke-linecap="round"
+                /></svg
+              ><span class="font-display text-xl font-semibold">Nimbleroot</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="wrap py-20" aria-labelledby="how-heading">
+        <div class="grid gap-6 lg:grid-cols-12">
+          <div class="lg:col-span-5">
+            <p class="eyebrow">How it works</p>
+            <h2 id="how-heading" class="mt-4 text-4xl leading-tight font-semibold">
+              Connect, monitor, fix, audit. Then keep going.
+            </h2>
+          </div>
+          <p class="text-lg leading-relaxed text-slate lg:col-span-6 lg:col-start-7 lg:pt-10">
+            Compliance isn't a project with a finish line. The same tests that get you ready for a first audit keep
+            running afterward, so the second year is a normal week, not a scramble.
+          </p>
+        </div>
+        <ol class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="reveal flex min-w-0 flex-col border-l border-line pl-5">
+            <p class="font-mono text-sm text-slate-2">01</p>
+            <div class="mt-3 border border-line bg-card p-3">
+              <svg viewBox="0 0 240 150" class="h-auto w-full" aria-hidden="true">
+                <path d="M120 120 40 80l80-40 80 40Z" fill="#edf1f5" stroke="#dbe2ea" />
+                <g stroke="#0b6f80" stroke-width="1.5" stroke-dasharray="4 3" fill="none">
+                  <path d="M64 70 112 88" />
+                  <path d="M176 70 128 88" />
+                  <path d="M120 46v30" />
+                </g>
+                <path d="M50 58 64 51l14 7v12l-14 7-14-7Z" fill="#fff" stroke="#0b1a2c" stroke-width="1.5" />
+                <path d="M50 58l14 7 14-7M64 65v12" fill="none" stroke="#0b1a2c" stroke-width="1.2" />
+                <path d="M162 58l14-7 14 7v12l-14 7-14-7Z" fill="#fff" stroke="#0b1a2c" stroke-width="1.5" />
+                <path d="M162 58l14 7 14-7M176 65v12" fill="none" stroke="#0b1a2c" stroke-width="1.2" />
+                <path d="M106 26l14-7 14 7v12l-14 7-14-7Z" fill="#fff" stroke="#0b1a2c" stroke-width="1.5" />
+                <path d="M106 26l14 7 14-7M120 33v12" fill="none" stroke="#0b1a2c" stroke-width="1.2" />
+                <path d="M120 76 138 84v10c0 8-8 14-18 18-10-4-18-10-18-18V84Z" fill="#0b1a2c" />
+                <path d="M98 95h44" stroke="#5fd0d8" stroke-width="2.5" />
+                <circle cx="64" cy="58" r="2.5" fill="#0b6f80" />
+                <circle cx="176" cy="58" r="2.5" fill="#0b6f80" />
+                <circle cx="120" cy="26" r="2.5" fill="#0b6f80" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-2xl font-semibold">Connect</h3>
+            <p class="mt-2 leading-relaxed text-slate">
+              Link your cloud accounts, identity provider, HR system, code host and device management with read-only
+              access. Most teams are connected in an afternoon.
+            </p>
+          </li>
+          <li class="reveal flex min-w-0 flex-col border-l border-line pl-5">
+            <p class="font-mono text-sm text-slate-2">02</p>
+            <div class="mt-3 border border-line bg-card p-3">
+              <svg viewBox="0 0 240 150" class="h-auto w-full" aria-hidden="true">
+                <path d="M40 104 120 64l80 40-80 40Z" fill="#edf1f5" stroke="#dbe2ea" />
+                <path d="M58 96V40l124-12v56Z" fill="#fff" stroke="#0b1a2c" stroke-width="1.5" />
+                <path
+                  d="M68 82 88 70l16 6 18-20 16 8 16-16 18-4"
+                  fill="none"
+                  stroke="#0b6f80"
+                  stroke-width="2.2"
+                  stroke-linejoin="round"
+                />
+                <g fill="#0b6f80">
+                  <circle cx="88" cy="70" r="2.5" />
+                  <circle cx="122" cy="56" r="2.5" />
+                  <circle cx="154" cy="48" r="2.5" />
+                </g>
+                <path d="M68 52h40M68 46h24" stroke="#93a1b3" stroke-width="2" />
+                <path d="M120 112l8-4v10l-8 4Z" fill="#17703f" />
+                <path d="M134 106l8-4v14l-8 4Z" fill="#17703f" />
+                <path d="M148 100l8-4v8l-8 4Z" fill="#e0a21b" />
+                <path d="M162 94l8-4v18l-8 4Z" fill="#17703f" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-2xl font-semibold">Monitor</h3>
+            <p class="mt-2 leading-relaxed text-slate">
+              Wardline tests every mapped control each hour and records the result with a timestamp, so evidence builds
+              up while you work.
+            </p>
+          </li>
+          <li class="reveal flex min-w-0 flex-col border-l border-line pl-5">
+            <p class="font-mono text-sm text-slate-2">03</p>
+            <div class="mt-3 border border-line bg-card p-3">
+              <svg viewBox="0 0 240 150" class="h-auto w-full" aria-hidden="true">
+                <path d="M30 100 110 60l100 50-80 40Z" fill="#edf1f5" stroke="#dbe2ea" />
+                <path d="M44 84 100 56l40 20-56 28Z" fill="#fde6e3" stroke="#b3261e" stroke-width="1.5" />
+                <path d="M82 66 96 72M74 74 102 87" stroke="#b3261e" stroke-width="1.6" />
+                <path d="M118 64 142 52" stroke="#0b1a2c" stroke-width="1.5" stroke-dasharray="3 3" />
+                <path d="m138 49 6 2-3 5" fill="none" stroke="#0b1a2c" stroke-width="1.5" />
+                <path d="M120 100 176 72l40 20-56 28Z" fill="#def3e6" stroke="#17703f" stroke-width="1.5" />
+                <path
+                  d="m156 92 8 4 16-12"
+                  fill="none"
+                  stroke="#17703f"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <circle cx="70" cy="40" r="12" fill="#fff" stroke="#0b1a2c" stroke-width="1.5" />
+                <path d="M70 33v8l5 3" stroke="#0b6f80" stroke-width="2" fill="none" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-2xl font-semibold">Fix</h3>
+            <p class="mt-2 leading-relaxed text-slate">
+              A failing test opens a ticket for the right owner, with the setting to change and the deadline from your
+              own policy.
+            </p>
+          </li>
+          <li class="reveal flex min-w-0 flex-col border-l border-line pl-5">
+            <p class="font-mono text-sm text-slate-2">04</p>
+            <div class="mt-3 border border-line bg-card p-3">
+              <svg viewBox="0 0 240 150" class="h-auto w-full" aria-hidden="true">
+                <path d="M40 104 120 64l80 40-80 40Z" fill="#edf1f5" stroke="#dbe2ea" />
+                <path d="M76 98V34l52-10v64Z" fill="#fff" stroke="#93a1b3" stroke-width="1.5" />
+                <path d="M86 104V40l52-10v64Z" fill="#fff" stroke="#0b1a2c" stroke-width="1.5" />
+                <path d="M96 50l32-6M96 58l32-6M96 66l22-4M96 74l28-5" stroke="#93a1b3" stroke-width="2" />
+                <circle cx="132" cy="84" r="13" fill="#dff1f3" stroke="#0b6f80" stroke-width="1.5" />
+                <path d="m126 84 4 4 8-8" fill="none" stroke="#0b6f80" stroke-width="2" />
+                <circle cx="170" cy="62" r="16" fill="none" stroke="#0b1a2c" stroke-width="3" />
+                <path d="m181 74 14 14" stroke="#0b1a2c" stroke-width="5" stroke-linecap="round" />
+              </svg>
+            </div>
+            <h3 class="mt-5 text-2xl font-semibold">Audit</h3>
+            <p class="mt-2 leading-relaxed text-slate">
+              Give your auditor a read-only workspace with every control, test and document in one place. They do the
+              audit; you skip the screenshot hunt.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="border-y border-line bg-card" aria-labelledby="fw-heading">
+        <div class="wrap py-20">
+          <div class="flex flex-wrap items-end justify-between gap-6">
+            <div class="max-w-2xl">
+              <p class="eyebrow">Frameworks</p>
+              <h2 id="fw-heading" class="mt-4 text-4xl leading-tight font-semibold">
+                One control library. Six frameworks.
+              </h2>
+              <p class="mt-4 text-lg leading-relaxed text-slate">
+                Most security controls serve more than one framework. Wardline maps each control once, so the work you
+                do for SOC 2 counts toward ISO 27001, HIPAA and the rest.
+              </p>
+            </div>
+            <a href="frameworks.html" class="btn btn-ghost"
+              >Compare frameworks
+              <svg
+                viewBox="0 0 20 20"
+                class="size-4 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" /></svg
+            ></a>
+          </div>
+          <ul class="mt-12 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3" data-framework-cards></ul>
+        </div>
+      </section>
+
+      <section class="columns-ink bg-ink text-white" aria-labelledby="numbers-heading">
+        <div class="wrap py-16">
+          <h2 id="numbers-heading" class="sr-only">Wardline in numbers</h2>
+          <dl class="grid gap-px bg-ink-3 sm:grid-cols-2 lg:grid-cols-4">
+            <div class="bg-ink p-6">
+              <dt class="text-frost">Common controls, each mapped once</dt>
+              <dd class="mt-2 font-display text-5xl font-semibold" data-stat="controls">81</dd>
+            </div>
+            <div class="bg-ink p-6">
+              <dt class="text-frost">Integrations with read-only access</dt>
+              <dd class="mt-2 font-display text-5xl font-semibold" data-stat="integrations">24</dd>
+            </div>
+            <div class="bg-ink p-6">
+              <dt class="text-frost">Automated checks across them</dt>
+              <dd class="mt-2 font-display text-5xl font-semibold" data-stat="checks">361</dd>
+            </div>
+            <div class="bg-ink p-6">
+              <dt class="text-frost">How often each test runs</dt>
+              <dd class="mt-2 font-display text-5xl font-semibold">Hourly</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="wrap py-20" aria-labelledby="roles-heading">
+        <div class="max-w-2xl">
+          <p class="eyebrow">Who does what</p>
+          <h2 id="roles-heading" class="mt-4 text-4xl leading-tight font-semibold">
+            Clear about where Wardline stops and your auditor starts.
+          </h2>
+        </div>
+        <div class="mt-10 grid gap-px overflow-hidden rounded-md border border-line bg-line md:grid-cols-2">
+          <div class="bg-card p-8">
+            <h3 class="text-2xl font-semibold">Wardline does</h3>
+            <ul class="mt-5 space-y-3 leading-relaxed">
+              <li class="flex gap-3">
+                <svg
+                  viewBox="0 0 20 20"
+                  class="size-4 text-teal mt-0.5 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m4.5 10.5 3.5 3.5 7.5-8" /></svg
+                >Tests your controls continuously and keeps dated evidence
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  viewBox="0 0 20 20"
+                  class="size-4 text-teal mt-0.5 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m4.5 10.5 3.5 3.5 7.5-8" /></svg
+                >Gives you policy templates to adapt, approve and track
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  viewBox="0 0 20 20"
+                  class="size-4 text-teal mt-0.5 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m4.5 10.5 3.5 3.5 7.5-8" /></svg
+                >Opens tickets for failing controls and follows them to closure
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  viewBox="0 0 20 20"
+                  class="size-4 text-teal mt-0.5 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m4.5 10.5 3.5 3.5 7.5-8" /></svg
+                >Gives your auditor organized, read-only access
+              </li>
+            </ul>
+          </div>
+          <div class="bg-cloud p-8">
+            <h3 class="text-2xl font-semibold">Your independent auditor does</h3>
+            <ul class="mt-5 space-y-3 leading-relaxed">
+              <li class="flex gap-3">
+                <svg
+                  viewBox="0 0 20 20"
+                  class="size-4 text-ink mt-0.5 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m4.5 10.5 3.5 3.5 7.5-8" /></svg
+                >Decides whether your controls meet the criteria
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  viewBox="0 0 20 20"
+                  class="size-4 text-ink mt-0.5 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m4.5 10.5 3.5 3.5 7.5-8" /></svg
+                >Issues the SOC 2 report (a licensed CPA firm)
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  viewBox="0 0 20 20"
+                  class="size-4 text-ink mt-0.5 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m4.5 10.5 3.5 3.5 7.5-8" /></svg
+                >Issues the ISO 27001 certificate (an accredited certification body)
+              </li>
+              <li class="flex gap-3">
+                <svg
+                  viewBox="0 0 20 20"
+                  class="size-4 text-ink mt-0.5 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m4.5 10.5 3.5 3.5 7.5-8" /></svg
+                >Sets the audit scope, sampling and timeline with you
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="mt-4 text-sm text-slate-2">Wardline does not provide legal advice or guarantee an audit outcome.</p>
+      </section>
+
+      <section class="border-t border-line bg-card" aria-labelledby="story-heading">
+        <div class="wrap grid gap-12 py-20 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-7">
+            <p class="eyebrow">Customer story · Kelvara</p>
+            <h2 id="story-heading" class="sr-only">Customer story: Kelvara</h2>
+            <blockquote class="mt-6">
+              <p class="font-display text-3xl leading-snug font-medium sm:text-[2.1rem]">
+                “Our auditors still did their job, and they were thorough. The difference was that every evidence
+                request already had an answer with a date and an owner.”
+              </p>
+              <footer class="mt-6 text-[0.97rem]">
+                <span class="font-semibold">Folasade Okwuosa</span>, Head of Security, Kelvara
+              </footer>
+            </blockquote>
+            <a href="customers.html#kelvara" class="text-link mt-8 inline-block"
+              >Read how Kelvara prepared for SOC 2 and PCI DSS</a
+            >
+          </div>
+          <dl class="grid gap-px overflow-hidden rounded-md border border-line bg-line lg:col-span-4 lg:col-start-9">
+            <div class="bg-card p-5">
+              <dt class="text-sm text-slate">Hours a month collecting evidence</dt>
+              <dd class="mt-1 font-display text-3xl font-semibold">
+                62 <span class="text-slate-2" aria-hidden="true">→</span><span class="sr-only">down to</span> 14
+              </dd>
+            </div>
+            <div class="bg-card p-5">
+              <dt class="text-sm text-slate">Days to answer a security questionnaire</dt>
+              <dd class="mt-1 font-display text-3xl font-semibold">
+                9 <span class="text-slate-2" aria-hidden="true">→</span><span class="sr-only">down to</span> 2
+              </dd>
+            </div>
+            <div class="bg-card p-5">
+              <dt class="text-sm text-slate">Controls tested automatically</dt>
+              <dd class="mt-1 font-display text-3xl font-semibold">71%</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="columns-ink bg-ink text-white" aria-labelledby="cta-heading">
+        <div class="wrap grid gap-10 py-20 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-7">
+            <h2 id="cta-heading" class="text-4xl leading-tight font-semibold">
+              Find out where you stand in five minutes.
+            </h2>
+            <p class="mt-4 max-w-xl text-lg leading-relaxed text-frost">
+              Eight questions give you a readiness score, your biggest gaps in order and a realistic preparation range
+              for your target framework. It's an estimate, not an audit.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-3 lg:col-span-5 lg:justify-end">
+            <a href="assessment.html" class="btn bg-white text-ink hover:bg-teal-soft!"
+              >Start the assessment
+              <svg
+                viewBox="0 0 20 20"
+                class="size-4 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" /></svg
+            ></a>
+            <a href="contact.html" class="btn border border-white/40 bg-transparent hover:bg-white/10!">Book a demo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="columns-ink mt-auto bg-ink text-white">
+      <div class="wrap grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <a href="index.html" class="inline-flex items-center gap-2.5" aria-label="Wardline home"
+            ><svg viewBox="0 0 32 32" class="size-8 shrink-0" aria-hidden="true">
+              <rect width="32" height="32" rx="6" fill="#0b6f80" />
+              <path
+                d="M16 5.5 25 9v7c0 5.5-3.8 9.3-9 11-5.2-1.7-9-5.5-9-11V9Z"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+              <path d="M3.5 16.5h25" stroke="#0b1a2c" stroke-width="2.2" /></svg
+            ><span class="font-display text-[1.45rem] font-semibold">Wardline</span></a
+          >
+          <p class="mt-4 max-w-sm text-[0.97rem] leading-relaxed text-frost">
+            Compliance automation for growing companies. Wardline helps you prepare and stay ready; independent auditors
+            issue the reports and certificates.
+          </p>
+        </div>
+        <div class="lg:col-span-2">
+          <h2 class="mono-label text-teal-bright">Product</h2>
+          <ul class="mt-4 space-y-2.5 text-[0.97rem]">
+            <li><a class="hover:underline" href="platform.html">Platform tour</a></li>
+            <li><a class="hover:underline" href="integrations.html">Integrations</a></li>
+            <li><a class="hover:underline" href="pricing.html">Pricing</a></li>
+            <li><a class="hover:underline" href="assessment.html">Readiness assessment</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-2">
+          <h2 class="mono-label text-teal-bright">Frameworks</h2>
+          <ul class="mt-4 space-y-2.5 text-[0.97rem]">
+            <li><a class="hover:underline" href="frameworks.html?fw=soc2">SOC 2</a></li>
+            <li><a class="hover:underline" href="frameworks.html?fw=iso27001">ISO 27001</a></li>
+            <li><a class="hover:underline" href="frameworks.html?fw=hipaa">HIPAA</a></li>
+            <li><a class="hover:underline" href="frameworks.html?fw=gdpr">GDPR</a></li>
+            <li><a class="hover:underline" href="frameworks.html?fw=pci">PCI DSS</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-4">
+          <h2 class="mono-label text-teal-bright">Richmond office</h2>
+          <address class="mt-4 text-[0.97rem] leading-relaxed not-italic text-frost">
+            1520 E Cary St, Suite 600<br />Richmond, VA 23219
+          </address>
+          <p class="mt-3 text-[0.97rem]">
+            <a class="hover:underline" href="mailto:hello@wardline.example">hello@wardline.example</a><br /><a
+              class="hover:underline"
+              href="tel:+18045550142"
+              >(804) 555-0142</a
+            >
+          </p>
+          <p class="mt-3 text-sm text-frost" data-office-status>Mon–Fri, 8:30 a.m.–5:30 p.m. ET</p>
+          <p class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-[0.97rem]">
+            <a class="hover:underline" href="customers.html">Customers</a
+            ><a class="hover:underline" href="trust.html">Trust center</a
+            ><a class="hover:underline" href="contact.html">Book a demo</a>
+          </p>
+        </div>
+      </div>
+      <div class="wrap flex flex-wrap justify-between gap-3 border-t border-white/15 py-6 text-sm text-frost">
+        <p>© <span data-year>2026</span> Wardline, Inc. Not legal advice. Wardline is a fictional company.</p>
+        <p>Wardline does not issue audit reports or certificates.</p>
+      </div>
+    </footer>
+    <p
+      id="notice"
+      class="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-md rounded bg-ink px-5 py-3.5 text-sm text-white shadow-xl"
+      role="status"
+      aria-live="polite"
+      hidden
+    ></p>
+  </body>
+</html>

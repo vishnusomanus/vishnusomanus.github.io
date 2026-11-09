@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your cart — Kiln &amp; Co.</title>
+  <meta name="description" content="Review the pieces in your cart, apply a promo code and check out.">
+  <meta name="theme-color" content="#f6f1ea">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kiln &amp; Co.">
+  <meta property="og:title" content="Your cart — Kiln &amp; Co.">
+  <meta property="og:description" content="Review the pieces in your cart, apply a promo code and check out.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&amp;family=Inter:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="cart" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm text-cream focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <p class="bg-ink px-4 py-2.5 text-center text-xs tracking-wide text-cream/90">Free shipping on orders over $75 · Thrown by hand in Tacoma, Washington</p>
+  <header id="site-header" class="sticky top-0 z-40 bg-paper/90 backdrop-blur-md transition-shadow duration-300">
+    <div class="container-x grid h-18 grid-cols-[1fr_auto_1fr] items-center gap-4">
+      <div class="flex items-center">
+        <button id="menu-toggle" type="button" class="-ml-2 grid h-11 w-11 place-items-center rounded-full hover:bg-sand lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <svg data-icon-open viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+        <nav aria-label="Main" class="hidden lg:block">
+          <ul class="flex items-center gap-7">
+            <li><a href="shop.html" class="link-underline text-sm aria-[current=page]:bg-[length:100%_1px]">Shop all</a></li>
+            <li><a href="shop.html?category=Vases" class="link-underline text-sm aria-[current=page]:bg-[length:100%_1px]">Vases</a></li>
+            <li><a href="shop.html?category=Mugs%20%26%20Cups" class="link-underline text-sm aria-[current=page]:bg-[length:100%_1px]">Mugs &amp; Cups</a></li>
+            <li><a href="about.html" class="link-underline text-sm aria-[current=page]:bg-[length:100%_1px]">Our studio</a></li>
+            <li><a href="faq.html" class="link-underline text-sm aria-[current=page]:bg-[length:100%_1px]">Help</a></li>
+          </ul>
+        </nav>
+      </div>
+      <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Kiln &amp; Co. home">
+          <svg viewBox="0 0 32 32" class="h-8 w-8 text-clay transition-transform duration-500 group-hover:-rotate-6" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M13 7.5h6v3c0 2 4.5 3.6 4.5 9.2 0 4.3-3 6.3-7.5 6.3s-7.5-2-7.5-6.3c0-5.6 4.5-7.2 4.5-9.2z" fill="#fbf8f3"/><path d="M8.6 21.5c3 1 11.8 1 14.8 0" stroke="#a1441d" stroke-width="1.4" fill="none"/></svg>
+          <span class="font-display text-[1.45rem] font-medium tracking-tight">Kiln &amp; Co.</span>
+        </a>
+      <div class="flex items-center justify-end gap-1">
+        <a href="faq.html#contact" class="hidden rounded-full px-3 py-2 text-sm hover:bg-sand sm:inline-block">Contact</a>
+        <a href="cart.html" data-cart-open class="relative grid h-11 w-11 place-items-center rounded-full hover:bg-sand" aria-controls="cart-drawer" aria-expanded="false" aria-label="Open cart">
+          <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+          <span data-cart-count hidden class="absolute right-0.5 top-0.5 grid h-5 min-w-5 place-items-center rounded-full bg-clay px-1 text-[11px] font-semibold text-white">0</span>
+        </a>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-line bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="shop.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl aria-[current=page]:text-clay">Shop all</a></li>
+          <li><a href="shop.html?category=Vases" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl aria-[current=page]:text-clay">Vases</a></li>
+          <li><a href="shop.html?category=Mugs%20%26%20Cups" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl aria-[current=page]:text-clay">Mugs &amp; Cups</a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl aria-[current=page]:text-clay">Our studio</a></li>
+          <li><a href="faq.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl aria-[current=page]:text-clay">Help</a></li>
+        </ul>
+        <p class="mt-6 text-sm text-stone">Questions? <a href="faq.html#contact" class="underline underline-offset-4">Write to the studio</a></p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="container-x pt-8">
+      <nav aria-label="Breadcrumb"><ol class="flex flex-wrap items-center gap-2 text-sm text-stone"><li><a href="index.html" class="hover:text-ink">Home</a></li><li aria-hidden="true">/</li><li><a href="shop.html" class="hover:text-ink">Shop</a></li><li aria-hidden="true">/</li><li aria-current="page" class="text-ink">Cart</li></ol></nav>
+      <h1 class="mt-6 font-display text-5xl tracking-tight sm:text-6xl">Your cart <span id="cart-title-count" class="text-stone"></span></h1>
+    </section>
+
+    <section id="cart-empty" hidden class="container-x mt-10">
+      <div class="grid items-center gap-10 rounded-[1.75rem] bg-sand p-8 sm:p-12 md:grid-cols-[280px_1fr]">
+        <div class="art mx-auto aspect-[4/5] w-full max-w-[280px] overflow-hidden rounded-2xl" data-art="bud-vase" data-glaze="2" data-view="3"></div>
+        <div>
+          <h2 class="font-display text-4xl">Nothing here yet.</h2>
+          <p class="mt-3 max-w-md text-lg text-stone">Your cart is waiting for its first piece. Most people start with a Daily Mug — it is how we started, too.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="shop.html" class="btn-primary">Shop all ceramics</a>
+            <a href="product.html?id=daily-mug" class="btn-outline">See the Daily Mug</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cart-full" hidden class="container-x mt-10 grid gap-10 lg:grid-cols-[1fr_380px] lg:gap-16">
+      <div>
+        <ul id="cart-lines" class="divide-y divide-line border-y border-line" aria-label="Items in your cart"></ul>
+        <a href="shop.html" class="mt-6 inline-block text-sm underline underline-offset-4 hover:text-clay">← Continue shopping</a>
+      </div>
+      <aside aria-labelledby="summary-title" class="lg:sticky lg:top-24 lg:self-start">
+        <div class="rounded-[1.75rem] bg-cream p-6 ring-1 ring-line sm:p-8">
+          <h2 id="summary-title" class="font-display text-2xl">Order summary</h2>
+          <div id="cart-progress" class="mt-5"></div>
+          <dl class="mt-6 space-y-3 text-sm">
+            <div class="flex justify-between"><dt class="text-stone">Subtotal</dt><dd id="sum-subtotal" class="tabular-nums"></dd></div>
+            <div id="sum-discount-row" hidden class="flex justify-between text-moss"><dt>Discount (WELCOME10)</dt><dd id="sum-discount" class="tabular-nums"></dd></div>
+            <div class="flex justify-between"><dt class="text-stone">Shipping</dt><dd id="sum-shipping" class="tabular-nums"></dd></div>
+            <div class="flex justify-between"><dt class="text-stone">Estimated sales tax (8%)</dt><dd id="sum-tax" class="tabular-nums"></dd></div>
+            <div class="flex justify-between border-t border-line pt-4 text-base font-medium"><dt>Total</dt><dd id="sum-total" class="tabular-nums"></dd></div>
+          </dl>
+
+          <form id="promo-form" class="mt-6" novalidate>
+            <label for="promo" class="field-label">Promo code</label>
+            <div class="flex gap-2">
+              <input id="promo" name="promo" type="text" autocomplete="off" placeholder="WELCOME10" aria-describedby="promo-error" class="field uppercase placeholder:normal-case">
+              <button type="submit" class="btn-outline shrink-0 px-5">Apply</button>
+            </div>
+            <p id="promo-error" class="field-error" aria-live="polite"></p>
+          </form>
+          <div id="promo-applied" hidden class="mt-6 flex items-center justify-between rounded-xl bg-moss/10 px-4 py-3 text-sm text-moss">
+            <span><strong class="font-semibold">WELCOME10</strong> — 10% off applied</span>
+            <button id="promo-remove" type="button" class="underline underline-offset-4">Remove</button>
+          </div>
+
+          <a href="checkout.html" class="btn-primary mt-6 w-full py-4 text-base">Checkout</a>
+          <p class="mt-4 text-center text-xs text-stone">Return any unused piece within 30 days for a full refund.</p>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="mt-24 bg-sand">
+    <div class="container-x grid gap-12 py-16 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Kiln &amp; Co. home">
+          <svg viewBox="0 0 32 32" class="h-8 w-8 text-clay transition-transform duration-500 group-hover:-rotate-6" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M13 7.5h6v3c0 2 4.5 3.6 4.5 9.2 0 4.3-3 6.3-7.5 6.3s-7.5-2-7.5-6.3c0-5.6 4.5-7.2 4.5-9.2z" fill="#fbf8f3"/><path d="M8.6 21.5c3 1 11.8 1 14.8 0" stroke="#a1441d" stroke-width="1.4" fill="none"/></svg>
+          <span class="font-display text-[1.45rem] font-medium tracking-tight">Kiln &amp; Co.</span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-stone">Stoneware for everyday rituals, thrown by hand by twelve potters in a small studio in Tacoma, Washington.</p>
+        <ul class="mt-6 flex gap-5 text-sm">
+          <li><a href="#" class="link-underline">Instagram</a></li>
+          <li><a href="#" class="link-underline">Pinterest</a></li>
+          <li><a href="#" class="link-underline">TikTok</a></li>
+        </ul>
+      </div>
+      <nav aria-label="Shop" class="lg:col-span-2">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-stone">Shop</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="shop.html" class="link-underline">All ceramics</a></li>
+          <li><a href="shop.html?category=Vases" class="link-underline">Vases</a></li>
+          <li><a href="shop.html?category=Mugs%20%26%20Cups" class="link-underline">Mugs &amp; Cups</a></li>
+          <li><a href="shop.html?category=Bowls" class="link-underline">Bowls</a></li>
+          <li><a href="shop.html?category=Plates" class="link-underline">Plates</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Help" class="lg:col-span-2">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-stone">Help</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="faq.html" class="link-underline">FAQ</a></li>
+          <li><a href="faq.html#shipping" class="link-underline">Shipping &amp; returns</a></li>
+          <li><a href="faq.html#care" class="link-underline">Care guide</a></li>
+          <li><a href="faq.html#contact" class="link-underline">Contact us</a></li>
+          <li><a href="about.html" class="link-underline">Our studio</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-4">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-stone">Studio letters</h2>
+        <p class="mt-4 text-sm text-stone">New glazes, kiln openings and the occasional seconds sale. Once a month.</p>
+        <form data-form="newsletter" class="mt-4" novalidate>
+          <label for="footer-email" class="sr-only">Email address</label>
+          <div class="flex gap-2">
+            <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@example.com" class="field">
+            <button type="submit" class="btn-primary shrink-0">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="border-t border-line">
+      <div class="container-x flex flex-col gap-3 py-6 text-xs text-stone sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Kiln &amp; Co. All prices in USD, before sales tax.</p>
+        <p>Orders leave the studio within 2–3 business days. Template by Freeframe.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cart-overlay" hidden class="fixed inset-0 z-50 bg-ink/40 opacity-0 backdrop-blur-[2px] transition-opacity duration-300"></div>
+  <aside id="cart-drawer" hidden role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title" class="fixed inset-y-0 right-0 z-50 flex w-full max-w-md translate-x-full flex-col bg-paper shadow-2xl transition-transform duration-300 ease-[var(--ease-soft)]">
+    <div class="flex items-center justify-between border-b border-line px-6 py-5">
+      <h2 id="cart-drawer-title" class="font-display text-2xl">Your cart</h2>
+      <button type="button" data-drawer-close class="grid h-10 w-10 place-items-center rounded-full hover:bg-sand" aria-label="Close cart">
+        <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div data-drawer-progress class="border-b border-line bg-sand/60 px-6 py-4"></div>
+    <div data-drawer-body class="flex-1 overflow-y-auto px-6"></div>
+    <div data-drawer-foot class="border-t border-line px-6 py-5">
+      <div class="flex justify-between text-base"><span>Subtotal</span><span data-drawer-subtotal class="font-medium tabular-nums">$0.00</span></div>
+      <p class="mt-1 text-xs text-stone">Shipping, sales tax and discounts are calculated at checkout.</p>
+      <div class="mt-4 grid grid-cols-2 gap-3">
+        <a href="cart.html" class="btn-outline">View cart</a>
+        <a href="checkout.html" class="btn-primary">Checkout</a>
+      </div>
+    </div>
+  </aside>
+  <div id="toast" role="status" aria-live="polite" class="pointer-events-none fixed inset-x-4 bottom-4 z-[55] mx-auto flex max-w-md translate-y-6 items-center gap-3 rounded-2xl bg-ink px-5 py-4 text-sm text-cream opacity-0 shadow-xl transition duration-300 sm:left-auto sm:right-6 sm:mx-0">
+    <svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-[#b9c79c]" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m4 10.5 4 4 8-9"/></svg>
+    <p data-toast-msg class="flex-1"></p>
+    <button type="button" data-toast-close class="grid h-7 w-7 place-items-center rounded-full text-cream/70 hover:text-cream" aria-label="Dismiss"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+  </div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+<rect width="1200" height="630" fill="#effaf8"/>
+<circle cx="1010" cy="140" r="260" fill="#d5f2ec"/><circle cx="1100" cy="560" r="160" fill="#eaf4fb"/>
+<g transform="translate(90 110)"><rect width="96" height="96" rx="26" fill="#1b625b"/>
+<g transform="translate(14 15) scale(2.8)"><path d="M7 3c-2.2 0-4 1.8-4 4.3 0 2 .9 3.3 1.4 5.3.5 2.2.8 8.4 2.9 8.4 1.7 0 1.6-5 3-5h1.4c1.4 0 1.3 5 3 5 2.1 0 2.4-6.2 2.9-8.4.5-2 1.4-3.3 1.4-5.3C21 4.8 19.2 3 17 3c-1.8 0-2.8 1-5 1S8.8 3 7 3Z" fill="#fff"/></g></g>
+<text x="90" y="330" font-family="Fraunces, Georgia, serif" font-size="84" font-weight="600" fill="#13293d">Brightside Dental</text>
+<text x="90" y="410" font-family="Figtree, Arial, sans-serif" font-size="38" fill="#34495e">Gentle, modern dental care for the whole family</text>
+<text x="90" y="530" font-family="Figtree, Arial, sans-serif" font-size="32" font-weight="700" fill="#1b625b">Book online · Evening &amp; Saturday hours</text>
+</svg>

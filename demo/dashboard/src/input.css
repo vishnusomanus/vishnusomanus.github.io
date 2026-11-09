@@ -1,0 +1,205 @@
+/* Northstar Admin — Tailwind CSS v4 source.
+   Change the brand tokens below, then rebuild with `npm run build`. */
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+/* Dark mode follows the `dark` class on <html> (set by the theme toggle). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --color-brand-950: #1e1b4b;
+}
+
+/* Chart colors (read by assets/js/main.js through CSS variables). */
+:root {
+  --chart-1: #6366f1;
+  --chart-2: #06b6d4;
+  --chart-3: #f59e0b;
+  --chart-4: #ec4899;
+  --chart-5: #10b981;
+  --chart-grid: #e4e4e7;
+  --chart-text: #71717a;
+  --chart-surface: #ffffff;
+  --heat-0: #f4f4f5;
+  color-scheme: light;
+}
+.dark {
+  --chart-1: #818cf8;
+  --chart-2: #22d3ee;
+  --chart-3: #fbbf24;
+  --chart-4: #f472b6;
+  --chart-5: #34d399;
+  --chart-grid: #27272a;
+  --chart-text: #a1a1aa;
+  --chart-surface: #18181b;
+  --heat-0: #1f1f23;
+  color-scheme: dark;
+}
+
+@layer base {
+  @media (prefers-reduced-motion: no-preference) {
+    html:focus-within { scroll-behavior: smooth; }
+  }
+  ::selection { background: var(--color-brand-200); color: var(--color-brand-950); }
+  :focus-visible { outline: 2px solid var(--color-brand-500); outline-offset: 2px; }
+  [hidden] { display: none !important; }
+  body { font-feature-settings: "cv11", "ss01"; }
+}
+
+@layer components {
+  .skip-link {
+    @apply absolute -top-20 left-4 z-[100] rounded-lg bg-zinc-900 px-4 py-2 text-sm font-semibold text-white transition-all focus:top-4 dark:bg-white dark:text-zinc-900;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-3.5 py-2 text-sm font-medium whitespace-nowrap transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary { @apply bg-brand-600 text-white shadow-sm hover:bg-brand-500; }
+  .btn-secondary {
+    @apply bg-white text-zinc-800 shadow-sm ring-1 ring-zinc-200 ring-inset hover:bg-zinc-50 dark:bg-zinc-900 dark:text-zinc-100 dark:ring-zinc-700 dark:hover:bg-zinc-800;
+  }
+  .btn-ghost { @apply text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-white; }
+  .btn-danger { @apply bg-red-600 text-white shadow-sm hover:bg-red-500; }
+  .icon-btn {
+    @apply relative inline-grid size-9 shrink-0 place-items-center rounded-lg text-zinc-500 transition-colors hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-white;
+  }
+
+  /* Surfaces */
+  .card { @apply rounded-xl border border-zinc-200 bg-white shadow-[0_1px_2px_rgb(0_0_0/0.04)] dark:border-zinc-800 dark:bg-zinc-900; }
+  .card-head { @apply flex flex-wrap items-center justify-between gap-3 border-b border-zinc-200 px-5 py-4 dark:border-zinc-800; }
+  .card-title { @apply text-sm font-semibold text-zinc-900 dark:text-white; }
+  .muted { @apply text-zinc-500 dark:text-zinc-400; }
+
+  /* Forms */
+  .label { @apply mb-1.5 block text-sm font-medium text-zinc-700 dark:text-zinc-300; }
+  .field {
+    @apply block w-full rounded-lg border-0 bg-white px-3 py-2 text-sm text-zinc-900 shadow-sm ring-1 ring-zinc-200 ring-inset placeholder:text-zinc-400 focus:ring-2 focus:ring-brand-500 focus:outline-none dark:bg-zinc-950 dark:text-white dark:ring-zinc-700;
+  }
+  .field[aria-invalid="true"] { @apply ring-2 ring-red-500; }
+  .field-error { @apply mt-1.5 text-xs font-medium text-red-600 dark:text-red-400; }
+  .checkbox { @apply size-4 rounded border-zinc-300 accent-brand-600 dark:border-zinc-600; }
+
+  /* Badges */
+  .badge { @apply inline-flex items-center gap-1.5 rounded-full px-2 py-0.5 text-xs font-medium ring-1 ring-inset; }
+  .badge::before { content: ""; @apply size-1.5 rounded-full bg-current; }
+  .badge-green { @apply bg-emerald-50 text-emerald-700 ring-emerald-600/20 dark:bg-emerald-500/10 dark:text-emerald-400 dark:ring-emerald-400/20; }
+  .badge-amber { @apply bg-amber-50 text-amber-700 ring-amber-600/20 dark:bg-amber-500/10 dark:text-amber-400 dark:ring-amber-400/20; }
+  .badge-red { @apply bg-red-50 text-red-700 ring-red-600/20 dark:bg-red-500/10 dark:text-red-400 dark:ring-red-400/20; }
+  .badge-zinc { @apply bg-zinc-50 text-zinc-600 ring-zinc-500/20 dark:bg-zinc-500/10 dark:text-zinc-400 dark:ring-zinc-400/20; }
+  .badge-blue { @apply bg-brand-50 text-brand-700 ring-brand-600/20 dark:bg-brand-500/10 dark:text-brand-300 dark:ring-brand-400/20; }
+
+  /* Sidebar */
+  .sidebar { @apply w-64 transition-[width,transform] duration-300 ease-out; }
+  .nav-item {
+    @apply flex items-center gap-3 rounded-lg px-2.5 py-2 text-sm font-medium text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800/70 dark:hover:text-white;
+  }
+  .nav-item svg { @apply size-5 shrink-0; }
+  .nav-item[aria-current="page"] { @apply bg-white text-zinc-900 shadow-sm ring-1 ring-zinc-200 dark:bg-zinc-800 dark:text-white dark:ring-zinc-700; }
+  .nav-item[aria-current="page"] svg { @apply text-brand-600 dark:text-brand-400; }
+  .nav-heading { @apply px-2.5 pt-5 pb-1.5 text-[0.7rem] font-semibold tracking-wider text-zinc-500 uppercase dark:text-zinc-400; }
+
+  @media (width >= 64rem) {
+    .sb-collapsed .sidebar { width: 4.5rem; }
+    .sb-collapsed .sb-label { display: none; }
+    .sb-collapsed .nav-item { justify-content: center; padding-inline: 0; }
+    .sb-collapsed .sb-hide { display: none; }
+    .sb-collapsed .collapse-icon { transform: rotate(180deg); }
+  }
+
+  /* Dropdowns, modals, panels */
+  .menu {
+    @apply absolute right-0 z-50 mt-2 origin-top-right rounded-xl border border-zinc-200 bg-white p-1.5 shadow-xl shadow-zinc-900/10 dark:border-zinc-700 dark:bg-zinc-900 dark:shadow-black/40;
+  }
+  .menu-item {
+    @apply flex w-full items-center gap-2.5 rounded-lg px-2.5 py-2 text-left text-sm text-zinc-700 hover:bg-zinc-100 focus:bg-zinc-100 focus:outline-none dark:text-zinc-300 dark:hover:bg-zinc-800 dark:focus:bg-zinc-800;
+  }
+  .overlay { @apply fixed inset-0 z-[60] bg-zinc-950/40 backdrop-blur-[2px]; }
+
+  /* Tabs */
+  .tab {
+    @apply -mb-px border-b-2 border-transparent px-1 pb-3 text-sm font-medium whitespace-nowrap text-zinc-500 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white;
+  }
+  .tab[aria-selected="true"], .tab[aria-pressed="true"] { @apply border-brand-600 text-zinc-900 dark:border-brand-400 dark:text-white; }
+  .seg { @apply inline-flex rounded-lg bg-zinc-100 p-0.5 dark:bg-zinc-800; }
+  .seg button { @apply rounded-md px-2.5 py-1 text-xs font-medium text-zinc-600 dark:text-zinc-400; }
+  .seg button[aria-pressed="true"], .seg button[aria-selected="true"] { @apply bg-white text-zinc-900 shadow-sm dark:bg-zinc-950 dark:text-white; }
+
+  /* Switch */
+  .switch { @apply relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full bg-zinc-200 transition-colors dark:bg-zinc-700; }
+  .switch[aria-checked="true"] { @apply bg-brand-600; }
+  .switch span { @apply absolute top-0.5 left-0.5 size-5 rounded-full bg-white shadow transition-transform; }
+  .switch[aria-checked="true"] span { @apply translate-x-5; }
+
+  /* Tables */
+  .table { @apply w-full text-left text-sm; }
+  .table th { @apply px-4 py-3 text-xs font-medium whitespace-nowrap text-zinc-500 dark:text-zinc-400; }
+  .table td { @apply px-4 py-3 whitespace-nowrap; }
+  .table tbody tr { @apply border-t border-zinc-100 dark:border-zinc-800; }
+  .table tbody tr:hover { @apply bg-zinc-50/70 dark:bg-zinc-800/40; }
+  .sort-btn { @apply inline-flex items-center gap-1 hover:text-zinc-900 dark:hover:text-white; }
+  .sort-btn svg { @apply size-3.5 opacity-40; }
+  [aria-sort="ascending"] .sort-btn svg, [aria-sort="descending"] .sort-btn svg { @apply opacity-100; }
+  [aria-sort="descending"] .sort-btn svg { transform: rotate(180deg); }
+
+  /* Charts */
+  .chart-tip {
+    @apply pointer-events-none absolute z-20 min-w-32 rounded-lg border border-zinc-200 bg-white/95 px-3 py-2 text-xs shadow-lg backdrop-blur dark:border-zinc-700 dark:bg-zinc-900/95;
+  }
+
+  /* Toast */
+  .toast {
+    @apply pointer-events-none fixed right-4 bottom-4 z-[80] flex translate-y-3 items-center gap-2.5 rounded-xl bg-zinc-900 px-4 py-3 text-sm font-medium text-white opacity-0 shadow-xl transition-all duration-200 dark:bg-white dark:text-zinc-900;
+  }
+  .toast.is-visible { @apply translate-y-0 opacity-100; }
+
+  /* Reveal */
+  .reveal { opacity: 0; transform: translateY(10px); transition: opacity .5s ease, transform .5s ease; }
+  .reveal.is-in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    .sidebar, .toast, .switch span { transition: none; }
+  }
+}
+
+/* Back to top button (created by assets/js/main.js). Remove this block to drop it. */
+@layer components {
+  .back-to-top {
+    position: fixed; z-index: 40;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px) + var(--btt-lift, 0px));
+    display: grid; place-items: center; width: 2.75rem; height: 2.75rem; padding: 0; cursor: pointer;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, bottom .25s ease, visibility 0s linear .25s,
+      background-color .2s, color .2s, border-color .2s, box-shadow .2s;
+    @apply rounded-xl bg-white text-zinc-700 shadow-lg ring-1 ring-zinc-200 shadow-zinc-900/10
+      hover:bg-zinc-50 hover:text-brand-600
+      dark:bg-zinc-900 dark:text-zinc-200 dark:ring-zinc-700 dark:shadow-black/40 dark:hover:bg-zinc-800 dark:hover:text-white;
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; transition: transform .2s ease; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top.is-visible:hover svg { transform: translateY(-2px); }
+  .back-to-top:active { transform: translateY(1px); }
+  .back-to-top:focus-visible { @apply outline-2 outline-offset-2 outline-brand-500; }
+  .back-to-top-target:focus { outline: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top, .back-to-top svg { transition: opacity .01s linear, visibility 0s linear; transform: none !important; }
+  }
+  @media print { .back-to-top { display: none !important; } }
+}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Your cart — Hollyhock, florist in Macon</title>
+  <meta name="description" content="Check your bouquets, delivery days and gift messages, and see the delivery charge for your ZIP code before checkout.">
+  <meta name="theme-color" content="#ffffff">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Hollyhock">
+  <meta property="og:title" content="Your cart — Hollyhock, florist in Macon">
+  <meta property="og:description" content="Check your bouquets, delivery days and gift messages, and see the delivery charge for your ZIP code before checkout.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400..800;1,400..800&amp;family=Work+Sans:ital,wght@0,400..700;1,400..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // Season colors before first paint, from the month in Macon (main.js keeps it up to date).
+    document.documentElement.classList.add('js');
+    try { document.documentElement.setAttribute('data-season', ['winter', 'winter', 'spring', 'spring', 'spring', 'summer', 'summer', 'summer', 'autumn', 'autumn', 'autumn', 'winter'][+new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', month: 'numeric' }).format(new Date()) - 1]); } catch (e) {}
+  </script>
+</head>
+<body data-page="basket" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[80] rounded-md bg-ink px-5 py-3 text-sm font-semibold text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <div class="on-dark text-white" style="background:var(--season-ink)">
+    <div class="container-x flex min-h-10 items-center justify-center gap-x-6 py-2 text-[13.5px] font-medium sm:justify-between">
+      <p class="inline-flex items-center gap-2 text-center"><svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-delivery-band>Order by 1pm, Monday through Saturday, for same-day delivery in Macon</span></p>
+      <p class="hidden shrink-0 sm:block">Free handwritten card with every bouquet</p>
+    </div>
+  </div>
+  <header id="site-header" class="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur transition-shadow duration-300">
+    <div class="container-x flex h-[4.5rem] items-center justify-between gap-4">
+      <a href="index.html" class="group inline-flex min-w-0 items-center gap-2">
+        <svg viewBox="0 0 32 40" class="h-10 w-8 shrink-0 transition-transform duration-500 group-hover:-rotate-6" aria-hidden="true"><path d="M16 39V6" stroke="#0d6a44" stroke-width="2.2" stroke-linecap="round"/><path d="M16 37c-4.5 0-7.5-2.4-8.6-5.6 4.4 0 7.4 2.3 8.6 5.6Zm0-2c4.5 0 7.5-2.4 8.6-5.6-4.4 0-7.4 2.3-8.6 5.6Z" fill="#2f8a5b"/><circle cx="16" cy="27.5" r="7" fill="#e0306f" stroke="#14201a" stroke-width="1.4"/><circle cx="16" cy="27.5" r="2.2" fill="#ffb020"/><circle cx="16" cy="16" r="5.6" fill="#f47fa4" stroke="#14201a" stroke-width="1.4"/><circle cx="16" cy="16" r="1.8" fill="#ffb020"/><circle cx="16" cy="6.5" r="4" fill="#ffc2d4" stroke="#14201a" stroke-width="1.4"/></svg>
+        <span class="flex flex-col"><span class="font-display text-[1.6rem] font-semibold italic leading-none tracking-[-0.02em]">Hollyhock</span><span class="mt-1 hidden text-[10.5px] font-semibold uppercase tracking-[0.24em] text-muted min-[400px]:block">Flowers · Macon</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1">
+          <li><a href="shop.html" class="relative px-3 py-2 text-[15px] font-medium text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-3 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-0.5 aria-[current=page]:after:bg-fern">Shop</a></li>
+          <li><a href="subscriptions.html" class="relative px-3 py-2 text-[15px] font-medium text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-3 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-0.5 aria-[current=page]:after:bg-fern">Subscriptions</a></li>
+          <li><a href="weddings.html" class="relative px-3 py-2 text-[15px] font-medium text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-3 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-0.5 aria-[current=page]:after:bg-fern">Weddings &amp; events</a></li>
+          <li><a href="care.html" class="relative px-3 py-2 text-[15px] font-medium text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-3 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-0.5 aria-[current=page]:after:bg-fern">Flower care</a></li>
+          <li><a href="about.html" class="relative px-3 py-2 text-[15px] font-medium text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-3 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-0.5 aria-[current=page]:after:bg-fern">About &amp; contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex shrink-0 items-center gap-2">
+        <a href="basket.html" data-basket-link aria-current="page" aria-label="Cart, 0 items" class="relative inline-flex h-11 items-center gap-2 rounded-md bg-ink px-3.5 font-semibold text-white transition hover:bg-fern sm:px-4">
+          <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h16l-1.6 10.2a2 2 0 0 1-2 1.8H7.6a2 2 0 0 1-2-1.8Z"/><path d="M8.5 9 12 3l3.5 6"/></svg>
+          <span class="hidden text-[15px] sm:inline">Cart</span>
+          <span data-basket-count hidden class="absolute -right-2 -top-2 grid h-6 min-w-6 place-items-center rounded-full bg-marigold px-1 text-xs font-bold text-ink ring-2 ring-white">0</span>
+        </a>
+        <button id="menu-toggle" type="button" class="grid size-11 place-items-center rounded-md ring-[1.5px] ring-ink/15 ring-inset lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-line bg-white lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="index.html" class="flex items-center justify-between border-b border-line py-4 font-display text-[1.7rem] font-semibold aria-[current=page]:italic aria-[current=page]:text-fern">Home<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="shop.html" class="flex items-center justify-between border-b border-line py-4 font-display text-[1.7rem] font-semibold aria-[current=page]:italic aria-[current=page]:text-fern">Shop<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="subscriptions.html" class="flex items-center justify-between border-b border-line py-4 font-display text-[1.7rem] font-semibold aria-[current=page]:italic aria-[current=page]:text-fern">Subscriptions<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="weddings.html" class="flex items-center justify-between border-b border-line py-4 font-display text-[1.7rem] font-semibold aria-[current=page]:italic aria-[current=page]:text-fern">Weddings &amp; events<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="care.html" class="flex items-center justify-between border-b border-line py-4 font-display text-[1.7rem] font-semibold aria-[current=page]:italic aria-[current=page]:text-fern">Flower care<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b border-line py-4 font-display text-[1.7rem] font-semibold aria-[current=page]:italic aria-[current=page]:text-fern">About &amp; contact<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="basket.html" aria-current="page" class="flex items-center justify-between border-b border-line py-4 font-display text-[1.7rem] font-semibold aria-[current=page]:italic aria-[current=page]:text-fern">Cart<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+        </ul>
+        <p class="mt-5 text-sm text-muted">447 Mulberry Street, Macon · <a href="tel:+14785550163" class="font-semibold text-ink underline underline-offset-4">(478) 555-0163</a></p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+<section class="container-x pb-6 pt-12 sm:pt-16">
+      <p class="kicker">Cart</p>
+      <h1 class="display mt-4 text-[3rem] sm:text-[4.2rem]">Your cart <span class="whitespace-nowrap font-sans text-xl font-medium tracking-normal text-muted" data-basket-heading-count></span></h1>
+    </section>
+
+    <section id="basket-empty" hidden class="container-x">
+      <div class="grid items-center gap-8 rounded-2xl bg-snow p-8 sm:p-12 md:grid-cols-[1fr_14rem]">
+        <div>
+          <p class="display text-[2.2rem]">Nothing in here yet.</p>
+          <p class="mt-3 max-w-md text-lg leading-relaxed text-muted">Order by 1pm, Monday through Saturday, and we can still deliver today.</p>
+          <a href="shop.html" class="btn-primary mt-6">Shop bouquets</a>
+          <div id="basket-last" hidden class="mt-8 border-t border-line pt-6"></div>
+        </div>
+        <svg viewBox="0 0 200 200" class="mx-auto w-44" aria-hidden="true"><ellipse cx="100" cy="186" rx="60" ry="6" fill="#14201a" opacity=".1"/><path d="M60 110h80l-8 74H68Z" fill="#fff0c7" stroke="#14201a" stroke-width="2.4" stroke-linejoin="round"/><path d="M60 110h80" stroke="#14201a" stroke-width="2.4"/><path d="M100 110V40" stroke="#3f7d4f" stroke-width="3" stroke-linecap="round"/><path d="M100 80c-14-2-22-12-22-20 12 0 20 8 22 20Z" fill="#3f9a68" stroke="#14201a" stroke-width="2"/><circle cx="100" cy="36" r="14" fill="#f47fa4" stroke="#14201a" stroke-width="2.2"/><circle cx="100" cy="36" r="5" fill="#ffb020"/><path d="M106 60c4-2 6-4 6-7" stroke="#14201a" stroke-width="2" fill="none" stroke-linecap="round" opacity=".5"/></svg>
+      </div>
+    </section>
+
+    <section id="basket-filled" hidden class="container-x">
+      <p id="basket-moved" hidden role="status" class="mb-6 rounded-lg bg-butter px-5 py-4 font-medium"></p>
+      <div class="grid gap-10 lg:grid-cols-12 lg:gap-14">
+        <div class="lg:col-span-7">
+          <ul id="basket-lines" class="divide-y divide-line border-y border-line"></ul>
+          <a href="shop.html" class="link mt-6 inline-block">Keep shopping</a>
+        </div>
+        <aside aria-labelledby="summary-title" class="lg:col-span-5">
+          <div class="rounded-xl bg-snow p-6 sm:p-8 lg:sticky lg:top-28">
+            <h2 id="summary-title" class="font-display text-[2rem] font-semibold leading-tight">Delivery &amp; total</h2>
+            <form id="postcode-form" class="mt-5" novalidate>
+              <label for="postcode" class="field-label">Delivery ZIP code</label>
+              <div class="flex gap-2" data-error-after>
+                <input id="postcode" name="postcode" type="text" autocomplete="postal-code" autocapitalize="characters" placeholder="31201" class="field min-w-0 flex-1 uppercase" aria-describedby="postcode-hint">
+                <button type="submit" class="btn-ink shrink-0">Check</button>
+              </div>
+              <p id="postcode-hint" class="hint">We deliver across Macon, to nearby towns and to parts of Middle Georgia.</p>
+            </form>
+            <div id="postcode-result" class="mt-3 text-[15px] leading-relaxed" aria-live="polite"></div>
+            <dl id="basket-summary" class="mt-6 grid gap-3 border-t border-ink/15 pt-5"></dl>
+            <p id="basket-days" class="mt-3 text-sm text-muted"></p>
+            <a id="basket-checkout" href="checkout.html" class="btn-primary mt-6 w-full py-4 text-base" aria-describedby="basket-checkout-hint">Continue to checkout</a>
+            <p id="basket-checkout-hint" class="mt-2 min-h-5 text-center text-sm text-muted" aria-live="polite"></p>
+            <p class="mt-4 text-sm text-muted">Each delivery day is charged once, however many bouquets are going out that day. Prices don’t include sales tax.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="on-dark mt-28 bg-fern-deep text-white">
+    <div class="container-x pt-16">
+      <p class="display max-w-4xl text-[2.6rem] text-white sm:text-[4rem]">Say it with something <em class="font-medium text-marigold">that grew.</em></p>
+    </div>
+    <div class="container-x grid gap-12 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <div>
+        <form data-form="newsletter" class="max-w-sm" novalidate>
+          <label for="nl-email" class="block text-lg font-semibold">The flower note</label>
+          <p id="nl-hint" class="mt-0.5 text-[15px] text-white/80">One email a month: what’s in season, care tips and the occasional workshop.</p>
+          <div class="mt-3 flex gap-2" data-error-after>
+            <input id="nl-email" name="email" type="email" required autocomplete="email" data-label="Your email" aria-describedby="nl-hint" placeholder="you@example.com" class="min-w-0 flex-1 rounded-md border border-white/30 bg-white/10 px-3.5 py-2.5 text-white placeholder:text-white/60 focus:border-white focus:outline-none">
+            <button type="submit" class="btn shrink-0 bg-marigold px-5 py-2.5 text-ink hover:bg-white">Sign up</button>
+          </div>
+        </form>
+      </div>
+      <div>
+        <h2 class="text-[12.5px] font-semibold uppercase tracking-[0.2em] text-marigold">Studio</h2>
+        <address class="mt-4 not-italic leading-relaxed text-white/85">447 Mulberry Street<br>Macon, GA 31201</address>
+        <p class="mt-3"><a href="tel:+14785550163" class="text-white/85 underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white">(478) 555-0163</a></p>
+        <p class="mt-1"><a href="mailto:hello@hollyhockflowers.example" class="text-white/85 underline decoration-white/30 underline-offset-4 hover:text-white hover:decoration-white">hello@hollyhockflowers.example</a></p>
+        <p class="mt-4 inline-flex items-center gap-2 text-sm text-white/85" data-open-status>Open Monday through Saturday</p>
+      </div>
+      <div>
+        <h2 class="text-[12.5px] font-semibold uppercase tracking-[0.2em] text-marigold">Shop</h2>
+        <ul class="mt-4 space-y-2">
+          <li><a href="shop.html" class="text-white/85 hover:text-white hover:underline hover:underline-offset-4">All bouquets</a></li>
+          <li><a href="shop.html?occasion=birthday" class="text-white/85 hover:text-white hover:underline hover:underline-offset-4">Birthday flowers</a></li>
+          <li><a href="shop.html?occasion=sympathy" class="text-white/85 hover:text-white hover:underline hover:underline-offset-4">Sympathy flowers</a></li>
+          <li><a href="subscriptions.html" class="text-white/85 hover:text-white hover:underline hover:underline-offset-4">Subscriptions</a></li>
+          <li><a href="weddings.html" class="text-white/85 hover:text-white hover:underline hover:underline-offset-4">Weddings &amp; events</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-[12.5px] font-semibold uppercase tracking-[0.2em] text-marigold">Help</h2>
+        <ul class="mt-4 space-y-2">
+          <li><a href="about.html#delivery" class="text-white/85 hover:text-white hover:underline hover:underline-offset-4">Delivery areas</a></li>
+          <li><a href="care.html" class="text-white/85 hover:text-white hover:underline hover:underline-offset-4">Flower care guide</a></li>
+          <li><a href="about.html#contact" class="text-white/85 hover:text-white hover:underline hover:underline-offset-4">Contact us</a></li>
+          <li><a href="basket.html" class="text-white/85 hover:text-white hover:underline hover:underline-offset-4">Your cart</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-white/15">
+      <div class="container-x flex flex-col gap-2 py-6 text-sm text-white/75 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Hollyhock Flowers LLC. A Freeframe template.</p>
+        <p>Same-day delivery Monday through Saturday when you order by 1pm.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" hidden data-show="false" role="status" aria-live="polite" class="on-dark fixed inset-x-3 bottom-4 z-[70] mx-auto flex max-w-lg items-start gap-3 rounded-lg bg-ink p-4 pl-5 text-white shadow-2xl sm:bottom-6">
+    <svg viewBox="0 0 24 24" class="mt-0.5 size-5 shrink-0 text-marigold" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4 10-10"/></svg>
+    <p data-toast-text class="flex-1 text-[15px] leading-snug"></p>
+    <button type="button" data-toast-close class="grid size-8 shrink-0 place-items-center rounded-md text-white/80 hover:bg-white/10 hover:text-white" aria-label="Dismiss">
+      <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

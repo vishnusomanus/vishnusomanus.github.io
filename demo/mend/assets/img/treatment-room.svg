@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480" fill="none" stroke="#18224a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Floor -->
+  <path d="M0 440h640v40H0Z" fill="#e8e3d7" stroke="none"/>
+  <path d="M0 440h640" />
+  <path d="M60 456h120M250 466h160M470 454h130" stroke="#c9c1ae" stroke-width="1.5"/>
+  <!-- Window with a roller blind and the Downs outside -->
+  <rect x="40" y="48" width="160" height="196" rx="3" fill="#ffffff"/>
+  <path d="M42 196c30-16 56-22 86-14 22 6 44 2 70-10v70H42Z" fill="#c0cbea" stroke="none"/>
+  <path d="M42 214c40-10 80-4 156-26" stroke="#97a7d8" stroke-width="1.5"/>
+  <rect x="40" y="48" width="160" height="196" rx="3"/>
+  <path d="M120 48v196M40 150h160" stroke-width="2"/>
+  <rect x="34" y="40" width="172" height="12" rx="3" fill="#dfe5f5"/>
+  <path d="M46 52h148v62H46Z" fill="#fbf3b8" stroke-width="1.6"/>
+  <path d="M46 114h148" stroke-width="3"/>
+  <path d="M182 114v26" stroke-width="1.4"/><circle cx="182" cy="143" r="3" fill="#18224a"/>
+  <path d="M30 244h180" stroke-width="3"/>
+  <!-- Wall chart: the spine -->
+  <rect x="428" y="56" width="136" height="180" rx="2" fill="#ffffff"/>
+  <path d="M440 72h60M440 82h40" stroke="#97a7d8" stroke-width="2"/>
+  <g fill="#fbf3b8" stroke-width="1.6">
+    <rect x="484" y="96" width="22" height="11" rx="3"/><rect x="482" y="111" width="24" height="12" rx="3"/><rect x="481" y="127" width="26" height="13" rx="3"/>
+    <rect x="482" y="144" width="26" height="13" rx="3"/><rect x="484" y="161" width="28" height="14" rx="3"/><rect x="486" y="179" width="30" height="15" rx="3"/>
+  </g>
+  <path d="M488 198c6 10 22 12 30 0l-4 20h-22Z" fill="#f6e46b" stroke-width="1.6"/>
+  <path d="M446 128h22M446 160h22M534 112h18M534 176h18" stroke="#cf5446" stroke-width="1.5"/>
+  <path d="M468 128l12 2M468 160l12 4M534 112l-26 4M534 176l-18 2" stroke="#cf5446" stroke-width="1" stroke-dasharray="2 3"/>
+  <path d="M440 222h112" stroke="#97a7d8" stroke-width="2"/>
+  <!-- Hook with a resistance band -->
+  <path d="M600 112v10a6 6 0 0 1-12 0" stroke-width="2"/>
+  <path d="M594 126c-8 40-10 90-4 132 4 20 16 20 18 0 6-42 2-92-6-132" stroke="#dc6f62" stroke-width="5"/>
+  <!-- Plant -->
+  <path d="M40 400h52l-6 40H46Z" fill="#f2eee4"/>
+  <g fill="#9fb99a" stroke-width="1.8">
+    <path d="M66 400c-4-30-22-46-40-50 4 22 18 40 40 50Z"/>
+    <path d="M66 400c0-38 10-66 30-80 6 30-6 62-30 80Z"/>
+    <path d="M66 400c-10-24-6-52 6-70-14 6-24 22-26 40"/>
+  </g>
+  <path d="M66 400c-4-30-22-46-40-50M66 400c0-38 10-66 30-80" stroke-width="1.4"/>
+  <!-- Treatment table -->
+  <rect x="150" y="300" width="330" height="24" rx="8" fill="#2a3b81"/>
+  <path d="M380 300h92a8 8 0 0 1 8 8v0H380Z" fill="#ffffff" stroke-width="1.6"/>
+  <rect x="160" y="282" width="56" height="20" rx="10" fill="#fbf3b8"/>
+  <path d="M178 284v16M196 284v16" stroke-width="1.4"/>
+  <ellipse cx="460" cy="312" rx="8" ry="4" fill="#18224a" stroke="none"/>
+  <rect x="170" y="324" width="290" height="10" rx="3" fill="#c0cbea"/>
+  <rect x="288" y="334" width="44" height="82" rx="4" fill="#dfe5f5"/>
+  <path d="M296 350h28M296 366h28M296 382h28M296 398h28" stroke-width="1.4"/>
+  <rect x="196" y="414" width="228" height="14" rx="4" fill="#c0cbea"/>
+  <circle cx="212" cy="434" r="7" fill="#ffffff"/><circle cx="408" cy="434" r="7" fill="#ffffff"/>
+  <!-- Kettlebell -->
+  <path d="M106 398c0-18 32-18 32 0" stroke-width="5"/>
+  <path d="M104 398c0-18 36-18 36 0" stroke-width="1.6"/>
+  <circle cx="122" cy="418" r="22" fill="#212f66"/>
+  <path d="M112 410c4-6 10-8 16-6" stroke="#97a7d8" stroke-width="2"/>
+  <!-- Foam roller -->
+  <rect x="478" y="406" width="118" height="34" rx="6" fill="#f6e46b"/>
+  <ellipse cx="596" cy="423" rx="10" ry="17" fill="#fbf3b8"/>
+  <ellipse cx="596" cy="423" rx="4" ry="7" fill="#ffffff" stroke-width="1.6"/>
+  <path d="M496 408v30M514 408v30M532 408v30M550 408v30M568 408v30" stroke-width="1.4" stroke-dasharray="3 4"/>
+  <!-- Towel folded on the table end -->
+  <path d="M410 286h56v14h-56Z" fill="#f8ddd9"/>
+  <path d="M410 293h56" stroke-width="1.4"/>
+</svg>

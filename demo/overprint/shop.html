@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop — riso prints, zines and stickers | Pomelo Press</title>
+  <meta name="description" content="Numbered riso prints, zines, stickers and postcards by illustrator Pipa Valdespino, printed at Pomelo Press in Louisville and mailed twice a week.">
+  <meta name="theme-color" content="#f7f0e1">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pomelo Press">
+  <meta property="og:title" content="Shop — riso prints, zines and stickers | Pomelo Press">
+  <meta property="og:description" content="Numbered riso prints, zines, stickers and postcards by illustrator Pipa Valdespino, printed at Pomelo Press in Louisville and mailed twice a week.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&amp;family=Quicksand:wght@500;600;700&amp;family=Rammetto+One&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>(function(){var d=document.documentElement,t=null;d.classList.add('js');try{t=localStorage.getItem('overprint-theme');}catch(e){}if(t!=='light'&&t!=='dark')t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';if(t==='dark')d.classList.add('dark');})();</script>
+</head>
+<body class="flex min-h-screen flex-col" data-page="shop">
+  <a href="#main" class="sr-only z-[70] rounded-full bg-ink px-5 py-3 font-bold text-paper focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+
+  <header id="site-header" class="sticky top-0 z-50 border-b-2 border-ink bg-paper/95 backdrop-blur-sm transition-shadow">
+    <div class="wrap flex h-[4.5rem] items-center justify-between gap-3">
+      <a href="index.html" class="flex items-center gap-2.5 rounded-full">
+        <svg class="size-10 shrink-0" viewBox="0 0 40 40" aria-hidden="true"><circle cx="16" cy="21" r="13" class="fill-yellow"/><circle cx="24" cy="18" r="12" class="fill-pink blend"/><circle cx="19" cy="22" r="6" class="fill-blue blend"/></svg>
+        <span class="leading-none"><span class="block font-display text-[1.3rem] sm:text-[1.45rem]">Pomelo Press</span><span class="stamp mt-1 hidden text-[0.7rem] text-muted sm:block">Pipa Valdespino · Illustration</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1">
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="shop.html" class="nav-link" aria-current="page">Shop</a></li>
+          <li><a href="commissions.html" class="nav-link">Commissions</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Dark paper">
+          <svg data-icon-moon class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+          <svg data-icon-sun class="hidden size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        </button>
+        <a href="checkout.html" class="icon-btn" data-cart-open aria-label="Cart, 0 items">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span data-cart-count class="absolute -top-1.5 -right-1.5 grid h-5 min-w-5 place-items-center rounded-full border-2 border-ink bg-pink px-1 font-mono text-[0.72rem] font-bold text-on-ink" hidden>0</span>
+        </a>
+        <a href="commissions.html" class="btn btn-pink btn-sm hidden xl:inline-flex">Commission me</a>
+        <button type="button" id="menu-button" class="icon-btn lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span data-icon-open><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h13"/></svg></span>
+          <span data-icon-close class="hidden"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t-2 border-ink bg-paper lg:hidden" hidden>
+      <nav aria-label="Mobile" class="wrap pt-3 pb-12">
+        <ul>
+          <li><a href="index.html" class="mnav-link">Home</a></li>
+          <li><a href="work.html" class="mnav-link">Work</a></li>
+          <li><a href="shop.html" class="mnav-link" aria-current="page">Shop</a></li>
+          <li><a href="commissions.html" class="mnav-link">Commissions</a></li>
+          <li><a href="about.html" class="mnav-link">About</a></li>
+          <li><a href="contact.html" class="mnav-link">Contact</a></li>
+        </ul>
+        <a href="commissions.html" class="btn btn-pink mt-8 w-full">Commission me</a>
+        <p class="mt-6 text-muted">Louisville, Kentucky · <a href="mailto:hello@pomelopress.example" class="link">hello@pomelopress.example</a></p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="relative overflow-hidden border-b-2 border-ink" aria-labelledby="page-title">
+      <div class="halftone-pink blend pointer-events-none absolute -top-24 -left-24 size-80 rounded-full opacity-60" aria-hidden="true"></div>
+      <div class="wrap relative grid gap-8 pt-12 pb-10 sm:pt-16 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-end">
+        <div>
+          <p class="stamp text-pink-text">The shop</p>
+          <h1 id="page-title" class="h-page misreg mt-3" data-ink="Prints, zines and stickers">Prints, zines and stickers</h1>
+          <p class="lead mt-5 max-w-2xl">Everything is printed on the studio riso in numbered editions, one ink at a time, so no two copies are quite the same. When an edition is gone, it’s gone.</p>
+        </div>
+        <ul class="card grid gap-3 p-5 text-[0.98rem] shadow-[5px_5px_0_var(--color-yellow)]">
+          <li class="flex gap-3"><span class="text-pink-text" aria-hidden="true">✶</span><span>Next mail day: <strong data-mail-day>Friday, October 30</strong></span></li>
+          <li class="flex gap-3"><span class="text-pink-text" aria-hidden="true">✶</span><span>Free US shipping over $75, otherwise $6 flat</span></li>
+          <li class="flex gap-3"><span class="text-pink-text" aria-hidden="true">✶</span><span>Prints ship flat between boards, never rolled</span></li>
+        </ul>
+      </div>
+    </section>
+    <section class="wrap py-10 sm:py-14" aria-label="Products">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div class="flex flex-wrap gap-2" role="group" aria-label="Filter the shop" data-shop-filters></div>
+        <p class="text-muted" data-shop-count aria-live="polite">Showing 12 items</p>
+      </div>
+      <div class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3" data-shop-grid></div>
+    </section>
+    <section class="border-t-2 border-ink bg-paper-2 py-14 sm:py-20" aria-labelledby="faq-title">
+      <div class="wrap grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
+        <div>
+          <h2 id="faq-title" class="h-section">Good to know</h2>
+          <p class="mt-3">Questions about an order? Email <a href="mailto:shop@pomelopress.example" class="link">shop@pomelopress.example</a> or call <a href="tel:+15025550186" class="link">(502) 555-0186</a>. Dez, who packs every order, will answer.</p>
+        </div>
+        <div class="space-y-3">
+          <details class="card group p-5"><summary class="flex items-center justify-between gap-4 font-bold">Why do no two prints look the same?<span class="font-display text-xl transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-3">A riso prints one ink per pass through the drum, and the paper never lands in exactly the same place twice. Each copy is a little off register and a little speckled. That’s the charm, and why every print is signed and numbered.</p></details>
+          <details class="card group p-5"><summary class="flex items-center justify-between gap-4 font-bold">Do the colors fade?<span class="font-display text-xl transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-3">Fluorescent pink fades faster than the other inks in direct sun. Frame prints behind UV glass, or hang them on a wall that doesn’t catch the afternoon light.</p></details>
+          <details class="card group p-5"><summary class="flex items-center justify-between gap-4 font-bold">Can I return something?<span class="font-display text-xl transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-3">Yes, within 30 days if it arrives in the condition it left in. If a print is damaged in the mail, send a photo and we’ll send another from the same edition.</p></details>
+          <details class="card group p-5"><summary class="flex items-center justify-between gap-4 font-bold">Do you ship outside the US?<span class="font-display text-xl transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-3">Not through the shop yet. Email us and we’ll quote international postage by hand.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="on-blue relative mt-auto overflow-hidden border-t-2 border-ink bg-blue text-on-blue">
+    <div class="halftone-pink blend pointer-events-none absolute -top-24 -right-24 size-80 rounded-full opacity-70" aria-hidden="true"></div>
+    <div class="halftone-yellow blend pointer-events-none absolute -bottom-28 left-[30%] size-72 rounded-full opacity-60" aria-hidden="true"></div>
+    <div class="wrap relative pt-16 pb-10">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.3fr]">
+        <div>
+          <p class="font-display text-[clamp(2rem,4vw,2.8rem)] leading-none">Pomelo Press</p>
+          <p class="mt-4 max-w-sm text-lg">Illustration by Pipa Valdespino for magazines, picture books, packaging and posters. Drawn in plates, printed in three inks, mailed from Louisville.</p>
+          <a href="index.html#stickers" class="mt-5 inline-flex items-center gap-2 rounded-full border-2 border-current px-4 py-2 font-bold hover:bg-yellow hover:text-on-ink">Get a free sticker sheet <span aria-hidden="true">→</span></a>
+        </div>
+        <div>
+          <h2 class="stamp">Pages</h2>
+          <ul class="mt-4 space-y-2 font-bold">
+            <li><a href="work.html" class="underline-offset-4 hover:underline">Work</a></li>
+            <li><a href="shop.html" class="underline-offset-4 hover:underline">Shop</a></li>
+            <li><a href="commissions.html" class="underline-offset-4 hover:underline">Commissions</a></li>
+            <li><a href="about.html" class="underline-offset-4 hover:underline">About and events</a></li>
+            <li><a href="contact.html" class="underline-offset-4 hover:underline">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="stamp">The work</h2>
+          <ul class="mt-4 space-y-2 font-bold">
+            <li><a href="work.html?type=editorial" class="underline-offset-4 hover:underline">Editorial</a></li>
+            <li><a href="work.html?type=picture-books" class="underline-offset-4 hover:underline">Picture books</a></li>
+            <li><a href="work.html?type=packaging" class="underline-offset-4 hover:underline">Packaging</a></li>
+            <li><a href="work.html?type=posters" class="underline-offset-4 hover:underline">Posters</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="stamp">Studio</h2>
+          <address class="mt-4 not-italic">Studio 4, 1830 Frankfort Ave<br>Louisville, KY 40206</address>
+          <p class="mt-3"><a href="mailto:hello@pomelopress.example" class="font-bold underline underline-offset-4">hello@pomelopress.example</a><br><a href="tel:+15025550184" class="font-bold underline underline-offset-4">(502) 555-0184</a></p>
+          <p class="mt-3">Weekdays 10am to 5pm Eastern. Open studio on the first Saturday of the month.</p>
+        </div>
+      </div>
+      <div class="stamp mt-14 flex flex-col gap-2 border-t-2 border-dashed border-current/50 pt-6 sm:flex-row sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Pomelo Press. Printed in Louisville.</p>
+        <p>Pomelo Press, Pipa Valdespino and the clients shown are fictional.</p>
+      </div>
+    </div>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

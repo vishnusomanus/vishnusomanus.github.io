@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#f6f4ef"/>
+  <g stroke="#2b3be0" stroke-opacity=".07" stroke-width="2"><path d="M-100 630 260 0M-50 630 310 0M0 630 360 0M50 630 410 0M100 630 460 0M150 630 510 0M200 630 560 0M250 630 610 0M300 630 660 0"/></g>
+  <path d="M830 0h370v630H720Z" fill="#2b3be0"/>
+  <g stroke="#fff" stroke-opacity=".08" stroke-width="2"><path d="M620 630 980 0M680 630 1040 0M740 630 1100 0M800 630 1160 0M860 630 1220 0M920 630 1280 0"/></g>
+  <circle cx="1010" cy="300" r="150" fill="#ff5a33"/>
+  <g stroke="#fff" stroke-width="7" stroke-linecap="round"><path d="M760 250h100M740 315h130M780 380h80"/></g>
+  <g transform="translate(800 90) scale(3.9)" fill="none" stroke="#fff" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"><path d="M68 36 56 66M67 40l13 12 12-10M67 40l-15 6-6 13M56 66l20 6-4 24M56 66l-8 21-18 10"/></g>
+  
+  <circle cx="1092" cy="176" r="39" fill="#fff"/>
+  <g transform="translate(70 70)"><path d="M13 4h33L35 44H2Z" fill="#2b3be0"/><path d="M20.5 13H33M18.5 21h10M16.5 13l-4 22" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/><path d="M30 36h12" stroke="#ff5a33" stroke-width="5" stroke-linecap="round"/></g>
+  <text x="132" y="112" font-family="Sofia Sans Extra Condensed, Arial Narrow, sans-serif" font-style="italic" font-weight="900" font-size="44" fill="#0f1330">FOOTHILL</text>
+  <g font-family="Sofia Sans Extra Condensed, Arial Narrow, sans-serif" font-style="italic" font-weight="900" font-size="100" fill="#0f1330">
+    <text x="70" y="270">TRAIN WITH</text>
+    <text x="70" y="370" fill="#e8431c">PURPOSE.</text>
+    <text x="70" y="470" fill="#2b3be0">MOVE FOR LIFE.</text>
+  </g>
+  <text x="74" y="545" font-family="Sofia Sans, Arial, sans-serif" font-weight="800" font-size="30" fill="#383d5a">Personal training · Colorado Springs, Colorado</text>
+</svg>

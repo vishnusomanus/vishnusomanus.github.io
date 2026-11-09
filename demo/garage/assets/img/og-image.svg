@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 630" width="1200" height="630">
+<rect width="1200" height="630" fill="#ffd21f"/>
+<g stroke="#121316" stroke-opacity=".07" stroke-width="12"><path d="M0 0 630 630M120 0l630 630M240 0l630 630M360 0l630 630M480 0l630 630M600 0l600 600M720 0l480 480M840 0l360 360M960 0l240 240M-120 0l630 630M-240 0l630 630M-360 0l630 630"/></g>
+<rect y="0" width="1200" height="86" fill="#121316"/>
+<g transform="translate(60 21)"><path d="M7 0h37v37l-7 7H0V7Z" fill="#ffd21f"/><path d="M11 12 31 12 13 33Z" fill="none" stroke="#121316" stroke-width="3.2" stroke-linejoin="round"/><circle cx="11" cy="12" r="4.2" fill="#121316"/><circle cx="31" cy="12" r="4.2" fill="#121316"/><circle cx="13" cy="33" r="4.2" fill="#121316"/></g>
+<text x="120" y="60" font-family="Saira Extra Condensed, Arial Narrow, sans-serif" font-size="40" font-weight="900" fill="#fff" letter-spacing="2">BELLCRANK MOTOR WORKS</text>
+<text x="1140" y="58" text-anchor="end" font-family="Chakra Petch, monospace" font-size="22" font-weight="600" fill="#ffd21f">KEENE, NH · EST. 1994</text>
+<text x="60" y="230" font-family="Saira Extra Condensed, Arial Narrow, sans-serif" font-size="128" font-weight="900" fill="#121316">FIXED RIGHT.</text>
+<rect x="60" y="256" width="500" height="120" fill="#121316"/>
+<text x="76" y="352" font-family="Saira Extra Condensed, Arial Narrow, sans-serif" font-size="112" font-weight="900" fill="#ffd21f">PRICED FIRST.</text>
+<text x="60" y="440" font-family="Saira, Arial, sans-serif" font-size="30" font-weight="600" fill="#121316">Inspections $45 · Repairs · EV</text>
+<g transform="translate(60 482)"><rect width="330" height="92" rx="10" fill="#fff" stroke="#121316" stroke-width="6"/><rect x="3" y="3" width="46" height="86" rx="6" fill="#1d4fa3"/><text x="26" y="58" text-anchor="middle" font-family="Saira, Arial, sans-serif" font-size="22" font-weight="700" fill="#fff">NH</text><text x="190" y="66" text-anchor="middle" font-family="Saira Extra Condensed, Arial Narrow, sans-serif" font-size="60" font-weight="900" letter-spacing="4" fill="#121316">294 1086</text></g>
+<g transform="translate(628 160) scale(0.86)"><rect x="-10" y="-10" width="660" height="340" fill="#fff" stroke="#121316" stroke-width="5"/>
+              
+              <defs>
+                <g id="wheel">
+                  <circle r="42" fill="#121316"/>
+                  <circle r="34" fill="none" stroke="#545961" stroke-width="2" stroke-dasharray="2 5"/>
+                  <circle r="27" fill="#fff" stroke="#121316" stroke-width="3"/>
+                  <circle r="19" fill="none" stroke="#121316" stroke-width="1.5" stroke-dasharray="3 3"/>
+                  <path d="M0-9V-25M8.6-2.8 23.8-7.7M5.3 7.3l9.4 12.9M-5.3 7.3l-9.4 12.9M-8.6-2.8-23.8-7.7" stroke="#121316" stroke-width="4" stroke-linecap="round"/>
+                  <circle r="7" fill="#121316"/>
+                </g>
+              </defs>
+              <g fill="none" stroke="#121316" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M36 14v22M604 14v22" stroke-width="1.5"/>
+                <path d="M40 25h560" stroke-width="1.5"/>
+                <path d="m40 25 10-5v10Zm560 0-10-5v10Z" fill="#121316" stroke-width="1"/>
+              </g>
+              <rect x="276" y="14" width="88" height="22" fill="#fff"/>
+              <text x="320" y="30" text-anchor="middle" font-family="Chakra Petch, monospace" font-size="15" font-weight="600" fill="#121316">160 IN</text>
+              <g stroke="#121316" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M36 232V200Q38 182 58 177L170 160Q205 154 240 148L318 102Q326 96 340 96H512Q528 96 536 106L584 158Q600 166 602 186L604 232H548A58 58 0 0 0 432 232H208A58 58 0 0 0 92 232Z" fill="#fff" stroke-width="3.5"/>
+                <path d="M262 150 322 108Q328 104 338 104H420V150Z" fill="#121316" fill-opacity=".14" stroke-width="2.5"/>
+                <path d="M432 104H508Q518 104 526 112L560 150H432Z" fill="#121316" fill-opacity=".14" stroke-width="2.5"/>
+                <path d="M250 156V226M426 102V226M562 152 548 214" fill="none" stroke-width="2"/>
+                <path d="M60 192Q330 178 598 182" fill="none" stroke-width="1.5"/>
+                <path d="M208 224H432" fill="none" stroke-width="1.5"/>
+                <path d="M370 164h24M468 164h24" fill="none" stroke-width="4"/>
+                <path d="M40 188 88 180 92 192 44 198Z" fill="#ffd21f" stroke-width="2.5"/>
+                <path d="M588 162 600 180 590 184Z" fill="#c01b14" stroke-width="2"/>
+                <path d="M268 146l14-12 10 4-6 12Z" fill="#fff" stroke-width="2.5"/>
+                <path d="M38 212h22M38 220h22" fill="none" stroke-width="2"/>
+                <path d="M560 234h30v7h-30Z" fill="#fff" stroke-width="2.5"/>
+              </g>
+              <use href="#wheel" x="150" y="242"/>
+              <use href="#wheel" x="490" y="242"/>
+              <path d="M8 286H632" stroke="#121316" stroke-width="2.5"/>
+              <path d="M20 296l10-10M44 296l10-10M68 296l10-10M92 296l10-10M116 296l10-10M140 296l10-10M164 296l10-10M188 296l10-10M212 296l10-10M236 296l10-10M260 296l10-10M284 296l10-10M308 296l10-10M332 296l10-10M356 296l10-10M380 296l10-10M404 296l10-10M428 296l10-10M452 296l10-10M476 296l10-10M500 296l10-10M524 296l10-10M548 296l10-10M572 296l10-10M596 296l10-10" stroke="#121316" stroke-width="1.5"/>
+              <g stroke="#121316" stroke-width="1.5" stroke-dasharray="4 3" fill="none">
+                <path d="M66 186 30 128"/><path d="M290 128 262 66"/><path d="M386 134 392 66"/><path d="M490 242 566 304"/><path d="M118 270 54 306"/><path d="M170 214 214 306"/><path d="M590 238 622 262"/>
+              </g>
+              <g font-family="Chakra Petch, monospace" font-size="15" font-weight="600" text-anchor="middle">
+                <g fill="#121316"><circle cx="30" cy="118" r="14"/><circle cx="258" cy="56" r="14"/><circle cx="392" cy="56" r="14"/><circle cx="330" cy="206" r="14"/><circle cx="570" cy="306" r="14"/><circle cx="48" cy="306" r="14"/><circle cx="220" cy="306" r="14"/><circle cx="624" cy="268" r="14"/></g>
+                <g fill="#ffd21f"><text x="30" y="123">1</text><text x="258" y="61">2</text><text x="392" y="61">3</text><text x="330" y="211">4</text><text x="570" y="311">5</text><text x="48" y="311">6</text><text x="220" y="311">7</text><text x="624" y="273">8</text></g>
+              </g>
+            </g>
+</svg>

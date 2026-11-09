@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing — Northfield Academy</title>
+  <meta name="description" content="Free, Plus and Teams plans for Northfield Academy, with a team seats calculator.">
+  <meta name="theme-color" content="#fbfaf4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a1510" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Northfield Academy">
+  <meta property="og:title" content="Pricing — Northfield Academy">
+  <meta property="og:description" content="Free, Plus and Teams plans for Northfield Academy, with a team seats calculator.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches))d.classList.add('dark');}catch(e){}})();</script>
+</head>
+<body class="bg-paper font-sans text-ink antialiased dark:bg-night dark:text-white" data-page="pricing">
+  <a href="#main" class="sr-only z-[70] rounded-full bg-ink px-4 py-2 text-sm font-bold text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3 dark:bg-white dark:text-night">Skip to content</a>
+
+  <header id="site-header" class="sticky top-0 z-50 border-b border-transparent bg-paper/85 backdrop-blur-xl transition duration-300 dark:bg-night/85 [&.is-scrolled]:border-ink/10 [&.is-scrolled]:shadow-[0_10px_30px_-18px_rgba(16,36,27,0.35)] dark:[&.is-scrolled]:border-white/10">
+    <div class="wrap flex h-[4.5rem] items-center gap-6">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <svg class="size-9" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="11" fill="#19693a"/><path d="M8 12.5c3.4-1.6 6.6-1.4 10 .8v13c-3.4-2.2-6.6-2.4-10-.8Z" fill="#fbfaf4"/><path d="M28 12.5c-3.4-1.6-6.6-1.4-10 .8v13c3.4-2.2 6.6-2.4 10-.8Z" fill="#d9f5e0"/><circle cx="27.5" cy="8.5" r="3.5" fill="#ffc727"/></svg><span class="leading-none"><span class="block text-[1.05rem] font-extrabold tracking-tight">Northfield</span><span class="block text-[11px] font-bold tracking-[0.2em] text-leaf-700 uppercase dark:text-leaf-300">Academy</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1"><li><a href="courses.html" class="nav-link">Courses</a></li><li><a href="paths.html" class="nav-link">Paths</a></li><li><a href="instructors.html" class="nav-link">Instructors</a></li><li><a href="pricing.html" class="nav-link" aria-current="page">Pricing</a></li></ul>
+      </nav>
+      <div class="ml-auto flex items-center gap-1.5">
+        <button type="button" data-theme-toggle class="grid size-10 place-items-center rounded-full text-ink/70 transition hover:bg-ink/5 hover:text-ink dark:text-white/75 dark:hover:bg-white/10 dark:hover:text-white">
+          <span class="dark:hidden"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg></span><span class="hidden dark:inline"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span>
+        </button>
+        <a href="learn.html" class="nav-link hidden sm:inline-flex">My learning</a>
+        <a href="pricing.html" class="btn btn-primary hidden sm:inline-flex">Join for free</a>
+        <button type="button" id="menu-button" class="grid size-10 place-items-center rounded-full text-ink hover:bg-ink/5 lg:hidden dark:text-white dark:hover:bg-white/10" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span data-icon-open><svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span><span data-icon-close class="hidden"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 18 18 6M6 6l12 12"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="border-t border-ink/10 bg-paper lg:hidden dark:border-white/10 dark:bg-night" hidden>
+      <nav aria-label="Mobile" class="wrap py-4">
+        <ul class="space-y-1"><li><a href="courses.html" class="block rounded-2xl px-4 py-3 text-base font-bold hover:bg-ink/5 aria-[current=page]:bg-leaf-100 aria-[current=page]:text-leaf-900 dark:hover:bg-white/5 dark:aria-[current=page]:bg-leaf-400/15 dark:aria-[current=page]:text-leaf-200">Courses</a></li><li><a href="paths.html" class="block rounded-2xl px-4 py-3 text-base font-bold hover:bg-ink/5 aria-[current=page]:bg-leaf-100 aria-[current=page]:text-leaf-900 dark:hover:bg-white/5 dark:aria-[current=page]:bg-leaf-400/15 dark:aria-[current=page]:text-leaf-200">Paths</a></li><li><a href="instructors.html" class="block rounded-2xl px-4 py-3 text-base font-bold hover:bg-ink/5 aria-[current=page]:bg-leaf-100 aria-[current=page]:text-leaf-900 dark:hover:bg-white/5 dark:aria-[current=page]:bg-leaf-400/15 dark:aria-[current=page]:text-leaf-200">Instructors</a></li><li><a href="pricing.html" class="block rounded-2xl px-4 py-3 text-base font-bold hover:bg-ink/5 aria-[current=page]:bg-leaf-100 aria-[current=page]:text-leaf-900 dark:hover:bg-white/5 dark:aria-[current=page]:bg-leaf-400/15 dark:aria-[current=page]:text-leaf-200" aria-current="page">Pricing</a></li><li><a href="learn.html" class="block rounded-2xl px-4 py-3 text-base font-bold hover:bg-ink/5 aria-[current=page]:bg-leaf-100 aria-[current=page]:text-leaf-900 dark:hover:bg-white/5 dark:aria-[current=page]:bg-leaf-400/15 dark:aria-[current=page]:text-leaf-200">My learning</a></li></ul>
+        <a href="pricing.html" class="btn btn-primary mt-4 w-full">Join for free</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="wrap pt-12 text-center">
+      <p class="eyebrow">Pricing</p>
+      <h1 class="h-display mx-auto mt-3 max-w-3xl text-4xl sm:text-5xl">Simple plans for every kind of learner</h1>
+      <p class="mx-auto mt-4 max-w-2xl text-lg muted">Start with free courses, upgrade when you’re ready. Every paid plan has a 14-day free trial.</p>
+      <div class="mt-8 inline-flex items-center gap-3 rounded-full border border-ink/15 bg-white px-5 py-2.5 text-sm font-bold dark:border-white/15 dark:bg-night-2">
+        <span data-billing-label="monthly" class="muted">Monthly</span>
+        <button type="button" role="switch" aria-checked="true" aria-label="Bill yearly" data-billing-toggle class="group relative h-7 w-12 rounded-full bg-ink/20 transition aria-checked:bg-leaf-700 dark:bg-white/20 dark:aria-checked:bg-leaf-300"><span class="absolute top-1 left-1 size-5 rounded-full bg-white shadow transition-transform group-aria-checked:translate-x-5"></span></button>
+        <span data-billing-label="annual">Yearly <span class="tag tag-sun ml-1">Save 20%</span></span>
+      </div>
+    </section>
+    <div class="wrap mt-10 grid gap-6 lg:grid-cols-3">
+      <article class="card flex flex-col p-7"><h2 class="text-xl font-extrabold">Free</h2><p class="mt-1 text-sm muted">Get started with the basics.</p><p class="mt-6 text-5xl font-extrabold tracking-tight">$0</p><p class="text-sm muted">forever</p><a href="courses.html?price=free" class="btn btn-secondary btn-lg mt-6">Start learning</a><ul class="mt-7 space-y-3 text-sm"><li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>Three free courses</span></li><li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>Certificates for free courses</span></li><li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>Community forum</span></li><li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>Progress tracking</span></li></ul></article>
+      <article class="card relative flex flex-col p-7 ring-2 ring-leaf-700 dark:ring-leaf-300"><span class="tag tag-sun absolute -top-3 left-7 px-3 py-1">Most popular</span><h2 class="text-xl font-extrabold">Plus</h2><p class="mt-1 text-sm muted">Every course, every path.</p><p class="mt-6 text-5xl font-extrabold tracking-tight"><span data-price data-monthly="$19" data-annual="$15">$15</span></p><p class="text-sm muted" data-billing-note data-monthly-note="per month, billed monthly" data-annual-note="per month, billed yearly">per month, billed yearly</p><a href="learn.html" class="btn btn-primary btn-lg mt-6">Start 14-day trial</a><ul class="mt-7 space-y-3 text-sm"><li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>Every course and path</span></li><li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>All certificates</span></li><li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>Project files and starter kits</span></li><li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>Offline downloads</span></li><li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>Priority answers from instructors</span></li></ul></article>
+      <article class="card flex flex-col p-7"><h2 class="text-xl font-extrabold">Teams</h2><p class="mt-1 text-sm muted">For companies and schools.</p><p class="mt-6 text-5xl font-extrabold tracking-tight"><span data-price data-monthly="$29" data-annual="$24">$24</span></p><p class="text-sm muted" data-billing-note data-monthly-note="per seat per month, billed monthly" data-annual-note="per seat per month, billed yearly">per seat per month, billed yearly</p><a href="#teams" class="btn btn-secondary btn-lg mt-6">Talk to us</a><ul class="mt-7 space-y-3 text-sm"><li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>Everything in Plus</span></li><li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>Admin dashboard and reports</span></li><li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>Assign courses and paths</span></li><li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>Single sign-on (SSO)</span></li><li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>Volume discounts</span></li></ul></article>
+    </div>
+
+    <section id="teams" class="wrap mt-24" aria-labelledby="calc-title">
+      <div class="grid gap-10 lg:grid-cols-2">
+        <div class="card p-7 sm:p-8">
+          <h2 id="calc-title" class="text-2xl font-extrabold tracking-tight">Team seats calculator</h2>
+          <p class="mt-2 muted">Volume discounts apply automatically: 5% from 10 seats, 10% from 50 and 15% from 200.</p>
+          <div class="mt-8">
+            <label for="seats" class="label">Number of seats</label>
+            <div class="flex items-center gap-4">
+              <input id="seats" type="range" min="2" max="200" value="12" class="h-2 w-full flex-1 cursor-pointer accent-[#19693a]">
+              <label for="seats-number" class="sr-only">Seats (2 to 500)</label>
+              <input id="seats-number" type="number" min="2" max="500" value="12" inputmode="numeric" class="input w-24 text-center font-extrabold">
+            </div>
+          </div>
+          <dl class="mt-8 grid gap-4 rounded-2xl bg-leaf-50 p-5 sm:grid-cols-2 dark:bg-night-3">
+            <div><dt class="text-sm muted">Per seat, per month</dt><dd class="text-2xl font-extrabold" data-per-seat>$22.80</dd><dd class="mt-1 text-xs font-bold text-leaf-800 dark:text-leaf-200" data-discount></dd></div>
+            <div><dt class="text-sm muted">Total per month</dt><dd class="text-2xl font-extrabold" data-team-total aria-live="polite">$273.60</dd><dd class="mt-1 text-xs muted" data-team-annual></dd></div>
+          </dl>
+        </div>
+        <div class="card p-7 sm:p-8">
+          <h2 class="text-2xl font-extrabold tracking-tight">Get a quote for your team</h2>
+          <p class="mt-2 muted">We’ll reply within one business day with a quote and a trial for your whole team.</p>
+          <!-- Demo form: POST new FormData(form) to your CRM or form service. -->
+          <form class="mt-6 space-y-4" data-team-form novalidate>
+            <div><label class="label" for="team-name">Your name</label><input class="input" id="team-name" name="name" autocomplete="name"></div>
+            <div><label class="label" for="team-email">Work email</label><input class="input" id="team-email" name="email" type="email" autocomplete="email"></div>
+            <div><label class="label" for="team-company">Company or school</label><input class="input" id="team-company" name="company" autocomplete="organization"></div>
+            <button type="submit" class="btn btn-primary w-full">Request a quote</button>
+          </form>
+          <div class="mt-6 rounded-2xl bg-leaf-50 p-5 dark:bg-night-3" data-team-success tabindex="-1" role="status" hidden><p class="font-extrabold">Thanks! We’ll be in touch.</p><p class="mt-1 text-sm muted">Your reference is <strong data-ref></strong>. We’ll reply within one business day with a quote and a trial for your whole team.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap mt-24" aria-labelledby="compare-title">
+      <h2 id="compare-title" class="text-2xl font-extrabold tracking-tight">Compare plans</h2>
+      <div class="relative mt-6 overflow-x-auto rounded-3xl border border-ink/10 bg-white dark:border-white/10 dark:bg-night-2">
+        <table class="w-full min-w-[36rem] text-sm">
+          <thead><tr><th scope="col" class="px-5 py-4 text-left">Feature</th><th scope="col" class="px-4 py-4">Free</th><th scope="col" class="px-4 py-4">Plus</th><th scope="col" class="px-4 py-4">Teams</th></tr></thead>
+          <tbody class="[&_th]:pl-5"><tr class="border-t border-ink/10 dark:border-white/10"><th scope="row" class="py-3.5 pr-4 text-left font-semibold">Free courses</th><td class="px-4 py-3.5 text-center"><span class="text-leaf-700 font-extrabold dark:text-leaf-300">✓</span><span class="sr-only">Included</span></td><td class="px-4 py-3.5 text-center"><span class="text-leaf-700 font-extrabold dark:text-leaf-300">✓</span><span class="sr-only">Included</span></td><td class="px-4 py-3.5 text-center"><span class="text-leaf-700 font-extrabold dark:text-leaf-300">✓</span><span class="sr-only">Included</span></td></tr><tr class="border-t border-ink/10 dark:border-white/10"><th scope="row" class="py-3.5 pr-4 text-left font-semibold">Every paid course</th><td class="px-4 py-3.5 text-center"><span aria-hidden="true" class="muted">—</span><span class="sr-only">Not included</span></td><td class="px-4 py-3.5 text-center"><span class="text-leaf-700 font-extrabold dark:text-leaf-300">✓</span><span class="sr-only">Included</span></td><td class="px-4 py-3.5 text-center"><span class="text-leaf-700 font-extrabold dark:text-leaf-300">✓</span><span class="sr-only">Included</span></td></tr><tr class="border-t border-ink/10 dark:border-white/10"><th scope="row" class="py-3.5 pr-4 text-left font-semibold">Learning paths</th><td class="px-4 py-3.5 text-center"><span aria-hidden="true" class="muted">—</span><span class="sr-only">Not included</span></td><td class="px-4 py-3.5 text-center"><span class="text-leaf-700 font-extrabold dark:text-leaf-300">✓</span><span class="sr-only">Included</span></td><td class="px-4 py-3.5 text-center"><span class="text-leaf-700 font-extrabold dark:text-leaf-300">✓</span><span class="sr-only">Included</span></td></tr><tr class="border-t border-ink/10 dark:border-white/10"><th scope="row" class="py-3.5 pr-4 text-left font-semibold">Certificates</th><td class="px-4 py-3.5 text-center">Free courses</td><td class="px-4 py-3.5 text-center"><span class="text-leaf-700 font-extrabold dark:text-leaf-300">✓</span><span class="sr-only">Included</span></td><td class="px-4 py-3.5 text-center"><span class="text-leaf-700 font-extrabold dark:text-leaf-300">✓</span><span class="sr-only">Included</span></td></tr><tr class="border-t border-ink/10 dark:border-white/10"><th scope="row" class="py-3.5 pr-4 text-left font-semibold">Downloadable project files</th><td class="px-4 py-3.5 text-center"><span aria-hidden="true" class="muted">—</span><span class="sr-only">Not included</span></td><td class="px-4 py-3.5 text-center"><span class="text-leaf-700 font-extrabold dark:text-leaf-300">✓</span><span class="sr-only">Included</span></td><td class="px-4 py-3.5 text-center"><span class="text-leaf-700 font-extrabold dark:text-leaf-300">✓</span><span class="sr-only">Included</span></td></tr><tr class="border-t border-ink/10 dark:border-white/10"><th scope="row" class="py-3.5 pr-4 text-left font-semibold">Admin dashboard and reports</th><td class="px-4 py-3.5 text-center"><span aria-hidden="true" class="muted">—</span><span class="sr-only">Not included</span></td><td class="px-4 py-3.5 text-center"><span aria-hidden="true" class="muted">—</span><span class="sr-only">Not included</span></td><td class="px-4 py-3.5 text-center"><span class="text-leaf-700 font-extrabold dark:text-leaf-300">✓</span><span class="sr-only">Included</span></td></tr><tr class="border-t border-ink/10 dark:border-white/10"><th scope="row" class="py-3.5 pr-4 text-left font-semibold">Single sign-on (SSO)</th><td class="px-4 py-3.5 text-center"><span aria-hidden="true" class="muted">—</span><span class="sr-only">Not included</span></td><td class="px-4 py-3.5 text-center"><span aria-hidden="true" class="muted">—</span><span class="sr-only">Not included</span></td><td class="px-4 py-3.5 text-center"><span class="text-leaf-700 font-extrabold dark:text-leaf-300">✓</span><span class="sr-only">Included</span></td></tr><tr class="border-t border-ink/10 dark:border-white/10"><th scope="row" class="py-3.5 pr-4 text-left font-semibold">Dedicated success manager</th><td class="px-4 py-3.5 text-center"><span aria-hidden="true" class="muted">—</span><span class="sr-only">Not included</span></td><td class="px-4 py-3.5 text-center"><span aria-hidden="true" class="muted">—</span><span class="sr-only">Not included</span></td><td class="px-4 py-3.5 text-center">50+ seats</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="faq" class="wrap mt-24 max-w-3xl" aria-labelledby="pfaq-title">
+      <h2 id="pfaq-title" class="text-2xl font-extrabold tracking-tight">Pricing questions</h2>
+      <div class="mt-4 border-t border-ink/10 dark:border-white/10"><details class="acc"><summary>Can I switch plans later?<svg class="chev" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z"/></svg></summary><p class="pb-5 muted">Yes. Upgrade, downgrade or cancel from your account at any time; we prorate the difference.</p></details><details class="acc"><summary>Do you offer a student discount?<svg class="chev" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z"/></svg></summary><p class="pb-5 muted">Students and teachers get 50% off Plus with a school email address. Contact us with your school and we’ll set it up.</p></details><details class="acc"><summary>What happens to my certificates if I cancel?<svg class="chev" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z"/></svg></summary><p class="pb-5 muted">They’re yours forever. You keep every certificate you earned, and free courses stay free.</p></details><details class="acc"><summary>How do team seats work?<svg class="chev" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z"/></svg></summary><p class="pb-5 muted">Buy seats for your team and assign them from the admin dashboard. Reassign a seat whenever someone leaves.</p></details></div>
+    </section>
+
+  </main>
+
+  <footer class="mt-24 bg-ink text-white dark:bg-[#07100c]">
+    <div class="wrap grid gap-12 py-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1.6fr]">
+      <div class="max-w-xs">
+        <a href="index.html" class="flex items-center gap-2.5"><svg class="size-9" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="11" fill="#19693a"/><path d="M8 12.5c3.4-1.6 6.6-1.4 10 .8v13c-3.4-2.2-6.6-2.4-10-.8Z" fill="#fbfaf4"/><path d="M28 12.5c-3.4-1.6-6.6-1.4-10 .8v13c3.4-2.2 6.6-2.4 10-.8Z" fill="#d9f5e0"/><circle cx="27.5" cy="8.5" r="3.5" fill="#ffc727"/></svg><span class="text-lg font-extrabold tracking-tight">Northfield Academy</span></a>
+        <p class="mt-4 text-sm text-white/75">Practical courses in design, code and data, taught by people who do the work every day.</p>
+      </div>
+      <div><h2 class="text-sm font-extrabold tracking-wide text-white">Learn</h2><ul class="mt-4 space-y-2.5 text-sm"><li><a class="text-white/75 transition hover:text-sun-300" href="courses.html">All courses</a></li><li><a class="text-white/75 transition hover:text-sun-300" href="paths.html">Learning paths</a></li><li><a class="text-white/75 transition hover:text-sun-300" href="instructors.html">Instructors</a></li></ul></div>
+      <div><h2 class="text-sm font-extrabold tracking-wide text-white">Plans</h2><ul class="mt-4 space-y-2.5 text-sm"><li><a class="text-white/75 transition hover:text-sun-300" href="pricing.html">Pricing</a></li><li><a class="text-white/75 transition hover:text-sun-300" href="pricing.html#teams">For teams</a></li><li><a class="text-white/75 transition hover:text-sun-300" href="pricing.html#faq">Student discount</a></li></ul></div>
+      <div><h2 class="text-sm font-extrabold tracking-wide text-white">Your account</h2><ul class="mt-4 space-y-2.5 text-sm"><li><a class="text-white/75 transition hover:text-sun-300" href="learn.html">My learning</a></li><li><a class="text-white/75 transition hover:text-sun-300" href="lesson.html">Lesson player</a></li><li><a class="text-white/75 transition hover:text-sun-300" href="instructors.html#teach">Teach with us</a></li></ul></div>
+      <div>
+        <h2 class="text-sm font-extrabold tracking-wide text-white">One useful lesson a week</h2>
+        <p class="mt-3 text-sm text-white/75">Free tutorials and new courses, every Thursday. No spam.</p>
+        <!-- Demo form: connect it to your email provider (see README). -->
+        <form class="mt-4" data-newsletter novalidate>
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <div class="flex gap-2">
+            <input id="newsletter-email" type="email" autocomplete="email" placeholder="you@example.com" class="block w-full min-w-0 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-white/55 focus:border-sun-300 focus:ring-4 focus:ring-sun-300/20 focus:outline-none aria-[invalid=true]:border-rose-300">
+            <button type="submit" class="btn btn-sun shrink-0">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="wrap flex flex-col gap-2 py-6 text-sm text-white/70 sm:flex-row sm:justify-between">
+        <p>© <span data-year>2026</span> Northfield Academy. A fictional school for this template.</p>
+        <p>Made with care for curious people.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

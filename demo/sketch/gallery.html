@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student gallery — Marnie Draws</title>
+  <meta name="description" content="Drawings made by Marnie Draws students: cats, cottages, mugs, lettering and more, from every course.">
+  <meta name="theme-color" content="#fffefa">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Marnie Draws">
+  <meta property="og:title" content="Student gallery — Marnie Draws">
+  <meta property="og:description" content="Drawings made by Marnie Draws students: cats, cottages, mugs, lettering and more, from every course.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Gochi+Hand&amp;family=Lilita+One&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="font-sans text-ink antialiased" data-page="gallery">
+  <a href="#main" class="sr-only z-[70] rounded-full bg-ink px-4 py-2 text-sm font-bold text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+
+  <header id="site-header" class="sticky top-0 z-50 border-b-[2.5px] border-transparent bg-paper/95 backdrop-blur transition-colors [&.is-scrolled]:border-ink">
+    <div class="wrap flex h-[4.5rem] items-center gap-3">
+      <a href="index.html" class="flex items-center gap-2 rounded-full" aria-label="Marnie Draws, home">
+        <svg class="size-10 shrink-0" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#ffd84a" stroke="#1d1626" stroke-width="2.5"/><path d="M11 25c3-6 6-9 9-4s6 2 9-6" fill="none" stroke="#1d1626" stroke-width="3" stroke-linecap="round"/><path d="m26 8 6 6-3 3-6-6Z" fill="#ff6fae" stroke="#1d1626" stroke-width="2" stroke-linejoin="round"/></svg><span class="font-display text-[1.65rem] leading-none tracking-wide">marnie&#8288;<span class="text-pink-ink">draws</span></span>
+      </a>
+      <nav aria-label="Main" class="ml-4 hidden lg:block">
+        <ul class="flex items-center gap-0.5"><li><a href="courses.html" class="nav-link">Courses</a></li><li><a href="workshops.html" class="nav-link">Workshops</a></li><li><a href="resources.html" class="nav-link">Freebies</a></li><li><a href="gallery.html" class="nav-link" aria-current="page">Gallery</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+      </nav>
+      <div class="ml-auto flex items-center gap-2">
+        <a href="courses.html?saved=1" class="relative grid size-11 place-items-center rounded-full border-2 border-ink bg-white transition hover:bg-pink-soft" data-saved-link aria-label="Saved courses">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-9.2-9.4C1.6 7.2 3.9 4 7.2 4c2 0 3.6 1.1 4.8 2.8C13.2 5.1 14.8 4 16.8 4c3.3 0 5.6 3.2 4.4 6.6C19.5 15.4 12 20 12 20Z"/></svg>
+          <span class="absolute -top-1.5 -right-1.5 grid h-5 min-w-5 place-items-center rounded-full border-2 border-ink bg-pink px-1 text-[11px] leading-none font-bold" data-saved-count hidden>0</span>
+        </a>
+        <a href="newsletter.html" class="btn btn-pink hidden sm:inline-flex">Get the newsletter</a>
+        <button type="button" id="menu-button" class="grid size-11 place-items-center rounded-full border-2 border-ink bg-white lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span data-icon-open><svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7c5-1 11 1 16 0M4 12.5c6 1 10-1 16 0M4 18c5-1 11 1 16 0"/></svg></span><span data-icon-close class="hidden"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" aria-hidden="true"><path d="M6 18 18 6M6 6l12 12"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="border-t-[2.5px] border-ink bg-paper lg:hidden" hidden>
+      <nav aria-label="Mobile" class="wrap py-4">
+        <ul class="grid gap-1"><li><a href="courses.html" class="mnav-link">Courses</a></li><li><a href="workshops.html" class="mnav-link">Workshops</a></li><li><a href="resources.html" class="mnav-link">Freebies</a></li><li><a href="gallery.html" class="mnav-link" aria-current="page">Gallery</a></li><li><a href="about.html" class="mnav-link">About</a></li><li><a href="contact.html" class="mnav-link">Contact</a></li><li><a href="newsletter.html" class="mnav-link">Newsletter</a></li></ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="wrap pt-12 pb-10 sm:pt-16">
+      <p class="eyebrow">drawn by students</p>
+      <h1 class="mt-2 max-w-3xl font-display text-[clamp(2.6rem,5.6vw,4.4rem)] leading-[1]">The student <span class="squiggle">wall</span></h1>
+      <p class="mt-5 max-w-2xl text-lg muted">Every drawing here was made by someone who took one of my courses, most of them in their first few weeks. Tap a piece to see it bigger and read the story behind it.</p>
+    </section>
+
+    <section class="wrap" aria-labelledby="gallery-title">
+      <h2 id="gallery-title" class="sr-only">Gallery</h2>
+      <div class="flex flex-wrap gap-2" role="group" aria-label="Filter by course" data-gallery-filters></div>
+      <p class="mt-4 font-bold" data-gallery-count aria-live="polite">Showing 14 pieces of student work</p>
+      <ul class="mt-10 grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8 lg:grid-cols-4" data-gallery-grid></ul>
+    </section>
+
+    <section class="wrap pt-24" aria-labelledby="share-title">
+      <div class="card tilt-l grid gap-6 bg-yellow-soft p-6 sm:p-8 md:grid-cols-[1fr_auto] md:items-center">
+        <div>
+          <h2 id="share-title" class="font-display text-3xl">Want to be on the wall?</h2>
+          <p class="mt-2 max-w-2xl">Share your course projects in the student community or tag them #MarnieDraws. I pick a few every month for this page and the newsletter, always with your permission.</p>
+        </div>
+        <a href="contact.html?topic=other" class="btn btn-white btn-lg">Send me your drawing</a>
+      </div>
+    </section>
+
+    <dialog id="lightbox" class="lightbox" aria-labelledby="lightbox-title">
+      <div class="card grid overflow-hidden bg-white md:grid-cols-[1.25fr_1fr]">
+        <div class="mx-auto aspect-square w-full max-w-[min(100%,52vh)] border-b-[2.5px] border-ink md:max-w-none md:border-r-[2.5px] md:border-b-0" data-lb-art></div>
+        <div class="flex flex-col p-5 sm:p-6">
+          <p class="text-sm font-bold muted" data-lb-count>1 of 14</p>
+          <h2 id="lightbox-title" class="mt-1 font-display text-3xl leading-tight">Artwork</h2>
+          <p class="hand text-2xl text-pink-ink" data-lb-by>by a student</p>
+          <p class="mt-4 text-lg" data-lb-note></p>
+          <p class="mt-4 text-sm font-semibold">Made in <a href="courses.html" class="underline decoration-pink decoration-[3px] underline-offset-4" data-lb-course>a course</a></p>
+          <div class="mt-auto flex items-center gap-2 pt-6">
+            <button type="button" class="grid size-11 place-items-center rounded-full border-2 border-ink bg-white hover:bg-yellow-soft" data-lb-prev aria-label="Previous piece"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+            <button type="button" class="grid size-11 place-items-center rounded-full border-2 border-ink bg-white hover:bg-yellow-soft" data-lb-next aria-label="Next piece"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+            <button type="button" class="btn btn-ink ml-auto" data-lb-close>Close</button>
+          </div>
+        </div>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="mt-24 border-t-[2.5px] border-ink bg-yellow-soft">
+    <div class="wrap grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.3fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-2 rounded-full" aria-label="Marnie Draws, home"><svg class="size-10 shrink-0" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#ffd84a" stroke="#1d1626" stroke-width="2.5"/><path d="M11 25c3-6 6-9 9-4s6 2 9-6" fill="none" stroke="#1d1626" stroke-width="3" stroke-linecap="round"/><path d="m26 8 6 6-3 3-6-6Z" fill="#ff6fae" stroke="#1d1626" stroke-width="2" stroke-linejoin="round"/></svg><span class="font-display text-[1.65rem] leading-none tracking-wide">marnie&#8288;<span class="text-pink-ink">draws</span></span></a>
+        <p class="mt-4 max-w-xs">Drawing lessons for grown-ups who always wanted to draw. Made with a lot of coffee in Asbury Park, New Jersey.</p>
+        <p class="mt-4 font-bold"><a href="mailto:hello@marniedraws.example" class="underline decoration-pink decoration-[3px] underline-offset-4 hover:text-pink-ink">hello@marniedraws.example</a></p>
+      </div>
+      <nav aria-labelledby="footer-learn">
+        <h2 id="footer-learn" class="font-display text-xl">Learn</h2>
+        <ul class="mt-3 grid gap-2 font-semibold"><li><a class="hover:underline" href="courses.html">Courses</a></li><li><a class="hover:underline" href="workshops.html">Live workshops</a></li><li><a class="hover:underline" href="resources.html">Free resources</a></li><li><a class="hover:underline" href="gallery.html">Student gallery</a></li></ul>
+      </nav>
+      <nav aria-labelledby="footer-hello">
+        <h2 id="footer-hello" class="font-display text-xl">Say hello</h2>
+        <ul class="mt-3 grid gap-2 font-semibold"><li><a class="hover:underline" href="about.html">About Marnie</a></li><li><a class="hover:underline" href="newsletter.html">The Sunday Sketch</a></li><li><a class="hover:underline" href="contact.html">Contact</a></li><li><a class="hover:underline" href="contact.html?topic=workshop">Workshops for teams</a></li></ul>
+      </nav>
+      <div>
+        <h2 class="font-display text-xl">The Sunday Sketch</h2>
+        <p class="mt-3">A drawing prompt and a five-minute tip, every Sunday morning. Plus a free brush each month.</p>
+        <a href="newsletter.html" class="btn btn-white mt-4">Subscribe for free</a>
+      </div>
+    </div>
+    <div class="border-t-2 border-dashed border-ink/40">
+      <div class="wrap flex flex-wrap justify-between gap-x-6 gap-y-2 py-5 text-sm font-semibold">
+        <p>&copy; <span data-year>2026</span> Marnie Ashdown. Drawn by hand in Asbury Park.</p>
+        <p>Prices in USD &middot; Workshop times in Eastern time</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

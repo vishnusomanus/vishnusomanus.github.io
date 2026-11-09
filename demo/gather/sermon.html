@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sermon — Riverbend Church</title>
+  <meta name="description" content="Listen to a Sunday message from Riverbend Church, with notes, discussion questions for groups and related sermons.">
+  <meta name="theme-color" content="#fbf6ee">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Riverbend Church">
+  <meta property="og:title" content="Sermon — Riverbend Church">
+  <meta property="og:description" content="Listen to a Sunday message from Riverbend Church, with notes, discussion questions for groups and related sermons.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400..800;1,6..12,400..600&amp;family=Urbanist:wght@500..900&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="sermon" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm font-bold text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <div class="bg-ink text-white">
+    <div class="container-x flex min-h-10 items-center justify-between gap-4 py-2 text-[13px]">
+      <p data-service-status class="flex items-center gap-2 font-semibold"><span class="chip-dot bg-apricot" aria-hidden="true"></span>Sundays at 9:00 &amp; 11:00 am</p>
+      <p class="hidden items-center gap-5 text-white/85 md:flex"><span>418 Riverside Avenue, Lawrence, KS</span><a href="visit.html" class="font-bold text-apricot underline-offset-4 hover:underline">New here? Start here</a></p>
+    </div>
+  </div>
+  <header id="site-header" class="sticky top-0 z-40 border-b border-transparent bg-paper/95 backdrop-blur transition-[box-shadow,border-color] duration-300">
+    <div class="container-x flex h-20 items-center justify-between gap-4">
+      <a href="index.html" class="group inline-flex items-center gap-3">
+          <svg viewBox="0 0 40 40" class="h-10 w-10 transition-transform duration-500 group-hover:rotate-[-8deg] shrink-0" aria-hidden="true"><defs><clipPath id="logo-h"><circle cx="20" cy="20" r="19"/></clipPath></defs><circle cx="20" cy="20" r="19" fill="#5b2a6e"/><g clip-path="url(#logo-h)"><circle cx="20" cy="19" r="8" fill="#f6a96b"/><path d="M0 25c7-4 13-4 20-1s13 3 20-1v18H0z" fill="#c9dcc0"/><path d="M4 41c4-6 14-7 16-12s8-5 13-4c-6 1-8 4-10 8s-9 5-12 9z" fill="#bcd9e8"/></g></svg>
+          <span class="leading-none"><span class="block font-display text-[1.35rem] font-extrabold tracking-tight">Riverbend</span><span class="mt-0.5 block text-[10px] font-extrabold uppercase tracking-[0.28em] text-apricot-dark">Church · Lawrence</span></span>
+        </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-0.5">
+          <li><a href="visit.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">Plan a visit</a></li>
+          <li><a href="sermons.html" aria-current="page" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">Sermons</a></li>
+          <li><a href="events.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">Events</a></li>
+          <li><a href="groups.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">Groups</a></li>
+          <li><a href="about.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">About</a></li>
+          <li><a href="contact.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="give.html" class="btn-warm btn-sm hidden aria-[current=page]:ring-2 aria-[current=page]:ring-plum sm:inline-flex">Give</a>
+        <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-full bg-shell ring-1 ring-ink/15 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-line bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="visit.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Plan a visit<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="sermons.html" aria-current="page" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Sermons<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="events.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Events<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="groups.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Groups<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">About<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="contact.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Contact<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="give.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Give<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+        </ul>
+        <p class="mt-6 text-sm text-muted">Sundays 9:00 &amp; 11:00 am · 418 Riverside Avenue, Lawrence, KS 66044</p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="container-x pt-8 lg:pt-12">
+      <nav aria-label="Breadcrumb" class="text-sm font-semibold text-muted">
+        <ol class="flex flex-wrap items-center gap-2">
+          <li><a href="sermons.html" class="hover:text-plum hover:underline">Sermons</a></li>
+          <li aria-hidden="true">/</li>
+          <li><a id="sermon-series-crumb" href="sermons.html" class="hover:text-plum hover:underline"><span id="sermon-series">Open Table</span></a></li>
+          <li aria-hidden="true">/</li>
+          <li aria-current="page" id="sermon-crumb" class="text-ink">Room at the Table</li>
+        </ol>
+      </nav>
+      <p id="sermon-notfound" class="mt-6 rounded-2xl bg-apricot-light p-4 text-sm font-semibold" role="status" hidden>We couldn’t find that sermon, so here’s the latest one. <a href="sermons.html" class="link">Browse all sermons</a>.</p>
+      <div class="mt-8 grid gap-10 lg:grid-cols-[1.15fr_1fr] lg:items-center lg:gap-14">
+        <div>
+          <h1 id="sermon-title" class="h-display text-[2.5rem] leading-[1.04] sm:text-6xl">Room at the Table</h1>
+          <p id="sermon-summary" class="mt-5 max-w-xl text-lg leading-relaxed text-ink/80">Jesus tells a dinner host to invite the people who can never invite him back.</p>
+          <dl class="mt-7 flex flex-wrap gap-x-8 gap-y-3 text-sm">
+            <div><dt class="font-bold text-muted">Date</dt><dd id="sermon-meta-date" class="mt-0.5 font-bold">Sunday</dd></div>
+            <div><dt class="font-bold text-muted">Passage</dt><dd id="sermon-meta-passage" class="mt-0.5 font-bold">Luke 14:12–24</dd></div>
+            <div><dt class="font-bold text-muted">Length</dt><dd id="sermon-meta-length" class="mt-0.5 font-bold">39 min</dd></div>
+          </dl>
+        </div>
+        <div id="sermon-art" class="art aspect-[16/8] sm:aspect-[16/10] overflow-hidden rounded-[2rem] shadow-lift"></div>
+      </div>
+      <div id="sermon-player" class="mt-10 min-w-0"></div>
+      <p class="mt-3 hidden text-sm text-muted sm:block">Keyboard: <kbd class="rounded bg-sand px-1.5 py-0.5 font-sans text-xs font-bold">Space</kbd> or <kbd class="rounded bg-sand px-1.5 py-0.5 font-sans text-xs font-bold">K</kbd> play and pause, <kbd class="rounded bg-sand px-1.5 py-0.5 font-sans text-xs font-bold">J</kbd> and <kbd class="rounded bg-sand px-1.5 py-0.5 font-sans text-xs font-bold">L</kbd> skip 15 seconds, arrow keys on the slider move 5 seconds.</p>
+    </section>
+
+    <div class="container-x mt-16 grid gap-12 lg:grid-cols-[1fr_22rem] lg:gap-16">
+      <div class="min-w-0">
+        <section aria-labelledby="verse-h">
+          <h2 id="verse-h" class="eyebrow">Key verse</h2>
+          <blockquote id="sermon-verse" class="mt-4 rounded-[1.75rem] border-l-[6px] border-apricot bg-apricot-light/60 px-6 py-6 font-display text-2xl font-bold leading-snug sm:px-8 sm:text-[1.7rem]"></blockquote>
+        </section>
+        <section aria-labelledby="notes-h" class="mt-14">
+          <h2 id="notes-h" class="h-section">Sermon notes</h2>
+          <ol id="sermon-notes" class="mt-8 space-y-8"></ol>
+        </section>
+        <section aria-labelledby="questions-h" class="mt-14 rounded-[1.75rem] bg-sand p-6 sm:p-8">
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <h2 id="questions-h" class="font-display text-2xl font-extrabold">For your group</h2>
+            <button type="button" id="copy-questions" class="btn-outline btn-sm">
+              <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M13 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/></svg>
+              Copy questions
+            </button>
+          </div>
+          <p class="mt-2 text-muted">Discussion questions for small groups, families or your own journal.</p>
+          <ol id="sermon-questions" class="mt-6 list-decimal space-y-4 pl-6 text-[17px]"></ol>
+          <p id="copy-status" role="status" class="mt-4 text-sm font-semibold text-sage-dark"></p>
+        </section>
+      </div>
+      <aside class="space-y-6" aria-label="About this sermon">
+        <section aria-labelledby="speaker-h" class="card p-6">
+          <h2 id="speaker-h" class="text-xs font-extrabold uppercase tracking-[0.16em] text-apricot-dark">Speaker</h2>
+          <div id="speaker-card" class="mt-4"></div>
+        </section>
+        <section aria-labelledby="inseries-h" class="card p-6">
+          <h2 id="inseries-h" class="text-xs font-extrabold uppercase tracking-[0.16em] text-apricot-dark">In this series</h2>
+          <p id="series-blurb" class="mt-3 text-sm leading-relaxed text-muted"></p>
+          <ol id="series-list" class="-mx-3 mt-4 space-y-1"></ol>
+          <a id="sermon-series-link" href="sermons.html" class="link mt-4 inline-block text-sm">All of this series</a>
+        </section>
+      </aside>
+    </div>
+
+    <section aria-labelledby="related-h" class="container-x mt-20">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <h2 id="related-h" class="h-section">Keep listening</h2>
+        <a href="sermons.html" class="link">All sermons</a>
+      </div>
+      <ul id="related-list" class="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></ul>
+    </section>
+  </main>
+
+  <footer class="relative mt-28 bg-ink text-white">
+    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" class="absolute inset-x-0 -top-[47px] h-12 w-full text-ink" aria-hidden="true"><path d="M0 48V30c120-18 260-28 420-14s300 28 480 10 360-30 540-8v30z" fill="currentColor"/></svg>
+    <div class="container-x grid gap-12 pb-14 pt-16 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="group inline-flex items-center gap-3">
+          <svg viewBox="0 0 40 40" class="h-10 w-10 transition-transform duration-500 group-hover:rotate-[-8deg] shrink-0" aria-hidden="true"><defs><clipPath id="logo-f"><circle cx="20" cy="20" r="19"/></clipPath></defs><circle cx="20" cy="20" r="19" fill="#5b2a6e"/><g clip-path="url(#logo-f)"><circle cx="20" cy="19" r="8" fill="#f6a96b"/><path d="M0 25c7-4 13-4 20-1s13 3 20-1v18H0z" fill="#c9dcc0"/><path d="M4 41c4-6 14-7 16-12s8-5 13-4c-6 1-8 4-10 8s-9 5-12 9z" fill="#bcd9e8"/></g></svg>
+          <span class="leading-none"><span class="block font-display text-[1.35rem] font-extrabold tracking-tight text-white">Riverbend</span><span class="mt-0.5 block text-[10px] font-extrabold uppercase tracking-[0.28em] text-apricot">Church · Lawrence</span></span>
+        </a>
+        <p class="mt-5 max-w-sm leading-relaxed text-white/80">A non-denominational church by the Kansas River. Ordinary people, learning to follow Jesus together and to love our city well.</p>
+        <dl class="mt-7 grid grid-cols-2 gap-4 text-sm">
+          <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10"><dt class="text-white/70">Sunday gatherings</dt><dd class="mt-1 font-display text-lg font-bold">9:00 &amp; 11:00 am</dd></div>
+          <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10"><dt class="text-white/70">Youth night</dt><dd class="mt-1 font-display text-lg font-bold">Wed 6:30 pm</dd></div>
+        </dl>
+      </div>
+      <nav aria-label="Visit" class="lg:col-span-2 lg:col-start-6">
+        <h2 class="text-xs font-extrabold uppercase tracking-[0.18em] text-apricot">Visit</h2>
+        <ul class="mt-4 space-y-2.5 text-[15px] text-white/90">
+          <li><a href="visit.html" class="underline-offset-4 hover:underline">Plan a visit</a></li>
+          <li><a href="visit.html#kids" class="underline-offset-4 hover:underline">Kids’ check-in</a></li>
+          <li><a href="visit.html#parking" class="underline-offset-4 hover:underline">Parking &amp; map</a></li>
+          <li><a href="visit.html#faq" class="underline-offset-4 hover:underline">Questions</a></li>
+          <li><a href="about.html" class="underline-offset-4 hover:underline">About us</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Connect" class="lg:col-span-2">
+        <h2 class="text-xs font-extrabold uppercase tracking-[0.18em] text-apricot">Connect</h2>
+        <ul class="mt-4 space-y-2.5 text-[15px] text-white/90">
+          <li><a href="sermons.html" class="underline-offset-4 hover:underline">Sermons</a></li>
+          <li><a href="events.html" class="underline-offset-4 hover:underline">Events</a></li>
+          <li><a href="groups.html" class="underline-offset-4 hover:underline">Small groups</a></li>
+          <li><a href="groups.html#ministries" class="underline-offset-4 hover:underline">Ministries</a></li>
+          <li><a href="contact.html#prayer" class="underline-offset-4 hover:underline">Prayer requests</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-3">
+        <h2 class="text-xs font-extrabold uppercase tracking-[0.18em] text-apricot">Find us</h2>
+        <address class="mt-4 not-italic leading-relaxed text-white/90">418 Riverside Avenue<br>Lawrence, KS 66044</address>
+        <p class="mt-3 text-[15px] text-white/90"><a href="tel:+17855550142" class="underline-offset-4 hover:underline">(785) 555-0142</a><br><a href="mailto:hello@riverbend.example" class="underline-offset-4 hover:underline">hello@riverbend.example</a></p>
+        <a href="give.html" class="btn-warm btn-sm mt-6">Give online</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="container-x flex flex-col gap-3 py-6 text-[13px] text-white/75 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Riverbend Church, Lawrence, Kansas. A fictional church.</p>
+        <p>Template by Freeframe</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

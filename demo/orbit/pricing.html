@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing — Orbit shift scheduling</title>
+  <meta name="description" content="Simple pricing per location and per employee. Free for one location with up to 15 people. Compare plans, estimate your price and read the FAQ.">
+  <meta name="theme-color" content="#fdfaf5">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Orbit">
+  <meta property="og:title" content="Pricing — Orbit shift scheduling">
+  <meta property="og:description" content="Simple pricing per location and per employee. Free for one location with up to 15 people. Compare plans, estimate your price and read the FAQ.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500..800&amp;family=Rethink+Sans:ital,wght@0,400..700;1,400&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="pricing" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[95] rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 px-3 pt-3 sm:px-5">
+    <div class="bar mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 rounded-full border border-transparent pr-2.5 pl-4 sm:pl-5">
+      <a href="index.html" class="group inline-flex items-center gap-2" aria-label="Orbit home">
+        <svg viewBox="0 0 40 40" class="h-9 w-9 transition-transform duration-500 group-hover:rotate-[20deg] shrink-0" aria-hidden="true"><g transform="rotate(-22 20 20)"><ellipse cx="20" cy="20" rx="17.5" ry="7" fill="none" stroke="#1f1d3d" stroke-width="2.6"/></g><circle cx="20" cy="20" r="9.5" fill="#ff6b4a"/><circle cx="16.6" cy="16.4" r="2.6" fill="#fff" opacity=".45"/><g transform="rotate(-22 20 20)"><path d="M2.5 20a17.5 7 0 0 0 35 0" fill="none" stroke="#1f1d3d" stroke-width="2.6" stroke-linecap="round"/><circle cx="37.5" cy="20" r="3.4" fill="#ffd84d" stroke="#1f1d3d" stroke-width="2"/></g></svg>
+        <span class="font-display text-[22px] font-bold tracking-[-0.03em]">orbit</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-0.5">
+          <li><a href="features.html" class="nav-link">Product</a></li>
+          <li><a href="integrations.html" class="nav-link">Integrations</a></li>
+          <li><a href="customers.html" class="nav-link">Customers</a></li>
+          <li><a href="pricing.html" class="nav-link" aria-current="page">Pricing</a></li>
+          <li><a href="about.html" class="nav-link">Company</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="nav-link hidden sm:inline-flex">Talk to sales</a>
+        <a href="signup.html" class="btn-primary btn-sm hidden sm:inline-flex">Start free trial</a>
+        <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-full border border-line bg-white text-ink lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="mx-auto mt-2 max-w-7xl rounded-4xl border border-line bg-white p-3 shadow-[0_24px_48px_-24px_rgba(31,29,61,.4)] lg:hidden">
+      <nav aria-label="Mobile">
+        <ul class="grid gap-0.5">
+          <li><a href="features.html" class="m-link">Product<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="integrations.html" class="m-link">Integrations<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="customers.html" class="m-link">Customers<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="pricing.html" class="m-link" aria-current="page">Pricing<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="about.html" class="m-link">Company<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="changelog.html" class="m-link">Changelog<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="contact.html" class="m-link">Talk to sales<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+        </ul>
+        <a href="signup.html" class="btn-primary btn-lg mt-3 w-full">Start free trial</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="relative -mt-[5.75rem] overflow-hidden pt-[5.75rem]">
+      <div class="bg-mesh pointer-events-none absolute inset-0 opacity-70" aria-hidden="true"></div>
+      <div class="container-x relative pt-14 pb-8 text-center sm:pt-20">
+        <p class="eyebrow reveal"><span class="eyebrow-dot"></span>Pricing</p>
+        <h1 class="h-display reveal reveal-d1 mx-auto mt-6 max-w-3xl">Pay for the shifts you run, <span class="marker marker-mint">not the seats you don’t.</span></h1>
+        <p class="lead reveal reveal-d2 mx-auto mt-6 max-w-2xl">A small fee per location and per active employee. Free for one location with up to 15 people. Every paid plan starts with a 14-day trial.</p>
+        <div class="reveal reveal-d3 mt-9 flex flex-col items-center gap-3">
+          <div class="seg-group" role="radiogroup" aria-label="Billing period" id="billing">
+            <button type="button" role="radio" aria-checked="false" data-billing="monthly" class="seg-btn" tabindex="-1">Monthly</button>
+            <button type="button" role="radio" aria-checked="true" data-billing="annual" class="seg-btn">Annual <span class="rounded-full bg-butter px-1.5 py-0.5 text-[11px] font-bold text-butter-ink">−20%</span></button>
+          </div>
+          <p class="text-sm text-ink-faint" data-billing-note data-monthly="Billed monthly. Cancel any time." data-annual="Billed once a year. Prices shown per month.">Billed once a year. Prices shown per month.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-x pb-16" aria-label="Plans">
+      <div class="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <article class="reveal card flex flex-col p-7">
+          <h2 class="font-display text-xl font-bold">Starter</h2>
+          <p class="mt-1 text-sm text-ink-soft">For a single café or shop finding its footing.</p>
+          <p class="mt-6 flex items-end gap-1.5"><span class="font-display text-5xl font-extrabold tracking-[-0.04em]">$0</span><span class="pb-1.5 text-sm text-ink-faint">forever</span></p>
+          <p class="mt-1 text-sm font-medium text-ink-soft">1 location · up to 15 people</p>
+          <a href="signup.html?plan=starter" class="btn-ghost mt-7 w-full">Start for free</a>
+          <ul class="mt-7 grid gap-3 text-[15px]">
+            <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-mint-ink" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Drag-and-drop schedule</li><li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-mint-ink" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Team app for everyone</li><li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-mint-ink" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Swaps and time off</li><li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-mint-ink" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Phone clock-in</li>
+          </ul>
+        </article>
+        <article class="reveal reveal-d1 card relative flex flex-col p-7">
+          <h2 class="font-display text-xl font-bold">Team</h2>
+          <p class="mt-1 text-sm text-ink-soft">For growing venues with a few locations.</p>
+          <p class="mt-6 flex items-end gap-1.5"><span class="font-display text-5xl font-extrabold tracking-[-0.04em]" data-price-monthly="$3" data-price-annual="$2.40">$2.40</span><span class="pb-1.5 text-sm text-ink-faint">/ employee / mo</span></p>
+          <p class="mt-1 text-sm font-medium text-ink-soft">+ <span data-price-monthly="$29" data-price-annual="$23">$23</span> per location / mo</p>
+          <a href="signup.html?plan=team" class="btn-primary mt-7 w-full">Start free trial</a>
+          <ul class="mt-7 grid gap-3 text-[15px]">
+            <li class="font-semibold">Everything in Starter, plus:</li>
+            <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-mint-ink" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Unlimited locations and people</li><li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-mint-ink" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Auto-fill and templates</li><li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-mint-ink" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Timesheets and payroll export</li><li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-mint-ink" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Announcements</li><li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-mint-ink" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>100 SMS reminders a month</li>
+          </ul>
+        </article>
+        <article class="reveal reveal-d2 relative flex flex-col rounded-3xl bg-ink p-7 text-white shadow-[0_30px_60px_-30px_rgba(31,29,61,.8)]">
+          <p class="absolute -top-3.5 left-7 rounded-full bg-coral-500 px-3 py-1 text-xs font-bold text-ink">Most popular</p>
+          <h2 class="font-display text-xl font-bold">Business</h2>
+          <p class="mt-1 text-sm text-white/75">For groups that care about every point of labor %.</p>
+          <p class="mt-6 flex items-end gap-1.5"><span class="font-display text-5xl font-extrabold tracking-[-0.04em]" data-price-monthly="$5" data-price-annual="$4">$4</span><span class="pb-1.5 text-sm text-white/70">/ employee / mo</span></p>
+          <p class="mt-1 text-sm font-medium text-white/80">+ <span data-price-monthly="$59" data-price-annual="$47">$47</span> per location / mo</p>
+          <a href="signup.html?plan=business" class="btn-coral mt-7 w-full">Start free trial</a>
+          <ul class="mt-7 grid gap-3 text-[15px]">
+            <li class="font-semibold">Everything in Team, plus:</li>
+            <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-coral-300" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Labor cost forecasting from your POS</li><li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-coral-300" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Custom roles and permissions</li><li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-coral-300" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>API and webhooks</li><li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-coral-300" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>90-day audit log</li><li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-coral-300" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Priority support</li>
+          </ul>
+        </article>
+        <article class="reveal reveal-d3 card flex flex-col bg-lilac p-7">
+          <h2 class="font-display text-xl font-bold">Enterprise</h2>
+          <p class="mt-1 text-sm text-ink-soft">For 500+ people, franchises and hotel groups.</p>
+          <p class="mt-6 font-display text-5xl font-extrabold tracking-[-0.04em]">Custom</p>
+          <p class="mt-1 text-sm font-medium text-ink-soft">Volume pricing, annual contract</p>
+          <a href="contact.html?size=500" class="btn-primary mt-7 w-full">Talk to sales</a>
+          <ul class="mt-7 grid gap-3 text-[15px]">
+            <li class="font-semibold">Everything in Business, plus:</li>
+            <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-lilac-ink" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Single sign-on (SAML)</li><li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-lilac-ink" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Unlimited audit log</li><li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-lilac-ink" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Named success manager</li><li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 h-4.5 w-4.5 shrink-0 text-lilac-ink" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Uptime SLA and DPA</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- Calculator -->
+    <section id="calculator" class="container-x py-14 sm:py-20" aria-labelledby="calc-title">
+      <div class="panel grid overflow-hidden bg-cream lg:grid-cols-[1.25fr_1fr]">
+        <div class="p-6 sm:p-10 lg:p-12">
+          <p class="eyebrow reveal"><span class="eyebrow-dot"></span>Price calculator</p>
+          <h2 id="calc-title" class="h-section reveal mt-5">What would Orbit cost you?</h2>
+          <form id="calc" class="reveal mt-9 grid gap-8" novalidate>
+            <div>
+              <div class="flex items-baseline justify-between gap-4">
+                <label for="calc-locations" class="font-semibold">Locations</label>
+                <output for="calc-locations" id="calc-locations-out" class="font-display text-2xl font-bold tabular-nums">3</output>
+              </div>
+              <input id="calc-locations" name="locations" type="range" min="1" max="30" step="1" value="3" class="range mt-2">
+            </div>
+            <div>
+              <div class="flex items-baseline justify-between gap-4">
+                <label for="calc-employees" class="font-semibold">Employees with shifts</label>
+                <output for="calc-employees" id="calc-employees-out" class="font-display text-2xl font-bold tabular-nums">45</output>
+              </div>
+              <input id="calc-employees" name="employees" type="range" min="5" max="600" step="5" value="45" class="range mt-2">
+            </div>
+            <fieldset>
+              <legend class="font-semibold">Plan</legend>
+              <div class="mt-3 grid gap-3 sm:grid-cols-2">
+                <label class="option"><input type="radio" name="plan" value="team" class="sr-only" checked><span><span class="block font-display font-semibold">Team</span><span class="block text-sm text-ink-faint">Scheduling, swaps, timesheets</span></span><span class="option-tick"><svg viewBox="0 0 20 20" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span></label>
+                <label class="option"><input type="radio" name="plan" value="business" class="sr-only"><span><span class="block font-display font-semibold">Business</span><span class="block text-sm text-ink-faint">Plus labor forecasting and API</span></span><span class="option-tick"><svg viewBox="0 0 20 20" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span></label>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="reveal flex flex-col justify-between gap-8 bg-ink p-6 text-white sm:p-10 lg:p-12">
+          <div>
+            <p class="text-sm font-semibold text-white/75">Estimated total</p>
+            <p class="mt-2 flex items-end gap-2"><span id="calc-total" class="font-display text-6xl font-extrabold tracking-[-0.04em] tabular-nums">$177</span><span class="pb-2 text-white/75">/ month</span></p>
+            <p id="calc-billing" class="mt-1 text-sm text-white/75">Billed annually: $2,124 a year</p>
+            <dl class="mt-8 grid gap-3 border-t border-white/15 pt-6 text-[15px]">
+              <div class="flex justify-between gap-4"><dt id="calc-loc-label" class="text-white/80">3 locations × $23</dt><dd id="calc-loc-sum" class="font-semibold tabular-nums">$69</dd></div>
+              <div class="flex justify-between gap-4"><dt id="calc-emp-label" class="text-white/80">45 employees × $2.40</dt><dd id="calc-emp-sum" class="font-semibold tabular-nums">$108</dd></div>
+              <div class="flex justify-between gap-4 border-t border-white/15 pt-3"><dt class="text-white/80">Per employee, all in</dt><dd id="calc-per" class="font-semibold tabular-nums">$3.93</dd></div>
+            </dl>
+            <p id="calc-note" class="mt-6 rounded-2xl bg-white/10 px-4 py-3 text-sm font-medium text-butter">You save $540 a year with annual billing.</p>
+            <p id="calc-live" class="sr-only" aria-live="polite"></p>
+          </div>
+          <a href="signup.html?plan=team" id="calc-cta" class="btn-coral btn-lg w-full">Start a free trial <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison table -->
+    <section id="compare" class="container-x py-14 sm:py-20" aria-labelledby="table-title">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 id="table-title" class="h-section reveal">Compare every plan</h2>
+        <p class="lead reveal mt-4">Every plan includes the team app, unlimited shifts and free onboarding help.</p>
+      </div>
+      <div class="reveal mt-12 overflow-clip rounded-3xl border border-line bg-white">
+        <table class="w-full table-fixed border-separate border-spacing-0 text-left">
+          <caption class="sr-only">Features included in each plan</caption>
+          <colgroup><col class="w-[38%] sm:w-[36%]"><col><col><col><col></colgroup>
+          <thead>
+            <tr>
+              <th scope="col" class="sticky top-[5.25rem] z-10 border-b border-line bg-white/95 px-3 py-4 text-sm font-semibold text-ink-faint backdrop-blur sm:px-6"><span class="sr-only">Feature</span><span aria-hidden="true">Plans</span></th>
+              <th scope="col" class="sticky top-[5.25rem] z-10 border-b border-line bg-white/95 px-1 py-4 text-center backdrop-blur sm:px-3"><span class="block font-display text-[13px] font-bold sm:text-base">Starter</span><span class="hidden text-xs text-ink-faint sm:block">Free</span></th>
+              <th scope="col" class="sticky top-[5.25rem] z-10 border-b border-line bg-white/95 px-1 py-4 text-center backdrop-blur sm:px-3"><span class="block font-display text-[13px] font-bold sm:text-base">Team</span><span class="hidden text-xs text-ink-faint sm:block">$3 / employee</span></th>
+              <th scope="col" class="sticky top-[5.25rem] z-10 border-b border-line bg-lilac/95 px-1 py-4 text-center backdrop-blur sm:px-3"><span class="block font-display text-[13px] font-bold sm:text-base">Business</span><span class="hidden text-xs text-ink-faint sm:block">$5 / employee</span></th>
+              <th scope="col" class="sticky top-[5.25rem] z-10 border-b border-line bg-white/95 px-1 py-4 text-center backdrop-blur sm:px-3"><span class="block font-display text-[13px] font-bold sm:text-base"><abbr title="Enterprise" class="no-underline sm:hidden">Ent.</abbr><span class="hidden sm:inline">Enterprise</span></span><span class="hidden text-xs text-ink-faint sm:block">Custom</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th scope="colgroup" colspan="5" class="border-b border-line bg-cream px-3 py-2.5 font-display text-sm font-bold sm:px-6">Scheduling</th></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Locations</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="block text-[11px] leading-tight font-semibold [overflow-wrap:anywhere] sm:text-sm">1</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="font-display text-lg leading-none font-bold sm:hidden" aria-hidden="true">∞</span><span class="text-sm font-semibold max-sm:sr-only">Unlimited</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="font-display text-lg leading-none font-bold sm:hidden" aria-hidden="true">∞</span><span class="text-sm font-semibold max-sm:sr-only">Unlimited</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="font-display text-lg leading-none font-bold sm:hidden" aria-hidden="true">∞</span><span class="text-sm font-semibold max-sm:sr-only">Unlimited</span></td></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">People</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="block text-[11px] leading-tight font-semibold [overflow-wrap:anywhere] sm:text-sm">Up to 15</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="font-display text-lg leading-none font-bold sm:hidden" aria-hidden="true">∞</span><span class="text-sm font-semibold max-sm:sr-only">Unlimited</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="font-display text-lg leading-none font-bold sm:hidden" aria-hidden="true">∞</span><span class="text-sm font-semibold max-sm:sr-only">Unlimited</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="font-display text-lg leading-none font-bold sm:hidden" aria-hidden="true">∞</span><span class="text-sm font-semibold max-sm:sr-only">Unlimited</span></td></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Drag-and-drop builder</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Templates</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="block text-[11px] leading-tight font-semibold [overflow-wrap:anywhere] sm:text-sm">2</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="font-display text-lg leading-none font-bold sm:hidden" aria-hidden="true">∞</span><span class="text-sm font-semibold max-sm:sr-only">Unlimited</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="font-display text-lg leading-none font-bold sm:hidden" aria-hidden="true">∞</span><span class="text-sm font-semibold max-sm:sr-only">Unlimited</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="font-display text-lg leading-none font-bold sm:hidden" aria-hidden="true">∞</span><span class="text-sm font-semibold max-sm:sr-only">Unlimited</span></td></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Auto-fill</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="text-ink-faint" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Availability and time off</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Shift swaps and open shifts</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td></tr>
+          </tbody>
+          <tbody>
+            <tr><th scope="colgroup" colspan="5" class="border-b border-line bg-cream px-3 py-2.5 font-display text-sm font-bold sm:px-6">Time and pay</th></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Phone clock-in</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Kiosk mode</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="text-ink-faint" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Timesheets and approvals</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="text-ink-faint" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Payroll integrations</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="text-ink-faint" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Labor cost forecasting</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="text-ink-faint" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="text-ink-faint" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td></tr>
+          </tbody>
+          <tbody>
+            <tr><th scope="colgroup" colspan="5" class="border-b border-line bg-cream px-3 py-2.5 font-display text-sm font-bold sm:px-6">Team</th></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Team app for iOS and Android</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Announcements with read receipts</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="text-ink-faint" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">SMS reminders</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="text-ink-faint" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="block text-[11px] leading-tight font-semibold [overflow-wrap:anywhere] sm:text-sm">100/mo</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="block text-[11px] leading-tight font-semibold [overflow-wrap:anywhere] sm:text-sm">1,000/mo</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="font-display text-lg leading-none font-bold sm:hidden" aria-hidden="true">∞</span><span class="text-sm font-semibold max-sm:sr-only">Unlimited</span></td></tr>
+          </tbody>
+          <tbody>
+            <tr><th scope="colgroup" colspan="5" class="border-b border-line bg-cream px-3 py-2.5 font-display text-sm font-bold sm:px-6">Admin and security</th></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Roles and permissions</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="block text-[11px] leading-tight font-semibold [overflow-wrap:anywhere] sm:text-sm">Basic</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="block text-[11px] leading-tight font-semibold [overflow-wrap:anywhere] sm:text-sm">Basic</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="block text-[11px] leading-tight font-semibold [overflow-wrap:anywhere] sm:text-sm">Custom</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="block text-[11px] leading-tight font-semibold [overflow-wrap:anywhere] sm:text-sm">Custom</span></td></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">API and webhooks</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="text-ink-faint" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="text-ink-faint" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Single sign-on (SAML)</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="text-ink-faint" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="text-ink-faint" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="text-ink-faint" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="inline-grid h-6 w-6 place-items-center rounded-full bg-mint text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span><span class="sr-only">Included</span></td></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Audit log</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="text-ink-faint" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="text-ink-faint" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="block text-[11px] leading-tight font-semibold [overflow-wrap:anywhere] sm:text-sm">90 days</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="font-display text-lg leading-none font-bold sm:hidden" aria-hidden="true">∞</span><span class="text-sm font-semibold max-sm:sr-only">Unlimited</span></td></tr>
+            <tr><th scope="row" class="border-b border-line px-3 py-3.5 text-[13px] font-medium sm:px-6 sm:text-[15px]">Support</th><td class="border-b border-line px-1 py-3.5 text-center "><span class="block text-[11px] leading-tight font-semibold [overflow-wrap:anywhere] sm:text-sm">Email</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="block text-[11px] leading-tight font-semibold [overflow-wrap:anywhere] sm:text-sm">Chat and email</span></td><td class="border-b border-line px-1 py-3.5 text-center bg-lilac/40"><span class="block text-[11px] leading-tight font-semibold [overflow-wrap:anywhere] sm:text-sm">Priority</span></td><td class="border-b border-line px-1 py-3.5 text-center "><span class="block text-[11px] leading-tight font-semibold [overflow-wrap:anywhere] sm:text-sm">Named manager</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="container-x py-14 sm:py-20" aria-labelledby="faq-title">
+      <div class="grid gap-10 lg:grid-cols-[1fr_1.6fr] lg:gap-16">
+        <div>
+          <p class="eyebrow reveal"><span class="eyebrow-dot"></span>FAQ</p>
+          <h2 id="faq-title" class="h-section reveal mt-5">Questions, answered.</h2>
+          <p class="lead reveal mt-5">Something else on your mind? Our team replies within a few hours.</p>
+          <a href="contact.html" class="btn-ghost reveal mt-7">Talk to sales</a>
+        </div>
+        <div data-accordion class="reveal grid gap-3">
+          <div class="acc-item rounded-3xl border border-line bg-white is-open">
+            <h3>
+              <button type="button" id="faq-q1" aria-expanded="true" aria-controls="faq-a1" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display text-lg font-semibold">
+                How does per-location and per-employee pricing work?
+                <span class="acc-icon grid h-8 w-8 shrink-0 place-items-center rounded-full bg-cream"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg></span>
+              </button>
+            </h3>
+            <div id="faq-a1" role="region" aria-labelledby="faq-q1" class="acc-panel">
+              <div><p class="px-6 pb-6 leading-relaxed text-ink-soft">Paid plans have two parts: a flat fee for each location you schedule, plus a fee for each active employee. An employee is anyone with at least one shift in the billing period, so seasonal staff only count in the months they work.</p></div>
+            </div>
+          </div>
+          <div class="acc-item rounded-3xl border border-line bg-white">
+            <h3>
+              <button type="button" id="faq-q2" aria-expanded="false" aria-controls="faq-a2" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display text-lg font-semibold">
+                Is the Starter plan really free?
+                <span class="acc-icon grid h-8 w-8 shrink-0 place-items-center rounded-full bg-cream"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg></span>
+              </button>
+            </h3>
+            <div id="faq-a2" role="region" aria-labelledby="faq-q2" class="acc-panel">
+              <div><p class="px-6 pb-6 leading-relaxed text-ink-soft">Yes. One location with up to 15 people is free forever, including the team app, swaps and time off. You only pay when you add a second location or a sixteenth person.</p></div>
+            </div>
+          </div>
+          <div class="acc-item rounded-3xl border border-line bg-white">
+            <h3>
+              <button type="button" id="faq-q3" aria-expanded="false" aria-controls="faq-a3" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display text-lg font-semibold">
+                What happens after the 14-day trial?
+                <span class="acc-icon grid h-8 w-8 shrink-0 place-items-center rounded-full bg-cream"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg></span>
+              </button>
+            </h3>
+            <div id="faq-a3" role="region" aria-labelledby="faq-q3" class="acc-panel">
+              <div><p class="px-6 pb-6 leading-relaxed text-ink-soft">Your trial includes everything in Business. When it ends you choose a plan. If you don’t, your account moves to Starter and nothing is deleted.</p></div>
+            </div>
+          </div>
+          <div class="acc-item rounded-3xl border border-line bg-white">
+            <h3>
+              <button type="button" id="faq-q4" aria-expanded="false" aria-controls="faq-a4" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display text-lg font-semibold">
+                Can I switch between monthly and annual billing?
+                <span class="acc-icon grid h-8 w-8 shrink-0 place-items-center rounded-full bg-cream"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg></span>
+              </button>
+            </h3>
+            <div id="faq-a4" role="region" aria-labelledby="faq-q4" class="acc-panel">
+              <div><p class="px-6 pb-6 leading-relaxed text-ink-soft">Any time. Moving to annual applies the 20% discount from your next bill. Moving to monthly takes effect when your annual term ends.</p></div>
+            </div>
+          </div>
+          <div class="acc-item rounded-3xl border border-line bg-white">
+            <h3>
+              <button type="button" id="faq-q5" aria-expanded="false" aria-controls="faq-a5" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display text-lg font-semibold">
+                Do my employees pay anything?
+                <span class="acc-icon grid h-8 w-8 shrink-0 place-items-center rounded-full bg-cream"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg></span>
+              </button>
+            </h3>
+            <div id="faq-a5" role="region" aria-labelledby="faq-q5" class="acc-panel">
+              <div><p class="px-6 pb-6 leading-relaxed text-ink-soft">Never. The team app is free for everyone on your schedule, on iOS, Android and the web.</p></div>
+            </div>
+          </div>
+          <div class="acc-item rounded-3xl border border-line bg-white">
+            <h3>
+              <button type="button" id="faq-q6" aria-expanded="false" aria-controls="faq-a6" class="flex w-full items-center justify-between gap-4 px-6 py-5 text-left font-display text-lg font-semibold">
+                Do you offer discounts for nonprofits or schools?
+                <span class="acc-icon grid h-8 w-8 shrink-0 place-items-center rounded-full bg-cream"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 4v12M4 10h12"/></svg></span>
+              </button>
+            </h3>
+            <div id="faq-a6" role="region" aria-labelledby="faq-q6" class="acc-panel">
+              <div><p class="px-6 pb-6 leading-relaxed text-ink-soft">Nonprofits, schools and training kitchens get 50% off Team and Business. Get in touch with sales and tell us about your organization.</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="mt-auto px-3 pb-3 sm:px-5 sm:pb-5">
+    <div class="relative mx-auto max-w-7xl overflow-hidden rounded-5xl bg-cream">
+      <div class="grid gap-12 px-6 pt-14 pb-10 sm:px-10 lg:grid-cols-12 lg:px-14">
+        <div class="lg:col-span-4">
+          <a href="index.html" class="inline-flex items-center gap-2" aria-label="Orbit home">
+            <svg viewBox="0 0 40 40" class="h-9 w-9 shrink-0" aria-hidden="true"><g transform="rotate(-22 20 20)"><ellipse cx="20" cy="20" rx="17.5" ry="7" fill="none" stroke="#1f1d3d" stroke-width="2.6"/></g><circle cx="20" cy="20" r="9.5" fill="#ff6b4a"/><circle cx="16.6" cy="16.4" r="2.6" fill="#fff" opacity=".45"/><g transform="rotate(-22 20 20)"><path d="M2.5 20a17.5 7 0 0 0 35 0" fill="none" stroke="#1f1d3d" stroke-width="2.6" stroke-linecap="round"/><circle cx="37.5" cy="20" r="3.4" fill="#ffd84d" stroke="#1f1d3d" stroke-width="2"/></g></svg>
+            <span class="font-display text-[22px] font-bold tracking-[-0.03em]">orbit</span>
+          </a>
+          <p class="mt-4 max-w-xs text-[15px] leading-relaxed text-ink-soft">Shift scheduling for restaurants, cafés, hotels and shops. Made by Orbit Works in Overland Park, Kansas.</p>
+          <form data-form="newsletter" class="mt-7 max-w-sm" novalidate>
+            <label for="footer-email" class="text-sm font-bold">Product updates, once a month</label>
+            <div class="mt-2.5 flex gap-2">
+              <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@yourbusiness.example" class="input py-2.5">
+              <button type="submit" class="btn-primary shrink-0 px-4">Subscribe</button>
+            </div>
+          </form>
+        </div>
+        <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-7 lg:col-start-6">
+        <nav aria-label="Product">
+          <h2 class="text-sm font-bold text-ink">Product</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="features.html" class="text-ink-soft transition hover:text-ink">Features</a></li>
+            <li><a href="integrations.html" class="text-ink-soft transition hover:text-ink">Integrations</a></li>
+            <li><a href="pricing.html" class="text-ink-soft transition hover:text-ink" aria-current="page">Pricing</a></li>
+            <li><a href="changelog.html" class="text-ink-soft transition hover:text-ink">Changelog</a></li>
+            <li><a href="signup.html" class="text-ink-soft transition hover:text-ink">Start free trial</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2 class="text-sm font-bold text-ink">Company</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="about.html" class="text-ink-soft transition hover:text-ink">About us</a></li>
+            <li><a href="about.html#careers" class="text-ink-soft transition hover:text-ink">Careers</a></li>
+            <li><a href="customers.html" class="text-ink-soft transition hover:text-ink">Customers</a></li>
+            <li><a href="contact.html" class="text-ink-soft transition hover:text-ink">Talk to sales</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Resources">
+          <h2 class="text-sm font-bold text-ink">Resources</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="features.html#compare" class="text-ink-soft transition hover:text-ink">Orbit vs spreadsheets</a></li>
+            <li><a href="pricing.html#calculator" class="text-ink-soft transition hover:text-ink">Price calculator</a></li>
+            <li><a href="pricing.html#faq" class="text-ink-soft transition hover:text-ink">FAQ</a></li>
+            <li><a href="integrations.html?category=payroll" class="text-ink-soft transition hover:text-ink">Payroll integrations</a></li>
+          </ul>
+        </nav>
+        </div>
+      </div>
+      <div class="mx-6 flex flex-col gap-3 border-t border-line py-6 text-sm text-ink-faint sm:mx-10 sm:flex-row sm:items-center sm:justify-between lg:mx-14">
+        <p>© <span data-year>2026</span> Orbit Works, Inc. Orbit is a fictional product.</p>
+        <p class="inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#1fa16a]" aria-hidden="true"></span>All systems running · Website template by Freeframe</p>
+      </div>
+      <svg viewBox="0 40 1000 210" class="pointer-events-none mx-auto -mb-1 block w-full max-w-5xl px-4 text-ink/[.05] select-none" aria-hidden="true"><text x="500" y="276" text-anchor="middle" font-family="Gabarito, sans-serif" font-size="330" font-weight="800" letter-spacing="-16" fill="currentColor">orbit</text></svg>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

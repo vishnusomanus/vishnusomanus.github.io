@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bed planner — Loamstead field school</title>
+  <meta name="description" content="Work out how many plants fit in a growing bed, see them drawn to scale, and find the course that teaches that crop.">
+  <meta name="theme-color" content="#f6f4e9">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Loamstead field school">
+  <meta property="og:title" content="Bed planner — Loamstead field school">
+  <meta property="og:description" content="Work out how many plants fit in a growing bed, see them drawn to scale, and find the course that teaches that crop.">
+  <meta property="og:url" content="https://loamstead.example/planner.html">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&amp;family=Vollkorn:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="bg-paper font-sans text-ink antialiased">
+  <a href="#main" class="sr-only z-[70] bg-ink px-4 py-2 text-sm font-semibold text-paper focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+
+  <header id="site-header" class="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur [&.is-scrolled]:shadow-[0_1px_0_rgb(31_58_46/.12)]">
+    <div class="wrap flex h-[4.75rem] items-center gap-3">
+      <a href="index.html" class="flex shrink-0 items-center gap-2.5"><svg class="size-10 shrink-0" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="19" fill="#1f3a2e"/><path d="M2.5 27.5h35A19 19 0 0 1 2.5 27.5Z" fill="#6e5240"/><ellipse cx="20" cy="31" rx="3.4" ry="2.3" fill="#d9774f"/><path d="M20 29V15.5" stroke="#f6f4e9" stroke-width="1.8" stroke-linecap="round"/><path d="M20 19.5c-6 0-8.6-3.4-8.6-7.2 5.2 0 8.6 2.6 8.6 7.2Z" fill="#dbe3b8"/><path d="M20 17c.4-5 3.6-7.8 8.6-7.8 0 4.6-3.6 7.8-8.6 7.8Z" fill="#b9c98a"/></svg><span class="leading-none"><span class="block font-display text-[1.65rem] font-semibold tracking-tight">loamstead</span><span class="mt-1 block text-[0.6rem] font-semibold tracking-[0.28em] text-muted uppercase">Field school · Corvallis</span></span></a>
+      <nav aria-label="Main" class="ml-auto hidden lg:block">
+        <ul class="flex items-center gap-6"><li><a href="courses.html" class="nav-link">Courses</a></li><li><a href="timetable.html" class="nav-link">Schedule</a></li><li><a href="planner.html" class="nav-link" aria-current="page">Bed planner</a></li><li><a href="about.html" class="nav-link">About us</a></li><li><a href="visit.html" class="nav-link">Visit</a></li></ul>
+      </nav>
+      <div class="ml-auto flex items-center gap-2 lg:ml-6">
+        <a href="saved.html" data-shortlist-link class="relative inline-flex min-h-11 items-center gap-2 border border-ink/40 px-3 text-sm font-semibold transition-colors hover:bg-leaf aria-[current=page]:border-ink aria-[current=page]:bg-leaf" aria-label="Shortlist, no courses saved"><svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 4h10v16l-5-4-5 4Z"/></svg><span class="hidden sm:inline">Shortlist</span><span data-nav-count class="grid h-5 min-w-5 place-items-center bg-rust px-1 text-[11px] leading-none font-bold text-paper" hidden>0</span></a>
+        <a href="enrol.html" class="btn btn-primary hidden sm:inline-flex">Enroll</a>
+        <button type="button" id="menu-button" class="grid size-11 place-items-center border border-ink/40 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span data-icon-open><svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h11"/></svg></span><span data-icon-close class="hidden"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6l12 12"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="border-t border-line bg-paper lg:hidden" hidden>
+      <nav aria-label="Mobile" class="wrap pt-2 pb-6">
+        <ul><li><a href="courses.html" class="mnav-link">Courses</a></li><li><a href="timetable.html" class="mnav-link">Schedule</a></li><li><a href="planner.html" class="mnav-link" aria-current="page">Bed planner</a></li><li><a href="about.html" class="mnav-link">About us</a></li><li><a href="visit.html" class="mnav-link">Visit</a></li><li><a href="saved.html" class="mnav-link">Your shortlist</a></li></ul>
+        <a href="enrol.html" class="btn btn-primary mt-5 w-full">Enroll in a course</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="wrap pt-12 pb-10 sm:pt-16">
+      <p class="eyebrow">Measure twice, plant once</p>
+      <h1 class="mt-4 max-w-4xl font-display text-[clamp(2.6rem,5.6vw,4.6rem)] leading-[1] font-medium tracking-[-0.02em]">Make room for a <em class="font-normal text-rust">little harvest.</em></h1>
+      <p class="mt-5 max-w-2xl text-lg leading-relaxed text-muted">Enter the inside measurements of one rectangular bed and choose a crop. The planner works out how many plants fit at the spacing we use on the plot, and draws them to scale.</p>
+    </header>
+
+    <div class="wrap grid items-start gap-10 lg:grid-cols-[22rem_1fr] lg:gap-14">
+      <form class="graph sheet p-5 sm:p-6" data-planner data-prefix="p-" novalidate>
+        <h2 class="font-display text-2xl font-medium">Your bed</h2>
+        <div class="mt-5 grid grid-cols-2 gap-4">
+          <div>
+            <label for="p-width" class="label">Width (ft)</label>
+            <input id="p-width" name="width" class="input" inputmode="decimal" autocomplete="off" value="4" aria-describedby="p-width-error">
+          </div>
+          <div>
+            <label for="p-length" class="label">Length (ft)</label>
+            <input id="p-length" name="length" class="input" inputmode="decimal" autocomplete="off" value="8" aria-describedby="p-length-error">
+          </div>
+        </div>
+        <p class="field-error" id="p-width-error" hidden></p>
+        <p class="field-error" id="p-length-error" hidden></p>
+        <p class="hint">Between 0.5 and 30 feet. Measure inside the edging, without paths.</p>
+        <div class="mt-5">
+          <label for="p-crop" class="label">Crop</label>
+          <select id="p-crop" name="crop" class="input select" aria-describedby="p-crop-error">
+            <option value="lettuce">Loose-leaf lettuce · 12 in</option>
+            <option value="beetroot">Beets · 6 in</option>
+            <option value="kale">Kale · 18 in</option>
+            <option value="beans">Bush beans · 6 in</option>
+            <option value="garlic">Garlic · 6 in</option>
+            <option value="chard">Swiss chard · 12 in</option>
+            <option value="courgette">Zucchini · 36 in</option>
+            <option value="radish">Radish · 2 in</option>
+          </select>
+          <p class="field-error" id="p-crop-error" hidden></p>
+        </div>
+        <button type="submit" class="btn btn-primary mt-6 w-full">Work out my bed</button>
+        <p class="mt-4 text-xs leading-relaxed text-muted">Your last plan is remembered on this device.</p>
+      </form>
+
+      <section class="min-w-0" aria-labelledby="result-title">
+        <h2 id="result-title" class="eyebrow">Your field note</h2>
+        <div role="status" aria-live="polite" aria-atomic="true" class="mt-3">
+          <div data-plan-result>
+            <p class="font-display text-6xl leading-none font-semibold" data-plant-count>32 plants</p>
+            <p class="mt-3 text-lg" data-plant-detail>4 plants across × 8 along, 12 in apart, in a 4 ft × 8 ft bed (32 sq ft).</p>
+            <p class="mt-3 border-l-4 border-rust bg-straw/60 px-4 py-2 text-sm font-semibold" data-plan-truncated hidden></p>
+          </div>
+          <div class="border-l-4 border-rust bg-straw/60 p-5" data-plan-zero hidden>
+            <p class="font-display text-3xl font-medium">No room yet.</p>
+            <p class="mt-2" data-plan-zero-text></p>
+          </div>
+        </div>
+        <div class="mt-8 grid items-start gap-8 xl:grid-cols-[1fr_17rem]">
+          <figure class="sheet p-4 sm:p-6">
+            <div data-plant-grid class="min-h-40"></div>
+            <figcaption class="mt-3 border-t border-line pt-2 text-xs font-semibold tracking-wider text-muted uppercase" data-plan-caption>Plan view</figcaption>
+          </figure>
+          <div class="sheet tape p-5">
+            <h2 class="eyebrow">Learn it properly</h2>
+            <p class="mt-3"><a href="course.html?course=first-bed" class="font-display text-2xl leading-tight font-medium underline decoration-rust underline-offset-4 hover:text-rust" data-suggest-name>Your first growing bed</a></p>
+            <p class="mt-2 text-sm leading-relaxed text-muted" data-suggest-why>Learn to grow it with our instructors.</p>
+            <button type="button" class="btn btn-ghost btn-sm mt-4 aria-pressed:bg-leaf" data-save="first-bed" data-suggest-save aria-pressed="false" aria-label="Save Your first growing bed to your shortlist"><svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 4h10v16l-5-4-5 4Z"/></svg><span data-save-label>Save</span></button>
+          </div>
+        </div>
+        <details class="acc mt-8 border-y border-line">
+          <summary><span class="flex-1 font-semibold">How the planner works it out</span><svg class="acc-icon size-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M12 5v14M5 12h14"/></svg></summary>
+          <div class="prose-notes pb-5 text-sm leading-relaxed text-muted">
+            <p>The bed is divided into equal squares, one per plant, with the spacing as the side of each square. Each plant sits in the middle of its square, so the outer plants are half a spacing from the edge, where they won’t crowd a path.</p>
+            <p>Spacings are the ones we use at the plot for a well-fed bed. Seed packets sometimes give a row spacing and a plant spacing; if yours are different, follow the packet. The count is an estimate, not a crop guarantee: light, soil and slugs all have a say.</p>
+          </div>
+        </details>
+      </section>
+    </div>
+  </main>
+
+  <footer class="mt-24 bg-ink text-paper">
+    <div class="wrap grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.4fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-2.5"><svg class="size-10 shrink-0" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="19" fill="#1f3a2e" stroke="#f1dfb2" stroke-width="1.5"/><path d="M2.5 27.5h35A19 19 0 0 1 2.5 27.5Z" fill="#6e5240"/><ellipse cx="20" cy="31" rx="3.4" ry="2.3" fill="#d9774f"/><path d="M20 29V15.5" stroke="#f6f4e9" stroke-width="1.8" stroke-linecap="round"/><path d="M20 19.5c-6 0-8.6-3.4-8.6-7.2 5.2 0 8.6 2.6 8.6 7.2Z" fill="#dbe3b8"/><path d="M20 17c.4-5 3.6-7.8 8.6-7.8 0 4.6-3.6 7.8-8.6 7.8Z" fill="#b9c98a"/></svg><span class="font-display text-[1.65rem] leading-none font-semibold tracking-tight">loamstead</span></a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-paper/80">A small, independent gardening school on a walled plot in Corvallis. Practical courses in small groups, for beginners and keen growers alike.</p>
+      </div>
+      <nav aria-labelledby="footer-learn">
+        <h2 id="footer-learn" class="text-xs font-semibold tracking-[0.18em] text-straw uppercase">Learn</h2>
+        <ul class="mt-4 grid gap-2.5 text-sm"><li><a class="hover:underline" href="courses.html">Courses</a></li><li><a class="hover:underline" href="timetable.html">Schedule</a></li><li><a class="hover:underline" href="enrol.html">Enroll</a></li><li><a class="hover:underline" href="planner.html">Bed planner</a></li><li><a class="hover:underline" href="saved.html">Your shortlist</a></li></ul>
+      </nav>
+      <nav aria-labelledby="footer-school">
+        <h2 id="footer-school" class="text-xs font-semibold tracking-[0.18em] text-straw uppercase">The school</h2>
+        <ul class="mt-4 grid gap-2.5 text-sm"><li><a class="hover:underline" href="about.html">About us</a></li><li><a class="hover:underline" href="about.html#tutors">Our instructors</a></li><li><a class="hover:underline" href="visit.html#access">Accessibility</a></li><li><a class="hover:underline" href="visit.html#terms">Booking terms</a></li><li><a class="hover:underline" href="visit.html#safeguarding">Student safety</a></li></ul>
+      </nav>
+      <div>
+        <h2 class="text-xs font-semibold tracking-[0.18em] text-straw uppercase">Find us</h2>
+        <address class="mt-4 text-sm leading-relaxed not-italic">The Walled Plot, 2480 SE Alder Bend Road<br>Corvallis, OR 97333</address>
+        <p class="mt-3 text-sm leading-relaxed"><a class="font-semibold hover:underline" href="tel:+15415550179">(541) 555-0179</a><br><a class="hover:underline" href="mailto:hello@loamstead.example">hello@loamstead.example</a></p>
+        <dl class="mt-3 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm text-paper/80"><dt class="font-semibold text-paper">Office</dt><dd>Mon–Fri, 9am–4pm</dd><dt class="font-semibold text-paper">Courses</dt><dd>Weekends and Wednesday evenings</dd></dl>
+      </div>
+    </div>
+    <div class="border-t border-paper/20">
+      <div class="wrap flex flex-col gap-2 py-6 text-xs text-paper/80 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Loamstead field school. A fictional school from a Freeframe template.</p>
+        <p><a href="#main" class="hover:underline">Back to top</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="announcer" class="sr-only" role="status" aria-live="polite"></div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

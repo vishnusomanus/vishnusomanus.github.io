@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Every module, in plain sight — Praxlet</title>
+    <meta
+      name="description"
+      content="Browse sixteen robotics modules with clear specifications, prices, voltages, interfaces and compatibility notes. Compare up to four parts side by side."
+    />
+    <meta name="theme-color" content="#b92e20" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Praxlet" />
+    <meta property="og:title" content="Every module, in plain sight — Praxlet" />
+    <meta
+      property="og:description"
+      content="Browse sixteen robotics modules with clear specifications, prices, voltages, interfaces and compatibility notes. Compare up to four parts side by side."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mada:wght@400;600;700&amp;family=Teko:wght@400;500;600&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script defer src="assets/js/data.js"></script>
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body data-page="modules" class="flex min-h-screen flex-col">
+    <a
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 z-50 bg-red p-3 font-semibold text-white"
+      href="#main"
+      >Skip to content</a
+    >
+    <header class="border-b border-ink">
+      <div class="bg-red text-white">
+        <div class="wrap flex min-h-8 items-center justify-between gap-4 text-xs">
+          <p>Modular robotics / Nashua, New Hampshire</p>
+          <p class="hidden sm:block">Low voltage. Open connections. Useful questions.</p>
+        </div>
+      </div>
+      <div class="wrap flex min-h-24 items-center justify-between gap-4">
+        <a href="index.html" class="font-display text-5xl font-semibold tracking-tight"
+          >PRAXLET<span class="text-red">/</span></a
+        >
+        <nav class="hidden lg:block" aria-label="Main">
+          <ul class="flex gap-1">
+            <li><a class="nav-link" href="modules.html" aria-current="page">Modules</a></li>
+            <li><a class="nav-link" href="configurator.html">Build a kit</a></li>
+            <li><a class="nav-link" href="projects.html">Projects</a></li>
+            <li><a class="nav-link" href="docs.html">Field notes</a></li>
+            <li><a class="nav-link" href="company.html">Company</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="contact.html" class="btn btn-small hidden sm:inline-flex"
+            >Talk through a build
+            <svg
+              class="size-4 shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M4 12h16m-7-7 7 7-7 7" /></svg></a
+          ><button
+            type="button"
+            data-menu-toggle
+            class="border border-ink p-3 lg:hidden"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <svg
+              class="size-5"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" class="wrap pb-6 lg:hidden" aria-label="Mobile" hidden>
+        <ul class="grid grid-cols-2 gap-2">
+          <li><a class="nav-link" href="modules.html" aria-current="page">Modules</a></li>
+          <li><a class="nav-link" href="configurator.html">Build a kit</a></li>
+          <li><a class="nav-link" href="projects.html">Projects</a></li>
+          <li><a class="nav-link" href="docs.html">Field notes</a></li>
+          <li><a class="nav-link" href="company.html">Company</a></li>
+        </ul>
+        <a href="contact.html" class="btn mt-4 w-full">Talk through a build</a>
+      </nav>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="border-b border-ink">
+        <div class="wrap grid items-center gap-8 py-10 md:grid-cols-[1.25fr_.75fr] lg:py-14">
+          <div>
+            <p class="eyebrow text-red">MODULE CATALOG / 16 PARTS</p>
+            <h1 class="mt-5 max-w-4xl text-[clamp(3.6rem,7vw,6.8rem)] uppercase leading-[.95] tracking-tight">
+              One part.<br />A useful function.
+            </h1>
+            <p class="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
+              Sixteen modules with a clear job, a labeled connection and a specification you can check. Choose the
+              parts for your question, rather than the other way around.
+            </p>
+            <p class="mt-5 inline-flex items-center gap-2 border border-ink px-3 py-1.5 text-sm font-semibold" data-age-note>
+              <span class="bg-red px-1.5 text-white" aria-hidden="true">11+</span>Recommended for ages 11+. Contains small parts.
+            </p>
+          </div>
+          <figure>
+            <img
+              src="assets/img/hero-modules.svg"
+              class="w-full"
+              width="420"
+              height="320"
+              alt="A parts tray of six compartments holding a controller, a wheel, a distance sensor, a display, a servo and a battery pack."
+            />
+          </figure>
+        </div>
+      </section>
+      <section class="wrap py-10">
+        <form
+          data-module-filters
+          class="grid gap-4 border-b border-line pb-7 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr_auto]"
+        >
+          <label
+            ><span class="label">Find a module</span
+            ><input class="field" type="search" name="q" placeholder="Sensor, motor, controller…" /></label
+          ><label
+            ><span class="label">Function</span
+            ><select class="field" name="category">
+              <option value="all">All functions</option>
+            </select></label
+          ><label
+            ><span class="label">Voltage</span
+            ><select class="field" name="voltage">
+              <option value="all">All voltages</option>
+              <option value="5">5 V system</option>
+              <option value="3.3">3.3 V system</option>
+              <option value="0">Mechanical / selectable</option>
+            </select></label
+          ><label
+            ><span class="label">Sort by</span
+            ><select class="field" name="sort">
+              <option value="function">Function order</option>
+              <option value="price">Price: low to high</option>
+              <option value="current">Planning current</option>
+              <option value="name">Name</option>
+            </select></label
+          ><button class="btn btn-line self-end" type="reset">Reset</button>
+        </form>
+        <div class="flex flex-wrap justify-between gap-3 py-5 text-sm">
+          <p data-module-count role="status" aria-live="polite"></p>
+          <a class="text-link" href="#compare">Comparison: <span data-compare-count>0</span> of 4</a>
+        </div>
+        <h2 class="sr-only">Available modules</h2>
+        <div data-module-grid class="grid gap-x-7 gap-y-12 sm:grid-cols-2 lg:grid-cols-4"></div>
+        <div data-module-empty class="border border-line bg-wash p-8" hidden>
+          <h2 class="text-4xl uppercase">A different combination, perhaps.</h2>
+          <p class="mt-3 text-muted">
+            Try a broader function or voltage filter, or reset the board to see all sixteen modules.
+          </p>
+        </div>
+      </section>
+      <section id="compare" data-compare-section class="border-t border-ink bg-wash py-12" hidden>
+        <div class="wrap">
+          <div class="flex flex-wrap justify-between gap-4">
+            <div>
+              <p class="eyebrow text-red">SIDE BY SIDE</p>
+              <h2 class="mt-3 text-4xl uppercase">Compare the details.</h2>
+            </div>
+            <button type="button" data-clear-compare class="btn btn-line btn-small">Clear comparison</button>
+          </div>
+          <div data-comparison class="mt-7 grid gap-4 sm:grid-cols-2 lg:grid-cols-4"></div>
+          <p class="mt-5 text-sm text-muted">
+            Planning current is an allowance for comparison. Verify the assembled circuit before extended use.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-auto bg-ink text-paper">
+      <div class="wrap grid gap-9 py-12 md:grid-cols-[1.2fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="font-display text-5xl font-semibold">PRAXLET/</a>
+          <p class="mt-3 max-w-xs text-sm text-paper/80">
+            Small modules for the questions you can build, test and explain.
+          </p>
+        </div>
+        <div>
+          <h2 class="eyebrow">Find the workbench</h2>
+          <p class="mt-4 text-sm leading-relaxed">
+            Studio 4, 46 Bobbin Way<br />Nashua, NH 03060<br />Monday–Friday, 9am–5pm
+          </p>
+          <a class="text-link mt-3 inline-block" href="company.html#visit">Plan a visit</a>
+        </div>
+        <div>
+          <h2 class="eyebrow">Build with us</h2>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a class="underline underline-offset-4" href="contact.html">hello@praxlet.example</a></li>
+            <li><a class="underline underline-offset-4" href="tel:+16035550173">(603) 555-0173</a></li>
+            <li><a class="underline underline-offset-4" href="docs.html">Project & safety field notes</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap flex flex-wrap justify-between gap-3 border-t border-paper/25 py-5 text-xs text-paper/70">
+        <p>© <span data-year></span> Praxlet. A useful way to learn.</p>
+        <p>Praxlet is a fictional business.</p>
+      </div>
+    </footer>
+    <p
+      data-announcement
+      role="status"
+      aria-live="polite"
+      class="fixed bottom-4 left-4 right-4 z-40 mx-auto max-w-xl border border-ink bg-paper px-5 py-4 text-sm font-semibold shadow-lg"
+      hidden
+    ></p>
+  </body>
+</html>

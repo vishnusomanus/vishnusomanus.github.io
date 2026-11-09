@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Visit — Marrow</title>
+<meta name="description" content="Marrow is twenty-eight seats in Pinhão, above the Douro. No music, two seatings." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; } input, select { color-scheme: dark; }</style>
+</head>
+<body class="bg-[#1a0e10] text-[#f6efe8] font-sans antialiased">
+<header class="sticky top-0 z-30 bg-[#1a0e10]/95 text-[#f6efe8] backdrop-blur">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-3xl">Marrow</a>
+    <div class="flex items-center gap-3"><a href="reserve.html" class="hidden border border-[#e7b7a0] px-4 py-2 text-xs uppercase tracking-[0.16em] text-[#e7b7a0] sm:inline">Reserve</a><button id="menuBtn" class="border border-[#e7b7a0]/40 px-3 py-1 text-xs uppercase tracking-[0.16em] md:hidden" aria-expanded="false">Menu</button></div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t pt-3 text-sm md:flex md:basis-auto md:flex-row md:items-center md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html">Tonight</a><a href="menu.html">Menu</a><a href="visit.html" aria-current="page">Visit</a><a href="reserve.html">Reserve</a></nav>
+  </div>
+</header><main>
+  <section class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 sm:px-8 lg:grid-cols-2">
+    <div><h1 class="font-display text-6xl italic">The room before service.</h1><p class="mt-4 text-[#e6d5cb]">Twenty-eight seats, set while the hills are still bright. There is no music. Coats go on hooks by the door. The kitchen is visible from the last four seats, which we give to people who ask for them.</p><p class="mt-4 text-sm text-[#e6d5cb]">Largo da Estação 2, Pinhão. The station is a three-minute walk. There is no car park on the square; leave the car by the river.</p></div>
+    <img src="images/hearth.jpg" alt="The dining room in the evening" class="aspect-[4/5] w-full object-cover" />
+  </section>
+  <section class="mx-auto grid max-w-6xl gap-4 px-5 pb-16 sm:px-8 md:grid-cols-2">
+    <figure><img src="images/kitchen.jpg" alt="Prep at the pass" class="aspect-[4/3] w-full object-cover" /><figcaption class="mt-2 text-sm text-[#e6d5cb]">Prep starts at 15:00. The pass is quiet until the first seating.</figcaption></figure>
+    <figure><img src="images/room.jpg" alt="A plate being set down during service" class="aspect-[4/3] w-full object-cover" /><figcaption class="mt-2 text-sm text-[#e6d5cb]">Service is the menu, brought to the table. There is no à la carte.</figcaption></figure>
+  </section>
+</main><footer class="border-t border-white/10 text-[#e6d5cb]"><div class="mx-auto grid max-w-6xl gap-6 px-5 py-10 text-sm sm:px-8 md:grid-cols-3"><div><p class="font-display text-3xl text-[#f6efe8]">Marrow</p><p class="mt-2">Largo da Estação 2<br />5085-037 Pinhão</p></div><div><p>Dinner Tuesday to Sunday. Closed Monday.</p><p class="mt-2">Seatings at 18:30 and 21:00.</p></div><div><span >table@marrow.pt</span><br />+351 21 394 1180</div></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#f6f6f3"/>
+  <g stroke="#121211" stroke-opacity=".06">
+    <path d="M60 0v630M150 0v630M240 0v630M330 0v630M420 0v630M510 0v630M600 0v630M690 0v630M780 0v630M870 0v630M960 0v630M1050 0v630M1140 0v630"/>
+  </g>
+  <g transform="translate(60 60)">
+    <rect width="12" height="12" fill="#121211"/><rect x="18" width="12" height="12" fill="#121211"/><rect x="36" width="12" height="12" fill="#121211"/>
+    <rect y="18" width="12" height="12" fill="#121211"/><rect x="18" y="18" width="12" height="12" fill="#121211"/><rect x="36" y="18" width="12" height="12" fill="#121211"/>
+    <rect y="36" width="12" height="12" fill="#121211"/><rect x="18" y="36" width="12" height="12" fill="#121211"/><rect x="36" y="36" width="12" height="12" fill="#e8381e"/>
+  </g>
+  <text x="130" y="100" font-family="Host Grotesk, Helvetica Neue, Arial, sans-serif" font-size="40" font-weight="600" letter-spacing="-1.5" fill="#121211">Raster</text>
+  <text x="1140" y="96" text-anchor="end" font-family="Fragment Mono, ui-monospace, monospace" font-size="18" fill="#5b5b56">DESIGN STUDIO · SAINT PAUL</text>
+  <g font-family="Host Grotesk, Helvetica Neue, Arial, sans-serif" font-size="92" font-weight="500" letter-spacing="-4.5">
+    <text x="54" y="330" fill="#121211">We design identities</text>
+    <text x="54" y="422" fill="#121211">and digital products</text>
+    <text x="54" y="514" fill="#5b5b56">that stay useful.</text>
+  </g>
+  <path d="M60 560h1080" stroke="#121211"/>
+  <text x="60" y="596" font-family="Fragment Mono, ui-monospace, monospace" font-size="17" fill="#5b5b56">IDENTITY — DIGITAL PRODUCT — EDITORIAL — WAYFINDING</text>
+  <rect x="1128" y="582" width="12" height="12" fill="#e8381e"/>
+</svg>

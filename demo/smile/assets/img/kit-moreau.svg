@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="t">
+  <title id="t">Illustrated portrait of Kit Moreau</title>
+  <rect width="240" height="240" rx="56" fill="#fff4c2"/>
+  <circle cx="196" cy="44" r="26" fill="#fff" opacity=".45"/>
+  <circle cx="34" cy="196" r="44" fill="#fff" opacity=".3"/>
+  <path d="M58 124c-4-54 22-90 62-90s66 36 62 90c-2 22 6 40 18 60H40c12-20 20-38 18-60Z" fill="#5146d4"/>
+  <path d="M40 240c0-44 32-70 80-70s80 26 80 70Z" fill="#ef4a7b"/>
+  <path d="M96 172l24 30 24-30" fill="#fff" opacity=".9"/>
+  <rect x="104" y="140" width="32" height="40" rx="14" fill="#eab896"/>
+  <path d="M104 160c10 8 22 8 32 0v-10h-32Z" fill="rgba(29,26,77,.08)"/>
+  <circle cx="74" cy="114" r="10" fill="#eab896"/><circle cx="166" cy="114" r="10" fill="#eab896"/>
+  <ellipse cx="120" cy="108" rx="46" ry="52" fill="#eab896"/>
+  <path fill-rule="evenodd" d="M58 124c-4-56 26-88 62-88s66 32 62 88c-2 30-4 46 14 70H44c18-24 16-40 14-70ZM80 114a40 47 0 1 0 80 0a40 47 0 1 0-80 0Z" fill="#5146d4"/><path d="M80 104c6-26 22-40 40-40s34 14 40 40" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" opacity=".35"/>
+  
+  <g fill="#1d1a4d"><ellipse cx="102" cy="112" rx="4.6" ry="5.6"/><ellipse cx="138" cy="112" rx="4.6" ry="5.6"/></g>
+  <path d="M94 98c4-3 10-4 15-2M131 96c5-2 11-1 15 2" fill="none" stroke="#1d1a4d" stroke-width="3.6" stroke-linecap="round" opacity=".85"/>
+  <ellipse cx="90" cy="128" rx="8" ry="5" fill="#fb6f97" opacity=".28"/><ellipse cx="150" cy="128" rx="8" ry="5" fill="#fb6f97" opacity=".28"/>
+  <path d="M120 116c-2 6-3 10 0 12" fill="none" stroke="#1d1a4d" stroke-width="3" stroke-linecap="round" opacity=".35"/>
+  <path d="M106 136c7 9 21 9 28 0Z" fill="#fff" stroke="#1d1a4d" stroke-width="3.4" stroke-linejoin="round"/>
+  
+</svg>

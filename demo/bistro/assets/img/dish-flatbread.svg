@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <radialGradient id="table" cx="50%" cy="40%" r="80%"><stop offset="0" stop-color="#4a3328"/><stop offset="1" stop-color="#1e1410"/></radialGradient>
+    <radialGradient id="plate" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#fbf7f0"/><stop offset=".85" stop-color="#ece2d2"/><stop offset="1" stop-color="#d9ccb7"/></radialGradient>
+    <radialGradient id="bread" cx="45%" cy="40%" r="65%"><stop offset="0" stop-color="#f6d590"/><stop offset=".6" stop-color="#e2a95a"/><stop offset="1" stop-color="#a8642a"/></radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="16"/></filter>
+    <filter id="char"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <rect width="800" height="800" fill="url(#table)"/>
+  <path d="M0 640c160-30 300 20 460-10s250-70 340-40v210H0z" fill="#e9dfcf" opacity=".08"/>
+  <circle cx="410" cy="420" r="320" fill="#000" opacity=".45" filter="url(#shadow)"/>
+  <circle cx="400" cy="400" r="320" fill="url(#plate)"/>
+  <circle cx="400" cy="400" r="250" fill="none" stroke="#d6c8b2" stroke-width="2" opacity=".6"/>
+  <g transform="rotate(-14 400 400)">
+    <path d="M170 400c0-110 100-180 240-180s230 80 230 175-90 185-235 185S170 510 170 400z" fill="url(#bread)"/>
+    <g fill="#3b200e" filter="url(#char)" opacity=".55">
+      <ellipse cx="250" cy="340" rx="26" ry="14"/><ellipse cx="560" cy="330" rx="20" ry="11"/>
+      <ellipse cx="300" cy="500" rx="30" ry="14"/><ellipse cx="590" cy="470" rx="24" ry="13"/>
+      <ellipse cx="430" cy="250" rx="22" ry="10"/><ellipse cx="460" cy="560" rx="18" ry="9"/>
+    </g>
+    <g fill="#fff3d6" opacity=".55"><ellipse cx="350" cy="300" rx="22" ry="10"/><ellipse cx="520" cy="420" rx="16" ry="8"/></g>
+  </g>
+  <!-- whipped feta -->
+  <g fill="#fffaf2">
+    <circle cx="330" cy="380" r="34"/><circle cx="360" cy="356" r="24"/><circle cx="470" cy="330" r="30"/>
+    <circle cx="500" cy="352" r="22"/><circle cx="420" cy="470" r="36"/><circle cx="452" cy="452" r="22"/>
+    <circle cx="300" cy="470" r="22"/><circle cx="545" cy="440" r="26"/>
+  </g>
+  <g fill="#e8dcc6"><circle cx="338" cy="392" r="12"/><circle cx="478" cy="342" r="10"/><circle cx="428" cy="482" r="12"/></g>
+  <!-- honey drizzle -->
+  <path d="M230 360c60 30 90-30 150 0s80 60 140 20 90-10 110 20M260 470c50-20 80 30 140 10s70-60 140-30" fill="none" stroke="#f0a92a" stroke-width="7" stroke-linecap="round" opacity=".9"/>
+  <path d="M230 360c60 30 90-30 150 0s80 60 140 20 90-10 110 20" fill="none" stroke="#ffe08a" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+  <!-- herbs and za'atar -->
+  <g fill="#557a2a">
+    <ellipse cx="380" cy="420" rx="14" ry="6" transform="rotate(30 380 420)"/><ellipse cx="510" cy="400" rx="14" ry="6" transform="rotate(-40 510 400)"/>
+    <ellipse cx="300" cy="420" rx="12" ry="5" transform="rotate(70 300 420)"/><ellipse cx="440" cy="300" rx="13" ry="5" transform="rotate(10 440 300)"/>
+    <ellipse cx="560" cy="380" rx="12" ry="5" transform="rotate(-70 560 380)"/><ellipse cx="350" cy="520" rx="12" ry="5" transform="rotate(20 350 520)"/>
+  </g>
+  <g fill="#3d4f1c">
+    <circle cx="350" cy="440" r="3"/><circle cx="410" cy="360" r="3"/><circle cx="490" cy="470" r="3"/><circle cx="530" cy="320" r="3"/>
+    <circle cx="280" cy="380" r="3"/><circle cx="460" cy="400" r="2.5"/><circle cx="390" cy="510" r="2.5"/><circle cx="570" cy="410" r="2.5"/>
+  </g>
+</svg>

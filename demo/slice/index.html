@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crust Club — Sourdough pizza delivered in Wooster Square &amp; Westville, New Haven</title>
+  <meta name="description" content="48-hour sourdough pizza from two shops in New Haven. Order online for delivery or pickup, check your ZIP code and track your order live.">
+  <meta name="theme-color" content="#cc2a16">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Crust Club">
+  <meta property="og:title" content="Crust Club — Sourdough pizza delivered in Wooster Square &amp; Westville, New Haven">
+  <meta property="og:description" content="48-hour sourdough pizza from two shops in New Haven. Order online for delivery or pickup, check your ZIP code and track your order live.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400..900;1,400..700&amp;family=Shrikhand&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="home" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[70] rounded-full bg-ink px-5 py-3 text-sm font-bold text-mozz focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <div class="bg-ink text-mozz">
+    <p class="container-x flex items-center justify-center gap-x-3 py-2 text-center text-[13px] font-semibold"><span>Free delivery over $50</span><span aria-hidden="true" class="text-cheese">✦</span><span class="hidden sm:inline">48-hour sourdough</span><span aria-hidden="true" class="hidden text-cheese sm:inline">✦</span><span>New Haven, CT</span></p>
+  </div>
+  <header id="site-header" class="sticky top-0 z-40 bg-mozz/95 backdrop-blur transition-shadow duration-300">
+    <div class="container-x flex h-[4.5rem] items-center justify-between gap-4">
+      <a href="index.html" class="group inline-flex shrink-0 items-center gap-2.5" aria-label="Crust Club home">
+          <svg viewBox="0 0 40 40" class="size-10 shrink-0 transition-transform duration-300 group-hover:-rotate-12" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#2a1209"/><path d="M9.5 14.5Q20 8 30.5 14.5L20.8 33.2a1 1 0 0 1-1.6 0Z" fill="#ffc23a"/><path d="M9 14.2Q20 7 31 14.2" fill="none" stroke="#e9a35a" stroke-width="4" stroke-linecap="round"/><circle cx="16.5" cy="19" r="2.6" fill="#cc2a16"/><circle cx="23" cy="22.5" r="2.3" fill="#cc2a16"/><circle cx="19.6" cy="27.6" r="1.8" fill="#cc2a16"/></svg>
+          <span class="font-display text-[1.6rem] leading-none text-tomato">Crust Club</span>
+        </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1">
+          <li><a href="menu.html" class="rounded-full px-4 py-2 text-[15px] font-bold transition hover:bg-flour aria-[current=page]:bg-tomato aria-[current=page]:text-mozz">Menu</a></li>
+          <li><a href="deals.html" class="rounded-full px-4 py-2 text-[15px] font-bold transition hover:bg-flour aria-[current=page]:bg-tomato aria-[current=page]:text-mozz">Deals</a></li>
+          <li><a href="locations.html" class="rounded-full px-4 py-2 text-[15px] font-bold transition hover:bg-flour aria-[current=page]:bg-tomato aria-[current=page]:text-mozz">Locations</a></li>
+          <li><a href="catering.html" class="rounded-full px-4 py-2 text-[15px] font-bold transition hover:bg-flour aria-[current=page]:bg-tomato aria-[current=page]:text-mozz">Catering</a></li>
+          <li><a href="about.html" class="rounded-full px-4 py-2 text-[15px] font-bold transition hover:bg-flour aria-[current=page]:bg-tomato aria-[current=page]:text-mozz">Our story</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button type="button" data-cart-open aria-controls="cart-drawer" aria-expanded="false" class="hidden items-center gap-2 rounded-full px-3 py-2 text-sm font-bold text-cocoa transition hover:bg-flour xl:inline-flex">
+          <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <span data-order-summary>Delivery or pickup?</span>
+        </button>
+        <a href="checkout.html" data-cart-open data-cart-label aria-controls="cart-drawer" aria-expanded="false" aria-label="Your order" class="relative inline-flex h-11 items-center gap-2 rounded-full bg-tomato pl-3.5 pr-4 font-extrabold text-mozz shadow-[0_3px_0_var(--color-tomato-deep)] transition hover:-translate-y-0.5 active:translate-y-0.5 active:shadow-none">
+          <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9h18l-2 11H5Z"/><path d="M3 9l9-6 9 6"/></svg>
+          <span data-cart-total class="text-sm tabular-nums">Order</span>
+          <span data-cart-count hidden class="absolute -right-2 -top-2 grid h-6 min-w-6 place-items-center rounded-full bg-cheese px-1 text-xs font-black text-ink ring-2 ring-mozz">0</span>
+        </a>
+        <button id="menu-toggle" type="button" class="grid size-11 place-items-center rounded-full bg-flour lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t-2 border-dashed border-ink/10 bg-mozz lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="index.html" aria-current="page" class="flex items-center justify-between border-b-2 border-dashed border-ink/10 py-4 font-display text-2xl aria-[current=page]:text-tomato">Home<span aria-hidden="true" class="font-sans text-xl">→</span></a></li>
+          <li><a href="menu.html" class="flex items-center justify-between border-b-2 border-dashed border-ink/10 py-4 font-display text-2xl aria-[current=page]:text-tomato">Menu<span aria-hidden="true" class="font-sans text-xl">→</span></a></li>
+          <li><a href="deals.html" class="flex items-center justify-between border-b-2 border-dashed border-ink/10 py-4 font-display text-2xl aria-[current=page]:text-tomato">Deals<span aria-hidden="true" class="font-sans text-xl">→</span></a></li>
+          <li><a href="locations.html" class="flex items-center justify-between border-b-2 border-dashed border-ink/10 py-4 font-display text-2xl aria-[current=page]:text-tomato">Locations<span aria-hidden="true" class="font-sans text-xl">→</span></a></li>
+          <li><a href="catering.html" class="flex items-center justify-between border-b-2 border-dashed border-ink/10 py-4 font-display text-2xl aria-[current=page]:text-tomato">Catering<span aria-hidden="true" class="font-sans text-xl">→</span></a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b-2 border-dashed border-ink/10 py-4 font-display text-2xl aria-[current=page]:text-tomato">Our story<span aria-hidden="true" class="font-sans text-xl">→</span></a></li>
+        </ul>
+        <a href="menu.html" class="btn-primary mt-6 w-full py-3.5 text-base">Order now</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="on-red scallop-b relative overflow-hidden bg-tomato pb-24 text-mozz">
+      <div class="pointer-events-none absolute inset-0 opacity-[.08] [background-image:radial-gradient(var(--color-mozz)_2px,transparent_2.5px)] [background-size:26px_26px]" aria-hidden="true"></div>
+      <div class="container-x relative grid items-center gap-12 pt-10 sm:pt-14 lg:grid-cols-[1.05fr_1fr] lg:gap-8 lg:pt-12">
+        <div class="reveal relative z-10">
+          <p class="inline-flex -rotate-2 items-center gap-2 rounded-full bg-cheese px-4 py-1.5 text-sm font-extrabold text-ink"><span class="open-dot bg-tomato" aria-hidden="true"></span>Hot from the oven in Wooster Square &amp; Westville</p>
+          <h1 class="h-display mt-6 text-[3rem] sm:text-7xl xl:text-[5.4rem]">Blistered, bubbly &amp; at your door in 30.</h1>
+          <p class="mt-6 max-w-lg text-lg leading-relaxed sm:text-xl">Real sourdough pizza, made with dough we leave alone for 48 hours and bake for 90 seconds. Order for delivery, or grab it on your way home.</p>
+          <div class="mt-8 max-w-lg rounded-[2rem] bg-mozz p-5 text-ink shadow-[0_24px_50px_-20px_rgb(60_8_0/.6)] sm:p-6">
+            <div data-zone-checker></div>
+            <a href="menu.html" class="btn-primary mt-5 w-full py-3.5 text-base">Start your order <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+        <div class="reveal relative mx-auto w-full max-w-[34rem]">
+          <div class="relative aspect-square">
+            <img src="assets/img/hero-pizza.svg" alt="A pepperoni, mushroom and basil pizza with one slice pulled away, strings of melted cheese stretching" class="relative z-10 h-full w-full drop-shadow-[0_30px_30px_rgb(70_10_0/.35)]" width="520" height="528">
+            <span class="bob pointer-events-none absolute left-0 top-6 z-20 size-14 sm:size-16" style="--r:-20deg;animation-delay:0s" aria-hidden="true"><svg viewBox="0 0 60 60" class="h-full w-full"><path d="M30 6c18 6 18 40 0 48C12 46 12 12 30 6Z" fill="#2f8a3f"/><path d="M30 10v42" stroke="#1d6b2c" stroke-width="2.5" stroke-linecap="round"/><path d="M30 22l-8-5M30 32l9-6M30 41l-8-5" stroke="#1d6b2c" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span class="bob pointer-events-none absolute -right-2 top-1/3 z-20 size-14 sm:size-20" style="--r:10deg;animation-delay:1.2s" aria-hidden="true"><svg viewBox="0 0 60 60" class="h-full w-full"><circle cx="30" cy="32" r="24" fill="#e2412a"/><circle cx="30" cy="32" r="17" fill="#f57a5c"/><path d="M30 18c-6 6-6 22 0 28M30 18c6 6 6 22 0 28M16 32h28" stroke="#e2412a" stroke-width="2.5" fill="none"/><circle cx="24" cy="26" r="2" fill="#ffe3d8"/><circle cx="36" cy="38" r="2" fill="#ffe3d8"/><path d="M30 8v6M24 10l6 4 6-4" stroke="#2f8a3f" stroke-width="3" stroke-linecap="round" fill="none"/></svg></span>
+            <span class="bob pointer-events-none absolute bottom-12 left-0 z-20 size-14 sm:size-16" style="--r:20deg;animation-delay:0.6s" aria-hidden="true"><svg viewBox="0 0 60 60" class="h-full w-full"><path d="M8 30C8 12 52 12 52 30Z" fill="#c99b6e"/><path d="M8 30h44" stroke="#7d5232" stroke-width="3" stroke-linecap="round"/><path d="M23 30h14l-2 20H25Z" fill="#f1dfc3"/><circle cx="22" cy="22" r="3" fill="#e3c39c"/><circle cx="36" cy="19" r="2.4" fill="#e3c39c"/></svg></span>
+            <span class="bob pointer-events-none absolute bottom-2 left-1/3 z-20 size-10 sm:size-12" style="--r:70deg;animation-delay:1.8s" aria-hidden="true"><svg viewBox="0 0 60 60" class="h-full w-full"><path d="M30 6c18 6 18 40 0 48C12 46 12 12 30 6Z" fill="#2f8a3f"/><path d="M30 10v42" stroke="#1d6b2c" stroke-width="2.5" stroke-linecap="round"/><path d="M30 22l-8-5M30 32l9-6M30 41l-8-5" stroke="#1d6b2c" stroke-width="1.8" stroke-linecap="round"/></svg></span>
+            <span class="bob pointer-events-none absolute right-1/3 -top-2 z-0 size-10 sm:size-12" style="--r:15deg;animation-delay:2.4s" aria-hidden="true"><svg viewBox="0 0 60 60" class="h-full w-full"><path d="M30 8c2 6 14 12 16 24 2 14-8 20-16 20s-18-6-16-20C16 20 28 14 30 8Z" fill="#fff6dc"/><path d="M30 14c-4 10-6 22-2 36M30 14c6 10 8 22 4 36" stroke="#e2c98f" stroke-width="2" fill="none"/><path d="M26 52h8" stroke="#c9b07a" stroke-width="3" stroke-linecap="round"/></svg></span>
+            <span class="pointer-events-none absolute -bottom-4 -right-2 z-30 size-28 sm:size-32 rotate-6" aria-hidden="true"><svg viewBox="0 0 120 120" class="h-full w-full"><defs><path id="badge-circle" d="M60 60m-42 0a42 42 0 1 1 84 0a42 42 0 1 1-84 0"/></defs><circle cx="60" cy="60" r="58" fill="#ffc23a"/><g class="spin-badge" style="transform-origin:60px 60px"><text font-family="Rubik, sans-serif" font-size="11.5" font-weight="800" letter-spacing="2.6" fill="#2a1209"><textPath href="#badge-circle">FRESH DOUGH DAILY ✦ 48-HOUR SOURDOUGH ✦ </textPath></text></g><path d="M60 38c8 9 14 15 14 24a14 14 0 0 1-28 0c0-5 3-9 6-12 0 5 2 8 5 8-2-7 0-14 3-20Z" fill="#cc2a16"/><path d="M60 58c4 4 6 7 6 10a6 6 0 0 1-12 0c0-3 2-6 6-10Z" fill="#ffc23a"/></svg></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-x mt-16 sm:mt-20" aria-labelledby="best-title">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="eyebrow">Bestsellers</p>
+          <h2 id="best-title" class="h-display mt-2 text-4xl sm:text-5xl">The ones everyone orders</h2>
+        </div>
+        <a href="menu.html" class="link">See the full menu →</a>
+      </div>
+      <div id="bestsellers" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4"></div>
+    </section>
+
+    <section class="mt-28 bg-cheese py-20" aria-labelledby="deals-title">
+      <div class="container-x">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="text-[13px] font-extrabold uppercase tracking-[0.16em]">Deals</p>
+            <h2 id="deals-title" class="h-display mt-2 text-4xl sm:text-5xl">More pizza, less money</h2>
+          </div>
+          <a href="deals.html" class="font-extrabold underline decoration-2 underline-offset-4 hover:decoration-4">Build your own bundle →</a>
+        </div>
+        <div id="home-deals" class="mt-10 grid gap-6 lg:grid-cols-3"></div>
+      </div>
+    </section>
+
+    <section class="container-x mt-28" aria-labelledby="how-title">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="eyebrow justify-center">How ordering works</p>
+        <h2 id="how-title" class="h-display mt-2 text-4xl sm:text-5xl">Couch to slice in three steps</h2>
+      </div>
+      <ol class="mt-14 grid gap-12 md:grid-cols-3 md:gap-8">
+        <li class="reveal relative flex flex-col items-center text-center">
+          <div class="relative grid size-40 place-items-center rounded-full bg-tomato-soft"><svg viewBox="0 0 100 100" class="size-24" aria-hidden="true"><rect x="22" y="8" width="56" height="84" rx="12" fill="#2a1209"/><rect x="27" y="16" width="46" height="62" rx="6" fill="#fffaf2"/><circle cx="50" cy="40" r="17" fill="#e9a35a"/><circle cx="50" cy="40" r="13" fill="#d4381c"/><circle cx="45" cy="36" r="3.4" fill="#fff4d8"/><circle cx="55" cy="44" r="3.4" fill="#fff4d8"/><rect x="34" y="63" width="32" height="8" rx="4" fill="#cc2a16"/><circle cx="50" cy="85" r="3" fill="#fffaf2"/></svg><span class="absolute -left-1 -top-1 grid size-12 place-items-center rounded-full bg-ink font-display text-xl text-mozz">1</span></div>
+          <h3 class="mt-6 text-2xl font-extrabold">Pick your pies</h3>
+          <p class="mt-2 max-w-xs leading-relaxed text-cocoa">Choose a size and crust, add extras or go half &amp; half. Prices update as you go.</p>
+        </li>
+        <li class="reveal relative flex flex-col items-center text-center">
+          <div class="relative grid size-40 place-items-center rounded-full bg-cheese-soft"><svg viewBox="0 0 100 100" class="size-24" aria-hidden="true"><circle cx="26" cy="70" r="12" fill="#2a1209"/><circle cx="26" cy="70" r="5" fill="#ffe7a6"/><circle cx="76" cy="70" r="12" fill="#2a1209"/><circle cx="76" cy="70" r="5" fill="#ffe7a6"/><path d="M26 70h28l8-22h10l6 22" stroke="#2a1209" stroke-width="6" fill="none" stroke-linejoin="round" stroke-linecap="round"/><path d="M14 52h32v14H20a6 6 0 0 1-6-6Z" fill="#cc2a16"/><rect x="18" y="28" width="30" height="22" rx="3" fill="#e9a35a"/><path d="M18 34h30" stroke="#c47a35" stroke-width="2"/><path d="M66 48l-4-14h8" stroke="#2a1209" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="absolute -left-1 -top-1 grid size-12 place-items-center rounded-full bg-ink font-display text-xl text-mozz">2</span></div>
+          <h3 class="mt-6 text-2xl font-extrabold">Delivery or pickup</h3>
+          <p class="mt-2 max-w-xs leading-relaxed text-cocoa">Check your ZIP code or pick a shop, then choose ASAP or a time slot that suits you.</p>
+        </li>
+        <li class="reveal relative flex flex-col items-center text-center">
+          <div class="relative grid size-40 place-items-center rounded-full bg-basil-soft"><svg viewBox="0 0 100 100" class="size-24" aria-hidden="true"><path d="M50 10c18 0 30 13 30 29 0 22-30 51-30 51S20 61 20 39c0-16 12-29 30-29Z" fill="#1d6b3c"/><circle cx="50" cy="39" r="17" fill="#e9a35a"/><circle cx="50" cy="39" r="13" fill="#d4381c"/><circle cx="45" cy="35" r="3.4" fill="#fff4d8"/><circle cx="55" cy="43" r="3.4" fill="#fff4d8"/><circle cx="54" cy="33" r="2.4" fill="#a92a17"/></svg><span class="absolute -left-1 -top-1 grid size-12 place-items-center rounded-full bg-ink font-display text-xl text-mozz">3</span></div>
+          <h3 class="mt-6 text-2xl font-extrabold">Track it live</h3>
+          <p class="mt-2 max-w-xs leading-relaxed text-cocoa">Watch it go from ticket to oven to your door. Eat immediately. Do not wait for anyone.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="on-dark relative mt-28 overflow-hidden bg-basil text-mozz" aria-labelledby="dough-title">
+      <div class="container-x grid items-center gap-12 py-20 lg:grid-cols-2">
+        <div class="reveal">
+          <p class="text-[13px] font-extrabold uppercase tracking-[0.16em] text-cheese-soft">The dough</p>
+          <h2 id="dough-title" class="h-display mt-2 text-4xl sm:text-6xl">48 hours of doing absolutely nothing.</h2>
+          <p class="mt-6 max-w-lg text-lg leading-relaxed text-mozz/90">Our starter, Big Brenda, has been fed every morning since 2016. We mix her with stoneground New York flour, then leave the dough in the fridge for two days. That’s where the flavor and the leopard-spotted, airy crust come from.</p>
+          <a href="about.html" class="btn-cheese mt-8">Read our story</a>
+        </div>
+        <ol class="reveal grid grid-cols-2 gap-4">
+          <li class="rounded-3xl bg-mozz/10 p-6"><p class="font-display text-5xl text-cheese">2016</p><p class="mt-2 font-semibold">Big Brenda, our sourdough starter, is born</p></li>
+          <li class="rounded-3xl bg-mozz/10 p-6"><p class="font-display text-5xl text-cheese">48 h</p><p class="mt-2 font-semibold">Cold ferment for every dough ball</p></li>
+          <li class="rounded-3xl bg-mozz/10 p-6"><p class="font-display text-5xl text-cheese">850°</p><p class="mt-2 font-semibold">Fahrenheit in our wood-and-gas ovens</p></li>
+          <li class="rounded-3xl bg-mozz/10 p-6"><p class="font-display text-5xl text-cheese">90 s</p><p class="mt-2 font-semibold">From oven door to pizza box</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="container-x mt-28" aria-labelledby="reviews-title">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <div>
+          <p class="eyebrow">Reviews</p>
+          <h2 id="reviews-title" class="h-display mt-2 text-4xl sm:text-5xl">New Haven has opinions</h2>
+        </div>
+        <p class="flex items-center gap-3 rounded-full bg-paper px-5 py-3 ring-1 ring-ink/10"><span class="flex text-tomato" aria-hidden="true"><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></span><span class="font-extrabold">4.8 out of 5</span><span class="text-sm text-cocoa">from 2,140 reviews</span></p>
+      </div>
+      <div class="mt-10 grid gap-6 md:grid-cols-3">
+        <figure class="reveal card flex flex-col p-7">
+          <span class="flex gap-0.5 text-tomato" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></span>
+          <blockquote class="mt-4 flex-1 text-lg font-medium leading-snug">“The Hot Honey Pep arrived still blistered and bubbling. Twenty-four minutes to Wooster Square. I didn’t know delivery pizza could taste like this.”</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3 text-sm"><span class="grid size-11 place-items-center rounded-full font-extrabold bg-cheese" aria-hidden="true">PS</span><span><span class="block font-extrabold">Priya S.</span><span class="text-cocoa">Wooster Square, ordered 31 times</span></span></figcaption>
+        </figure>
+        <figure class="reveal card flex flex-col p-7">
+          <span class="flex gap-0.5 text-tomato" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></span>
+          <blockquote class="mt-4 flex-1 text-lg font-medium leading-snug">“Half Margherita, half Green Machine means my vegan partner and I finally stopped arguing on Friday nights.”</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3 text-sm"><span class="grid size-11 place-items-center rounded-full font-extrabold bg-basil-soft" aria-hidden="true">TA</span><span><span class="block font-extrabold">Tom & Ade</span><span class="text-cocoa">Westville</span></span></figcaption>
+        </figure>
+        <figure class="reveal card flex flex-col p-7">
+          <span class="flex gap-0.5 text-tomato" role="img" aria-label="Rated 5 out of 5"><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg><svg viewBox="0 0 20 20" class="size-5" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.4 5.9.8-4.3 4.1 1 5.8L10 14.8l-5.2 2.8 1-5.8L1.5 7.7l5.9-.8z"/></svg></span>
+          <blockquote class="mt-4 flex-1 text-lg font-medium leading-snug">“We ordered twelve large pizzas for my son’s 10th birthday. Hot, on time, and they even wrote his name on the box.”</blockquote>
+          <figcaption class="mt-6 flex items-center gap-3 text-sm"><span class="grid size-11 place-items-center rounded-full font-extrabold bg-tomato-soft" aria-hidden="true">LH</span><span><span class="block font-extrabold">Lucy H.</span><span class="text-cocoa">Party order, Woodbridge</span></span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="container-x mt-28" aria-labelledby="shops-title">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="eyebrow">Two shops</p>
+          <h2 id="shops-title" class="h-display mt-2 text-4xl sm:text-5xl">Come say hello</h2>
+        </div>
+        <a href="locations.html" class="link">Delivery zones &amp; map →</a>
+      </div>
+      <div class="mt-10 grid gap-6 lg:grid-cols-2">
+        <article class="reveal card flex flex-col overflow-hidden">
+          <div class="flex items-center justify-between gap-4 bg-ink px-7 py-5 text-mozz">
+            <h3 class="h-display text-3xl">Wooster Square</h3>
+            <p class="flex items-center gap-2 rounded-full bg-mozz/10 px-3 py-1.5 text-sm font-bold" data-store-status="ancoats"></p>
+          </div>
+          <div class="flex flex-1 flex-col p-7">
+            <p class="font-semibold">42 Franklin Street, New Haven, CT 06511</p>
+            <p class="mt-1 text-cocoa">Today: <span class="font-bold text-ink" data-today-hours="ancoats"></span></p>
+            <p class="mt-4 leading-relaxed text-cocoa">Our first shop, in an old carriage-factory outbuilding. 24 seats, a walk-up window for slices and the big dough fridge.</p>
+            <div class="mt-auto flex flex-wrap gap-3 pt-6"><a href="locations.html#ancoats" class="btn-ghost">Hours &amp; map</a><a href="menu.html" class="btn-primary">Order from Wooster Square</a></div>
+          </div>
+        </article>
+        <article class="reveal card flex flex-col overflow-hidden">
+          <div class="flex items-center justify-between gap-4 bg-ink px-7 py-5 text-mozz">
+            <h3 class="h-display text-3xl">Westville</h3>
+            <p class="flex items-center gap-2 rounded-full bg-mozz/10 px-3 py-1.5 text-sm font-bold" data-store-status="chorlton"></p>
+          </div>
+          <div class="flex flex-1 flex-col p-7">
+            <p class="font-semibold">317 Fountain Street, New Haven, CT 06515</p>
+            <p class="mt-1 text-cocoa">Today: <span class="font-bold text-ink" data-today-hours="chorlton"></span></p>
+            <p class="mt-4 leading-relaxed text-cocoa">The little sibling, with a sunny back patio, a dog water bowl and the pistachio gelato from down the road.</p>
+            <div class="mt-auto flex flex-wrap gap-3 pt-6"><a href="locations.html#chorlton" class="btn-ghost">Hours &amp; map</a><a href="menu.html" class="btn-primary">Order from Westville</a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="container-x mt-28">
+      <div class="reveal relative overflow-hidden rounded-[2.5rem] bg-tomato px-8 py-16 text-center text-mozz sm:px-16">
+        <div class="checker absolute inset-x-0 top-0 h-4 opacity-90" aria-hidden="true"></div>
+        <div class="checker absolute inset-x-0 bottom-0 h-4 opacity-90" aria-hidden="true"></div>
+        <h2 class="h-display mx-auto max-w-2xl text-4xl sm:text-6xl">Hungry yet?</h2>
+        <p class="mx-auto mt-4 max-w-md text-lg">The ovens are hot until late. Your first order? Use <strong class="rounded bg-tomato-deep px-1.5 font-extrabold">FIRSTSLICE</strong> for $5 off.</p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4"><a href="menu.html" class="btn-cheese px-8 py-4 text-base">Order now</a><a href="deals.html" class="btn-cream px-8 py-4 text-base">See deals</a></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="mt-28">
+    <div class="checker h-5" aria-hidden="true"></div>
+    <div class="on-dark bg-ink text-mozz">
+      <div class="container-x grid gap-12 py-16 lg:grid-cols-12">
+        <div class="lg:col-span-3">
+          <a href="index.html" class="group inline-flex shrink-0 items-center gap-2.5" aria-label="Crust Club home">
+          <svg viewBox="0 0 40 40" class="size-10 shrink-0 transition-transform duration-300 group-hover:-rotate-12" aria-hidden="true"><circle cx="20" cy="20" r="19" fill="#cc2a16"/><path d="M9.5 14.5Q20 8 30.5 14.5L20.8 33.2a1 1 0 0 1-1.6 0Z" fill="#ffc23a"/><path d="M9 14.2Q20 7 31 14.2" fill="none" stroke="#e9a35a" stroke-width="4" stroke-linecap="round"/><circle cx="16.5" cy="19" r="2.6" fill="#2a1209"/><circle cx="23" cy="22.5" r="2.3" fill="#2a1209"/><circle cx="19.6" cy="27.6" r="1.8" fill="#2a1209"/></svg>
+          <span class="font-display text-[1.6rem] leading-none text-mozz">Crust Club</span>
+        </a>
+          <p class="mt-5 max-w-xs text-sm leading-relaxed text-mozz/85">Sourdough pizza from two little shops in New Haven. Dough made daily, left alone for 48 hours, baked in 90 seconds.</p>
+          <ul class="mt-6 flex gap-5 text-sm font-bold">
+            <li><a href="#" class="underline-offset-4 hover:underline">Instagram</a></li>
+            <li><a href="#" class="underline-offset-4 hover:underline">TikTok</a></li>
+            <li><a href="#" class="underline-offset-4 hover:underline">Google reviews</a></li>
+          </ul>
+        </div>
+        <div class="grid gap-8 sm:grid-cols-2 lg:col-span-4">
+          <div>
+          <h2 class="font-extrabold text-cheese">Wooster Square</h2>
+          <p class="mt-2 text-sm leading-relaxed text-mozz/85">42 Franklin Street<br>New Haven, CT 06511</p>
+          <p class="mt-1 text-sm"><a href="tel:+12035550118" class="font-semibold underline-offset-4 hover:underline">(203) 555-0118</a></p>
+          <p class="mt-2 flex items-center gap-2 text-sm font-semibold" data-store-status="ancoats"></p>
+        </div>
+          <div>
+          <h2 class="font-extrabold text-cheese">Westville</h2>
+          <p class="mt-2 text-sm leading-relaxed text-mozz/85">317 Fountain Street<br>New Haven, CT 06515</p>
+          <p class="mt-1 text-sm"><a href="tel:+12035550132" class="font-semibold underline-offset-4 hover:underline">(203) 555-0132</a></p>
+          <p class="mt-2 flex items-center gap-2 text-sm font-semibold" data-store-status="chorlton"></p>
+        </div>
+        </div>
+        <nav aria-label="Footer" class="lg:col-span-2">
+          <h2 class="font-extrabold text-cheese">Eat</h2>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><a href="menu.html" class="underline-offset-4 hover:underline">Menu</a></li>
+            <li><a href="menu.html?diet=vegan" class="underline-offset-4 hover:underline">Vegan</a></li>
+            <li><a href="deals.html" class="underline-offset-4 hover:underline">Deals</a></li>
+            <li><a href="catering.html" class="underline-offset-4 hover:underline">Catering</a></li>
+            <li><a href="locations.html" class="underline-offset-4 hover:underline">Delivery</a></li>
+            <li><a href="about.html" class="underline-offset-4 hover:underline">Our story</a></li>
+          </ul>
+        </nav>
+        <div class="lg:col-span-3">
+          <h2 class="font-extrabold text-cheese">The Pizza Post</h2>
+          <p class="mt-3 text-sm text-mozz/85">New specials and the odd free garlic knot, every other week.</p>
+          <form data-form="newsletter" class="mt-4" novalidate>
+            <label for="footer-email" class="sr-only">Email address</label>
+            <div class="flex flex-col gap-2 sm:flex-row lg:flex-col">
+              <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@example.com" class="field min-w-0 border-mozz/25 bg-mozz/10 text-mozz placeholder:text-mozz/60 focus:border-cheese">
+              <button type="submit" class="btn-cheese shrink-0">Sign me up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-mozz/15">
+        <div class="container-x flex flex-col gap-2 py-6 text-xs text-mozz/80 md:flex-row md:items-center md:justify-between">
+          <p>© <span data-year>2026</span> Crust Club Pizza LLC. Allergen info on the <a href="menu.html#allergens" class="underline underline-offset-2">menu</a>; ask us if you’re unsure.</p>
+          <p>Crust Club is a fictional pizzeria. Template by Freeframe.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cart-overlay" hidden class="fixed inset-0 z-50 bg-ink/55 opacity-0 transition-opacity duration-300"></div>
+  <aside id="cart-drawer" hidden role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title" class="fixed inset-y-0 right-0 z-50 flex w-full max-w-md translate-x-full flex-col bg-mozz shadow-2xl transition-transform duration-300 ease-[var(--ease-snap)]">
+    <div class="flex items-center justify-between gap-4 px-6 pb-4 pt-5">
+      <h2 id="cart-drawer-title" class="h-display text-3xl">Your order <span data-drawer-count class="ml-1 align-middle font-sans text-sm font-bold text-cocoa"></span></h2>
+      <button type="button" data-drawer-close class="grid size-11 place-items-center rounded-full bg-flour hover:bg-cheese" aria-label="Close your order">
+        <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="flex-1 overflow-y-auto overscroll-contain">
+      <div class="mx-6 rounded-3xl bg-flour p-3" data-zone-checker data-variant="compact"></div>
+      <div data-drawer-body class="px-6"></div>
+    </div>
+    <div data-drawer-foot class="space-y-4 border-t-2 border-dashed border-ink/15 bg-paper px-6 pb-6 pt-5">
+      <div data-drawer-notice></div>
+      <div data-drawer-totals></div>
+      <a href="checkout.html" data-drawer-checkout class="btn-primary w-full py-3.5 text-base"><span data-drawer-checkout-label>Checkout</span></a>
+    </div>
+  </aside>
+  <div id="toast" role="status" aria-live="polite" class="pointer-events-none fixed inset-x-4 bottom-4 z-[60] mx-auto flex max-w-md translate-y-6 items-center gap-3 rounded-3xl bg-ink px-5 py-4 text-sm text-mozz opacity-0 shadow-xl transition duration-300 sm:left-auto sm:right-6 sm:mx-0">
+    <svg viewBox="0 0 24 24" class="size-6 shrink-0 text-cheese" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg>
+    <p data-toast-msg class="flex-1"></p>
+    <button type="button" data-toast-close class="grid size-8 place-items-center rounded-full text-mozz/80 hover:text-mozz" aria-label="Dismiss"><svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+  </div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

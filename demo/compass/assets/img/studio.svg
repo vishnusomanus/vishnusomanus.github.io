@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="t">
+  <title id="t">Illustration of the Bearing studio: two armchairs and a small table in front of a tall window looking out over a river and a yellow arch bridge</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbecc9"/><stop offset="1" stop-color="#f6f1e8"/></linearGradient>
+    <clipPath id="win"><rect x="210" y="40" width="380" height="330" rx="6"/></clipPath>
+  </defs>
+  <rect width="800" height="560" fill="#efe7da"/>
+  <rect y="420" width="800" height="140" fill="#e4d8c5"/>
+  <!-- window view -->
+  <g clip-path="url(#win)">
+    <rect x="210" y="40" width="380" height="330" fill="url(#sky)"/>
+    <circle cx="500" cy="130" r="34" fill="#f0c464"/>
+    <path d="M210 250c60-30 120-36 180-20s130 10 200-14v154H210Z" fill="#a3ae8e"/>
+    <g fill="#959fc8">
+      <rect x="236" y="200" width="26" height="70"/><rect x="266" y="176" width="20" height="94"/><rect x="290" y="214" width="30" height="56"/>
+      <rect x="470" y="190" width="24" height="80"/><rect x="498" y="168" width="30" height="102"/><rect x="532" y="206" width="22" height="64"/>
+    </g>
+    <g fill="#bcc3df" opacity=".8"><rect x="270" y="186" width="4" height="6"/><rect x="278" y="200" width="4" height="6"/><rect x="504" y="180" width="4" height="6"/><rect x="514" y="196" width="4" height="6"/></g>
+    <rect x="210" y="300" width="380" height="70" fill="#bcc3df"/>
+    <path d="M210 312h380M210 330h380" stroke="#dde1ef" stroke-width="2" opacity=".7"/>
+    <!-- yellow arch bridge -->
+    <path d="M210 292h380" stroke="#d39226" stroke-width="7"/>
+    <path d="M250 292c40-82 260-82 300 0" fill="none" stroke="#e6ab3d" stroke-width="8"/>
+    <g stroke="#e6ab3d" stroke-width="2.5"><path d="M290 292v-38M330 292v-55M370 292v-64M410 292v-64M450 292v-55M490 292v-38M520 292v-20M280 292v-24"/></g>
+    <path d="M246 292v40M554 292v40" stroke="#d39226" stroke-width="9"/>
+  </g>
+  <!-- window frame -->
+  <rect x="210" y="40" width="380" height="330" rx="6" fill="none" stroke="#fbf8f3" stroke-width="14"/>
+  <path d="M400 40v330M210 205h380" stroke="#fbf8f3" stroke-width="9"/>
+  <rect x="190" y="370" width="420" height="16" rx="4" fill="#fbf8f3"/>
+  <!-- plant on sill -->
+  <g transform="translate(-322 0)"><path d="M552 370h34l-4-30h-26Z" fill="#c98a70"/>
+  <g fill="#76845f"><path d="M569 340c-4-30 2-52 16-66 4 26-2 48-16 66Z"/><path d="M567 342c-18-18-36-24-52-22 10 18 28 26 52 22Z" fill="#8d9a76"/><path d="M571 342c10-22 26-32 44-34-6 20-22 32-44 34Z" fill="#a3ae8e"/></g></g>
+  <!-- rug -->
+  <ellipse cx="400" cy="492" rx="300" ry="44" fill="#ebc8b8" opacity=".7"/>
+  <ellipse cx="400" cy="492" rx="260" ry="34" fill="none" stroke="#c98a70" stroke-width="2" stroke-dasharray="3 7" opacity=".7"/>
+  <!-- left chair (clay) -->
+  <g>
+    <path d="M96 470h160v18H96Z" fill="#8a4a33"/>
+    <path d="M106 488v34M246 488v34" stroke="#4d4539" stroke-width="6" stroke-linecap="round"/>
+    <path d="M90 340c0-26 18-40 44-40h70c26 0 40 18 40 44v100H90Z" fill="#c98a70"/>
+    <rect x="76" y="400" width="40" height="80" rx="18" fill="#b57458"/>
+    <rect x="236" y="400" width="40" height="80" rx="18" fill="#b57458"/>
+    <rect x="110" y="420" width="140" height="52" rx="16" fill="#d79a80"/>
+  </g>
+  <!-- right chair (dusk) -->
+  <g>
+    <path d="M544 470h160v18H544Z" fill="#1f2544"/>
+    <path d="M554 488v34M694 488v34" stroke="#4d4539" stroke-width="6" stroke-linecap="round"/>
+    <path d="M556 344c0-26 14-44 40-44h70c26 0 44 14 44 40v104H556Z" fill="#434e7e"/>
+    <rect x="524" y="400" width="40" height="80" rx="18" fill="#364070"/>
+    <rect x="684" y="400" width="40" height="80" rx="18" fill="#364070"/>
+    <rect x="550" y="420" width="140" height="52" rx="16" fill="#535f92"/>
+  </g>
+  <!-- side table -->
+  <ellipse cx="400" cy="432" rx="64" ry="14" fill="#fbf8f3"/>
+  <path d="M336 432v6c0 8 28 14 64 14s64-6 64-14v-6" fill="#e4d8c5"/>
+  <path d="M400 450v64M372 514h56" stroke="#4d4539" stroke-width="6" stroke-linecap="round"/>
+  <g>
+    <rect x="366" y="408" width="22" height="22" rx="5" fill="#2a3259"/><path d="M388 414c8 0 8 12 0 12" fill="none" stroke="#2a3259" stroke-width="3"/>
+    <rect x="410" y="410" width="22" height="20" rx="5" fill="#f0c464"/><path d="M432 415c8 0 8 11 0 11" fill="none" stroke="#f0c464" stroke-width="3"/>
+    <path d="M374 400c-3-6 3-8 0-14M420 402c-3-6 3-8 0-14" fill="none" stroke="#cfbfa6" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <!-- wall art: compass -->
+  <circle cx="110" cy="150" r="54" fill="#fbf8f3"/>
+  <circle cx="110" cy="150" r="42" fill="none" stroke="#cfbfa6" stroke-width="1.5"/>
+  <path d="M110 108l8 42-8 42-8-42Z" fill="#2a3259"/><path d="M110 108l8 42h-16Z" fill="#e6ab3d"/>
+  <!-- bookshelf -->
+  <rect x="640" y="110" width="110" height="10" rx="3" fill="#fbf8f3"/>
+  <g><rect x="648" y="62" width="14" height="48" fill="#364070"/><rect x="664" y="70" width="12" height="40" fill="#c98a70"/><rect x="678" y="58" width="16" height="52" fill="#e6ab3d"/><rect x="698" y="76" width="40" height="12" rx="2" fill="#8d9a76" transform="rotate(-8 718 82)"/><rect x="700" y="92" width="44" height="18" fill="#cfbfa6"/></g>
+  <rect x="640" y="200" width="110" height="10" rx="3" fill="#fbf8f3"/>
+  <g><rect x="652" y="160" width="30" height="40" rx="15" fill="#a3ae8e"/><rect x="690" y="150" width="14" height="50" fill="#2a3259"/><rect x="706" y="156" width="12" height="44" fill="#ebc8b8"/><rect x="720" y="164" width="14" height="36" fill="#d39226"/></g>
+</svg>

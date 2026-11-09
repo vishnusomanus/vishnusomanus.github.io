@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About us — Loamstead field school</title>
+  <meta name="description" content="A small, independent gardening school on a walled plot in Corvallis, with three instructors and a lot of compost.">
+  <meta name="theme-color" content="#f6f4e9">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Loamstead field school">
+  <meta property="og:title" content="About us — Loamstead field school">
+  <meta property="og:description" content="A small, independent gardening school on a walled plot in Corvallis, with three instructors and a lot of compost.">
+  <meta property="og:url" content="https://loamstead.example/about.html">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&amp;family=Vollkorn:ital,wght@0,400;0,500;0,600;1,400;1,500&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="bg-paper font-sans text-ink antialiased">
+  <a href="#main" class="sr-only z-[70] bg-ink px-4 py-2 text-sm font-semibold text-paper focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+
+  <header id="site-header" class="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur [&.is-scrolled]:shadow-[0_1px_0_rgb(31_58_46/.12)]">
+    <div class="wrap flex h-[4.75rem] items-center gap-3">
+      <a href="index.html" class="flex shrink-0 items-center gap-2.5"><svg class="size-10 shrink-0" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="19" fill="#1f3a2e"/><path d="M2.5 27.5h35A19 19 0 0 1 2.5 27.5Z" fill="#6e5240"/><ellipse cx="20" cy="31" rx="3.4" ry="2.3" fill="#d9774f"/><path d="M20 29V15.5" stroke="#f6f4e9" stroke-width="1.8" stroke-linecap="round"/><path d="M20 19.5c-6 0-8.6-3.4-8.6-7.2 5.2 0 8.6 2.6 8.6 7.2Z" fill="#dbe3b8"/><path d="M20 17c.4-5 3.6-7.8 8.6-7.8 0 4.6-3.6 7.8-8.6 7.8Z" fill="#b9c98a"/></svg><span class="leading-none"><span class="block font-display text-[1.65rem] font-semibold tracking-tight">loamstead</span><span class="mt-1 block text-[0.6rem] font-semibold tracking-[0.28em] text-muted uppercase">Field school · Corvallis</span></span></a>
+      <nav aria-label="Main" class="ml-auto hidden lg:block">
+        <ul class="flex items-center gap-6"><li><a href="courses.html" class="nav-link">Courses</a></li><li><a href="timetable.html" class="nav-link">Schedule</a></li><li><a href="planner.html" class="nav-link">Bed planner</a></li><li><a href="about.html" class="nav-link" aria-current="page">About us</a></li><li><a href="visit.html" class="nav-link">Visit</a></li></ul>
+      </nav>
+      <div class="ml-auto flex items-center gap-2 lg:ml-6">
+        <a href="saved.html" data-shortlist-link class="relative inline-flex min-h-11 items-center gap-2 border border-ink/40 px-3 text-sm font-semibold transition-colors hover:bg-leaf aria-[current=page]:border-ink aria-[current=page]:bg-leaf" aria-label="Shortlist, no courses saved"><svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 4h10v16l-5-4-5 4Z"/></svg><span class="hidden sm:inline">Shortlist</span><span data-nav-count class="grid h-5 min-w-5 place-items-center bg-rust px-1 text-[11px] leading-none font-bold text-paper" hidden>0</span></a>
+        <a href="enrol.html" class="btn btn-primary hidden sm:inline-flex">Enroll</a>
+        <button type="button" id="menu-button" class="grid size-11 place-items-center border border-ink/40 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span data-icon-open><svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h11"/></svg></span><span data-icon-close class="hidden"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 18 18 6M6 6l12 12"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="border-t border-line bg-paper lg:hidden" hidden>
+      <nav aria-label="Mobile" class="wrap pt-2 pb-6">
+        <ul><li><a href="courses.html" class="mnav-link">Courses</a></li><li><a href="timetable.html" class="mnav-link">Schedule</a></li><li><a href="planner.html" class="mnav-link">Bed planner</a></li><li><a href="about.html" class="mnav-link" aria-current="page">About us</a></li><li><a href="visit.html" class="mnav-link">Visit</a></li><li><a href="saved.html" class="mnav-link">Your shortlist</a></li></ul>
+        <a href="enrol.html" class="btn btn-primary mt-5 w-full">Enroll in a course</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <header class="wrap pt-12 pb-10 sm:pt-16">
+      <p class="eyebrow">About the school</p>
+      <h1 class="mt-4 max-w-4xl font-display text-[clamp(2.6rem,5.6vw,4.6rem)] leading-[1] font-medium tracking-[-0.02em]">Less perfect gardens. <em class="font-normal text-rust">More happy growers.</em></h1>
+      <p class="mt-5 max-w-2xl text-lg leading-relaxed text-muted">Loamstead is a small, independent gardening school on a walled plot on the south side of Corvallis. We believe useful skills grow best when nobody is afraid to ask a question.</p>
+    </header>
+
+    <section class="wrap grid items-start gap-12 lg:grid-cols-[1.1fr_1fr]" aria-labelledby="story-title">
+      <figure class="sheet tape -rotate-1 p-3 sm:p-4">
+        <img src="assets/img/plot-map.svg" width="640" height="480" class="block h-auto w-full" alt="Hand-drawn map of the Walled Plot: the gate and parking lot on SE Alder Bend Road, the barn, compost bays, hoop house, twelve teaching beds, a pond, the orchard and the boundary hedge, with espalier pears along the south wall">
+        <figcaption class="mt-3 flex justify-between gap-4 border-t border-line pt-2 text-xs font-semibold tracking-wider text-muted uppercase"><span>Fig. 03 · The Walled Plot</span><span>Two acres</span></figcaption>
+      </figure>
+      <article>
+        <p class="eyebrow">A note from Eudora</p>
+        <h2 id="story-title" class="mt-3 font-display text-4xl leading-tight font-medium">I started with one pot, and rather too much water.</h2>
+        <div class="mt-5 grid gap-4 text-lg leading-relaxed">
+          <p>Before teaching, I spent ten years growing vegetables in a narrow rented yard. I tried seed trays on every windowsill, made compost in a borrowed bin and learned that a failed crop is a useful note, not a verdict.</p>
+          <p>Loamstead began in 2014 as a few Saturday afternoons around a neighbor’s raised bed. When the old market garden behind the brick wall on SE Alder Bend Road came up for rent, we took it on, cleared the brambles with our first students and built the beds you will work in today.</p>
+          <p>We still teach small groups, explain the why as well as the how, and send everyone home with something growing and a practical next step.</p>
+        </div>
+        <p class="mt-6 font-display text-2xl italic">Eudora Wickmere</p>
+        <p class="text-sm text-muted">Founder and instructor</p>
+      </article>
+    </section>
+
+    <section class="mt-20 border-y border-line bg-card/60 py-16" aria-label="Loamstead in numbers">
+      <dl class="wrap grid grid-cols-2 gap-8 text-center md:grid-cols-4">
+        <div class="flex flex-col-reverse"><dt class="mt-1 text-sm text-muted">students since 2014</dt><dd class="font-display text-5xl font-semibold">1,800</dd></div>
+        <div class="flex flex-col-reverse"><dt class="mt-1 text-sm text-muted">people in a group, at most</dt><dd class="font-display text-5xl font-semibold">10</dd></div>
+        <div class="flex flex-col-reverse"><dt class="mt-1 text-sm text-muted">acres behind the wall</dt><dd class="font-display text-5xl font-semibold">2</dd></div>
+        <div class="flex flex-col-reverse"><dt class="mt-1 text-sm text-muted">pesticides used, ever</dt><dd class="font-display text-5xl font-semibold">0</dd></div>
+      </dl>
+    </section>
+
+    <section class="wrap py-20" id="tutors" aria-labelledby="tutors-title">
+      <p class="eyebrow">Our instructors</p>
+      <h2 id="tutors-title" class="mt-3 font-display text-4xl leading-tight font-medium sm:text-5xl">Three growers who like to explain.</h2>
+      <div class="mt-10 grid gap-8 lg:grid-cols-3" data-tutor-cards></div>
+    </section>
+
+    <section class="graph border-y border-line py-20" aria-labelledby="values-title">
+      <div class="wrap">
+        <p class="eyebrow">How we work</p>
+        <h2 id="values-title" class="mt-3 font-display text-4xl leading-tight font-medium sm:text-5xl">Three things we stand by.</h2>
+        <div class="mt-10 grid gap-8 md:grid-cols-3">
+          <article class="reveal border-t-2 border-ink pt-5"><span class="font-display text-5xl text-rust italic">01</span><h3 class="mt-3 font-display text-2xl font-medium">Use what you have</h3><p class="mt-2 leading-relaxed text-muted">Good growing doesn’t need a shopping list of gadgets. We start with your space, your time and your budget, and we never sell you anything on a course.</p></article>
+          <article class="reveal border-t-2 border-ink pt-5"><span class="font-display text-5xl text-rust italic">02</span><h3 class="mt-3 font-display text-2xl font-medium">Notice before doing</h3><p class="mt-2 leading-relaxed text-muted">Watch the light, touch the soil, look at the leaves. A little observation is worth a lot of rushing, so every course starts with a slow walk around the plot.</p></article>
+          <article class="reveal border-t-2 border-ink pt-5"><span class="font-display text-5xl text-rust italic">03</span><h3 class="mt-3 font-display text-2xl font-medium">Leave room for nature</h3><p class="mt-2 leading-relaxed text-muted">We feed the soil, leave the nettles in one corner and lay our own hedge. A garden is a shared space, and the garter snakes deal with our slugs.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap pt-20" aria-labelledby="come-title">
+      <div class="grid gap-8 md:grid-cols-[1.5fr_1fr] md:items-end">
+        <div>
+          <h2 id="come-title" class="font-display text-4xl leading-tight font-medium sm:text-5xl">Come as you are.</h2>
+          <p class="mt-4 max-w-2xl text-lg leading-relaxed text-muted">Complete beginners, serial plant rescuers and quietly curious people are all welcome. You never need to know the right words.</p>
+        </div>
+        <div class="flex flex-wrap gap-3 md:justify-end"><a href="courses.html" class="btn btn-primary">Find a course</a><a href="visit.html" class="btn btn-ghost">Plan a visit</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-24 bg-ink text-paper">
+    <div class="wrap grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.4fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-2.5"><svg class="size-10 shrink-0" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="19" fill="#1f3a2e" stroke="#f1dfb2" stroke-width="1.5"/><path d="M2.5 27.5h35A19 19 0 0 1 2.5 27.5Z" fill="#6e5240"/><ellipse cx="20" cy="31" rx="3.4" ry="2.3" fill="#d9774f"/><path d="M20 29V15.5" stroke="#f6f4e9" stroke-width="1.8" stroke-linecap="round"/><path d="M20 19.5c-6 0-8.6-3.4-8.6-7.2 5.2 0 8.6 2.6 8.6 7.2Z" fill="#dbe3b8"/><path d="M20 17c.4-5 3.6-7.8 8.6-7.8 0 4.6-3.6 7.8-8.6 7.8Z" fill="#b9c98a"/></svg><span class="font-display text-[1.65rem] leading-none font-semibold tracking-tight">loamstead</span></a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-paper/80">A small, independent gardening school on a walled plot in Corvallis. Practical courses in small groups, for beginners and keen growers alike.</p>
+      </div>
+      <nav aria-labelledby="footer-learn">
+        <h2 id="footer-learn" class="text-xs font-semibold tracking-[0.18em] text-straw uppercase">Learn</h2>
+        <ul class="mt-4 grid gap-2.5 text-sm"><li><a class="hover:underline" href="courses.html">Courses</a></li><li><a class="hover:underline" href="timetable.html">Schedule</a></li><li><a class="hover:underline" href="enrol.html">Enroll</a></li><li><a class="hover:underline" href="planner.html">Bed planner</a></li><li><a class="hover:underline" href="saved.html">Your shortlist</a></li></ul>
+      </nav>
+      <nav aria-labelledby="footer-school">
+        <h2 id="footer-school" class="text-xs font-semibold tracking-[0.18em] text-straw uppercase">The school</h2>
+        <ul class="mt-4 grid gap-2.5 text-sm"><li><a class="hover:underline" href="about.html">About us</a></li><li><a class="hover:underline" href="about.html#tutors">Our instructors</a></li><li><a class="hover:underline" href="visit.html#access">Accessibility</a></li><li><a class="hover:underline" href="visit.html#terms">Booking terms</a></li><li><a class="hover:underline" href="visit.html#safeguarding">Student safety</a></li></ul>
+      </nav>
+      <div>
+        <h2 class="text-xs font-semibold tracking-[0.18em] text-straw uppercase">Find us</h2>
+        <address class="mt-4 text-sm leading-relaxed not-italic">The Walled Plot, 2480 SE Alder Bend Road<br>Corvallis, OR 97333</address>
+        <p class="mt-3 text-sm leading-relaxed"><a class="font-semibold hover:underline" href="tel:+15415550179">(541) 555-0179</a><br><a class="hover:underline" href="mailto:hello@loamstead.example">hello@loamstead.example</a></p>
+        <dl class="mt-3 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-sm text-paper/80"><dt class="font-semibold text-paper">Office</dt><dd>Mon–Fri, 9am–4pm</dd><dt class="font-semibold text-paper">Courses</dt><dd>Weekends and Wednesday evenings</dd></dl>
+      </div>
+    </div>
+    <div class="border-t border-paper/20">
+      <div class="wrap flex flex-col gap-2 py-6 text-xs text-paper/80 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Loamstead field school. A fictional school from a Freeframe template.</p>
+        <p><a href="#main" class="hover:underline">Back to top</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="announcer" class="sr-only" role="status" aria-live="polite"></div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

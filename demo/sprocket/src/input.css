@@ -1,0 +1,209 @@
+/* Sprocket (Bonfield Bikes) — Tailwind CSS v4 source.
+   Edit the brand tokens below, then rebuild with `npm run build`. */
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+@theme {
+  --font-sans: "Encode Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-display: "Kanit", "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
+
+  /* Snow and iron */
+  --color-snow: #f3f2ed;       /* page background */
+  --color-snow-2: #e8e6de;     /* sunken bands, table stripes */
+  --color-card: #ffffff;       /* cards and forms */
+  --color-line: #d9d6cb;       /* hairlines on snow */
+  --color-line-strong: #b5b1a3;
+  --color-ink: #14171a;        /* text and dark bands (iron) */
+  --color-ink-2: #1e2327;      /* raised panels on ink */
+  --color-ink-3: #30373c;      /* borders on ink */
+  --color-muted: #575c5f;      /* secondary text on snow and card (AA) */
+  --color-frost: #c9d3d6;      /* secondary text on ink (AA) */
+
+  /* Brand */
+  --color-ore: #c63d1f;        /* Taconite red: buttons, links, the logo (white text on it is AA) */
+  --color-ore-deep: #a8301a;   /* hover */
+  --color-ore-soft: #f7dbd2;   /* tints */
+  --color-ember: #ff8a66;      /* ore on dark backgrounds (text on ink is AA) */
+  --color-lake: #0f6672;       /* Harbor teal: secondary panels, charts */
+  --color-lake-deep: #0b4e57;
+  --color-lake-soft: #d4e8ea;
+  --color-ice: #9fd9e3;        /* lake on dark backgrounds */
+
+  /* Signals */
+  --color-ok: #2d6a3e;         /* success (AA on snow and card) */
+  --color-ok-soft: #dcefe0;
+  --color-bad: #a8301a;        /* errors (AA on snow and card) */
+
+  --ease-snap: cubic-bezier(.2, .9, .25, 1);
+}
+
+/* Kanit headlines: heavy, italic, uppercase, tight. */
+@utility headline { @apply font-display font-extrabold uppercase italic leading-[0.92] tracking-[-0.01em]; }
+
+/* Tabular, lining figures for every price, range and count. */
+@utility num { font-variant-numeric: tabular-nums lining-nums; }
+
+@utility btn {
+  @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-md px-6 py-3 font-display text-[15px] font-bold uppercase tracking-[0.06em] whitespace-nowrap transition duration-150 active:translate-y-px disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@utility field {
+  @apply block min-h-12 w-full rounded-md border-2 border-line-strong bg-white px-3.5 py-2.5 text-base text-ink placeholder:text-muted/70 focus:border-ink focus:outline-3 focus:outline-offset-1 focus:outline-ore/40 aria-[invalid=true]:border-bad;
+}
+
+@layer base {
+  :root { color-scheme: light; }
+  html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+  @media (prefers-reduced-motion: no-preference) { html:focus-within { scroll-behavior: smooth; } }
+  body { @apply bg-snow font-sans text-ink antialiased; }
+  ::selection { background: var(--color-ore); color: #fff; }
+  :focus-visible { outline: 3px solid var(--color-ore); outline-offset: 3px; }
+  .on-dark :focus-visible { outline-color: var(--color-ember); }
+  [id] { scroll-margin-top: 7rem; }
+  #main:focus { outline: none; }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  [hidden] { display: none !important; }
+  fieldset { min-width: 0; }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-7xl px-4 sm:px-8; }
+  .on-dark { @apply text-snow; }
+
+  /* Header */
+  .batch-bar { @apply bg-ink text-[13px] text-frost; }
+  .site-header { @apply sticky top-0 z-40 border-b-2 border-ink bg-snow/95 backdrop-blur; }
+  .site-header.is-scrolled { box-shadow: 0 8px 20px -16px rgb(20 23 26 / .6); }
+  .nav-link { @apply relative inline-flex min-h-11 items-center px-3 font-display text-[15px] font-semibold uppercase tracking-[0.05em] text-ink/75 transition hover:text-ink; }
+  .nav-link::after { content: ""; @apply absolute inset-x-3 bottom-1.5 h-[3px] origin-left skew-x-[-20deg] scale-x-0 bg-ore transition-transform duration-200; }
+  .nav-link:hover::after, .nav-link[aria-current="page"]::after { @apply scale-x-100; }
+  .nav-link[aria-current="page"] { @apply text-ink; }
+  .menu-toggle { @apply grid size-11 place-items-center rounded-md border-2 border-ink text-ink transition hover:bg-ink hover:text-snow; }
+  .mobile-menu { @apply fixed inset-x-0 bottom-0 overflow-y-auto bg-snow; }
+  .mobile-link { @apply flex items-center justify-between border-b border-line py-4 headline text-[2rem]; }
+  .mobile-link[aria-current="page"] { @apply text-ore; }
+  .menu-is-open { overflow: hidden; }
+  /* backdrop-filter makes the header the containing block of the fixed menu, which would then be
+     squeezed to zero height: drop the blur while the menu is open so the menu fills the screen. */
+  .menu-is-open .site-header { backdrop-filter: none; }
+
+  /* Buttons and links */
+  .btn-ore { @apply btn bg-ore text-white shadow-[0_3px_0_var(--color-ore-deep)] hover:bg-ore-deep; }
+  .btn-ink { @apply btn bg-ink text-snow shadow-[0_3px_0_#000] hover:bg-ink-3; }
+  .btn-line { @apply btn border-2 border-ink bg-transparent text-ink hover:bg-ink hover:text-snow; }
+  .btn-line-light { @apply btn border-2 border-snow/60 bg-transparent text-snow hover:border-snow hover:bg-snow hover:text-ink; }
+  .btn-sm { @apply min-h-10 px-4 py-2 text-[13px]; }
+  .text-link { @apply font-semibold text-ore-deep underline decoration-ore/35 decoration-2 underline-offset-4 transition hover:decoration-ore; }
+  .on-dark .text-link { @apply text-ember decoration-ember/40 hover:decoration-ember; }
+  .link-arrow { @apply inline-flex items-center gap-2 font-display text-[15px] font-bold uppercase tracking-[0.05em] text-ore-deep transition-[gap] hover:gap-3; }
+  .link-arrow::after { content: "→"; }
+  .on-dark .link-arrow { @apply text-ember; }
+
+  /* Type */
+  .eyebrow { @apply inline-flex items-center gap-2.5 font-display text-[13px] font-semibold uppercase tracking-[0.16em] text-muted; }
+  .eyebrow::before { content: ""; @apply size-2.5 skew-x-[-20deg] bg-ore; }
+  .on-dark .eyebrow { @apply text-frost; }
+  .on-dark .eyebrow::before { @apply bg-ember; }
+  .display { @apply headline text-[clamp(3rem,5.6vw,5.2rem)]; }
+  .section-title { @apply headline text-[clamp(2.25rem,4.6vw,3.75rem)]; }
+  .card-title { @apply font-display text-xl font-bold uppercase leading-tight tracking-[0.01em]; }
+  .lede { @apply text-lg leading-relaxed text-muted; }
+  .on-dark .lede { @apply text-frost; }
+  .slash { @apply text-ore; }
+  .on-dark .slash { @apply text-ember; }
+  .prose-article p { @apply mt-5 text-[1.075rem] leading-[1.75] text-ink/90; }
+  .prose-article h2 { @apply mt-12 headline text-[1.9rem]; }
+  .prose-article ul { @apply mt-5 space-y-2.5 pl-1; }
+  .prose-article li { @apply relative pl-6 text-[1.05rem] leading-relaxed text-ink/90; }
+  .prose-article li::before { content: ""; @apply absolute left-0 top-[0.62em] size-2.5 skew-x-[-20deg] bg-ore; }
+  .prose-article blockquote { @apply mt-8 border-l-[6px] border-ore pl-5 font-display text-2xl font-semibold italic leading-snug; }
+
+  /* Tread: the diagonal tire-tread stripe used as a divider and accent. */
+  .tread { height: 12px; background: repeating-linear-gradient(115deg, var(--color-ink) 0 9px, transparent 9px 18px); }
+  .tread-ore { height: 12px; background: repeating-linear-gradient(115deg, var(--color-ore) 0 9px, transparent 9px 18px); }
+  .tread-light { height: 12px; background: repeating-linear-gradient(115deg, var(--color-ink-3) 0 9px, transparent 9px 18px); }
+
+  /* Cards, chips, tags */
+  .card { @apply rounded-lg border-2 border-ink bg-card; }
+  .card-soft { @apply rounded-lg border border-line bg-card; }
+  .lift { @apply shadow-[6px_6px_0_var(--color-ink)]; }
+  .chip { @apply inline-flex min-h-10 items-center gap-2 rounded-md border-2 border-ink/25 bg-card px-4 font-display text-sm font-semibold uppercase tracking-[0.04em] text-ink transition hover:border-ink aria-pressed:border-ink aria-pressed:bg-ink aria-pressed:text-snow; }
+  .tag { @apply inline-flex items-center rounded bg-ore-soft px-2 py-0.5 font-display text-xs font-semibold uppercase tracking-[0.06em] text-ore-deep; }
+  .tag-lake { @apply bg-lake-soft text-lake-deep; }
+  .tag-ink { @apply bg-ink text-snow; }
+  .stat { @apply font-display text-5xl font-extrabold italic leading-none num; }
+
+  /* Configurator */
+  .swatch { @apply relative grid size-12 place-items-center rounded-full border-2 border-ink/20 transition hover:scale-105 aria-checked:border-ink aria-checked:ring-4 aria-checked:ring-ink/15; }
+  .option { @apply flex cursor-pointer items-start gap-3 rounded-lg border-2 border-line-strong bg-white p-4 transition hover:border-ink has-[:checked]:border-ink has-[:checked]:bg-snow has-[:checked]:shadow-[4px_4px_0_var(--color-ore)] has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-ore; }
+  .option-box { @apply mt-0.5 grid size-6 shrink-0 place-items-center rounded border-2 border-line-strong bg-white text-transparent transition; }
+  .option input:checked + .option-box { @apply border-ore bg-ore text-white; }
+  .option-dot { @apply mt-0.5 grid size-6 shrink-0 place-items-center rounded-full border-2 border-line-strong bg-white transition; }
+  .option input:checked + .option-dot { @apply border-ore; }
+  .option input:checked + .option-dot::after { content: ""; @apply size-3 rounded-full bg-ore; }
+  .line-item { @apply flex items-baseline justify-between gap-4 border-b border-dashed border-ink-3 py-2.5 text-[15px]; }
+  .meter { @apply h-3 overflow-hidden rounded-sm bg-ink-3; }
+  .meter-light { @apply h-3 overflow-hidden rounded-sm bg-snow-2; }
+
+  /* Bike art: frame color comes from --frame on the <svg>. */
+  .bike .frame { stroke: var(--frame, #c63d1f); }
+  .bike .frame-fill { fill: var(--frame, #c63d1f); }
+  @media (prefers-reduced-motion: no-preference) {
+    .bike .frame, .bike .frame-fill { transition: stroke .35s ease, fill .35s ease; }
+    .bike [data-part] { transition: opacity .25s ease; }
+  }
+
+  /* Forms */
+  .label { @apply mb-1.5 block text-sm font-bold; }
+  .hint { @apply mt-1 text-sm text-muted; }
+  .error { @apply mt-1.5 text-sm font-semibold text-bad empty:hidden; }
+  .range { @apply h-2 w-full cursor-pointer appearance-none rounded-full bg-line accent-ore; }
+
+  /* Spec tables */
+  .spec-table th { @apply w-2/5 py-3 pr-4 text-left align-top text-sm font-semibold text-muted; }
+  .spec-table td { @apply py-3 align-top num; }
+  .spec-table tr { @apply border-b border-line; }
+
+  /* FAQ */
+  .faq-item { @apply border-b-2 border-ink/15; }
+  .faq-item summary { @apply flex min-h-14 items-center justify-between gap-4 py-4 font-display text-lg font-semibold leading-snug; }
+  .faq-icon { @apply relative size-5 shrink-0; }
+  /* Both bars are centered by transform alone (no translate utility, which would add to it). */
+  .faq-icon::before, .faq-icon::after { content: ""; @apply absolute left-0 top-1/2 h-[3px] w-5 bg-ore; }
+  .faq-icon::before { transform: translateY(-50%); }
+  .faq-icon::after { transition: transform .2s ease; transform: translateY(-50%) rotate(90deg); }
+  details[open] .faq-icon::after { transform: translateY(-50%) rotate(0); }
+
+  /* Reveal */
+  .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s var(--ease-snap), transform .6s var(--ease-snap); }
+  .js .reveal.is-visible { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .js .reveal { opacity: 1; transform: none; transition: none; }
+    .nav-link::after, .faq-icon::after { transition: none; }
+  }
+
+  /* Back to top */
+  .back-to-top {
+    position: fixed; z-index: 40;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px) + var(--btt-lift, 0px));
+    display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; cursor: pointer; border-radius: .5rem;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, bottom .25s ease, visibility 0s linear .25s, background-color .2s;
+    border: 2px solid var(--color-ink);
+    background: var(--color-ore); color: #fff;
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; transition: transform .2s ease; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top.is-visible:hover svg { transform: translateY(-2px); }
+  .back-to-top:hover { background: var(--color-ore-deep); }
+  .back-to-top:focus-visible { outline: 3px solid var(--color-ink); outline-offset: 3px; }
+  .back-to-top-target:focus { outline: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top, .back-to-top svg { transition: none; }
+  }
+}

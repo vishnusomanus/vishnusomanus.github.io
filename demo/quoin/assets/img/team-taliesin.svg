@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" fill="none">
+  <rect width="400" height="300" fill="#dfe1d3"/>
+  <!-- the yard: wood fence, a pallet of stone, sky -->
+  <path d="M0 0h400v150H0z" fill="#e7ead9"/>
+  <g fill="#b39a74" stroke="#8a7656" stroke-width="1.5"><path d="M0 120h400v14H0z"/><path d="M10 90h22v120H10zm40 0h22v120H50zm280 0h22v120h-22zm40 0h22v120h-22z"/></g>
+  <path d="M296 196h104v40H296z" fill="#c9bea4" stroke="#8f876f"/><path d="M296 206h104M296 216h104M296 226h104M330 196v40m34-40v40" stroke="#a89e84"/>
+  <path d="M0 236h400v64H0z" fill="#d1ccb8"/>
+  <!-- body: work jacket, turned a little -->
+  <path d="M70 300q10-110 120-116 96 8 106 116z" fill="#34465a"/>
+  <path d="M90 270q90-14 200 0" stroke="#c8d06a" stroke-width="7"/>
+  <path d="M164 190l26 30 26-30" fill="#e7e2d0" stroke="#24333f" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M190 220v80" stroke="#24333f" stroke-width="2"/>
+  <!-- raised arm holding the tape out -->
+  <path d="M264 214q30-6 44-50l20 8q-10 54-56 66z" fill="#34465a"/>
+  <ellipse cx="322" cy="158" rx="13" ry="12" fill="#cf9a78"/>
+  <rect x="306" y="134" width="40" height="34" rx="8" fill="#e3c35d" stroke="#514f3f" stroke-width="2"/>
+  <circle cx="326" cy="151" r="8" fill="#c8a640" stroke="#514f3f"/>
+  <path d="M330 168l58 118 10-5-56-117z" fill="#efd774" stroke="#514f3f" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M346 190l6-3m3 21 6-3m3 21 6-3m3 21 6-3m3 21 6-3" stroke="#514f3f"/>
+    <!-- neck -->
+  <path d="M176 160h30v30q-15 8-30 0z" fill="#c38d6b"/>
+  <!-- head, three-quarter left -->
+  <path d="M152 112q0-50 42-52 44 2 44 50 0 54-44 62-42-6-42-60z" fill="#cf9a78"/>
+  <ellipse cx="236" cy="118" rx="6" ry="10" fill="#c38d6b"/>
+  <!-- beard -->
+  <path d="M154 120q2 52 40 56 38-4 42-56-8 20-18 22-12-8-26-8t-24 8q-10-4-14-22z" fill="#a3532f"/>
+  <path d="M182 140q12-6 24 0" stroke="#8a4227" stroke-width="5" stroke-linecap="round"/>
+  <path d="M186 150q8 4 16 0" stroke="#5c2b1c" stroke-width="2" stroke-linecap="round"/>
+  <!-- flat cap -->
+  <path d="M148 98q4-44 50-42 40 2 44 38z" fill="#5c5f4f"/>
+  <path d="M146 100q-10 2-6 10 30-10 62-10t44 2v-8q-50-6-100 6z" fill="#4a4d40"/>
+  <path d="M160 74q30-12 70 0" stroke="#6c6f5e" stroke-width="2"/>
+  <!-- open eyes and brows -->
+  <path d="M164 108q9-4 18 0m18 0q9-4 18 0" stroke="#7f3c22" stroke-width="3.5" stroke-linecap="round"/>
+  <ellipse cx="173" cy="119" rx="4.5" ry="5" fill="#fff"/><ellipse cx="209" cy="119" rx="4.5" ry="5" fill="#fff"/>
+  <circle cx="172" cy="120" r="3" fill="#36506a"/><circle cx="208" cy="120" r="3" fill="#36506a"/>
+  <circle cx="173" cy="119" r="1" fill="#fff"/><circle cx="209" cy="119" r="1" fill="#fff"/>
+  <path d="M190 120q-6 12-2 16h8" stroke="#a87355" stroke-width="2" stroke-linecap="round"/>
+</svg>

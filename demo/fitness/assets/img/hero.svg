@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 680" role="img" aria-label="Athlete locking out a barbell overhead">
+  <defs>
+    <radialGradient id="g" cx=".5" cy=".45" r=".6"><stop offset="0" stop-color="#c8ff2e" stop-opacity=".32"/><stop offset=".55" stop-color="#c8ff2e" stop-opacity=".05"/><stop offset="1" stop-color="#c8ff2e" stop-opacity="0"/></radialGradient>
+    <filter id="f" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="18" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="640" height="680" fill="url(#g)"/>
+  <circle cx="320" cy="320" r="270" fill="none" stroke="#c8ff2e" stroke-opacity=".18" stroke-width="2"/>
+  <circle cx="320" cy="320" r="210" fill="none" stroke="#c8ff2e" stroke-opacity=".1" stroke-width="40"/>
+  <circle cx="320" cy="320" r="270" fill="none" stroke="#c8ff2e" stroke-width="6" stroke-dasharray="120 1580" stroke-linecap="round" transform="rotate(-70 320 320)"/>
+  <g stroke="#ffffff" stroke-opacity=".12" stroke-width="2">
+    <path d="M40 600H600"/><path d="M90 630H550"/>
+  </g>
+  <g transform="translate(150 90) scale(1.7)" filter="url(#f)"><g fill="#c8ff2e" stroke="#c8ff2e" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero"><g fill="none" stroke-width="17"><polyline points="100,70 80,48 70,20"/><polyline points="100,70 120,48 130,20"/><polyline points="100,116 84,150 80,186"/><polyline points="100,116 116,150 120,186"/><polyline points="100,64 100,116" stroke-width="24"/></g><circle cx="100" cy="46" r="14" stroke="none"/><path d="M28 20H172" stroke-width="6"/><rect x="34" y="2" width="10" height="36" rx="3" stroke="none"/><rect x="156" y="2" width="10" height="36" rx="3" stroke="none"/><rect x="22" y="8" width="8" height="24" rx="3" stroke="none"/><rect x="170" y="8" width="8" height="24" rx="3" stroke="none"/></g></g>
+  <g font-family="Inter, Arial, sans-serif" font-weight="800" fill="#f3f4f1">
+    <rect x="430" y="470" width="176" height="74" rx="12" fill="#131517" stroke="#2a2e33"/>
+    <text x="448" y="500" font-size="13" fill="#9ca3a9" letter-spacing="2">TODAY'S LIFT</text>
+    <text x="448" y="530" font-size="24">Snatch · 135 lb</text>
+    <rect x="34" y="150" width="150" height="74" rx="12" fill="#131517" stroke="#2a2e33"/>
+    <text x="52" y="180" font-size="13" fill="#9ca3a9" letter-spacing="2">HEART RATE</text>
+    <text x="52" y="210" font-size="24">168 <tspan fill="#ff5a36" font-size="15">bpm</tspan></text>
+  </g>
+</svg>

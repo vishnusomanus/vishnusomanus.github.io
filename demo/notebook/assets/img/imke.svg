@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <defs>
+    <pattern id="g" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#9fb8d6" stroke-opacity=".5"/></pattern>
+    <clipPath id="c"><rect width="400" height="400" rx="4"/></clipPath>
+  </defs>
+  <g clip-path="url(#c)">
+    <rect width="400" height="400" fill="#fffdf5"/>
+    <rect width="400" height="400" fill="url(#g)"/>
+    <path d="M40 0v400" stroke="#d0342c" stroke-width="3"/>
+    <circle cx="214" cy="190" r="128" fill="#ffe25e"/>
+    <path d="M86 400c6-78 58-118 128-118s122 40 128 118z" fill="#c9962b"/>
+    <path d="M150 300c18 22 40 32 64 32s46-10 64-32" fill="none" stroke="#a87920" stroke-width="5" stroke-linecap="round"/>
+    <path d="M118 360v40M310 360v40" stroke="#a87920" stroke-width="4"/>
+    <rect x="190" y="236" width="48" height="56" rx="18" fill="#e9b48f"/>
+    <ellipse cx="214" cy="180" rx="66" ry="76" fill="#f0c19c"/>
+    <path d="M146 176c-6-60 26-100 72-100 44 0 76 32 72 92-10-28-30-46-58-52-24 14-56 24-86 60z" fill="#2b2420"/>
+    <path d="M150 170c-8 20-6 46 2 58" fill="none" stroke="#2b2420" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="186" cy="188" r="20" fill="#ffffff" fill-opacity=".35" stroke="#15171a" stroke-width="5"/>
+    <circle cx="244" cy="188" r="20" fill="#ffffff" fill-opacity=".35" stroke="#15171a" stroke-width="5"/>
+    <path d="M206 186h18M166 184l-18-4M264 184l18-4" stroke="#15171a" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="186" cy="190" r="4.5" fill="#15171a"/>
+    <circle cx="244" cy="190" r="4.5" fill="#15171a"/>
+    <path d="M214 196c-3 12-6 18-2 22" fill="none" stroke="#c98d68" stroke-width="4" stroke-linecap="round"/>
+    <path d="M194 232c12 10 30 10 42 0" fill="none" stroke="#9a4a3a" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="162" cy="216" r="9" fill="#e99a86" fill-opacity=".5"/>
+    <circle cx="268" cy="216" r="9" fill="#e99a86" fill-opacity=".5"/>
+    <g transform="translate(270 300)">
+      <rect x="0" y="0" width="64" height="74" rx="8" fill="#ffffff" stroke="#15171a" stroke-width="5"/>
+      <path d="M64 18c22 0 22 38 0 38" fill="none" stroke="#15171a" stroke-width="5"/>
+      <rect x="8" y="18" width="48" height="14" fill="#d0342c"/>
+      <path d="M22 -14c-6 -8 6 -14 0 -22M40 -12c-6 -8 6 -14 0 -22" fill="none" stroke="#5b6068" stroke-width="3" stroke-linecap="round"/>
+    </g>
+    <path d="M232 296c20 6 36 10 44 14" fill="none" stroke="#f0c19c" stroke-width="22" stroke-linecap="round"/>
+  </g>
+</svg>

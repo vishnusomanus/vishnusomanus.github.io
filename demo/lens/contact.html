@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Ines Morrow Photography</title>
+  <meta name="description" content="Inquire about wedding, elopement, portrait or travel photography with Ines Morrow.">
+  <meta name="theme-color" content="#f5f2ec">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ines Morrow Photography">
+  <meta property="og:title" content="Contact — Ines Morrow Photography">
+  <meta property="og:description" content="Inquire about wedding, elopement, portrait or travel photography with Ines Morrow.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&amp;family=Hanken+Grotesk:wght@400..700&amp;display=swap">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="antialiased" data-page="contact">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container-x flex h-20 items-center justify-between gap-6">
+      <a href="index.html" class="leading-none">
+        <span class="block font-display text-2xl tracking-tight">Ines Morrow</span>
+        <span class="kicker mt-1 block text-[.62rem] opacity-80">Photography</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-9"><li><a href="portfolio.html" class="nav-link">Portfolio</a></li><li><a href="stories.html" class="nav-link">Stories</a></li><li><a href="packages.html" class="nav-link">Packages</a></li><li><a href="proofing.html" class="nav-link">Client proofing</a></li><li><a href="contact.html" class="nav-link" aria-current="page">Contact</a></li></ul>
+      </nav>
+      <button type="button" class="-mr-2 grid size-11 place-items-center lg:hidden" data-menu-button aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M3 9h20M3 17h20" stroke="currentColor" stroke-width="1.5"/></svg></button>
+    </div>
+    <div id="mobile-menu" class="fixed inset-x-0 top-20 bottom-0 overflow-y-auto bg-paper text-ink lg:hidden" hidden>
+      <nav aria-label="Mobile" class="container-x pt-4 pb-12">
+        <ul><li><a href="portfolio.html" class="flex items-baseline justify-between border-b border-line py-5 font-display text-4xl">Portfolio<span class="kicker text-muted">01</span></a></li><li><a href="stories.html" class="flex items-baseline justify-between border-b border-line py-5 font-display text-4xl">Stories<span class="kicker text-muted">02</span></a></li><li><a href="packages.html" class="flex items-baseline justify-between border-b border-line py-5 font-display text-4xl">Packages<span class="kicker text-muted">03</span></a></li><li><a href="proofing.html" class="flex items-baseline justify-between border-b border-line py-5 font-display text-4xl">Client proofing<span class="kicker text-muted">04</span></a></li><li><a href="contact.html" class="flex items-baseline justify-between border-b border-line py-5 font-display text-4xl" aria-current="page">Contact<span class="kicker text-muted">05</span></a></li></ul>
+        <p class="mt-10 text-muted">Now booking <span data-year-ahead="1">2027</span> weddings.</p>
+        <a href="mailto:studio@inesmorrow.example" class="mt-2 inline-block text-lg">studio@inesmorrow.example</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="container-x pt-16 pb-12 sm:pt-24">
+      <p class="kicker text-rust reveal">Contact</p>
+      <h1 class="mt-5 max-w-4xl text-5xl leading-[1.04] tracking-tight sm:text-7xl reveal">Let's talk</h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted reveal">Tell me a little about what you're planning. I reply to every inquiry within two business days, usually with a few questions and a time to talk.</p>
+    </section>
+    <section class="container-x grid gap-16 pb-28 lg:grid-cols-12">
+      <form class="grid gap-8 lg:col-span-7" data-enquiry novalidate>
+        <!-- Demo form: connect it to a form service (e.g. Formspree) in assets/js/main.js to receive inquiries. -->
+        <div class="grid gap-8 sm:grid-cols-2">
+          <div><label class="label" for="c-name">Your names</label><input class="field" id="c-name" name="name" autocomplete="name" required></div>
+          <div><label class="label" for="c-email">Email</label><input class="field" id="c-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="grid gap-8 sm:grid-cols-2">
+          <div><label class="label" for="c-type">What's the occasion?</label>
+            <select class="field" id="c-type" name="type" required><option value="">Choose one</option><option value="wedding">Wedding</option><option value="elopement">Elopement</option><option value="portrait">Portrait session</option><option value="travel">Travel or editorial</option><option value="other">Something else</option></select></div>
+          <div><label class="label" for="c-date">Date</label><input class="field" id="c-date" name="date" type="date" aria-describedby="c-date-hint"><p id="c-date-hint" class="mt-1.5 text-xs text-muted">Required for weddings and elopements.</p></div>
+        </div>
+        <div class="grid gap-8 sm:grid-cols-2">
+          <div><label class="label" for="c-location">Location</label><input class="field" id="c-location" name="location" placeholder="City, venue or “not sure yet”"></div>
+          <div><label class="label" for="c-budget">Budget</label>
+            <select class="field" id="c-budget" name="budget" required><option value="">Choose a range</option><option value="under-1k">Under $1,000</option><option value="1-3k">$1,000 – $3,000</option><option value="3-5k">$3,000 – $5,000</option><option value="5k-plus">$5,000+</option></select></div>
+        </div>
+        <div><label class="label" for="c-package">Package (optional)</label>
+          <select class="field" id="c-package" name="package"><option value="">Not sure yet</option><option value="essentials">Essentials — $2,900</option><option value="signature">Signature — $4,800</option><option value="collection">Collection — $6,800</option><option value="portrait">Portrait session — $650</option></select></div>
+        <div><label class="label" for="c-message">Tell me about it</label><textarea class="field min-h-36" id="c-message" name="message" required minlength="20" placeholder="Who, where, and what matters most to you"></textarea></div>
+        <div class="flex flex-wrap items-center gap-6"><button type="submit" class="btn btn-solid">Send inquiry</button><p class="text-sm text-muted">No newsletter, no spam.</p></div>
+        <div class="hidden border border-ink bg-[#fffdf9] p-6" role="status" data-success tabindex="-1">
+          <p class="font-display text-2xl">Thank you.</p>
+          <p class="mt-2 text-muted">Your inquiry has reached me, and your reference is <span class="text-ink" data-ref></span>. I reply to every inquiry within two business days, usually with a few questions and a time to talk.</p>
+          <button type="button" class="link-u mt-4 text-sm font-semibold" data-reset>Send another inquiry</button>
+        </div>
+      </form>
+      <aside class="space-y-10 lg:col-span-4 lg:col-start-9">
+        <div class="frame aspect-[4/5] reveal"><img src="assets/img/photos/studio-portraits-05.svg" alt="Portrait of Ines Morrow in the Monterey studio" width="1000" height="1000" loading="lazy" decoding="async" class=""></div>
+        <div class="reveal"><p class="kicker text-muted">Email</p><a href="mailto:studio@inesmorrow.example" class="link-u mt-2 inline-block text-lg">studio@inesmorrow.example</a></div>
+        <div class="reveal"><p class="kicker text-muted">Studio</p><p class="mt-2">471 Van Buren Street, Monterey, CA 93940<br>Portrait sessions by appointment</p></div>
+        <div class="reveal"><p class="kicker text-muted"><span data-year-ahead="1">2027</span> availability</p><p class="mt-2">May and June are almost full. Spring and fall dates are still open.</p></div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="on-dark bg-ink text-paper">
+    <div class="container-x grid gap-12 py-20 lg:grid-cols-12">
+      <div class="lg:col-span-7">
+        <p class="kicker text-sand">Now booking <span data-year-ahead="1">2027</span></p>
+        <p class="mt-5 max-w-xl font-display text-4xl leading-tight sm:text-5xl">Tell me about the day you want to remember.</p>
+        <a href="contact.html" class="btn btn-ghost mt-9">Start an inquiry <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></a>
+      </div>
+      <div class="grid gap-8 text-sm sm:grid-cols-2 lg:col-span-5 lg:pl-10">
+        <div>
+          <p class="kicker text-mist">Explore</p>
+          <ul class="mt-4 space-y-2.5"><li><a class="hover:text-sand" href="portfolio.html">Portfolio</a></li><li><a class="hover:text-sand" href="stories.html">Stories</a></li><li><a class="hover:text-sand" href="packages.html">Packages</a></li><li><a class="hover:text-sand" href="proofing.html">Client proofing</a></li><li><a class="hover:text-sand" href="contact.html">Contact</a></li></ul>
+        </div>
+        <div>
+          <p class="kicker text-mist">Studio</p>
+          <address class="mt-4 space-y-2.5 not-italic">
+            <p>471 Van Buren Street<br>Monterey, CA 93940</p>
+            <p><a class="break-all hover:text-sand" href="mailto:studio@inesmorrow.example">studio@inesmorrow.example</a></p>
+            <p><a class="hover:text-sand" href="#">Instagram</a> · <a class="hover:text-sand" href="#">Pinterest</a></p>
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="container-x flex flex-wrap justify-between gap-3 border-t border-white/10 py-6 text-xs text-mist">
+      <p>© <span data-year>2026</span> Ines Morrow Photography. All photographs are illustrations for this template.</p>
+      <p>Weddings · Portraits · Travel</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

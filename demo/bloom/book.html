@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book an appointment — Bloom Hair &amp; Spa</title>
+  <meta name="description" content="Book online: choose your treatments, pick a stylist or anyone available, and see real time slots for the day you want.">
+  <meta name="theme-color" content="#faf6f2">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bloom Hair &amp; Spa">
+  <meta property="og:title" content="Book an appointment — Bloom Hair &amp; Spa">
+  <meta property="og:description" content="Book online: choose your treatments, pick a stylist or anyone available, and see real time slots for the day you want.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&amp;family=Jost:wght@300..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="book" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm text-shell focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <header id="site-header" class="site-header">
+    <div class="container-x flex h-18 items-center justify-between gap-6">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Bloom Hair &amp; Spa, home">
+        <svg viewBox="0 0 32 32" class="h-9 w-9 text-plum" aria-hidden="true"><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(0 16 16)" opacity="0.55"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(72 16 16)" opacity="0.64"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(144 16 16)" opacity="0.73"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(216 16 16)" opacity="0.82"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(288 16 16)" opacity="0.91"/><circle cx="16" cy="16" r="3.4" fill="#faf6f2"/></svg>
+        <span class="font-display text-2xl tracking-tight">Bloom</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-8">
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="team.html" class="nav-link">Team</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="gift-cards.html" class="nav-link">Gift cards</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="book.html" class="btn-primary hidden sm:inline-flex" aria-current="page">Book now</a>
+        <button id="menu-toggle" type="button" class="menu-toggle lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <svg data-icon-open viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="mobile-menu lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="services.html" class="mobile-link">Services</a></li>
+          <li><a href="team.html" class="mobile-link">Team</a></li>
+          <li><a href="gallery.html" class="mobile-link">Gallery</a></li>
+          <li><a href="gift-cards.html" class="mobile-link">Gift cards</a></li>
+          <li><a href="about.html" class="mobile-link">About</a></li>
+          <li><a href="contact.html" class="mobile-link">Contact</a></li>
+        </ul>
+        <a href="book.html" class="btn-primary mt-8 w-full">Book an appointment</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="flex-1">
+    <section class="page-hero">
+      <div class="container-x reveal max-w-3xl text-center">
+        <p class="eyebrow">Book online</p>
+        <h1 class="mt-4 font-display text-[clamp(2.5rem,5vw,4.25rem)] leading-[1.05] tracking-tight">Book an appointment</h1>
+        <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-mute">Choose your treatments, a stylist (or anyone available) and a time. You'll get a confirmation by email.</p>
+      </div>
+    </section>
+
+    <section class="container-x pb-24">
+      <div class="booking" data-booking>
+        <noscript><p class="card mb-8 p-6 text-center">Online booking needs JavaScript. Please call us at <a class="text-link" href="tel:+19415550173">(941) 555-0173</a>.</p></noscript>
+        <ol class="steps" aria-label="Booking progress"><li class="step" data-step-indicator="1" aria-current="step"><span class="step-num">1</span><span class="step-label">Treatments</span></li><li class="step" data-step-indicator="2"><span class="step-num">2</span><span class="step-label">Stylist</span></li><li class="step" data-step-indicator="3"><span class="step-num">3</span><span class="step-label">Date &amp; time</span></li><li class="step" data-step-indicator="4"><span class="step-num">4</span><span class="step-label">Your details</span></li><li class="step" data-step-indicator="5"><span class="step-num">5</span><span class="step-label">Confirm</span></li></ol>
+        <div class="mt-10 grid items-start gap-10 lg:grid-cols-[1fr_22rem]" data-booking-main>
+          <form id="booking-form" class="min-w-0" novalidate>
+            <section data-step="1" aria-labelledby="step-1-title">
+              <h2 id="step-1-title" class="step-title" tabindex="-1">Choose your treatments</h2>
+              <p class="mt-2 text-sm text-mute">Pick one or more. Prices for hair and color depend on your stylist's level.</p>
+              <div class="mt-8"><fieldset class="mt-8 first:mt-0"><legend class="flex items-center gap-2 font-display text-xl"><span class="text-plum"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4c4 0 6 3 6 8M6 20a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm12 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM8 15.6 16.5 4M16 15.6 7.5 4"/></svg></span>Hair</legend><ul class="mt-3 grid gap-3 sm:grid-cols-2"><li><label class="option"><input type="checkbox" name="services" value="signature-cut" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Signature cut & finish</span><span class="text-sm">from $85</span></span><span class="text-sm text-mute">1 hr</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="restyle" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Restyle consultation & cut</span><span class="text-sm">from $110</span></span><span class="text-sm text-mute">1 hr 15 min</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="blow-dry" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Blowout & style</span><span class="text-sm">from $55</span></span><span class="text-sm text-mute">45 min</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="short-cut" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Short cut & clipper work</span><span class="text-sm">from $45</span></span><span class="text-sm text-mute">30 min</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="event-styling" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Bridal & event styling</span><span class="text-sm">from $175</span></span><span class="text-sm text-mute">1 hr 30 min</span></span></label></li></ul></fieldset><fieldset class="mt-8 first:mt-0"><legend class="flex items-center gap-2 font-display text-xl"><span class="text-plum"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/><path d="M9 14.5a3 3 0 0 0 3 3"/></svg></span>Color</legend><ul class="mt-3 grid gap-3 sm:grid-cols-2"><li><label class="option"><input type="checkbox" name="services" value="balayage" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Balayage</span><span class="text-sm">from $260</span></span><span class="text-sm text-mute">3 hr</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="full-colour" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Full color</span><span class="text-sm">from $145</span></span><span class="text-sm text-mute">1 hr 45 min</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="root-touch-up" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Root touch-up</span><span class="text-sm">from $95</span></span><span class="text-sm text-mute">1 hr 15 min</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="half-highlights" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Partial highlights</span><span class="text-sm">from $165</span></span><span class="text-sm text-mute">2 hr</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="gloss" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Gloss & tone</span><span class="text-sm">from $65</span></span><span class="text-sm text-mute">45 min</span></span></label></li></ul></fieldset><fieldset class="mt-8 first:mt-0"><legend class="flex items-center gap-2 font-display text-xl"><span class="text-plum"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21h6M10 21V11h4v10M9.5 11 11 3h2l1.5 8"/></svg></span>Nails</legend><ul class="mt-3 grid gap-3 sm:grid-cols-2"><li><label class="option"><input type="checkbox" name="services" value="gel-manicure" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Gel manicure</span><span class="text-sm">$50</span></span><span class="text-sm text-mute">50 min</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="classic-manicure" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Classic manicure</span><span class="text-sm">$35</span></span><span class="text-sm text-mute">40 min</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="spa-pedicure" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Spa pedicure</span><span class="text-sm">$65</span></span><span class="text-sm text-mute">55 min</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="nail-art" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Nail art (add-on)</span><span class="text-sm">$15</span></span><span class="text-sm text-mute">15 min</span></span></label></li></ul></fieldset><fieldset class="mt-8 first:mt-0"><legend class="flex items-center gap-2 font-display text-xl"><span class="text-plum"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-5-3-8-7-8-11 3-1 6 0 8 3 2-3 5-4 8-3 0 4-3 8-8 11z"/><path d="M12 13v8"/></svg></span>Skin</legend><ul class="mt-3 grid gap-3 sm:grid-cols-2"><li><label class="option"><input type="checkbox" name="services" value="signature-facial" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Bloom signature facial</span><span class="text-sm">$130</span></span><span class="text-sm text-mute">1 hr</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="hydrating-facial" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Hydrating facial</span><span class="text-sm">$100</span></span><span class="text-sm text-mute">45 min</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="brow-tint" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Brow shape & tint</span><span class="text-sm">$40</span></span><span class="text-sm text-mute">30 min</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="lash-lift" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Lash lift & tint</span><span class="text-sm">$85</span></span><span class="text-sm text-mute">50 min</span></span></label></li></ul></fieldset><fieldset class="mt-8 first:mt-0"><legend class="flex items-center gap-2 font-display text-xl"><span class="text-plum"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="17" rx="8" ry="3"/><ellipse cx="12" cy="11" rx="6" ry="2.5"/><ellipse cx="12" cy="6" rx="4" ry="2"/></svg></span>Massage</legend><ul class="mt-3 grid gap-3 sm:grid-cols-2"><li><label class="option"><input type="checkbox" name="services" value="swedish-60" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Swedish massage, 60 min</span><span class="text-sm">$110</span></span><span class="text-sm text-mute">1 hr</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="swedish-90" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Swedish massage, 90 min</span><span class="text-sm">$155</span></span><span class="text-sm text-mute">1 hr 30 min</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="hot-stone" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Hot stone massage</span><span class="text-sm">$140</span></span><span class="text-sm text-mute">1 hr 15 min</span></span></label></li><li><label class="option"><input type="checkbox" name="services" value="scalp-shoulder" class="option-input"><span class="option-body"><span class="flex flex-wrap items-baseline justify-between gap-x-3"><span class="font-medium">Scalp, neck & shoulder</span><span class="text-sm">$55</span></span><span class="text-sm text-mute">30 min</span></span></label></li></ul></fieldset></div>
+              <p class="field-error mt-4" data-error="services" role="alert"></p>
+            </section>
+            <section data-step="2" hidden aria-labelledby="step-2-title">
+              <h2 id="step-2-title" class="step-title" tabindex="-1">Choose a stylist</h2>
+              <p class="mt-2 text-sm text-mute" data-stylist-help>Everyone below can do all of your treatments.</p>
+              <ul class="mt-6 grid gap-3 sm:grid-cols-2" data-stylist-list></ul>
+            </section>
+            <section data-step="3" hidden aria-labelledby="step-3-title">
+              <h2 id="step-3-title" class="step-title" tabindex="-1">Pick a date and time</h2>
+              <p class="mt-2 text-sm text-mute" data-slot-help>Times shown fit your treatments before closing.</p>
+              <div class="relative mt-6 overflow-x-auto pb-2"><div class="flex gap-2" role="group" aria-label="Choose a date" data-date-list></div></div>
+              <h3 class="mt-8 font-display text-xl" data-slot-heading>Available times</h3>
+              <div class="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-4 xl:grid-cols-5" role="group" aria-label="Choose a time" data-slot-list></div>
+              <p class="mt-4 text-sm text-mute" data-slot-empty hidden>No times left on this day. Please choose another date.</p>
+              <p class="field-error mt-4" data-error="slot" role="alert"></p>
+            </section>
+            <section data-step="4" hidden aria-labelledby="step-4-title">
+              <h2 id="step-4-title" class="step-title" tabindex="-1">Your details</h2>
+              <div class="mt-6 grid gap-5 sm:grid-cols-2">
+                <div class="sm:col-span-2"><label for="b-name" class="field-label">Full name</label><input id="b-name" name="name" class="field" autocomplete="name" required aria-describedby="b-name-error"><p id="b-name-error" class="field-error" data-error="name"></p></div>
+                <div><label for="b-email" class="field-label">Email</label><input id="b-email" name="email" type="email" class="field" autocomplete="email" required aria-describedby="b-email-error"><p id="b-email-error" class="field-error" data-error="email"></p></div>
+                <div><label for="b-phone" class="field-label">Cell phone number</label><input id="b-phone" name="phone" type="tel" class="field" autocomplete="tel" required aria-describedby="b-phone-error"><p id="b-phone-error" class="field-error" data-error="phone"></p></div>
+                <div class="sm:col-span-2"><label for="b-notes" class="field-label">Anything we should know? <span class="font-normal text-mute">(optional)</span></label><textarea id="b-notes" name="notes" rows="3" maxlength="400" class="field" placeholder="Allergies, inspiration, accessibility needs..."></textarea></div>
+                <label class="check sm:col-span-2"><input type="checkbox" name="firstVisit" class="check-input"><span>This is my first visit (we'll allow extra time for your consultation)</span></label>
+                <label class="check sm:col-span-2"><input type="checkbox" name="remember" class="check-input"><span>Remember my details on this device</span></label>
+                <div class="sm:col-span-2"><label class="check"><input type="checkbox" name="policy" class="check-input" required aria-describedby="b-policy-error"><span>I agree to the 24-hour cancellation policy</span></label><p id="b-policy-error" class="field-error" data-error="policy"></p></div>
+              </div>
+            </section>
+            <section data-step="5" hidden aria-labelledby="step-5-title">
+              <h2 id="step-5-title" class="step-title" tabindex="-1">Review and confirm</h2>
+              <dl class="mt-6 divide-y divide-line border-y border-line" data-review></dl>
+            </section>
+            <div class="mt-10 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-6">
+              <button type="button" class="btn-outline" data-back hidden>Back</button>
+              <button type="submit" class="btn-primary ml-auto" data-next>Continue</button>
+            </div>
+          </form>
+          <aside class="booking-summary" aria-labelledby="summary-title">
+            <h2 id="summary-title" class="font-display text-2xl">Your appointment</h2>
+            <ul class="mt-4 space-y-2 text-sm" data-summary-items><li class="text-mute">No treatments chosen yet.</li></ul>
+            <dl class="mt-5 space-y-2 border-t border-line pt-5 text-sm">
+              <div class="flex justify-between gap-4"><dt class="text-mute">Stylist</dt><dd data-summary-stylist>Anyone available</dd></div>
+              <div class="flex justify-between gap-4"><dt class="text-mute">When</dt><dd data-summary-when>Not chosen</dd></div>
+              <div class="flex justify-between gap-4"><dt class="text-mute">Duration</dt><dd data-summary-duration>0 min</dd></div>
+              <div class="flex justify-between gap-4 border-t border-line pt-3 text-base"><dt class="font-medium">Estimated total</dt><dd class="font-medium" data-summary-total>$0</dd></div>
+            </dl>
+            <p class="mt-4 text-xs leading-relaxed text-mute">Pay at the salon after your visit. No deposit needed.</p>
+          </aside>
+        </div>
+        <div class="card mx-auto max-w-2xl p-8 text-center sm:p-12" data-booking-done hidden tabindex="-1">
+          <p class="eyebrow">Request received</p>
+          <h2 class="mt-3 font-display text-4xl">See you soon, <span data-done-name>friend</span></h2>
+          <p class="mt-4 text-mute" data-done-summary></p>
+          <p class="mt-2 text-sm text-mute">Reference <span class="font-medium text-ink" data-done-ref>BL-0000</span></p>
+          <p class="mx-auto mt-6 max-w-md rounded-xl bg-blush/70 p-4 text-sm">We'll email a confirmation to <span class="font-medium text-ink" data-done-email></span> shortly. Need to change or cancel? Give us your reference and 24 hours' notice.</p>
+          <button type="button" class="btn-outline mt-8" data-restart>Book something else</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="mt-auto bg-ink text-shell">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.4fr]">
+      <div>
+        <a href="index.html" class="flex items-center gap-2.5" aria-label="Bloom Hair &amp; Spa, home">
+          <svg viewBox="0 0 32 32" class="h-9 w-9 text-blush" aria-hidden="true"><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(0 16 16)" opacity="0.55"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(72 16 16)" opacity="0.64"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(144 16 16)" opacity="0.73"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(216 16 16)" opacity="0.82"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(288 16 16)" opacity="0.91"/><circle cx="16" cy="16" r="3.4" fill="#2a2127"/></svg>
+          <span class="font-display text-2xl">Bloom</span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-shell/75">An independent hair, nail and skin salon on Burns Court, Sarasota. Unhurried appointments since 2016.</p>
+        <p class="mt-5 text-sm"><span class="open-badge" data-open-now><span class="open-dot" aria-hidden="true"></span><span data-open-text>Tue–Sun · see hours</span></span></p>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="services.html" class="footer-link">Services &amp; prices</a></li>
+          <li><a href="team.html" class="footer-link">Our team</a></li>
+          <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+          <li><a href="gift-cards.html" class="footer-link">Gift cards</a></li>
+          <li><a href="about.html" class="footer-link">About Bloom</a></li>
+          <li><a href="book.html" class="footer-link">Book online</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer-heading">Visit</h2>
+        <address class="mt-4 space-y-2.5 text-sm not-italic text-shell/80">
+          <p>48 Burns Court<br>Sarasota, FL 34236</p>
+          <p><a href="tel:+19415550173" class="footer-link">(941) 555-0173</a></p>
+          <p><a href="mailto:hello@bloomhairspa.example" class="footer-link">hello@bloomhairspa.example</a></p>
+          <p><a href="contact.html" class="footer-link">Hours &amp; directions</a></p>
+        </address>
+      </div>
+      <div>
+        <h2 class="footer-heading">Notes from the salon</h2>
+        <p class="mt-4 text-sm text-shell/75">Seasonal offers and new-season color, about once a month. No spam, ever.</p>
+        <form class="mt-5" data-newsletter novalidate>
+          <label for="n-email" class="sr-only">Email address</label>
+          <div class="flex gap-2"><input id="n-email" name="email" type="email" placeholder="you@example.com" class="field-dark min-w-0 flex-1" autocomplete="email" required aria-describedby="n-email-error"><button type="submit" class="btn-light shrink-0">Sign up</button></div>
+          <p id="n-email-error" class="field-error on-dark" data-error="email"></p>
+          <p class="mt-2 text-sm text-blush" data-newsletter-success hidden>Thank you! Look out for a confirmation email; once you click the link, you're on the list for Notes from the salon.</p>
+        </form>
+      </div>
+    </div>
+    <div class="border-t border-shell/15">
+      <div class="container-x flex flex-col gap-3 py-6 text-xs text-shell/70 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Bloom Hair &amp; Spa. A fictional salon from a free Freeframe template.</p>
+        <ul class="flex gap-5">
+          <li><a href="#" class="footer-link">Instagram</a></li>
+          <li><a href="#" class="footer-link">Pinterest</a></li>
+          <li><a href="#" class="footer-link">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

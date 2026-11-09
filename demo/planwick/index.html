@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>A clearer way to what’s next — Planwick</title>
+    <meta
+      name="description"
+      content="Planwick brings roadmaps, priorities and release plans into one shared workspace for thoughtful product teams."
+    />
+    <meta name="theme-color" content="#1c2752" />
+    <meta name="color-scheme" content="light" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Planwick" />
+    <meta property="og:title" content="A clearer way to what’s next — Planwick" />
+    <meta
+      property="og:description"
+      content="Planwick brings roadmaps, priorities and release plans into one shared workspace for thoughtful product teams."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="index" class="flex min-h-screen flex-col">
+    <a
+      href="#main"
+      class="sr-only z-50 rounded-full bg-sun px-5 py-3 text-ink focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      >Skip to content</a
+    >
+    <header class="relative z-30 border-b border-line bg-paper">
+      <div class="wrap flex min-h-24 items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center gap-2.5"
+          ><svg class="size-9 shrink-0" viewBox="0 0 40 40" aria-hidden="true">
+            <rect width="40" height="40" rx="13" fill="#1c2752" />
+            <path
+              d="M12 29V11h9a7 7 0 0 1 0 14h-4"
+              fill="none"
+              stroke="#ffc65c"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+            <circle cx="21" cy="18" r="2" fill="#ffc65c" /></svg
+          ><span class="font-display text-4xl font-bold tracking-tight">planwick</span></a
+        >
+        <nav aria-label="Main" class="hidden lg:block">
+          <ul class="flex items-center">
+            <li><a href="product.html" class="nav-link">Product</a></li>
+            <li><a href="workspace.html" class="nav-link">Workspace</a></li>
+            <li><a href="use-cases.html" class="nav-link">Use cases</a></li>
+            <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li><a href="integrations.html" class="nav-link">Integrations</a></li>
+            <li><a href="resources.html" class="nav-link">Resources</a></li>
+          </ul>
+        </nav>
+        <a href="contact.html" class="btn hidden sm:inline-flex"
+          >Let’s make a plan
+          <svg
+            class="size-5 shrink-0"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path d="M4 12h16m-6-6 6 6-6 6" /></svg></a
+        ><button
+          id="menu-toggle"
+          type="button"
+          class="rounded-full border border-ink p-3 lg:hidden"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="size-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+      <nav id="mobile-menu" aria-label="Mobile" hidden class="wrap pb-6 lg:hidden">
+        <ul class="grid grid-cols-2 gap-2">
+          <li><a href="product.html" class="nav-link">Product</a></li>
+          <li><a href="workspace.html" class="nav-link">Workspace</a></li>
+          <li><a href="use-cases.html" class="nav-link">Use cases</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="integrations.html" class="nav-link">Integrations</a></li>
+          <li><a href="resources.html" class="nav-link">Resources</a></li>
+        </ul>
+        <a href="contact.html" class="btn mt-5 w-full"
+          >Let’s make a plan
+          <svg
+            class="size-5 shrink-0"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path d="M4 12h16m-6-6 6 6-6 6" /></svg
+        ></a>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+      <section class="bg-mist">
+        <div class="wrap grid gap-8 pt-12 pb-10 lg:grid-cols-[1fr_1.05fr] lg:items-center lg:gap-14 lg:py-16">
+          <div class="reveal">
+            <p class="eyebrow">A little clarity goes a long way</p>
+            <h1 class="mt-5 font-display text-[clamp(4.8rem,8vw,8.7rem)] font-bold leading-[.82] tracking-[-.055em]">
+              A clearer<br />way to<br />what’s next.
+            </h1>
+            <p class="mt-8 max-w-lg text-lg leading-relaxed text-muted">
+              Bring your ideas, priorities and release plans into one shared place. Planwick helps small teams make the
+              next good decision, together.
+            </p>
+            <div class="mt-7 flex flex-wrap gap-3">
+              <a href="workspace.html" class="btn"
+                >Make room for your plan
+                <svg
+                  class="size-5 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.7"
+                  aria-hidden="true"
+                >
+                  <path d="M4 12h16m-6-6 6 6-6 6" /></svg></a
+              ><a href="product.html" class="btn btn-outline">A closer look</a>
+            </div>
+            <p class="mt-5 text-sm text-muted">Thoughtful planning. No project-management gymnastics.</p>
+          </div>
+          <div class="reveal relative py-8">
+            <p class="absolute -top-1 right-3 z-10 rounded-full bg-rose px-5 py-2 text-sm font-medium">
+              A plan you can actually explain.
+            </p>
+            <figure
+              class="rounded-[2.25rem] border border-ink/15 bg-white p-3 pb-9 shadow-[0_20px_60px_#1c27521a] sm:p-6 sm:pb-10"
+              aria-label="Planwick roadmap: initiatives in Now, Next and Later with owners, priority scores and the next release"
+            >
+              <div class="mb-4 flex flex-wrap items-center justify-between gap-3 border-b border-line px-1 pb-4">
+                <span class="font-medium">Product roadmap</span
+                ><span class="flex flex-wrap gap-2 text-xs"
+                  ><span class="rounded-full bg-mist px-3 py-1">Product team</span
+                  ><span class="rounded-full bg-ink px-3 py-1 text-white">Sorted by score</span></span
+                >
+              </div>
+              <div class="grid grid-cols-3 gap-1.5 sm:gap-3">
+                <div class="min-w-0 rounded-2xl bg-mist p-1.5 sm:p-2.5">
+                  <p class="flex items-center justify-between px-1 pb-2 text-xs font-semibold">
+                    <span class="flex items-center gap-1.5"><span class="size-2 rounded-full bg-ink"></span>Now</span
+                    ><span class="text-muted">4</span>
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="rounded-xl border border-line bg-white p-2 shadow-sm sm:p-3 ring-2 ring-sun">
+                      <span class="block text-[13px] leading-tight font-semibold sm:text-sm">Unified search</span><span class="mt-1.5 inline-flex items-center gap-1 text-[11px] text-muted"><span class="size-1.5 rounded-full bg-ink"></span>In release</span>
+                      <span class="mt-2 flex items-center justify-between gap-1"
+                        ><span class="grid size-6 shrink-0 place-items-center rounded-full bg-sun text-[10px] font-semibold"
+                          >AB</span
+                        ><span class="rounded-full bg-mist px-1.5 py-0.5 text-[11px] font-semibold tabular-nums sm:px-2 sm:text-xs"
+                          >163.2</span
+                        ></span
+                      >
+                    </li>
+                    <li class="rounded-xl border border-line bg-white p-2 shadow-sm sm:p-3">
+                      <span class="block text-[13px] leading-tight font-semibold sm:text-sm">Help center</span><span class="mt-1.5 inline-flex items-center gap-1 text-[11px] text-muted"><span class="size-1.5 rounded-full bg-ink"></span>In release</span>
+                      <span class="mt-2 flex items-center justify-between gap-1"
+                        ><span class="grid size-6 shrink-0 place-items-center rounded-full bg-sun text-[10px] font-semibold"
+                          >AB</span
+                        ><span class="rounded-full bg-mist px-1.5 py-0.5 text-[11px] font-semibold tabular-nums sm:px-2 sm:text-xs"
+                          >133.0</span
+                        ></span
+                      >
+                    </li>
+                    <li class="rounded-xl border border-line bg-white p-2 shadow-sm sm:p-3">
+                      <span class="block text-[13px] leading-tight font-semibold sm:text-sm">Guided setup</span><span class="mt-1.5 inline-flex items-center gap-1 text-[11px] text-muted"><span class="size-1.5 rounded-full bg-ink"></span>In release</span>
+                      <span class="mt-2 flex items-center justify-between gap-1"
+                        ><span class="grid size-6 shrink-0 place-items-center rounded-full bg-rose text-[10px] font-semibold"
+                          >NM</span
+                        ><span class="rounded-full bg-mist px-1.5 py-0.5 text-[11px] font-semibold tabular-nums sm:px-2 sm:text-xs"
+                          >126.0</span
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="min-w-0 rounded-2xl bg-mist p-1.5 sm:p-2.5">
+                  <p class="flex items-center justify-between px-1 pb-2 text-xs font-semibold">
+                    <span class="flex items-center gap-1.5"><span class="size-2 rounded-full bg-ink/55"></span>Next</span
+                    ><span class="text-muted">6</span>
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="rounded-xl border border-line bg-white p-2 shadow-sm sm:p-3">
+                      <span class="block text-[13px] leading-tight font-semibold sm:text-sm">Shared templates</span><span class="mt-1.5 inline-flex items-center gap-1 text-[11px] text-muted"><span class="size-1.5 rounded-full bg-ink"></span>In release</span>
+                      <span class="mt-2 flex items-center justify-between gap-1"
+                        ><span class="grid size-6 shrink-0 place-items-center rounded-full bg-white border border-line text-[10px] font-semibold"
+                          >BT</span
+                        ><span class="rounded-full bg-mist px-1.5 py-0.5 text-[11px] font-semibold tabular-nums sm:px-2 sm:text-xs"
+                          >96.0</span
+                        ></span
+                      >
+                    </li>
+                    <li class="rounded-xl border border-line bg-white p-2 shadow-sm sm:p-3">
+                      <span class="block text-[13px] leading-tight font-semibold sm:text-sm">Renewal calendar</span>
+                      <span class="mt-2 flex items-center justify-between gap-1"
+                        ><span class="grid size-6 shrink-0 place-items-center rounded-full bg-sun text-[10px] font-semibold"
+                          >AB</span
+                        ><span class="rounded-full bg-mist px-1.5 py-0.5 text-[11px] font-semibold tabular-nums sm:px-2 sm:text-xs"
+                          >63.8</span
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="min-w-0 rounded-2xl bg-mist p-1.5 sm:p-2.5">
+                  <p class="flex items-center justify-between px-1 pb-2 text-xs font-semibold">
+                    <span class="flex items-center gap-1.5"><span class="size-2 rounded-full bg-ink/25"></span>Later</span
+                    ><span class="text-muted">6</span>
+                  </p>
+                  <ul class="space-y-2">
+                    <li class="rounded-xl border border-line bg-white p-2 shadow-sm sm:p-3">
+                      <span class="block text-[13px] leading-tight font-semibold sm:text-sm">Saved views</span>
+                      <span class="mt-2 flex items-center justify-between gap-1"
+                        ><span class="grid size-6 shrink-0 place-items-center rounded-full bg-white border border-line text-[10px] font-semibold"
+                          >BT</span
+                        ><span class="rounded-full bg-mist px-1.5 py-0.5 text-[11px] font-semibold tabular-nums sm:px-2 sm:text-xs"
+                          >101.3</span
+                        ></span
+                      >
+                    </li>
+                    <li class="rounded-xl border border-line bg-white p-2 shadow-sm sm:p-3">
+                      <span class="block text-[13px] leading-tight font-semibold sm:text-sm">Request intake</span>
+                      <span class="mt-2 flex items-center justify-between gap-1"
+                        ><span class="grid size-6 shrink-0 place-items-center rounded-full bg-sun text-[10px] font-semibold"
+                          >AB</span
+                        ><span class="rounded-full bg-mist px-1.5 py-0.5 text-[11px] font-semibold tabular-nums sm:px-2 sm:text-xs"
+                          >59.5</span
+                        ></span
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="mt-4 rounded-2xl border border-line p-3 sm:p-4">
+                <p class="flex flex-wrap items-baseline justify-between gap-2 text-sm">
+                  <span class="font-semibold">Next release</span
+                  ><span class="text-xs text-muted">6 initiatives · 23 effort points · 8 a week</span>
+                </p>
+                <div class="mt-3 grid grid-cols-3 gap-1.5 text-[11px] font-semibold">
+                  <span class="rounded-lg bg-ink px-2 py-1.5 text-white">Week 1 · 8</span
+                  ><span class="rounded-lg bg-ink px-2 py-1.5 text-white">Week 2 · 8</span
+                  ><span class="rounded-lg bg-sun px-2 py-1.5">Week 3 · 7</span>
+                </div>
+              </div>
+              <figcaption class="mt-4 flex flex-wrap justify-between gap-2 px-1 text-xs text-muted">
+                <span>7 of 16 initiatives shown</span><span>Next planning cycle <span data-next-cycle></span></span>
+              </figcaption>
+            </figure>
+            <div
+              class="relative -mt-4 ml-5 inline-flex items-center gap-3 rounded-2xl border border-ink/15 bg-sun px-5 py-4 shadow-sm"
+            >
+              <span class="grid size-8 shrink-0 place-items-center rounded-full bg-ink text-white"
+                ><svg
+                  viewBox="0 0 24 24"
+                  class="size-5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="m5 12 4 4 10-10" /></svg></span
+              ><span class="text-sm"
+                ><strong class="block font-semibold">We know what comes next.</strong>A good feeling to take into
+                Monday.</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="wrap flex flex-wrap items-center justify-between gap-5 border-t border-ink/15 py-6 text-sm">
+          <span>A practical home for product teams</span><span>From the first useful idea to the next release</span
+          ><a href="use-cases.html" class="text-link">Find your way of working</a>
+        </div>
+      </section>
+      <section class="border-b border-line bg-white py-12" aria-labelledby="customers-title">
+        <div class="wrap">
+          <h2 id="customers-title" class="text-center text-sm font-medium text-muted">
+            Product, engineering and operations teams planning with Planwick
+          </h2>
+          <ul class="mt-7 flex flex-wrap items-center justify-center gap-x-10 gap-y-5">
+            <li class="flex items-center gap-2 text-ink/80">
+              <svg class="size-6 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="3"/><path d="M12 7v10M7 12h10" stroke="currentColor" stroke-width="3"/></svg><span class="font-display text-3xl font-bold tracking-tight">Larkgrove Health</span>
+            </li>
+            <li class="flex items-center gap-2 text-ink/80">
+              <svg class="size-6 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18 12 5l9 13z" fill="currentColor"/></svg><span class="text-lg font-semibold tracking-[.3em]">STILLWELL</span>
+            </li>
+            <li class="flex items-center gap-2 text-ink/80">
+              <svg class="size-6 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2" fill="currentColor"/><rect x="13" y="13" width="8" height="8" rx="2" fill="currentColor"/></svg><span class="font-display text-3xl font-bold lowercase italic">cobblecreek</span>
+            </li>
+            <li class="flex items-center gap-2 text-ink/80">
+              <svg class="size-6 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20c0-9 7-16 16-16-1 9-7 16-16 16z" fill="currentColor"/></svg><span class="text-base font-semibold uppercase tracking-wider">Sourwood Learning</span>
+            </li>
+            <li class="flex items-center gap-2 text-ink/80">
+              <svg class="size-6 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 5 14h6l-1 8 8-12h-6z" fill="currentColor"/></svg><span class="font-display text-3xl font-bold">Oakspire</span>
+            </li>
+            <li class="flex items-center gap-2 text-ink/80">
+              <svg class="size-6 shrink-0" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 15c3-3 5-3 7 0s5 3 7 0 4-3 6 0M2 9c3-3 5-3 7 0s5 3 7 0 4-3 6 0" fill="none" stroke="currentColor" stroke-width="2.5"/></svg><span class="text-lg font-medium italic tracking-wide">Tidemarsh</span>
+            </li>
+          </ul>
+          <dl class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div class="flex flex-col border-t-2 border-ink pt-4">
+            <dt class="text-sm text-muted">product teams plan in Planwick every week</dt>
+            <dd class="order-first font-display text-6xl leading-none font-bold">1,900+</dd>
+          </div>
+          <div class="flex flex-col border-t-2 border-ink pt-4">
+            <dt class="text-sm text-muted">decisions recorded with their evidence last quarter</dt>
+            <dd class="order-first font-display text-6xl leading-none font-bold">41,000</dd>
+          </div>
+          <div class="flex flex-col border-t-2 border-ink pt-4">
+            <dt class="text-sm text-muted">median length of a weekly roadmap review</dt>
+            <dd class="order-first font-display text-6xl leading-none font-bold">25 min</dd>
+          </div>
+          <div class="flex flex-col border-t-2 border-ink pt-4">
+            <dt class="text-sm text-muted">of teams renew after their first year</dt>
+            <dd class="order-first font-display text-6xl leading-none font-bold">96%</dd>
+          </div>
+          </dl>
+        </div>
+      </section>
+      <section class="wrap py-16">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="eyebrow">Clear enough to move together</p>
+          <h2 class="mt-4 font-display text-6xl font-bold leading-[.9] tracking-tight">
+            Good plans make space.<br />They don’t add noise.
+          </h2>
+          <p class="mt-5 text-muted">
+            Less time translating between spreadsheets, chat threads and the thing somebody said in the last meeting.
+          </p>
+        </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-3" data-home-features></div>
+      </section>
+      <section class="bg-ink py-16 text-white">
+        <div class="wrap grid gap-10 md:grid-cols-2 md:items-center">
+          <figure class="rounded-[2rem] bg-white p-5 text-ink shadow-[0_20px_60px_#00000033] sm:p-7">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div>
+                <p class="eyebrow text-muted">Priority score</p>
+                <p class="mt-2 font-display text-4xl leading-none font-bold">Unified search</p>
+                <p class="mt-1 text-sm text-muted">Owner: Alton Bynum · Now</p>
+              </div>
+              <p class="rounded-2xl bg-sun px-4 py-2 font-display text-5xl leading-none font-bold tabular-nums">163.2</p>
+            </div>
+            <dl class="mt-5 text-sm"><div class="flex justify-between gap-4 border-b border-line py-2.5"><dt class="text-muted">Reach</dt><dd class="font-semibold">320 people a quarter</dd></div><div class="flex justify-between gap-4 border-b border-line py-2.5"><dt class="text-muted">Impact</dt><dd class="font-semibold">3 · major</dd></div><div class="flex justify-between gap-4 border-b border-line py-2.5"><dt class="text-muted">Confidence</dt><dd class="font-semibold">85%</dd></div><div class="flex justify-between gap-4 border-b border-line py-2.5"><dt class="text-muted">Effort</dt><dd class="font-semibold">5 points</dd></div></dl>
+            <p class="mt-3 rounded-xl bg-mist px-3 py-2 text-xs">320 × 3 × 85% ÷ 5 = 163.2</p>
+            <figcaption class="mt-5 text-sm font-medium">How it compares in Now and Next</figcaption>
+            <ul class="mt-3 space-y-3">
+                <li>
+                  <span class="flex justify-between text-xs"><span>Unified search</span><span class="font-semibold tabular-nums">163.2</span></span>
+                  <span class="mt-1 block h-2.5 overflow-hidden rounded-full bg-mist"><span class="block h-full rounded-full w-full bg-sun"></span></span>
+                </li>
+                <li>
+                  <span class="flex justify-between text-xs"><span>Help center</span><span class="font-semibold tabular-nums">133.0</span></span>
+                  <span class="mt-1 block h-2.5 overflow-hidden rounded-full bg-mist"><span class="block h-full rounded-full w-[81%] bg-ink/70"></span></span>
+                </li>
+                <li>
+                  <span class="flex justify-between text-xs"><span>Guided setup</span><span class="font-semibold tabular-nums">126.0</span></span>
+                  <span class="mt-1 block h-2.5 overflow-hidden rounded-full bg-mist"><span class="block h-full rounded-full w-[77%] bg-ink/70"></span></span>
+                </li>
+                <li>
+                  <span class="flex justify-between text-xs"><span>Shared templates</span><span class="font-semibold tabular-nums">96.0</span></span>
+                  <span class="mt-1 block h-2.5 overflow-hidden rounded-full bg-mist"><span class="block h-full rounded-full w-[59%] bg-ink/40"></span></span>
+                </li>
+            </ul>
+          </figure>
+          <div>
+            <p class="eyebrow text-sun">Make the trade-off visible</p>
+            <h2 class="mt-4 font-display text-6xl font-bold leading-[.9] tracking-tight">
+              A shared reason.<br />Not the loudest voice.
+            </h2>
+            <p class="mt-6 max-w-lg text-white/80">
+              Bring reach, impact, confidence and effort into the conversation. The score starts a better discussion;
+              your team still makes the call.
+            </p>
+            <a href="workspace.html#priorities" class="btn btn-sun mt-7"
+              >Try a priority conversation
+              <svg
+                class="size-5 shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                aria-hidden="true"
+              >
+                <path d="M4 12h16m-6-6 6 6-6 6" /></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+      <section class="bg-mist py-16" aria-labelledby="quotes-title">
+        <div class="wrap">
+          <p class="eyebrow">From teams who plan with us</p>
+          <h2 id="quotes-title" class="mt-3 max-w-2xl font-display text-5xl leading-[.95] font-bold">
+            Fewer planning meetings. Better ones.
+          </h2>
+          <div class="mt-9 grid gap-6 md:grid-cols-3">
+          <figure class="flex flex-col rounded-[2rem] border border-line bg-white p-7">
+            <blockquote class="flex-1 text-lg leading-relaxed">“Our quarterly planning used to be three meetings and a spreadsheet nobody trusted. Now the reason for every priority sits beside it, and the review takes half an hour.”</blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 border-t border-line pt-5">
+              <span class="grid size-11 shrink-0 place-items-center rounded-full border border-ink/20 bg-sun text-sm font-semibold"
+                >IF</span
+              ><span class="text-sm"><strong class="block font-semibold">Imelda Fenwright</strong><span class="text-muted">Head of Product, Larkgrove Health</span></span>
+            </figcaption>
+          </figure>
+          <figure class="flex flex-col rounded-[2rem] border border-line bg-white p-7">
+            <blockquote class="flex-1 text-lg leading-relaxed">“The capacity view stopped us promising dates we couldn’t keep. Engineering finally gets a say before the date leaves the room.”</blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 border-t border-line pt-5">
+              <span class="grid size-11 shrink-0 place-items-center rounded-full border border-ink/20 bg-rose text-sm font-semibold"
+                >RA</span
+              ><span class="text-sm"><strong class="block font-semibold">Rukmini Aster</strong><span class="text-muted">Engineering Manager, Stillwell Freight</span></span>
+            </figcaption>
+          </figure>
+          <figure class="flex flex-col rounded-[2rem] border border-line bg-white p-7">
+            <blockquote class="flex-1 text-lg leading-relaxed">“We run four teams from one roadmap now. People argue about the evidence instead of about whose idea it was.”</blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 border-t border-line pt-5">
+              <span class="grid size-11 shrink-0 place-items-center rounded-full border border-ink/20 bg-white text-sm font-semibold"
+                >SB</span
+              ><span class="text-sm"><strong class="block font-semibold">Stellan Brannagh</strong><span class="text-muted">Operations Lead, Sourwood Learning</span></span>
+            </figcaption>
+          </figure>
+          </div>
+          <a href="use-cases.html#stories" class="text-link mt-8">Read how three teams changed their planning</a>
+        </div>
+      </section>
+      <section class="wrap py-16">
+        <div class="flex flex-wrap items-end justify-between gap-5">
+          <div>
+            <p class="eyebrow">Your tools, working in context</p>
+            <h2 class="mt-3 font-display text-5xl font-bold leading-tight">Keep the useful connections.</h2>
+          </div>
+          <a href="integrations.html" class="text-link">Explore all twelve connections</a>
+        </div>
+        <div class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4" data-home-integrations></div>
+      </section>
+      <section class="wrap mt-12">
+        <div class="grid gap-7 rounded-[2rem] bg-sun p-8 md:grid-cols-[1.5fr_1fr] md:items-center md:p-12">
+          <div>
+            <p class="eyebrow">A plan worth sharing</p>
+            <h2 class="mt-3 font-display text-5xl font-bold leading-[.95]">Less chasing.<br />More moving together.</h2>
+          </div>
+          <div>
+            <p class="max-w-sm">
+              Bring a real planning question. We’ll help you find a practical starting point for your team.
+            </p>
+            <a href="contact.html" class="btn mt-5"
+              >Talk to Planwick
+              <svg
+                class="size-5 shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                aria-hidden="true"
+              >
+                <path d="M4 12h16m-6-6 6 6-6 6" /></svg
+            ></a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-16 bg-ink py-12 text-white">
+      <div class="wrap grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="font-display text-5xl font-bold tracking-tight">planwick</a>
+          <p class="mt-4 max-w-xs text-white/80">A little less noise.<br />A much clearer next step.</p>
+          <a href="workspace.html" class="btn btn-sun mt-6"
+            >Open your roadmap
+            <svg
+              class="size-5 shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              aria-hidden="true"
+            >
+              <path d="M4 12h16m-6-6 6 6-6 6" /></svg
+          ></a>
+        </div>
+        <div>
+          <h2 class="eyebrow text-sun">Make room for good work</h2>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a class="underline underline-offset-4" href="product.html">See the product</a></li>
+            <li><a class="underline underline-offset-4" href="pricing.html">Plans & pricing</a></li>
+            <li><a class="underline underline-offset-4" href="integrations.html">Bring your tools together</a></li>
+            <li><a class="underline underline-offset-4" href="resources.html">The planning library</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="eyebrow text-sun">Come say hello</h2>
+          <p class="mt-5 text-sm leading-relaxed">
+            The Courtyard, West Rosemary Street<br />Chapel Hill, North Carolina<br />Monday–Friday, 9 AM–5 PM
+          </p>
+          <a href="contact.html" class="mt-4 inline-block underline underline-offset-4">Contact the team</a>
+          <p class="mt-3 text-sm">hello@planwick.example<br />(919) 555-0186</p>
+        </div>
+      </div>
+      <div class="wrap mt-10 flex flex-wrap justify-between gap-3 border-t border-white/20 pt-5 text-xs text-white/75">
+        <p>© <span data-year></span> Planwick.</p>
+        <p>Planwick is a fictional business.</p>
+      </div>
+    </footer>
+    <p id="announcement" role="status" aria-live="polite" class="sr-only"></p>
+  </body>
+</html>

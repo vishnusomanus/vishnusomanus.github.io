@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Customer stories: SOC 2, HIPAA and ISO 27001 | Wardline</title>
+    <meta
+      name="description"
+      content="How a payments API, a virtual physical therapy provider and a hiring platform prepared for SOC 2, PCI DSS, HIPAA and ISO 27001 audits with Wardline."
+    />
+    <meta name="theme-color" content="#0b1a2c" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Wardline" />
+    <meta property="og:title" content="Customer stories: SOC 2, HIPAA and ISO 27001 | Wardline" />
+    <meta
+      property="og:description"
+      content="How a payments API, a virtual physical therapy provider and a hiring platform prepared for SOC 2, PCI DSS, HIPAA and ISO 27001 audits with Wardline."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@500;600;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;family=Roboto+Mono:wght@400;500&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="customers" class="flex min-h-screen flex-col">
+    <a
+      href="#main"
+      class="sr-only z-50 bg-ink px-4 py-3 text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      >Skip to content</a
+    >
+    <header class="sticky top-0 z-40">
+      <div class="bg-ink text-sm text-frost">
+        <div class="wrap flex min-h-9 items-center justify-between gap-4">
+          <a href="trust.html" class="inline-flex items-center gap-2 hover:text-white"
+            ><span class="pulse size-2 rounded-full bg-teal-bright" aria-hidden="true"></span>Trust center: every
+            Wardline control monitored hourly</a
+          >
+          <p class="hidden items-center gap-5 md:flex">
+            <a class="hover:text-white" href="assessment.html">Readiness assessment</a
+            ><a class="hover:text-white" href="tel:+18045550142">(804) 555-0142</a>
+          </p>
+        </div>
+      </div>
+      <div class="border-b border-line bg-card/95 backdrop-blur">
+        <div class="wrap flex min-h-16 items-center justify-between gap-4">
+          <a href="index.html" class="flex items-center gap-2.5" aria-label="Wardline home"
+            ><svg viewBox="0 0 32 32" class="size-8 shrink-0" aria-hidden="true">
+              <rect width="32" height="32" rx="6" fill="#0b1a2c" />
+              <path
+                d="M16 5.5 25 9v7c0 5.5-3.8 9.3-9 11-5.2-1.7-9-5.5-9-11V9Z"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+              <path d="M3.5 16.5h25" stroke="#5fd0d8" stroke-width="2.2" /></svg
+            ><span class="font-display text-[1.45rem] font-semibold tracking-tight">Wardline</span></a
+          >
+          <nav class="hidden lg:block" aria-label="Main">
+            <ul class="flex items-center gap-0.5">
+              <li><a class="nav-link" href="platform.html">Platform</a></li>
+              <li><a class="nav-link" href="frameworks.html">Frameworks</a></li>
+              <li><a class="nav-link" href="integrations.html">Integrations</a></li>
+              <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+              <li><a class="nav-link" href="customers.html" aria-current="page">Customers</a></li>
+              <li><a class="nav-link" href="trust.html">Trust center</a></li>
+            </ul>
+          </nav>
+          <div class="flex items-center gap-2">
+            <a href="contact.html" class="btn btn-sm hidden sm:inline-flex"
+              >Book a demo
+              <svg
+                viewBox="0 0 20 20"
+                class="size-4 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" /></svg
+            ></a>
+            <button
+              id="menu-toggle"
+              type="button"
+              class="grid size-11 place-items-center rounded border border-line-strong lg:hidden"
+              aria-label="Open menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                class="size-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                aria-hidden="true"
+              >
+                <path d="M4 7h16M4 12h16M4 17h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+        <nav
+          id="mobile-menu"
+          class="wrap max-h-[calc(100vh-6.5rem)] overflow-y-auto pb-5 lg:hidden"
+          aria-label="Mobile"
+          hidden
+        >
+          <ul class="grid">
+            <li><a class="nav-link border-b border-line py-3 text-base" href="platform.html">Platform</a></li>
+            <li><a class="nav-link border-b border-line py-3 text-base" href="frameworks.html">Frameworks</a></li>
+            <li><a class="nav-link border-b border-line py-3 text-base" href="integrations.html">Integrations</a></li>
+            <li><a class="nav-link border-b border-line py-3 text-base" href="pricing.html">Pricing</a></li>
+            <li>
+              <a class="nav-link border-b border-line py-3 text-base" href="customers.html" aria-current="page"
+                >Customers</a
+              >
+            </li>
+            <li><a class="nav-link border-b border-line py-3 text-base" href="trust.html">Trust center</a></li>
+            <li>
+              <a class="nav-link border-b border-line py-3 text-base" href="assessment.html">Readiness assessment</a>
+            </li>
+          </ul>
+          <a href="contact.html" class="btn mt-4 w-full"
+            >Book a demo
+            <svg
+              viewBox="0 0 20 20"
+              class="size-4 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" /></svg
+          ></a>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="columns border-b border-line bg-card">
+        <div class="wrap grid gap-8 py-14 lg:grid-cols-12 lg:py-20">
+          <div class="lg:col-span-7">
+            <p class="eyebrow">Customers</p>
+            <h1 class="mt-5 text-5xl leading-[1.05] font-semibold sm:text-6xl">Three teams, three first audits.</h1>
+          </div>
+          <div class="lg:col-span-5 lg:pt-14">
+            <p class="text-lg leading-relaxed text-slate">
+              Every number on this page is the customer's own before-and-after measurement. Their auditors made the
+              calls on their reports and certificates; Wardline helped them get ready.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap py-8" aria-label="Filter stories">
+        <form class="flex flex-wrap items-center justify-between gap-4" data-story-filter>
+          <fieldset>
+            <legend class="sr-only">Framework</legend>
+            <div class="flex flex-wrap gap-2" data-story-chips></div>
+          </fieldset>
+          <p class="text-sm text-slate-2" data-story-count aria-live="polite">Showing 3 stories</p>
+        </form>
+      </section>
+
+      <article
+        id="kelvara"
+        class="scroll-mt-28 border-t border-line"
+        data-story
+        data-frameworks="soc2 pci"
+        aria-labelledby="kelvara-heading"
+      >
+        <div class="wrap grid gap-12 py-16 lg:grid-cols-12">
+          <div class="lg:col-span-5">
+            <div class="flex items-center gap-3 text-ink">
+              <svg viewBox="0 0 28 28" class="size-10" aria-hidden="true">
+                <path d="M4 4h6v8l8-8h7L15 14l10 10h-7l-8-8v8H4Z" fill="currentColor" /></svg
+              ><span class="font-display text-3xl font-semibold">Kelvara</span>
+            </div>
+            <p class="mono-label mt-4 text-slate-2">Payments API · 140 employees</p>
+            <p class="mt-3 flex flex-wrap gap-2">
+              <span data-seal="soc2" data-size="44" class="inline-block size-11"></span
+              ><span data-seal="pci" data-size="44" class="inline-block size-11"></span>
+            </p>
+            <blockquote class="mt-8 border-l-2 border-teal pl-5">
+              <p class="font-display text-2xl leading-snug font-medium">
+                “Our auditors still did their job, and they were thorough. The difference was that every evidence
+                request already had an answer with a date and an owner.”
+              </p>
+              <footer class="mt-4 text-[0.97rem]">
+                <span class="font-semibold">Folasade Okwuosa</span>, Head of Security
+              </footer>
+            </blockquote>
+          </div>
+          <div class="min-w-0 lg:col-span-6 lg:col-start-7">
+            <h2 id="kelvara-heading" class="text-3xl leading-tight font-semibold">
+              A payments company that stopped dreading evidence requests
+            </h2>
+            <dl class="mt-6 space-y-5 text-lg leading-relaxed">
+              <div>
+                <dt class="mono-label text-teal">The challenge</dt>
+                <dd class="mt-1 text-slate">
+                  Kelvara's enterprise customers wanted a SOC 2 Type II report, and its card-processing partners needed
+                  PCI DSS evidence on a separate schedule. Two engineers spent most of every month collecting
+                  screenshots.
+                </dd>
+              </div>
+              <div>
+                <dt class="mono-label text-teal">What they did</dt>
+                <dd class="mt-1 text-slate">
+                  Kelvara connected its cloud accounts, identity provider and code host in the first week, then used
+                  cross-mapping to see that most of its PCI DSS work was already covered by SOC 2 controls. Failing
+                  checks went straight to engineering tickets.
+                </dd>
+              </div>
+              <div>
+                <dt class="mono-label text-teal">The outcome</dt>
+                <dd class="mt-1">
+                  Kelvara received its first SOC 2 Type II report from its CPA firm after a six-month observation
+                  period, alongside its PCI DSS assessment.
+                </dd>
+              </div>
+            </dl>
+            <div class="mt-8 grid gap-6 border-t border-line pt-6" data-story-charts="kelvara"></div>
+          </div>
+        </div>
+      </article>
+      <article
+        id="mendwell"
+        class="scroll-mt-28 border-t border-line bg-card"
+        data-story
+        data-frameworks="hipaa soc2"
+        aria-labelledby="mendwell-heading"
+      >
+        <div class="wrap grid gap-12 py-16 lg:grid-cols-12">
+          <div class="lg:col-span-5">
+            <div class="flex items-center gap-3 text-ink">
+              <svg viewBox="0 0 28 28" class="size-10" aria-hidden="true">
+                <circle cx="14" cy="14" r="11" fill="none" stroke="currentColor" stroke-width="2.5" />
+                <path d="M14 8v12M8 14h12" stroke="currentColor" stroke-width="2.5" /></svg
+              ><span class="font-display text-3xl font-semibold">Mendwell</span>
+            </div>
+            <p class="mono-label mt-4 text-slate-2">Virtual physical therapy · 85 employees</p>
+            <p class="mt-3 flex flex-wrap gap-2">
+              <span data-seal="hipaa" data-size="44" class="inline-block size-11"></span
+              ><span data-seal="soc2" data-size="44" class="inline-block size-11"></span>
+            </p>
+            <blockquote class="mt-8 border-l-2 border-teal pl-5">
+              <p class="font-display text-2xl leading-snug font-medium">
+                “We sell to health systems, and every one of them sends a questionnaire. Now we send a trust center link
+                and a business associate agreement the same afternoon.”
+              </p>
+              <footer class="mt-4 text-[0.97rem]">
+                <span class="font-semibold">Darnell Quarles</span>, Chief Technology Officer
+              </footer>
+            </blockquote>
+          </div>
+          <div class="min-w-0 lg:col-span-6 lg:col-start-7">
+            <h2 id="mendwell-heading" class="text-3xl leading-tight font-semibold">
+              Health system security reviews, answered the same week
+            </h2>
+            <dl class="mt-6 space-y-5 text-lg leading-relaxed">
+              <div>
+                <dt class="mono-label text-teal">The challenge</dt>
+                <dd class="mt-1 text-slate">
+                  Mendwell sells to hospital systems, and every deal came with a long security questionnaire and a
+                  business associate agreement to negotiate. Answers lived in old email threads.
+                </dd>
+              </div>
+              <div>
+                <dt class="mono-label text-teal">What they did</dt>
+                <dd class="mt-1 text-slate">
+                  Mendwell used Wardline's HIPAA controls to run its risk analysis, tracked business associate
+                  agreements for every vendor, and published a trust center so prospects could request documents
+                  themselves.
+                </dd>
+              </div>
+              <div>
+                <dt class="mono-label text-teal">The outcome</dt>
+                <dd class="mt-1">
+                  Mendwell completed a HIPAA risk analysis with an independent assessor and received a SOC 2 Type I
+                  report from its CPA firm.
+                </dd>
+              </div>
+            </dl>
+            <div class="mt-8 grid gap-6 border-t border-line pt-6" data-story-charts="mendwell"></div>
+          </div>
+        </div>
+      </article>
+      <article
+        id="hirebeam"
+        class="scroll-mt-28 border-t border-line"
+        data-story
+        data-frameworks="iso27001 gdpr soc2"
+        aria-labelledby="hirebeam-heading"
+      >
+        <div class="wrap grid gap-12 py-16 lg:grid-cols-12">
+          <div class="lg:col-span-5">
+            <div class="flex items-center gap-3 text-ink">
+              <svg viewBox="0 0 28 28" class="size-10" aria-hidden="true">
+                <path
+                  d="M3 22 14 4l11 18"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linejoin="round"
+                />
+                <path d="M9 22h10" stroke="currentColor" stroke-width="2.5" /></svg
+              ><span class="font-display text-3xl font-semibold">Hirebeam</span>
+            </div>
+            <p class="mono-label mt-4 text-slate-2">Hiring platform · 320 employees</p>
+            <p class="mt-3 flex flex-wrap gap-2">
+              <span data-seal="iso27001" data-size="44" class="inline-block size-11"></span
+              ><span data-seal="gdpr" data-size="44" class="inline-block size-11"></span
+              ><span data-seal="soc2" data-size="44" class="inline-block size-11"></span>
+            </p>
+            <blockquote class="mt-8 border-l-2 border-teal pl-5">
+              <p class="font-display text-2xl leading-snug font-medium">
+                “ISO 27001 made us write the management system down. Wardline is where it lives now, so the surveillance
+                audit felt like a normal week.”
+              </p>
+              <footer class="mt-4 text-[0.97rem]">
+                <span class="font-semibold">Valentina Ruelas</span>, Director of Security and IT
+              </footer>
+            </blockquote>
+          </div>
+          <div class="min-w-0 lg:col-span-6 lg:col-start-7">
+            <h2 id="hirebeam-heading" class="text-3xl leading-tight font-semibold">
+              An ISO 27001 management system that runs itself between audits
+            </h2>
+            <dl class="mt-6 space-y-5 text-lg leading-relaxed">
+              <div>
+                <dt class="mono-label text-teal">The challenge</dt>
+                <dd class="mt-1 text-slate">
+                  Hirebeam's European customers asked for ISO 27001 and evidence of GDPR processor obligations, while US
+                  customers still wanted SOC 2. Three frameworks meant three spreadsheets.
+                </dd>
+              </div>
+              <div>
+                <dt class="mono-label text-teal">What they did</dt>
+                <dd class="mt-1 text-slate">
+                  Hirebeam moved its ISMS, risk register and statement of applicability into Wardline, mapped them once
+                  to all three frameworks, and tracked a data processing agreement for every processor.
+                </dd>
+              </div>
+              <div>
+                <dt class="mono-label text-teal">The outcome</dt>
+                <dd class="mt-1">
+                  Hirebeam was certified to ISO 27001 by an accredited certification body with two minor
+                  nonconformities, both closed before the deadline.
+                </dd>
+              </div>
+            </dl>
+            <div class="mt-8 grid gap-6 border-t border-line pt-6" data-story-charts="hirebeam"></div>
+          </div>
+        </div>
+      </article>
+
+      <section class="border-t border-line bg-cloud" aria-labelledby="note-heading">
+        <div class="wrap grid gap-6 py-12 lg:grid-cols-12">
+          <h2 id="note-heading" class="text-2xl font-semibold lg:col-span-4">About these results</h2>
+          <p class="leading-relaxed text-slate lg:col-span-8">
+            Results depend on where you start, how much of your stack can be tested automatically and how your auditor
+            plans the engagement. Wardline doesn't issue reports or certificates and can't guarantee an audit outcome.
+          </p>
+        </div>
+      </section>
+
+      <section class="columns-ink bg-ink text-white" aria-labelledby="cta-heading">
+        <div class="wrap flex flex-wrap items-center justify-between gap-8 py-16">
+          <h2 id="cta-heading" class="max-w-xl text-4xl leading-tight font-semibold">
+            Where would your own story start?
+          </h2>
+          <div class="flex flex-wrap gap-3">
+            <a href="assessment.html" class="btn bg-white text-ink hover:bg-teal-soft!"
+              >Take the assessment
+              <svg
+                viewBox="0 0 20 20"
+                class="size-4 shrink-0"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" /></svg></a
+            ><a href="contact.html" class="btn border border-white/40 bg-transparent hover:bg-white/10!">Book a demo</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="columns-ink mt-auto bg-ink text-white">
+      <div class="wrap grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-12">
+        <div class="lg:col-span-4">
+          <a href="index.html" class="inline-flex items-center gap-2.5" aria-label="Wardline home"
+            ><svg viewBox="0 0 32 32" class="size-8 shrink-0" aria-hidden="true">
+              <rect width="32" height="32" rx="6" fill="#0b6f80" />
+              <path
+                d="M16 5.5 25 9v7c0 5.5-3.8 9.3-9 11-5.2-1.7-9-5.5-9-11V9Z"
+                fill="none"
+                stroke="#fff"
+                stroke-width="2"
+                stroke-linejoin="round"
+              />
+              <path d="M3.5 16.5h25" stroke="#0b1a2c" stroke-width="2.2" /></svg
+            ><span class="font-display text-[1.45rem] font-semibold">Wardline</span></a
+          >
+          <p class="mt-4 max-w-sm text-[0.97rem] leading-relaxed text-frost">
+            Compliance automation for growing companies. Wardline helps you prepare and stay ready; independent auditors
+            issue the reports and certificates.
+          </p>
+        </div>
+        <div class="lg:col-span-2">
+          <h2 class="mono-label text-teal-bright">Product</h2>
+          <ul class="mt-4 space-y-2.5 text-[0.97rem]">
+            <li><a class="hover:underline" href="platform.html">Platform tour</a></li>
+            <li><a class="hover:underline" href="integrations.html">Integrations</a></li>
+            <li><a class="hover:underline" href="pricing.html">Pricing</a></li>
+            <li><a class="hover:underline" href="assessment.html">Readiness assessment</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-2">
+          <h2 class="mono-label text-teal-bright">Frameworks</h2>
+          <ul class="mt-4 space-y-2.5 text-[0.97rem]">
+            <li><a class="hover:underline" href="frameworks.html?fw=soc2">SOC 2</a></li>
+            <li><a class="hover:underline" href="frameworks.html?fw=iso27001">ISO 27001</a></li>
+            <li><a class="hover:underline" href="frameworks.html?fw=hipaa">HIPAA</a></li>
+            <li><a class="hover:underline" href="frameworks.html?fw=gdpr">GDPR</a></li>
+            <li><a class="hover:underline" href="frameworks.html?fw=pci">PCI DSS</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-4">
+          <h2 class="mono-label text-teal-bright">Richmond office</h2>
+          <address class="mt-4 text-[0.97rem] leading-relaxed not-italic text-frost">
+            1520 E Cary St, Suite 600<br />Richmond, VA 23219
+          </address>
+          <p class="mt-3 text-[0.97rem]">
+            <a class="hover:underline" href="mailto:hello@wardline.example">hello@wardline.example</a><br /><a
+              class="hover:underline"
+              href="tel:+18045550142"
+              >(804) 555-0142</a
+            >
+          </p>
+          <p class="mt-3 text-sm text-frost" data-office-status>Mon–Fri, 8:30 a.m.–5:30 p.m. ET</p>
+          <p class="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-[0.97rem]">
+            <a class="hover:underline" href="customers.html">Customers</a
+            ><a class="hover:underline" href="trust.html">Trust center</a
+            ><a class="hover:underline" href="contact.html">Book a demo</a>
+          </p>
+        </div>
+      </div>
+      <div class="wrap flex flex-wrap justify-between gap-3 border-t border-white/15 py-6 text-sm text-frost">
+        <p>© <span data-year>2026</span> Wardline, Inc. Not legal advice. Wardline is a fictional company.</p>
+        <p>Wardline does not issue audit reports or certificates.</p>
+      </div>
+    </footer>
+    <p
+      id="notice"
+      class="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-md rounded bg-ink px-5 py-3.5 text-sm text-white shadow-xl"
+      role="status"
+      aria-live="polite"
+      hidden
+    ></p>
+  </body>
+</html>

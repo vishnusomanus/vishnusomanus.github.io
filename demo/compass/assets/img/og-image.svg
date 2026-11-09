@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#fbf8f3"/>
+  <g fill="none" stroke="#e4d8c5" stroke-width="1.5"><circle cx="930" cy="330" r="290"/><circle cx="930" cy="330" r="230" stroke-dasharray="3 9"/><path d="M930 20v620M620 330h620"/></g>
+  <path d="M760 630V380a170 170 0 0 1 340 0v250Z" fill="#efe7da" stroke="#cfbfa6" stroke-width="2"/>
+  <circle cx="960" cy="360" r="96" fill="#f0c464"/>
+  <path d="M930 260c-46 0-76 34-76 80 0 24 2 44 5 60 3 20 16 30 34 32h74c18-2 31-12 34-32 3-16 5-36 5-60 0-46-30-80-76-80Z" fill="#2a211f"/>
+  <path d="M912 400h36v62h-36Z" fill="#a8704f"/>
+  <path d="M790 630c4-70 24-120 70-142 20-10 44-16 70-16s50 6 70 16c46 22 66 72 70 142Z" fill="#2a3259"/>
+  <path d="M906 474 930 536l24-62c-8-2-16-3-24-3s-16 1-24 3Z" fill="#f5e3da"/>
+  <ellipse cx="930" cy="352" rx="43" ry="53" fill="#b67d5a"/>
+  <path d="M885 350c0-42 20-70 50-70 28 0 46 22 50 50-26-2-50-16-62-36-8 24-22 44-38 56Z" fill="#2a211f"/>
+  <circle cx="888" cy="372" r="4.5" fill="#f0c464"/><circle cx="972" cy="372" r="4.5" fill="#f0c464"/>
+  <g transform="translate(80 92)"><circle cx="22" cy="22" r="22" fill="#1f2544"/><path d="M22 6 25.5 22 22 38 18.5 22Z" fill="#fbf8f3"/><path d="M22 6 25.5 22h-7Z" fill="#f0c464"/></g>
+  <text x="140" y="124" font-family="'Source Serif 4', Georgia, serif" font-size="36" fill="#151a31">Bearing</text>
+  <text x="80" y="268" font-family="'Source Serif 4', Georgia, serif" font-size="74" fill="#151a31">You were great</text>
+  <text x="80" y="348" font-family="'Source Serif 4', Georgia, serif" font-size="74" fill="#151a31">at the work. Now</text>
+  <text x="80" y="428" font-family="'Source Serif 4', Georgia, serif" font-size="74" font-style="italic" fill="#434e7e">lead it.</text>
+  <text x="82" y="510" font-family="'Instrument Sans', sans-serif" font-size="24" fill="#685e51">Leadership coaching for new managers and founders</text>
+  <rect x="80" y="540" width="260" height="2" fill="#e6ab3d"/>
+</svg>

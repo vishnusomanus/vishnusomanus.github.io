@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prism — The research assistant that shows its work</title>
+  <meta name="description" content="Prism reads your team’s docs, tickets and the open web, then answers with sources you can check. For teams in the app, and for developers through one API.">
+  <meta name="theme-color" content="#05060a">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Prism">
+  <meta property="og:title" content="Prism — The research assistant that shows its work">
+  <meta property="og:description" content="Prism reads your team’s docs, tickets and the open web, then answers with sources you can check. For teams in the app, and for developers through one API.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="home" class="grain flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[80] rounded-full bg-fg px-5 py-3 text-sm font-medium text-ink-950 focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 border-b border-transparent">
+    <div class="container-x flex h-16 items-center justify-between gap-6">
+      <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Prism home">
+        <svg viewBox="0 0 32 32" class="h-7 w-7 shrink-0 transition-transform duration-500 group-hover:rotate-[-8deg]" aria-hidden="true"><path d="M16 3.5 28.5 26.5H16z" fill="#7cf2c8"/><path d="M16 3.5 3.5 26.5H16z" fill="#ff7eb3"/><path d="M16 3.5 16 26.5 9.75 26.5z" fill="#ffb86b" opacity=".9"/><path d="M16 3.5 22.25 26.5H16z" fill="#6fb6ff" opacity=".9"/><path d="M16 3.5 28.5 26.5h-25z" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.2" stroke-linejoin="round"/></svg>
+        <span class="text-[17px] font-semibold tracking-[-0.02em]">Prism</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1">
+          <li><a href="product.html" class="nav-link">Product</a></li>
+          <li><a href="developers.html" class="nav-link">Developers</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="changelog.html" class="nav-link">Changelog</a></li>
+          <li><a href="about.html" class="nav-link">Company</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="nav-link hidden sm:inline-flex">Talk to sales</a>
+        <a href="pricing.html" class="btn-primary hidden px-4 py-2 sm:inline-flex">Start free</a>
+        <button id="menu-toggle" type="button" class="grid h-10 w-10 place-items-center rounded-full border border-white/12 bg-white/[.03] text-fg lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-white/[.08] lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-8">
+        <ul>
+          <li><a href="product.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Product<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="developers.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Developers<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="pricing.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Pricing<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="changelog.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Changelog<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Company<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="contact.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Talk to sales<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+        </ul>
+        <a href="pricing.html" class="btn-primary btn-lg mt-6 w-full">Start free</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <!-- Hero + playground -->
+    <section class="relative overflow-hidden">
+      <div class="bg-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="aurora pointer-events-none absolute top-[24rem] left-1/2 h-[30rem] w-[72rem] max-w-[160%] -translate-x-1/2 opacity-80" aria-hidden="true"></div>
+      <div class="container-x relative pt-14 pb-24 sm:pt-20 lg:pb-32">
+        <div class="mx-auto max-w-4xl text-center">
+          <a href="changelog.html" class="reveal inline-flex max-w-full items-center gap-2.5 rounded-full border border-white/10 bg-white/[.04] py-1 pr-3.5 pl-1 text-left text-sm text-muted backdrop-blur transition hover:border-white/20 hover:text-fg">
+            <span class="shrink-0 rounded-full bg-fg px-2 py-0.5 font-mono text-[11px] font-medium text-ink-950">New</span>
+            <span class="truncate">Prism 2: 41% fewer unsupported claims</span>
+            <svg viewBox="0 0 20 20" class="h-3.5 w-3.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg>
+          </a>
+          <h1 class="h-display reveal reveal-d1 mt-7">Research that <span class="serif text-spectrum pr-1.5">shows</span> its work.</h1>
+          <p class="lead reveal reveal-d2 mx-auto mt-6 max-w-2xl">Prism reads your docs, tickets and the open web, then answers with sources you can check line by line. In the app for your team, or through one API.</p>
+          <div class="reveal reveal-d3 mt-9 flex flex-col justify-center gap-3 sm:flex-row">
+            <a href="pricing.html" class="btn-primary btn-lg">Start free
+              <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg>
+            </a>
+            <a href="developers.html" class="btn-ghost btn-lg">Read the API docs</a>
+          </div>
+        </div>
+
+        <div id="playground" class="glass reveal relative mx-auto mt-14 max-w-5xl overflow-hidden rounded-3xl text-left sm:mt-16">
+          <div class="flex flex-wrap items-center justify-between gap-3 border-b border-white/[.07] px-4 py-3 sm:px-5">
+            <div class="flex min-w-0 items-center gap-3">
+              <span class="flex gap-1.5" aria-hidden="true"><span class="h-2.5 w-2.5 rounded-full bg-white/15"></span><span class="h-2.5 w-2.5 rounded-full bg-white/15"></span><span class="h-2.5 w-2.5 rounded-full bg-white/15"></span></span>
+              <h2 class="text-sm font-medium">Playground</h2>
+              <span class="chip hidden normal-case sm:inline-flex">Workspace: Halcyon Health</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <label for="pg-model" class="text-xs text-subtle">Model</label>
+              <select id="pg-model" class="input w-auto rounded-lg py-1 pr-8 pl-2.5 font-mono text-xs">
+                <option value="prism-2">prism-2</option>
+                <option value="prism-2-flash">prism-2-flash</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+            <div class="min-w-0 border-b border-white/[.07] p-4 sm:p-6 lg:border-r lg:border-b-0">
+              <form id="pg-form" novalidate>
+                <label for="pg-prompt" class="font-mono text-[11px] font-medium tracking-[0.14em] text-subtle uppercase">Ask anything</label>
+                <div class="mt-2 rounded-2xl border border-white/10 bg-ink-850 p-3 transition focus-within:border-brand-400/60 focus-within:ring-4 focus-within:ring-brand-400/10">
+                  <textarea id="pg-prompt" rows="3" class="block w-full resize-none bg-transparent text-[15px] leading-relaxed text-fg placeholder:text-subtle focus:outline-none" placeholder="Ask about your docs, tickets or the web…" aria-describedby="pg-hint">What did customers say about onboarding in our Q3 support tickets?</textarea>
+                  <div class="mt-2 flex items-center justify-between gap-3">
+                    <p id="pg-hint" class="text-xs text-subtle"><kbd class="kbd">Ctrl</kbd> + <kbd class="kbd">Enter</kbd> to run</p>
+                    <button id="pg-run" type="submit" class="btn-primary px-4 py-2">
+                      <svg data-run-icon viewBox="0 0 20 20" class="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="M6 4.5v11a.75.75 0 0 0 1.14.64l9-5.5a.75.75 0 0 0 0-1.28l-9-5.5A.75.75 0 0 0 6 4.5z"/></svg>
+                      <svg data-stop-icon viewBox="0 0 20 20" class="hidden h-4 w-4" fill="currentColor" aria-hidden="true"><rect x="5" y="5" width="10" height="10" rx="2"/></svg>
+                      <span data-run-label>Run</span>
+                    </button>
+                  </div>
+                </div>
+              </form>
+              <h3 class="mt-6 font-mono text-[11px] font-medium tracking-[0.14em] text-subtle uppercase">Try an example</h3>
+              <ul class="mt-2 grid gap-2" id="pg-examples"></ul>
+              <h3 class="mt-6 font-mono text-[11px] font-medium tracking-[0.14em] text-subtle uppercase">Connected sources</h3>
+              <ul class="mt-2.5 flex flex-wrap gap-2 text-xs text-muted">
+                <li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-mint" aria-hidden="true"></span>Help desk</li>
+                <li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-sky" aria-hidden="true"></span>Team wiki</li>
+                <li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-rose" aria-hidden="true"></span>CRM</li>
+                <li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-amber" aria-hidden="true"></span>Call notes</li>
+                <li class="chip normal-case tracking-normal"><span class="h-1.5 w-1.5 rounded-full bg-ray-violet" aria-hidden="true"></span>Web</li>
+              </ul>
+            </div>
+
+            <div class="flex min-h-[26rem] min-w-0 flex-col p-4 sm:p-6">
+              <div class="flex items-center justify-between gap-3 font-mono text-xs">
+                <p id="pg-state" class="inline-flex items-center gap-2 text-muted"><span class="h-1.5 w-1.5 rounded-full bg-subtle" aria-hidden="true"></span>Ready</p>
+                <p id="pg-meta" class="text-subtle"></p>
+              </div>
+              <ol id="pg-sources" class="mt-4 grid gap-2 sm:grid-cols-2" aria-label="Sources"></ol>
+              <div id="pg-output" class="answer mt-5 flex-1 text-[15px] leading-relaxed text-[#d7dae5]" aria-live="polite" aria-busy="false">
+                <p class="text-subtle">Choose an example or press Run. The answer streams in with numbered sources, the same way it does in the app and the API.</p>
+              </div>
+              <p class="mt-6 flex items-center gap-2 border-t border-white/[.07] pt-4 text-xs text-subtle">
+                <svg viewBox="0 0 20 20" class="h-4 w-4 shrink-0 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2.5 3.5 5v4.5c0 4 2.8 7 6.5 8 3.7-1 6.5-4 6.5-8V5z"/><path d="m7 10 2 2 4-4"/></svg>
+                Demo answers are pre-written. In your workspace, Prism only reads what you have access to.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logos -->
+    <section aria-labelledby="logos-title" class="border-y border-white/[.06] bg-ink-950 py-12">
+      <div class="container-x">
+        <h2 id="logos-title" class="text-center text-sm text-subtle">Trusted by research, support and product teams at 4,200 companies</h2>
+      </div>
+      <div class="marquee mt-8 overflow-hidden">
+        <div class="marquee-track flex w-max">
+          <ul class="flex shrink-0 items-center gap-14 pr-14 text-muted">
+            <li><svg viewBox="0 0 150 32" class="h-7 w-auto" role="img" aria-label="Halcyon Health"><circle cx="15" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 17c4-4 7 4 10 0s6 4 10 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><text x="34" y="22" fill="currentColor" font-family="Geist, sans-serif" font-size="17" font-weight="600" letter-spacing="-.4">Halcyon</text></svg></li>
+            <li><svg viewBox="0 0 150 32" class="h-7 w-auto" role="img" aria-label="Ferrolabs"><path d="M15 4.5 25 10.2v11.6L15 27.5 5 21.8V10.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M15 10v12" stroke="currentColor" stroke-width="2"/><text x="34" y="22" fill="currentColor" font-family="Geist Mono, monospace" font-size="16" font-weight="500" letter-spacing="-.3">ferrolabs</text></svg></li>
+            <li><svg viewBox="0 0 150 32" class="h-7 w-auto" role="img" aria-label="Quillbank"><path d="M6 26 24 6M10 26l14-15M14 26l10-11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><text x="34" y="22" fill="currentColor" font-family="Instrument Serif, serif" font-size="22" font-style="italic">Quillbank</text></svg></li>
+            <li><svg viewBox="0 0 150 32" class="h-7 w-auto" role="img" aria-label="Arcwell"><path d="M4 24a11 11 0 0 1 22 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M9 24a6 6 0 0 1 12 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><text x="34" y="22" fill="currentColor" font-family="Geist, sans-serif" font-size="17" font-weight="700" letter-spacing=".8">ARCWELL</text></svg></li>
+            <li><svg viewBox="0 0 150 32" class="h-7 w-auto" role="img" aria-label="Tidepool"><circle cx="15" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="15" cy="16" r="6.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="15" cy="16" r="2" fill="currentColor"/><text x="34" y="22" fill="currentColor" font-family="Geist, sans-serif" font-size="17" font-weight="500" letter-spacing="-.6">tidepool</text></svg></li>
+            <li><svg viewBox="0 0 150 32" class="h-7 w-auto" role="img" aria-label="Lumenfold"><path d="M5 6h20v20H5z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 6l20 20" stroke="currentColor" stroke-width="2"/><text x="34" y="22" fill="currentColor" font-family="Geist, sans-serif" font-size="17" font-weight="600" letter-spacing="-.4">Lumenfold</text></svg></li>
+            <li><svg viewBox="0 0 150 32" class="h-7 w-auto" role="img" aria-label="Kestrel Bank"><path d="M4 22 15 9l11 13" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="m9 24 6-7 6 7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><text x="34" y="22" fill="currentColor" font-family="Geist, sans-serif" font-size="17" font-weight="600" letter-spacing="-.2">Kestrel</text></svg></li>
+            <li><svg viewBox="0 0 150 32" class="h-7 w-auto" role="img" aria-label="Oakline"><path d="M15 27V12M15 12c-7 0-10-5-9-9 6 0 9 4 9 9zm0 4c6 0 9-4 9-8-6 0-9 3-9 8z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><text x="34" y="22" fill="currentColor" font-family="Instrument Serif, serif" font-size="22">Oakline</text></svg></li>
+          </ul>
+          <ul class="flex shrink-0 items-center gap-14 pr-14 text-muted" aria-hidden="true" data-marquee-copy></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="container-x py-24 sm:py-32" aria-labelledby="features-title">
+      <div class="max-w-2xl">
+        <p class="eyebrow">Why teams switch</p>
+        <h2 id="features-title" class="h-section mt-4">Built for answers you can <span class="serif">defend</span> in a meeting.</h2>
+        <p class="lead mt-5">Most AI tools sound confident. Prism is built to be checkable: it cites, it respects permissions and it tells you when the sources don’t agree.</p>
+      </div>
+
+      <div class="mt-14 grid gap-4 lg:grid-cols-6">
+        <article class="card reveal relative overflow-hidden p-6 sm:p-8 lg:col-span-4">
+          <h3 class="text-lg font-medium">Every claim, cited to the line</h3>
+          <p class="mt-2 max-w-md text-muted">Numbered citations link to the exact passage, page or row. Hover to preview, click to open the source.</p>
+          <div class="relative mt-8 rounded-2xl border border-white/[.07] bg-ink-950/70 p-5 text-[15px] leading-relaxed text-[#d7dae5]" aria-hidden="true">
+            <p>Churn among annual plans fell to <span class="rounded bg-brand-400/15 px-1 text-brand-200">3.1% in September</span><span class="cite">2</span>, the lowest since the pricing change in March<span class="cite">4</span>. Most of the drop came from teams over 50 seats.</p>
+            <div class="relative mt-4 rounded-xl border border-white/10 bg-ink-800 p-4 shadow-2xl shadow-black/60 sm:ml-56 sm:w-80">
+              <span class="absolute -top-1.5 left-8 hidden h-3 w-3 rotate-45 border-t border-l border-white/10 bg-ink-800 sm:block"></span>
+              <p class="flex items-center gap-2 font-mono text-[11px] text-subtle"><span class="grid h-5 w-5 place-items-center rounded bg-ray-sky/20 text-[10px] text-ray-sky">2</span>retention_q3.xlsx · Sheet “Monthly”</p>
+              <p class="mt-2 text-sm text-muted">Row 9: September — Annual — <span class="text-fg">3.1%</span> (Aug: 3.9%)</p>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal reveal-d1 relative overflow-hidden p-6 sm:p-8 lg:col-span-2">
+          <h3 class="text-lg font-medium">Permission-aware</h3>
+          <p class="mt-2 text-muted">Prism inherits access from each source. If you can’t open a file, it can’t quote it to you.</p>
+          <ul class="mt-7 grid gap-2 text-sm" aria-hidden="true">
+            <li class="flex items-center justify-between rounded-xl border border-white/[.07] bg-ink-950/60 px-3.5 py-2.5"><span class="text-fg">Product specs</span><span class="font-mono text-xs text-brand-300">read</span></li>
+            <li class="flex items-center justify-between rounded-xl border border-white/[.07] bg-ink-950/60 px-3.5 py-2.5"><span class="text-fg">Support tickets</span><span class="font-mono text-xs text-brand-300">read</span></li>
+            <li class="flex items-center justify-between rounded-xl border border-dashed border-white/10 px-3.5 py-2.5"><span class="text-subtle">Board minutes</span><svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4.5" y="9" width="11" height="8" rx="2"/><path d="M7 9V6.5a3 3 0 0 1 6 0V9"/></svg></li>
+          </ul>
+        </article>
+
+        <article class="card reveal relative overflow-hidden p-6 sm:p-8 lg:col-span-2">
+          <h3 class="text-lg font-medium">A million tokens of context</h3>
+          <p class="mt-2 text-muted">Drop in a whole data room. Prism 2 reads about 2,500 pages in one pass, no chunking strategy needed.</p>
+          <div class="mt-7" aria-hidden="true">
+            <div class="flex h-2.5 overflow-hidden rounded-full bg-ink-700">
+              <span class="w-[22%] bg-ray-rose"></span><span class="w-[18%] bg-ray-amber"></span><span class="w-[14%] bg-ray-lemon"></span><span class="w-[20%] bg-ray-mint"></span><span class="w-[12%] bg-ray-sky"></span>
+            </div>
+            <p class="mt-3 flex justify-between font-mono text-xs text-subtle"><span>860k used</span><span>1,000,000</span></p>
+          </div>
+        </article>
+
+        <article class="card reveal reveal-d1 relative overflow-hidden p-6 sm:p-8 lg:col-span-2">
+          <h3 class="text-lg font-medium">40+ connectors</h3>
+          <p class="mt-2 text-muted">Drives, wikis, help desks, CRMs, repos and warehouses. Synced every few minutes.</p>
+          <div class="mt-7 grid grid-cols-6 gap-2" aria-hidden="true">
+            <span class="grid aspect-square place-items-center rounded-lg border border-white/[.07] bg-ink-950/60 text-ray-mint"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6.5h5l1.5 2H17v7H3z" stroke-linejoin="round"/></svg></span>
+            <span class="grid aspect-square place-items-center rounded-lg border border-white/[.07] bg-ink-950/60 text-ray-sky"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 5h12v8H9l-4 3v-3H4z" stroke-linejoin="round"/></svg></span>
+            <span class="grid aspect-square place-items-center rounded-lg border border-white/[.07] bg-ink-950/60 text-ray-rose"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="10" cy="5.5" rx="6" ry="2.5"/><path d="M4 5.5v9c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5v-9M4 10c0 1.4 2.7 2.5 6 2.5s6-1.1 6-2.5"/></svg></span>
+            <span class="grid aspect-square place-items-center rounded-lg border border-white/[.07] bg-ink-950/60 text-ray-amber"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="6" cy="5" r="2"/><circle cx="6" cy="15" r="2"/><circle cx="14" cy="8" r="2"/><path d="M6 7v6M14 10c0 3-8 1-8 3"/></svg></span>
+            <span class="grid aspect-square place-items-center rounded-lg border border-white/[.07] bg-ink-950/60 text-ray-violet"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="3" y="4.5" width="14" height="11" rx="1.5"/><path d="m3.5 5.5 6.5 5 6.5-5"/></svg></span>
+            <span class="grid aspect-square place-items-center rounded-lg border border-dashed border-white/15 font-mono text-[10px] text-subtle">+35</span>
+          </div>
+        </article>
+
+        <article class="card reveal reveal-d2 relative overflow-hidden p-6 sm:p-8 lg:col-span-2">
+          <h3 class="text-lg font-medium">Briefs that write themselves</h3>
+          <p class="mt-2 text-muted">Schedule a question. Prism re-runs it, notes what changed and posts the brief to your team.</p>
+          <div class="mt-7 rounded-xl border border-white/[.07] bg-ink-950/60 p-3.5 text-sm" aria-hidden="true">
+            <p class="flex items-center justify-between"><span class="text-fg">Competitor pricing watch</span><span class="chip py-0.5 normal-case tracking-normal text-brand-300">Active</span></p>
+            <p class="mt-1.5 font-mono text-xs text-subtle">Mondays 8:00 AM · 3 changes found</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how" class="relative border-y border-white/[.06] bg-ink-900/40 py-24 sm:py-32" aria-labelledby="how-title">
+      <div class="container-x">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="eyebrow">How it works</p>
+          <h2 id="how-title" class="h-section mt-4">From question to cited answer in about two seconds.</h2>
+        </div>
+        <div class="relative mt-16">
+        <div class="pointer-events-none absolute top-6 right-[16%] left-[16%] hidden h-px opacity-50 md:block" style="background: var(--spectrum)" aria-hidden="true"></div>
+        <ol class="relative grid gap-12 md:grid-cols-3 md:gap-6">
+          <li class="reveal relative text-center">
+            <span class="relative mx-auto grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-ink-850 font-mono text-sm text-ray-rose shadow-[0_0_30px_-6px_rgba(255,126,179,.6)]">01</span>
+            <h3 class="mt-6 text-lg font-medium">Connect your sources</h3>
+            <p class="mx-auto mt-2 max-w-xs text-muted">Sign in to your drive, wiki, help desk or CRM. Prism indexes in minutes and keeps every permission.</p>
+          </li>
+          <li class="reveal reveal-d1 relative text-center">
+            <span class="relative mx-auto grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-ink-850 font-mono text-sm text-ray-mint shadow-[0_0_30px_-6px_rgba(124,242,200,.6)]">02</span>
+            <h3 class="mt-6 text-lg font-medium">Ask in plain language</h3>
+            <p class="mx-auto mt-2 max-w-xs text-muted">Prism plans the search, reads the relevant passages across every source and writes a draft.</p>
+          </li>
+          <li class="reveal reveal-d2 relative text-center">
+            <span class="relative mx-auto grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-ink-850 font-mono text-sm text-ray-sky shadow-[0_0_30px_-6px_rgba(111,182,255,.6)]">03</span>
+            <h3 class="mt-6 text-lg font-medium">Check the receipts</h3>
+            <p class="mx-auto mt-2 max-w-xs text-muted">Each claim carries a citation. Claims Prism can’t support are flagged, not smoothed over.</p>
+          </li>
+        </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benchmarks -->
+    <section id="benchmarks" class="container-x py-24 sm:py-32" aria-labelledby="bench-title">
+      <div class="grid items-start gap-14 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+        <div class="lg:sticky lg:top-28">
+          <p class="eyebrow">Benchmarks</p>
+          <h2 id="bench-title" class="h-section mt-4">Fewer made-up facts. <span class="serif">Measurably.</span></h2>
+          <p class="lead mt-5">We test every release on three public research benchmarks and publish the harness. Higher is better; each score is the share of answers that are both correct and fully supported by their citations.</p>
+          <dl class="mt-10 grid grid-cols-2 gap-6 border-t border-white/[.07] pt-8">
+            <div>
+              <dt class="text-sm text-subtle">Unsupported claims vs Prism 1.5</dt>
+              <dd class="mt-1 text-4xl font-medium tracking-tight">−41%</dd>
+            </div>
+            <div>
+              <dt class="text-sm text-subtle">Median time to first token</dt>
+              <dd class="mt-1 text-4xl font-medium tracking-tight">380<span class="text-xl text-muted"> ms</span></dd>
+            </div>
+          </dl>
+        </div>
+        <figure class="card reveal min-w-0 p-5 sm:p-8">
+          <figcaption class="flex flex-wrap items-center justify-between gap-4">
+            <span class="text-sm font-medium">Supported-answer rate, %</span>
+            <span id="bench-legend" class="flex flex-wrap gap-x-4 gap-y-2 text-xs text-muted"></span>
+          </figcaption>
+          <div id="bench-chart" class="mt-6"></div>
+          <details class="group mt-6 border-t border-white/[.07] pt-4 text-sm">
+            <summary class="inline-flex items-center gap-2 text-muted hover:text-fg">
+              <svg viewBox="0 0 20 20" class="h-4 w-4 transition group-open:rotate-90" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 5 5 5-5 5"/></svg>
+              View as a table
+            </summary>
+            <div class="relative mt-4 overflow-x-auto" id="bench-table"></div>
+          </details>
+          <p class="mt-4 text-xs text-subtle">Competitor models anonymized. Evaluated October 2026, temperature 0, same retrieval set for every model.</p>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="border-t border-white/[.06] py-24 sm:py-32" aria-labelledby="quotes-title">
+      <div class="container-x">
+        <div class="max-w-2xl">
+          <p class="eyebrow">Customers</p>
+          <h2 id="quotes-title" class="h-section mt-4">Teams that stopped double-checking everything.</h2>
+        </div>
+        <div class="mt-14 grid gap-4 md:grid-cols-3">
+          <figure class="card reveal flex flex-col p-7">
+            <blockquote class="flex-1 text-[17px] leading-relaxed text-fg">“Our support leads used to spend Friday afternoons reading tickets to write the weekly summary. Prism drafts it Monday at eight, with links, and they spend twenty minutes editing.”</blockquote>
+            <figcaption class="mt-8 flex items-center gap-3">
+              <svg viewBox="0 0 96 96" class="h-10 w-10 shrink-0 rounded-full" aria-hidden="true"><defs><linearGradient id="av1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(330 45% 34%)"/><stop offset="1" stop-color="hsl(20 50% 16%)"/></linearGradient></defs><rect width="96" height="96" fill="url(#av1)"/><circle cx="48" cy="42" r="16" fill="#eef0f6" opacity=".82"/><path d="M29 36c-1-15 8-23 19-23 12 0 20 9 19 23-3-9-9-12-19-12s-16 3-19 12z" fill="#0a0c12" opacity=".7"/><path d="M18 96c3-19 15-30 30-30s27 11 30 30z" fill="#eef0f6" opacity=".72"/></svg>
+              <span class="text-sm"><span class="block font-medium">Amara Okafor</span><span class="text-subtle">Head of Support, Halcyon Health</span></span>
+            </figcaption>
+          </figure>
+          <figure class="card reveal reveal-d1 flex flex-col p-7">
+            <blockquote class="flex-1 text-[17px] leading-relaxed text-fg">“We moved our in-app help search to the Prism API in a week. Deflection went from 22% to 41%, and legal signed off because every answer links to the policy it came from.”</blockquote>
+            <figcaption class="mt-8 flex items-center gap-3">
+              <svg viewBox="0 0 96 96" class="h-10 w-10 shrink-0 rounded-full" aria-hidden="true"><defs><linearGradient id="av2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(160 45% 34%)"/><stop offset="1" stop-color="hsl(200 50% 16%)"/></linearGradient></defs><rect width="96" height="96" fill="url(#av2)"/><circle cx="48" cy="42" r="16" fill="#eef0f6" opacity=".82"/><path d="M30 36c1-12 8-18 18-18 11 0 17 6 18 18 0 8 2 16 4 22-6-4-6-16-8-22-2 0-10-6-14-6-6 4-12 6-18 6z" fill="#0a0c12" opacity=".7"/><path d="M18 96c3-19 15-30 30-30s27 11 30 30z" fill="#eef0f6" opacity=".72"/></svg>
+              <span class="text-sm"><span class="block font-medium">Tomás Rivera</span><span class="text-subtle">Staff Engineer, Ferrolabs</span></span>
+            </figcaption>
+          </figure>
+          <figure class="card reveal reveal-d2 flex flex-col p-7">
+            <blockquote class="flex-1 text-[17px] leading-relaxed text-fg">“The security review took one call. Zero retention, SCIM and audit logs were already there. That never happens with AI vendors.”</blockquote>
+            <figcaption class="mt-8 flex items-center gap-3">
+              <svg viewBox="0 0 96 96" class="h-10 w-10 shrink-0 rounded-full" aria-hidden="true"><defs><linearGradient id="av3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="hsl(220 45% 34%)"/><stop offset="1" stop-color="hsl(270 50% 16%)"/></linearGradient></defs><rect width="96" height="96" fill="url(#av3)"/><circle cx="48" cy="42" r="16" fill="#eef0f6" opacity=".82"/><path d="M31 30c2-10 9-15 17-15s15 5 17 15c-5-3-11-4-17-4s-12 1-17 4z" fill="#0a0c12" opacity=".6"/><path d="M18 96c3-19 15-30 30-30s27 11 30 30z" fill="#eef0f6" opacity=".72"/></svg>
+              <span class="text-sm"><span class="block font-medium">Priya Raman</span><span class="text-subtle">CISO, Kestrel Bank</span></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="container-x pb-24 sm:pb-32">
+      <div class="glass reveal relative isolate overflow-hidden rounded-3xl px-6 py-14 sm:px-12 sm:py-20">
+        <img src="assets/img/prism-beam.svg" alt="" width="800" height="400" class="pointer-events-none absolute top-1/2 right-[-14rem] -z-10 hidden w-[52rem] max-w-none -translate-y-1/2 opacity-90 md:block">
+        <div class="max-w-xl">
+          <h2 class="h-section">Give your team a research assistant it can <span class="serif text-spectrum pr-1">trust</span>.</h2>
+          <p class="lead mt-5">Free for individuals. Team plans start at $20 per seat with a 14-day trial.</p>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="pricing.html" class="btn-primary btn-lg">Start free</a>
+            <a href="contact.html" class="btn-ghost btn-lg">Talk to sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="relative mt-auto border-t border-white/[.07] bg-ink-950">
+    <div class="container-x grid gap-12 py-16 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="inline-flex items-center gap-2.5" aria-label="Prism home">
+          <svg viewBox="0 0 32 32" class="h-7 w-7 shrink-0" aria-hidden="true"><path d="M16 3.5 28.5 26.5H16z" fill="#7cf2c8"/><path d="M16 3.5 3.5 26.5H16z" fill="#ff7eb3"/><path d="M16 3.5 16 26.5 9.75 26.5z" fill="#ffb86b" opacity=".9"/><path d="M16 3.5 22.25 26.5H16z" fill="#6fb6ff" opacity=".9"/><path d="M16 3.5 28.5 26.5h-25z" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.2" stroke-linejoin="round"/></svg>
+          <span class="text-[17px] font-semibold tracking-[-0.02em]">Prism</span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-muted">The research assistant that shows its work. Made by Prism Labs in San Jose and Salt Lake City.</p>
+        <p class="mt-6 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[.03] px-3 py-1.5 text-xs text-muted"><span class="pulse-dot h-2 w-2 rounded-full bg-brand-400 text-brand-400" aria-hidden="true"></span>All systems normal</p>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-5">
+      <nav aria-label="Product">
+        <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">Product</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="product.html" class="text-muted transition hover:text-fg">Overview</a></li>
+          <li><a href="product.html#integrations" class="text-muted transition hover:text-fg">Integrations</a></li>
+          <li><a href="product.html#security" class="text-muted transition hover:text-fg">Security</a></li>
+          <li><a href="pricing.html" class="text-muted transition hover:text-fg">Pricing</a></li>
+          <li><a href="changelog.html" class="text-muted transition hover:text-fg">Changelog</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Developers">
+        <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">Developers</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="developers.html" class="text-muted transition hover:text-fg">API overview</a></li>
+          <li><a href="developers.html#quickstart" class="text-muted transition hover:text-fg">Quickstart</a></li>
+          <li><a href="developers.html#endpoints" class="text-muted transition hover:text-fg">Endpoints</a></li>
+          <li><a href="developers.html#sdks" class="text-muted transition hover:text-fg">SDKs</a></li>
+          <li><a href="developers.html#rate-limits" class="text-muted transition hover:text-fg">Rate limits</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">Company</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="about.html" class="text-muted transition hover:text-fg">About</a></li>
+          <li><a href="about.html#careers" class="text-muted transition hover:text-fg">Careers</a></li>
+          <li><a href="contact.html" class="text-muted transition hover:text-fg">Talk to sales</a></li>
+          <li><a href="pricing.html#faq" class="text-muted transition hover:text-fg">FAQ</a></li>
+        </ul>
+      </nav>
+      </div>
+      <div class="lg:col-span-3">
+        <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">Release notes by email</h2>
+        <p class="mt-4 text-sm text-muted">One email a month with everything we shipped. No marketing.</p>
+        <form data-form="newsletter" class="mt-4" novalidate>
+          <label for="footer-email" class="sr-only">Email address</label>
+          <div class="flex gap-2">
+            <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@company.example" class="input py-2 text-sm">
+            <button type="submit" class="btn-ghost shrink-0 px-4 py-2">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="divider">
+      <div class="container-x flex flex-col gap-2 py-6 text-xs text-subtle sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Prism Labs, Inc. Prism is a fictional product.</p>
+        <p>Website template by Freeframe.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

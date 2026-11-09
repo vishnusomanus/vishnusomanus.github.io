@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Draw Anything on iPad — Marnie Draws</title>
+  <meta name="description" content="From blank canvas to finished drawings you are proud of, in five friendly modules. Marnie’s flagship course for beginners.">
+  <meta name="theme-color" content="#fffefa">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Marnie Draws">
+  <meta property="og:title" content="Draw Anything on iPad — Marnie Draws">
+  <meta property="og:description" content="From blank canvas to finished drawings you are proud of, in five friendly modules. Marnie’s flagship course for beginners.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;family=Gochi+Hand&amp;family=Lilita+One&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="font-sans text-ink antialiased" data-page="course">
+  <a href="#main" class="sr-only z-[70] rounded-full bg-ink px-4 py-2 text-sm font-bold text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+
+  <header id="site-header" class="sticky top-0 z-50 border-b-[2.5px] border-transparent bg-paper/95 backdrop-blur transition-colors [&.is-scrolled]:border-ink">
+    <div class="wrap flex h-[4.5rem] items-center gap-3">
+      <a href="index.html" class="flex items-center gap-2 rounded-full" aria-label="Marnie Draws, home">
+        <svg class="size-10 shrink-0" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#ffd84a" stroke="#1d1626" stroke-width="2.5"/><path d="M11 25c3-6 6-9 9-4s6 2 9-6" fill="none" stroke="#1d1626" stroke-width="3" stroke-linecap="round"/><path d="m26 8 6 6-3 3-6-6Z" fill="#ff6fae" stroke="#1d1626" stroke-width="2" stroke-linejoin="round"/></svg><span class="font-display text-[1.65rem] leading-none tracking-wide">marnie&#8288;<span class="text-pink-ink">draws</span></span>
+      </a>
+      <nav aria-label="Main" class="ml-4 hidden lg:block">
+        <ul class="flex items-center gap-0.5"><li><a href="courses.html" class="nav-link" aria-current="page">Courses</a></li><li><a href="workshops.html" class="nav-link">Workshops</a></li><li><a href="resources.html" class="nav-link">Freebies</a></li><li><a href="gallery.html" class="nav-link">Gallery</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+      </nav>
+      <div class="ml-auto flex items-center gap-2">
+        <a href="courses.html?saved=1" class="relative grid size-11 place-items-center rounded-full border-2 border-ink bg-white transition hover:bg-pink-soft" data-saved-link aria-label="Saved courses">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7.5-4.6-9.2-9.4C1.6 7.2 3.9 4 7.2 4c2 0 3.6 1.1 4.8 2.8C13.2 5.1 14.8 4 16.8 4c3.3 0 5.6 3.2 4.4 6.6C19.5 15.4 12 20 12 20Z"/></svg>
+          <span class="absolute -top-1.5 -right-1.5 grid h-5 min-w-5 place-items-center rounded-full border-2 border-ink bg-pink px-1 text-[11px] leading-none font-bold" data-saved-count hidden>0</span>
+        </a>
+        <a href="newsletter.html" class="btn btn-pink hidden sm:inline-flex">Get the newsletter</a>
+        <button type="button" id="menu-button" class="grid size-11 place-items-center rounded-full border-2 border-ink bg-white lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span data-icon-open><svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7c5-1 11 1 16 0M4 12.5c6 1 10-1 16 0M4 18c5-1 11 1 16 0"/></svg></span><span data-icon-close class="hidden"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" aria-hidden="true"><path d="M6 18 18 6M6 6l12 12"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="border-t-[2.5px] border-ink bg-paper lg:hidden" hidden>
+      <nav aria-label="Mobile" class="wrap py-4">
+        <ul class="grid gap-1"><li><a href="courses.html" class="mnav-link" aria-current="page">Courses</a></li><li><a href="workshops.html" class="mnav-link">Workshops</a></li><li><a href="resources.html" class="mnav-link">Freebies</a></li><li><a href="gallery.html" class="mnav-link">Gallery</a></li><li><a href="about.html" class="mnav-link">About</a></li><li><a href="contact.html" class="mnav-link">Contact</a></li><li><a href="newsletter.html" class="mnav-link">Newsletter</a></li></ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div data-course-main>
+    <section class="wrap pt-10 pb-12 sm:pt-14">
+      <nav aria-label="Breadcrumb" class="text-sm font-semibold"><ol class="flex flex-wrap gap-2"><li><a href="courses.html" class="underline underline-offset-4 hover:text-pink-ink">Courses</a></li><li aria-hidden="true">/</li><li aria-current="page" data-c-name>Draw Anything on iPad</li></ol></nav>
+      <div class="mt-6 grid items-center gap-12 lg:grid-cols-[1.25fr_1fr]">
+        <div>
+          <p class="flex flex-wrap gap-2" data-c-tags></p>
+          <h1 class="mt-4 font-display text-[clamp(2.6rem,5.8vw,4.6rem)] leading-[1]" data-c-title>Draw Anything on iPad</h1>
+          <p class="mt-4 max-w-xl text-xl" data-c-tagline>From blank canvas to finished drawings you are proud of, in five friendly modules.</p>
+          <p class="mt-4 flex items-center gap-2 font-semibold"><span class="flex text-orange" aria-hidden="true"><svg class="size-5" viewBox="0 0 20 20" fill="currentColor" stroke="#1d1626" stroke-width="1.2"><path d="m10 1.8 2.5 5.2 5.6.8-4 4 1 5.6L10 14.8l-5.1 2.6 1-5.6-4-4 5.6-.8Z"/></svg></span><span data-c-rating>4.9 from 1,480 reviews</span></p>
+          <ul class="mt-6 flex flex-wrap gap-2.5" data-c-stats></ul>
+        </div>
+        <div class="relative mx-auto w-full max-w-sm">
+          <div class="card tilt-r2 overflow-hidden p-3"><div class="aspect-square overflow-hidden rounded-[1rem] border-2 border-ink" data-c-art></div></div>
+          <svg class="bob absolute -bottom-6 -left-6 size-14" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4q2 26 28 28-26 2-28 28-2-26-28-28 26-2 28-28Z" fill="#ff6fae" stroke="#1d1626" stroke-width="3" stroke-linejoin="round"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap grid items-start gap-12 lg:grid-cols-[1fr_22rem]">
+      <aside class="lg:sticky lg:top-24 lg:order-2" aria-labelledby="price-title">
+        <div class="card bg-white p-6">
+          <h2 id="price-title" class="hand text-2xl text-pink-ink">your price</h2>
+          <div class="mt-2" data-c-price><p class="font-display text-6xl leading-none">$149</p></div>
+          <div class="mt-6 flex items-center gap-3">
+            <button type="button" class="btn btn-yellow btn-lg flex-1" data-c-enrol data-enrol="draw-anything">Enroll now</button>
+          </div>
+          <button type="button" class="btn btn-white mt-3 w-full aria-pressed:bg-pink-soft" data-c-save data-save="draw-anything" aria-pressed="false" aria-label="Save for later: Draw Anything on iPad"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round" aria-hidden="true"><path class="heart" d="M12 20s-7.5-4.6-9.2-9.4C1.6 7.2 3.9 4 7.2 4c2 0 3.6 1.1 4.8 2.8C13.2 5.1 14.8 4 16.8 4c3.3 0 5.6 3.2 4.4 6.6C19.5 15.4 12 20 12 20Z"/></svg><span data-save-label>Save for later</span></button>
+          <ul class="mt-6 grid gap-2.5 border-t-2 border-dashed border-ink/30 pt-5 text-sm font-semibold">
+            <li class="flex gap-2"><svg class="size-5 shrink-0 text-green-ink" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10 4 4 8-9"/></svg>Lifetime access and every future update</li>
+            <li class="flex gap-2"><svg class="size-5 shrink-0 text-green-ink" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10 4 4 8-9"/></svg>Brushes, worksheets and canvas files</li>
+            <li class="flex gap-2"><svg class="size-5 shrink-0 text-green-ink" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10 4 4 8-9"/></svg>The friendly student community</li>
+            <li class="flex gap-2"><svg class="size-5 shrink-0 text-green-ink" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10 4 4 8-9"/></svg>14-day happy-drawing promise</li>
+          </ul>
+        </div>
+      </aside>
+
+      <div class="min-w-0 lg:order-1">
+        <section aria-labelledby="about-course-title">
+          <h2 id="about-course-title" class="h2">What this course is about</h2>
+          <p class="mt-4 max-w-2xl text-lg leading-relaxed" data-c-summary>My signature course for complete beginners.</p>
+        </section>
+
+        <section class="mt-16" aria-labelledby="makes-title">
+          <h2 id="makes-title" class="h2">What you&rsquo;ll <span class="squiggle">make</span></h2>
+          <ul class="mt-8 grid grid-cols-2 gap-6 md:grid-cols-4" data-c-makes></ul>
+        </section>
+
+        <section class="mt-16" id="curriculum" aria-labelledby="curriculum-title">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <h2 id="curriculum-title" class="h2">Curriculum</h2>
+              <p class="mt-2 font-bold" data-c-curriculum-summary></p>
+            </div>
+            <button type="button" class="btn btn-white btn-sm" data-expand-all>Expand all</button>
+          </div>
+          <div class="mt-6 grid gap-5" data-c-curriculum></div>
+        </section>
+
+        <section class="mt-16" aria-labelledby="need-title">
+          <h2 id="need-title" class="h2">What you need</h2>
+          <ul class="mt-6 grid gap-5 sm:grid-cols-3">
+            <li class="card tilt-l bg-blue-soft p-5"><p class="font-display text-xl">An iPad and stylus</p><p class="mt-1 text-sm">Any iPad from the last few years works. A cheap stylus is fine to start.</p></li>
+            <li class="card tilt-r bg-yellow-soft p-5"><p class="font-display text-xl">A drawing app</p><p class="mt-1 text-sm">I teach in Procreate and show the Fresco way too. Any layers app will do.</p></li>
+            <li class="card tilt-l2 bg-green-soft p-5"><p class="font-display text-xl">Twenty minutes</p><p class="mt-1 text-sm">Most lessons are under fifteen minutes, so you can draw on a lunch break.</p></li>
+          </ul>
+        </section>
+
+        <section class="mt-16" aria-labelledby="reviews-title">
+          <h2 id="reviews-title" class="h2">Kind words from students</h2>
+          <div class="mt-10 grid gap-10 md:grid-cols-2" data-c-reviews></div>
+        </section>
+
+        <section class="mt-16" aria-labelledby="faq-title">
+          <h2 id="faq-title" class="h2">Questions people ask</h2>
+          <div class="mt-6 grid gap-4">
+            <details class="acc card bg-white"><summary><span class="flex-1 font-display text-xl">I&rsquo;ve never drawn before. Is that OK?</span><svg class="acc-icon size-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="px-5 pb-5 sm:px-6">More than OK. Most of my students start from zero. We build every drawing from simple shapes, so you never need to &ldquo;just see it&rdquo;.</p></details>
+            <details class="acc card bg-white"><summary><span class="flex-1 font-display text-xl">How long do I have access?</span><svg class="acc-icon size-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="px-5 pb-5 sm:px-6">Forever, including every update I make to the course. Watch on your iPad, phone or laptop.</p></details>
+            <details class="acc card bg-white"><summary><span class="flex-1 font-display text-xl">When does the early-bird price end?</span><svg class="acc-icon size-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="px-5 pb-5 sm:px-6">At the date and time shown on the price card, in Eastern time. After that the course goes back to its usual price automatically.</p></details>
+            <details class="acc card bg-white"><summary><span class="flex-1 font-display text-xl">What if I don&rsquo;t enjoy it?</span><svg class="acc-icon size-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="px-5 pb-5 sm:px-6">Email me within 14 days and I&rsquo;ll refund you in full. No forms and no hard feelings.</p></details>
+            <details class="acc card bg-white"><summary><span class="flex-1 font-display text-xl">Can I buy it as a gift?</span><svg class="acc-icon size-6 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg></summary><p class="px-5 pb-5 sm:px-6">Yes. <a href="contact.html?topic=course" class="font-bold underline underline-offset-4">Drop me a line</a> and I&rsquo;ll send you a gift card to print or email.</p></details>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <section class="wrap pt-24" aria-labelledby="also-title">
+      <h2 id="also-title" class="h2">You might also like</h2>
+      <div class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3" data-c-more></div>
+    </section>
+    </div>
+
+    <dialog id="signup-dialog" class="modal" aria-labelledby="signup-title" aria-describedby="signup-detail">
+      <div class="card bg-white p-6 sm:p-7">
+        <button type="button" class="absolute top-3 right-3 grid size-10 place-items-center rounded-full border-2 border-ink bg-white hover:bg-pink-soft" data-signup-close aria-label="Close"><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" aria-hidden="true"><path d="M6 18 18 6M6 6l12 12"/></svg></button>
+        <h2 id="signup-title" class="pr-10 font-display text-2xl leading-tight">Sign up</h2>
+        <p id="signup-detail" class="mt-2 text-sm font-semibold muted">Details</p>
+        <!-- Demo form: nothing is sent. See DOCS.md, "Forms", to connect a checkout or booking tool. -->
+        <form class="mt-5 grid gap-4" action="#" method="post" data-signup-form novalidate>
+          <div data-field>
+            <label class="label" for="signup-name">Your name</label>
+            <input id="signup-name" name="name" class="input" autocomplete="name" required data-name="Your name">
+          </div>
+          <div data-field>
+            <label class="label" for="signup-email">Email address</label>
+            <input id="signup-email" name="email" type="email" class="input" autocomplete="email" required data-name="Your email address">
+          </div>
+          <button type="submit" class="btn btn-yellow btn-lg mt-1 w-full" data-signup-submit>Continue</button>
+        </form>
+        <div class="mt-5" data-signup-done hidden tabindex="-1" role="status">
+          <p class="font-display text-2xl">Lovely, thank you!</p>
+          <p class="mt-2" data-signup-message>Your sign-up is confirmed.</p>
+          <button type="button" class="btn btn-white mt-5" data-signup-close>Close</button>
+        </div>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="mt-24 border-t-[2.5px] border-ink bg-yellow-soft">
+    <div class="wrap grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.3fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-2 rounded-full" aria-label="Marnie Draws, home"><svg class="size-10 shrink-0" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#ffd84a" stroke="#1d1626" stroke-width="2.5"/><path d="M11 25c3-6 6-9 9-4s6 2 9-6" fill="none" stroke="#1d1626" stroke-width="3" stroke-linecap="round"/><path d="m26 8 6 6-3 3-6-6Z" fill="#ff6fae" stroke="#1d1626" stroke-width="2" stroke-linejoin="round"/></svg><span class="font-display text-[1.65rem] leading-none tracking-wide">marnie&#8288;<span class="text-pink-ink">draws</span></span></a>
+        <p class="mt-4 max-w-xs">Drawing lessons for grown-ups who always wanted to draw. Made with a lot of coffee in Asbury Park, New Jersey.</p>
+        <p class="mt-4 font-bold"><a href="mailto:hello@marniedraws.example" class="underline decoration-pink decoration-[3px] underline-offset-4 hover:text-pink-ink">hello@marniedraws.example</a></p>
+      </div>
+      <nav aria-labelledby="footer-learn">
+        <h2 id="footer-learn" class="font-display text-xl">Learn</h2>
+        <ul class="mt-3 grid gap-2 font-semibold"><li><a class="hover:underline" href="courses.html">Courses</a></li><li><a class="hover:underline" href="workshops.html">Live workshops</a></li><li><a class="hover:underline" href="resources.html">Free resources</a></li><li><a class="hover:underline" href="gallery.html">Student gallery</a></li></ul>
+      </nav>
+      <nav aria-labelledby="footer-hello">
+        <h2 id="footer-hello" class="font-display text-xl">Say hello</h2>
+        <ul class="mt-3 grid gap-2 font-semibold"><li><a class="hover:underline" href="about.html">About Marnie</a></li><li><a class="hover:underline" href="newsletter.html">The Sunday Sketch</a></li><li><a class="hover:underline" href="contact.html">Contact</a></li><li><a class="hover:underline" href="contact.html?topic=workshop">Workshops for teams</a></li></ul>
+      </nav>
+      <div>
+        <h2 class="font-display text-xl">The Sunday Sketch</h2>
+        <p class="mt-3">A drawing prompt and a five-minute tip, every Sunday morning. Plus a free brush each month.</p>
+        <a href="newsletter.html" class="btn btn-white mt-4">Subscribe for free</a>
+      </div>
+    </div>
+    <div class="border-t-2 border-dashed border-ink/40">
+      <div class="wrap flex flex-wrap justify-between gap-x-6 gap-y-2 py-5 text-sm font-semibold">
+        <p>&copy; <span data-year>2026</span> Marnie Ashdown. Drawn by hand in Asbury Park.</p>
+        <p>Prices in USD &middot; Workshop times in Eastern time</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

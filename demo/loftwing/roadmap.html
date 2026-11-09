@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Launch roadmap: shipped, in beta and next | Loftwing</title>
+    <meta
+      name="description"
+      content="See what Loftwing has shipped, what's in beta and what's coming next. Vote for the features you want first, and we'll build the top of the list before launch."
+    />
+    <meta name="theme-color" content="#170c2c" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Loftwing" />
+    <meta property="og:title" content="Launch roadmap: shipped, in beta and next | Loftwing" />
+    <meta
+      property="og:description"
+      content="See what Loftwing has shipped, what's in beta and what's coming next. Vote for the features you want first, and we'll build the top of the list before launch."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;800;900&amp;family=Sen:wght@400;500;600;700&amp;family=Overpass+Mono:wght@400;600;700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="roadmap" class="flex min-h-screen flex-col">
+    <a
+      href="#main"
+      class="sr-only z-50 rounded-lg bg-apricot px-4 py-3 font-bold text-night focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      >Skip to content</a
+    >
+    <div class="sky" aria-hidden="true"></div>
+    <header class="sticky top-0 z-40 pt-3">
+      <div class="wrap">
+        <div
+          class="relative flex min-h-16 items-center justify-between gap-3 rounded-2xl border border-white/15 bg-[#190e2e]/75 px-3 shadow-[0_18px_40px_-24px_rgba(4,0,18,0.9)] backdrop-blur-xl sm:px-4"
+        >
+          <a href="index.html" class="flex items-center gap-2.5 rounded-lg" aria-label="Loftwing home"
+            ><svg viewBox="0 0 40 40" class="size-9 shrink-0" aria-hidden="true">
+              <defs>
+                <linearGradient id="logo-sky" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ffcb9e" />
+                  <stop offset="1" stop-color="#ff8f70" />
+                </linearGradient>
+              </defs>
+              <rect width="40" height="40" rx="11" fill="url(#logo-sky)" />
+              <path
+                d="M6 28 20 10l14 18"
+                fill="none"
+                stroke="#241238"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path d="M13.5 28c1-6 4-9.5 8-11 .5 4.5 2.5 7 7 8-3.5 3-10 4.5-15 3Z" fill="#241238" />
+              <circle cx="20" cy="9" r="2" fill="#241238" /></svg
+            ><span class="font-display text-[1.4rem] font-extrabold tracking-tight">Loftwing</span></a
+          >
+          <nav class="hidden lg:block" aria-label="Main">
+            <ul class="flex items-center gap-0.5">
+              <li><a class="nav-link" href="product.html">Product</a></li>
+              <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+              <li><a class="nav-link" href="migrate.html">Switch</a></li>
+              <li><a class="nav-link" href="roadmap.html" aria-current="page">Roadmap</a></li>
+              <li><a class="nav-link" href="journal.html">Journal</a></li>
+              <li><a class="nav-link" href="about.html">About</a></li>
+            </ul>
+          </nav>
+          <div class="flex items-center gap-2">
+            <a class="btn btn-sm hidden whitespace-nowrap sm:inline-flex" href="waitlist.html" data-spot-cta
+              >Join the waitlist</a
+            >
+            <button
+              type="button"
+              class="inline-flex size-11 items-center justify-center rounded-xl border border-white/25 lg:hidden"
+              data-menu-button
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              aria-label="Open menu"
+            >
+              <svg viewBox="0 0 24 24" class="size-6" aria-hidden="true" data-menu-open>
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="size-6" aria-hidden="true" data-menu-close hidden>
+                <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+          <nav
+            id="mobile-menu"
+            class="absolute inset-x-0 top-[calc(100%+0.5rem)] rounded-2xl border border-white/15 bg-plum p-3 lg:hidden"
+            aria-label="Mobile"
+            hidden
+          >
+            <ul class="grid gap-1">
+              <li><a class="nav-link !py-3 text-lg" href="product.html">Product</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="pricing.html">Pricing</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="migrate.html">Switch</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="roadmap.html" aria-current="page">Roadmap</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="journal.html">Journal</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="about.html">About</a></li>
+              <li class="pt-2"><a class="btn w-full" href="waitlist.html" data-spot-cta>Join the waitlist</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="pt-10 lg:pt-14">
+        <div class="wrap grid items-center gap-6 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)]">
+          <div>
+            <p class="eyebrow">
+              Public launch <time data-date="launch" data-format="medium" datetime="2027-03-09">Mar 9, 2027</time>
+            </p>
+            <h1 class="mt-4 text-[clamp(2.5rem,5vw,4rem)] leading-[1.05] font-black">The roadmap, in the open</h1>
+            <p class="mt-4 max-w-2xl text-lg text-haze">
+              This is the real list we work from. Give your vote to what you need most, one per item. We read the top of
+              each column every Monday.
+            </p>
+          </div>
+          <svg
+            viewBox="0 0 300 180"
+            class="mx-auto w-full max-w-xs"
+            role="img"
+            aria-label="A weather vane shaped like a pigeon on top of a loft roof, turning toward the sunrise."
+          >
+            <circle cx="210" cy="120" r="58" fill="#ff8f70" fill-opacity=".55" />
+            <path d="M20 180c20-32 60-50 110-50s90 18 130 50Z" fill="#3a1d52" stroke="#ffcb9e" stroke-width="2" />
+            <path d="M140 132V52" stroke="#ffcb9e" stroke-width="3" />
+            <path d="M104 72h72" stroke="#ffcb9e" stroke-width="2.5" />
+            <path d="M176 72l-10-6v12Z" fill="#ffcb9e" />
+            <path d="M92 44c6-5 14-7 22-6 5-5 12-6 17-4l10 3-8 2c-2 6-8 11-16 12-10 1-19-1-25-7Z" fill="#f7f1fb" />
+            <path d="M112 38c2-11 9-18 21-22-1 10-6 18-13 25Z" fill="#b9b1ff" />
+            <text x="186" y="84" fill="#ffcb9e" font-family="Overpass Mono, monospace" font-size="14" font-weight="700">
+              E
+            </text>
+          </svg>
+        </div>
+      </section>
+
+      <section class="wrap mt-8" data-roadmap aria-label="Roadmap items">
+        <div class="glass flex flex-wrap items-center justify-between gap-4 p-3.5">
+          <div class="flex flex-wrap gap-2" role="group" aria-label="Filter by status">
+            <button type="button" class="chip" data-rm-filter="all" aria-pressed="true">All</button>
+            <button type="button" class="chip" data-rm-filter="shipped" aria-pressed="false">Shipped</button>
+            <button type="button" class="chip" data-rm-filter="beta" aria-pressed="false">In beta</button>
+            <button type="button" class="chip" data-rm-filter="next" aria-pressed="false">Next</button>
+          </div>
+          <div class="flex flex-wrap items-center gap-3">
+            <p class="text-[0.95rem] text-haze" data-rm-count>18 items, 0 votes from you</p>
+            <label class="flex items-center gap-2 text-[0.95rem] font-semibold"
+              >Sort by
+              <select class="field !mt-0 !min-h-10 !w-auto !py-1" data-rm-sort>
+                <option value="votes">Most votes</option>
+                <option value="fewest">Fewest votes</option>
+                <option value="title">Name, A to Z</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <p class="sr-only" role="status" data-rm-live></p>
+        <div class="mt-6 grid gap-6 lg:grid-cols-3" data-rm-grid>
+          <section class="min-w-0" data-rm-column="shipped" aria-label="Shipped">
+            <h2 class="flex items-center gap-2 text-xl font-extrabold">
+              <span class="size-2.5 rounded-full bg-leaf" aria-hidden="true"></span>Shipped<span
+                class="ml-auto font-mono text-sm font-normal text-fog"
+                data-rm-column-count
+              ></span>
+            </h2>
+            <ul class="mt-3 grid gap-3"></ul>
+          </section>
+          <section class="min-w-0" data-rm-column="beta" aria-label="In beta">
+            <h2 class="flex items-center gap-2 text-xl font-extrabold">
+              <span class="size-2.5 rounded-full bg-apricot" aria-hidden="true"></span>In beta<span
+                class="ml-auto font-mono text-sm font-normal text-fog"
+                data-rm-column-count
+              ></span>
+            </h2>
+            <ul class="mt-3 grid gap-3"></ul>
+          </section>
+          <section class="min-w-0" data-rm-column="next" aria-label="Next">
+            <h2 class="flex items-center gap-2 text-xl font-extrabold">
+              <span class="size-2.5 rounded-full bg-iris" aria-hidden="true"></span>Next<span
+                class="ml-auto font-mono text-sm font-normal text-fog"
+                data-rm-column-count
+              ></span>
+            </h2>
+            <ul class="mt-3 grid gap-3"></ul>
+          </section>
+        </div>
+      </section>
+
+      <section class="reveal wrap mt-16" aria-labelledby="rm-cta">
+        <div class="glass flex flex-col items-start justify-between gap-5 p-6 sm:p-8 md:flex-row md:items-center">
+          <div>
+            <h2 id="rm-cta" class="text-2xl font-extrabold sm:text-3xl">Want a say in what ships first?</h2>
+            <p class="mt-1.5 text-haze">
+              Beta cohorts get a direct line to the people building it. The next one opens
+              <time data-date="cohort5" data-format="monthDay" datetime="2026-12-15">December 15</time>.
+            </p>
+          </div>
+          <a class="btn" href="waitlist.html">Join the waitlist</a>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-auto pt-16">
+      <div class="wrap pb-8">
+        <div class="glass grid gap-8 p-6 sm:grid-cols-2 sm:p-8 lg:grid-cols-[1.6fr_1fr_1fr_1.2fr]">
+          <div>
+            <a href="index.html" class="inline-flex items-center gap-2.5 rounded-lg" aria-label="Loftwing home"
+              ><svg viewBox="0 0 40 40" class="size-9 shrink-0" aria-hidden="true">
+                <defs>
+                  <linearGradient id="logo-sky-footer" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#ffcb9e" />
+                    <stop offset="1" stop-color="#ff8f70" />
+                  </linearGradient>
+                </defs>
+                <rect width="40" height="40" rx="11" fill="url(#logo-sky-footer)" />
+                <path
+                  d="M6 28 20 10l14 18"
+                  fill="none"
+                  stroke="#241238"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path d="M13.5 28c1-6 4-9.5 8-11 .5 4.5 2.5 7 7 8-3.5 3-10 4.5-15 3Z" fill="#241238" />
+                <circle cx="20" cy="9" r="2" fill="#241238" /></svg
+              ><span class="font-display text-xl font-extrabold">Loftwing</span></a
+            >
+            <p class="mt-3 max-w-xs text-[0.95rem] text-haze">
+              Email marketing for independent newsletters and small online shops, built in Spokane, Washington.
+            </p>
+            <p class="mt-3 text-[0.95rem] text-haze">
+              Public launch <time data-date="launch" data-format="medium" datetime="2027-03-09">Mar 9, 2027</time>
+            </p>
+          </div>
+          <div>
+            <h2 class="mono-label !text-apricot">Product</h2>
+            <ul class="mt-3 space-y-1.5 text-[0.95rem] text-haze">
+              <li><a class="hover:text-mist hover:underline" href="product.html">Tour the tools</a></li>
+              <li><a class="hover:text-mist hover:underline" href="pricing.html">Founding pricing</a></li>
+              <li><a class="hover:text-mist hover:underline" href="migrate.html">Switch to Loftwing</a></li>
+              <li><a class="hover:text-mist hover:underline" href="roadmap.html">Roadmap</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mono-label !text-apricot">Company</h2>
+            <ul class="mt-3 space-y-1.5 text-[0.95rem] text-haze">
+              <li><a class="hover:text-mist hover:underline" href="about.html">About us</a></li>
+              <li><a class="hover:text-mist hover:underline" href="journal.html">Build journal</a></li>
+              <li><a class="hover:text-mist hover:underline" href="waitlist.html">Waitlist</a></li>
+              <li><a class="hover:text-mist hover:underline" href="about.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mono-label !text-apricot">Find us</h2>
+            <address class="mt-3 text-[0.95rem] text-haze not-italic">
+              218 W Sprague Ave, Suite 4<br />Spokane, WA 99201
+            </address>
+            <p class="mt-2 text-[0.95rem] text-haze">
+              <a class="hover:text-mist hover:underline" href="mailto:hello@loftwing.example">hello@loftwing.example</a
+              ><br /><a class="hover:text-mist hover:underline" href="tel:+15095550147">(509) 555-0147</a>
+            </p>
+          </div>
+        </div>
+        <p class="mt-5 flex flex-wrap justify-between gap-x-6 gap-y-1 px-1 text-sm text-fog">
+          <span>&copy; <span data-year>2026</span> Loftwing, Inc.</span><span>Loftwing is a fictional company.</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

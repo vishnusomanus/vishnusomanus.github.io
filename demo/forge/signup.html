@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Get an API key — Start sending in minutes | Forge</title>
+  <meta name="description" content="Create a Forge project and get a test API key. 100,000 events a month free, no credit card.">
+  <meta name="theme-color" content="#09090a">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Forge">
+  <meta property="og:title" content="Get an API key — Start sending in minutes | Forge">
+  <meta property="og:description" content="Create a Forge project and get a test API key. 100,000 events a month free, no credit card.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400..700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="signup" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[80] bg-brand-400 px-4 py-2.5 font-mono text-sm font-medium text-ink-950 focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 border-b border-line">
+    <div class="container-x flex h-[60px] items-center justify-between gap-6">
+      <div class="flex items-center gap-8">
+        <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Forge home">
+          <svg viewBox="0 0 28 28" class="h-7 w-7 shrink-0" aria-hidden="true"><rect width="28" height="28" rx="3" fill="#ffbe3d"/><path d="M7.5 6.5h13v3.6h-8.9v3.2h7.4v3.6h-7.4v4.6H7.5z" fill="#09090a"/><path d="M17 18h3.5v3.5H17z" fill="#09090a"/></svg>
+          <span class="font-mono text-[15px] font-semibold tracking-tight">forge<span class="logo-cursor text-brand-400">_</span></span>
+        </a>
+        <nav aria-label="Main" class="hidden lg:block">
+          <ul class="flex items-center">
+            <li><a href="docs.html" class="nav-link">Quickstart</a></li>
+            <li><a href="sdks.html" class="nav-link">SDKs</a></li>
+            <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li><a href="changelog.html" class="nav-link">Changelog</a></li>
+            <li><a href="status.html" class="nav-link">Status</a></li>
+            <li><a href="company.html" class="nav-link">Company</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="nav-link hidden sm:inline-flex">Talk to sales</a>
+        <a href="signup.html" class="btn-primary btn-sm hidden sm:inline-flex">Get API key</a>
+        <button id="menu-toggle" type="button" class="grid h-10 w-10 place-items-center rounded-[3px] border border-line-strong bg-ink-900 text-fg lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-line lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-8">
+        <ul class="font-mono">
+          <li><a href="index.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>home</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="docs.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>quickstart</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="sdks.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>sdks</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="pricing.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>pricing</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="changelog.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>changelog</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="status.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>status</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="company.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>company</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="contact.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>talk-to-sales</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+        </ul>
+        <a href="signup.html" class="btn-primary btn-lg mt-6 w-full">Get an API key</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <div class="frame">
+      <section class="relative overflow-hidden" aria-labelledby="signup-title">
+        <div class="bg-plus pointer-events-none absolute inset-0" aria-hidden="true"></div>
+        <div class="glow pointer-events-none absolute -bottom-40 left-[-12rem] h-[30rem] w-[44rem] max-w-none" aria-hidden="true"></div>
+        <div class="pad-x relative grid gap-12 py-14 sm:py-20 lg:grid-cols-12 lg:gap-16">
+          <div class="lg:col-span-5">
+            <p class="eyebrow reveal"><span class="eyebrow-num">key</span>/ Get started</p>
+            <h1 id="signup-title" class="h-display reveal reveal-d1 mt-5">A test key in under a minute.</h1>
+            <p class="lead reveal reveal-d2 mt-6">Create a project and start sending. Test mode is free on every plan, and you only add a card when you go live.</p>
+            <ul class="reveal reveal-d2 mt-10 divide-y divide-line border-y border-line font-mono text-sm">
+              <li class="flex justify-between gap-4 py-3"><span class="text-muted">Plan</span><span id="su-plan" class="text-fg">Free</span></li>
+              <li class="flex justify-between gap-4 py-3"><span class="text-muted">Test events</span><span class="text-fg">1M / month, free</span></li>
+              <li class="flex justify-between gap-4 py-3"><span class="text-muted">Live events</span><span class="text-fg">100k / month, free</span></li>
+              <li class="flex justify-between gap-4 py-3"><span class="text-muted">Card required</span><span class="text-fg">No</span></li>
+            </ul>
+            <p class="reveal reveal-d3 mt-6 text-sm text-muted">Already have an account? Your keys are in the dashboard under <span class="font-mono text-fg">Settings → API keys</span>.</p>
+          </div>
+
+          <div class="reveal min-w-0 lg:col-span-7">
+            <!-- Sign-up form. Demo only: it generates a fake key in the browser. -->
+            <form data-form="signup" class="term" novalidate>
+              <div class="term-bar h-10 justify-between font-mono text-xs text-subtle"><span>forge init</span><span>step 1 of 1</span></div>
+              <div class="grid gap-5 p-6 sm:p-8">
+                <div data-field>
+                  <label for="su-email" class="label">Email</label>
+                  <input id="su-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@company.example" class="input">
+                </div>
+                <div data-field>
+                  <label for="su-password" class="label">Password</label>
+                  <input id="su-password" name="password" type="password" required minlength="12" data-label="Password" autocomplete="new-password" aria-describedby="su-password-hint" class="input">
+                  <p id="su-password-hint" class="hint">At least 12 characters. A passphrase works well.</p>
+                </div>
+                <div data-field>
+                  <label for="su-project" class="label">Project name</label>
+                  <input id="su-project" name="project" type="text" required pattern="[a-z0-9][a-z0-9-]{2,31}" data-label="Project name" data-pattern-message="Use 3–32 lowercase letters, digits or dashes, like acme-api." autocomplete="off" spellcheck="false" placeholder="acme-api" aria-describedby="su-project-hint" class="input input-mono">
+                  <p id="su-project-hint" class="hint">Lowercase letters, digits and dashes. Shown to your customers in the portal.</p>
+                </div>
+                <fieldset>
+                  <legend class="label">Region</legend>
+                  <p class="-mt-1 mb-3 text-xs text-subtle">Where your events, logs and secrets are stored. You can’t move a project later.</p>
+                  <div class="grid gap-2 sm:grid-cols-3">
+                    <label class="flex cursor-pointer flex-col gap-1 border border-line-strong bg-ink-850 p-3 transition hover:border-ink-600 has-[:checked]:border-brand-400 has-[:checked]:bg-brand-400/[.06] has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-brand-400">
+                      <span class="flex items-center justify-between"><span class="font-mono text-sm text-fg">us-east</span><input type="radio" name="region" value="us-east" required data-required="Choose a region for your data." class="check rounded-full"></span>
+                      <span class="text-xs text-subtle">Virginia, USA</span>
+                    </label>
+                    <label class="flex cursor-pointer flex-col gap-1 border border-line-strong bg-ink-850 p-3 transition hover:border-ink-600 has-[:checked]:border-brand-400 has-[:checked]:bg-brand-400/[.06] has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-brand-400">
+                      <span class="flex items-center justify-between"><span class="font-mono text-sm text-fg">eu-central</span><input type="radio" name="region" value="eu-central" class="check rounded-full"></span>
+                      <span class="text-xs text-subtle">Frankfurt, Germany</span>
+                    </label>
+                    <label class="flex cursor-pointer flex-col gap-1 border border-line-strong bg-ink-850 p-3 transition hover:border-ink-600 has-[:checked]:border-brand-400 has-[:checked]:bg-brand-400/[.06] has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-brand-400">
+                      <span class="flex items-center justify-between"><span class="font-mono text-sm text-fg">ap-southeast</span><input type="radio" name="region" value="ap-southeast" class="check rounded-full"></span>
+                      <span class="text-xs text-subtle">Singapore</span>
+                    </label>
+                  </div>
+                </fieldset>
+                <div data-field>
+                  <label class="flex items-start gap-3 text-sm text-muted"><input id="su-terms" name="terms" type="checkbox" required data-required="Please accept the terms to create a project." class="check mt-0.5">I accept the terms of service and the data processing agreement.</label>
+                </div>
+                <div class="flex flex-col-reverse gap-4 border-t border-line pt-5 sm:flex-row sm:items-center sm:justify-between">
+                  <p class="font-mono text-xs text-subtle">No card needed. Free up to 100k live events a month.</p>
+                  <button type="submit" class="btn-primary btn-lg">Create project and key <span aria-hidden="true">→</span></button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Shown after a valid submit, filled in by main.js -->
+            <div id="key-panel" class="term" hidden>
+              <div class="term-bar h-10 justify-between font-mono text-xs text-subtle"><span>project created</span><span class="text-ok">✓ 201</span></div>
+              <div class="p-6 sm:p-8">
+                <h2 id="key-title" tabindex="-1" class="text-2xl font-semibold tracking-[-0.025em] focus:outline-none">Your test key is ready.</h2>
+                <p class="mt-2 font-mono text-xs text-subtle">Project <span id="key-project" class="text-fg">acme-api</span> · region <span id="key-region" class="text-fg">eu-central</span> · test mode</p>
+                <p class="mt-6 label">Secret key</p>
+                <div class="flex flex-col gap-2 sm:flex-row">
+                  <code id="key-value" class="block min-w-0 flex-1 truncate border border-brand-400/50 bg-ink-850 px-3 py-2.5 font-mono text-sm text-brand-200">fk_test_••••••••••••••••••••0000</code>
+                  <div class="flex gap-2">
+                    <button id="key-reveal" type="button" class="btn-ghost flex-1 sm:flex-none" aria-pressed="false" aria-controls="key-value key-snippet">Reveal</button>
+                    <button id="key-copy" type="button" class="btn-ghost flex-1 sm:flex-none" data-copy="fk_test_">Copy</button>
+                  </div>
+                </div>
+                <p class="mt-3 flex items-start gap-2 text-sm text-warn"><span aria-hidden="true">!</span>Keep this key secret and use it only from your server, never in browser code. Test keys send test events only; live keys are in the dashboard under Settings → API keys.</p>
+                <div class="mt-8 border border-line" data-copy-scope>
+                  <div class="flex items-center justify-between border-b border-line bg-ink-850 py-1 pr-1 pl-4 font-mono text-xs text-subtle"><span>Send your first event</span><button id="key-snippet-copy" type="button" class="btn-ghost btn-sm" data-copy="">Copy</button></div>
+                  <pre class="code text-[12px]" tabindex="0" aria-label="First request"><code id="key-snippet"></code></pre>
+                </div>
+                <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                  <a href="docs.html#endpoint" class="btn-primary">Continue the quickstart <span aria-hidden="true">→</span></a>
+                  <button id="key-reset" type="button" class="btn-ghost">Start over</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="mt-auto border-t border-line bg-ink-950">
+    <div class="container-x grid gap-12 py-14 lg:grid-cols-12">
+      <div class="lg:col-span-3">
+        <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Forge home">
+          <svg viewBox="0 0 28 28" class="h-7 w-7 shrink-0" aria-hidden="true"><rect width="28" height="28" rx="3" fill="#ffbe3d"/><path d="M7.5 6.5h13v3.6h-8.9v3.2h7.4v3.6h-7.4v4.6H7.5z" fill="#09090a"/><path d="M17 18h3.5v3.5H17z" fill="#09090a"/></svg>
+          <span class="font-mono text-[15px] font-semibold tracking-tight">forge<span class="logo-cursor text-brand-400">_</span></span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-muted">Webhooks infrastructure for teams that ship. Built in Erie and Bellingham.</p>
+        <a href="status.html" class="mt-6 inline-flex items-center gap-2.5 rounded-[3px] border border-line-strong bg-ink-900 px-3 py-1.5 font-mono text-xs text-muted transition hover:border-ink-600 hover:text-fg"><span class="dot s-ok pulse" aria-hidden="true"></span>All systems operational</a>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-5">
+        <nav aria-label="Product">
+          <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">Product</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="index.html#features" class="text-muted transition hover:text-fg">Features</a></li>
+            <li><a href="pricing.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Pricing</a></li>
+            <li><a href="changelog.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Changelog</a></li>
+            <li><a href="status.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Status</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Developers">
+          <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">Developers</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="docs.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Quickstart</a></li>
+            <li><a href="docs.html#verify" class="text-muted transition hover:text-fg">Verify signatures</a></li>
+            <li><a href="sdks.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">SDKs and tools</a></li>
+            <li><a href="index.html#inspector" class="text-muted transition hover:text-fg">API explorer</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">Company</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="company.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">About</a></li>
+            <li><a href="company.html#careers" class="text-muted transition hover:text-fg">Careers</a></li>
+            <li><a href="contact.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Talk to sales</a></li>
+            <li><a href="pricing.html#faq" class="text-muted transition hover:text-fg">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="lg:col-span-4">
+        <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">API changes by email</h2>
+        <p class="mt-4 text-sm text-muted">Breaking changes, new versions and deprecations. About one email a month.</p>
+        <form data-form="newsletter" class="mt-4" novalidate>
+          <label for="footer-email" class="sr-only">Email address</label>
+          <div class="flex gap-2">
+            <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@company.example" class="input py-2 text-sm">
+            <button type="submit" class="btn-ghost shrink-0">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="border-t border-line">
+      <div class="container-x flex flex-col gap-2 py-5 font-mono text-xs text-subtle sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Forge Systems, Inc. Forge is a fictional company.</p>
+        <p>API version <span class="text-muted">2026-09-01</span> · Template by Freeframe</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

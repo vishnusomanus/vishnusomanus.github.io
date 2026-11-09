@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+/* Bramble & Rye brand tokens. Change these to re-skin the whole site. */
+@theme {
+  --font-sans: "Karla", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Corben", "Iowan Old Style", Georgia, ui-serif, serif;
+  --font-hand: "Delicious Handrawn", "Segoe Print", "Bradley Hand", cursive;
+
+  --color-flour: #fbf5ec;          /* page background */
+  --color-paper: #fffdf8;          /* cards and fields */
+  --color-oat: #f3e7d5;            /* soft panels */
+  --color-line: #e7d6bf;           /* hairlines */
+  --color-ink: #3a2620;            /* text */
+  --color-muted: #6c574a;          /* secondary text */
+  --color-bramble: #74305a;        /* brand: buttons, links, basket */
+  --color-bramble-deep: #561f42;   /* hover, text on pastels */
+  --color-bramble-soft: #f3dce7;   /* bramble tint, selected options */
+  --color-crust: #b9733c;          /* bread brown, decoration only */
+  --color-blush: #f7dcd3;          /* pastel: cakes, sold out */
+  --color-blush-deep: #a33a3f;     /* error text, sold out text */
+  --color-pistachio: #dfe8cb;      /* pastel: fresh, vegan */
+  --color-pistachio-deep: #43602a; /* green text on pastels */
+  --color-butter: #f9e8b2;         /* pastel: baking now, specials */
+  --color-butter-deep: #7a5a06;    /* text on butter */
+  --color-lilac: #e5ddf0;          /* pastel accent */
+  --color-sky: #d9e8ee;            /* pastel accent */
+
+  --ease-soft: cubic-bezier(.22, .8, .24, 1);
+  --ease-rise: cubic-bezier(.34, 1.45, .64, 1);
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body { @apply bg-flour font-sans text-ink antialiased; font-size: 17px; }
+  ::selection { background: var(--color-butter); color: var(--color-ink); }
+  :focus-visible { outline: 3px solid var(--color-bramble); outline-offset: 3px; border-radius: 8px; }
+  .on-dark :focus-visible { outline-color: var(--color-butter); }
+  [hidden] { display: none !important; }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  dialog { color: inherit; }
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within { scroll-behavior: smooth; }
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-[15px] font-bold tracking-[0.01em] transition duration-200 select-none disabled:cursor-not-allowed disabled:opacity-50 aria-disabled:cursor-not-allowed aria-disabled:opacity-50;
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-[76rem] px-5 sm:px-8; }
+
+  /* Soft buttons with a pressed-paper shadow. */
+  .btn-primary { @apply btn bg-bramble text-paper shadow-[0_10px_22px_-12px_rgb(86_31_66/.9)] hover:bg-bramble-deep hover:-translate-y-px active:translate-y-px; }
+  .btn-ink { @apply btn bg-ink text-paper hover:bg-black; }
+  .btn-soft { @apply btn bg-paper text-ink ring-1 ring-ink/15 hover:ring-ink/40 hover:bg-white; }
+  .btn-line { @apply btn bg-transparent text-ink ring-[1.5px] ring-ink/70 ring-inset hover:bg-ink hover:text-paper; }
+
+  .eyebrow { @apply inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.18em] text-bramble; }
+  .h-display { @apply font-display font-normal leading-[1.06] tracking-[-0.015em]; }
+  .hand { @apply font-hand font-normal leading-none; }
+
+  .card { @apply rounded-[1.6rem] bg-paper ring-1 ring-ink/[.07] shadow-[0_22px_40px_-30px_rgb(58_38_32/.55)]; }
+  .panel { @apply rounded-[2rem] bg-oat; }
+  .tag { @apply inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[12px] font-bold leading-none; }
+  .tag-vegan { @apply bg-pistachio text-pistachio-deep; }
+  .tag-vegetarian { @apply bg-[#eaf0d6] text-[#4a5a1c]; }
+  .tag-gf { @apply bg-butter text-butter-deep; }
+  .tag-df { @apply bg-sky text-[#2c5566]; }
+  .tag-special { @apply bg-bramble text-paper; }
+
+  .link { @apply font-bold text-bramble underline decoration-bramble/35 decoration-2 underline-offset-4 transition hover:decoration-bramble; }
+
+  .field-label { @apply mb-1.5 block text-[15px] font-bold text-ink; }
+  .field {
+    @apply w-full rounded-2xl border-[1.5px] border-ink/20 bg-paper px-4 py-3 text-base text-ink placeholder:text-muted/75 transition focus:border-bramble focus:outline-none focus:ring-4 focus:ring-bramble/15;
+  }
+  select.field { @apply appearance-none bg-[length:1.1rem] bg-[right_1rem_center] bg-no-repeat pr-10; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%233a2620' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 8 5 5 5-5'/%3E%3C/svg%3E"); }
+  .field[aria-invalid="true"], [data-group][aria-invalid="true"] .option { @apply border-blush-deep; }
+  .field[aria-invalid="true"] { @apply ring-4 ring-blush-deep/10; }
+  .field-error { @apply mt-1.5 flex items-center gap-1.5 text-[15px] font-semibold text-blush-deep; }
+  .field-error:empty { display: none; }
+  .on-dark .field-error { color: #ffd4cc; }
+  .hint { @apply mt-1.5 text-[15px] text-muted; }
+
+  /* Radio and checkbox cards: <label class="option"><input class="sr-only">…</label> */
+  .option { @apply relative flex cursor-pointer rounded-2xl border-[1.5px] border-ink/15 bg-paper p-4 transition hover:border-ink/45; }
+  .option:has(input:checked) { @apply border-bramble bg-bramble-soft/60 shadow-[inset_0_0_0_1px_var(--color-bramble)]; }
+  .option:has(input:focus-visible) { outline: 3px solid var(--color-bramble); outline-offset: 3px; }
+  .option:has(input:disabled) { @apply cursor-not-allowed opacity-45 hover:border-ink/15; }
+  .chip { @apply relative inline-flex cursor-pointer items-center gap-2 rounded-full border-[1.5px] border-ink/15 bg-paper px-4 py-2 text-[15px] font-bold transition hover:border-ink/50 select-none; }
+  .chip:has(input:checked), .chip[aria-pressed="true"] { @apply border-ink bg-ink text-paper; }
+  .chip:has(input:focus-visible) { outline: 3px solid var(--color-bramble); outline-offset: 3px; }
+  .swatch { @apply relative grid size-12 cursor-pointer place-items-center rounded-full ring-1 ring-ink/20 transition; }
+  .swatch:has(input:checked) { @apply ring-[3px] ring-ink ring-offset-2 ring-offset-paper; }
+  .swatch:has(input:focus-visible) { outline: 3px solid var(--color-bramble); outline-offset: 5px; }
+  .swatch:has(input:disabled) { @apply cursor-not-allowed opacity-40; }
+
+  .stepper { @apply inline-flex h-10 items-center rounded-full bg-oat; }
+  .stepper button { @apply grid size-10 place-items-center rounded-full text-lg font-bold leading-none transition hover:bg-butter disabled:opacity-35 disabled:hover:bg-transparent; }
+
+  .art svg { display: block; width: 100%; height: 100%; }
+
+  /* Arched shop-window frame. */
+  .arch { border-radius: 999px 999px 1.75rem 1.75rem; }
+  .arch-sm { border-radius: 999px 999px 1.1rem 1.1rem; }
+
+  /* Paper grain over a section. */
+  .grain { position: relative; isolation: isolate; }
+  .grain::before {
+    content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: .5; mix-blend-mode: multiply;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .32 0 0 0 0 .2 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* Hand-drawn wavy underline under a word in a heading. */
+  .squiggle { background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8c14-6 22 4 36-1s24-5 38 0 26 3 42-3' fill='none' stroke='%23e9a9a0' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E") 0 86% / 100% .26em no-repeat; }
+  /* Dashed "stitched" rule. */
+  .stitch { background-image: linear-gradient(90deg, var(--color-line) 55%, transparent 0); background-size: 12px 2px; background-repeat: repeat-x; height: 2px; }
+  .ticket { @apply rounded-2xl border-[1.5px] border-dashed border-ink/25; }
+
+  .status-pill { @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[13px] font-bold leading-none whitespace-nowrap; }
+  .status-out { @apply bg-oat text-muted; }
+  .status-baking { @apply bg-butter text-butter-deep; }
+  .status-fresh { @apply bg-pistachio text-pistachio-deep; }
+  .status-sold { @apply bg-blush text-blush-deep; }
+  .dot { @apply inline-block size-2 shrink-0 rounded-full bg-current; }
+
+  .day-dots { @apply inline-flex gap-1; }
+  .day-dots span { @apply grid size-[1.375rem] place-items-center rounded-full text-[11px] font-bold leading-none; }
+  .day-dots .on { @apply bg-ink text-paper; }
+  .day-dots .off { @apply bg-oat text-muted; }
+  .day-dots .closed { @apply bg-transparent text-muted/70 line-through; }
+
+  .scroll-x { @apply relative overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden; }
+  .prose-crumb p + p { margin-top: 1.1em; }
+}
+
+/* Scroll reveal: only hidden when JS is running and motion is allowed. */
+.js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .8s var(--ease-soft), transform .8s var(--ease-soft); }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+
+/* Gentle motion: rising steam, a bobbing bake, the "baking now" pulse. */
+@keyframes steam { 0% { opacity: 0; transform: translateY(6px) scaleY(.8); } 40% { opacity: .75; } 100% { opacity: 0; transform: translateY(-16px) scaleY(1.15); } }
+@keyframes bob { 0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); } 50% { transform: translateY(-7px) rotate(var(--r, 0deg)); } }
+@keyframes warm { 0%, 100% { box-shadow: 0 0 0 0 rgb(122 90 6 / .35); } 50% { box-shadow: 0 0 0 5px rgb(122 90 6 / 0); } }
+.steam path { animation: steam 3.2s ease-out infinite; }
+.steam path:nth-child(2) { animation-delay: 1s; }
+.steam path:nth-child(3) { animation-delay: 2s; }
+.bob { animation: bob 6s ease-in-out infinite; }
+.status-baking .dot { animation: warm 1.6s ease-in-out infinite; }
+
+/* Bakes lift a little on hover. */
+.bake-lift { transition: transform .5s var(--ease-rise); }
+.group:hover .bake-lift, .group:focus-within .bake-lift { transform: translateY(-5px) rotate(-3deg); }
+
+@keyframes badge-pop { 0% { transform: scale(1); } 40% { transform: scale(1.35); } 100% { transform: scale(1); } }
+.badge-pop { animation: badge-pop .45s var(--ease-rise); }
+
+/* Basket drawer */
+.drawer-open { overflow: hidden; }
+#basket-drawer { transition: translate .35s var(--ease-soft); }
+#basket-drawer.is-open { translate: 0 0; }
+#basket-backdrop { transition: opacity .3s ease; }
+
+/* Toast */
+#toast { transition: opacity .25s ease, transform .25s var(--ease-soft); }
+#toast[data-show="false"] { opacity: 0; transform: translateY(12px); pointer-events: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .steam path, .bob, .status-baking .dot { animation: none; }
+  .steam path { opacity: .55; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+/* Back to top button (created by assets/js/main.js). Remove this block to drop it. */
+@layer components {
+  .back-to-top {
+    position: fixed; z-index: 40;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px) + var(--btt-lift, 0px));
+    display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; cursor: pointer;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, bottom .25s ease, visibility 0s linear .25s,
+      background-color .2s, color .2s, box-shadow .2s;
+    border: 0; border-radius: 999px;
+    background: var(--color-paper); color: var(--color-bramble);
+    box-shadow: 0 0 0 1.5px rgb(58 38 32 / .18), 0 12px 24px -12px rgb(58 38 32 / .6);
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; transition: transform .2s ease; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top.is-visible:hover { background: var(--color-bramble); color: var(--color-paper); }
+  .back-to-top.is-visible:hover svg { transform: translateY(-2px); }
+  .back-to-top:focus-visible { outline: 3px solid var(--color-bramble); outline-offset: 3px; }
+  .back-to-top-target:focus { outline: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top, .back-to-top svg { transition: opacity .01s linear, visibility 0s linear; transform: none !important; }
+  }
+  @media print { .back-to-top { display: none !important; } }
+}

@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orbit — Shift scheduling for restaurants, cafés and shops</title>
+  <meta name="description" content="Orbit is the friendly shift scheduler for hospitality and retail teams. Build the week in minutes, swap shifts from your phone and see labor costs before you publish.">
+  <meta name="theme-color" content="#fdfaf5">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Orbit">
+  <meta property="og:title" content="Orbit — Shift scheduling for restaurants, cafés and shops">
+  <meta property="og:description" content="Orbit is the friendly shift scheduler for hospitality and retail teams. Build the week in minutes, swap shifts from your phone and see labor costs before you publish.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500..800&amp;family=Rethink+Sans:ital,wght@0,400..700;1,400&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="home" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[95] rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 px-3 pt-3 sm:px-5">
+    <div class="bar mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 rounded-full border border-transparent pr-2.5 pl-4 sm:pl-5">
+      <a href="index.html" class="group inline-flex items-center gap-2" aria-label="Orbit home">
+        <svg viewBox="0 0 40 40" class="h-9 w-9 transition-transform duration-500 group-hover:rotate-[20deg] shrink-0" aria-hidden="true"><g transform="rotate(-22 20 20)"><ellipse cx="20" cy="20" rx="17.5" ry="7" fill="none" stroke="#1f1d3d" stroke-width="2.6"/></g><circle cx="20" cy="20" r="9.5" fill="#ff6b4a"/><circle cx="16.6" cy="16.4" r="2.6" fill="#fff" opacity=".45"/><g transform="rotate(-22 20 20)"><path d="M2.5 20a17.5 7 0 0 0 35 0" fill="none" stroke="#1f1d3d" stroke-width="2.6" stroke-linecap="round"/><circle cx="37.5" cy="20" r="3.4" fill="#ffd84d" stroke="#1f1d3d" stroke-width="2"/></g></svg>
+        <span class="font-display text-[22px] font-bold tracking-[-0.03em]">orbit</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-0.5">
+          <li><a href="features.html" class="nav-link">Product</a></li>
+          <li><a href="integrations.html" class="nav-link">Integrations</a></li>
+          <li><a href="customers.html" class="nav-link">Customers</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="about.html" class="nav-link">Company</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="nav-link hidden sm:inline-flex">Talk to sales</a>
+        <a href="signup.html" class="btn-primary btn-sm hidden sm:inline-flex">Start free trial</a>
+        <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-full border border-line bg-white text-ink lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="mx-auto mt-2 max-w-7xl rounded-4xl border border-line bg-white p-3 shadow-[0_24px_48px_-24px_rgba(31,29,61,.4)] lg:hidden">
+      <nav aria-label="Mobile">
+        <ul class="grid gap-0.5">
+          <li><a href="features.html" class="m-link">Product<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="integrations.html" class="m-link">Integrations<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="customers.html" class="m-link">Customers<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="pricing.html" class="m-link">Pricing<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="about.html" class="m-link">Company<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="changelog.html" class="m-link">Changelog<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="contact.html" class="m-link">Talk to sales<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+        </ul>
+        <a href="signup.html" class="btn-primary btn-lg mt-3 w-full">Start free trial</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <!-- Hero with interactive schedule -->
+    <section class="relative -mt-[5.75rem] overflow-hidden pt-[5.75rem]">
+      <div class="bg-mesh pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="orbit-ring pointer-events-none absolute -top-40 -right-40 hidden h-[44rem] w-[44rem] lg:block" aria-hidden="true"></div>
+      <div class="container-x relative grid items-center gap-12 pt-12 pb-20 sm:pt-16 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.12fr)] lg:gap-14 lg:pt-20 lg:pb-28">
+        <div>
+          <a href="changelog.html" class="reveal inline-flex max-w-full items-center gap-2 rounded-full bg-white py-1 pr-3 pl-1 text-sm font-medium text-ink-soft shadow-[0_0_0_1px_var(--color-line)] transition hover:text-ink">
+            <span class="shrink-0 rounded-full bg-butter px-2.5 py-0.5 text-xs font-bold text-butter-ink">New</span>
+            <span class="truncate">Auto-fill now balances hours fairly</span>
+            <svg viewBox="0 0 20 20" class="h-4 w-4 shrink-0" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg>
+          </a>
+          <h1 class="h-display reveal reveal-d1 mt-6">Every shift covered. <span class="marker">Sunday nights</span> back.</h1>
+          <p class="lead reveal reveal-d2 mt-6 max-w-xl">Orbit is the shift scheduler for restaurants, cafés, hotels and shops. Build next week in minutes, let your team swap shifts from their phones, and see labor costs before you hit publish.</p>
+          <div class="reveal reveal-d3 mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="signup.html" class="btn-primary btn-lg">Start your free trial <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></a>
+            <a href="features.html" class="btn-ghost btn-lg">See how it works</a>
+          </div>
+          <ul class="reveal reveal-d3 mt-6 flex flex-wrap gap-x-5 gap-y-2 text-sm font-medium text-ink-soft">
+            <li class="inline-flex items-center gap-1.5"><svg viewBox="0 0 20 20" class="h-4 w-4 text-mint-ink" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Free for teams up to 15</li>
+            <li class="inline-flex items-center gap-1.5"><svg viewBox="0 0 20 20" class="h-4 w-4 text-mint-ink" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>No card needed</li>
+            <li class="inline-flex items-center gap-1.5"><svg viewBox="0 0 20 20" class="h-4 w-4 text-mint-ink" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Set up in an afternoon</li>
+          </ul>
+          <div class="reveal mt-10 flex items-center gap-4">
+            <span class="flex -space-x-2.5">
+              <span class="rounded-full ring-[3px] ring-paper"><svg viewBox="0 0 80 80" class="h-10 w-10 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#d7ebff"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#9d1f55"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#a86e48"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#a86e48"/><circle cx="40" cy="12" r="6" fill="#3b2a5c"/><path d="M25 27c0-9 6-14 15-14s15 5 15 14c-3-4-8-6-15-6s-12 2-15 6z" fill="#3b2a5c"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg></span><span class="rounded-full ring-[3px] ring-paper"><svg viewBox="0 0 80 80" class="h-10 w-10 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#d7ebff"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#9d1f55"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#c98d63"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#c98d63"/><path d="M25 25c0-9 6-13 15-13s15 4 15 13v4c-2-5-6-8-15-8s-13 3-15 8z" fill="#8a6a4f"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg></span><span class="rounded-full ring-[3px] ring-paper"><svg viewBox="0 0 80 80" class="h-10 w-10 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#d2f1e2"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#4c35b0"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#8d5a3b"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#8d5a3b"/><path d="M25 24c1-8 7-11 15-11s14 3 15 11c-4-2-6-5-6-5s-6 5-24 5z" fill="#8a6a4f"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg></span><span class="rounded-full ring-[3px] ring-paper"><svg viewBox="0 0 80 80" class="h-10 w-10 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#ffdcea"/><path d="M24 31c-2-12 4-19 16-19s18 7 16 19c-1 6-1 13 2 18H22c3-5 3-12 2-18z" fill="#5a3825"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#ff6b4a"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#c98d63"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#c98d63"/><path d="M25 26c0-8 6-12 15-12s15 4 15 12c-4-3-9-5-15-5s-11 2-15 5z" fill="#5a3825"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+            </span>
+            <p class="text-sm leading-snug text-ink-soft"><span class="inline-flex items-center gap-0.5 text-[#e9a400]" aria-hidden="true"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="m10 2.8 2.2 4.6 5 .6-3.7 3.4 1 5-4.5-2.5-4.5 2.5 1-5L2.8 8l5-.6z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="m10 2.8 2.2 4.6 5 .6-3.7 3.4 1 5-4.5-2.5-4.5 2.5 1-5L2.8 8l5-.6z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="m10 2.8 2.2 4.6 5 .6-3.7 3.4 1 5-4.5-2.5-4.5 2.5 1-5L2.8 8l5-.6z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="m10 2.8 2.2 4.6 5 .6-3.7 3.4 1 5-4.5-2.5-4.5 2.5 1-5L2.8 8l5-.6z"/></svg><svg viewBox="0 0 20 20" class="h-4 w-4" fill="currentColor" aria-hidden="true"><path d="m10 2.8 2.2 4.6 5 .6-3.7 3.4 1 5-4.5-2.5-4.5 2.5 1-5L2.8 8l5-.6z"/></svg></span><br><strong class="font-semibold text-ink">4.8 out of 5</strong> from 1,900 managers</p>
+          </div>
+        </div>
+
+        <!-- Interactive demo: main.js section 4 -->
+        <div class="reveal relative">
+          <p class="float-y absolute -top-5 right-4 z-10 hidden items-center gap-2 rounded-full bg-ink px-3.5 py-1.5 text-xs font-semibold text-white shadow-lg sm:inline-flex" aria-hidden="true"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5 text-butter" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2.5c.6 3.9 1.6 4.9 5.5 5.5-3.9.6-4.9 1.6-5.5 5.5-.6-3.9-1.6-4.9-5.5-5.5 3.9-.6 4.9-1.6 5.5-5.5zM15.5 13.5c.3 1.6.7 2 2.3 2.3-1.6.3-2 .7-2.3 2.3-.3-1.6-.7-2-2.3-2.3 1.6-.3 2-.7 2.3-2.3z"/></svg>Try it: click or drag a shift</p>
+          <div id="schedule-demo" class="window sched">
+            <div class="flex flex-wrap items-center justify-between gap-3 border-b border-line bg-white px-4 py-3.5 sm:px-5">
+              <div class="min-w-0">
+                <h2 class="font-display text-base font-semibold tracking-[-0.01em]">Lantern Coffee · Downtown</h2>
+                <p class="text-xs text-ink-faint">Week of Oct 19 · Front of house</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="relative h-11 w-11" aria-hidden="true">
+                  <svg viewBox="0 0 44 44" class="h-11 w-11 -rotate-90"><circle cx="22" cy="22" r="18" fill="none" stroke="var(--color-sand)" stroke-width="5"/><circle id="cov-ring" cx="22" cy="22" r="18" fill="none" stroke="#1fa16a" stroke-width="5" stroke-linecap="round" pathLength="100" stroke-dasharray="87 100" class="transition-[stroke-dasharray,stroke] duration-500"/></svg>
+                </div>
+                <div class="text-right">
+                  <p class="font-display text-lg leading-none font-bold tabular-nums"><span id="cov-pct">87</span>%</p>
+                  <p class="mt-0.5 text-xs text-ink-faint">covered</p>
+                </div>
+              </div>
+            </div>
+            <div class="px-2.5 pt-3 pb-1 sm:px-4">
+              <table class="w-full table-fixed border-separate border-spacing-[3px] sm:border-spacing-1">
+                <caption class="sr-only">Shift schedule demo. Use arrow keys to move between cells, Enter or Space to change a shift, Delete to clear it.</caption>
+                <colgroup><col class="w-[4.4rem] sm:w-[8.5rem]"></colgroup>
+                <thead>
+                  <tr>
+                    <th scope="col" class="text-left text-[11px] font-semibold text-ink-faint sm:text-xs"><span class="sr-only">Team member</span></th>
+                    <th scope="col" class="pb-1 text-center text-[11px] font-semibold text-ink-soft sm:text-xs"><abbr title="Monday" class="no-underline">Mon</abbr></th>
+                    <th scope="col" class="pb-1 text-center text-[11px] font-semibold text-ink-soft sm:text-xs"><abbr title="Tuesday" class="no-underline">Tue</abbr></th>
+                    <th scope="col" class="pb-1 text-center text-[11px] font-semibold text-ink-soft sm:text-xs"><abbr title="Wednesday" class="no-underline">Wed</abbr></th>
+                    <th scope="col" class="pb-1 text-center text-[11px] font-semibold text-ink-soft sm:text-xs"><abbr title="Thursday" class="no-underline">Thu</abbr></th>
+                    <th scope="col" class="pb-1 text-center text-[11px] font-semibold text-ink-soft sm:text-xs"><abbr title="Friday" class="no-underline">Fri</abbr></th>
+                    <th scope="col" class="pb-1 text-center text-[11px] font-semibold text-ink-soft sm:text-xs"><abbr title="Saturday" class="no-underline">Sat</abbr></th>
+                    <th scope="col" class="pb-1 text-center text-[11px] font-semibold text-ink-soft sm:text-xs"><abbr title="Sunday" class="no-underline">Sun</abbr></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-person="maya">
+                    <th scope="row" class="pr-1 text-left font-normal">
+                      <span class="flex items-center gap-2">
+                        <svg viewBox="0 0 80 80" class="hidden h-8 w-8 sm:block shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#d7ebff"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#4c35b0"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#c98d63"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#c98d63"/><path d="M25 25c0-9 6-13 15-13s15 4 15 13v4c-2-5-6-8-15-8s-13 3-15 8z" fill="#8a6a4f"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg>
+                        <span class="min-w-0">
+                          <span data-name class="block truncate text-[13px] font-semibold text-ink sm:text-sm">Maya</span>
+                          <span class="block text-[11px] text-ink-faint tabular-nums sm:text-xs" data-hours>0h</span>
+                        </span>
+                      </span>
+                    </th>
+                    <td><button type="button" class="sched-cell" data-day="0" data-shift="am" tabindex="-1" aria-label="Maya, Monday"><span data-l>AM</span> <span data-t class="hidden text-[10px] font-medium sm:block">7–3</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="1" data-shift="am" tabindex="-1" aria-label="Maya, Tuesday"><span data-l>AM</span> <span data-t class="hidden text-[10px] font-medium sm:block">7–3</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="2" data-shift="pm" tabindex="-1" aria-label="Maya, Wednesday"><span data-l>PM</span> <span data-t class="hidden text-[10px] font-medium sm:block">2–10</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="3" data-shift="am" tabindex="-1" aria-label="Maya, Thursday"><span data-l>AM</span> <span data-t class="hidden text-[10px] font-medium sm:block">7–3</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="4" data-shift="" tabindex="-1" aria-label="Maya, Friday"><span data-l></span> <span data-t class="hidden text-[10px] font-medium sm:block"></span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="5" data-shift="" tabindex="-1" aria-label="Maya, Saturday"><span data-l></span> <span data-t class="hidden text-[10px] font-medium sm:block"></span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="6" data-shift="am" tabindex="-1" aria-label="Maya, Sunday"><span data-l>AM</span> <span data-t class="hidden text-[10px] font-medium sm:block">7–3</span></button></td>
+                  </tr>
+                  <tr data-person="tomas">
+                    <th scope="row" class="pr-1 text-left font-normal">
+                      <span class="flex items-center gap-2">
+                        <svg viewBox="0 0 80 80" class="hidden h-8 w-8 sm:block shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#e6e0ff"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#9d1f55"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#f1c7a5"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#f1c7a5"/><path d="M25 25c0-9 6-13 15-13s15 4 15 13v4c-2-5-6-8-15-8s-13 3-15 8z" fill="#3b2a5c"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg>
+                        <span class="min-w-0">
+                          <span data-name class="block truncate text-[13px] font-semibold text-ink sm:text-sm">Tomás</span>
+                          <span class="block text-[11px] text-ink-faint tabular-nums sm:text-xs" data-hours>0h</span>
+                        </span>
+                      </span>
+                    </th>
+                    <td><button type="button" class="sched-cell" data-day="0" data-shift="pm" tabindex="-1" aria-label="Tomás, Monday"><span data-l>PM</span> <span data-t class="hidden text-[10px] font-medium sm:block">2–10</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="1" data-shift="" tabindex="-1" aria-label="Tomás, Tuesday"><span data-l></span> <span data-t class="hidden text-[10px] font-medium sm:block"></span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="2" data-shift="am" tabindex="-1" aria-label="Tomás, Wednesday"><span data-l>AM</span> <span data-t class="hidden text-[10px] font-medium sm:block">7–3</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="3" data-shift="am" tabindex="-1" aria-label="Tomás, Thursday"><span data-l>AM</span> <span data-t class="hidden text-[10px] font-medium sm:block">7–3</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="4" data-shift="pm" tabindex="-1" aria-label="Tomás, Friday"><span data-l>PM</span> <span data-t class="hidden text-[10px] font-medium sm:block">2–10</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="5" data-shift="am" tabindex="-1" aria-label="Tomás, Saturday"><span data-l>AM</span> <span data-t class="hidden text-[10px] font-medium sm:block">7–3</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="6" data-shift="" tabindex="-1" aria-label="Tomás, Sunday"><span data-l></span> <span data-t class="hidden text-[10px] font-medium sm:block"></span></button></td>
+                  </tr>
+                  <tr data-person="priya">
+                    <th scope="row" class="pr-1 text-left font-normal">
+                      <span class="flex items-center gap-2">
+                        <svg viewBox="0 0 80 80" class="hidden h-8 w-8 sm:block shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#fff0b0"/><path d="M24 31c-2-12 4-19 16-19s18 7 16 19c-1 6-1 13 2 18H22c3-5 3-12 2-18z" fill="#3b2a5c"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#9d1f55"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#f1c7a5"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#f1c7a5"/><path d="M25 26c0-8 6-12 15-12s15 4 15 12c-4-3-9-5-15-5s-11 2-15 5z" fill="#3b2a5c"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg>
+                        <span class="min-w-0">
+                          <span data-name class="block truncate text-[13px] font-semibold text-ink sm:text-sm">Priya</span>
+                          <span class="block text-[11px] text-ink-faint tabular-nums sm:text-xs" data-hours>0h</span>
+                        </span>
+                      </span>
+                    </th>
+                    <td><button type="button" class="sched-cell" data-day="0" data-shift="am" tabindex="-1" aria-label="Priya, Monday"><span data-l>AM</span> <span data-t class="hidden text-[10px] font-medium sm:block">7–3</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="1" data-shift="am" tabindex="-1" aria-label="Priya, Tuesday"><span data-l>AM</span> <span data-t class="hidden text-[10px] font-medium sm:block">7–3</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="2" data-shift="" tabindex="-1" aria-label="Priya, Wednesday"><span data-l></span> <span data-t class="hidden text-[10px] font-medium sm:block"></span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="3" data-shift="pm" tabindex="-1" aria-label="Priya, Thursday"><span data-l>PM</span> <span data-t class="hidden text-[10px] font-medium sm:block">2–10</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="4" data-shift="am" tabindex="-1" aria-label="Priya, Friday"><span data-l>AM</span> <span data-t class="hidden text-[10px] font-medium sm:block">7–3</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="5" data-shift="pm" tabindex="-1" aria-label="Priya, Saturday"><span data-l>PM</span> <span data-t class="hidden text-[10px] font-medium sm:block">2–10</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="6" data-shift="off" tabindex="-1" aria-label="Priya, Sunday"><span data-l>Off</span> <span data-t class="hidden text-[10px] font-medium sm:block">PTO</span></button></td>
+                  </tr>
+                  <tr data-person="jonah">
+                    <th scope="row" class="pr-1 text-left font-normal">
+                      <span class="flex items-center gap-2">
+                        <svg viewBox="0 0 80 80" class="hidden h-8 w-8 sm:block shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#ffe3d4"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#0d6440"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#f6d3b8"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#f6d3b8"/><path d="M25 25c0-9 6-13 15-13s15 4 15 13v4c-2-5-6-8-15-8s-13 3-15 8z" fill="#2b2140"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg>
+                        <span class="min-w-0">
+                          <span data-name class="block truncate text-[13px] font-semibold text-ink sm:text-sm">Jonah</span>
+                          <span class="block text-[11px] text-ink-faint tabular-nums sm:text-xs" data-hours>0h</span>
+                        </span>
+                      </span>
+                    </th>
+                    <td><button type="button" class="sched-cell" data-day="0" data-shift="off" tabindex="-1" aria-label="Jonah, Monday"><span data-l>Off</span> <span data-t class="hidden text-[10px] font-medium sm:block">PTO</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="1" data-shift="pm" tabindex="-1" aria-label="Jonah, Tuesday"><span data-l>PM</span> <span data-t class="hidden text-[10px] font-medium sm:block">2–10</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="2" data-shift="am" tabindex="-1" aria-label="Jonah, Wednesday"><span data-l>AM</span> <span data-t class="hidden text-[10px] font-medium sm:block">7–3</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="3" data-shift="" tabindex="-1" aria-label="Jonah, Thursday"><span data-l></span> <span data-t class="hidden text-[10px] font-medium sm:block"></span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="4" data-shift="am" tabindex="-1" aria-label="Jonah, Friday"><span data-l>AM</span> <span data-t class="hidden text-[10px] font-medium sm:block">7–3</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="5" data-shift="" tabindex="-1" aria-label="Jonah, Saturday"><span data-l></span> <span data-t class="hidden text-[10px] font-medium sm:block"></span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="6" data-shift="pm" tabindex="-1" aria-label="Jonah, Sunday"><span data-l>PM</span> <span data-t class="hidden text-[10px] font-medium sm:block">2–10</span></button></td>
+                  </tr>
+                  <tr data-person="aisha">
+                    <th scope="row" class="pr-1 text-left font-normal">
+                      <span class="flex items-center gap-2">
+                        <svg viewBox="0 0 80 80" class="hidden h-8 w-8 sm:block shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#e6e0ff"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#1f1d3d"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#e8b48f"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#e8b48f"/><circle cx="40" cy="12" r="6" fill="#b7672f"/><path d="M25 27c0-9 6-14 15-14s15 5 15 14c-3-4-8-6-15-6s-12 2-15 6z" fill="#b7672f"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg>
+                        <span class="min-w-0">
+                          <span data-name class="block truncate text-[13px] font-semibold text-ink sm:text-sm">Aisha</span>
+                          <span class="block text-[11px] text-ink-faint tabular-nums sm:text-xs" data-hours>0h</span>
+                        </span>
+                      </span>
+                    </th>
+                    <td><button type="button" class="sched-cell" data-day="0" data-shift="" tabindex="-1" aria-label="Aisha, Monday"><span data-l></span> <span data-t class="hidden text-[10px] font-medium sm:block"></span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="1" data-shift="" tabindex="-1" aria-label="Aisha, Tuesday"><span data-l></span> <span data-t class="hidden text-[10px] font-medium sm:block"></span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="2" data-shift="" tabindex="-1" aria-label="Aisha, Wednesday"><span data-l></span> <span data-t class="hidden text-[10px] font-medium sm:block"></span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="3" data-shift="" tabindex="-1" aria-label="Aisha, Thursday"><span data-l></span> <span data-t class="hidden text-[10px] font-medium sm:block"></span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="4" data-shift="" tabindex="-1" aria-label="Aisha, Friday"><span data-l></span> <span data-t class="hidden text-[10px] font-medium sm:block"></span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="5" data-shift="pm" tabindex="-1" aria-label="Aisha, Saturday"><span data-l>PM</span> <span data-t class="hidden text-[10px] font-medium sm:block">2–10</span></button></td>
+                    <td><button type="button" class="sched-cell" data-day="6" data-shift="" tabindex="-1" aria-label="Aisha, Sunday"><span data-l></span> <span data-t class="hidden text-[10px] font-medium sm:block"></span></button></td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <th scope="row" class="pt-1 text-left text-[11px] font-semibold text-ink-faint sm:text-xs">Needs</th>
+                    <td class="pt-1 text-center"><span data-cov="0" class="inline-flex h-6 min-w-6 items-center justify-center rounded-full px-1 text-[11px] font-bold"></span></td>
+                    <td class="pt-1 text-center"><span data-cov="1" class="inline-flex h-6 min-w-6 items-center justify-center rounded-full px-1 text-[11px] font-bold"></span></td>
+                    <td class="pt-1 text-center"><span data-cov="2" class="inline-flex h-6 min-w-6 items-center justify-center rounded-full px-1 text-[11px] font-bold"></span></td>
+                    <td class="pt-1 text-center"><span data-cov="3" class="inline-flex h-6 min-w-6 items-center justify-center rounded-full px-1 text-[11px] font-bold"></span></td>
+                    <td class="pt-1 text-center"><span data-cov="4" class="inline-flex h-6 min-w-6 items-center justify-center rounded-full px-1 text-[11px] font-bold"></span></td>
+                    <td class="pt-1 text-center"><span data-cov="5" class="inline-flex h-6 min-w-6 items-center justify-center rounded-full px-1 text-[11px] font-bold"></span></td>
+                    <td class="pt-1 text-center"><span data-cov="6" class="inline-flex h-6 min-w-6 items-center justify-center rounded-full px-1 text-[11px] font-bold"></span></td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <div class="flex flex-col gap-3 border-t border-line bg-cream/60 px-4 py-3.5 sm:flex-row sm:items-center sm:justify-between sm:px-5">
+              <p id="cov-note" class="text-sm font-medium text-ink-soft" aria-live="polite">3 open shifts: Fri PM, Sat AM, Sun AM</p>
+              <div class="flex gap-2">
+                <button type="button" id="demo-fill" class="btn-ghost btn-sm"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 16 9-9M12 4l1-1.5M15.5 7.5 17 6.5M14.8 3.2l.4 1.7M16.8 5.2l-1.7-.4M11.5 5.5l3 3"/></svg>Auto-fill</button>
+                <button type="button" id="demo-reset" class="btn-ghost btn-sm px-3" aria-label="Reset demo"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 10a6.5 6.5 0 1 0 2-4.7M3.5 3.5v3.5H7"/></svg><span class="sm:hidden">Reset</span></button>
+                <button type="button" id="demo-publish" class="btn-primary btn-sm">Publish</button>
+              </div>
+            </div>
+          </div>
+          <ul class="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-1.5 text-xs font-medium text-ink-soft lg:justify-start" aria-label="Legend">
+            <li class="inline-flex items-center gap-1.5"><span class="h-3 w-3 rounded bg-mint ring-1 ring-[#9edcbe]" aria-hidden="true"></span>AM 7 am–3 pm</li>
+            <li class="inline-flex items-center gap-1.5"><span class="h-3 w-3 rounded bg-lilac ring-1 ring-[#c3b6ff]" aria-hidden="true"></span>PM 2–10 pm</li>
+            <li class="inline-flex items-center gap-1.5"><span class="h-3 w-3 rounded bg-peach ring-1 ring-[#f4c9b5]" aria-hidden="true"></span>Approved time off</li>
+            <li class="inline-flex items-center gap-1.5"><kbd class="rounded border border-line bg-white px-1 font-sans text-[10px]">Enter</kbd> change · drag to move</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logo strip -->
+    <section aria-labelledby="logos-title" class="container-x pb-20">
+      <h2 id="logos-title" class="reveal text-center text-sm font-semibold text-ink-soft">Running the schedule at 4,200 cafés, kitchens, hotels and shops</h2>
+      <ul class="reveal mt-8 grid grid-cols-2 items-center gap-x-6 gap-y-8 text-ink/55 sm:grid-cols-4 lg:grid-cols-8">
+        <li class="flex justify-center"><svg viewBox="0 0 170 40" class="h-8 w-auto max-w-full transition hover:text-ink" role="img" aria-label="Lantern Coffee"><path d="M14 8h8l2 4v16a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V12z" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M18 16v8" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><text x="34" y="27" font-family="Gabarito, sans-serif" font-size="19" font-weight="700" fill="currentColor" letter-spacing="-.4">Lantern</text><text x="105" y="27" font-family="Rethink Sans, sans-serif" font-size="15" font-weight="500" fill="currentColor">coffee</text></svg></li>
+        <li class="flex justify-center"><svg viewBox="0 0 170 40" class="h-8 w-auto max-w-full transition hover:text-ink" role="img" aria-label="Fernhill Hotels"><path d="M20 33V9M20 14l-7-4M20 19l-8-3M20 24l-8-2M20 14l7-4M20 19l8-3M20 24l8-2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><text x="36" y="27" font-family="Georgia, serif" font-size="20" font-style="italic" fill="currentColor">Fernhill</text><text x="114" y="27" font-family="Rethink Sans, sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="currentColor">HOTELS</text></svg></li>
+        <li class="flex justify-center"><svg viewBox="0 0 170 40" class="h-8 w-auto max-w-full transition hover:text-ink" role="img" aria-label="Saltwater Kitchen"><path d="M6 22c4-5 8-5 12 0s8 5 12 0M6 29c4-5 8-5 12 0s8 5 12 0" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><text x="38" y="21" font-family="Gabarito, sans-serif" font-size="15" font-weight="800" letter-spacing="1.5" fill="currentColor">SALTWATER</text><text x="38" y="33" font-family="Rethink Sans, sans-serif" font-size="10" font-weight="600" letter-spacing="3" fill="currentColor">KITCHEN</text></svg></li>
+        <li class="flex justify-center"><svg viewBox="0 0 170 40" class="h-8 w-auto max-w-full transition hover:text-ink" role="img" aria-label="Juniper and Co"><circle cx="17" cy="20" r="11" fill="currentColor"/><circle cx="13" cy="17" r="2.5" fill="#fdfaf5"/><text x="36" y="27" font-family="Rethink Sans, sans-serif" font-size="20" font-weight="700" fill="currentColor" letter-spacing="-.6">juniper&amp;co</text></svg></li>
+        <li class="flex justify-center"><svg viewBox="0 0 170 40" class="h-8 w-auto max-w-full transition hover:text-ink" role="img" aria-label="Northpine Outfitters"><path d="M17 6 6 32h22z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/><path d="M17 16l-5 12h10z" fill="currentColor"/><text x="36" y="26" font-family="Gabarito, sans-serif" font-size="18" font-weight="600" fill="currentColor" letter-spacing="2">NORTHPINE</text></svg></li>
+        <li class="flex justify-center"><svg viewBox="0 0 170 40" class="h-8 w-auto max-w-full transition hover:text-ink" role="img" aria-label="Brightside Bakery"><path d="M5 28a13 13 0 0 1 26 0z" fill="currentColor"/><path d="M18 9v4M8 13l2.5 3M28 13l-2.5 3" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><text x="38" y="28" font-family="Georgia, serif" font-size="20" font-weight="700" fill="currentColor" letter-spacing="-.5">Brightside</text></svg></li>
+        <li class="flex justify-center"><svg viewBox="0 0 170 40" class="h-8 w-auto max-w-full transition hover:text-ink" role="img" aria-label="Palomar Theaters"><rect x="5" y="9" width="24" height="22" rx="4" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="m14 15 8 5-8 5z" fill="currentColor"/><text x="37" y="27" font-family="Gabarito, sans-serif" font-size="20" font-weight="800" fill="currentColor" letter-spacing="-.8">palomar</text></svg></li>
+        <li class="flex justify-center"><svg viewBox="0 0 170 40" class="h-8 w-auto max-w-full transition hover:text-ink" role="img" aria-label="Copperleaf Grocers"><path d="M8 31C8 18 15 9 30 8c0 14-8 22-22 23zM8 31l11-11" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><text x="38" y="27" font-family="Rethink Sans, sans-serif" font-size="18" font-weight="600" fill="currentColor" letter-spacing="-.3">Copperleaf</text></svg></li>
+      </ul>
+    </section>
+
+    <!-- Problem -> solution -->
+    <section class="container-x py-12 sm:py-20">
+      <div class="mx-auto max-w-3xl text-center">
+        <p class="eyebrow reveal"><span class="eyebrow-dot"></span>The old way</p>
+        <h2 class="h-section reveal mt-5">Your schedule shouldn’t live in a group chat.</h2>
+        <p class="lead reveal mx-auto mt-5 max-w-2xl">Spreadsheets don’t know who asked for Saturday off. Group chats bury the one message that mattered. Orbit keeps the plan, the people and the changes in one place.</p>
+      </div>
+      <div class="mt-14 grid gap-5 lg:grid-cols-2">
+        <article class="reveal panel relative overflow-hidden bg-cream p-6 sm:p-9">
+          <p class="chip bg-white text-ink-soft shadow-[0_0_0_1px_var(--color-line)]">Before</p>
+          <h3 class="h-card mt-4">Twelve tabs, three chats and a Post-it on the fridge</h3>
+          <div class="mt-7 grid gap-3" aria-hidden="true">
+            <div class="max-w-[85%] rounded-2xl rounded-bl-md bg-white px-4 py-2.5 text-sm shadow-sm"><span class="font-semibold">Jonah</span> · can anyone cover sat pm?? 🙏</div>
+            <div class="max-w-[85%] rounded-2xl rounded-bl-md bg-white px-4 py-2.5 text-sm shadow-sm"><span class="font-semibold">Priya</span> · wait is the new schedule the one from tuesday or the pdf</div>
+            <div class="ml-auto max-w-[85%] rounded-2xl rounded-br-md bg-[#e2dcd0] px-4 py-2.5 text-sm"><span class="font-semibold">You</span> · I’ll fix it tonight 😩</div>
+            <div class="mt-2 overflow-hidden rounded-2xl border border-line bg-white text-[11px]">
+              <div class="grid grid-cols-5 border-b border-line bg-[#f1ece2] font-semibold"><span class="px-2 py-1.5">plan_FINAL_v3</span><span class="px-2 py-1.5">Fri</span><span class="px-2 py-1.5">Sat</span><span class="px-2 py-1.5">Sun</span><span class="px-2 py-1.5">hrs</span></div>
+              <div class="grid grid-cols-5 border-b border-line"><span class="px-2 py-1.5">Maya</span><span class="px-2 py-1.5">7-3</span><span class="bg-[#ffd9d4] px-2 py-1.5">??</span><span class="px-2 py-1.5">7-3</span><span class="px-2 py-1.5">#REF!</span></div>
+              <div class="grid grid-cols-5"><span class="px-2 py-1.5">Jonah</span><span class="px-2 py-1.5 line-through">2-10</span><span class="px-2 py-1.5">2-10</span><span class="bg-[#ffd9d4] px-2 py-1.5">off?</span><span class="px-2 py-1.5">41</span></div>
+            </div>
+          </div>
+        </article>
+        <article class="reveal reveal-d1 panel relative overflow-hidden bg-mint p-6 sm:p-9">
+          <p class="chip bg-white text-mint-ink">With Orbit</p>
+          <h3 class="h-card mt-4">One schedule everyone trusts, on every phone</h3>
+          <div class="mt-7 grid gap-3" aria-hidden="true">
+            <div class="flex items-center gap-3 rounded-2xl bg-white p-3.5 shadow-sm">
+              <span class="grid h-10 w-10 place-items-center rounded-xl bg-lilac text-lilac-ink"><svg viewBox="0 0 20 20" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h11l-3-3M16 13H5l3 3"/></svg></span>
+              <div class="min-w-0 flex-1"><p class="text-sm font-semibold">Sat PM swap approved</p><p class="truncate text-xs text-ink-faint">Jonah → Tomás · hours stay under 40</p></div>
+              <span class="chip bg-mint text-mint-ink">Done</span>
+            </div>
+            <div class="flex items-center gap-3 rounded-2xl bg-white p-3.5 shadow-sm">
+              <span class="grid h-10 w-10 place-items-center rounded-xl bg-peach text-peach-ink"><svg viewBox="0 0 20 20" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="3.2"/><path d="M10 2.5v1.8M10 15.7v1.8M2.5 10h1.8M15.7 10h1.8M4.7 4.7l1.3 1.3M14 14l1.3 1.3M4.7 15.3 6 14M14 6l1.3-1.3"/></svg></span>
+              <div class="min-w-0 flex-1"><p class="text-sm font-semibold">Sunday off for Priya</p><p class="truncate text-xs text-ink-faint">Approved · blocked on the schedule</p></div>
+              <span class="chip bg-mint text-mint-ink">Done</span>
+            </div>
+            <div class="flex items-center gap-3 rounded-2xl bg-white p-3.5 shadow-sm">
+              <span class="grid h-10 w-10 place-items-center rounded-xl bg-butter text-butter-ink"><svg viewBox="0 0 20 20" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13.5V9a5 5 0 0 1 10 0v4.5l1.5 1.5h-13z"/><path d="M8.3 17.2a1.9 1.9 0 0 0 3.4 0"/></svg></span>
+              <div class="min-w-0 flex-1"><p class="text-sm font-semibold">Next week published</p><p class="truncate text-xs text-ink-faint">12 people notified · 12 seen</p></div>
+              <span class="font-display text-sm font-bold">Thu 4:12 pm</span>
+            </div>
+            <p class="mt-2 rounded-2xl border-2 border-dashed border-mint-ink/25 px-4 py-3 text-sm font-semibold text-mint-ink">Labor this week: 24.8% of forecast sales · on target</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Feature highlights: bento -->
+    <section class="container-x py-12 sm:py-20" aria-labelledby="highlights-title">
+      <div class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+        <div class="max-w-2xl">
+          <p class="eyebrow reveal"><span class="eyebrow-dot"></span>Everything in one app</p>
+          <h2 id="highlights-title" class="h-section reveal mt-5">Built for the way shift work actually works.</h2>
+        </div>
+        <a href="features.html" class="btn-ghost reveal self-start lg:self-auto">Explore all features <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></a>
+      </div>
+      <div class="mt-12 grid gap-5 md:grid-cols-6">
+        <article class="reveal panel bg-lilac p-7 md:col-span-4 sm:p-9">
+          <span class="grid h-11 w-11 place-items-center rounded-2xl bg-white text-lilac-ink"><svg viewBox="0 0 20 20" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="14" height="12.5" rx="3"/><path d="M3 8.5h14M7 2.5v4M13 2.5v4"/></svg></span>
+          <h3 class="h-card mt-5">Drag-and-drop schedule builder</h3>
+          <p class="mt-2 max-w-md text-ink-soft">Start from last week or a saved template, drag shifts into place and watch coverage, hours and costs update as you go.</p>
+          <div class="mt-7 grid grid-cols-7 gap-1.5 rounded-3xl bg-white/70 p-3" aria-hidden="true">
+            <span class="text-center text-[11px] font-semibold text-ink-faint">Mon</span><span class="text-center text-[11px] font-semibold text-ink-faint">Tue</span><span class="text-center text-[11px] font-semibold text-ink-faint">Wed</span><span class="text-center text-[11px] font-semibold text-ink-faint">Thu</span><span class="text-center text-[11px] font-semibold text-ink-faint">Fri</span><span class="text-center text-[11px] font-semibold text-ink-faint">Sat</span><span class="text-center text-[11px] font-semibold text-ink-faint">Sun</span>
+            <span class="bg-mint h-7 rounded-lg "></span><span class="bg-mint h-7 rounded-lg "></span><span class="bg-lilac h-7 rounded-lg "></span><span class="bg-mint h-7 rounded-lg "></span><span class="bg-peach h-7 rounded-lg "></span><span class="bg-peach h-7 rounded-lg "></span><span class="bg-butter h-7 rounded-lg "></span><span class="bg-lilac h-7 rounded-lg "></span><span class="bg-sky h-7 rounded-lg "></span><span class="bg-mint h-7 rounded-lg "></span><span class="bg-lilac h-7 rounded-lg "></span><span class="bg-peach h-7 rounded-lg ring-2 ring-coral-500"></span><span class="bg-sky h-7 rounded-lg "></span><span class="bg-butter h-7 rounded-lg "></span><span class="bg-sky h-7 rounded-lg "></span><span class="bg-butter h-7 rounded-lg "></span><span class="bg-sky h-7 rounded-lg "></span><span class="bg-butter h-7 rounded-lg "></span><span class="bg-mint h-7 rounded-lg "></span><span class="bg-lilac h-7 rounded-lg "></span><span class="bg-peach h-7 rounded-lg "></span>
+          </div>
+        </article>
+        <article class="reveal reveal-d1 panel flex flex-col bg-peach p-7 md:col-span-2 sm:p-9">
+          <span class="grid h-11 w-11 place-items-center rounded-2xl bg-white text-peach-ink"><svg viewBox="0 0 20 20" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h11l-3-3M16 13H5l3 3"/></svg></span>
+          <h3 class="h-card mt-5">Swaps without the chaos</h3>
+          <p class="mt-2 text-ink-soft">People offer, claim and swap shifts in the app. You approve with one tap, and Orbit checks hours and skills first.</p>
+          <div class="mt-auto pt-7" aria-hidden="true">
+            <div class="flex items-center gap-3 rounded-3xl bg-white/80 p-3.5">
+              <svg viewBox="0 0 80 80" class="h-10 w-10 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#ffe3d4"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#ff6b4a"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#f6d3b8"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#f6d3b8"/><path d="M25 25c0-9 6-13 15-13s15 4 15 13v4c-2-5-6-8-15-8s-13 3-15 8z" fill="#2b2140"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <span class="grid h-8 w-8 place-items-center rounded-full bg-peach text-peach-ink"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h11l-3-3M16 13H5l3 3"/></svg></span>
+              <svg viewBox="0 0 80 80" class="h-10 w-10 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#e6e0ff"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#4c35b0"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#f1c7a5"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#f1c7a5"/><path d="M25 25c0-9 6-13 15-13s15 4 15 13v4c-2-5-6-8-15-8s-13 3-15 8z" fill="#3b2a5c"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg>
+              <span class="ml-auto text-right text-xs"><span class="block font-bold">Sat PM</span><span class="font-semibold text-mint-ink">Approved</span></span>
+            </div>
+          </div>
+        </article>
+        <article class="reveal panel bg-butter p-7 md:col-span-2 sm:p-9">
+          <span class="grid h-11 w-11 place-items-center rounded-2xl bg-white text-butter-ink"><svg viewBox="0 0 20 20" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17h14M6 14V9M10 14V5M14 14v-3"/></svg></span>
+          <h3 class="h-card mt-5">Labor cost, live</h3>
+          <p class="mt-2 text-ink-soft">Forecast sales from your POS sit next to the schedule, so you see labor % before you publish.</p>
+          <svg viewBox="0 0 200 70" class="mt-6 w-full" aria-hidden="true">
+            <rect class="grow-y" x="2" y="38" width="22" height="30" rx="6" fill="#ffffff"/><rect class="grow-y" x="31" y="24" width="22" height="44" rx="6" fill="#ffffff"/><rect class="grow-y" x="60" y="30" width="22" height="38" rx="6" fill="#ffffff"/><rect class="grow-y" x="89" y="16" width="22" height="52" rx="6" fill="#ffffff"/><rect class="grow-y" x="118" y="4" width="22" height="64" rx="6" fill="#ff6b4a"/><rect class="grow-y" x="147" y="10" width="22" height="58" rx="6" fill="#ffffff"/><rect class="grow-y" x="176" y="28" width="22" height="40" rx="6" fill="#ffffff"/>
+          </svg>
+        </article>
+        <article class="reveal reveal-d1 panel bg-mint p-7 md:col-span-2 sm:p-9">
+          <span class="grid h-11 w-11 place-items-center rounded-2xl bg-white text-mint-ink"><svg viewBox="0 0 20 20" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="3.2"/><path d="M10 2.5v1.8M10 15.7v1.8M2.5 10h1.8M15.7 10h1.8M4.7 4.7l1.3 1.3M14 14l1.3 1.3M4.7 15.3 6 14M14 6l1.3-1.3"/></svg></span>
+          <h3 class="h-card mt-5">Availability and time off</h3>
+          <p class="mt-2 text-ink-soft">People set when they can work and request time off. Orbit never schedules someone who said no.</p>
+        </article>
+        <article class="reveal reveal-d2 panel bg-sky p-7 md:col-span-2 sm:p-9">
+          <span class="grid h-11 w-11 place-items-center rounded-2xl bg-white text-sky-ink"><svg viewBox="0 0 20 20" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l2.5 2"/></svg></span>
+          <h3 class="h-card mt-5">Clock in, pay out</h3>
+          <p class="mt-2 text-ink-soft">Clock in from a phone or tablet, approve timesheets and send hours to payroll in one click.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Product tour -->
+    <section id="tour" class="py-12 sm:py-20" aria-labelledby="tour-title">
+      <div class="container-x">
+        <div class="panel relative overflow-hidden bg-cream px-5 py-12 sm:px-10 sm:py-16 lg:px-14">
+          <div class="mx-auto max-w-2xl text-center">
+            <p class="eyebrow reveal"><span class="eyebrow-dot"></span>Product tour</p>
+            <h2 id="tour-title" class="h-section reveal mt-5">From blank week to paid hours.</h2>
+            <p class="lead reveal mt-5">Four steps, one app. Pick a step to see it.</p>
+          </div>
+          <div class="mt-12 grid gap-8 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12" data-tour>
+            <div role="tablist" aria-label="Product tour steps" aria-orientation="vertical" class="reveal grid grid-cols-2 gap-2 lg:grid-cols-1">
+              <button type="button" role="tab" id="tour-tab-build" aria-controls="tour-panel-build" aria-selected="true" tabindex="0" class="tour-tab">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white font-display text-sm font-bold shadow-[0_0_0_1px_var(--color-line)]">1</span>
+                <span class="min-w-0">
+                  <span class="block font-display text-[15px] font-semibold sm:text-lg">Build the week</span>
+                  <span class="mt-1 hidden text-[15px] leading-relaxed text-ink-soft lg:block">Copy last week, apply a template or let auto-fill suggest who works when.</span>
+                </span>
+              </button>
+              <button type="button" role="tab" id="tour-tab-publish" aria-controls="tour-panel-publish" aria-selected="false" tabindex="-1" class="tour-tab">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white font-display text-sm font-bold shadow-[0_0_0_1px_var(--color-line)]">2</span>
+                <span class="min-w-0">
+                  <span class="block font-display text-[15px] font-semibold sm:text-lg">Publish to every phone</span>
+                  <span class="mt-1 hidden text-[15px] leading-relaxed text-ink-soft lg:block">Everyone gets their shifts as a notification, calendar event or text.</span>
+                </span>
+              </button>
+              <button type="button" role="tab" id="tour-tab-swap" aria-controls="tour-panel-swap" aria-selected="false" tabindex="-1" class="tour-tab">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white font-display text-sm font-bold shadow-[0_0_0_1px_var(--color-line)]">3</span>
+                <span class="min-w-0">
+                  <span class="block font-display text-[15px] font-semibold sm:text-lg">Swap and cover</span>
+                  <span class="mt-1 hidden text-[15px] leading-relaxed text-ink-soft lg:block">Open shifts and swaps are claimed in the app and approved in one tap.</span>
+                </span>
+              </button>
+              <button type="button" role="tab" id="tour-tab-pay" aria-controls="tour-panel-pay" aria-selected="false" tabindex="-1" class="tour-tab">
+                <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-white font-display text-sm font-bold shadow-[0_0_0_1px_var(--color-line)]">4</span>
+                <span class="min-w-0">
+                  <span class="block font-display text-[15px] font-semibold sm:text-lg">Clock in and pay</span>
+                  <span class="mt-1 hidden text-[15px] leading-relaxed text-ink-soft lg:block">Timesheets fill themselves. Approve and send hours to payroll.</span>
+                </span>
+              </button>
+            </div>
+            <div class="reveal reveal-d1 min-w-0">
+              <!-- Panel 1: build -->
+              <div role="tabpanel" id="tour-panel-build" aria-labelledby="tour-tab-build" class="window" tabindex="0">
+                <div class="flex items-center justify-between gap-3 border-b border-line px-5 py-3.5">
+                  <p class="font-display font-semibold">Week of Oct 19</p>
+                  <p class="chip bg-butter text-butter-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 16 9-9M12 4l1-1.5M15.5 7.5 17 6.5M14.8 3.2l.4 1.7M16.8 5.2l-1.7-.4M11.5 5.5l3 3"/></svg>Auto-fill suggested 6 shifts</p>
+                </div>
+                <div class="grid grid-cols-[3.5rem_repeat(5,minmax(0,1fr))] gap-1.5 p-4 text-[11px] sm:grid-cols-[5rem_repeat(5,minmax(0,1fr))] sm:p-5 sm:text-xs" aria-hidden="true">
+                  <span></span><span class="text-center font-semibold text-ink-faint">Mon</span><span class="text-center font-semibold text-ink-faint">Tue</span><span class="text-center font-semibold text-ink-faint">Wed</span><span class="text-center font-semibold text-ink-faint">Thu</span><span class="text-center font-semibold text-ink-faint">Fri</span>
+                  <span class="self-center font-semibold text-ink-soft">Kitchen</span><span class="rounded-xl bg-mint px-2 py-2.5 font-semibold text-mint-ink">7–3</span><span class="rounded-xl bg-mint px-2 py-2.5 font-semibold text-mint-ink">9–5</span><span class="grid place-items-center rounded-xl border-2 border-dashed border-coral-300 bg-coral-100/60 py-2.5 font-semibold text-coral-700">+ Fill</span><span class="rounded-xl bg-mint px-2 py-2.5 font-semibold text-mint-ink">4–11</span><span class="rounded-xl bg-mint px-2 py-2.5 font-semibold text-mint-ink">5–12</span><span class="self-center font-semibold text-ink-soft">Bar</span><span class="rounded-xl bg-lilac px-2 py-2.5 font-semibold text-lilac-ink">7–3</span><span class="grid place-items-center rounded-xl border-2 border-dashed border-coral-300 bg-coral-100/60 py-2.5 font-semibold text-coral-700">+ Fill</span><span class="rounded-xl bg-lilac px-2 py-2.5 font-semibold text-lilac-ink">12–8</span><span class="rounded-xl bg-lilac px-2 py-2.5 font-semibold text-lilac-ink">4–11</span><span class="rounded-xl bg-lilac px-2 py-2.5 font-semibold text-lilac-ink">5–12</span><span class="self-center font-semibold text-ink-soft">Floor</span><span class="rounded-xl bg-peach px-2 py-2.5 font-semibold text-peach-ink">7–3</span><span class="rounded-xl bg-peach px-2 py-2.5 font-semibold text-peach-ink">9–5</span><span class="rounded-xl bg-peach px-2 py-2.5 font-semibold text-peach-ink">12–8</span><span class="grid place-items-center rounded-xl border-2 border-dashed border-coral-300 bg-coral-100/60 py-2.5 font-semibold text-coral-700">+ Fill</span><span class="rounded-xl bg-peach px-2 py-2.5 font-semibold text-peach-ink">5–12</span><span class="self-center font-semibold text-ink-soft">Host</span><span class="grid place-items-center rounded-xl border-2 border-dashed border-coral-300 bg-coral-100/60 py-2.5 font-semibold text-coral-700">+ Fill</span><span class="rounded-xl bg-butter px-2 py-2.5 font-semibold text-butter-ink">9–5</span><span class="rounded-xl bg-butter px-2 py-2.5 font-semibold text-butter-ink">12–8</span><span class="rounded-xl bg-butter px-2 py-2.5 font-semibold text-butter-ink">4–11</span><span class="rounded-xl bg-butter px-2 py-2.5 font-semibold text-butter-ink">5–12</span>
+                </div>
+                <div class="flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-line bg-cream/60 px-5 py-3.5 text-sm">
+                  <span><strong class="font-display">186 h</strong> <span class="text-ink-faint">scheduled</span></span>
+                  <span><strong class="font-display">$2,840</strong> <span class="text-ink-faint">labor</span></span>
+                  <span><strong class="font-display text-mint-ink">23.9%</strong> <span class="text-ink-faint">of forecast sales</span></span>
+                </div>
+              </div>
+              <!-- Panel 2: publish -->
+              <div role="tabpanel" id="tour-panel-publish" aria-labelledby="tour-tab-publish" class="window bg-lilac" tabindex="0" hidden>
+                <div class="flex flex-col items-center gap-6 px-5 py-8 sm:flex-row sm:justify-center sm:gap-10" aria-hidden="true">
+                  <div class="w-56 rounded-[2.2rem] border-[6px] border-ink bg-paper p-3 shadow-2xl">
+                    <div class="mx-auto mb-3 h-1.5 w-14 rounded-full bg-ink/80"></div>
+                    <p class="px-1 font-display text-lg font-bold">Hi Tomás 👋</p>
+                    <p class="px-1 text-xs text-ink-faint">Your shifts next week</p>
+                    <div class="mt-3 grid gap-2">
+                      <div class="flex items-center justify-between rounded-xl bg-lilac px-3 py-2 text-xs"><span class="font-bold">Mon 20</span><span class="font-medium">2–10 pm</span></div><div class="flex items-center justify-between rounded-xl bg-mint px-3 py-2 text-xs"><span class="font-bold">Wed 22</span><span class="font-medium">7 am–3 pm</span></div><div class="flex items-center justify-between rounded-xl bg-mint px-3 py-2 text-xs"><span class="font-bold">Thu 23</span><span class="font-medium">7 am–3 pm</span></div><div class="flex items-center justify-between rounded-xl bg-lilac px-3 py-2 text-xs"><span class="font-bold">Fri 24</span><span class="font-medium">2–10 pm</span></div>
+                    </div>
+                    <p class="mt-3 rounded-xl bg-ink px-3 py-2 text-center text-xs font-semibold text-white">Add to calendar</p>
+                  </div>
+                  <div class="grid w-full max-w-xs gap-2.5">
+                    <div class="flex items-center gap-3 rounded-2xl bg-white p-3 shadow-sm"><span class="grid h-9 w-9 place-items-center rounded-xl bg-lilac text-lilac-ink"><svg viewBox="0 0 20 20" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 13.5V9a5 5 0 0 1 10 0v4.5l1.5 1.5h-13z"/><path d="M8.3 17.2a1.9 1.9 0 0 0 3.4 0"/></svg></span><span class="flex-1 text-sm font-semibold">Push notification</span><span class="text-xs text-ink-faint">9 people</span></div><div class="flex items-center gap-3 rounded-2xl bg-white p-3 shadow-sm"><span class="grid h-9 w-9 place-items-center rounded-xl bg-lilac text-lilac-ink"><svg viewBox="0 0 20 20" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="14" height="12.5" rx="3"/><path d="M3 8.5h14M7 2.5v4M13 2.5v4"/></svg></span><span class="flex-1 text-sm font-semibold">Calendar update</span><span class="text-xs text-ink-faint">11 people</span></div><div class="flex items-center gap-3 rounded-2xl bg-white p-3 shadow-sm"><span class="grid h-9 w-9 place-items-center rounded-xl bg-lilac text-lilac-ink"><svg viewBox="0 0 20 20" class="h-4.5 w-4.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4.5h12a1.5 1.5 0 0 1 1.5 1.5v7a1.5 1.5 0 0 1-1.5 1.5H9l-4 3v-3H4A1.5 1.5 0 0 1 2.5 13V6A1.5 1.5 0 0 1 4 4.5z"/></svg></span><span class="flex-1 text-sm font-semibold">Text message</span><span class="text-xs text-ink-faint">2 people</span></div>
+                    <p class="text-center text-sm font-semibold text-lilac-ink">12 of 12 have seen the schedule</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Panel 3: swap -->
+              <div role="tabpanel" id="tour-panel-swap" aria-labelledby="tour-tab-swap" class="window" tabindex="0" hidden>
+                <div class="grid gap-4 p-5 sm:p-7" aria-hidden="true">
+                  <div class="flex items-center justify-between"><p class="font-display font-semibold">Requests</p><span class="chip bg-coral-100 text-coral-700">2 waiting</span></div>
+                  <div class="rounded-3xl border border-line p-4 sm:p-5">
+                    <div class="flex items-center gap-3">
+                      <svg viewBox="0 0 80 80" class="h-11 w-11 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#ffe3d4"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#ff6b4a"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#f6d3b8"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#f6d3b8"/><path d="M25 25c0-9 6-13 15-13s15 4 15 13v4c-2-5-6-8-15-8s-13 3-15 8z" fill="#2b2140"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg>
+                      <div class="min-w-0 flex-1"><p class="text-sm font-semibold">Jonah wants to swap Sat PM</p><p class="text-xs text-ink-faint">with Tomás, who offered to take it</p></div>
+                      <svg viewBox="0 0 80 80" class="h-11 w-11 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#e6e0ff"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#4c35b0"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#f1c7a5"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#f1c7a5"/><path d="M25 25c0-9 6-13 15-13s15 4 15 13v4c-2-5-6-8-15-8s-13 3-15 8z" fill="#3b2a5c"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg>
+                    </div>
+                    <div class="mt-4 grid gap-2 text-xs font-semibold sm:grid-cols-3">
+                      <span class="inline-flex items-center gap-1.5 rounded-xl bg-mint px-3 py-2 text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Barista trained</span>
+                      <span class="inline-flex items-center gap-1.5 rounded-xl bg-mint px-3 py-2 text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>38 h this week</span>
+                      <span class="inline-flex items-center gap-1.5 rounded-xl bg-mint px-3 py-2 text-mint-ink"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>No conflict</span>
+                    </div>
+                    <div class="mt-4 flex gap-2"><span class="btn-primary btn-sm flex-1">Approve</span><span class="btn-ghost btn-sm">Decline</span></div>
+                  </div>
+                  <div class="flex items-center gap-3 rounded-3xl border border-dashed border-line p-4">
+                    <span class="grid h-11 w-11 place-items-center rounded-full bg-butter text-butter-ink"><svg viewBox="0 0 20 20" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="7.5" cy="7" r="2.8"/><path d="M2.5 16.5c.6-2.7 2.6-4.2 5-4.2s4.4 1.5 5 4.2"/><path d="M13 4.5a2.6 2.6 0 0 1 0 5M14.5 12.4c1.6.4 2.7 1.8 3 4.1"/></svg></span>
+                    <div class="flex-1"><p class="text-sm font-semibold">Open shift · Sun 7 am–3 pm</p><p class="text-xs text-ink-faint">Offered to 4 people · Aisha claimed it 3 min ago</p></div>
+                  </div>
+                </div>
+              </div>
+              <!-- Panel 4: pay -->
+              <div role="tabpanel" id="tour-panel-pay" aria-labelledby="tour-tab-pay" class="window" tabindex="0" hidden>
+                <div class="flex items-center justify-between gap-3 border-b border-line px-5 py-3.5">
+                  <p class="font-display font-semibold">Timesheets · Oct 12–18</p>
+                  <span class="chip bg-mint text-mint-ink">11 of 12 approved</span>
+                </div>
+                <div class="relative overflow-x-auto">
+                  <table class="w-full min-w-[30rem] text-left text-sm">
+                    <caption class="sr-only">Example timesheets</caption>
+                    <thead class="text-xs text-ink-faint"><tr><th scope="col" class="px-5 py-2.5 font-semibold">Person</th><th scope="col" class="px-3 py-2.5 font-semibold">Scheduled</th><th scope="col" class="px-3 py-2.5 font-semibold">Clocked</th><th scope="col" class="px-5 py-2.5 text-right font-semibold">Status</th></tr></thead>
+                    <tbody class="divide-y divide-line">
+                      <tr><td class="px-5 py-3 font-semibold">Maya</td><td class="px-3 py-3 tabular-nums text-ink-soft">40:00</td><td class="px-3 py-3 tabular-nums text-ink-soft">40:12</td><td class="px-5 py-3 text-right"><span class="chip bg-mint text-mint-ink">Approved</span></td></tr><tr><td class="px-5 py-3 font-semibold">Tomás</td><td class="px-3 py-3 tabular-nums text-ink-soft">40:00</td><td class="px-3 py-3 tabular-nums text-ink-soft">39:45</td><td class="px-5 py-3 text-right"><span class="chip bg-mint text-mint-ink">Approved</span></td></tr><tr><td class="px-5 py-3 font-semibold">Priya</td><td class="px-3 py-3 tabular-nums text-ink-soft">40:00</td><td class="px-3 py-3 tabular-nums text-ink-soft">41:30</td><td class="px-5 py-3 text-right"><span class="chip bg-butter text-butter-ink">Overtime</span></td></tr><tr><td class="px-5 py-3 font-semibold">Jonah</td><td class="px-3 py-3 tabular-nums text-ink-soft">32:00</td><td class="px-3 py-3 tabular-nums text-ink-soft">32:05</td><td class="px-5 py-3 text-right"><span class="chip bg-mint text-mint-ink">Approved</span></td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="flex flex-wrap items-center justify-between gap-3 border-t border-line bg-cream/60 px-5 py-3.5">
+                  <span class="inline-flex items-center gap-2 text-sm font-semibold"><svg viewBox="0 0 40 40" class="h-7 w-7 shrink-0" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#1d4ed8"/><g fill="#fff"><path d="M8 22c4-6 8-6 12 0s8 6 12 0" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/><circle cx="20" cy="13" r="3" fill="#fff"/></g></svg>Ready for Paywell</span>
+                  <span class="btn-primary btn-sm" aria-hidden="true"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10m-4-4 4 4 4-4M4 16.5h12"/></svg>Send 152 h to payroll</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="container-x py-12 sm:py-20" aria-labelledby="love-title">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="eyebrow reveal"><span class="eyebrow-dot"></span>Customers</p>
+        <h2 id="love-title" class="h-section reveal mt-5">Managers get their evenings back. Teams stop missing shifts.</h2>
+      </div>
+      <div class="mt-14 grid gap-5 lg:grid-cols-3">
+        <figure class="reveal  card flex flex-col overflow-hidden">
+          <div class="bg-peach px-7 pt-7 pb-6">
+            <p class="font-display text-5xl font-extrabold tracking-[-0.04em] text-peach-ink">−5.5 h</p>
+            <p class="mt-1 text-sm font-semibold text-peach-ink">per manager, every week</p>
+          </div>
+          <blockquote class="flex-1 px-7 pt-6 text-[17px] leading-relaxed text-ink">“We used to build the schedule on Sunday night with a spreadsheet and three group chats. Now it takes twenty minutes on Thursday and the team handles their own swaps.”</blockquote>
+          <figcaption class="flex items-center gap-3 px-7 pt-6 pb-7">
+            <svg viewBox="0 0 80 80" class="h-11 w-11 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#d7ebff"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#9d1f55"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#a86e48"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#a86e48"/><circle cx="40" cy="12" r="6" fill="#3b2a5c"/><path d="M25 27c0-9 6-14 15-14s15 5 15 14c-3-4-8-6-15-6s-12 2-15 6z" fill="#3b2a5c"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span><span class="block font-semibold">Hannah Okafor</span><span class="block text-sm text-ink-faint">Ops manager, Lantern Coffee · 9 cafés</span></span>
+          </figcaption>
+        </figure>
+        <figure class="reveal reveal-d1 card flex flex-col overflow-hidden">
+          <div class="bg-mint px-7 pt-7 pb-6">
+            <p class="font-display text-5xl font-extrabold tracking-[-0.04em] text-mint-ink">31%</p>
+            <p class="mt-1 text-sm font-semibold text-mint-ink">fewer no-shows</p>
+          </div>
+          <blockquote class="flex-1 px-7 pt-6 text-[17px] leading-relaxed text-ink">“Reminders and one-tap swaps changed everything. People actually see their shifts, and if they can’t make it, someone picks it up before I even notice.”</blockquote>
+          <figcaption class="flex items-center gap-3 px-7 pt-6 pb-7">
+            <svg viewBox="0 0 80 80" class="h-11 w-11 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#d7ebff"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#9d1f55"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#c98d63"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#c98d63"/><path d="M25 25c0-9 6-13 15-13s15 4 15 13v4c-2-5-6-8-15-8s-13 3-15 8z" fill="#8a6a4f"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span><span class="block font-semibold">Diego Marín</span><span class="block text-sm text-ink-faint">General manager, Saltwater Kitchen</span></span>
+          </figcaption>
+        </figure>
+        <figure class="reveal reveal-d2 card flex flex-col overflow-hidden">
+          <div class="bg-lilac px-7 pt-7 pb-6">
+            <p class="font-display text-5xl font-extrabold tracking-[-0.04em] text-lilac-ink">4.2 pts</p>
+            <p class="mt-1 text-sm font-semibold text-lilac-ink">lower labor cost as % of sales</p>
+          </div>
+          <blockquote class="flex-1 px-7 pt-6 text-[17px] leading-relaxed text-ink">“Seeing labor cost next to forecast sales while I schedule is the feature I didn’t know I needed. We stopped overstaffing quiet Tuesdays.”</blockquote>
+          <figcaption class="flex items-center gap-3 px-7 pt-6 pb-7">
+            <svg viewBox="0 0 80 80" class="h-11 w-11 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#d2f1e2"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#4c35b0"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#8d5a3b"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#8d5a3b"/><path d="M25 24c1-8 7-11 15-11s14 3 15 11c-4-2-6-5-6-5s-6 5-24 5z" fill="#8a6a4f"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <span><span class="block font-semibold">Ruth Achterberg</span><span class="block text-sm text-ink-faint">District manager, Juniper &amp; Co · 14 stores</span></span>
+          </figcaption>
+        </figure>
+      </div>
+      <p class="reveal mt-10 text-center"><a href="customers.html" class="link">Read customer stories</a></p>
+    </section>
+
+    <!-- Integrations teaser -->
+    <section class="container-x py-12 sm:py-20" aria-labelledby="int-title">
+      <div class="grid items-center gap-14 lg:grid-cols-2">
+        <div>
+          <p class="eyebrow reveal"><span class="eyebrow-dot"></span>Integrations</p>
+          <h2 id="int-title" class="h-section reveal mt-5">Plays nicely with your POS, payroll and team chat.</h2>
+          <p class="lead reveal mt-5">Sales from your POS shape the schedule. Approved hours flow to payroll. Changes land in the chat your team already uses. 20 integrations and an open API.</p>
+          <ul class="reveal mt-8 grid gap-3 sm:grid-cols-2">
+            <li><a href="integrations.html?category=pos" class="flex items-center gap-3 rounded-2xl border border-line bg-white px-4 py-3 text-[15px] font-semibold transition hover:-translate-y-0.5 hover:border-ink/25"><svg viewBox="0 0 20 20" class="h-5 w-5 text-coral-600" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M12.3 7.6c-.4-.8-1.3-1.2-2.3-1.2-1.3 0-2.3.7-2.3 1.7 0 2.3 4.8 1.2 4.8 3.7 0 1-1.1 1.8-2.5 1.8-1.1 0-2-.5-2.4-1.3M10 5v1.4M10 13.6V15"/></svg>Point of sale<span class="ml-auto text-ink-faint"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></span></a></li><li><a href="integrations.html?category=payroll" class="flex items-center gap-3 rounded-2xl border border-line bg-white px-4 py-3 text-[15px] font-semibold transition hover:-translate-y-0.5 hover:border-ink/25"><svg viewBox="0 0 20 20" class="h-5 w-5 text-coral-600" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3v10m-4-4 4 4 4-4M4 16.5h12"/></svg>Payroll &amp; accounting<span class="ml-auto text-ink-faint"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></span></a></li><li><a href="integrations.html?category=comms" class="flex items-center gap-3 rounded-2xl border border-line bg-white px-4 py-3 text-[15px] font-semibold transition hover:-translate-y-0.5 hover:border-ink/25"><svg viewBox="0 0 20 20" class="h-5 w-5 text-coral-600" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4.5h12a1.5 1.5 0 0 1 1.5 1.5v7a1.5 1.5 0 0 1-1.5 1.5H9l-4 3v-3H4A1.5 1.5 0 0 1 2.5 13V6A1.5 1.5 0 0 1 4 4.5z"/></svg>Messaging &amp; calendars<span class="ml-auto text-ink-faint"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></span></a></li><li><a href="integrations.html?category=time" class="flex items-center gap-3 rounded-2xl border border-line bg-white px-4 py-3 text-[15px] font-semibold transition hover:-translate-y-0.5 hover:border-ink/25"><svg viewBox="0 0 20 20" class="h-5 w-5 text-coral-600" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l2.5 2"/></svg>Time clocks<span class="ml-auto text-ink-faint"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></span></a></li>
+          </ul>
+          <a href="integrations.html" class="btn-primary reveal mt-8">Browse all integrations <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></a>
+        </div>
+        <div class="reveal relative mx-auto aspect-square w-full max-w-[30rem]" aria-hidden="true">
+          <div class="absolute inset-[6%] rounded-full bg-[radial-gradient(circle,var(--color-lilac),transparent_70%)]"></div>
+          <div class="orbit-ring absolute inset-[4%]"></div>
+          <div class="orbit-ring absolute inset-[24%]"></div>
+          <div class="spin-slow absolute inset-[4%]"><span class="absolute -translate-x-1/2 -translate-y-1/2" style="left:50.00%;top:0.00%"><span class="counter-spin block rounded-2xl bg-white p-1.5 shadow-[0_10px_24px_-12px_rgba(31,29,61,.45)]"><svg viewBox="0 0 40 40" class="h-9 w-9 sm:h-11 sm:w-11 shrink-0" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#0e7490"/><g fill="#fff"><circle cx="20" cy="20" r="11" fill="none" stroke="#fff" stroke-width="3"/><path d="M20 14v6l4 3" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g></svg></span></span><span class="absolute -translate-x-1/2 -translate-y-1/2" style="left:93.30%;top:25.00%"><span class="counter-spin block rounded-2xl bg-white p-1.5 shadow-[0_10px_24px_-12px_rgba(31,29,61,.45)]"><svg viewBox="0 0 40 40" class="h-9 w-9 sm:h-11 sm:w-11 shrink-0" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#9333ea"/><g fill="#fff"><circle cx="15" cy="17" r="5" fill="#fff"/><circle cx="25" cy="17" r="5" fill="#fff" opacity=".7"/><path d="M8 28c3-3 7-4 12-4s9 1 12 4" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/></g></svg></span></span><span class="absolute -translate-x-1/2 -translate-y-1/2" style="left:93.30%;top:75.00%"><span class="counter-spin block rounded-2xl bg-white p-1.5 shadow-[0_10px_24px_-12px_rgba(31,29,61,.45)]"><svg viewBox="0 0 40 40" class="h-9 w-9 sm:h-11 sm:w-11 shrink-0" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#0284c7"/><g fill="#fff"><path d="M13 27a5 5 0 0 1 0-10 7 7 0 0 1 13.5 1A4.5 4.5 0 0 1 27 27z" fill="#fff"/></g></svg></span></span><span class="absolute -translate-x-1/2 -translate-y-1/2" style="left:50.00%;top:100.00%"><span class="counter-spin block rounded-2xl bg-white p-1.5 shadow-[0_10px_24px_-12px_rgba(31,29,61,.45)]"><svg viewBox="0 0 40 40" class="h-9 w-9 sm:h-11 sm:w-11 shrink-0" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#ea580c"/><g fill="#fff"><rect x="9" y="10" width="22" height="20" rx="4" fill="none" stroke="#fff" stroke-width="2.8"/><path d="M9 16h22" stroke="#fff" stroke-width="2.8"/><circle cx="20" cy="23" r="2.6" fill="#fff"/></g></svg></span></span><span class="absolute -translate-x-1/2 -translate-y-1/2" style="left:6.70%;top:75.00%"><span class="counter-spin block rounded-2xl bg-white p-1.5 shadow-[0_10px_24px_-12px_rgba(31,29,61,.45)]"><svg viewBox="0 0 40 40" class="h-9 w-9 sm:h-11 sm:w-11 shrink-0" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#15803d"/><g fill="#fff"><path d="M10 30C10 18 17 10 30 10c0 13-8 20-20 20z" fill="#fff"/></g></svg></span></span><span class="absolute -translate-x-1/2 -translate-y-1/2" style="left:6.70%;top:25.00%"><span class="counter-spin block rounded-2xl bg-white p-1.5 shadow-[0_10px_24px_-12px_rgba(31,29,61,.45)]"><svg viewBox="0 0 40 40" class="h-9 w-9 sm:h-11 sm:w-11 shrink-0" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#c2410c"/><g fill="#fff"><path d="M12 8h16v24l-4-2.5-4 2.5-4-2.5-4 2.5z" fill="none" stroke="#fff" stroke-width="2.6" stroke-linejoin="round"/><path d="M16 15h8M16 20h8" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/></g></svg></span></span></div>
+          <div class="spin-slow-rev absolute inset-[24%]"><span class="absolute -translate-x-1/2 -translate-y-1/2" style="left:50.00%;top:0.00%"><span class="counter-spin-rev block rounded-2xl bg-white p-1.5 shadow-[0_10px_24px_-12px_rgba(31,29,61,.45)]"><svg viewBox="0 0 40 40" class="h-9 w-9 sm:h-11 sm:w-11 shrink-0" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#0f766e"/><g fill="#fff"><rect x="9" y="9" width="10" height="10" rx="2.5"/><rect x="21" y="9" width="10" height="10" rx="5"/><rect x="9" y="21" width="10" height="10" rx="5"/><rect x="21" y="21" width="10" height="10" rx="2.5"/></g></svg></span></span><span class="absolute -translate-x-1/2 -translate-y-1/2" style="left:100.00%;top:50.00%"><span class="counter-spin-rev block rounded-2xl bg-white p-1.5 shadow-[0_10px_24px_-12px_rgba(31,29,61,.45)]"><svg viewBox="0 0 40 40" class="h-9 w-9 sm:h-11 sm:w-11 shrink-0" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#1d4ed8"/><g fill="#fff"><path d="M8 22c4-6 8-6 12 0s8 6 12 0" fill="none" stroke="#fff" stroke-width="3.4" stroke-linecap="round"/><circle cx="20" cy="13" r="3" fill="#fff"/></g></svg></span></span><span class="absolute -translate-x-1/2 -translate-y-1/2" style="left:50.00%;top:100.00%"><span class="counter-spin-rev block rounded-2xl bg-white p-1.5 shadow-[0_10px_24px_-12px_rgba(31,29,61,.45)]"><svg viewBox="0 0 40 40" class="h-9 w-9 sm:h-11 sm:w-11 shrink-0" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#4f46e5"/><g fill="#fff"><path d="M10 11h20a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H18l-6 5v-5h-2a2 2 0 0 1-2-2V13a2 2 0 0 1 2-2z" fill="#fff"/></g></svg></span></span><span class="absolute -translate-x-1/2 -translate-y-1/2" style="left:0.00%;top:50.00%"><span class="counter-spin-rev block rounded-2xl bg-white p-1.5 shadow-[0_10px_24px_-12px_rgba(31,29,61,.45)]"><svg viewBox="0 0 40 40" class="h-9 w-9 sm:h-11 sm:w-11 shrink-0" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#b91c1c"/><g fill="#fff"><circle cx="20" cy="20" r="6" fill="#fff"/><circle cx="20" cy="9.5" r="2.5" fill="#fff"/><circle cx="20" cy="30.5" r="2.5" fill="#fff"/><circle cx="9.5" cy="20" r="2.5" fill="#fff"/><circle cx="30.5" cy="20" r="2.5" fill="#fff"/></g></svg></span></span></div>
+          <div class="absolute top-1/2 left-1/2 grid h-24 w-24 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-[1.75rem] bg-white shadow-[0_24px_48px_-20px_rgba(31,29,61,.5)] sm:h-28 sm:w-28"><svg viewBox="0 0 40 40" class="h-12 w-12 sm:h-14 sm:w-14 shrink-0" aria-hidden="true"><g transform="rotate(-22 20 20)"><ellipse cx="20" cy="20" rx="17.5" ry="7" fill="none" stroke="#1f1d3d" stroke-width="2.6"/></g><circle cx="20" cy="20" r="9.5" fill="#ff6b4a"/><circle cx="16.6" cy="16.4" r="2.6" fill="#fff" opacity=".45"/><g transform="rotate(-22 20 20)"><path d="M2.5 20a17.5 7 0 0 0 35 0" fill="none" stroke="#1f1d3d" stroke-width="2.6" stroke-linecap="round"/><circle cx="37.5" cy="20" r="3.4" fill="#ffd84d" stroke="#1f1d3d" stroke-width="2"/></g></svg></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats + CTA -->
+    <section class="container-x pt-8 pb-20 sm:pb-28">
+      <div class="reveal panel relative overflow-hidden bg-coral-500 px-6 py-14 text-ink sm:px-12 sm:py-20">
+        <div class="pointer-events-none absolute -right-24 -bottom-40 h-[28rem] w-[28rem] rounded-full border-[3px] border-dashed border-ink/15" aria-hidden="true"></div>
+        <div class="pointer-events-none absolute -right-4 -bottom-20 h-[16rem] w-[16rem] rounded-full bg-coral-400" aria-hidden="true"></div>
+        <div class="relative grid gap-12 lg:grid-cols-[1.3fr_1fr] lg:items-end">
+          <div>
+            <h2 class="h-section max-w-xl">Publish next week before lunch.</h2>
+            <p class="mt-5 max-w-lg text-lg leading-relaxed font-medium">Try every feature free for 14 days. Bring your team, import last month’s schedule from a spreadsheet and see the difference by Friday.</p>
+            <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a href="signup.html" class="btn-primary btn-lg">Start your free trial <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></a>
+              <a href="contact.html" class="btn btn-lg border-2 border-ink/80 text-ink hover:bg-ink hover:text-white">Book a demo</a>
+            </div>
+          </div>
+          <dl class="grid grid-cols-3 gap-4 lg:grid-cols-1 lg:justify-items-end lg:text-right">
+            <div><dt class="text-sm font-semibold">Venues on Orbit</dt><dd class="font-display text-3xl font-extrabold tracking-[-0.03em] sm:text-5xl" data-count="4200">4,200</dd></div>
+            <div><dt class="text-sm font-semibold">People scheduled</dt><dd class="font-display text-3xl font-extrabold tracking-[-0.03em] sm:text-5xl" data-count="61000">61,000</dd></div>
+            <div><dt class="text-sm font-semibold">Shifts swapped last month</dt><dd class="font-display text-3xl font-extrabold tracking-[-0.03em] sm:text-5xl" data-count="38500">38,500</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="mt-auto px-3 pb-3 sm:px-5 sm:pb-5">
+    <div class="relative mx-auto max-w-7xl overflow-hidden rounded-5xl bg-cream">
+      <div class="grid gap-12 px-6 pt-14 pb-10 sm:px-10 lg:grid-cols-12 lg:px-14">
+        <div class="lg:col-span-4">
+          <a href="index.html" class="inline-flex items-center gap-2" aria-label="Orbit home">
+            <svg viewBox="0 0 40 40" class="h-9 w-9 shrink-0" aria-hidden="true"><g transform="rotate(-22 20 20)"><ellipse cx="20" cy="20" rx="17.5" ry="7" fill="none" stroke="#1f1d3d" stroke-width="2.6"/></g><circle cx="20" cy="20" r="9.5" fill="#ff6b4a"/><circle cx="16.6" cy="16.4" r="2.6" fill="#fff" opacity=".45"/><g transform="rotate(-22 20 20)"><path d="M2.5 20a17.5 7 0 0 0 35 0" fill="none" stroke="#1f1d3d" stroke-width="2.6" stroke-linecap="round"/><circle cx="37.5" cy="20" r="3.4" fill="#ffd84d" stroke="#1f1d3d" stroke-width="2"/></g></svg>
+            <span class="font-display text-[22px] font-bold tracking-[-0.03em]">orbit</span>
+          </a>
+          <p class="mt-4 max-w-xs text-[15px] leading-relaxed text-ink-soft">Shift scheduling for restaurants, cafés, hotels and shops. Made by Orbit Works in Overland Park, Kansas.</p>
+          <form data-form="newsletter" class="mt-7 max-w-sm" novalidate>
+            <label for="footer-email" class="text-sm font-bold">Product updates, once a month</label>
+            <div class="mt-2.5 flex gap-2">
+              <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@yourbusiness.example" class="input py-2.5">
+              <button type="submit" class="btn-primary shrink-0 px-4">Subscribe</button>
+            </div>
+          </form>
+        </div>
+        <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-7 lg:col-start-6">
+        <nav aria-label="Product">
+          <h2 class="text-sm font-bold text-ink">Product</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="features.html" class="text-ink-soft transition hover:text-ink">Features</a></li>
+            <li><a href="integrations.html" class="text-ink-soft transition hover:text-ink">Integrations</a></li>
+            <li><a href="pricing.html" class="text-ink-soft transition hover:text-ink">Pricing</a></li>
+            <li><a href="changelog.html" class="text-ink-soft transition hover:text-ink">Changelog</a></li>
+            <li><a href="signup.html" class="text-ink-soft transition hover:text-ink">Start free trial</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2 class="text-sm font-bold text-ink">Company</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="about.html" class="text-ink-soft transition hover:text-ink">About us</a></li>
+            <li><a href="about.html#careers" class="text-ink-soft transition hover:text-ink">Careers</a></li>
+            <li><a href="customers.html" class="text-ink-soft transition hover:text-ink">Customers</a></li>
+            <li><a href="contact.html" class="text-ink-soft transition hover:text-ink">Talk to sales</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Resources">
+          <h2 class="text-sm font-bold text-ink">Resources</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="features.html#compare" class="text-ink-soft transition hover:text-ink">Orbit vs spreadsheets</a></li>
+            <li><a href="pricing.html#calculator" class="text-ink-soft transition hover:text-ink">Price calculator</a></li>
+            <li><a href="pricing.html#faq" class="text-ink-soft transition hover:text-ink">FAQ</a></li>
+            <li><a href="integrations.html?category=payroll" class="text-ink-soft transition hover:text-ink">Payroll integrations</a></li>
+          </ul>
+        </nav>
+        </div>
+      </div>
+      <div class="mx-6 flex flex-col gap-3 border-t border-line py-6 text-sm text-ink-faint sm:mx-10 sm:flex-row sm:items-center sm:justify-between lg:mx-14">
+        <p>© <span data-year>2026</span> Orbit Works, Inc. Orbit is a fictional product.</p>
+        <p class="inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#1fa16a]" aria-hidden="true"></span>All systems running · Website template by Freeframe</p>
+      </div>
+      <svg viewBox="0 40 1000 210" class="pointer-events-none mx-auto -mb-1 block w-full max-w-5xl px-4 text-ink/[.05] select-none" aria-hidden="true"><text x="500" y="276" text-anchor="middle" font-family="Gabarito, sans-serif" font-size="330" font-weight="800" letter-spacing="-16" fill="currentColor">orbit</text></svg>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

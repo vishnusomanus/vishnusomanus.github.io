@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" role="img" aria-label="Illustrated portrait of Orlaith, with red hair in a bun and a green apron, holding a fern frond">
+<rect width="400" height="420" fill="#e6efb6"/><circle cx="300" cy="96" r="70" fill="#fff" opacity=".45"/>
+<path d="M70 420c0-92 58-140 130-140s130 48 130 140Z" fill="#f5efda"/>
+<path d="M118 420V318c24-20 52-28 82-28s58 8 82 28v102Z" fill="#267052"/><path d="M150 300v-20M250 300v-20" stroke="#267052" stroke-width="10" stroke-linecap="round"/>
+<path d="M176 292h48v-36h-48Z" fill="#efb796"/>
+<circle cx="200" cy="112" r="34" fill="#b8481f"/>
+<ellipse cx="200" cy="196" rx="62" ry="72" fill="#f4c4a4"/>
+<path d="M138 196c-6-60 22-94 62-94s70 34 62 94c-8-34-20-52-36-60-22 18-56 22-88 60Z" fill="#c4551f"/>
+<path d="M170 196q6-6 12 0M218 196q6-6 12 0" fill="none" stroke="#173d38" stroke-width="5" stroke-linecap="round"/>
+<path d="M182 236q18 14 36 0" fill="none" stroke="#a3331c" stroke-width="5" stroke-linecap="round"/>
+<circle cx="164" cy="222" r="10" fill="#f59c86" opacity=".5"/><circle cx="236" cy="222" r="10" fill="#f59c86" opacity=".5"/>
+<g transform="translate(290 250) rotate(-20)"><path d="M0 160V0" stroke="#134b3f" stroke-width="5" stroke-linecap="round"/><g fill="#9bc86d"><ellipse cx="-16" cy="20" rx="16" ry="7" transform="rotate(-25 -16 20)"/><ellipse cx="16" cy="34" rx="16" ry="7" transform="rotate(25 16 34)"/><ellipse cx="-18" cy="50" rx="18" ry="7" transform="rotate(-25 -18 50)"/><ellipse cx="18" cy="64" rx="18" ry="7" transform="rotate(25 18 64)"/><ellipse cx="-18" cy="80" rx="18" ry="7" transform="rotate(-25 -18 80)"/><ellipse cx="18" cy="94" rx="16" ry="7" transform="rotate(25 18 94)"/></g></g>
+<ellipse cx="282" cy="356" rx="22" ry="16" fill="#f4c4a4"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#1d3b2e"/>
+  <rect x="28" y="28" width="1144" height="574" fill="none" stroke="#c9a45a" stroke-width="2"/>
+  <text x="90" y="170" font-family="Josefin Sans, sans-serif" font-size="22" font-weight="600" letter-spacing="6" fill="#cfe3d4">THE NEW ESME LARK MYSTERY</text>
+  <text x="88" y="270" font-family="Libre Baskerville, Georgia, serif" font-size="54" font-style="italic" fill="#cfe3d4">The</text>
+  <text x="84" y="370" font-family="Libre Baskerville, Georgia, serif" font-size="104" fill="#f3ead7">Glass Marsh</text>
+  <text x="90" y="440" font-family="Crimson Pro, Georgia, serif" font-size="36" font-style="italic" fill="#f3ead7" opacity=".9">The marsh has frozen. Something has surfaced.</text>
+  <text x="90" y="540" font-family="Josefin Sans, sans-serif" font-size="26" font-weight="600" letter-spacing="7" fill="#f3ead7">CLEMENCY THORNE</text>
+  <g transform="translate(880 96) rotate(2)">
+    <rect width="260" height="398" fill="#16302a"/>
+    <rect x="12" y="12" width="236" height="374" fill="none" stroke="#c9a45a"/>
+    <circle cx="140" cy="200" r="30" fill="#cfe3d4"/><circle cx="153" cy="192" r="27" fill="#16302a"/>
+    <g stroke="#f3ead7" stroke-width="2" fill="none" stroke-linecap="round"><path d="M60 330q-4-40-8-80M80 330q3-40 6-90M100 330q-2-30-4-60M180 330q-3-40-6-86M200 330q4-40 8-72M220 330q-2-34-4-64"/></g>
+    <rect x="30" y="330" width="200" height="30" fill="#cfe3d4" opacity=".25"/>
+    <text x="130" y="90" text-anchor="middle" font-family="Libre Baskerville, Georgia, serif" font-size="34" fill="#f3ead7">The Glass</text>
+    <text x="130" y="132" text-anchor="middle" font-family="Libre Baskerville, Georgia, serif" font-size="34" fill="#f3ead7">Marsh</text>
+  </g>
+</svg>

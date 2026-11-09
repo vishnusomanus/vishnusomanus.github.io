@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#24152f"/>
+  <!-- A frame from the reel: Season of Tides -->
+  <rect x="640" y="90" width="480" height="270" fill="#14233f"/>
+  <circle cx="790" cy="160" r="22" fill="#d9a441"/>
+  <g fill="none" stroke-width="3">
+    <path d="M640 200c40-14 80 14 120 0s80 14 120 0 80 14 120 0 80 14 120 0" stroke="#f4ead3"/>
+    <path d="M640 224c40-18 80 18 120 0s80 18 120 0 80 18 120 0 80 18 120 0" stroke="#7fb7c9"/>
+    <path d="M640 250c40-22 80 22 120 0s80 22 120 0 80 22 120 0 80 22 120 0" stroke="#f4ead3" opacity=".8"/>
+    <path d="M640 278c40-26 80 26 120 0s80 26 120 0 80 26 120 0 80 26 120 0" stroke="#7fb7c9" opacity=".7"/>
+    <path d="M640 308c40-30 80 30 120 0s80 30 120 0 80 30 120 0 80 30 120 0" stroke="#f4ead3" opacity=".6"/>
+  </g>
+  <rect x="640" y="342" width="480" height="18" fill="#d9a441"/>
+  <rect x="640" y="90" width="480" height="270" fill="none" stroke="#efecf4" stroke-width="4"/>
+  <rect x="652" y="102" width="150" height="30" fill="#24152f" opacity=".85"/>
+  <circle cx="668" cy="117" r="6" fill="#ff6f5e"/>
+  <text x="682" y="123" font-family="Red Hat Mono, monospace" font-size="17" font-weight="600" fill="#efecf4">SC 01/06</text>
+  <rect x="954" y="102" width="154" height="30" fill="#24152f" opacity=".85"/>
+  <text x="966" y="123" font-family="Red Hat Mono, monospace" font-size="17" font-weight="600" fill="#8ff0c8">00:00:02:14</text>
+  <!-- Progress bars -->
+  <g>
+    <rect x="640" y="388" width="74" height="6" fill="#8ff0c8"/>
+    <rect x="721" y="388" width="74" height="6" fill="#efecf4" opacity=".2"/><rect x="802" y="388" width="74" height="6" fill="#efecf4" opacity=".2"/><rect x="883" y="388" width="74" height="6" fill="#efecf4" opacity=".2"/><rect x="964" y="388" width="74" height="6" fill="#efecf4" opacity=".2"/><rect x="1045" y="388" width="75" height="6" fill="#efecf4" opacity=".2"/>
+  </g>
+  <!-- Wordmark and tagline -->
+  <rect x="80" y="96" width="44" height="44" fill="#efecf4"/>
+  <rect x="88" y="105" width="28" height="6" fill="#24152f"/><rect x="88" y="115" width="20" height="6" fill="#5a2fd0"/><rect x="88" y="125" width="11" height="6" fill="#ff6f5e"/>
+  <text x="80" y="258" font-family="Anybody, Arial Narrow, sans-serif" font-size="112" font-weight="800" font-stretch="62%" letter-spacing="-2" fill="#efecf4">RILLMARK</text>
+  <text x="80" y="330" font-family="Gelasio, Georgia, serif" font-size="38" font-style="italic" fill="#8ff0c8">Motion with something to say.</text>
+  <text x="80" y="410" font-family="Gelasio, Georgia, serif" font-size="26" fill="#cbbfdb">Title sequences, brand motion,</text>
+  <text x="80" y="446" font-family="Gelasio, Georgia, serif" font-size="26" fill="#cbbfdb">explainers and music videos.</text>
+  <rect x="0" y="540" width="1200" height="90" fill="#5a2fd0"/>
+  <text x="80" y="595" font-family="Red Hat Mono, monospace" font-size="24" font-weight="600" letter-spacing="3" fill="#efecf4">MARIKA DREVER · MOTION DESIGN AND DIRECTION · HARTFORD</text>
+</svg>

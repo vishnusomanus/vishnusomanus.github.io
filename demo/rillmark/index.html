@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rillmark — motion design and direction by Marika Drever, Hartford</title>
+  <meta name="description" content="Rillmark is the studio of Marika Drever, an independent motion designer and director in Hartford: title sequences, brand motion, explainer animation and music videos.">
+  <meta name="theme-color" content="#efecf4">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rillmark">
+  <meta property="og:title" content="Rillmark — motion design and direction by Marika Drever, Hartford">
+  <meta property="og:description" content="Rillmark is the studio of Marika Drever, an independent motion designer and director in Hartford: title sequences, brand motion, explainer animation and music videos.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:ital,wdth,wght@0,50..150,500..900;1,50..150,700..900&amp;family=Gelasio:ital,wght@0,400..700;1,400..700&amp;family=Red+Hat+Mono:wght@400..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="flex min-h-screen flex-col font-serif text-[1.125rem] leading-relaxed text-ink antialiased" data-page="home">
+  <a href="#main" class="slate sr-only z-[70] bg-ink px-4 py-3 text-card focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+
+  <div class="on-dark bg-plum text-card">
+    <div class="wrap flex min-h-9 items-center justify-between gap-4 py-1.5">
+      <p class="slate flex items-center gap-2"><span class="rec-dot size-2 rounded-full bg-coral" aria-hidden="true"></span>Booking from <a href="contact.html" class="text-mint underline decoration-mint/40 underline-offset-4 hover:decoration-mint" data-booking-month>December</a></p>
+      <p class="slate hidden items-center gap-5 text-haze sm:flex"><span>Hartford <span class="text-card" data-local-clock>9:00 AM EST</span></span><a href="mailto:studio@rillmark.example" class="hover:text-mint">studio@rillmark.example</a></p>
+    </div>
+  </div>
+
+  <header id="site-header" class="sticky top-0 z-50 border-b-2 border-ink bg-paper/95 backdrop-blur-sm">
+    <div class="wrap flex h-16 items-center justify-between gap-4 lg:h-[4.5rem]">
+      <a href="index.html" class="flex items-center gap-3" aria-current="page">
+        <svg class="h-7 w-7 shrink-0" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" fill="#24152f"/><rect x="6" y="7" width="20" height="4" fill="#8ff0c8"/><rect x="6" y="14" width="14" height="4" fill="#efecf4"/><rect x="6" y="21" width="8" height="4" fill="#ff6f5e"/></svg>
+        <span class="font-display text-[1.65rem] leading-none font-extrabold tracking-tight uppercase font-stretch-72%">Rillmark</span>
+        <span class="slate hidden border-l border-line pl-3 text-muted xl:inline">Motion · Hartford</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center">
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="journal.html" class="nav-link">Journal</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="work.html?shortlist=1" class="slate hidden min-h-11 items-center gap-2 border-2 border-ink/25 px-3 hover:border-ink sm:inline-flex">
+          <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4Z"/></svg>
+          Shortlist <span class="bg-ink px-1.5 text-card" data-shortlist-count>0</span>
+        </a>
+        <a href="contact.html" class="btn btn-solid btn-sm hidden lg:inline-flex">Start a project</a>
+        <button type="button" id="menu-button" class="grid size-11 place-items-center border-2 border-ink lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span data-icon-open><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 6h18M3 12h12M3 18h6"/></svg></span>
+          <span data-icon-close class="hidden"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 18 18 6M6 6l12 12"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-paper lg:hidden" hidden>
+      <nav aria-label="Mobile" class="wrap pt-4 pb-12">
+        <ul>
+          <li><a href="index.html" class="mnav-link" aria-current="page">Home</a></li>
+          <li><a href="work.html" class="mnav-link">Work</a></li>
+          <li><a href="services.html" class="mnav-link">Services</a></li>
+          <li><a href="journal.html" class="mnav-link">Journal</a></li>
+          <li><a href="about.html" class="mnav-link">About</a></li>
+          <li><a href="contact.html" class="mnav-link">Contact</a></li>
+          <li><a href="work.html?shortlist=1" class="mnav-link">Shortlist <span class="slate" data-shortlist-count>0</span></a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-solid mt-8 w-full">Start a project</a>
+        <p class="slate mt-6 text-muted">Hartford <span data-local-clock>9:00 AM EST</span></p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="wrap pt-10 pb-14 sm:pt-14 lg:pb-20" aria-labelledby="hero-title">
+      <div class="slate flex flex-wrap items-center justify-between gap-3 border-b-2 border-ink pb-3 text-muted">
+        <span>SC 00 — Rillmark, motion studio</span>
+        <span>Hartford, Connecticut · 41.76° N</span>
+      </div>
+      <h1 id="hero-title" class="h-display kinetic mt-8 sm:mt-10"><span class="font-stretch-80% sm:font-stretch-100%">Motion with</span> <span class="font-stretch-100% sm:font-stretch-125%">something</span> <span class="text-violet">to say.</span></h1>
+      <div class="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] lg:gap-16">
+        <div class="min-w-0">
+          <p class="lead max-w-2xl">I’m Marika Drever, an independent motion designer and director. Title sequences, brand motion, explainer animation and music videos, designed, directed and animated in one pair of hands, with a trusted bench for sound and 3D.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="work.html" class="btn btn-solid">See the work</a>
+            <a href="services.html#estimate" class="btn btn-line">Estimate a project</a>
+          </div>
+        </div>
+        <dl class="grid grid-cols-2 gap-x-6 gap-y-5 self-end border-t border-line pt-5 lg:border-t-0 lg:border-l lg:pt-0 lg:pl-8">
+          <div>
+            <dt class="slate text-muted">Director</dt>
+            <dd class="mt-1 text-lg">Marika Drever</dd>
+          </div>
+          <div>
+            <dt class="slate text-muted">Studio</dt>
+            <dd class="mt-1 text-lg">Arch Street, Hartford</dd>
+          </div>
+          <div>
+            <dt class="slate text-muted">On the reel</dt>
+            <dd class="mt-1 text-lg"><span data-project-total>15</span> projects since 2022</dd>
+          </div>
+          <div>
+            <dt class="slate text-muted">Next start</dt>
+            <dd class="mt-1 text-lg" data-next-start>Monday, December 7</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="on-dark bg-plum py-14 text-card sm:py-20" aria-labelledby="reel-title" data-reel>
+      <div class="wrap">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <div>
+            <p class="slate text-mint">Showreel · six scenes · 0:24</p>
+            <h2 id="reel-title" class="h-section mt-3">The reel, cut from the work</h2>
+          </div>
+          <p class="max-w-md text-lg text-haze">Every frame is drawn live from the projects below. Pick a scene to jump to it, or pause and look closer.</p>
+        </div>
+        <div class="mt-10 grid gap-10 lg:grid-cols-[minmax(0,1fr)_19rem] lg:gap-12">
+          <figure class="min-w-0">
+            <div class="relative border-2 border-card/80 shadow-[8px_8px_0_var(--color-violet)]">
+              <div class="frame" data-reel-screen>
+                <svg viewBox="0 0 320 180" aria-hidden="true" focusable="false"><rect width="320" height="180" fill="#14233f"/></svg>
+              </div>
+              <div class="pointer-events-none absolute inset-x-0 top-0 flex items-start justify-between p-3 sm:p-4" aria-hidden="true">
+                <span class="slate flex items-center gap-2 bg-plum/85 px-2 py-1"><span class="size-2 rounded-full bg-coral" data-reel-rec></span>REC · <span data-reel-count>SC 01/06</span></span>
+                <span class="slate bg-plum/85 px-2 py-1 text-mint tabular-nums" data-reel-tc>00:00:00:00</span>
+              </div>
+              <div class="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-plum/90 to-transparent p-3 pt-10 sm:p-5 sm:pt-16" aria-hidden="true">
+                <p class="font-display text-[clamp(1.5rem,4vw,3rem)] leading-none font-extrabold uppercase font-stretch-70%" data-reel-title>Season of Tides</p>
+                <p class="slate mt-2 text-haze" data-reel-client>Bracken Hall · Brand motion</p>
+              </div>
+            </div>
+            <figcaption class="mt-5" data-reel-controls>
+              <div class="flex gap-1.5" data-reel-progress aria-hidden="true"></div>
+              <div class="mt-4 flex flex-wrap items-center gap-3">
+                <button type="button" class="btn btn-ghost btn-sm" data-reel-prev aria-label="Previous scene">
+                  <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 5h2v14H6zM20 5v14L9 12z"/></svg>
+                </button>
+                <button type="button" class="btn btn-mint min-w-32" data-reel-play aria-label="Play the showreel">
+                  <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-icon-play><path d="M7 4v16l13-8z"/></svg>
+                  <svg class="hidden size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-icon-pause><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
+                  <span data-reel-play-label>Play</span>
+                </button>
+                <button type="button" class="btn btn-ghost btn-sm" data-reel-next aria-label="Next scene">
+                  <svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 5h2v14h-2zM4 5v14l11-7z"/></svg>
+                </button>
+                <a href="project.html?project=season-of-tides" class="link ml-auto text-lg" data-reel-link>See the Season of Tides case study</a>
+              </div>
+              <p class="sr-only" role="status" aria-live="polite" data-reel-status></p>
+            </figcaption>
+          </figure>
+          <div class="min-w-0">
+            <h3 class="slate text-haze">In this reel</h3>
+            <ol class="mt-3 border-b border-plum-line" data-reel-list></ol>
+            <p class="mt-4 text-base text-haze">With reduced motion turned on in your device settings, the reel waits for Play and shows each scene as a still.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap py-16 sm:py-24" aria-labelledby="disciplines-title">
+      <div class="reveal flex flex-wrap items-end justify-between gap-6">
+        <div>
+          <p class="slate text-violet">SC 01 — What I make</p>
+          <h2 id="disciplines-title" class="h-section mt-3">Four ways to make a thing move</h2>
+        </div>
+        <a href="services.html" class="btn btn-line btn-sm">Services and fees</a>
+      </div>
+      <ul class="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        <li class="reveal">
+          <a href="work.html?discipline=titles" class="group block" data-hover-preview>
+            <span class="frame border-2 border-ink" data-art="lowlight-hours" data-art-t="0.55"></span>
+            <span class="mt-4 flex items-baseline justify-between gap-3"><span class="h-card stretch-hover group-hover:text-violet">Title sequences</span><span class="slate shrink-0 text-muted" data-discipline-count="titles">4 projects</span></span>
+            <span class="mt-2 block text-lg leading-relaxed text-muted">Opening and end titles for drama, documentary, festivals and games.</span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a href="work.html?discipline=brand" class="group block" data-hover-preview>
+            <span class="frame border-2 border-ink" data-art="season-of-tides" data-art-t="0.45"></span>
+            <span class="mt-4 flex items-baseline justify-between gap-3"><span class="h-card stretch-hover group-hover:text-violet">Brand motion</span><span class="slate shrink-0 text-muted" data-discipline-count="brand">4 projects</span></span>
+            <span class="mt-2 block text-lg leading-relaxed text-muted">Motion identities and toolkits that teams keep using after launch.</span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a href="work.html?discipline=explainer" class="group block" data-hover-preview>
+            <span class="frame border-2 border-ink" data-art="heat-gets-home" data-art-t="0.5"></span>
+            <span class="mt-4 flex items-baseline justify-between gap-3"><span class="h-card stretch-hover group-hover:text-violet">Explainers</span><span class="slate shrink-0 text-muted" data-discipline-count="explainer">4 projects</span></span>
+            <span class="mt-2 block text-lg leading-relaxed text-muted">Clear, warm films that make one difficult idea simple.</span>
+          </a>
+        </li>
+        <li class="reveal">
+          <a href="work.html?discipline=music" class="group block" data-hover-preview>
+            <span class="frame border-2 border-ink" data-art="paper-lanterns" data-art-t="0.45"></span>
+            <span class="mt-4 flex items-baseline justify-between gap-3"><span class="h-card stretch-hover group-hover:text-violet">Music videos</span><span class="slate shrink-0 text-muted" data-discipline-count="music">3 projects</span></span>
+            <span class="mt-2 block text-lg leading-relaxed text-muted">Animated and mixed-media videos for independent artists and labels.</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+    <section class="border-y-2 border-ink bg-paper-2 py-16 sm:py-24" aria-labelledby="selected-title">
+      <div class="wrap">
+        <div class="reveal flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <p class="slate text-violet">SC 02 — Selected work</p>
+            <h2 id="selected-title" class="h-section mt-3">Recent films, start to finish</h2>
+          </div>
+          <a href="work.html" class="btn btn-line btn-sm">All <span data-project-total>15</span> projects</a>
+        </div>
+        <ol class="mt-12 space-y-16 sm:space-y-20">
+          <li class="reveal grid items-center gap-6 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] md:gap-12">
+            <a href="project.html?project=lowlight-hours" class="group block min-w-0" data-hover-preview tabindex="-1" aria-hidden="true">
+              <span class="frame border-2 border-ink shadow-[8px_8px_0_var(--color-ink)]" data-art="lowlight-hours" data-art-t="0.7"></span>
+            </a>
+            <div class="min-w-0">
+              <p class="slate text-muted">01 · Title sequence · 2025</p>
+              <h3 class="mt-3 font-display text-[clamp(2rem,5vw,3.6rem)] leading-[0.92] font-extrabold uppercase font-stretch-68%"><a href="project.html?project=lowlight-hours" class="hover:text-violet">The Lowlight Hours</a></h3>
+              <p class="mt-4 text-xl leading-relaxed text-muted">Opening titles for a six-part drama set in one Hartford apartment house over one long night. Each window lights as its character’s actor is named.</p>
+              <p class="slate mt-5">Kettlebrook Pictures · 1 min 12 s</p>
+            </div>
+          </li>
+          <li class="reveal grid items-center gap-6 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-12">
+            <div class="min-w-0 md:order-1">
+              <p class="slate text-muted">02 · Brand motion · 2026</p>
+              <h3 class="mt-3 font-display text-[clamp(2rem,5vw,3.6rem)] leading-[0.92] font-extrabold uppercase font-stretch-68%"><a href="project.html?project=season-of-tides" class="hover:text-violet">Season of Tides</a></h3>
+              <p class="mt-4 text-xl leading-relaxed text-muted">A motion identity for Bracken Hall’s new season, built from the waveform of the orchestra tuning. Forty concerts, one toolkit.</p>
+              <p class="slate mt-5">Bracken Hall · 45 s launch film</p>
+            </div>
+            <a href="project.html?project=season-of-tides" class="group block min-w-0 md:order-2" data-hover-preview tabindex="-1" aria-hidden="true">
+              <span class="frame border-2 border-ink shadow-[8px_8px_0_var(--color-violet)]" data-art="season-of-tides" data-art-t="0.62"></span>
+            </a>
+          </li>
+          <li class="reveal grid items-center gap-6 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] md:gap-12">
+            <a href="project.html?project=paper-lanterns" class="group block min-w-0" data-hover-preview tabindex="-1" aria-hidden="true">
+              <span class="frame border-2 border-ink shadow-[8px_8px_0_var(--color-coral)]" data-art="paper-lanterns" data-art-t="0.4"></span>
+            </a>
+            <div class="min-w-0">
+              <p class="slate text-muted">03 · Music video · 2026</p>
+              <h3 class="mt-3 font-display text-[clamp(2rem,5vw,3.6rem)] leading-[0.92] font-extrabold uppercase font-stretch-68%"><a href="project.html?project=paper-lanterns" class="hover:text-violet">Paper Lanterns</a></h3>
+              <p class="mt-4 text-xl leading-relaxed text-muted">A hand-drawn video for Small Weather: 2,568 drawings of lanterns rising over a sleeping town, colored in eight weeks.</p>
+              <p class="slate mt-5">Small Weather · 3 min 34 s</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="wrap py-16 sm:py-24" aria-labelledby="quote-title">
+      <h2 id="quote-title" class="sr-only">What clients say</h2>
+      <figure class="reveal grid gap-8 lg:grid-cols-[10rem_minmax(0,1fr)]">
+        <p class="font-display text-[8rem] leading-[0.7] font-extrabold text-violet" aria-hidden="true">“</p>
+        <div>
+          <blockquote class="font-serif text-[clamp(1.6rem,3.4vw,2.6rem)] leading-snug italic">Marika found the visual idea inside a very complicated show, then gave us titles our viewers still talk about.</blockquote>
+          <figcaption class="slate mt-6 text-muted">Annis Greig · Series producer, Kettlebrook Pictures</figcaption>
+        </div>
+      </figure>
+      <div class="reveal mt-16 border-t-2 border-ink pt-6">
+        <h3 class="slate text-muted">Clients include</h3>
+        <ul class="mt-5 flex flex-wrap items-baseline gap-x-8 gap-y-3 font-display text-2xl font-bold uppercase sm:text-3xl">
+          <li class="font-stretch-60%">Bracken Hall</li>
+          <li class="font-stretch-110% italic">Kettlebrook</li>
+          <li class="font-stretch-75%">Morrowfield</li>
+          <li class="font-stretch-130% font-medium">Ninefold</li>
+          <li class="font-stretch-65%">Brightwell Libraries</li>
+          <li class="font-stretch-95% italic">Ledgewear</li>
+          <li class="font-stretch-55%">Coltsville Heat</li>
+          <li class="font-stretch-120% font-medium">Bookwren</li>
+          <li class="font-stretch-70%">Glimmerfield</li>
+          <li class="font-stretch-100%">Millhaven Museum</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="border-t-2 border-ink py-16 sm:py-24" aria-labelledby="notes-title">
+      <div class="wrap">
+        <div class="reveal flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <p class="slate text-violet">SC 03 — Journal</p>
+            <h2 id="notes-title" class="h-section mt-3">Notes from between the keyframes</h2>
+          </div>
+          <a href="journal.html" class="btn btn-line btn-sm">All notes</a>
+        </div>
+        <ul class="mt-10 grid gap-10 md:grid-cols-3 md:gap-8" data-latest-notes>
+          <li><a class="link" href="journal.html">Read the journal</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="on-dark bg-violet-deep py-16 text-card sm:py-20" aria-labelledby="book-title">
+      <div class="wrap grid gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:items-end lg:gap-16">
+        <div class="reveal">
+          <p class="slate text-mint">SC 04 — Availability</p>
+          <h2 id="book-title" class="h-section mt-3">Booking from <span data-booking-month>December</span></h2>
+          <p class="mt-4 max-w-lg text-xl leading-relaxed text-card/90">I take on one main project at a time, with room for a short job alongside. The next new project can start on <strong class="font-semibold text-card" data-next-start>Monday, December 7</strong>.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="contact.html" class="btn btn-mint">Start a project</a>
+            <a href="services.html#estimate" class="btn btn-ghost">Estimate the fee</a>
+          </div>
+        </div>
+        <ul class="reveal grid grid-cols-3 gap-4 sm:grid-cols-6" data-availability aria-label="Availability for the next six months"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="on-dark mt-auto bg-plum text-card">
+    <div class="wrap pt-16 pb-10 sm:pt-20">
+      <a href="contact.html" class="group block border-b border-plum-line pb-8">
+        <span class="slate text-mint">Got something that needs to move?</span>
+        <span class="mt-3 block font-display text-[clamp(3.5rem,15vw,13rem)] leading-[0.82] font-extrabold tracking-[-0.02em] uppercase stretch-hover group-hover:text-mint font-stretch-60%">Rillmark</span>
+      </a>
+      <div class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div>
+          <p class="font-display text-2xl leading-tight font-bold font-stretch-85%">Title sequences, brand motion, explainers and music videos.</p>
+          <p class="mt-3 text-lg text-haze">Designed and directed by Marika Drever in Hartford, for clients across the US and further.</p>
+        </div>
+        <div>
+          <h2 class="slate text-haze">Pages</h2>
+          <ul class="mt-4 space-y-2 text-lg">
+            <li><a href="work.html" class="hover:text-mint">Work</a></li>
+            <li><a href="services.html" class="hover:text-mint">Services and fees</a></li>
+            <li><a href="journal.html" class="hover:text-mint">Journal</a></li>
+            <li><a href="about.html" class="hover:text-mint">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="slate text-haze">The work</h2>
+          <ul class="mt-4 space-y-2 text-lg">
+            <li><a href="work.html?discipline=titles" class="hover:text-mint">Title sequences</a></li>
+            <li><a href="work.html?discipline=brand" class="hover:text-mint">Brand motion</a></li>
+            <li><a href="work.html?discipline=explainer" class="hover:text-mint">Explainer animation</a></li>
+            <li><a href="work.html?discipline=music" class="hover:text-mint">Music videos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="slate text-haze">Studio</h2>
+          <address class="mt-4 text-lg not-italic">Studio 3, 61 Arch Street<br>Hartford, CT 06103</address>
+          <p class="mt-3 text-lg"><a href="mailto:studio@rillmark.example" class="link">studio@rillmark.example</a><br><a href="tel:+18605550152" class="link">(860) 555-0152</a></p>
+        </div>
+      </div>
+      <div class="slate mt-14 flex flex-col gap-2 border-t border-plum-line pt-6 text-haze sm:flex-row sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Rillmark. Made frame by frame in Hartford.</p>
+        <p>Rillmark, its clients and projects are fictional.</p>
+      </div>
+    </div>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

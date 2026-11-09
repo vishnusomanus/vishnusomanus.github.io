@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" width="640" height="460">
+  <defs><clipPath id="win"><rect x="70" y="44" width="500" height="250" rx="6"/></clipPath></defs>
+  <rect width="640" height="460" rx="20" fill="#ece9df"/>
+  <!-- window view -->
+  <g clip-path="url(#win)">
+    <rect x="70" y="44" width="500" height="250" fill="#dfe9e2"/>
+    <circle cx="470" cy="104" r="34" fill="#d4eb5c"/>
+    <path d="M70 214h500v80H70Z" fill="#9fb8ad"/>
+    <path d="M70 226c40-6 70 6 110 0s70-6 110 0 70 6 110 0 80-6 150 0" stroke="#dfe9e2" stroke-width="3" fill="none" opacity=".7"/>
+    <path d="M70 252c50-6 80 6 120 0s80-6 120 0 80 6 120 0 70-4 140 0" stroke="#dfe9e2" stroke-width="3" fill="none" opacity=".5"/>
+    <!-- downtown Dayton across the river -->
+    <g fill="#2c473b">
+      <rect x="92" y="150" width="44" height="64"/><rect x="140" y="118" width="38" height="96"/><rect x="182" y="136" width="50" height="78"/>
+      <rect x="238" y="98" width="34" height="116"/><path d="M238 98l17-24 17 24Z"/><rect x="278" y="146" width="46" height="68"/><rect x="330" y="128" width="38" height="86"/>
+    </g>
+    <g fill="#d4eb5c"><rect x="104" y="162" width="8" height="10"/><rect x="118" y="182" width="8" height="10"/><rect x="150" y="132" width="8" height="10"/><rect x="164" y="160" width="8" height="10"/><rect x="194" y="150" width="8" height="10"/><rect x="214" y="176" width="8" height="10"/><rect x="250" y="112" width="8" height="10"/><rect x="250" y="146" width="8" height="10"/><rect x="292" y="160" width="8" height="10"/><rect x="342" y="144" width="8" height="10"/></g>
+    <g fill="#fffdf8"><rect x="118" y="162" width="8" height="10"/><rect x="164" y="132" width="8" height="10"/><rect x="214" y="150" width="8" height="10"/><rect x="250" y="180" width="8" height="10"/><rect x="306" y="182" width="8" height="10"/><rect x="342" y="176" width="8" height="10"/></g>
+    <!-- bridge over the Great Miami River -->
+    <path d="M378 190h192v10h-8c-9-14-23-14-32 0h-32c-9-14-23-14-32 0h-32c-9-14-23-14-32 0h-24Z" fill="#13221c"/>
+    <path d="M378 200v14M408 200v14M472 200v14M536 200v14" stroke="#13221c" stroke-width="6"/>
+  </g>
+  <rect x="70" y="44" width="500" height="250" rx="6" fill="none" stroke="#13221c" stroke-width="10"/>
+  <path d="M320 44v250M70 169h500" stroke="#13221c" stroke-width="6"/>
+  <!-- desk -->
+  <rect x="30" y="318" width="580" height="16" rx="4" fill="#13221c"/>
+  <path d="M70 334v126M570 334v126" stroke="#13221c" stroke-width="12"/>
+  <!-- laptop -->
+  <path d="M240 318l14-74h140l14 74Z" fill="#2c473b"/>
+  <path d="M316 268a6 6 0 1 0 0 .1" fill="#d4eb5c"/>
+  <rect x="210" y="314" width="230" height="6" rx="3" fill="#0b1612"/>
+  <!-- mug -->
+  <rect x="460" y="282" width="34" height="36" rx="6" fill="#fffdf8" stroke="#13221c" stroke-width="3"/>
+  <path d="M494 290h6a8 8 0 0 1 0 16h-6" fill="none" stroke="#13221c" stroke-width="3"/>
+  <path d="M470 272c0-8 6-8 6-16M482 272c0-8 6-8 6-16" stroke="#9fb8ad" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- notepad with highlighter -->
+  <rect x="96" y="290" width="104" height="28" rx="3" fill="#fffdf8" stroke="#13221c" stroke-width="3" transform="rotate(-4 148 304)"/>
+  <rect x="106" y="298" width="56" height="7" rx="2" fill="#d4eb5c" transform="rotate(-4 148 304)"/>
+  <rect x="160" y="270" width="12" height="44" rx="3" fill="#d4eb5c" stroke="#13221c" stroke-width="3" transform="rotate(38 166 292)"/>
+  <!-- plant -->
+  <path d="M540 318h40l-6-34h-28Z" fill="#fffdf8" stroke="#13221c" stroke-width="3"/>
+  <path d="M560 284c-4-30-24-40-36-42 4 18 14 34 36 42ZM560 284c2-34 18-52 34-56-2 22-12 44-34 56ZM560 284c-2-22 2-40 4-52" fill="#2c473b" stroke="#2c473b" stroke-width="2"/>
+</svg>

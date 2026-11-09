@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="1200" height="630" fill="#f4ede1"/>
+  <path d="M60 70h1080M60 76h1080" stroke="#16130f" stroke-width="1.5"/>
+  <text x="60" y="52" font-family="Mulish, sans-serif" font-size="15" font-weight="700" letter-spacing="4" fill="#5f574d">CHARLESTON, SOUTH CAROLINA</text>
+  <text x="760" y="52" font-family="Mulish, sans-serif" font-size="15" font-weight="700" letter-spacing="4" fill="#5f574d">WEDDINGS · EVENTS</text>
+  <text x="60" y="200" font-family="Playfair Display, Georgia, serif" font-size="104" fill="#16130f">Celebrations,</text>
+  <text x="60" y="310" font-family="Playfair Display, Georgia, serif" font-size="104" font-style="italic" fill="#8f4c3e">beautifully</text>
+  <text x="60" y="420" font-family="Playfair Display, Georgia, serif" font-size="104" fill="#16130f">edited.</text>
+  <text x="60" y="540" font-family="Playfair Display, Georgia, serif" font-size="48" fill="#16130f">Ivy <tspan font-style="italic" fill="#8f4c3e">&amp;</tspan> Ash</text>
+  <text x="62" y="572" font-family="Mulish, sans-serif" font-size="14" font-weight="700" letter-spacing="6" fill="#5f574d">EVENTS · CHARLESTON</text>
+  <rect x="790" y="110" width="350" height="460" fill="#fbf7ef" stroke="#16130f" stroke-width="1.5"/>
+  <svg x="802" y="122" width="326" height="436" viewBox="0 0 480 600" preserveAspectRatio="xMidYMid slice" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="480" height="600" fill="#f3e3db"/>
+  <circle cx="370" cy="96" r="40" fill="#fbf7ef" stroke="#a88654" stroke-width="1.5"/>
+  <g stroke="#16130f" stroke-width="1.5">
+    <path d="M60 470V150l60-50h200l60 50v320" fill="#fbf7ef"/>
+    <path d="M52 156 120 96h200l68 60"/>
+    <path d="M60 150h320M60 300h320M60 312h320M60 162h320"/>
+    <path d="M80 300V162M140 300V162M200 300V162M260 300V162M320 300V162M370 300V162"/>
+    <path d="M80 470V312M140 470V312M200 470V312M260 470V312M320 470V312M370 470V312"/>
+    <path d="M60 276h320M60 444h320" stroke-width="1"/>
+    <path d="M60 276l20 0M60 444l20 0"/>
+    <path d="M150 128h40v-18M250 128h40v-18" stroke-width="1"/>
+  </g>
+  <g stroke="#cdbfa8" stroke-width="1">
+    <path d="M86 276v-24M92 276v-24M98 276v-24M104 276v-24M110 276v-24M116 276v-24M122 276v-24M128 276v-24M134 276v-24M146 276v-24M152 276v-24M158 276v-24M164 276v-24M170 276v-24M176 276v-24M182 276v-24M188 276v-24M194 276v-24M206 276v-24M212 276v-24M218 276v-24M224 276v-24M230 276v-24M236 276v-24M242 276v-24M248 276v-24M254 276v-24M266 276v-24M272 276v-24M278 276v-24M284 276v-24M290 276v-24M296 276v-24M302 276v-24M308 276v-24M314 276v-24M326 276v-24M332 276v-24M338 276v-24M344 276v-24M350 276v-24M356 276v-24M362 276v-24"/>
+    <path d="M60 252h320M60 420h320"/>
+  </g>
+  <g stroke="#16130f" stroke-width="1.3" fill="#ebe2d3">
+    <path d="M150 180h40v66h-40ZM250 180h40v66h-40ZM150 340h40v76h-40ZM250 340h40v76h-40Z"/>
+  </g>
+  <g stroke="#16130f" stroke-width="1"><path d="M170 180v66M150 212h40M270 180v66M250 212h40M170 340v76M150 378h40M270 340v76M250 378h40"/></g>
+  <path d="M80 170c20 16 40 16 60 0s40-16 60 0 40 16 60 0 40-16 60 0 40 16 50 0M80 320c20 16 40 16 60 0s40-16 60 0 40 16 60 0 40-16 60 0 40 16 50 0" stroke="#a88654" stroke-width="1.3"/>
+  <g fill="#a88654"><circle cx="110" cy="182" r="3.5"/><circle cx="170" cy="182" r="3.5"/><circle cx="230" cy="182" r="3.5"/><circle cx="290" cy="182" r="3.5"/><circle cx="350" cy="182" r="3.5"/><circle cx="110" cy="332" r="3.5"/><circle cx="170" cy="332" r="3.5"/><circle cx="230" cy="332" r="3.5"/><circle cx="290" cy="332" r="3.5"/><circle cx="350" cy="332" r="3.5"/></g>
+  <g stroke="#16130f" stroke-width="1.5">
+    <path d="M0 470h480"/>
+    <path d="M90 500h300l40 56H50Z" fill="#fbf7ef"/>
+    <path d="M50 556v30M430 556v30M110 500v-6M370 500v-6"/>
+    <path d="M150 500v-26M190 500v-30M240 500v-34M290 500v-30M330 500v-26" stroke-width="1.2"/>
+    <path d="M226 466c0-14 6-22 14-22s14 8 14 22Z" fill="#fbf7ef" stroke-width="1.2"/>
+  </g>
+  <g fill="#8f4c3e"><path d="M150 470c-3 2-3 5 0 6 3-1 3-4 0-6ZM190 466c-3 2-3 5 0 6 3-1 3-4 0-6ZM290 466c-3 2-3 5 0 6 3-1 3-4 0-6ZM330 470c-3 2-3 5 0 6 3-1 3-4 0-6Z"/></g>
+  <g stroke="#a88654" stroke-width="1.2"><circle cx="232" cy="440" r="7"/><circle cx="246" cy="436" r="8"/><circle cx="240" cy="428" r="6"/></g>
+  <g stroke="#16130f" stroke-width="1.3">
+    <path d="M440 600V330"/>
+    <path d="M440 330c-36-12-60 0-74 22M440 330c-24-32-54-36-78-24M440 330c6-36 28-54 40-56M440 330c-6-36-2-58 14-74M440 330c26-4 40 6 40 6"/>
+    <path d="M440 380l-8 6M440 420l8 6M440 460l-8 6M440 500l8 6M440 540l-8 6" stroke-width="1"/>
+    <path d="M24 600c0-50 8-84 22-106M40 600c2-44 12-72 28-90M10 600c0-30 2-50 8-64" stroke-width="1.2"/>
+  </g>
+</svg>
+  <path d="M60 600h1080" stroke="#cdbfa8"/>
+</svg>

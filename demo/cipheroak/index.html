@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cipheroak — Hold the keys. Know the plan.</title>
+<meta name="description" content="Cipheroak helps households and small teams in Santa Fe and beyond set up safe self-custody: hardware wallets, multisig vaults, recovery plans and key ceremonies." />
+<meta name="theme-color" content="#f4ece0" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Cipheroak" />
+<meta property="og:title" content="Cipheroak — Hold the keys. Know the plan." />
+<meta property="og:description" content="Cipheroak helps households and small teams in Santa Fe and beyond set up safe self-custody: hardware wallets, multisig vaults, recovery plans and key ceremonies." />
+<meta property="og:image" content="assets/img/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="assets/img/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,500;0,600;0,700;1,500&amp;family=Radio+Canada:wght@400;500;600&amp;family=Sometype+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<script>document.documentElement.classList.add("js");</script>
+<script src="assets/js/main.js" defer></script>
+</head>
+<body data-page="index" class="flex min-h-screen flex-col">
+
+<a href="#main" class="sr-only z-50 rounded-full bg-bark px-5 py-3 text-parchment focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+<div class="bg-bark text-caliche">
+  <div class="wrap flex min-h-10 items-center justify-between gap-4 py-2 text-xs">
+    <p class="flex items-center gap-2">
+      <svg viewBox="0 0 20 20" class="size-4 shrink-0 text-ochre" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="9" width="12" height="8" rx="2" /><path d="M7 9V6.5a3 3 0 0 1 6 0V9" /></svg>
+      <span>We will never ask for your recovery phrase. Not by email, phone or in person.</span>
+    </p>
+    <p class="hidden md:block" data-studio-status>Studio on Galisteo Street, Santa Fe</p>
+  </div>
+</div>
+<header id="site-header" class="sticky top-0 z-40 border-b border-line bg-caliche/95 backdrop-blur">
+  <div class="wrap flex min-h-20 items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-3" aria-label="Cipheroak home"><svg viewBox="0 0 40 40" class="size-9 shrink-0" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1f5a52" /><path d="M20 5.5c8 0 14.5 6.5 14.5 14.5" stroke="#f1dcae" stroke-width="1.6" stroke-linecap="round" /><circle cx="19" cy="21" r="11" stroke="#f4ece0" stroke-width="1.4" stroke-dasharray="40 6" /><circle cx="19.5" cy="20.5" r="6.5" stroke="#f4ece0" stroke-width="1.4" /><circle cx="20" cy="18.6" r="2.2" fill="#c98d2e" /><path d="M18.9 20.2h2.2l.7 4.6h-3.6z" fill="#c98d2e" /></svg><span class="font-display text-2xl font-semibold tracking-tight">Cipheroak</span></a>
+    <nav class="hidden xl:block" aria-label="Main">
+      <ul class="flex items-center gap-1">
+<li><a class="nav-link" href="assessment.html">Assessment</a></li>
+<li><a class="nav-link" href="guides.html">Guides</a></li>
+<li><a class="nav-link" href="teams.html">For teams</a></li>
+<li><a class="nav-link" href="pricing.html">Pricing</a></li>
+<li><a class="nav-link" href="notes.html">Field notes</a></li>
+<li><a class="nav-link" href="company.html">Company</a></li>
+      </ul>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="contact.html" class="btn btn-sm hidden sm:inline-flex">Book a review <svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></a>
+      <button id="menu-toggle" type="button" class="inline-flex size-11 items-center justify-center rounded-full border-[1.5px] border-bark xl:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg data-icon-open viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" /></svg>
+        <svg data-icon-close viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-menu" class="wrap border-t border-line pt-3 pb-6 xl:hidden" aria-label="Mobile" hidden>
+    <ul class="grid gap-1 sm:grid-cols-2">
+<li><a class="nav-link text-base" href="assessment.html">Assessment</a></li>
+<li><a class="nav-link text-base" href="guides.html">Guides</a></li>
+<li><a class="nav-link text-base" href="teams.html">For teams</a></li>
+<li><a class="nav-link text-base" href="pricing.html">Pricing</a></li>
+<li><a class="nav-link text-base" href="notes.html">Field notes</a></li>
+<li><a class="nav-link text-base" href="company.html">Company</a></li>
+    </ul>
+    <a href="contact.html" class="btn mt-4 w-full sm:w-auto">Book a security review <svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></a>
+  </nav>
+</header>
+<main id="main" class="flex-1">
+<section class="overflow-hidden">
+  <div class="wrap grid items-center gap-12 py-12 lg:grid-cols-[1.1fr_0.9fr] lg:py-20">
+    <div class="reveal">
+      <p class="eyebrow text-juniper">Self-custody security · Santa Fe, New Mexico</p>
+      <h1 class="mt-6 font-display text-[clamp(2.8rem,6.2vw,5.4rem)] leading-[1.02] font-semibold tracking-tight">Hold the keys.<br /><em class="font-medium text-juniper">Know the plan.</em></h1>
+      <p class="mt-7 max-w-xl text-lg leading-relaxed text-bark-soft">Cipheroak helps households and small teams keep their own keys safely: hardware wallets set up properly, multisig vaults that survive a bad day, and recovery plans your family can actually follow.</p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a href="assessment.html" class="btn">Take the 10-question assessment <svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></a>
+        <a href="contact.html" class="btn btn-ghost">Book a security review</a>
+      </div>
+      <dl class="mt-10 grid max-w-xl grid-cols-3 gap-4 border-t border-line pt-6">
+        <div><dt class="text-xs text-bark-soft">Vaults set up</dt><dd class="mt-1 font-display text-3xl font-semibold">410+</dd></div>
+        <div><dt class="text-xs text-bark-soft">Key ceremonies</dt><dd class="mt-1 font-display text-3xl font-semibold">300+</dd></div>
+        <div><dt class="text-xs text-bark-soft">Keys we hold</dt><dd class="mt-1 font-display text-3xl font-semibold">0</dd></div>
+      </dl>
+    </div>
+    <figure class="reveal relative mx-auto w-full max-w-md lg:max-w-none">
+      <div class="arch border border-line bg-adobe">
+        <img src="assets/img/hero-home.svg" width="560" height="660" class="block h-auto w-full" alt="A cross-section of an oak trunk with its growth rings. Three keys sit on different rings, joined by a thin line: any two of them can open the vault." />
+      </div>
+      <figcaption class="mt-4 rounded-2xl border border-line bg-parchment p-4 text-sm leading-relaxed shadow-sm sm:absolute sm:right-[-0.5rem] sm:-bottom-4 sm:mt-0 sm:max-w-[16rem]">
+        <span class="eyebrow text-juniper">Two of three</span><br />Lose one key and nothing is lost. Steal one key and nothing moves.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="border-y border-line bg-adobe">
+  <div class="wrap grid gap-8 py-12 md:grid-cols-3">
+    <div class="reveal flex gap-4">
+      <span class="flex size-11 shrink-0 items-center justify-center rounded-full bg-bark font-mono text-ochre">01</span>
+      <div><h2 class="font-display text-xl font-semibold">We never ask for your phrase</h2><p class="mt-2 text-sm leading-relaxed text-bark-soft">Not to help, not to check, not to “verify”. You write it, you keep it, and it never passes through us.</p></div>
+    </div>
+    <div class="reveal flex gap-4">
+      <span class="flex size-11 shrink-0 items-center justify-center rounded-full bg-bark font-mono text-ochre">02</span>
+      <div><h2 class="font-display text-xl font-semibold">We never hold your keys</h2><p class="mt-2 text-sm leading-relaxed text-bark-soft">Every key we help create belongs to you, your family or your team. We are teachers and witnesses, not custodians.</p></div>
+    </div>
+    <div class="reveal flex gap-4">
+      <span class="flex size-11 shrink-0 items-center justify-center rounded-full bg-bark font-mono text-ochre">03</span>
+      <div><h2 class="font-display text-xl font-semibold">We never tell you what to buy</h2><p class="mt-2 text-sm leading-relaxed text-bark-soft">No price talk, no trading, no yield. We take no commissions from device makers. We only care that what you own is safe.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap py-20">
+  <div class="flex flex-wrap items-end justify-between gap-6">
+    <div class="max-w-2xl">
+      <p class="eyebrow text-juniper">What we do</p>
+      <h2 class="mt-4 font-display text-4xl leading-tight font-semibold sm:text-5xl">Four ways we work with people</h2>
+    </div>
+    <a href="pricing.html" class="text-link">See prices and build a quote</a>
+  </div>
+  <div class="mt-12 grid gap-6 md:grid-cols-2">
+    <article class="reveal grid gap-6 rounded-3xl border border-line bg-parchment p-7 sm:grid-cols-[7rem_1fr]">
+      <img src="assets/img/service-review.svg" width="112" height="112" class="size-28" alt="" />
+      <div>
+        <h3 class="font-display text-2xl font-semibold">Security review</h3>
+        <p class="mt-3 leading-relaxed text-bark-soft">Two video sessions on the setup you already have. We map every device, backup and person, find the single points of failure and write them up in order.</p>
+        <p class="mt-4 font-mono text-sm">From $420 · remote</p>
+      </div>
+    </article>
+    <article class="reveal grid gap-6 rounded-3xl border border-line bg-parchment p-7 sm:grid-cols-[7rem_1fr]">
+      <img src="assets/img/service-household.svg" width="112" height="112" class="size-28" alt="" />
+      <div>
+        <h3 class="font-display text-2xl font-semibold">Household vault</h3>
+        <p class="mt-3 leading-relaxed text-bark-soft">A two-of-three vault set up with you at your kitchen table or our studio, with metal backups, a restore drill and a year of check-ins.</p>
+        <p class="mt-4 font-mono text-sm">From $1,650 · in person</p>
+      </div>
+    </article>
+    <article class="reveal grid gap-6 rounded-3xl border border-line bg-parchment p-7 sm:grid-cols-[7rem_1fr]">
+      <img src="assets/img/service-team.svg" width="112" height="112" class="size-28" alt="" />
+      <div>
+        <h3 class="font-display text-2xl font-semibold">Team vault</h3>
+        <p class="mt-3 leading-relaxed text-bark-soft">Multisig for a small business or nonprofit, a written signing policy, training for every signer and a rehearsed plan for when someone leaves.</p>
+        <p class="mt-4 font-mono text-sm">From $3,900 · on site</p>
+      </div>
+    </article>
+    <article class="reveal grid gap-6 rounded-3xl border border-line bg-parchment p-7 sm:grid-cols-[7rem_1fr]">
+      <img src="assets/img/service-recovery.svg" width="112" height="112" class="size-28" alt="" />
+      <div>
+        <h3 class="font-display text-2xl font-semibold">Recovery and inheritance</h3>
+        <p class="mt-3 leading-relaxed text-bark-soft">A letter of instruction, an executor briefing and a recovery path that works without you, designed with your attorney so only the right person can use it.</p>
+        <p class="mt-4 font-mono text-sm">From $380 · with any plan</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="bg-bark text-caliche">
+  <div class="wrap grid gap-12 py-20 lg:grid-cols-[0.9fr_1.1fr]">
+    <div class="reveal">
+      <p class="eyebrow text-ochre">A key ceremony, start to finish</p>
+      <h2 class="mt-4 font-display text-4xl leading-tight font-semibold sm:text-5xl">Slow on purpose. Done once, properly.</h2>
+      <p class="mt-6 max-w-md leading-relaxed text-caliche/80">A key ceremony is the afternoon your vault is born. We bring the checklists and the patience; you bring sealed devices bought new from the maker. Nothing secret ever leaves the room.</p>
+      <a href="teams.html" class="btn mt-8 border-ochre bg-ochre text-bark hover:text-parchment">Plan your signers <svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></a>
+    </div>
+    <ol class="grid gap-4 sm:grid-cols-2">
+      <li class="reveal rounded-3xl border border-caliche/20 p-6"><p class="font-mono text-sm text-ochre">Step 1 · Before</p><h3 class="mt-3 font-display text-xl font-semibold">A map, not a shopping list</h3><p class="mt-2 text-sm leading-relaxed text-caliche/80">We agree who signs, where each key will live and what happens if someone can’t be reached.</p></li>
+      <li class="reveal rounded-3xl border border-caliche/20 p-6"><p class="font-mono text-sm text-ochre">Step 2 · The table</p><h3 class="mt-3 font-display text-xl font-semibold">Open, check, generate</h3><p class="mt-2 text-sm leading-relaxed text-caliche/80">Seals checked, devices verified, phrases generated and written by you. We watch the process, never the words.</p></li>
+      <li class="reveal rounded-3xl border border-caliche/20 p-6"><p class="font-mono text-sm text-ochre">Step 3 · Rehearsal</p><h3 class="mt-3 font-display text-xl font-semibold">Sign, restore, sign again</h3><p class="mt-2 text-sm leading-relaxed text-caliche/80">A small test deposit, a signature with every pair of keys and a full restore from backup before real funds arrive.</p></li>
+      <li class="reveal rounded-3xl border border-caliche/20 p-6"><p class="font-mono text-sm text-ochre">Step 4 · After</p><h3 class="mt-3 font-display text-xl font-semibold">Written down, checked yearly</h3><p class="mt-2 text-sm leading-relaxed text-caliche/80">You leave with a vault map and a letter of instruction draft. We check in each quarter with a drill reminder.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="wrap py-20">
+  <div class="grid gap-8 lg:grid-cols-[1fr_1fr]">
+    <article class="reveal rounded-3xl border border-line bg-parchment p-8">
+      <p class="eyebrow text-chile">Latest advisory</p>
+      <div class="mt-5" data-latest-advisory>
+        <h3 class="font-display text-2xl leading-snug font-semibold">Calls claiming to be wallet support are back in Northern New Mexico</h3>
+        <a class="text-link mt-5 inline-block" href="notes.html">Read our field notes</a>
+      </div>
+    </article>
+    <article class="reveal flex flex-col justify-between gap-8 rounded-3xl bg-sky p-8">
+      <div>
+        <p class="eyebrow text-juniper">Next open review call</p>
+        <p class="mt-5 font-display text-3xl leading-snug font-semibold" data-next-slot>Monday at 9:00 AM</p>
+        <p class="mt-3 leading-relaxed text-bark-soft">Forty-five minutes on video or phone, Mountain Time. Tell us what you have, and we will tell you honestly what we would fix first.</p>
+      </div>
+      <a href="contact.html" class="btn self-start">Choose a time <svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></a>
+    </article>
+  </div>
+</section>
+
+<section class="border-t border-line bg-adobe/60">
+  <div class="wrap py-20">
+    <div class="flex flex-wrap items-end justify-between gap-6">
+      <div>
+        <p class="eyebrow text-juniper">Start reading</p>
+        <h2 class="mt-4 font-display text-4xl font-semibold">Guides our clients ask for most</h2>
+      </div>
+      <a href="guides.html" class="text-link">All fourteen guides</a>
+    </div>
+    <div class="mt-10 grid gap-6 md:grid-cols-3" data-home-guides></div>
+  </div>
+</section>
+
+<section class="wrap py-20">
+  <h2 class="sr-only">What clients say</h2>
+  <div class="grid gap-6 md:grid-cols-3">
+    <figure class="reveal rounded-3xl border border-line p-7">
+      <blockquote class="font-display text-xl leading-relaxed">“For the first time, recovery is something we have practiced, not a document we hope is right.”</blockquote>
+      <figcaption class="mt-5 text-sm text-bark-soft">Household vault client, Eldorado</figcaption>
+    </figure>
+    <figure class="reveal rounded-3xl border border-line p-7">
+      <blockquote class="font-display text-xl leading-relaxed">“They spent an hour on what happens if I’m hit by a bus and five minutes on devices. That’s the right ratio.”</blockquote>
+      <figcaption class="mt-5 text-sm text-bark-soft">Recovery plan client, Los Alamos</figcaption>
+    </figure>
+    <figure class="reveal rounded-3xl border border-line p-7">
+      <blockquote class="font-display text-xl leading-relaxed">“Our treasurer left in March. Because of the signing policy, rotating her key took a single afternoon.”</blockquote>
+      <figcaption class="mt-5 text-sm text-bark-soft">Team vault client, a nonprofit in Taos</figcaption>
+    </figure>
+  </div>
+</section>
+
+</main>
+
+<footer class="mt-auto bg-bark text-caliche">
+  <svg viewBox="0 0 1200 28" preserveAspectRatio="none" class="block h-5 w-full bg-caliche text-bark" fill="currentColor" aria-hidden="true"><path d="M0 28V16h90v-8h70V0h120v8h70v8h260V8h70V0h120v8h70v8h330v12z" /></svg>
+  <div class="wrap grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+    <div>
+      <a href="index.html" class="flex items-center gap-3"><svg viewBox="0 0 40 40" class="size-10 shrink-0" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1f5a52" /><path d="M20 5.5c8 0 14.5 6.5 14.5 14.5" stroke="#f1dcae" stroke-width="1.6" stroke-linecap="round" /><circle cx="19" cy="21" r="11" stroke="#f4ece0" stroke-width="1.4" stroke-dasharray="40 6" /><circle cx="19.5" cy="20.5" r="6.5" stroke="#f4ece0" stroke-width="1.4" /><circle cx="20" cy="18.6" r="2.2" fill="#c98d2e" /><path d="M18.9 20.2h2.2l.7 4.6h-3.6z" fill="#c98d2e" /></svg><span class="font-display text-3xl font-semibold">Cipheroak</span></a>
+      <p class="mt-5 max-w-xs text-sm leading-relaxed text-caliche/80">Self-custody security for households and small teams. Reviews, setups, recovery plans and key ceremonies, from a small studio in Santa Fe.</p>
+      <p class="mt-5 max-w-xs rounded-2xl border border-caliche/25 p-4 text-sm leading-relaxed">We never hold your keys, never sell devices and never give investment advice.</p>
+    </div>
+    <div>
+      <h2 class="eyebrow text-ochre">Services</h2>
+      <ul class="mt-5 space-y-3 text-sm">
+        <li><a class="underline-offset-4 hover:underline" href="pricing.html">Security reviews</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="pricing.html?plan=household">Household vaults</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="teams.html">Team vaults</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="contact.html">Book a review</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="eyebrow text-ochre">Learn</h2>
+      <ul class="mt-5 space-y-3 text-sm">
+        <li><a class="underline-offset-4 hover:underline" href="assessment.html">Readiness assessment</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="guides.html">Security guides</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="notes.html">Field notes</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="company.html">Our principles</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="eyebrow text-ochre">Visit the studio</h2>
+      <address class="mt-5 text-sm leading-relaxed not-italic">Studio 3, 418 Galisteo Street<br />Santa Fe, NM 87501</address>
+      <p class="mt-3 text-sm leading-relaxed text-caliche/80">Mon–Thu 9 AM–5 PM, Fri 9 AM–3 PM<br />Mountain Time. Key ceremonies on Saturdays by arrangement.</p>
+      <p class="mt-4 text-sm"><a class="underline underline-offset-4" href="tel:+15055550172">(505) 555-0172</a></p>
+      <p class="mt-2 text-sm"><a class="underline underline-offset-4" href="mailto:hello@cipheroak.example">hello@cipheroak.example</a></p>
+    </div>
+  </div>
+  <div class="wrap flex flex-wrap justify-between gap-3 border-t border-caliche/20 py-6 text-xs text-caliche/75">
+    <p>© <span data-year>2026</span> Cipheroak Security Studio. Security education, not financial, legal or tax advice.</p>
+    <p>Cipheroak is a fictional business.</p>
+  </div>
+</footer>
+<p id="notice" class="fixed right-4 bottom-4 left-4 z-50 mx-auto max-w-lg rounded-2xl border border-bark bg-ochre-soft px-5 py-4 text-sm shadow-lg" role="status" aria-live="polite" hidden></p>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Olive & Ember — Wood-fired kitchen in downtown Annapolis</title>
+  <meta name="description" content="Seasonal Mediterranean plates cooked over oak and olive wood, natural wine and a long table for friends. Book a table at Olive & Ember.">
+  <meta name="theme-color" content="#17110d">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Olive &amp; Ember">
+  <meta property="og:title" content="Olive & Ember — Wood-fired kitchen in downtown Annapolis">
+  <meta property="og:description" content="Seasonal Mediterranean plates cooked over oak and olive wood, natural wine and a long table for friends. Book a table at Olive & Ember.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="min-h-screen">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header fixed inset-x-0 top-0 z-50" data-header>
+    <div class="container-x flex h-20 items-center justify-between gap-6">
+      <a href="index.html" class="flex items-center gap-3 text-cream" aria-current="page">
+        <img src="assets/img/favicon.svg" alt="" class="h-9 w-9" width="36" height="36">
+        <span class="font-display text-2xl font-semibold tracking-wide">Olive &amp; Ember</span>
+      </a>
+      <nav aria-label="Main" class="hidden items-center gap-9 lg:flex">
+        <a class="nav-link" href="menu.html">Menu</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="events.html">Events</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+      <a href="reservations.html" class="btn btn-primary hidden lg:inline-flex">Reserve a table</a>
+      <button type="button" class="group inline-flex h-11 w-11 items-center justify-center rounded-full border border-cream/25 text-cream transition hover:border-cream lg:hidden" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <svg class="h-5 w-5 group-aria-expanded:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="hidden h-5 w-5 group-aria-expanded:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div id="mobile-nav" class="h-[calc(100dvh-5rem)] overflow-y-auto border-t border-cream/10 bg-char lg:hidden" hidden>
+      <nav aria-label="Mobile" class="container-x flex flex-col gap-4 py-10">
+        <a class="font-display text-4xl text-cream/85 transition hover:text-gold aria-[current=page]:text-gold" href="index.html" aria-current="page">Home</a>
+        <a class="font-display text-4xl text-cream/85 transition hover:text-gold aria-[current=page]:text-gold" href="menu.html">Menu</a>
+        <a class="font-display text-4xl text-cream/85 transition hover:text-gold aria-[current=page]:text-gold" href="about.html">About</a>
+        <a class="font-display text-4xl text-cream/85 transition hover:text-gold aria-[current=page]:text-gold" href="events.html">Events</a>
+        <a class="font-display text-4xl text-cream/85 transition hover:text-gold aria-[current=page]:text-gold" href="contact.html">Contact</a>
+        <a href="reservations.html" class="btn btn-primary mt-6 self-start">Reserve a table</a>
+        <p class="mt-6 flex items-center gap-3 text-sm text-cream/70" data-open-status><span class="status-dot"></span><span data-open-text>Opening hours</span></p>
+        <a href="tel:+14105550120" class="text-sm text-cream/70 hover:text-cream">(410) 555-0120</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-char text-cream">
+      <img src="assets/img/hero-fire.svg" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover" width="1600" height="1000">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-r from-char via-char/80 to-char/10" aria-hidden="true"></div>
+      <div class="absolute inset-x-0 bottom-0 -z-10 h-48 bg-gradient-to-t from-char to-transparent" aria-hidden="true"></div>
+      <div class="container-x flex flex-1 flex-col justify-center pb-16 pt-32">
+        <p class="eyebrow-light" data-reveal>Wood-fired kitchen &middot; Annapolis</p>
+        <h1 class="mt-4 max-w-3xl font-display text-6xl font-semibold leading-[0.95] sm:text-8xl" data-reveal style="--d:100ms">Simple food, cooked over fire.</h1>
+        <p class="mt-7 max-w-xl text-lg leading-relaxed text-cream/80" data-reveal style="--d:200ms">Seasonal Mediterranean plates from oak and olive wood, natural wine from people we know, and a long table that always has room for one more.</p>
+        <div class="mt-10 flex flex-wrap gap-3" data-reveal style="--d:300ms">
+          <a href="reservations.html" class="btn btn-primary px-7 py-3.5">Reserve a table</a>
+          <a href="menu.html" class="btn btn-outline-light px-7 py-3.5">View the menu</a>
+        </div>
+      </div>
+      <div class="border-t border-cream/10 bg-char/60 backdrop-blur">
+        <div class="container-x grid gap-4 py-5 text-sm text-cream/75 sm:grid-cols-3">
+          <p class="flex items-center gap-3" data-open-status><span class="status-dot"></span><span data-open-text>See opening hours</span></p>
+          <p class="flex items-center gap-3"><svg class="h-4 w-4 text-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>12 Harbor Street, Annapolis</p>
+          <p class="flex items-center gap-3"><svg class="h-4 w-4 text-gold" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L10 15l-5.3 2.8 1.1-5.9L1.4 7.8l6-.8z"/></svg>4.9 from 1,240 guest reviews</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 sm:py-32">
+      <div class="container-x grid items-center gap-16 lg:grid-cols-2">
+        <div data-reveal>
+          <p class="eyebrow">Since 2014</p>
+          <h2 class="mt-3 font-display text-4xl font-semibold leading-tight sm:text-6xl">Everything we cook touches the flames.</h2>
+          <div class="prose-ember mt-6 space-y-4 text-lg">
+            <p>There is no gas line in our kitchen. Bread, fish, vegetables and the occasional whole lamb all cook over oak and olive wood, in an oven we built by hand a decade ago.</p>
+            <p>The menu follows the market and changes most weeks. What stays the same is the warmth: of the fire, of the room, and of a team that has mostly been here since the beginning.</p>
+          </div>
+          <dl class="mt-10 grid grid-cols-3 gap-6 border-t border-sand pt-8">
+            <div><dt class="text-sm text-muted">Fuel</dt><dd class="font-display text-3xl font-semibold sm:text-4xl">Oak &amp; olive</dd></div>
+            <div><dt class="text-sm text-muted">Sourcing</dt><dd class="font-display text-3xl font-semibold sm:text-4xl">&lt; 25 miles</dd></div>
+            <div><dt class="text-sm text-muted">Wine list</dt><dd class="font-display text-3xl font-semibold sm:text-4xl">120+</dd></div>
+          </dl>
+          <a href="about.html" class="btn btn-outline mt-10">Read our story</a>
+        </div>
+        <div class="relative" data-reveal style="--d:150ms">
+          <div class="dish-art aspect-square shadow-2xl shadow-char/30"><img src="assets/img/dish-burrata.svg" alt="" loading="lazy" width="800" height="800"></div>
+          <div class="absolute -bottom-8 -left-4 w-44 overflow-hidden rounded-3xl border-4 border-cream shadow-xl sm:-left-10 sm:w-56"><img src="assets/img/wine.svg" alt="" loading="lazy" width="800" height="800" class="h-full w-full"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-parchment py-24 sm:py-32" aria-labelledby="signature-title">
+      <div class="container-x">
+        <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end" data-reveal>
+          <div>
+            <p class="eyebrow">From the fire</p>
+            <h2 id="signature-title" class="mt-3 font-display text-4xl font-semibold sm:text-6xl">Signature dishes</h2>
+          </div>
+          <a href="menu.html#dinner" class="btn btn-outline self-start sm:self-auto">See the full menu</a>
+        </div>
+        <div class="mt-14 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-4">
+          <article class="group" data-reveal style="--d:0ms">
+            <div class="dish-art aspect-[4/5]"><img src="assets/img/dish-flatbread.svg" alt="" loading="lazy" width="800" height="800"></div>
+            <div class="mt-5 flex items-baseline justify-between gap-4">
+              <h3 class="font-display text-2xl font-semibold">Charred flatbread</h3>
+              <p class="font-display text-2xl text-ember">$12</p>
+            </div>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Whipped feta, za'atar and wildflower honey, straight from the oven.</p>
+            <div class="mt-3 flex gap-1.5"><span class="badge badge-v" title="Vegetarian"><span aria-hidden="true">V</span><span class="sr-only">Vegetarian</span></span></div>
+          </article>
+          <article class="group" data-reveal style="--d:90ms">
+            <div class="dish-art aspect-[4/5]"><img src="assets/img/dish-octopus.svg" alt="" loading="lazy" width="800" height="800"></div>
+            <div class="mt-5 flex items-baseline justify-between gap-4">
+              <h3 class="font-display text-2xl font-semibold">Grilled octopus</h3>
+              <p class="font-display text-2xl text-ember">$22</p>
+            </div>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Smoked paprika oil, crushed potatoes, capers and parsley.</p>
+            <div class="mt-3 flex gap-1.5"><span class="badge badge-gf" title="Gluten-free"><span aria-hidden="true">GF</span><span class="sr-only">Gluten-free</span></span></div>
+          </article>
+          <article class="group" data-reveal style="--d:180ms">
+            <div class="dish-art aspect-[4/5]"><img src="assets/img/dish-lamb.svg" alt="" loading="lazy" width="800" height="800"></div>
+            <div class="mt-5 flex items-baseline justify-between gap-4">
+              <h3 class="font-display text-2xl font-semibold">Lamb shoulder for two</h3>
+              <p class="font-display text-2xl text-ember">$78</p>
+            </div>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Slow-cooked over oak for eight hours, green sauce, roast potatoes.</p>
+            <div class="mt-3 flex gap-1.5"><span class="badge badge-gf" title="Gluten-free"><span aria-hidden="true">GF</span><span class="sr-only">Gluten-free</span></span></div>
+          </article>
+          <article class="group" data-reveal style="--d:270ms">
+            <div class="dish-art aspect-[4/5]"><img src="assets/img/dish-bream.svg" alt="" loading="lazy" width="800" height="800"></div>
+            <div class="mt-5 flex items-baseline justify-between gap-4">
+              <h3 class="font-display text-2xl font-semibold">Whole sea bream</h3>
+              <p class="font-display text-2xl text-ember">$38</p>
+            </div>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Grilled over olive wood with fennel, olives, chili and lemon.</p>
+            <div class="mt-3 flex gap-1.5"><span class="badge badge-gf" title="Gluten-free"><span aria-hidden="true">GF</span><span class="sr-only">Gluten-free</span></span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative isolate overflow-hidden bg-char py-24 text-cream sm:py-32">
+      <div class="absolute -left-40 top-1/2 -z-10 h-96 w-96 -translate-y-1/2 rounded-full bg-ember/25 blur-3xl" aria-hidden="true"></div>
+      <div class="container-x grid items-center gap-14 lg:grid-cols-[0.8fr_1.2fr]">
+        <div class="mx-auto w-full max-w-sm overflow-hidden rounded-t-full border border-cream/10" data-reveal>
+          <img src="assets/img/chef.svg" alt="Illustrated portrait of head chef Inês Duarte" loading="lazy" width="600" height="750" class="w-full">
+        </div>
+        <figure data-reveal style="--d:120ms">
+          <svg class="h-12 w-12 text-ember-light" viewBox="0 0 48 48" fill="currentColor" aria-hidden="true"><path d="M20 10C10 14 4 22 4 32a8 8 0 1 0 8-8c-.7 0-1.3 0-2 .2C11 19 15 15 22 13zm24 0c-10 4-16 12-16 22a8 8 0 1 0 8-8c-.7 0-1.3 0-2 .2C35 19 39 15 46 13z"/></svg>
+          <blockquote class="mt-6 font-display text-4xl font-medium italic leading-tight sm:text-5xl">Fire is the oldest seasoning there is. Our job is to know when to step back and let it work.</blockquote>
+          <figcaption class="mt-8 flex items-center gap-4">
+            <span class="h-px w-12 bg-gold"></span>
+            <span><span class="block font-semibold">Inês Duarte</span><span class="text-sm text-cream/60">Head chef &amp; co-owner</span></span>
+          </figcaption>
+          <a href="about.html#team" class="btn btn-outline-light mt-10">Meet the team</a>
+        </figure>
+      </div>
+    </section>
+
+    <section class="py-24 sm:py-32" aria-labelledby="reviews-title">
+      <div class="container-x">
+        <div class="mx-auto max-w-2xl text-center" data-reveal>
+          <p class="eyebrow">Kind words</p>
+          <h2 id="reviews-title" class="mt-3 font-display text-4xl font-semibold sm:text-6xl">What our guests say</h2>
+        </div>
+        <div class="mt-14 grid gap-6 lg:grid-cols-3">
+          <figure class="flex flex-col rounded-[2rem] border border-sand bg-white p-8 shadow-sm" data-reveal style="--d:0ms">
+            <div class="flex gap-1 text-gold" role="img" aria-label="5 out of 5 stars"><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L10 15l-5.3 2.8 1.1-5.9L1.4 7.8l6-.8z"/></svg><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L10 15l-5.3 2.8 1.1-5.9L1.4 7.8l6-.8z"/></svg><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L10 15l-5.3 2.8 1.1-5.9L1.4 7.8l6-.8z"/></svg><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L10 15l-5.3 2.8 1.1-5.9L1.4 7.8l6-.8z"/></svg><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L10 15l-5.3 2.8 1.1-5.9L1.4 7.8l6-.8z"/></svg></div>
+            <blockquote class="mt-6 flex-1 font-display text-2xl leading-snug">&ldquo;The lamb shoulder alone is reason enough to cross town. Ask for the counter seats and watch the fire do its work.&rdquo;</blockquote>
+            <figcaption class="mt-8 border-t border-sand pt-5"><p class="font-semibold">The Harbor Gazette</p><p class="text-sm text-muted">Restaurant review</p></figcaption>
+          </figure>
+          <figure class="flex flex-col rounded-[2rem] border border-sand bg-white p-8 shadow-sm" data-reveal style="--d:90ms">
+            <div class="flex gap-1 text-gold" role="img" aria-label="5 out of 5 stars"><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L10 15l-5.3 2.8 1.1-5.9L1.4 7.8l6-.8z"/></svg><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L10 15l-5.3 2.8 1.1-5.9L1.4 7.8l6-.8z"/></svg><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L10 15l-5.3 2.8 1.1-5.9L1.4 7.8l6-.8z"/></svg><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L10 15l-5.3 2.8 1.1-5.9L1.4 7.8l6-.8z"/></svg><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L10 15l-5.3 2.8 1.1-5.9L1.4 7.8l6-.8z"/></svg></div>
+            <blockquote class="mt-6 flex-1 font-display text-2xl leading-snug">&ldquo;Warm, unhurried and quietly brilliant: a neighborhood restaurant that cooks like a destination.&rdquo;</blockquote>
+            <figcaption class="mt-8 border-t border-sand pt-5"><p class="font-semibold">Coastal Food Awards</p><p class="text-sm text-muted">Restaurant of the Year 2024</p></figcaption>
+          </figure>
+          <figure class="flex flex-col rounded-[2rem] border border-sand bg-white p-8 shadow-sm" data-reveal style="--d:180ms">
+            <div class="flex gap-1 text-gold" role="img" aria-label="5 out of 5 stars"><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L10 15l-5.3 2.8 1.1-5.9L1.4 7.8l6-.8z"/></svg><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L10 15l-5.3 2.8 1.1-5.9L1.4 7.8l6-.8z"/></svg><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L10 15l-5.3 2.8 1.1-5.9L1.4 7.8l6-.8z"/></svg><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L10 15l-5.3 2.8 1.1-5.9L1.4 7.8l6-.8z"/></svg><svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 1.5l2.6 5.5 6 .8-4.4 4.1 1.1 5.9L10 15l-5.3 2.8 1.1-5.9L1.4 7.8l6-.8z"/></svg></div>
+            <blockquote class="mt-6 flex-1 font-display text-2xl leading-snug">&ldquo;We came for a birthday and stayed until they stacked the chairs. The natural wine list is a joy to explore.&rdquo;</blockquote>
+            <figcaption class="mt-8 border-t border-sand pt-5"><p class="font-semibold">Priya S.</p><p class="text-sm text-muted">Guest review</p></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="pb-24 sm:pb-32" aria-labelledby="visit-title">
+      <div class="container-x">
+        <div class="grid overflow-hidden rounded-[2.5rem] bg-char text-cream lg:grid-cols-2">
+          <div class="p-8 sm:p-14" data-reveal>
+            <p class="eyebrow-light">Opening hours</p>
+            <h2 id="visit-title" class="mt-3 font-display text-4xl font-semibold sm:text-5xl">Come hungry</h2>
+            <p class="mt-4 flex items-center gap-3 text-sm text-cream/75" data-open-status><span class="status-dot"></span><span data-open-text>See opening hours</span></p>
+            <div class="mt-8">
+        <dl class="text-sm sm:text-base">
+          <div class="hours-row border-cream/15" data-day="2,3,4"><dt>Tuesday – Thursday <span class="today-tag ml-2 rounded-full bg-gold/20 px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wider text-gold">Today</span></dt><dd class="text-cream/60">5pm – 10pm</dd></div>
+          <div class="hours-row border-cream/15" data-day="5,6"><dt>Friday – Saturday <span class="today-tag ml-2 rounded-full bg-gold/20 px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wider text-gold">Today</span></dt><dd class="text-cream/60">12pm – 11pm</dd></div>
+          <div class="hours-row border-cream/15" data-day="0"><dt>Sunday <span class="today-tag ml-2 rounded-full bg-gold/20 px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wider text-gold">Today</span></dt><dd class="text-cream/60">12pm – 4pm</dd></div>
+          <div class="hours-row border-cream/15" data-day="1"><dt>Monday <span class="today-tag ml-2 rounded-full bg-gold/20 px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wider text-gold">Today</span></dt><dd class="text-cream/60">Closed</dd></div>
+        </dl>
+            </div>
+          </div>
+          <div class="relative isolate flex flex-col justify-end gap-6 bg-ember p-8 sm:p-14" data-reveal style="--d:120ms">
+            <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_90%_10%,#e58a5f_0%,transparent_45%)] opacity-70" aria-hidden="true"></div>
+            <h3 class="font-display text-4xl font-semibold leading-tight sm:text-5xl">Book the counter by the fire, or the long table with friends.</h3>
+            <p class="text-cream/85">We hold a few tables for walk-ins every night. Groups of nine or more can book private dining.</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="reservations.html" class="btn btn-light">Reserve a table</a>
+              <a href="events.html" class="btn btn-outline-light">Private dining</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-char text-cream/70">
+    <div class="container-x grid gap-12 py-20 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.2fr_1.4fr]">
+      <div>
+        <a href="index.html" class="flex items-center gap-3 text-cream">
+          <img src="assets/img/favicon.svg" alt="" class="h-9 w-9" width="36" height="36">
+          <span class="font-display text-2xl font-semibold">Olive &amp; Ember</span>
+        </a>
+        <p class="mt-5 max-w-xs text-sm leading-relaxed">A wood-fired neighborhood kitchen in downtown Annapolis. Seasonal plates, natural wine and a long table for friends.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#" class="grid h-10 w-10 place-items-center rounded-full border border-cream/15 transition hover:border-gold hover:text-gold" aria-label="Instagram"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" class="grid h-10 w-10 place-items-center rounded-full border border-cream/15 transition hover:border-gold hover:text-gold" aria-label="Facebook"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7h3l.5-4h-3.5V8.8c0-.5.3-.8.5-.8z"/></svg></a>
+          <a href="#" class="grid h-10 w-10 place-items-center rounded-full border border-cream/15 transition hover:border-gold hover:text-gold" aria-label="TikTok"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.4 2.2 1.8 3.7 4 4v3.2c-1.5 0-2.9-.4-4-1.1V15a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v3.3a2.8 2.8 0 1 0 1.8 2.6V3z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h2 class="label text-gold">Visit</h2>
+        <address class="mt-5 space-y-2 text-sm not-italic leading-relaxed">
+          <p>12 Harbor Street<br>Annapolis, MD 21401</p>
+          <p><a href="tel:+14105550120" class="hover:text-cream">(410) 555-0120</a></p>
+          <p><a href="mailto:hello@oliveandember.example" class="break-all hover:text-cream">hello@oliveandember.example</a></p>
+        </address>
+        <p class="mt-5 flex items-center gap-3 text-sm" data-open-status><span class="status-dot"></span><span data-open-text>See opening hours</span></p>
+      </div>
+      <div>
+        <h2 class="label text-gold">Explore</h2>
+        <ul class="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 text-sm sm:grid-cols-1">
+          <li><a class="hover:text-cream" href="menu.html">Menu</a></li>
+          <li><a class="hover:text-cream" href="reservations.html">Reservations</a></li>
+          <li><a class="hover:text-cream" href="events.html">Private dining</a></li>
+          <li><a class="hover:text-cream" href="about.html">Our story</a></li>
+          <li><a class="hover:text-cream" href="contact.html">Contact &amp; directions</a></li>
+          <li><a class="hover:text-cream" href="menu.html#allergens">Allergen information</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="label text-gold">The Ember Letter</h2>
+        <p class="mt-5 text-sm leading-relaxed">Seasonal menus, wine dinners and first dibs on events. One email a month.</p>
+        <form class="mt-5" data-validate="newsletter" data-success="newsletter-success" novalidate>
+          <div class="flex flex-col gap-2 sm:flex-row lg:flex-col xl:flex-row">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input id="newsletter-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com" aria-describedby="newsletter-email-error" data-msg-required="Please enter your email address." class="min-w-0 flex-1 rounded-full border border-cream/15 bg-char-2 px-5 py-3 text-sm text-cream placeholder:text-cream/40 focus:border-gold focus:outline-none">
+            <button type="submit" class="btn btn-light">Subscribe</button>
+          </div>
+          <p id="newsletter-email-error" class="field-error mt-2 !text-ember-light" hidden></p>
+        </form>
+        <p id="newsletter-success" class="mt-5 rounded-2xl border border-gold/30 bg-gold/10 p-4 text-sm text-cream" hidden><span tabindex="-1" class="font-semibold outline-none">Thanks for signing up!</span> Look out for a confirmation email from us; once you click the link, the next Ember Letter is yours.</p>
+      </div>
+    </div>
+    <div class="border-t border-cream/10">
+      <div class="container-x flex flex-col gap-3 py-6 text-xs sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Olive &amp; Ember. All rights reserved.</p>
+        <p>Gratuity is up to you and is shared with the whole team.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

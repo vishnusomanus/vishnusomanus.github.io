@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Developers — The Prism API</title>
+  <meta name="description" content="Cited answers, search and embeddings over one REST API. Quickstart in curl, JavaScript and Python, official SDKs, endpoint reference and rate limits.">
+  <meta name="theme-color" content="#05060a">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Prism">
+  <meta property="og:title" content="Developers — The Prism API">
+  <meta property="og:description" content="Cited answers, search and embeddings over one REST API. Quickstart in curl, JavaScript and Python, official SDKs, endpoint reference and rate limits.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="developers" class="grain flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[80] rounded-full bg-fg px-5 py-3 text-sm font-medium text-ink-950 focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 border-b border-transparent">
+    <div class="container-x flex h-16 items-center justify-between gap-6">
+      <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Prism home">
+        <svg viewBox="0 0 32 32" class="h-7 w-7 shrink-0 transition-transform duration-500 group-hover:rotate-[-8deg]" aria-hidden="true"><path d="M16 3.5 28.5 26.5H16z" fill="#7cf2c8"/><path d="M16 3.5 3.5 26.5H16z" fill="#ff7eb3"/><path d="M16 3.5 16 26.5 9.75 26.5z" fill="#ffb86b" opacity=".9"/><path d="M16 3.5 22.25 26.5H16z" fill="#6fb6ff" opacity=".9"/><path d="M16 3.5 28.5 26.5h-25z" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.2" stroke-linejoin="round"/></svg>
+        <span class="text-[17px] font-semibold tracking-[-0.02em]">Prism</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1">
+          <li><a href="product.html" class="nav-link">Product</a></li>
+          <li><a href="developers.html" class="nav-link" aria-current="page">Developers</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="changelog.html" class="nav-link">Changelog</a></li>
+          <li><a href="about.html" class="nav-link">Company</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="nav-link hidden sm:inline-flex">Talk to sales</a>
+        <a href="pricing.html" class="btn-primary hidden px-4 py-2 sm:inline-flex">Start free</a>
+        <button id="menu-toggle" type="button" class="grid h-10 w-10 place-items-center rounded-full border border-white/12 bg-white/[.03] text-fg lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-white/[.08] lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-8">
+        <ul>
+          <li><a href="product.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Product<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="developers.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300" aria-current="page">Developers<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="pricing.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Pricing<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="changelog.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Changelog<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Company<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="contact.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Talk to sales<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+        </ul>
+        <a href="pricing.html" class="btn-primary btn-lg mt-6 w-full">Start free</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="relative overflow-hidden">
+      <div class="bg-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="aurora pointer-events-none absolute top-20 right-[-10rem] h-[28rem] w-[44rem] opacity-50" aria-hidden="true"></div>
+      <div class="container-x relative grid items-center gap-14 pt-16 pb-24 sm:pt-24 lg:grid-cols-[minmax(0,5fr)_minmax(0,6fr)]">
+        <div>
+          <p class="eyebrow reveal">Developers</p>
+          <h1 class="h-display reveal reveal-d1 mt-5">Cited answers in <span class="serif text-spectrum pr-1">one</span> API call.</h1>
+          <p class="lead reveal reveal-d2 mt-6 max-w-xl">The same retrieval and models as the Prism app, over REST. Send a question, get back text, citations with quotes and a count of unsupported claims.</p>
+          <div class="reveal reveal-d3 mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="#quickstart" class="btn-primary btn-lg">Quickstart</a>
+            <a href="#endpoints" class="btn-ghost btn-lg">API reference</a>
+          </div>
+          <dl class="reveal reveal-d3 mt-12 grid max-w-md grid-cols-3 gap-4 sm:gap-6 border-t border-white/[.07] pt-7">
+            <div><dt class="text-xs text-subtle">Uptime, 90 days</dt><dd class="mt-1 text-xl font-medium">99.98%</dd></div>
+            <div><dt class="text-xs text-subtle">Regions</dt><dd class="mt-1 text-xl font-medium">3 in US</dd></div>
+            <div><dt class="text-xs text-subtle">SDKs</dt><dd class="mt-1 text-xl font-medium">4</dd></div>
+          </dl>
+        </div>
+        <div class="glass reveal reveal-d2 min-w-0 overflow-hidden rounded-2xl">
+          <div class="flex items-center justify-between border-b border-white/[.07] px-4 py-3">
+            <p class="flex items-center gap-2 font-mono text-xs text-muted"><span class="rounded bg-brand-400/15 px-1.5 py-0.5 text-brand-200">200</span>POST /v1/answers</p>
+            <p class="font-mono text-xs text-subtle">412 ms</p>
+          </div>
+          <div>
+<pre class="code" tabindex="0"><code>{
+  <span class="t-p">"id"</span>: <span class="t-s">"ans_01J9ZQ4M7R"</span>,
+  <span class="t-p">"model"</span>: <span class="t-s">"prism-2"</span>,
+  <span class="t-p">"text"</span>: <span class="t-s">"Refunds moved from 14 to 30 days in March [1]."</span>,
+  <span class="t-p">"citations"</span>: [
+    {
+      <span class="t-p">"index"</span>: <span class="t-n">1</span>,
+      <span class="t-p">"title"</span>: <span class="t-s">"Refund policy v3"</span>,
+      <span class="t-p">"source"</span>: <span class="t-s">"wiki"</span>,
+      <span class="t-p">"quote"</span>: <span class="t-s">"Customers may request a refund within 30 days"</span>
+    }
+  ],
+  <span class="t-p">"unsupported_claims"</span>: <span class="t-n">0</span>,
+  <span class="t-p">"usage"</span>: { <span class="t-p">"input_tokens"</span>: <span class="t-n">3182</span>, <span class="t-p">"output_tokens"</span>: <span class="t-n">96</span> }
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quickstart -->
+    <section id="quickstart" class="border-t border-white/[.06] py-24 sm:py-32" aria-labelledby="qs-title">
+      <div class="container-x">
+        <div class="max-w-2xl">
+          <p class="eyebrow">Quickstart</p>
+          <h2 id="qs-title" class="h-section mt-4">Your first answer in three steps.</h2>
+        </div>
+        <ol class="mt-14 grid gap-12">
+          <li class="grid gap-6 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-12">
+            <div class="flex gap-4">
+              <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-white/15 font-mono text-xs text-ray-rose">1</span>
+              <div>
+                <h3 class="text-lg font-medium">Create a key</h3>
+                <p class="mt-2 text-muted">In the dashboard, open <strong class="font-medium text-fg">Settings → API keys</strong>. Free workspaces get test keys with 100k tokens a month. Keep keys on the server.</p>
+              </div>
+            </div>
+            <div class="card relative min-w-0 overflow-hidden" data-copy-scope>
+              <div class="flex items-center justify-between border-b border-white/[.07] py-1.5 pr-2 pl-4">
+                <p class="font-mono text-xs text-subtle">Terminal</p>
+                <button type="button" data-copy class="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs text-muted transition hover:bg-white/5 hover:text-fg" aria-label="Copy command"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M13 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/></svg><span data-copy-label>Copy</span></button>
+              </div>
+              <div>
+<pre class="code" tabindex="0"><code><span class="t-k">export</span> PRISM_API_KEY=<span class="t-s">"pk_test_your_key_here"</span></code></pre>
+              </div>
+            </div>
+          </li>
+          <li class="grid gap-6 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-12">
+            <div class="flex gap-4">
+              <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-white/15 font-mono text-xs text-ray-mint">2</span>
+              <div>
+                <h3 class="text-lg font-medium">Ask a question</h3>
+                <p class="mt-2 text-muted">Point <code class="text-sm text-fg">sources</code> at your workspace, the web or both. Every answer comes back with citations and quotes.</p>
+              </div>
+            </div>
+            <div class="card relative min-w-0 overflow-hidden" data-tabs>
+              <div class="flex items-center justify-between border-b border-white/[.07] pr-2 pl-1">
+                <div role="tablist" aria-label="Language for the request example" class="flex">
+                  <button type="button" role="tab" id="req-tab-curl" aria-controls="req-curl" aria-selected="true" data-lang="curl" class="tab">cURL</button>
+                  <button type="button" role="tab" id="req-tab-js" aria-controls="req-js" aria-selected="false" tabindex="-1" data-lang="js" class="tab">JavaScript</button>
+                  <button type="button" role="tab" id="req-tab-python" aria-controls="req-python" aria-selected="false" tabindex="-1" data-lang="python" class="tab">Python</button>
+                </div>
+                <button type="button" data-copy class="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs text-muted transition hover:bg-white/5 hover:text-fg" aria-label="Copy code"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M13 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/></svg><span data-copy-label>Copy</span></button>
+              </div>
+              <div role="tabpanel" id="req-curl" aria-labelledby="req-tab-curl">
+<pre class="code" tabindex="0"><code><span class="t-k">curl</span> https://api.prism.example/v1/answers \
+  <span class="t-f">-H</span> <span class="t-s">"Authorization: Bearer $PRISM_API_KEY"</span> \
+  <span class="t-f">-H</span> <span class="t-s">"Content-Type: application/json"</span> \
+  <span class="t-f">-d</span> <span class="t-s">'{
+    "model": "prism-2",
+    "question": "What changed in our refund policy this year?",
+    "sources": ["workspace", "web"]
+  }'</span></code></pre>
+              </div>
+              <div role="tabpanel" id="req-js" aria-labelledby="req-tab-js" hidden>
+<pre class="code" tabindex="0"><code><span class="t-k">import</span> Prism <span class="t-k">from</span> <span class="t-s">"@prismlabs/sdk"</span>;
+
+<span class="t-k">const</span> prism = <span class="t-k">new</span> <span class="t-f">Prism</span>({ <span class="t-p">apiKey</span>: process.env.PRISM_API_KEY });
+
+<span class="t-k">const</span> answer = <span class="t-k">await</span> prism.answers.<span class="t-f">create</span>({
+  <span class="t-p">model</span>: <span class="t-s">"prism-2"</span>,
+  <span class="t-p">question</span>: <span class="t-s">"What changed in our refund policy this year?"</span>,
+  <span class="t-p">sources</span>: [<span class="t-s">"workspace"</span>, <span class="t-s">"web"</span>],
+});
+
+console.<span class="t-f">log</span>(answer.text);
+<span class="t-k">for</span> (<span class="t-k">const</span> c <span class="t-k">of</span> answer.citations) console.<span class="t-f">log</span>(c.index, c.title);</code></pre>
+              </div>
+              <div role="tabpanel" id="req-python" aria-labelledby="req-tab-python" hidden>
+<pre class="code" tabindex="0"><code><span class="t-k">from</span> prismlabs <span class="t-k">import</span> Prism
+
+client = <span class="t-f">Prism</span>()  <span class="t-c"># reads PRISM_API_KEY from the environment</span>
+
+answer = client.answers.<span class="t-f">create</span>(
+    <span class="t-p">model</span>=<span class="t-s">"prism-2"</span>,
+    <span class="t-p">question</span>=<span class="t-s">"What changed in our refund policy this year?"</span>,
+    <span class="t-p">sources</span>=[<span class="t-s">"workspace"</span>, <span class="t-s">"web"</span>],
+)
+
+<span class="t-k">print</span>(answer.text)
+<span class="t-k">for</span> c <span class="t-k">in</span> answer.citations:
+    <span class="t-k">print</span>(c.index, c.title)</code></pre>
+              </div>
+            </div>
+          </li>
+          <li class="grid gap-6 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-12">
+            <div class="flex gap-4">
+              <span class="grid h-8 w-8 shrink-0 place-items-center rounded-full border border-white/15 font-mono text-xs text-ray-sky">3</span>
+              <div>
+                <h3 class="text-lg font-medium">Stream it</h3>
+                <p class="mt-2 text-muted">Set <code class="text-sm text-fg">"stream": true</code> to receive server-sent events: <code class="text-sm text-fg">source</code>, <code class="text-sm text-fg">text</code> and a final <code class="text-sm text-fg">done</code> with usage.</p>
+              </div>
+            </div>
+            <div class="card relative min-w-0 overflow-hidden" data-tabs>
+              <div class="flex items-center justify-between border-b border-white/[.07] pr-2 pl-1">
+                <div role="tablist" aria-label="Language for the streaming example" class="flex">
+                  <button type="button" role="tab" id="str-tab-curl" aria-controls="str-curl" aria-selected="true" data-lang="curl" class="tab">cURL</button>
+                  <button type="button" role="tab" id="str-tab-js" aria-controls="str-js" aria-selected="false" tabindex="-1" data-lang="js" class="tab">JavaScript</button>
+                  <button type="button" role="tab" id="str-tab-python" aria-controls="str-python" aria-selected="false" tabindex="-1" data-lang="python" class="tab">Python</button>
+                </div>
+                <button type="button" data-copy class="inline-flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs text-muted transition hover:bg-white/5 hover:text-fg" aria-label="Copy code"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M13 7V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/></svg><span data-copy-label>Copy</span></button>
+              </div>
+              <div role="tabpanel" id="str-curl" aria-labelledby="str-tab-curl">
+<pre class="code" tabindex="0"><code><span class="t-k">curl</span> <span class="t-f">-N</span> https://api.prism.example/v1/answers \
+  <span class="t-f">-H</span> <span class="t-s">"Authorization: Bearer $PRISM_API_KEY"</span> \
+  <span class="t-f">-H</span> <span class="t-s">"Content-Type: application/json"</span> \
+  <span class="t-f">-d</span> <span class="t-s">'{"model": "prism-2-flash", "question": "Summarize this week in support", "stream": true}'</span></code></pre>
+              </div>
+              <div role="tabpanel" id="str-js" aria-labelledby="str-tab-js" hidden>
+<pre class="code" tabindex="0"><code><span class="t-k">const</span> stream = <span class="t-k">await</span> prism.answers.<span class="t-f">stream</span>({
+  <span class="t-p">model</span>: <span class="t-s">"prism-2-flash"</span>,
+  <span class="t-p">question</span>: <span class="t-s">"Summarize this week in support"</span>,
+});
+
+<span class="t-k">for</span> <span class="t-k">await</span> (<span class="t-k">const</span> event <span class="t-k">of</span> stream) {
+  <span class="t-k">if</span> (event.type === <span class="t-s">"text"</span>) process.stdout.<span class="t-f">write</span>(event.text);
+}</code></pre>
+              </div>
+              <div role="tabpanel" id="str-python" aria-labelledby="str-tab-python" hidden>
+<pre class="code" tabindex="0"><code><span class="t-k">with</span> client.answers.<span class="t-f">stream</span>(
+    <span class="t-p">model</span>=<span class="t-s">"prism-2-flash"</span>,
+    <span class="t-p">question</span>=<span class="t-s">"Summarize this week in support"</span>,
+) <span class="t-k">as</span> stream:
+    <span class="t-k">for</span> event <span class="t-k">in</span> stream:
+        <span class="t-k">if</span> event.type == <span class="t-s">"text"</span>:
+            <span class="t-k">print</span>(event.text, <span class="t-p">end</span>=<span class="t-s">""</span>)</code></pre>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Endpoints -->
+    <section id="endpoints" class="border-t border-white/[.06] bg-ink-900/40 py-24 sm:py-32" aria-labelledby="ep-title">
+      <div class="container-x grid gap-12 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-16">
+        <div>
+          <p class="eyebrow">Reference</p>
+          <h2 id="ep-title" class="h-section mt-4">Endpoints</h2>
+          <p class="mt-5 text-muted">Base URL <code class="text-sm text-fg">https://api.prism.example</code>. JSON in, JSON out, versioned in the path. Breaking changes get a new version and twelve months of overlap.</p>
+        </div>
+        <ul class="card divide-y divide-white/[.07]">
+          <li class="flex flex-col gap-1.5 px-5 py-4 sm:flex-row sm:items-center sm:gap-5"><span class="flex min-w-0 items-center gap-3"><span class="w-16 shrink-0 rounded-md bg-ray-mint/15 py-0.5 text-center font-mono text-[11px] font-medium text-ray-mint">POST</span><code class="truncate text-sm text-fg">/v1/answers</code></span><span class="text-sm text-muted sm:ml-auto sm:text-right">Ask a question, get a cited answer</span></li>
+          <li class="flex flex-col gap-1.5 px-5 py-4 sm:flex-row sm:items-center sm:gap-5"><span class="flex min-w-0 items-center gap-3"><span class="w-16 shrink-0 rounded-md bg-ray-mint/15 py-0.5 text-center font-mono text-[11px] font-medium text-ray-mint">POST</span><code class="truncate text-sm text-fg">/v1/search</code></span><span class="text-sm text-muted sm:ml-auto sm:text-right">Ranked passages, no generation</span></li>
+          <li class="flex flex-col gap-1.5 px-5 py-4 sm:flex-row sm:items-center sm:gap-5"><span class="flex min-w-0 items-center gap-3"><span class="w-16 shrink-0 rounded-md bg-ray-mint/15 py-0.5 text-center font-mono text-[11px] font-medium text-ray-mint">POST</span><code class="truncate text-sm text-fg">/v1/documents</code></span><span class="text-sm text-muted sm:ml-auto sm:text-right">Add or update a document in your index</span></li>
+          <li class="flex flex-col gap-1.5 px-5 py-4 sm:flex-row sm:items-center sm:gap-5"><span class="flex min-w-0 items-center gap-3"><span class="w-16 shrink-0 rounded-md bg-ray-sky/15 py-0.5 text-center font-mono text-[11px] font-medium text-ray-sky">GET</span><code class="truncate text-sm text-fg">/v1/documents/{id}</code></span><span class="text-sm text-muted sm:ml-auto sm:text-right">A document and its sync status</span></li>
+          <li class="flex flex-col gap-1.5 px-5 py-4 sm:flex-row sm:items-center sm:gap-5"><span class="flex min-w-0 items-center gap-3"><span class="w-16 shrink-0 rounded-md bg-ray-rose/15 py-0.5 text-center font-mono text-[11px] font-medium text-ray-rose">DELETE</span><code class="truncate text-sm text-fg">/v1/documents/{id}</code></span><span class="text-sm text-muted sm:ml-auto sm:text-right">Remove a document from the index</span></li>
+          <li class="flex flex-col gap-1.5 px-5 py-4 sm:flex-row sm:items-center sm:gap-5"><span class="flex min-w-0 items-center gap-3"><span class="w-16 shrink-0 rounded-md bg-ray-mint/15 py-0.5 text-center font-mono text-[11px] font-medium text-ray-mint">POST</span><code class="truncate text-sm text-fg">/v1/briefs</code></span><span class="text-sm text-muted sm:ml-auto sm:text-right">Schedule a recurring question</span></li>
+          <li class="flex flex-col gap-1.5 px-5 py-4 sm:flex-row sm:items-center sm:gap-5"><span class="flex min-w-0 items-center gap-3"><span class="w-16 shrink-0 rounded-md bg-ray-mint/15 py-0.5 text-center font-mono text-[11px] font-medium text-ray-mint">POST</span><code class="truncate text-sm text-fg">/v1/embeddings</code></span><span class="text-sm text-muted sm:ml-auto sm:text-right">Vectors from prism-embed-1</span></li>
+          <li class="flex flex-col gap-1.5 px-5 py-4 sm:flex-row sm:items-center sm:gap-5"><span class="flex min-w-0 items-center gap-3"><span class="w-16 shrink-0 rounded-md bg-ray-sky/15 py-0.5 text-center font-mono text-[11px] font-medium text-ray-sky">GET</span><code class="truncate text-sm text-fg">/v1/usage</code></span><span class="text-sm text-muted sm:ml-auto sm:text-right">Token usage by key and day</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SDKs -->
+    <section id="sdks" class="container-x py-24 sm:py-32" aria-labelledby="sdk-title">
+      <div class="max-w-2xl">
+        <p class="eyebrow">SDKs</p>
+        <h2 id="sdk-title" class="h-section mt-4">Official libraries, typed and tested.</h2>
+        <p class="lead mt-5">Retries with backoff, streaming helpers and pagination built in. Open source under the MIT license.</p>
+      </div>
+      <ul class="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <li class="card card-hover reveal flex flex-col p-6">
+          <p class="flex items-center justify-between"><span class="font-medium">JavaScript</span><span class="font-mono text-xs text-subtle">v3.2</span></p>
+          <p class="mt-2 flex-1 text-sm text-muted">Node 20+, Deno, Bun and edge runtimes. Full TypeScript types.</p>
+          <div class="mt-6 flex items-center justify-between gap-2 rounded-lg border border-white/[.07] bg-ink-950/70 py-1.5 pr-1.5 pl-3"><code class="truncate text-xs text-fg">npm i @prismlabs/sdk</code><button type="button" data-copy="npm install @prismlabs/sdk" class="shrink-0 rounded-md px-2 py-1 text-xs text-muted transition hover:bg-white/5 hover:text-fg" aria-label="Copy the JavaScript install command"><span data-copy-label>Copy</span></button></div>
+        </li>
+        <li class="card card-hover reveal reveal-d1 flex flex-col p-6">
+          <p class="flex items-center justify-between"><span class="font-medium">Python</span><span class="font-mono text-xs text-subtle">v3.1</span></p>
+          <p class="mt-2 flex-1 text-sm text-muted">Python 3.9+, sync and async clients, Pydantic models.</p>
+          <div class="mt-6 flex items-center justify-between gap-2 rounded-lg border border-white/[.07] bg-ink-950/70 py-1.5 pr-1.5 pl-3"><code class="truncate text-xs text-fg">pip install prismlabs</code><button type="button" data-copy="pip install prismlabs" class="shrink-0 rounded-md px-2 py-1 text-xs text-muted transition hover:bg-white/5 hover:text-fg" aria-label="Copy the Python install command"><span data-copy-label>Copy</span></button></div>
+        </li>
+        <li class="card card-hover reveal reveal-d2 flex flex-col p-6">
+          <p class="flex items-center justify-between"><span class="font-medium">Go</span><span class="font-mono text-xs text-subtle">v1.4</span></p>
+          <p class="mt-2 flex-1 text-sm text-muted">Context-aware, zero dependencies beyond the standard library.</p>
+          <div class="mt-6 flex items-center justify-between gap-2 rounded-lg border border-white/[.07] bg-ink-950/70 py-1.5 pr-1.5 pl-3"><code class="truncate text-xs text-fg">go get prism.example/go</code><button type="button" data-copy="go get prism.example/go" class="shrink-0 rounded-md px-2 py-1 text-xs text-muted transition hover:bg-white/5 hover:text-fg" aria-label="Copy the Go install command"><span data-copy-label>Copy</span></button></div>
+        </li>
+        <li class="card card-hover reveal reveal-d3 flex flex-col p-6">
+          <p class="flex items-center justify-between"><span class="font-medium">Ruby</span><span class="chip py-0.5 normal-case tracking-normal">Beta</span></p>
+          <p class="mt-2 flex-1 text-sm text-muted">Ruby 3.2+, with a Rails generator for webhooks.</p>
+          <div class="mt-6 flex items-center justify-between gap-2 rounded-lg border border-white/[.07] bg-ink-950/70 py-1.5 pr-1.5 pl-3"><code class="truncate text-xs text-fg">gem install prismlabs</code><button type="button" data-copy="gem install prismlabs" class="shrink-0 rounded-md px-2 py-1 text-xs text-muted transition hover:bg-white/5 hover:text-fg" aria-label="Copy the Ruby install command"><span data-copy-label>Copy</span></button></div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Rate limits -->
+    <section id="rate-limits" class="border-t border-white/[.06] py-24 sm:py-32" aria-labelledby="rl-title">
+      <div class="container-x grid gap-12 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-16">
+        <div>
+          <p class="eyebrow">Limits</p>
+          <h2 id="rl-title" class="h-section mt-4">Rate limits</h2>
+          <p class="mt-5 text-muted">Limits apply per workspace. Every response carries <code class="text-sm text-fg">x-ratelimit-remaining</code> and <code class="text-sm text-fg">x-ratelimit-reset</code>; a <code class="text-sm text-fg">429</code> includes <code class="text-sm text-fg">retry-after</code>. The SDKs back off for you.</p>
+        </div>
+        <div class="min-w-0">
+          <div class="card relative overflow-x-auto" role="region" aria-label="Rate limits by plan (scrolls sideways)" tabindex="0">
+            <table class="w-full min-w-[34rem] text-left text-sm">
+              <thead>
+                <tr class="text-subtle">
+                  <th scope="col" class="px-6 py-4 font-normal">Plan</th>
+                  <th scope="col" class="px-4 py-4 font-normal">Requests / min</th>
+                  <th scope="col" class="px-4 py-4 font-normal">Tokens / min</th>
+                  <th scope="col" class="px-6 py-4 font-normal">Concurrent streams</th>
+                </tr>
+              </thead>
+              <tbody class="font-mono text-muted">
+                <tr class="border-t border-white/[.07]"><th scope="row" class="px-6 py-4 font-sans font-normal text-fg">Free</th><td class="px-4 py-4">20</td><td class="px-4 py-4">40,000</td><td class="px-6 py-4">2</td></tr>
+                <tr class="border-t border-white/[.07]"><th scope="row" class="px-6 py-4 font-sans font-normal text-fg">Team</th><td class="px-4 py-4">600</td><td class="px-4 py-4">2,000,000</td><td class="px-6 py-4">50</td></tr>
+                <tr class="border-t border-white/[.07]"><th scope="row" class="px-6 py-4 font-sans font-normal text-fg">Enterprise</th><td class="px-4 py-4 font-sans">Custom</td><td class="px-4 py-4 font-sans">Custom</td><td class="px-6 py-4 font-sans">Custom</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="mt-4 text-sm text-subtle">Need more? <a href="contact.html?topic=api" class="link">Ask for a limit increase</a>. Most are approved the same day.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-x pb-24 sm:pb-32">
+      <div class="glass reveal relative isolate overflow-hidden rounded-3xl px-6 py-14 sm:px-12 sm:py-20">
+        <img src="assets/img/prism-beam.svg" alt="" width="800" height="400" class="pointer-events-none absolute top-1/2 right-[-14rem] -z-10 hidden w-[52rem] max-w-none -translate-y-1/2 opacity-90 md:block">
+        <div class="max-w-xl">
+          <h2 class="h-section">Ship cited answers this week.</h2>
+          <p class="lead mt-5">Test keys are free. Production keys come with every Team plan, including 1M tokens a month.</p>
+          <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a href="pricing.html" class="btn-primary btn-lg">See API pricing</a>
+            <a href="changelog.html?tag=api" class="btn-ghost btn-lg">API changelog</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="relative mt-auto border-t border-white/[.07] bg-ink-950">
+    <div class="container-x grid gap-12 py-16 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="inline-flex items-center gap-2.5" aria-label="Prism home">
+          <svg viewBox="0 0 32 32" class="h-7 w-7 shrink-0" aria-hidden="true"><path d="M16 3.5 28.5 26.5H16z" fill="#7cf2c8"/><path d="M16 3.5 3.5 26.5H16z" fill="#ff7eb3"/><path d="M16 3.5 16 26.5 9.75 26.5z" fill="#ffb86b" opacity=".9"/><path d="M16 3.5 22.25 26.5H16z" fill="#6fb6ff" opacity=".9"/><path d="M16 3.5 28.5 26.5h-25z" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.2" stroke-linejoin="round"/></svg>
+          <span class="text-[17px] font-semibold tracking-[-0.02em]">Prism</span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-muted">The research assistant that shows its work. Made by Prism Labs in San Jose and Salt Lake City.</p>
+        <p class="mt-6 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[.03] px-3 py-1.5 text-xs text-muted"><span class="pulse-dot h-2 w-2 rounded-full bg-brand-400 text-brand-400" aria-hidden="true"></span>All systems normal</p>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-5">
+      <nav aria-label="Product">
+        <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">Product</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="product.html" class="text-muted transition hover:text-fg">Overview</a></li>
+          <li><a href="product.html#integrations" class="text-muted transition hover:text-fg">Integrations</a></li>
+          <li><a href="product.html#security" class="text-muted transition hover:text-fg">Security</a></li>
+          <li><a href="pricing.html" class="text-muted transition hover:text-fg">Pricing</a></li>
+          <li><a href="changelog.html" class="text-muted transition hover:text-fg">Changelog</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Developers">
+        <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">Developers</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="developers.html" class="text-muted transition hover:text-fg">API overview</a></li>
+          <li><a href="developers.html#quickstart" class="text-muted transition hover:text-fg">Quickstart</a></li>
+          <li><a href="developers.html#endpoints" class="text-muted transition hover:text-fg">Endpoints</a></li>
+          <li><a href="developers.html#sdks" class="text-muted transition hover:text-fg">SDKs</a></li>
+          <li><a href="developers.html#rate-limits" class="text-muted transition hover:text-fg">Rate limits</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">Company</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="about.html" class="text-muted transition hover:text-fg">About</a></li>
+          <li><a href="about.html#careers" class="text-muted transition hover:text-fg">Careers</a></li>
+          <li><a href="contact.html" class="text-muted transition hover:text-fg">Talk to sales</a></li>
+          <li><a href="pricing.html#faq" class="text-muted transition hover:text-fg">FAQ</a></li>
+        </ul>
+      </nav>
+      </div>
+      <div class="lg:col-span-3">
+        <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">Release notes by email</h2>
+        <p class="mt-4 text-sm text-muted">One email a month with everything we shipped. No marketing.</p>
+        <form data-form="newsletter" class="mt-4" novalidate>
+          <label for="footer-email" class="sr-only">Email address</label>
+          <div class="flex gap-2">
+            <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@company.example" class="input py-2 text-sm">
+            <button type="submit" class="btn-ghost shrink-0 px-4 py-2">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="divider">
+      <div class="container-x flex flex-col gap-2 py-6 text-xs text-subtle sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Prism Labs, Inc. Prism is a fictional product.</p>
+        <p>Website template by Freeframe.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

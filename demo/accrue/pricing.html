@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing and fee estimator — Fernley Whitcomb CPAs</title>
+  <meta name="description" content="Fixed monthly bookkeeping packages, individual tax return prices and an interactive fee estimator for entity type, transactions, payroll, states and cleanup.">
+  <meta name="theme-color" content="#1f2316">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fernley Whitcomb CPAs">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Pricing and fee estimator — Fernley Whitcomb CPAs">
+  <meta property="og:description" content="Fixed monthly bookkeeping packages, individual tax return prices and an interactive fee estimator for entity type, transactions, payroll, states and cleanup.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geologica:wght@300..700&amp;family=Hahmlet:wght@500..700&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="pricing" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-olive px-5 py-3 font-semibold text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <header id="site-header" class="site-header">
+    <div class="dateline">
+      <div class="wrap flex min-h-9 items-center justify-between gap-4 py-1.5">
+        <p class="min-w-0 truncate" data-next-deadline><a href="deadlines.html" class="hover:text-paper">Federal and Tennessee tax deadlines, worked out for this year</a></p>
+        <div class="hidden shrink-0 items-center gap-5 md:flex">
+          <a href="contact.html#portal" class="flex items-center gap-1.5 hover:text-paper"><svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Client portal</a>
+          <a href="tel:+14235550138" class="flex items-center gap-1.5 font-medium text-paper num hover:text-marigold"><svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg>(423) 555-0138</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap flex h-[4.5rem] items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-3">
+        <svg viewBox="0 0 40 40" class="size-10 shrink-0" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="11" fill="#4f5b1c"/><path d="M10.5 29v-6M17.5 29V17.5M24.5 29V12" stroke="#f5f1e6" stroke-width="4.2" stroke-linecap="round"/><circle cx="31" cy="10.5" r="3.6" fill="#e8b13a"/></svg>
+        <span class="flex flex-col leading-none"><span class="font-serif text-[1.35rem] font-semibold tracking-[-0.01em]">Fernley Whitcomb</span><span class="mt-1 text-[11px] font-semibold uppercase tracking-[0.2em] text-muted">CPAs · Chattanooga</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-0.5">
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="pricing.html" class="nav-link" aria-current="page">Pricing</a></li>
+          <li><a href="deadlines.html" class="nav-link">Deadlines</a></li>
+          <li><a href="team.html" class="nav-link">Team</a></li>
+          <li><a href="insights.html" class="nav-link">Insights</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="contact.html" class="btn-olive btn-sm hidden sm:inline-flex">Book a consultation</a>
+        <button id="menu-toggle" type="button" class="menu-toggle lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <svg data-icon-open viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg><svg data-icon-close viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="mobile-menu lg:hidden">
+      <nav aria-label="Mobile" class="wrap pb-10 pt-2">
+        <ul>
+          <li><a href="services.html" class="mobile-link">Services<span aria-hidden="true" class="text-marigold-deep">→</span></a></li>
+          <li><a href="pricing.html" class="mobile-link" aria-current="page">Pricing<span aria-hidden="true" class="text-marigold-deep">→</span></a></li>
+          <li><a href="deadlines.html" class="mobile-link">Deadlines<span aria-hidden="true" class="text-marigold-deep">→</span></a></li>
+          <li><a href="team.html" class="mobile-link">Team<span aria-hidden="true" class="text-marigold-deep">→</span></a></li>
+          <li><a href="insights.html" class="mobile-link">Insights<span aria-hidden="true" class="text-marigold-deep">→</span></a></li>
+          <li><a href="contact.html" class="mobile-link">Contact<span aria-hidden="true" class="text-marigold-deep">→</span></a></li>
+        </ul>
+        <a href="contact.html" class="btn-olive mt-8 w-full">Book a consultation</a>
+        <div class="mt-6 grid gap-3 text-muted">
+          <a href="contact.html#portal" class="flex items-center gap-2 text-link"><svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Client portal</a>
+          <a href="tel:+14235550138" class="flex items-center gap-2 text-link num"><svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 3h4l2 5-3 2a12 12 0 0 0 6 6l2-3 5 2v4a2 2 0 0 1-2 2A18 18 0 0 1 3 5a2 2 0 0 1 2-2Z"/></svg>(423) 555-0138</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="flex-1">
+
+    <section class="border-b border-line" aria-labelledby="page-title">
+      <div class="wrap grid gap-8 py-14 lg:grid-cols-[1.3fr_1fr] lg:items-end lg:py-20">
+        <div>
+          <p class="eyebrow">Pricing</p>
+          <h1 id="page-title" class="display mt-5">Fixed fees, <span class="mark">worked out</span> in the open</h1>
+        </div>
+        <p class="lede">No hourly billing for routine work. These are our current list prices; your proposal confirms the exact fee before anything starts.</p>
+      </div>
+    </section>
+
+    <section class="py-14 lg:py-20" aria-labelledby="tiers-title">
+      <div class="wrap">
+        <p class="kicker">Monthly bookkeeping</p>
+        <h2 id="tiers-title" class="section-title mt-3">Four packages, priced by volume</h2>
+        <ul class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <li class="reveal folder mt-4 flex flex-col p-6">
+            <div class="flex items-center justify-between gap-3"><h3 class="font-serif text-2xl font-semibold">Foundation</h3></div>
+            <p class="mt-1 text-sm text-muted">Up to 100 transactions a month</p>
+            <p class="mt-5 flex items-baseline gap-1"><span class="font-serif text-5xl font-semibold num">$350</span><span class="text-muted">/month</span></p>
+            <ul class="mt-6 flex-1 space-y-2.5 border-t border-line pt-5 text-sm">
+              <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-olive" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 10.5 4 3.5 8-8"/></svg><span>Monthly reconciliations for up to 3 accounts</span></li>
+              <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-olive" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 10.5 4 3.5 8-8"/></svg><span>Close by the 15th</span></li>
+              <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-olive" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 10.5 4 3.5 8-8"/></svg><span>Quarterly review call</span></li>
+            </ul>
+          </li>
+          <li class="reveal folder mt-4 flex flex-col p-6 folder-olive">
+            <div class="flex items-center justify-between gap-3"><h3 class="font-serif text-2xl font-semibold">Standard</h3><span class="tag tag-gold">Most chosen</span></div>
+            <p class="mt-1 text-sm text-muted">Up to 250 transactions a month</p>
+            <p class="mt-5 flex items-baseline gap-1"><span class="font-serif text-5xl font-semibold num">$525</span><span class="text-muted">/month</span></p>
+            <ul class="mt-6 flex-1 space-y-2.5 border-t border-line pt-5 text-sm">
+              <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-olive" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 10.5 4 3.5 8-8"/></svg><span>Reconciliations for up to 6 accounts</span></li>
+              <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-olive" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 10.5 4 3.5 8-8"/></svg><span>Tennessee sales tax returns</span></li>
+              <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-olive" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 10.5 4 3.5 8-8"/></svg><span>Bill and receipt capture</span></li>
+              <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-olive" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 10.5 4 3.5 8-8"/></svg><span>Quarterly review with a CPA</span></li>
+            </ul>
+          </li>
+          <li class="reveal folder mt-4 flex flex-col p-6">
+            <div class="flex items-center justify-between gap-3"><h3 class="font-serif text-2xl font-semibold">Expanded</h3></div>
+            <p class="mt-1 text-sm text-muted">Up to 500 transactions a month</p>
+            <p class="mt-5 flex items-baseline gap-1"><span class="font-serif text-5xl font-semibold num">$775</span><span class="text-muted">/month</span></p>
+            <ul class="mt-6 flex-1 space-y-2.5 border-t border-line pt-5 text-sm">
+              <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-olive" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 10.5 4 3.5 8-8"/></svg><span>Reconciliations for up to 10 accounts</span></li>
+              <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-olive" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 10.5 4 3.5 8-8"/></svg><span>Class or location tracking</span></li>
+              <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-olive" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 10.5 4 3.5 8-8"/></svg><span>Accounts payable support</span></li>
+              <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-olive" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 10.5 4 3.5 8-8"/></svg><span>Monthly review call</span></li>
+            </ul>
+          </li>
+          <li class="reveal folder mt-4 flex flex-col p-6">
+            <div class="flex items-center justify-between gap-3"><h3 class="font-serif text-2xl font-semibold">Full-charge</h3></div>
+            <p class="mt-1 text-sm text-muted">Up to 1,000 transactions a month</p>
+            <p class="mt-5 flex items-baseline gap-1"><span class="font-serif text-5xl font-semibold num">$1,150</span><span class="text-muted">/month</span></p>
+            <ul class="mt-6 flex-1 space-y-2.5 border-t border-line pt-5 text-sm">
+              <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-olive" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 10.5 4 3.5 8-8"/></svg><span>Unlimited accounts</span></li>
+              <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-olive" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 10.5 4 3.5 8-8"/></svg><span>Job costing or multi-location reporting</span></li>
+              <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-olive" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 10.5 4 3.5 8-8"/></svg><span>Bill pay and invoicing</span></li>
+              <li class="flex gap-2.5"><svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-olive" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m4 10.5 4 3.5 8-8"/></svg><span>Monthly review with a CPA</span></li>
+            </ul>
+          </li>
+        </ul>
+        <p class="mt-6 text-sm text-muted">Over 1,000 transactions: $95 a month for each additional 250 or part of 250. Cleanup for months behind: $175 per month, billed once.</p>
+      </div>
+    </section>
+
+    <section id="estimator" class="bg-paper-2 py-14 lg:py-20" aria-labelledby="est-title">
+      <div class="wrap">
+        <div class="grid gap-6 lg:grid-cols-[1fr_1.2fr] lg:items-end">
+          <div><p class="kicker">Fee estimator</p><h2 id="est-title" class="section-title mt-3">What would we cost you?</h2></div>
+          <p class="lede">Move the sliders. This is the same math we use for a proposal: bookkeeping, payroll, extra states and your business return, spread monthly.</p>
+        </div>
+        <div class="mt-10 grid gap-8 lg:grid-cols-[1.25fr_1fr]">
+          <form class="card grid gap-7 p-6 sm:p-8" data-estimator novalidate aria-label="Fee estimator">
+            <div>
+              <label for="est-entity" class="label">Type of business</label>
+              <select id="est-entity" name="entity" class="field"></select>
+            </div>
+            <div>
+              <div class="flex items-baseline justify-between gap-4"><label for="est-tx" class="label">Transactions a month</label><output for="est-tx" class="font-serif text-xl font-semibold num" data-est-tx>200</output></div>
+              <input id="est-tx" name="tx" type="range" min="0" max="2000" step="25" value="200" class="range mt-2" aria-describedby="est-tx-hint">
+              <p id="est-tx-hint" class="hint">Every deposit, card charge, bill and transfer across all your accounts.</p>
+            </div>
+            <div>
+              <label for="est-emp" class="label">Employees on payroll</label>
+              <div class="flex items-center gap-2">
+                <button type="button" class="grid size-12 shrink-0 place-items-center rounded-full border border-line-strong bg-white text-xl font-semibold hover:border-olive" data-emp-step="-1" aria-label="One fewer employee">−</button>
+                <input id="est-emp" name="emp" type="number" inputmode="numeric" min="0" max="60" value="4" class="field max-w-28 text-center num" aria-describedby="est-emp-hint">
+                <button type="button" class="grid size-12 shrink-0 place-items-center rounded-full border border-line-strong bg-white text-xl font-semibold hover:border-olive" data-emp-step="1" aria-label="One more employee">+</button>
+              </div>
+              <p id="est-emp-hint" class="hint">Owners on an S corporation payroll count. 0 if you don’t need payroll.</p>
+            </div>
+            <div>
+              <label for="est-states" class="label">States you file in</label>
+              <select id="est-states" name="states" class="field"></select>
+              <p class="hint">Employees, property or sales in Georgia, Alabama or anywhere else.</p>
+            </div>
+            <div>
+              <div class="flex items-baseline justify-between gap-4"><label for="est-cleanup" class="label">Months behind on the books</label><output for="est-cleanup" class="font-medium num" data-est-cleanup-out>Up to date</output></div>
+              <input id="est-cleanup" name="cleanup" type="range" min="0" max="24" step="1" value="0" class="range mt-2">
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-3 border-t border-line pt-5">
+              <p class="text-sm text-muted">Your choices are kept in the page address, so you can share them.</p>
+              <button type="button" class="btn-line btn-sm" data-est-reset>Reset</button>
+            </div>
+          </form>
+          <div class="lg:sticky lg:top-32 lg:self-start" data-back-to-top-hide>
+            <div class="receipt on-dark rounded-t-2xl bg-ink p-6 sm:p-8" aria-live="polite">
+              <p class="eyebrow">Estimated monthly fee</p>
+              <p class="mt-4 flex items-baseline gap-2"><span class="font-serif text-6xl font-semibold text-white num" data-est-total>$796</span><span class="text-sage">/month</span></p>
+              <p class="mt-1 text-sm text-sage"><span data-est-tier>Standard</span> bookkeeping · <span class="num" data-est-annual>$9,552 a year</span></p>
+              <ul class="mt-6 divide-y divide-ink-3 border-y border-ink-3 text-sm text-sage" data-est-lines></ul>
+              <p class="mt-5 text-sm"><span class="font-semibold text-white">One-time cleanup:</span> <span class="text-sage num" data-est-onetime>None: your books are current</span></p>
+              <p class="mt-2 text-sm text-sage" data-est-note></p>
+            </div>
+            <div class="mt-6 flex flex-col gap-3 sm:flex-row lg:flex-col xl:flex-row">
+              <a href="contact.html?service=bookkeeping" class="btn-olive">Get a fixed quote</a>
+              <a href="service.html?s=bookkeeping" class="btn-line">What bookkeeping includes</a>
+            </div>
+            <p class="mt-4 text-sm text-muted">An estimate, not a quote. Individual returns for owners are priced separately below.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-14 lg:py-20" aria-labelledby="returns-title">
+      <div class="wrap grid gap-10 lg:grid-cols-[1fr_1.5fr]">
+        <div>
+          <p class="kicker">Individual returns</p>
+          <h2 id="returns-title" class="section-title mt-3">Personal tax prices</h2>
+          <p class="lede mt-4">Each price includes e-filing, a second-CPA review and answers to any letter about the return.</p>
+        </div>
+        <div class="relative overflow-x-auto">
+          <table class="w-full min-w-[30rem] border-t border-ink text-left">
+            <caption class="sr-only">Individual tax return prices</caption>
+            <thead><tr class="text-xs uppercase tracking-wider text-muted"><th scope="col" class="py-3 pr-4 font-semibold">Return</th><th scope="col" class="py-3 text-right font-semibold">Price</th></tr></thead>
+            <tbody class="divide-y divide-line border-y border-line">
+              <tr><th scope="row" class="py-4 pr-4 font-normal"><span class="block font-medium">Federal return: W-2 income, standard deduction</span><span class="block text-sm text-muted">Form 1040</span></th><td class="py-4 text-right font-serif text-xl font-semibold num">from $325</td></tr>
+              <tr><th scope="row" class="py-4 pr-4 font-normal"><span class="block font-medium">Federal return with itemized deductions or investments</span><span class="block text-sm text-muted">Schedules A, B, D</span></th><td class="py-4 text-right font-serif text-xl font-semibold num">from $495</td></tr>
+              <tr><th scope="row" class="py-4 pr-4 font-normal"><span class="block font-medium">Self-employed or freelancer</span><span class="block text-sm text-muted">Schedule C and SE, with estimates for next year</span></th><td class="py-4 text-right font-serif text-xl font-semibold num">from $695</td></tr>
+              <tr><th scope="row" class="py-4 pr-4 font-normal"><span class="block font-medium">Each rental property</span><span class="block text-sm text-muted">Schedule E, depreciation</span></th><td class="py-4 text-right font-serif text-xl font-semibold num">+$150</td></tr>
+              <tr><th scope="row" class="py-4 pr-4 font-normal"><span class="block font-medium">Each Georgia or Alabama return</span><span class="block text-sm text-muted">Nonresident or part-year</span></th><td class="py-4 text-right font-serif text-xl font-semibold num">+$175</td></tr>
+              <tr><th scope="row" class="py-4 pr-4 font-normal"><span class="block font-medium">Amended return</span><span class="block text-sm text-muted">Form 1040-X</span></th><td class="py-4 text-right font-serif text-xl font-semibold num">from $275</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-paper-2 py-14 lg:py-20" aria-labelledby="other-title">
+      <div class="wrap">
+        <h2 id="other-title" class="section-title">Everything else</h2>
+        <ul class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <li class="reveal card flex flex-col p-6"><h3 class="font-serif text-xl font-semibold">Business tax &amp; Tennessee F&amp;E</h3><p class="mt-2 flex-1 text-muted">Partnership, S corporation and C corporation returns, Tennessee franchise &amp; excise, and business tax.</p><p class="mt-4 font-semibold num">From $1,440 a year</p><a href="service.html?s=business-tax" class="link-arrow mt-3 text-sm">Details</a></li>
+          <li class="reveal card flex flex-col p-6"><h3 class="font-serif text-xl font-semibold">Payroll</h3><p class="mt-2 flex-1 text-muted">Pay runs, direct deposit, quarterly payroll returns and year-end W-2s, done by people who answer the phone.</p><p class="mt-4 font-semibold num">From $65 a month + $9 per employee</p><a href="service.html?s=payroll" class="link-arrow mt-3 text-sm">Details</a></li>
+          <li class="reveal card flex flex-col p-6"><h3 class="font-serif text-xl font-semibold">Advisory &amp; fractional CFO</h3><p class="mt-2 flex-1 text-muted">Budgets, cash forecasts, pricing and the numbers behind big decisions, without a full-time CFO.</p><p class="mt-4 font-semibold num">From $1,250 a month</p><a href="service.html?s=advisory" class="link-arrow mt-3 text-sm">Details</a></li>
+          <li class="reveal card flex flex-col p-6"><h3 class="font-serif text-xl font-semibold">Nonprofits &amp; audit readiness</h3><p class="mt-2 flex-1 text-muted">Form 990s, fund accounting, grant tracking and books that are ready when the auditor arrives.</p><p class="mt-4 font-semibold num">From $1,680 a year</p><a href="service.html?s=nonprofit" class="link-arrow mt-3 text-sm">Details</a></li>
+          <li class="reveal card flex flex-col p-6"><h3 class="font-serif text-xl font-semibold">IRS notices &amp; representation</h3><p class="mt-2 flex-1 text-muted">Letters read, answered and resolved by an enrolled agent, from a CP2000 to a full examination.</p><p class="mt-4 font-semibold num">From $250 per notice</p><a href="service.html?s=irs-notices" class="link-arrow mt-3 text-sm">Details</a></li>
+          <li class="reveal on-dark flex flex-col rounded-2xl bg-ink p-6"><h3 class="font-serif text-xl font-semibold text-white">How we bill</h3><p class="mt-2 flex-1 text-sage">Monthly services are billed on the 1st; tax returns when you sign. Card or bank transfer through the portal. No surprise invoices.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="on-dark bg-olive" aria-labelledby="cta-title">
+      <div class="wrap grid items-center gap-8 py-14 lg:grid-cols-[1.4fr_1fr] lg:py-16">
+        <div>
+          <h2 id="cta-title" class="section-title text-white">Get a fixed quote</h2>
+          <p class="mt-4 max-w-2xl text-lg leading-relaxed text-olive-soft">Book a consultation and bring your estimate. You’ll get a written proposal with a fixed fee within two business days.</p>
+        </div>
+        <div class="flex flex-col gap-3 sm:flex-row lg:justify-end">
+          <a href="contact.html" class="btn-marigold">Book a consultation</a>
+          <a href="tel:+14235550138" class="btn-line-light num">Call (423) 555-0138</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="on-dark mt-auto bg-ink">
+    <div class="wrap grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-3"><svg viewBox="0 0 40 40" class="size-10 shrink-0" aria-hidden="true" focusable="false"><rect width="40" height="40" rx="11" fill="#4f5b1c"/><path d="M10.5 29v-6M17.5 29V17.5M24.5 29V12" stroke="#f5f1e6" stroke-width="4.2" stroke-linecap="round"/><circle cx="31" cy="10.5" r="3.6" fill="#e8b13a"/></svg><span class="font-serif text-xl font-semibold">Fernley Whitcomb CPAs</span></a>
+        <p class="mt-4 max-w-sm leading-relaxed text-sage">Tax, bookkeeping, payroll and advisory for families and businesses in Chattanooga and across the Georgia and Alabama lines.</p>
+        <a href="contact.html" class="btn-marigold btn-sm mt-6">Book a consultation</a>
+      </div>
+      <nav aria-label="Services">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.18em] text-sage">Services</h2>
+        <ul class="mt-4 space-y-2.5">
+          <li><a href="service.html?s=individual-tax" class="hover:text-marigold">Individual tax returns</a></li>
+          <li><a href="service.html?s=business-tax" class="hover:text-marigold">Business tax &amp; Tennessee F&amp;E</a></li>
+          <li><a href="service.html?s=bookkeeping" class="hover:text-marigold">Monthly bookkeeping</a></li>
+          <li><a href="service.html?s=payroll" class="hover:text-marigold">Payroll</a></li>
+          <li><a href="service.html?s=advisory" class="hover:text-marigold">Advisory &amp; fractional CFO</a></li>
+          <li><a href="service.html?s=nonprofit" class="hover:text-marigold">Nonprofits &amp; audit readiness</a></li>
+          <li><a href="service.html?s=irs-notices" class="hover:text-marigold">IRS notices &amp; representation</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Firm">
+        <h2 class="text-xs font-semibold uppercase tracking-[0.18em] text-sage">The firm</h2>
+        <ul class="mt-4 space-y-2.5">
+          <li><a href="pricing.html" class="hover:text-marigold">Pricing &amp; fee estimator</a></li>
+          <li><a href="deadlines.html" class="hover:text-marigold">Tax deadline calendar</a></li>
+          <li><a href="deadlines.html#checklist" class="hover:text-marigold">Document checklist</a></li>
+          <li><a href="team.html" class="hover:text-marigold">Our team</a></li>
+          <li><a href="insights.html" class="hover:text-marigold">Insights</a></li>
+          <li><a href="contact.html#portal" class="hover:text-marigold">Client portal</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="text-xs font-semibold uppercase tracking-[0.18em] text-sage">Visit</h2>
+        <address class="mt-4 not-italic leading-relaxed">Suite 410, 708 Cherry Street<br>Chattanooga, TN 37402</address>
+        <p class="mt-3 text-sage">Mon–Thu 8:30 AM–5:30 PM<br>Fri 8:30 AM–3:00 PM<br>Saturdays 9 AM–1 PM, Feb 1–Apr 15</p>
+        <p class="mt-3 grid gap-1"><a href="tel:+14235550138" class="text-link num">(423) 555-0138</a><a href="mailto:hello@fernleywhitcomb.example" class="text-link break-all">hello@fernleywhitcomb.example</a></p>
+      </div>
+    </div>
+    <div class="border-t border-ink-3">
+      <div class="wrap flex flex-col gap-2 py-6 text-sm text-sage md:flex-row md:items-center md:justify-between">
+        <p>© <span data-year>2026</span> Fernley Whitcomb CPAs, PLLC. Chattanooga, Tennessee.</p>
+        <p class="max-w-2xl md:text-right">Fernley Whitcomb CPAs is a fictional firm. Everything on this site is general information, not tax, legal or accounting advice.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

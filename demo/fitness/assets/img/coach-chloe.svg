@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-label="Illustrated portrait of Chloe Park">
+  <defs>
+    <radialGradient id="bg" cx=".5" cy=".38" r=".75"><stop offset="0" stop-color="#ff8bd1" stop-opacity=".35"/><stop offset=".6" stop-color="#16181b"/><stop offset="1" stop-color="#0d0e10"/></radialGradient>
+    <linearGradient id="shade" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".22"/></linearGradient>
+  </defs>
+  <rect width="400" height="480" fill="url(#bg)"/>
+  <circle cx="200" cy="210" r="150" fill="none" stroke="#ff8bd1" stroke-opacity=".25" stroke-width="2"/>
+  <g fill="#121010"><path d="M134 196c-8-80 20-122 66-122s74 42 66 122c-10 0-18-6-22-14l-6-50c-14-14-30-22-38-22-10 0-24 8-38 22l-6 50c-4 8-12 14-22 14Z"/></g>
+  <path d="M60 480c6-96 64-150 140-150s134 54 140 150Z" fill="#ff8bd1"/>
+  <path d="M60 480c6-96 64-150 140-150s134 54 140 150Z" fill="url(#shade)"/>
+  <path d="M152 340c14 26 30 38 48 38s34-12 48-38" fill="none" stroke="#0a0b0c" stroke-opacity=".35" stroke-width="10" stroke-linecap="round"/>
+  <rect x="176" y="272" width="48" height="70" rx="20" fill="#e8c09c"/>
+  <rect x="176" y="300" width="48" height="24" fill="#000" opacity=".12"/>
+  <ellipse cx="200" cy="200" rx="62" ry="78" fill="#e8c09c"/>
+  <ellipse cx="138" cy="206" rx="10" ry="16" fill="#e8c09c"/><ellipse cx="262" cy="206" rx="10" ry="16" fill="#e8c09c"/>
+  <path d="M200 122c34 0 62 34 62 78s-28 78-62 78" fill="#000" opacity=".08"/>
+  <g fill="#121010"><path d="M146 150c4-40 26-62 54-62s50 22 54 62c-14-24-32-34-54-34s-40 10-54 34Z"/></g>
+  <path d="M170 196h16M214 196h16" stroke="#1a1210" stroke-width="5" stroke-linecap="round" opacity=".7"/>
+  <path d="M184 236c10 8 22 8 32 0" fill="none" stroke="#1a1210" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+  <path d="M110 420h180" stroke="#0a0b0c" stroke-opacity=".25" stroke-width="3"/>
+  <text x="200" y="455" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="30" letter-spacing="6" fill="#0a0b0c" fill-opacity=".55">FORGE</text>
+</svg>

@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Request tickets — Cuefold</title>
+    <meta
+      name="description"
+      content="Choose a performance, seating and ticket quantities. Review a clear estimate, then open an email to the Cuefold box office to ask about availability."
+    />
+    <meta name="theme-color" content="#2c2035" />
+    <meta name="color-scheme" content="light" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Cuefold" />
+    <meta property="og:title" content="Request tickets — Cuefold" />
+    <meta
+      property="og:description"
+      content="Choose a performance, seating and ticket quantities. Review a clear estimate, then open an email to the Cuefold box office to ask about availability."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fahkwang&amp;family=Questrial&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body class="flex min-h-screen flex-col font-sans text-base leading-relaxed antialiased" data-page="tickets">
+    <a class="sr-only z-50 bg-ink p-4 text-paper focus:not-sr-only focus:fixed focus:top-2 focus:left-2" href="#main"
+      >Skip to content</a
+    >
+    <div class="bg-ink px-4 py-2 text-center text-sm text-paper">
+      A small stage. A wide-open world. <span class="mx-2 hidden sm:inline">/</span>
+      <span class="hidden sm:inline">Independent theater in Staunton</span>
+    </div>
+    <header class="relative z-30 border-b border-ink bg-paper">
+      <div class="wrap flex min-h-24 items-center justify-between gap-4">
+        <a href="index.html" class="font-display text-4xl tracking-[-.08em]" aria-label="Cuefold home"
+          >cuefold<span class="text-orange">/</span></a
+        >
+        <nav class="hidden xl:block" aria-label="Main">
+          <ul class="flex items-center">
+            <li><a class="nav-link" href="programme.html">What’s on</a></li>
+            <li><a class="nav-link" href="planner.html">My visit</a></li>
+            <li><a class="nav-link" href="access.html">Access</a></li>
+            <li><a class="nav-link" href="participate.html">Take part</a></li>
+            <li><a class="nav-link" href="about.html">Our theater</a></li>
+            <li><a class="nav-link" href="visit.html">Find us</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a class="hidden text-sm underline underline-offset-4 sm:block" href="planner.html"
+            >Your program <span data-plan-count class="ml-1 inline-block bg-lilac px-2">0</span></a
+          ><button
+            class="grid size-12 place-items-center border border-ink xl:hidden"
+            type="button"
+            data-menu-toggle
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path d="M3 7h18M3 12h18M3 17h18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" class="border-t border-rule px-5 pb-6 xl:hidden" aria-label="Mobile" hidden>
+        <ul>
+          <li><a class="nav-link block border-b border-rule py-4" href="programme.html">What’s on</a></li>
+          <li><a class="nav-link block border-b border-rule py-4" href="planner.html">My visit</a></li>
+          <li><a class="nav-link block border-b border-rule py-4" href="access.html">Access</a></li>
+          <li><a class="nav-link block border-b border-rule py-4" href="participate.html">Take part</a></li>
+          <li><a class="nav-link block border-b border-rule py-4" href="about.html">Our theater</a></li>
+          <li><a class="nav-link block border-b border-rule py-4" href="visit.html">Find us</a></li>
+        </ul>
+        <a href="tickets.html" class="btn mt-5 w-full">Request tickets</a>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+      <section class="wrap grid gap-6 border-b border-ink py-12 md:grid-cols-[.3fr_1fr] md:py-16">
+        <p class="eyebrow pt-3">03 / The box office</p>
+        <div>
+          <h1 class="font-display text-[clamp(2.6rem,6vw,5rem)] leading-[1.08] tracking-[-.055em]">
+            Let’s find<br />your seats.
+          </h1>
+          <p class="mt-5 max-w-2xl text-lg text-muted">
+            Choose a performance and tell us what works for you. We’ll hold your seats right away, and the box office
+            will confirm everything by email within one business day.
+          </p>
+        </div>
+      </section>
+      <section class="wrap grid gap-12 py-12 lg:grid-cols-[1fr_23rem]" data-ticket-section>
+        <form data-ticket-form novalidate class="space-y-8">
+          <fieldset>
+            <legend class="mb-5 font-display text-2xl">01 / Choose your performance</legend>
+            <label class="label" for="ticket-show">Production</label
+            ><select id="ticket-show" name="show" class="field" data-ticket-show></select
+            ><label class="label mt-5" for="performance">Date and time</label
+            ><select class="field" id="performance" name="performance" data-ticket-performance></select>
+            <p class="mt-3 text-sm text-muted" data-performance-note></p>
+          </fieldset>
+          <fieldset class="border-t border-rule pt-6">
+            <legend class="font-display text-2xl">02 / Your tickets</legend>
+            <div class="mt-5 grid gap-5 sm:grid-cols-2">
+              <div>
+                <label class="label" for="standard">Standard tickets</label
+                ><input
+                  class="field"
+                  id="standard"
+                  name="standard"
+                  type="number"
+                  min="0"
+                  max="8"
+                  step="1"
+                  aria-describedby="ticket-count-help ticket-count-error"
+                  value="2"
+                  inputmode="numeric"
+                />
+              </div>
+              <div>
+                <label class="label" for="concession">Discount tickets</label
+                ><input
+                  class="field"
+                  id="concession"
+                  name="concession"
+                  type="number"
+                  min="0"
+                  max="8"
+                  step="1"
+                  aria-describedby="ticket-count-help ticket-count-error"
+                  value="0"
+                  inputmode="numeric"
+                />
+              </div>
+            </div>
+            <p id="ticket-count-error" class="error" data-error="tickets" hidden></p>
+            <p id="ticket-count-help" class="mt-3 text-sm text-muted">
+              Discount tickets: under 26, 65 and over, and people receiving public assistance such as SNAP. Up to 8 tickets per request;
+              contact us for a larger group.
+            </p>
+            <label class="label mt-5" for="seating">Where would you like to sit?</label
+            ><select class="field" name="seating" id="seating">
+              <option value="any">Any comfortable seat</option>
+              <option value="front">Front three rows</option>
+              <option value="aisle">An aisle seat</option>
+              <option value="wheelchair">A wheelchair space</option>
+            </select>
+          </fieldset>
+          <fieldset class="border-t border-rule pt-6">
+            <legend class="font-display text-2xl">03 / How can we help?</legend>
+            <div class="mt-5 grid gap-5 sm:grid-cols-2">
+              <div>
+                <label class="label" for="name">Your name</label
+                ><input
+                  class="field"
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  maxlength="100"
+                  aria-describedby="name-error"
+                />
+                <p id="name-error" class="error" data-error="name" hidden></p>
+              </div>
+              <div>
+                <label class="label" for="email">Email address</label
+                ><input
+                  class="field"
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  maxlength="160"
+                  aria-describedby="email-error"
+                />
+                <p id="email-error" class="error" data-error="email" hidden></p>
+              </div>
+            </div>
+            <label class="label mt-5" for="notes"
+              >Anything you’d like us to know? <span class="text-muted">(optional)</span></label
+            ><textarea
+              class="field min-h-32"
+              name="notes"
+              id="notes"
+              maxlength="800"
+              aria-describedby="notes-help"
+            ></textarea>
+            <p id="notes-help" class="mt-2 text-sm text-muted">
+              Access needs, companion seats or a question about the show. Please don’t include medical
+              or payment details.
+            </p>
+            <label class="mt-5 flex items-start gap-3"
+              ><input class="check mt-1" type="checkbox" name="contact" aria-describedby="contact-error" /><span
+                >I’m happy for the box office to reply about this request.</span
+              ></label
+            >
+            <p id="contact-error" class="error" data-error="contact" hidden></p>
+          </fieldset>
+          <p data-form-summary class="error" role="alert" hidden></p>
+          <button type="submit" class="btn w-full sm:w-auto">
+            Send your request
+            <svg
+              class="inline-block size-4 shrink-0 align-middle"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.6"
+              aria-hidden="true"
+            >
+              <path d="M5 19 19 5M5 5h14v14" />
+            </svg>
+          </button>
+          <p class="text-sm text-muted">
+            No payment is taken now. The box office confirms your seats and the price before you pay, by phone or at the
+            door.
+          </p>
+        </form>
+        <aside class="self-start border border-ink bg-lilac p-6 sm:p-8">
+          <p class="eyebrow">Your ticket estimate</p>
+          <div class="mt-5 flex items-center gap-4">
+            <div data-ticket-art class="w-24 shrink-0"></div>
+            <h2 class="font-display text-2xl leading-tight" data-ticket-title></h2>
+          </div>
+          <dl class="mt-6 space-y-3" data-ticket-cost></dl>
+          <p class="mt-5 border-t border-ink pt-5 text-sm" data-ticket-access></p>
+          <p class="mt-5 text-sm">
+            Companion seats for a personal care attendant are free. Mention this in your request; the box office will
+            discuss the best arrangement with you.
+          </p>
+        </aside>
+      </section>
+      <section class="wrap py-12" data-request-done hidden tabindex="-1" aria-labelledby="request-done-heading">
+        <div class="grid gap-10 border border-ink bg-panel p-6 sm:p-10 lg:grid-cols-[1fr_20rem]">
+          <div>
+            <p class="eyebrow">Request received · ref <span data-request-ref></span></p>
+            <h2 id="request-done-heading" class="mt-4 font-display text-3xl sm:text-4xl" data-request-heading>
+              Thank you.
+            </h2>
+            <p class="mt-4 max-w-2xl text-lg" data-request-lead></p>
+            <h3 class="mt-8 font-display text-xl">What happens next</h3>
+            <ol class="mt-4 space-y-3">
+              <li class="border-t border-rule pt-3" data-request-hold></li>
+              <li class="border-t border-rule pt-3">
+                We’ll email you within one business day to confirm your seats, any access arrangements and the total.
+              </li>
+              <li class="border-t border-rule pt-3">
+                Pay by card at (540) 555-0147 or at the box office. Your tickets wait for you at the door.
+              </li>
+            </ol>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <button type="button" class="btn" data-request-another>Request another performance</button
+              ><a class="btn btn-light" href="planner.html">Back to your visit plan</a>
+            </div>
+          </div>
+          <dl class="space-y-3 self-start border border-ink bg-paper p-6" data-request-summary></dl>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-20 bg-ink text-paper">
+      <div class="wrap grid gap-10 py-14 md:grid-cols-[1.3fr_1fr_1fr]">
+        <div>
+          <a class="font-display text-5xl tracking-[-.08em]" href="index.html">cuefold/</a>
+          <p class="mt-5 max-w-sm text-paper/80">
+            Stories close enough to touch. An independent home for live performance, curious people and a good night
+            out.
+          </p>
+        </div>
+        <div>
+          <p class="eyebrow text-lilac">Come through the door</p>
+          <address class="mt-4 not-italic">
+            The old assembly hall<br />East Johnson Street<br />Staunton, VA 24401
+          </address>
+          <a class="mt-3 inline-block underline underline-offset-4" href="visit.html">Plan your trip</a>
+        </div>
+        <div>
+          <p class="eyebrow text-lilac">The box office</p>
+          <a class="mt-4 block underline underline-offset-4" href="mailto:hello@cuefold.example"
+            >hello@cuefold.example</a
+          ><a class="mt-2 block underline underline-offset-4" href="tel:+15405550147">(540) 555-0147</a>
+          <p class="mt-3 text-sm text-paper/80">Tuesday–Saturday, 11am–5pm.<br />Open until curtain on show days.</p>
+        </div>
+      </div>
+      <div class="wrap flex flex-wrap justify-between gap-3 border-t border-paper/25 py-5 text-xs text-paper/70">
+        <p>© <span data-year></span> Cuefold. All stories welcome.</p>
+        <p>Cuefold is a fictional theater.</p>
+      </div>
+    </footer>
+    <p class="sr-only" role="status" aria-live="polite" data-announcement></p>
+  </body>
+</html>

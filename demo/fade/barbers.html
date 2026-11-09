@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Barbers — Fade Bros. Barber Co., Chicago</title>
+  <meta name="description" content="Meet the six barbers at Fade Bros. in Logan Square and Pilsen: skin fade specialists, curly hair experts, scissor work and straight-razor shaves. Book with the barber you want.">
+  <meta name="theme-color" content="#151515">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fade Bros. Barber Co.">
+  <meta property="og:title" content="Our Barbers — Fade Bros. Barber Co., Chicago">
+  <meta property="og:description" content="Meet the six barbers at Fade Bros. in Logan Square and Pilsen: skin fade specialists, curly hair experts, scissor work and straight-razor shaves. Book with the barber you want.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo:wdth,wght@62..125,400..900&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="barbers" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-md bg-ink px-5 py-3 text-sm font-bold text-paper focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <header id="site-header" class="site-header">
+    <div class="pole-band" aria-hidden="true"></div>
+    <div class="container-x flex h-[4.25rem] items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <svg viewBox="0 0 40 40" class="h-10 w-10 shrink-0" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="19" fill="#151515"/><circle cx="20" cy="20" r="15.5" fill="none" stroke="#f2ead9" stroke-width="1.2" stroke-dasharray="1.5 2.6"/><clipPath id="lm-151515"><rect x="14.5" y="8" width="11" height="24" rx="2"/></clipPath><rect x="14.5" y="8" width="11" height="24" rx="2" fill="#f2ead9"/><g clip-path="url(#lm-151515)"><path d="M8 14 32 4v5L8 19ZM8 24 32 14v5L8 29ZM8 34 32 24v5L8 39Z" fill="#b5281c"/><path d="M8 19 32 9v2.5L8 21.5ZM8 29 32 19v2.5L8 31.5Z" fill="#1d3557"/></g><rect x="13" y="6" width="14" height="3" rx="1.5" fill="#e0a83a"/><rect x="13" y="31" width="14" height="3" rx="1.5" fill="#e0a83a"/></svg>
+        <span class="flex flex-col leading-none"><span class="font-display text-[1.65rem] uppercase tracking-[0.02em]">Fade Bros.</span><span class="condensed mt-0.5 text-[10px] font-extrabold uppercase tracking-[0.3em] text-red">Barber Co. · Chicago</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-6 xl:gap-8">
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="barbers.html" class="nav-link" aria-current="page">Barbers</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="locations.html" class="nav-link">Locations</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2.5">
+        <a href="shop.html#bag" class="bag-link" data-bag-link aria-label="Your bag, 0 items"><span class="sr-only" data-bag-label>Your bag</span><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="bag-count" data-bag-count hidden>0</span></a>
+        <a href="book.html" class="btn-red btn-sm hidden sm:inline-flex">Book a chair</a>
+        <button id="menu-toggle" type="button" class="menu-toggle lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <svg data-icon-open viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg data-icon-close viewBox="0 0 24 24" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="mobile-menu lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-10 pt-2">
+        <ul>
+          <li><a href="services.html" class="mobile-link">Services<span aria-hidden="true" class="text-2xl">→</span></a></li>
+          <li><a href="barbers.html" class="mobile-link" aria-current="page">Barbers<span aria-hidden="true" class="text-2xl">→</span></a></li>
+          <li><a href="shop.html" class="mobile-link">Shop<span aria-hidden="true" class="text-2xl">→</span></a></li>
+          <li><a href="locations.html" class="mobile-link">Locations<span aria-hidden="true" class="text-2xl">→</span></a></li>
+          <li><a href="about.html" class="mobile-link">About<span aria-hidden="true" class="text-2xl">→</span></a></li>
+          <li><a href="contact.html" class="mobile-link">Contact<span aria-hidden="true" class="text-2xl">→</span></a></li>
+        </ul>
+        <a href="book.html" class="btn-red mt-8 w-full">Book a chair</a>
+        <p class="mt-6 text-sm text-mute">Logan Square <a class="text-link" href="tel:+17735550142">(773) 555-0142</a><br>Pilsen <a class="text-link" href="tel:+13125550187">(312) 555-0187</a></p>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="flex-1">
+<section class="page-hero on-dark" aria-labelledby="page-title">
+      <div class="container-x relative z-10">
+        <p class="eyebrow reveal">The barbers</p>
+        <h1 id="page-title" class="reveal mt-5 font-display text-[clamp(3rem,8vw,6.5rem)] leading-[0.9]">Pick your barber.<br><span class="text-brass">Or let us.</span></h1>
+        <p class="lede reveal mt-6 max-w-2xl">Six barbers with 86 years in the chair between them. Everyone charges the same price, so choose by style, shop or schedule.</p>
+      </div>
+    </section>
+
+    <section class="pb-20 lg:pb-28" data-barbers aria-label="Barbers">
+      <div class="container-x">
+        <div class="filter-bar flex flex-wrap items-center gap-x-6 gap-y-3">
+          <div class="flex flex-wrap items-center gap-2" role="group" aria-label="Filter by shop">
+            <span class="condensed mr-1 text-xs font-extrabold uppercase tracking-[0.18em] text-mute">Shop</span>
+            <button type="button" class="chip" data-barber-loc="all" aria-pressed="true">Both</button>
+            <button type="button" class="chip" data-barber-loc="logan" aria-pressed="false">Logan Square</button>
+            <button type="button" class="chip" data-barber-loc="pilsen" aria-pressed="false">Pilsen</button>
+          </div>
+          <div class="flex flex-wrap items-center gap-2" role="group" aria-label="Filter by specialty">
+            <span class="condensed mr-1 text-xs font-extrabold uppercase tracking-[0.18em] text-mute">Specialty</span>
+            <button type="button" class="chip" data-barber-spec="all" aria-pressed="true">Any</button>
+            <button type="button" class="chip" data-barber-spec="fades" aria-pressed="false">Fades & tapers</button>
+            <button type="button" class="chip" data-barber-spec="scissor" aria-pressed="false">Scissor work</button>
+            <button type="button" class="chip" data-barber-spec="curly" aria-pressed="false">Curly & textured</button>
+            <button type="button" class="chip" data-barber-spec="beards" aria-pressed="false">Beards & shaves</button>
+            <button type="button" class="chip" data-barber-spec="kids" aria-pressed="false">Kids</button>
+          </div>
+          <p class="text-sm font-semibold text-mute xl:ml-auto" aria-live="polite" data-barber-count>6 barbers</p>
+        </div>
+
+        <ul class="mt-12 grid gap-x-8 gap-y-14 md:grid-cols-2 xl:grid-cols-3">
+          <li class="reveal" data-barber="marcus" data-locs="logan" data-specs="fades beards" id="marcus">
+            <article class="flex h-full flex-col">
+              <div class="relative">
+                <img src="assets/img/barbers/marcus.svg" alt="" width="400" height="480" class="portrait card-shadow" loading="lazy">
+                <span class="absolute left-4 top-4 rounded-md border-2 border-ink bg-paper px-2.5 py-1 font-display text-lg leading-none">16 yrs</span>
+              </div>
+              <p class="condensed mt-6 text-xs font-extrabold uppercase tracking-[0.2em] text-red">Co-founder · Master barber</p>
+              <h2 class="mt-1 font-display text-4xl leading-none">Marcus Okafor</h2>
+              <p class="mt-3 flex flex-wrap gap-2"><span class="tag">Fades & tapers</span><span class="tag">Beards & shaves</span></p>
+              <p class="mt-4 leading-relaxed text-mute">Opened the Logan Square shop in 2012 with his brother Danny after ten years in his uncle’s chair on 79th Street. Known for skin fades so smooth they look airbrushed.</p>
+              <p class="mt-4 text-sm"><span class="font-bold">Signature:</span> Skin fade with a razor line-up</p>
+              <ul class="mt-4 space-y-1.5 border-t-2 border-dashed border-ink/25 pt-4 text-sm" aria-label="Days in the chair"><li class="flex gap-3"><span class="w-24 shrink-0 font-bold">Logan Square</span><span class="text-mute">Tue, Wed, Thu, Fri, Sat</span></li></ul>
+              <div class="mt-6 flex flex-wrap items-center gap-4 pt-1">
+                <a href="book.html?barber=marcus" class="btn-red btn-sm">Book with Marcus</a>
+                <span class="text-sm text-mute" data-next-free="marcus"></span>
+              </div>
+            </article>
+          </li>
+          <li class="reveal" data-barber="danny" data-locs="pilsen" data-specs="beards scissor" id="danny">
+            <article class="flex h-full flex-col">
+              <div class="relative">
+                <img src="assets/img/barbers/danny.svg" alt="" width="400" height="480" class="portrait card-shadow" loading="lazy">
+                <span class="absolute left-4 top-4 rounded-md border-2 border-ink bg-paper px-2.5 py-1 font-display text-lg leading-none">14 yrs</span>
+              </div>
+              <p class="condensed mt-6 text-xs font-extrabold uppercase tracking-[0.2em] text-red">Co-founder · Master barber</p>
+              <h2 class="mt-1 font-display text-4xl leading-none">Danny Okafor</h2>
+              <p class="mt-3 flex flex-wrap gap-2"><span class="tag">Beards & shaves</span><span class="tag">Scissor work</span></p>
+              <p class="mt-4 leading-relaxed text-mute">Runs the Pilsen shop and the straight-razor training for every new barber. If you have never had a proper hot towel shave, book Danny.</p>
+              <p class="mt-4 text-sm"><span class="font-bold">Signature:</span> The Full Service</p>
+              <ul class="mt-4 space-y-1.5 border-t-2 border-dashed border-ink/25 pt-4 text-sm" aria-label="Days in the chair"><li class="flex gap-3"><span class="w-24 shrink-0 font-bold">Pilsen</span><span class="text-mute">Tue, Wed, Thu, Fri, Sat</span></li></ul>
+              <div class="mt-6 flex flex-wrap items-center gap-4 pt-1">
+                <a href="book.html?barber=danny" class="btn-red btn-sm">Book with Danny</a>
+                <span class="text-sm text-mute" data-next-free="danny"></span>
+              </div>
+            </article>
+          </li>
+          <li class="reveal" data-barber="rosa" data-locs="pilsen" data-specs="curly fades" id="rosa">
+            <article class="flex h-full flex-col">
+              <div class="relative">
+                <img src="assets/img/barbers/rosa.svg" alt="" width="400" height="480" class="portrait card-shadow" loading="lazy">
+                <span class="absolute left-4 top-4 rounded-md border-2 border-ink bg-paper px-2.5 py-1 font-display text-lg leading-none">9 yrs</span>
+              </div>
+              <p class="condensed mt-6 text-xs font-extrabold uppercase tracking-[0.2em] text-red">Senior barber</p>
+              <h2 class="mt-1 font-display text-4xl leading-none">Rosa Delgado</h2>
+              <p class="mt-3 flex flex-wrap gap-2"><span class="tag">Curly & textured</span><span class="tag">Fades & tapers</span></p>
+              <p class="mt-4 leading-relaxed text-mute">Trained in Monterrey and Chicago. Cuts curls dry so they sit right, and does freehand designs that people stop her on the street to ask about.</p>
+              <p class="mt-4 text-sm"><span class="font-bold">Signature:</span> Curly cut with a burst fade</p>
+              <ul class="mt-4 space-y-1.5 border-t-2 border-dashed border-ink/25 pt-4 text-sm" aria-label="Days in the chair"><li class="flex gap-3"><span class="w-24 shrink-0 font-bold">Pilsen</span><span class="text-mute">Wed, Thu, Fri, Sat, Sun</span></li></ul>
+              <div class="mt-6 flex flex-wrap items-center gap-4 pt-1">
+                <a href="book.html?barber=rosa" class="btn-red btn-sm">Book with Rosa</a>
+                <span class="text-sm text-mute" data-next-free="rosa"></span>
+              </div>
+            </article>
+          </li>
+          <li class="reveal" data-barber="jae" data-locs="logan" data-specs="scissor fades" id="jae">
+            <article class="flex h-full flex-col">
+              <div class="relative">
+                <img src="assets/img/barbers/jae.svg" alt="" width="400" height="480" class="portrait card-shadow" loading="lazy">
+                <span class="absolute left-4 top-4 rounded-md border-2 border-ink bg-paper px-2.5 py-1 font-display text-lg leading-none">6 yrs</span>
+              </div>
+              <p class="condensed mt-6 text-xs font-extrabold uppercase tracking-[0.2em] text-red">Barber</p>
+              <h2 class="mt-1 font-display text-4xl leading-none">Jae-won Park</h2>
+              <p class="mt-3 flex flex-wrap gap-2"><span class="tag">Scissor work</span><span class="tag">Fades & tapers</span></p>
+              <p class="mt-4 leading-relaxed text-mute">The person to see for longer hair, two-block cuts and textured crops. Explains exactly how to style it so it looks the same at home.</p>
+              <p class="mt-4 text-sm"><span class="font-bold">Signature:</span> Scissor-cut textured crop</p>
+              <ul class="mt-4 space-y-1.5 border-t-2 border-dashed border-ink/25 pt-4 text-sm" aria-label="Days in the chair"><li class="flex gap-3"><span class="w-24 shrink-0 font-bold">Logan Square</span><span class="text-mute">Tue, Wed, Thu, Fri, Sun</span></li></ul>
+              <div class="mt-6 flex flex-wrap items-center gap-4 pt-1">
+                <a href="book.html?barber=jae" class="btn-red btn-sm">Book with Jae</a>
+                <span class="text-sm text-mute" data-next-free="jae"></span>
+              </div>
+            </article>
+          </li>
+          <li class="reveal" data-barber="tariq" data-locs="logan pilsen" data-specs="fades kids" id="tariq">
+            <article class="flex h-full flex-col">
+              <div class="relative">
+                <img src="assets/img/barbers/tariq.svg" alt="" width="400" height="480" class="portrait card-shadow" loading="lazy">
+                <span class="absolute left-4 top-4 rounded-md border-2 border-ink bg-paper px-2.5 py-1 font-display text-lg leading-none">7 yrs</span>
+              </div>
+              <p class="condensed mt-6 text-xs font-extrabold uppercase tracking-[0.2em] text-red">Barber</p>
+              <h2 class="mt-1 font-display text-4xl leading-none">Tariq Bell</h2>
+              <p class="mt-3 flex flex-wrap gap-2"><span class="tag">Fades & tapers</span><span class="tag">Kids</span></p>
+              <p class="mt-4 leading-relaxed text-mute">Splits his week between both shops. Fast, precise fades and the calmest hands in the building for nervous first-timers and little ones.</p>
+              <p class="mt-4 text-sm"><span class="font-bold">Signature:</span> Low taper with a hard part</p>
+              <ul class="mt-4 space-y-1.5 border-t-2 border-dashed border-ink/25 pt-4 text-sm" aria-label="Days in the chair"><li class="flex gap-3"><span class="w-24 shrink-0 font-bold">Logan Square</span><span class="text-mute">Mon, Wed, Sat</span></li><li class="flex gap-3"><span class="w-24 shrink-0 font-bold">Pilsen</span><span class="text-mute">Tue, Thu, Sun</span></li></ul>
+              <div class="mt-6 flex flex-wrap items-center gap-4 pt-1">
+                <a href="book.html?barber=tariq" class="btn-red btn-sm">Book with Tariq</a>
+                <span class="text-sm text-mute" data-next-free="tariq"></span>
+              </div>
+            </article>
+          </li>
+          <li class="reveal" data-barber="hal" data-locs="logan" data-specs="scissor beards" id="hal">
+            <article class="flex h-full flex-col">
+              <div class="relative">
+                <img src="assets/img/barbers/hal.svg" alt="" width="400" height="480" class="portrait card-shadow" loading="lazy">
+                <span class="absolute left-4 top-4 rounded-md border-2 border-ink bg-paper px-2.5 py-1 font-display text-lg leading-none">34 yrs</span>
+              </div>
+              <p class="condensed mt-6 text-xs font-extrabold uppercase tracking-[0.2em] text-red">Master barber</p>
+              <h2 class="mt-1 font-display text-4xl leading-none">Hollis “Hal” Brennan</h2>
+              <p class="mt-3 flex flex-wrap gap-2"><span class="tag">Scissor work</span><span class="tag">Beards & shaves</span></p>
+              <p class="mt-4 leading-relaxed text-mute">Has been cutting hair on the Northwest Side since 1992. Flat tops, side parts, hot shaves and stories about every Cubs season since.</p>
+              <p class="mt-4 text-sm"><span class="font-bold">Signature:</span> Side part and hot towel shave</p>
+              <ul class="mt-4 space-y-1.5 border-t-2 border-dashed border-ink/25 pt-4 text-sm" aria-label="Days in the chair"><li class="flex gap-3"><span class="w-24 shrink-0 font-bold">Logan Square</span><span class="text-mute">Tue, Thu, Fri, Sat</span></li></ul>
+              <div class="mt-6 flex flex-wrap items-center gap-4 pt-1">
+                <a href="book.html?barber=hal" class="btn-red btn-sm">Book with Hal</a>
+                <span class="text-sm text-mute" data-next-free="hal"></span>
+              </div>
+            </article>
+          </li>
+        </ul>
+        <div class="mt-12 hidden rounded-lg border-2 border-dashed border-ink/40 p-8 text-center" data-barber-empty>
+          <p class="font-display text-3xl">No barber matches both filters</p>
+          <p class="mt-2 text-mute">Try the other shop, or <button type="button" class="text-link" data-barber-reset>show everyone</button>.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="on-dark border-t-2 border-ink bg-ink py-20" aria-labelledby="any-title">
+      <div class="container-x grid items-center gap-10 lg:grid-cols-[1.2fr_1fr]">
+        <div class="reveal">
+          <h2 id="any-title" class="section-title">No favorite yet?</h2>
+          <p class="lede mt-5 max-w-xl">Choose “First available” when you book and we’ll match you with whoever has the soonest opening for your services. Every barber here can do a great fade.</p>
+        </div>
+        <div class="reveal flex flex-wrap gap-4 lg:justify-end">
+          <a href="book.html" class="btn-red">Book first available</a>
+          <a href="about.html#careers" class="btn-ghost-light">We’re hiring</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="on-dark mt-auto bg-ink">
+    <div class="pole-band" aria-hidden="true"></div>
+    <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_1.2fr_1.3fr]">
+      <div>
+        <a href="index.html" class="flex items-center gap-2.5">
+        <svg viewBox="0 0 40 40" class="h-10 w-10 shrink-0" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="19" fill="#f2ead9"/><circle cx="20" cy="20" r="15.5" fill="none" stroke="#151515" stroke-width="1.2" stroke-dasharray="1.5 2.6"/><clipPath id="lm-f2ead9"><rect x="14.5" y="8" width="11" height="24" rx="2"/></clipPath><rect x="14.5" y="8" width="11" height="24" rx="2" fill="#151515"/><g clip-path="url(#lm-f2ead9)"><path d="M8 14 32 4v5L8 19ZM8 24 32 14v5L8 29ZM8 34 32 24v5L8 39Z" fill="#b5281c"/><path d="M8 19 32 9v2.5L8 21.5ZM8 29 32 19v2.5L8 31.5Z" fill="#1d3557"/></g><rect x="13" y="6" width="14" height="3" rx="1.5" fill="#e0a83a"/><rect x="13" y="31" width="14" height="3" rx="1.5" fill="#e0a83a"/></svg>
+        <span class="flex flex-col leading-none"><span class="font-display text-[1.65rem] uppercase tracking-[0.02em]">Fade Bros.</span><span class="condensed mt-0.5 text-[10px] font-extrabold uppercase tracking-[0.3em] text-brass">Barber Co. · Chicago</span></span>
+      </a>
+        <p class="mt-5 max-w-xs text-sm leading-relaxed text-paper/75">An independent barbershop with two shops in Chicago. Fades, beards and straight-razor shaves since 2012.</p>
+        <ul class="mt-6 flex gap-5 text-sm">
+          <li><a href="#" class="footer-link">Instagram</a></li>
+          <li><a href="#" class="footer-link">TikTok</a></li>
+          <li><a href="#" class="footer-link">Yelp</a></li>
+        </ul>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer-heading">The shop</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="services.html" class="footer-link">Services &amp; prices</a></li>
+          <li><a href="barbers.html" class="footer-link">Our barbers</a></li>
+          <li><a href="book.html" class="footer-link">Book a chair</a></li>
+          <li><a href="shop.html" class="footer-link">Products</a></li>
+          <li><a href="shop.html#gift-cards" class="footer-link">Gift cards</a></li>
+          <li><a href="about.html#careers" class="footer-link">Careers &amp; chair rental</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer-heading">Two shops</h2>
+        <ul class="mt-4 space-y-5 text-sm">
+          <li>
+            <p class="font-bold text-paper">Logan Square</p>
+            <p class="mt-1 text-paper/75">2741 N Milwaukee Ave, Chicago</p>
+            <p class="mt-1"><a href="tel:+17735550142" class="footer-link">(773) 555-0142</a></p>
+            <p class="mt-2"><span class="status" data-open-now="logan"><span class="status-dot" aria-hidden="true"></span><span data-open-text>See opening hours</span></span></p>
+          </li>
+          <li>
+            <p class="font-bold text-paper">Pilsen</p>
+            <p class="mt-1 text-paper/75">1532 W 18th St, Chicago</p>
+            <p class="mt-1"><a href="tel:+13125550187" class="footer-link">(312) 555-0187</a></p>
+            <p class="mt-2"><span class="status" data-open-now="pilsen"><span class="status-dot" aria-hidden="true"></span><span data-open-text>See opening hours</span></span></p>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-heading">The Line-Up</h2>
+        <p class="mt-4 text-sm text-paper/75">A short email when a barber has last-minute openings, plus new products. Twice a month at most.</p>
+        <form class="mt-5" data-newsletter novalidate>
+          <label for="n-email" class="sr-only">Email address</label>
+          <div class="flex gap-2"><input id="n-email" name="email" type="email" placeholder="you@example.com" class="field-dark min-w-0 flex-1" autocomplete="email" required aria-describedby="n-email-error"><button type="submit" class="btn-paper btn-sm shrink-0">Sign up</button></div>
+          <p id="n-email-error" class="field-error on-dark" data-error="email"></p>
+          <p class="mt-3 text-sm text-brass" data-newsletter-success hidden role="status">Thanks! Look out for a confirmation email; click the link and you’re on The Line-Up.</p>
+        </form>
+      </div>
+    </div>
+    <div class="border-t-2 border-paper/10">
+      <div class="container-x flex flex-col gap-3 py-6 text-xs text-paper/70 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Fade Bros. Barber Co. A fictional barbershop from a free Freeframe template.</p>
+        <p><a href="locations.html" class="footer-link">Hours &amp; directions</a> · <a href="contact.html" class="footer-link">Contact</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Find your plant — Frond</title>
+    <meta
+      name="description"
+      content="Four simple questions about your light, routine, pets and space. Find houseplants that suit your home, with clear reasons for each recommendation."
+    />
+    <meta name="theme-color" content="#104b46" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Find your plant — Frond" />
+    <meta
+      property="og:description"
+      content="Four simple questions about your light, routine, pets and space. Find houseplants that suit your home, with clear reasons for each recommendation."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&amp;family=Cabin:wght@400..700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script defer src="assets/js/data.js"></script>
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body data-page="finder">
+    <a href="#main" class="sr-only fixed top-3 left-3 z-50 rounded-full bg-acid px-5 py-3 text-teal focus:not-sr-only"
+      >Skip to content</a
+    >
+    <div class="bg-teal px-5 py-2 text-center text-xs tracking-wide text-white">
+      A good place to start growing.
+      <span class="hidden sm:inline">Independent plants &amp; real advice, Eugene.</span> Free local delivery over $75.
+    </div>
+    <header class="relative z-30 border-b border-line bg-white">
+      <div class="wrap flex min-h-24 items-center justify-between gap-5">
+        <a href="index.html" aria-label="Frond home" class="flex items-center gap-2 text-teal"
+          ><svg width="29" height="29" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M8 31C4 15 18 4 34 7c2 16-9 28-26 24Z" fill="currentColor" />
+            <path d="M7 34 27 14" stroke="white" stroke-width="2.5" /></svg
+          ><span class="font-display text-[43px] tracking-[-.06em]">frond.</span></a
+        >
+        <nav class="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
+          <a class="nav-link" href="shop.html">Plants</a
+          ><a class="nav-link" href="finder.html" aria-current="page">Find your plant</a
+          ><a class="nav-link" href="care.html">Plant care</a><a class="nav-link" href="about.html">Our story</a
+          ><a class="nav-link" href="visit.html">Visit us</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a href="basket.html" class="flex min-h-11 items-center gap-2 text-sm font-bold"
+            ><svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path d="m4 8 1 13h14l1-13H4Zm4 0V6a4 4 0 0 1 8 0v2" /></svg
+            >Cart <span data-basket-count class="flex size-6 items-center justify-center rounded-full bg-acid text-xs"
+              >0</span
+            ></a
+          ><button
+            type="button"
+            class="flex size-11 items-center justify-center rounded-full border border-line lg:hidden"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open menu"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav
+        id="mobile-menu"
+        hidden
+        aria-label="Mobile navigation"
+        class="absolute inset-x-0 top-full border-b border-line bg-white px-6 pb-6 shadow-xl lg:hidden"
+      >
+        <a class="nav-link" href="shop.html">Plants</a
+        ><a class="nav-link" href="finder.html" aria-current="page">Find your plant</a
+        ><a class="nav-link" href="care.html">Plant care</a><a class="nav-link" href="about.html">Our story</a
+        ><a class="nav-link" href="visit.html">Visit us</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="wrap grid items-center gap-8 pt-12 pb-10 md:grid-cols-[1.3fr_1fr]">
+        <div>
+          <p class="eyebrow mb-4 text-teal">A little help choosing</p>
+          <h1 class="display max-w-3xl text-5xl sm:text-6xl lg:text-7xl">Let’s find<br />your kind of green.</h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+            A plant you love looking at is a good start. A plant that loves your home is even better. Tell us a little
+            about your space.
+          </p>
+        </div>
+        <img
+          src="assets/img/light-guide.svg"
+          alt="A room with a sunny window: one plant on the sill, one further back in softer light and one in the shady corner"
+          width="720"
+          height="460"
+          class="w-full rounded-[2rem]"
+        />
+      </section>
+      <section class="wrap grid items-start gap-8 lg:grid-cols-[1fr_1.2fr]">
+        <form id="plant-finder" class="space-y-7 rounded-[2rem] bg-cloud p-6 sm:p-8">
+          <fieldset>
+            <legend class="mb-4 font-display text-2xl">01. What’s the light like?</legend>
+            <label class="choice mb-2"
+              ><input type="radio" name="light" value="bright" checked /> Bright, but out of direct sun</label
+            ><label class="choice mb-2"
+              ><input type="radio" name="light" value="soft" /> A little softer, away from the window</label
+            ><label class="choice"
+              ><input type="radio" name="light" value="low" /> Lower light, a north-facing room</label
+            >
+          </fieldset>
+          <fieldset>
+            <legend class="mb-4 font-display text-2xl">02. What’s your watering style?</legend>
+            <label class="choice mb-2"
+              ><input name="care" type="radio" value="easy" checked /> When I remember. Keep it forgiving.</label
+            ><label class="choice"
+              ><input name="care" type="radio" value="regular" /> I enjoy a regular check-in.</label
+            >
+          </fieldset>
+          <fieldset>
+            <legend class="mb-4 font-display text-2xl">03. Any curious paws at home?</legend>
+            <label class="choice mb-2"
+              ><input name="pets" type="radio" value="safe" /> Yes, show pet-friendly choices only</label
+            ><label class="choice"><input name="pets" type="radio" value="all" checked /> No pets to think about</label>
+          </fieldset>
+          <fieldset>
+            <legend class="mb-4 font-display text-2xl">04. Where will it live?</legend>
+            <div class="grid gap-2 sm:grid-cols-2">
+              <label class="choice"><input name="space" type="radio" value="desk" /> On a desk or table</label
+              ><label class="choice"><input name="space" type="radio" value="shelf" /> Up on a shelf</label
+              ><label class="choice"><input name="space" type="radio" value="statement" /> On the floor</label
+              ><label class="choice"><input name="space" type="radio" value="any" checked /> Anywhere it fits</label>
+            </div>
+          </fieldset>
+          <button class="btn w-full" type="submit">Meet my matches</button
+          ><button type="reset" class="link text-sm">Start again</button>
+        </form>
+        <div>
+          <div id="finder-intro" class="space-y-6">
+            <div class="rounded-[2rem] bg-teal p-8 text-white sm:p-10">
+              <p class="eyebrow text-acid">How we match</p>
+              <h2 class="display mt-5 text-4xl">Less guesswork.<br />More growing.</h2>
+              <p class="mt-5 leading-relaxed text-white/80">
+                Light matters most, so we start there, then weigh up your routine and the spot you have in mind. Every
+                suggestion comes with the reason we picked it, best matches first.
+              </p>
+              <ul class="mt-8 grid gap-4 sm:grid-cols-3">
+                <li class="rounded-2xl bg-white/10 p-5">
+                  <span class="block size-4 rounded-full bg-[#ffd65c]" aria-hidden="true"></span>
+                  <p class="mt-4 font-bold">Bright</p>
+                  <p class="mt-2 text-sm leading-relaxed text-white/80">
+                    Within a few feet of a south, east or west window.
+                  </p>
+                </li>
+                <li class="rounded-2xl bg-white/10 p-5">
+                  <span class="block size-4 rounded-full bg-[#fff3c2]" aria-hidden="true"></span>
+                  <p class="mt-4 font-bold">Softer</p>
+                  <p class="mt-2 text-sm leading-relaxed text-white/80">Further into the room, or by a north window.</p>
+                </li>
+                <li class="rounded-2xl bg-white/10 p-5">
+                  <span class="block size-4 rounded-full bg-[#e4e8dc]" aria-hidden="true"></span>
+                  <p class="mt-4 font-bold">Lower</p>
+                  <p class="mt-2 text-sm leading-relaxed text-white/80">
+                    A hallway or corner where you can still read by day.
+                  </p>
+                </li>
+              </ul>
+              <p class="mt-8 border-t border-white/20 pt-6 text-sm leading-relaxed text-white/80">
+                Pet-friendly means commonly listed as non-toxic to cats and dogs. Even non-toxic plants can upset a
+                stomach if eaten, so keep plants out of chewing reach and ask a vet about any ingestion.
+              </p>
+            </div>
+            <div class="rounded-[2rem] bg-cloud p-7 sm:p-8">
+              <p class="eyebrow">Just want a safe bet?</p>
+              <h2 class="mt-3 font-display text-2xl">Three plants that forgive almost anything.</h2>
+              <ul class="mt-6 grid grid-cols-3 gap-4">
+                <li>
+                  <a href="product.html?plant=zz-plant" class="group block">
+                    <img
+                      src="assets/img/zz-plant.svg"
+                      alt=""
+                      width="400"
+                      height="420"
+                      loading="lazy"
+                      class="aspect-square w-full rounded-2xl object-cover"
+                    />
+                    <span class="mt-3 block font-display text-lg group-hover:underline">ZZ plant</span>
+                    <span class="mt-1 hidden text-sm leading-snug text-muted sm:block"
+                      >Copes with a dim corner and a missed month.</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="product.html?plant=golden-pothos" class="group block">
+                    <img
+                      src="assets/img/golden-pothos.svg"
+                      alt=""
+                      width="400"
+                      height="420"
+                      loading="lazy"
+                      class="aspect-square w-full rounded-2xl object-cover"
+                    />
+                    <span class="mt-3 block font-display text-lg group-hover:underline">Golden pothos</span>
+                    <span class="mt-1 hidden text-sm leading-snug text-muted sm:block"
+                      >Grows almost anywhere and droops when thirsty.</span
+                    >
+                  </a>
+                </li>
+                <li>
+                  <a href="product.html?plant=baby-rubber-plant" class="group block">
+                    <img
+                      src="assets/img/baby-rubber-plant.svg"
+                      alt=""
+                      width="400"
+                      height="420"
+                      loading="lazy"
+                      class="aspect-square w-full rounded-2xl object-cover"
+                    />
+                    <span class="mt-3 block font-display text-lg group-hover:underline">Baby rubber plant</span>
+                    <span class="mt-1 hidden text-sm leading-snug text-muted sm:block"
+                      >Pet-friendly, compact and very forgiving.</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div id="finder-results" hidden tabindex="-1">
+            <h2 class="font-display text-3xl">Your green shortlist</h2>
+            <p id="finder-status" class="mt-3 text-muted" role="status" aria-live="polite"></p>
+            <div id="finder-grid" class="mt-6 grid grid-cols-2 gap-4"></div>
+            <div id="finder-no-match" hidden class="mt-5 rounded-2xl bg-acid p-6">
+              <h3 class="font-display text-2xl">A tricky combination.</h3>
+              <p class="mt-3 leading-relaxed">
+                Nothing on our shelves suits that combination right now. Bring us a photo of the room and we’ll help you
+                make a plan.
+              </p>
+              <a href="visit.html" class="link mt-4 inline-block">Talk it through with us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-20 bg-teal pt-14 pb-6 text-white">
+      <div class="wrap">
+        <div class="grid gap-10 border-b border-white/20 pb-12 md:grid-cols-[1.3fr_1fr_1fr]">
+          <div>
+            <a href="index.html" class="font-display text-6xl tracking-tight text-acid">frond.</a>
+            <p class="mt-4 max-w-xs text-white/80">Room for one more leaf.<br />Good plants. A helping hand. Always.</p>
+          </div>
+          <div>
+            <h2 class="eyebrow mb-5 text-acid">Put down roots</h2>
+            <div class="grid gap-3 text-sm">
+              <a href="shop.html">Shop all plants</a><a href="finder.html">Find your plant</a
+              ><a href="care.html">The care cupboard</a><a href="about.html">Meet the people</a>
+            </div>
+          </div>
+          <div>
+            <h2 class="eyebrow mb-5 text-acid">Come and say hello</h2>
+            <p class="text-sm leading-7">
+              18 East 5th Avenue, Eugene, OR 97401<br />Tuesday–Saturday, 10am–5pm<br />Sunday, 11am–3pm · Monday, closed
+            </p>
+            <a class="mt-3 inline-block text-sm underline underline-offset-4" href="mailto:hello@frond.example"
+              >hello@frond.example</a
+            >
+            <p class="mt-2 text-sm"><a href="tel:+15415550137">(541) 555-0137</a></p>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-between gap-3 pt-6 text-xs text-white/70">
+          <p>© <span data-year></span> Frond. A little green goes a long way.</p>
+          <p>Frond is a fictional plant shop.</p>
+        </div>
+      </div>
+    </footer>
+    <div
+      id="site-status"
+      role="status"
+      aria-live="polite"
+      class="pointer-events-none fixed right-4 bottom-4 left-4 z-50 mx-auto hidden max-w-md rounded-2xl bg-deep px-6 py-4 text-center text-white shadow-xl"
+    ></div>
+  </body>
+</html>

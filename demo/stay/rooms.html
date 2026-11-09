@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rooms &amp; suites — Casa Marea</title>
+  <meta name="description" content="Six room types at Casa Marea, from quiet garden rooms to a corner suite with a private plunge pool.">
+  <meta name="theme-color" content="#f6f1e8">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Casa Marea">
+  <meta property="og:title" content="Rooms &amp; suites — Casa Marea">
+  <meta property="og:description" content="Six room types at Casa Marea, from quiet garden rooms to a corner suite with a private plunge pool.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&amp;family=Jost:wght@300..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="rooms" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm text-foam focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-40 border-b border-transparent bg-linen/90 backdrop-blur-md transition-[border-color,box-shadow] duration-300">
+    <div class="container-x flex h-18 items-center justify-between gap-6">
+      <a href="index.html" class="group inline-flex items-center gap-3">
+        <svg viewBox="0 0 64 64" class="h-9 w-9 shrink-0" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#13232b"/><circle cx="32" cy="27" r="11" fill="#e9b25c"/><path d="M10 40q5.5-5 11 0t11 0 11 0 11 0" stroke="#fbf8f2" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M10 48q5.5-5 11 0t11 0 11 0 11 0" stroke="#7fb6bd" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>
+        <span class="leading-none"><span class="block font-display text-[1.4rem] tracking-tight">Casa Marea</span><span class="mt-1 block text-[0.68rem] uppercase tracking-[0.28em] text-mist">Newport · Rhode Island</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-8"><li><a href="rooms.html" aria-current="page" class="link-underline text-[0.95rem] aria-[current=page]:bg-[length:100%_1px]">Rooms</a></li><li><a href="dining.html" class="link-underline text-[0.95rem] aria-[current=page]:bg-[length:100%_1px]">Dining</a></li><li><a href="experiences.html" class="link-underline text-[0.95rem] aria-[current=page]:bg-[length:100%_1px]">Experiences</a></li><li><a href="offers.html" class="link-underline text-[0.95rem] aria-[current=page]:bg-[length:100%_1px]">Offers</a></li><li><a href="contact.html" class="link-underline text-[0.95rem] aria-[current=page]:bg-[length:100%_1px]">Location</a></li></ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="booking.html" class="btn-primary hidden px-5 py-2.5 sm:inline-flex">Book a stay</a>
+        <button id="menu-toggle" type="button" class="-mr-2 grid h-11 w-11 place-items-center rounded-full hover:bg-shell lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <span data-icon-open><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></span>
+          <span data-icon-close class="hidden"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-line bg-linen lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-10 pt-2">
+        <ul><li><a href="index.html" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Home</a></li><li><a href="rooms.html" aria-current="page" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Rooms</a></li><li><a href="dining.html" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Dining</a></li><li><a href="experiences.html" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Experiences</a></li><li><a href="offers.html" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Offers</a></li><li><a href="contact.html" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Location</a></li></ul>
+        <a href="booking.html" class="btn-primary mt-8 w-full py-4">Book a stay</a>
+        <p class="mt-6 text-sm text-mist">Reservations: <a href="tel:+14015550186" class="underline underline-offset-4">(401) 555-0186</a></p>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="container-x pb-12 pt-16 lg:pt-24">
+      <p class="eyebrow">Rooms & suites</p>
+      <h1 class="display mt-4 max-w-3xl text-5xl sm:text-7xl">Six ways to wake up by the sea</h1>
+      <p class="mt-6 max-w-2xl text-lg text-mist">Every room has linen sheets, an espresso machine and windows that open. Most look out to sea; the quietest face the garden.</p>
+    </section>
+
+    <section class="container-x pb-24" aria-label="Rooms">
+      <form class="grid gap-4 rounded-2xl border border-line bg-foam p-5 sm:grid-cols-3 lg:grid-cols-[1fr_1fr_1fr_auto] lg:items-end" data-room-filters>
+        <div><label class="field-label" for="filter-view">View</label><select id="filter-view" class="field py-2.5" data-filter="view"><option value="all">Any view</option><option value="sea">Sea</option><option value="garden">Garden</option><option value="pool">Pool</option></select></div>
+        <div><label class="field-label" for="filter-bed">Beds</label><select id="filter-bed" class="field py-2.5" data-filter="bed"><option value="all">Any beds</option><option value="king">King bed</option><option value="twin">Twin beds</option></select></div>
+        <div><label class="field-label" for="filter-guests">Guests</label><select id="filter-guests" class="field py-2.5" data-filter="guests"><option value="all">Any number</option><option value="2">2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option></select></div>
+        <button type="reset" class="btn-outline h-[2.875rem]">Clear filters</button>
+      </form>
+      <p class="mt-6 text-sm text-mist" aria-live="polite" data-room-count>Showing all 6 rooms</p>
+      <div class="mt-8 grid gap-x-8 gap-y-14 md:grid-cols-2 xl:grid-cols-3" data-room-grid>
+        <article class="reveal group flex flex-col" data-room-card data-view="sea" data-bed="king" data-capacity="2">
+          <a href="room.html?room=sea" class="block overflow-hidden rounded-2xl" aria-label="Sea View Room: view room">
+            <div class="art aspect-[4/3] transition duration-700 group-hover:scale-[1.03]"><img src="assets/img/room-sea.svg" alt="Sea View Room: bedroom with sea view" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          </a>
+          <div class="mt-5 flex items-start justify-between gap-4">
+            <h2 class="font-display text-2xl"><a href="room.html?room=sea" class="link-underline">Sea View Room</a></h2>
+            <p class="shrink-0 text-right text-sm text-mist">from <span class="block font-display text-xl text-ink">$360</span><span class="sr-only"> per night</span></p>
+          </div>
+          <p class="mt-2 text-mist">Arched doors open onto a balcony and the whole bay.</p>
+          <ul class="mt-4 flex flex-wrap gap-2" aria-label="Room details">
+            <li class="chip">Sea view</li><li class="chip">King bed</li><li class="chip">Up to 2 guests</li><li class="chip">300 sq ft</li>
+          </ul>
+        </article><article class="reveal group flex flex-col" data-room-card data-view="sea" data-bed="king" data-capacity="3">
+          <a href="room.html?room=suite" class="block overflow-hidden rounded-2xl" aria-label="Marea Suite: view room">
+            <div class="art aspect-[4/3] transition duration-700 group-hover:scale-[1.03]"><img src="assets/img/room-suite.svg" alt="Marea Suite: bedroom with sea view" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          </a>
+          <div class="mt-5 flex items-start justify-between gap-4">
+            <h2 class="font-display text-2xl"><a href="room.html?room=suite" class="link-underline">Marea Suite</a></h2>
+            <p class="shrink-0 text-right text-sm text-mist">from <span class="block font-display text-xl text-ink">$780</span><span class="sr-only"> per night</span></p>
+          </div>
+          <p class="mt-2 text-mist">Corner suite with a private terrace and plunge pool.</p>
+          <ul class="mt-4 flex flex-wrap gap-2" aria-label="Room details">
+            <li class="chip">Sea view</li><li class="chip">King bed</li><li class="chip">Up to 3 guests</li><li class="chip">690 sq ft</li>
+          </ul>
+        </article><article class="reveal group flex flex-col" data-room-card data-view="pool" data-bed="king" data-capacity="2">
+          <a href="room.html?room=pool" class="block overflow-hidden rounded-2xl" aria-label="Pool Terrace Room: view room">
+            <div class="art aspect-[4/3] transition duration-700 group-hover:scale-[1.03]"><img src="assets/img/room-pool.svg" alt="Pool Terrace Room: bedroom with pool view" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          </a>
+          <div class="mt-5 flex items-start justify-between gap-4">
+            <h2 class="font-display text-2xl"><a href="room.html?room=pool" class="link-underline">Pool Terrace Room</a></h2>
+            <p class="shrink-0 text-right text-sm text-mist">from <span class="block font-display text-xl text-ink">$310</span><span class="sr-only"> per night</span></p>
+          </div>
+          <p class="mt-2 text-mist">Steps from the infinity pool, with its own terrace.</p>
+          <ul class="mt-4 flex flex-wrap gap-2" aria-label="Room details">
+            <li class="chip">Pool view</li><li class="chip">King bed</li><li class="chip">Up to 2 guests</li><li class="chip">320 sq ft</li>
+          </ul>
+        </article><article class="reveal group flex flex-col" data-room-card data-view="sea" data-bed="twin" data-capacity="3">
+          <a href="room.html?room=twin" class="block overflow-hidden rounded-2xl" aria-label="Sea View Twin: view room">
+            <div class="art aspect-[4/3] transition duration-700 group-hover:scale-[1.03]"><img src="assets/img/room-twin.svg" alt="Sea View Twin: bedroom with sea view" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          </a>
+          <div class="mt-5 flex items-start justify-between gap-4">
+            <h2 class="font-display text-2xl"><a href="room.html?room=twin" class="link-underline">Sea View Twin</a></h2>
+            <p class="shrink-0 text-right text-sm text-mist">from <span class="block font-display text-xl text-ink">$380</span><span class="sr-only"> per night</span></p>
+          </div>
+          <p class="mt-2 text-mist">Two beds, a daybed and the same view of the bay.</p>
+          <ul class="mt-4 flex flex-wrap gap-2" aria-label="Room details">
+            <li class="chip">Sea view</li><li class="chip">Twin beds</li><li class="chip">Up to 3 guests</li><li class="chip">345 sq ft</li>
+          </ul>
+        </article><article class="reveal group flex flex-col" data-room-card data-view="garden" data-bed="king" data-capacity="2">
+          <a href="room.html?room=garden" class="block overflow-hidden rounded-2xl" aria-label="Garden Room: view room">
+            <div class="art aspect-[4/3] transition duration-700 group-hover:scale-[1.03]"><img src="assets/img/room-garden.svg" alt="Garden Room: bedroom with garden view" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          </a>
+          <div class="mt-5 flex items-start justify-between gap-4">
+            <h2 class="font-display text-2xl"><a href="room.html?room=garden" class="link-underline">Garden Room</a></h2>
+            <p class="shrink-0 text-right text-sm text-mist">from <span class="block font-display text-xl text-ink">$280</span><span class="sr-only"> per night</span></p>
+          </div>
+          <p class="mt-2 text-mist">Quiet room among the hydrangeas and lavender.</p>
+          <ul class="mt-4 flex flex-wrap gap-2" aria-label="Room details">
+            <li class="chip">Garden view</li><li class="chip">King bed</li><li class="chip">Up to 2 guests</li><li class="chip">260 sq ft</li>
+          </ul>
+        </article><article class="reveal group flex flex-col" data-room-card data-view="garden" data-bed="king" data-capacity="4">
+          <a href="room.html?room=family" class="block overflow-hidden rounded-2xl" aria-label="Family Suite: view room">
+            <div class="art aspect-[4/3] transition duration-700 group-hover:scale-[1.03]"><img src="assets/img/room-family.svg" alt="Family Suite: bedroom with garden view" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          </a>
+          <div class="mt-5 flex items-start justify-between gap-4">
+            <h2 class="font-display text-2xl"><a href="room.html?room=family" class="link-underline">Family Suite</a></h2>
+            <p class="shrink-0 text-right text-sm text-mist">from <span class="block font-display text-xl text-ink">$520</span><span class="sr-only"> per night</span></p>
+          </div>
+          <p class="mt-2 text-mist">Two rooms for four, opening onto the garden.</p>
+          <ul class="mt-4 flex flex-wrap gap-2" aria-label="Room details">
+            <li class="chip">Garden view</li><li class="chip">King bed</li><li class="chip">Up to 4 guests</li><li class="chip">560 sq ft</li>
+          </ul>
+        </article>
+      </div>
+      <div class="mt-8 hidden rounded-2xl border border-dashed border-line p-12 text-center" data-room-empty>
+        <p class="font-display text-2xl">No rooms match those filters</p>
+        <p class="mt-2 text-mist">Try another view or number of guests. The Family Suite sleeps four.</p>
+      </div>
+    </section>
+
+    <section class="bg-shell py-20" aria-labelledby="included-title">
+      <div class="container-x">
+        <h2 id="included-title" class="display text-3xl sm:text-4xl">In every room</h2>
+        <ul class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="flex items-center gap-3 text-mist"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-sea" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Linen sheets and down pillows</span></li><li class="flex items-center gap-3 text-mist"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-sea" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Air conditioning and ceiling fan</span></li><li class="flex items-center gap-3 text-mist"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-sea" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Fast Wi-Fi</span></li><li class="flex items-center gap-3 text-mist"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-sea" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Espresso machine</span></li><li class="flex items-center gap-3 text-mist"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-sea" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Minibar with Rhode Island wines</span></li><li class="flex items-center gap-3 text-mist"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-sea" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Natural bath products</span></li><li class="flex items-center gap-3 text-mist"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-sea" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Bathrobes and beach bag</span></li><li class="flex items-center gap-3 text-mist"><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-sea" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Daily housekeeping</span></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer class="on-dark mt-auto bg-ink text-foam">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-[1.3fr_1fr_1fr] lg:grid-cols-[1.4fr_0.8fr_0.8fr_1.4fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-3"><svg viewBox="0 0 64 64" class="h-9 w-9 shrink-0" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#13232b"/><circle cx="32" cy="27" r="11" fill="#e9b25c"/><path d="M10 40q5.5-5 11 0t11 0 11 0 11 0" stroke="#fbf8f2" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M10 48q5.5-5 11 0t11 0 11 0 11 0" stroke="#7fb6bd" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg><span class="font-display text-2xl">Casa Marea</span></a>
+        <address class="mt-5 not-italic leading-relaxed text-foam/80">12 Lighthouse Lane<br>Newport, RI 02840</address>
+        <p class="mt-4 space-y-1 text-foam/80"><a href="tel:+14015550186" class="link-underline">(401) 555-0186</a><br><a href="mailto:stay@casamarea.example" class="link-underline">stay@casamarea.example</a></p>
+      </div>
+      <div><h2 class="text-xs font-medium uppercase tracking-[0.24em] text-sun">Stay</h2><ul class="mt-4 space-y-2.5"><li><a href="rooms.html" class="link-underline text-foam/85 hover:text-foam">Rooms & suites</a></li><li><a href="offers.html" class="link-underline text-foam/85 hover:text-foam">Offers</a></li><li><a href="booking.html" class="link-underline text-foam/85 hover:text-foam">Book a stay</a></li></ul></div><div><h2 class="text-xs font-medium uppercase tracking-[0.24em] text-sun">Discover</h2><ul class="mt-4 space-y-2.5"><li><a href="dining.html" class="link-underline text-foam/85 hover:text-foam">Dining</a></li><li><a href="experiences.html" class="link-underline text-foam/85 hover:text-foam">Experiences</a></li><li><a href="contact.html" class="link-underline text-foam/85 hover:text-foam">Location & contact</a></li></ul></div>
+      <div class="md:col-span-3 lg:col-span-1">
+        <h2 class="text-xs font-medium uppercase tracking-[0.24em] text-sun">Letters from the coast</h2>
+        <p class="mt-4 text-foam/80">Four emails a year: new rooms, the season's menu and quiet weeks worth knowing about.</p>
+        <!-- Demo form: connect it to your email provider in assets/js/main.js (initForms). -->
+        <form class="mt-5 flex flex-col gap-3 sm:flex-row" data-form="newsletter" novalidate>
+          <div class="flex-1">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input id="newsletter-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" class="field" aria-describedby="newsletter-email-error">
+            <p id="newsletter-email-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <button type="submit" class="btn-light h-[3.125rem] shrink-0">Subscribe</button>
+        </form>
+        <p class="mt-3 hidden text-sm text-sun" data-form-success role="status">Thank you. Look out for a confirmation email from us; once you click the link, the next letter from the coast is yours.</p>
+      </div>
+    </div>
+    <div class="container-x flex flex-col gap-3 border-t border-foam/15 py-6 text-sm text-foam/70 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; <span data-year>2026</span> Casa Marea, Newport. A fictional hotel.</p>
+      <ul class="flex gap-6"><li><a href="#" class="link-underline">Instagram</a></li><li><a href="#" class="link-underline">Privacy</a></li><li><a href="#" class="link-underline">Terms</a></li></ul>
+    </div>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Course — Northfield Academy</title>
+  <meta name="description" content="Course details, curriculum, instructor and reviews.">
+  <meta name="theme-color" content="#fbfaf4" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a1510" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Northfield Academy">
+  <meta property="og:title" content="Course — Northfield Academy">
+  <meta property="og:description" content="Course details, curriculum, instructor and reviews.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia('(prefers-color-scheme: dark)').matches))d.classList.add('dark');}catch(e){}})();</script>
+</head>
+<body class="bg-paper font-sans text-ink antialiased dark:bg-night dark:text-white" data-page="course">
+  <a href="#main" class="sr-only z-[70] rounded-full bg-ink px-4 py-2 text-sm font-bold text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3 dark:bg-white dark:text-night">Skip to content</a>
+
+  <header id="site-header" class="sticky top-0 z-50 border-b border-transparent bg-paper/85 backdrop-blur-xl transition duration-300 dark:bg-night/85 [&.is-scrolled]:border-ink/10 [&.is-scrolled]:shadow-[0_10px_30px_-18px_rgba(16,36,27,0.35)] dark:[&.is-scrolled]:border-white/10">
+    <div class="wrap flex h-[4.5rem] items-center gap-6">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <svg class="size-9" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="11" fill="#19693a"/><path d="M8 12.5c3.4-1.6 6.6-1.4 10 .8v13c-3.4-2.2-6.6-2.4-10-.8Z" fill="#fbfaf4"/><path d="M28 12.5c-3.4-1.6-6.6-1.4-10 .8v13c3.4-2.2 6.6-2.4 10-.8Z" fill="#d9f5e0"/><circle cx="27.5" cy="8.5" r="3.5" fill="#ffc727"/></svg><span class="leading-none"><span class="block text-[1.05rem] font-extrabold tracking-tight">Northfield</span><span class="block text-[11px] font-bold tracking-[0.2em] text-leaf-700 uppercase dark:text-leaf-300">Academy</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1"><li><a href="courses.html" class="nav-link" aria-current="page">Courses</a></li><li><a href="paths.html" class="nav-link">Paths</a></li><li><a href="instructors.html" class="nav-link">Instructors</a></li><li><a href="pricing.html" class="nav-link">Pricing</a></li></ul>
+      </nav>
+      <div class="ml-auto flex items-center gap-1.5">
+        <button type="button" data-theme-toggle class="grid size-10 place-items-center rounded-full text-ink/70 transition hover:bg-ink/5 hover:text-ink dark:text-white/75 dark:hover:bg-white/10 dark:hover:text-white">
+          <span class="dark:hidden"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg></span><span class="hidden dark:inline"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span>
+        </button>
+        <a href="learn.html" class="nav-link hidden sm:inline-flex">My learning</a>
+        <a href="pricing.html" class="btn btn-primary hidden sm:inline-flex">Join for free</a>
+        <button type="button" id="menu-button" class="grid size-10 place-items-center rounded-full text-ink hover:bg-ink/5 lg:hidden dark:text-white dark:hover:bg-white/10" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span data-icon-open><svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span><span data-icon-close class="hidden"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 18 18 6M6 6l12 12"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="border-t border-ink/10 bg-paper lg:hidden dark:border-white/10 dark:bg-night" hidden>
+      <nav aria-label="Mobile" class="wrap py-4">
+        <ul class="space-y-1"><li><a href="courses.html" class="block rounded-2xl px-4 py-3 text-base font-bold hover:bg-ink/5 aria-[current=page]:bg-leaf-100 aria-[current=page]:text-leaf-900 dark:hover:bg-white/5 dark:aria-[current=page]:bg-leaf-400/15 dark:aria-[current=page]:text-leaf-200" aria-current="page">Courses</a></li><li><a href="paths.html" class="block rounded-2xl px-4 py-3 text-base font-bold hover:bg-ink/5 aria-[current=page]:bg-leaf-100 aria-[current=page]:text-leaf-900 dark:hover:bg-white/5 dark:aria-[current=page]:bg-leaf-400/15 dark:aria-[current=page]:text-leaf-200">Paths</a></li><li><a href="instructors.html" class="block rounded-2xl px-4 py-3 text-base font-bold hover:bg-ink/5 aria-[current=page]:bg-leaf-100 aria-[current=page]:text-leaf-900 dark:hover:bg-white/5 dark:aria-[current=page]:bg-leaf-400/15 dark:aria-[current=page]:text-leaf-200">Instructors</a></li><li><a href="pricing.html" class="block rounded-2xl px-4 py-3 text-base font-bold hover:bg-ink/5 aria-[current=page]:bg-leaf-100 aria-[current=page]:text-leaf-900 dark:hover:bg-white/5 dark:aria-[current=page]:bg-leaf-400/15 dark:aria-[current=page]:text-leaf-200">Pricing</a></li><li><a href="learn.html" class="block rounded-2xl px-4 py-3 text-base font-bold hover:bg-ink/5 aria-[current=page]:bg-leaf-100 aria-[current=page]:text-leaf-900 dark:hover:bg-white/5 dark:aria-[current=page]:bg-leaf-400/15 dark:aria-[current=page]:text-leaf-200">My learning</a></li></ul>
+        <a href="pricing.html" class="btn btn-primary mt-4 w-full">Join for free</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <div class="bg-ink text-white dark:bg-[#07100c]">
+      <div class="wrap grid gap-10 pt-8 pb-14 lg:grid-cols-[1fr_24rem] lg:pb-20">
+        <div class="min-w-0">
+          <nav aria-label="Breadcrumb" class="text-sm text-white/75"><ol class="flex flex-wrap items-center gap-2"><li><a class="hover:text-sun-300" href="courses.html">Courses</a></li><li aria-hidden="true">/</li><li><a class="hover:text-sun-300" data-bind-href="topic" href="courses.html?topic=design" data-bind="topic">Design</a></li></ol></nav>
+          <h1 class="mt-5 text-4xl leading-tight font-extrabold tracking-[-0.03em] sm:text-5xl" data-bind="title">Design Systems from Figma to Code</h1>
+          <p class="mt-4 max-w-2xl text-lg text-white/85" data-bind="summary">Build a design system your team will actually use: tokens, components and documentation, from Figma all the way to production code.</p>
+          <div class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-sm">
+            <span class="flex items-center gap-1.5"><strong class="text-base text-sun-300" data-bind="rating">4.9</strong><span data-course-stars></span><span class="text-white/75">(<span data-bind="reviews">2,140</span> reviews)</span></span>
+            <span class="text-white/75"><span data-bind="students">18,400</span> learners</span>
+            <span class="tag bg-white/15 text-white" data-bind="level">Intermediate</span>
+          </div>
+          <p class="mt-5 text-sm text-white/80">Taught by <a class="font-bold text-white underline decoration-sun-400 underline-offset-4 hover:text-sun-300" data-bind-href="instructor" href="instructor.html?id=amara" data-bind="instructor">Amara Okoye</a> · Updated <span data-bind="updated">Sep 2026</span></p>
+          <dl class="mt-8 flex flex-wrap gap-3 text-sm">
+            <div class="rounded-2xl bg-white/10 px-4 py-3"><dt class="text-white/70">Length</dt><dd class="font-extrabold" data-bind="hours">9 hours</dd></div>
+            <div class="rounded-2xl bg-white/10 px-4 py-3"><dt class="text-white/70">Lessons</dt><dd class="font-extrabold" data-bind="lessons">23 lessons</dd></div>
+            <div class="rounded-2xl bg-white/10 px-4 py-3"><dt class="text-white/70">Modules</dt><dd class="font-extrabold" data-bind="modules">5 modules</dd></div>
+            <div class="rounded-2xl bg-white/10 px-4 py-3"><dt class="text-white/70">Certificate</dt><dd class="font-extrabold">Included</dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap grid gap-12 lg:grid-cols-[1fr_24rem]">
+      <div class="min-w-0 pt-12">
+        <section aria-labelledby="learn-title" class="card p-7 sm:p-8">
+          <h2 id="learn-title" class="text-2xl font-extrabold tracking-tight">What you’ll learn</h2>
+          <ul class="mt-5 grid gap-3 sm:grid-cols-2" data-outcomes></ul>
+        </section>
+
+        <section aria-labelledby="curriculum-title" class="mt-14">
+          <div class="flex flex-wrap items-end justify-between gap-3">
+            <div><h2 id="curriculum-title" class="text-2xl font-extrabold tracking-tight">Curriculum</h2><p class="mt-1 text-sm muted" data-curriculum-summary></p></div>
+            <button type="button" class="btn btn-ghost" data-expand-all>Expand all</button>
+          </div>
+          <div class="mt-4 border-t border-ink/10 dark:border-white/10" data-curriculum></div>
+        </section>
+
+        <section aria-labelledby="instructor-title" class="mt-14">
+          <h2 id="instructor-title" class="text-2xl font-extrabold tracking-tight">Your instructor</h2>
+          <div class="card mt-5 flex flex-col gap-5 p-6 sm:flex-row sm:items-start">
+            <div class="shrink-0" data-instructor-avatar></div>
+            <div><h3 class="text-lg font-extrabold"><a class="hover:text-leaf-700 dark:hover:text-leaf-300" data-bind-href="instructor" href="instructor.html?id=amara" data-bind="instructor">Amara Okoye</a></h3><p class="text-sm font-semibold muted" data-bind="instructor-role">Design lead</p><p class="mt-3 muted" data-bind="instructor-bio"></p></div>
+          </div>
+        </section>
+
+        <section aria-labelledby="reviews-title" class="mt-14">
+          <h2 id="reviews-title" class="text-2xl font-extrabold tracking-tight">Reviews</h2>
+          <div class="mt-5 grid gap-8 sm:grid-cols-[10rem_1fr]">
+            <div><p class="text-5xl font-extrabold" data-bind="rating">4.9</p><p class="mt-1 text-sm muted">Course rating</p></div>
+            <div class="space-y-2.5" data-histogram></div>
+          </div>
+          <div class="mt-6"><figure class="border-t border-ink/10 py-5 dark:border-white/10"><figcaption class="flex items-center gap-3"><span class="grid size-10 place-items-center rounded-full bg-leaf-100 text-sm font-extrabold text-leaf-900 dark:bg-leaf-400/15 dark:text-leaf-200">IM</span><span><span class="block font-bold">Ines Moreau</span><span class="block text-xs muted">2 weeks ago</span></span><span class="ml-auto text-sm font-bold text-[#8a5a00] dark:text-sun-300" role="img" aria-label="5 out of 5 stars">★★★★★</span></figcaption><blockquote class="mt-3 muted">The best structured course I've taken. Each lesson builds on the last, and the projects are genuinely useful at work.</blockquote></figure><figure class="border-t border-ink/10 py-5 dark:border-white/10"><figcaption class="flex items-center gap-3"><span class="grid size-10 place-items-center rounded-full bg-leaf-100 text-sm font-extrabold text-leaf-900 dark:bg-leaf-400/15 dark:text-leaf-200">TR</span><span><span class="block font-bold">Tomás Rivera</span><span class="block text-xs muted">1 month ago</span></span><span class="ml-auto text-sm font-bold text-[#8a5a00] dark:text-sun-300" role="img" aria-label="5 out of 5 stars">★★★★★</span></figcaption><blockquote class="mt-3 muted">Finally clicked for me. Loved the exercises and how quickly questions got answered.</blockquote></figure><figure class="border-t border-ink/10 py-5 dark:border-white/10"><figcaption class="flex items-center gap-3"><span class="grid size-10 place-items-center rounded-full bg-leaf-100 text-sm font-extrabold text-leaf-900 dark:bg-leaf-400/15 dark:text-leaf-200">AB</span><span><span class="block font-bold">Aisha Bello</span><span class="block text-xs muted">1 month ago</span></span><span class="ml-auto text-sm font-bold text-[#8a5a00] dark:text-sun-300" role="img" aria-label="4 out of 5 stars">★★★★☆</span></figcaption><blockquote class="mt-3 muted">Great content and pacing. I'd love a few more advanced examples in the last module.</blockquote></figure></div>
+        </section>
+
+        <section aria-labelledby="faq-title" class="mt-14">
+          <h2 id="faq-title" class="text-2xl font-extrabold tracking-tight">Questions</h2>
+          <div class="mt-3 border-t border-ink/10 dark:border-white/10"><details class="acc"><summary>Do I need any experience?<svg class="chev" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z"/></svg></summary><p class="pb-5 muted">Each course lists its level. Beginner courses assume nothing; intermediate ones expect you to know the basics, and the first module recaps them.</p></details><details class="acc"><summary>How long do I have access?<svg class="chev" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z"/></svg></summary><p class="pb-5 muted">For life. Paid courses are yours to keep, including future updates. Plus members keep access while subscribed.</p></details><details class="acc"><summary>Do I get a certificate?<svg class="chev" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z"/></svg></summary><p class="pb-5 muted">Yes. Finish every lesson and you get a certificate with your name, the course and its length, ready to share.</p></details><details class="acc"><summary>What if it isn’t for me?<svg class="chev" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M5.3 7.3a1 1 0 0 1 1.4 0L10 10.6l3.3-3.3a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 0-1.4Z"/></svg></summary><p class="pb-5 muted">Paid courses come with a 30-day money-back guarantee, no questions asked.</p></details></div>
+        </section>
+      </div>
+
+      <aside class="lg:-mt-64" aria-label="Enroll">
+        <div class="card overflow-hidden shadow-[0_30px_60px_-36px_rgba(16,36,27,0.55)] lg:sticky lg:top-24" data-back-to-top-hide>
+          <div class="relative aspect-[16/10]">
+            <div class="h-full w-full [&>svg]:h-full [&>svg]:w-full" data-course-cover></div>
+            <button type="button" class="absolute inset-0 grid place-items-center bg-ink/5 transition hover:bg-ink/15" data-open-preview><span class="flex items-center gap-2 rounded-full bg-white px-4 py-2.5 text-sm font-extrabold text-ink shadow-lg"><svg class="size-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M6.3 3.8A1.5 1.5 0 0 0 4 5.1v9.8a1.5 1.5 0 0 0 2.3 1.3l7.8-4.9a1.5 1.5 0 0 0 0-2.6Z"/></svg> Preview this course</span></button>
+          </div>
+          <div class="p-6">
+            <p class="text-3xl font-extrabold" data-bind="price">$89</p>
+            <button type="button" class="btn btn-primary btn-lg mt-4 w-full" data-enrol><span data-bind="cta">Enroll for $89</span></button>
+            <p class="mt-3 text-center text-xs font-semibold muted" data-enrol-note>30-day money-back guarantee · Lifetime access</p>
+            <ul class="mt-6 space-y-2.5 border-t border-ink/10 pt-5 text-sm dark:border-white/10">
+              <li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span><span data-bind="hours">9 hours</span> of video and exercises</span></li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>Project files and starter kits</span></li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>Questions answered by the instructor</span></li>
+              <li class="flex gap-2.5"><svg class="mt-0.5 size-5 shrink-0 text-leaf-600 dark:text-leaf-300" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M16.7 5.3a1 1 0 0 1 0 1.4l-8 8a1 1 0 0 1-1.4 0l-4-4a1 1 0 1 1 1.4-1.4L8 12.6l7.3-7.3a1 1 0 0 1 1.4 0Z" clip-rule="evenodd"/></svg><span>Certificate of completion</span></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <section class="wrap mt-20" aria-labelledby="related-title">
+      <h2 id="related-title" class="text-2xl font-extrabold tracking-tight">You might also like</h2>
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 xl:grid-cols-3" data-related></div>
+    </section>
+
+    <dialog id="preview-dialog" class="modal" aria-labelledby="preview-title">
+      <div class="flex items-center justify-between gap-4 border-b border-ink/10 px-6 py-4 dark:border-white/10">
+        <h2 id="preview-title" class="text-lg font-extrabold">Free preview lessons</h2>
+        <button type="button" class="grid size-9 place-items-center rounded-full hover:bg-ink/5 dark:hover:bg-white/10" data-close-dialog aria-label="Close"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 18 18 6M6 6l12 12"/></svg></button>
+      </div>
+      <div class="p-6">
+        <p class="text-sm muted">Watch these lessons before you enroll. Your progress is kept if you do.</p>
+        <ul class="mt-4 space-y-1" data-preview-list></ul>
+      </div>
+    </dialog>
+
+  </main>
+
+  <footer class="mt-24 bg-ink text-white dark:bg-[#07100c]">
+    <div class="wrap grid gap-12 py-16 lg:grid-cols-[1.4fr_1fr_1fr_1fr_1.6fr]">
+      <div class="max-w-xs">
+        <a href="index.html" class="flex items-center gap-2.5"><svg class="size-9" viewBox="0 0 36 36" aria-hidden="true"><rect width="36" height="36" rx="11" fill="#19693a"/><path d="M8 12.5c3.4-1.6 6.6-1.4 10 .8v13c-3.4-2.2-6.6-2.4-10-.8Z" fill="#fbfaf4"/><path d="M28 12.5c-3.4-1.6-6.6-1.4-10 .8v13c3.4-2.2 6.6-2.4 10-.8Z" fill="#d9f5e0"/><circle cx="27.5" cy="8.5" r="3.5" fill="#ffc727"/></svg><span class="text-lg font-extrabold tracking-tight">Northfield Academy</span></a>
+        <p class="mt-4 text-sm text-white/75">Practical courses in design, code and data, taught by people who do the work every day.</p>
+      </div>
+      <div><h2 class="text-sm font-extrabold tracking-wide text-white">Learn</h2><ul class="mt-4 space-y-2.5 text-sm"><li><a class="text-white/75 transition hover:text-sun-300" href="courses.html">All courses</a></li><li><a class="text-white/75 transition hover:text-sun-300" href="paths.html">Learning paths</a></li><li><a class="text-white/75 transition hover:text-sun-300" href="instructors.html">Instructors</a></li></ul></div>
+      <div><h2 class="text-sm font-extrabold tracking-wide text-white">Plans</h2><ul class="mt-4 space-y-2.5 text-sm"><li><a class="text-white/75 transition hover:text-sun-300" href="pricing.html">Pricing</a></li><li><a class="text-white/75 transition hover:text-sun-300" href="pricing.html#teams">For teams</a></li><li><a class="text-white/75 transition hover:text-sun-300" href="pricing.html#faq">Student discount</a></li></ul></div>
+      <div><h2 class="text-sm font-extrabold tracking-wide text-white">Your account</h2><ul class="mt-4 space-y-2.5 text-sm"><li><a class="text-white/75 transition hover:text-sun-300" href="learn.html">My learning</a></li><li><a class="text-white/75 transition hover:text-sun-300" href="lesson.html">Lesson player</a></li><li><a class="text-white/75 transition hover:text-sun-300" href="instructors.html#teach">Teach with us</a></li></ul></div>
+      <div>
+        <h2 class="text-sm font-extrabold tracking-wide text-white">One useful lesson a week</h2>
+        <p class="mt-3 text-sm text-white/75">Free tutorials and new courses, every Thursday. No spam.</p>
+        <!-- Demo form: connect it to your email provider (see README). -->
+        <form class="mt-4" data-newsletter novalidate>
+          <label for="newsletter-email" class="sr-only">Email address</label>
+          <div class="flex gap-2">
+            <input id="newsletter-email" type="email" autocomplete="email" placeholder="you@example.com" class="block w-full min-w-0 rounded-full border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-white/55 focus:border-sun-300 focus:ring-4 focus:ring-sun-300/20 focus:outline-none aria-[invalid=true]:border-rose-300">
+            <button type="submit" class="btn btn-sun shrink-0">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="wrap flex flex-col gap-2 py-6 text-sm text-white/70 sm:flex-row sm:justify-between">
+        <p>© <span data-year>2026</span> Northfield Academy. A fictional school for this template.</p>
+        <p>Made with care for curious people.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

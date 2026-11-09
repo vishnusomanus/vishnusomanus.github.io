@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Features: logic, payments, integrations and analytics | Tessel</title>
+    <meta name="description" content="Conditional logic you can read out loud, payments inside the form, 40+ integrations and drop-off analytics by field. See every Tessel feature, and try the logic editor." />
+    <meta name="theme-color" content="#fbf3e4" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tessel" />
+    <meta property="og:title" content="Features: logic, payments, integrations and analytics | Tessel" />
+    <meta property="og:description" content="Conditional logic you can read out loud, payments inside the form, 40+ integrations and drop-off analytics by field. See every Tessel feature, and try the logic editor." />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&amp;family=Ubuntu+Sans:ital,wght@0,400..800;1,400&amp;family=Ubuntu+Sans+Mono:wght@400;600&amp;display=swap" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      (function () {
+        var d = document.documentElement, t = null;
+        d.classList.add("js");
+        try { t = localStorage.getItem("tessel:theme"); } catch (e) {}
+        if (t === "dark" || (t !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches)) d.classList.add("dark");
+      })();
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="features" class="flex min-h-screen flex-col">
+    <a href="#main" class="sr-only z-[90] rounded-lg border-2 border-line bg-butter px-4 py-3 font-bold text-coal focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+    <header class="sticky top-0 z-40 border-b-[2.5px] border-line bg-bg">
+      <div class="wrap flex min-h-[4.5rem] items-center justify-between gap-3">
+        <a href="index.html" class="wiggle flex items-center gap-2.5" aria-label="Tessel home"><svg viewBox="0 0 40 40" class="size-10 shrink-0" aria-hidden="true"><rect x="5" y="5" width="33" height="33" rx="5" fill="var(--color-line)"/><rect x="2" y="2" width="33" height="33" rx="5" fill="var(--color-card)" stroke="var(--color-line)" stroke-width="2.5"/><path d="M2 18.5h33M18.5 2v33" stroke="var(--color-line)" stroke-width="2.5"/><path d="M4.6 4.6h12.6v12.6H4.6z" fill="#ff6b42"/><path d="M19.8 4.6h12.6v12.6H19.8z" fill="#ffd84a"/><path d="M4.6 19.8h12.6v12.6H4.6z" fill="#a9b2ff"/><path d="M19.8 19.8h12.6v12.6H19.8z" fill="#86e2b6"/><circle cx="26.1" cy="26.1" r="3.2" fill="#16130f"/></svg><span class="font-display text-2xl tracking-tight">tessel</span></a>
+        <nav class="hidden xl:block" aria-label="Main">
+          <ul class="flex items-center gap-1">
+            <li><a class="nav-link" href="features.html" aria-current="page">Features</a></li>
+            <li><a class="nav-link" href="templates.html">Templates</a></li>
+            <li><a class="nav-link" href="integrations.html">Integrations</a></li>
+            <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li><a class="nav-link" href="customers.html">Customers</a></li>
+            <li><a class="nav-link" href="changelog.html">Changelog</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Dark mode">
+            <svg data-icon-moon viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+            <svg data-icon-sun viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>
+          </button>
+          <a href="signup.html#signin" class="nav-link hidden sm:block">Sign in</a>
+          <a href="signup.html" class="btn btn-sm btn-tomato hidden sm:inline-flex">Start free</a>
+          <button id="menu-toggle" type="button" class="icon-btn xl:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+            <svg data-icon-open viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+            <svg data-icon-close viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" hidden class="border-t-[2.5px] border-line bg-bg-2 xl:hidden">
+        <nav class="wrap pt-2 pb-6" aria-label="Mobile">
+          <ul>
+          <li><a class="m-link" href="features.html" aria-current="page">Features<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="templates.html">Templates<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="integrations.html">Integrations<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="pricing.html">Pricing<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="customers.html">Customers<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="changelog.html">Changelog<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="contact.html">Talk to sales<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          </ul>
+          <div class="mt-5 grid grid-cols-2 gap-3">
+            <a href="signup.html#signin" class="btn btn-plain">Sign in</a>
+            <a href="signup.html" class="btn btn-tomato">Start free</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+      <section class="grid-paper border-b-[2.5px] border-line">
+        <div class="wrap grid items-center gap-10 py-14 sm:py-20 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)]">
+          <div>
+            <p class="sticker -rotate-1 bg-peri!">Features</p>
+            <h1 class="mt-6 font-display text-[2.5rem] leading-[1.03] sm:text-6xl">Everything a form needs. Nothing it doesn't.</h1>
+            <p class="mt-6 max-w-xl text-lg text-ink-soft sm:text-xl">Four big blocks, built to work together: logic decides what to ask, payments collect the money, integrations move the answers and analytics show you what to fix.</p>
+          </div>
+          <svg viewBox="0 0 420 300" class="mx-auto w-full max-w-md text-ink" aria-hidden="true"><g stroke="var(--color-line)" stroke-width="3.5" stroke-linejoin="round"><rect x="30" y="30" width="170" height="110" rx="10" fill="#ff6b42"/><rect x="220" y="30" width="170" height="110" rx="10" fill="#ffd84a"/><rect x="30" y="160" width="170" height="110" rx="10" fill="#86e2b6"/><rect x="220" y="160" width="170" height="110" rx="10" fill="#a9b2ff"/></g><g stroke="#16130f" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M70 85h30l20-24h40M100 85l20 24h40"/><rect x="258" y="62" width="94" height="50" rx="6" fill="#fffaf1"/><path d="M258 78h94"/><path d="M80 215h30M140 215h30M110 200v30M140 200v30"/><path d="M256 245v-20M286 245v-40M316 245v-28M346 245v-52"/></g></svg>
+        </div>
+      </section>
+
+      <nav class="sticky top-[4.5rem] z-30 border-b-[2.5px] border-line bg-bg" aria-label="Feature sections">
+        <ul class="wrap flex gap-2 overflow-x-auto py-3" data-section-nav>
+          <li><a class="chip whitespace-nowrap" href="#logic">Logic &amp; branching</a></li>
+          <li><a class="chip whitespace-nowrap" href="#payments">Payments</a></li>
+          <li><a class="chip whitespace-nowrap" href="#integrations">Integrations</a></li>
+          <li><a class="chip whitespace-nowrap" href="#analytics">Analytics</a></li>
+        </ul>
+      </nav>
+
+      <!-- Logic demo (main.js: initLogicDemo) -->
+      <section id="logic" class="scroll-mt-36 py-16 sm:py-24" aria-labelledby="logic-title">
+        <div class="wrap grid gap-12 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+          <div>
+            <p class="eyebrow text-ink-soft">01 &middot; Logic &amp; branching</p>
+            <h2 id="logic-title" class="mt-3 font-display text-4xl leading-[1.05] sm:text-5xl">Rules you can read out loud.</h2>
+            <p class="mt-5 text-lg text-ink-soft">Every rule is a sentence: <em>if this answer is that, show this question</em>. Change an answer in the form on the right and watch the rules switch on and off.</p>
+            <ul class="mt-8 grid gap-4">
+              <li class="flex gap-3"><span class="mt-1 size-4 shrink-0 rounded-sm border-2 border-line bg-tomato" aria-hidden="true"></span><span><strong>Show and hide</strong> questions based on any earlier answer, or on a hidden field from the link.</span></li>
+              <li class="flex gap-3"><span class="mt-1 size-4 shrink-0 rounded-sm border-2 border-line bg-butter" aria-hidden="true"></span><span><strong>Jump</strong> to a page, an ending or a different thank-you message.</span></li>
+              <li class="flex gap-3"><span class="mt-1 size-4 shrink-0 rounded-sm border-2 border-line bg-mint" aria-hidden="true"></span><span><strong>Calculate</strong> scores, prices and quiz results as people answer.</span></li>
+              <li class="flex gap-3"><span class="mt-1 size-4 shrink-0 rounded-sm border-2 border-line bg-peri" aria-hidden="true"></span><span><strong>Group</strong> conditions with AND and OR, and get a warning when a rule can never fire.</span></li>
+            </ul>
+          </div>
+
+          <div class="card overflow-hidden shadow-brut-lg" data-logic-demo>
+            <div class="flex flex-wrap items-center justify-between gap-2 border-b-[2.5px] border-line bg-butter px-5 py-3 text-coal">
+              <h3 class="font-extrabold">Harney Street Makers Night &middot; Registration</h3>
+              <span class="rounded-full border-2 border-coal bg-cream px-2.5 py-0.5 font-mono text-xs font-semibold" data-rules-count>2 of 4 rules on</span>
+            </div>
+            <div class="grid md:grid-cols-[minmax(0,1fr)_minmax(0,0.85fr)]">
+              <form class="grid content-start gap-5 p-5" novalidate data-logic-form>
+                <fieldset>
+                  <legend class="label">How will you join us?</legend>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <label class="chip"><input class="sr-only" type="radio" name="attend" value="inperson" checked>In person</label>
+                    <label class="chip"><input class="sr-only" type="radio" name="attend" value="online">Online stream</label>
+                  </div>
+                </fieldset>
+                <fieldset data-show="r1">
+                  <legend class="label">Ticket type</legend>
+                  <div class="mt-2 flex flex-wrap gap-2">
+                    <label class="chip"><input class="sr-only" type="radio" name="ticket" value="general" checked>General $40</label>
+                    <label class="chip"><input class="sr-only" type="radio" name="ticket" value="student">Student $15</label>
+                    <label class="chip"><input class="sr-only" type="radio" name="ticket" value="supporter">Supporter $75</label>
+                  </div>
+                </fieldset>
+                <div data-show="r3" hidden>
+                  <label class="label" for="logic-school">School email</label>
+                  <input id="logic-school" class="field" type="email" placeholder="you@school.example" autocomplete="off">
+                </div>
+                <div data-show="r2">
+                  <label class="label" for="logic-diet">Dietary needs</label>
+                  <input id="logic-diet" class="field" type="text" placeholder="Vegetarian, no nuts..." autocomplete="off">
+                </div>
+                <label class="flex items-center gap-3 font-semibold" data-show="r4" hidden><input type="checkbox" class="size-5 accent-tomato" checked>Email me the recording afterward</label>
+                <label class="flex items-center gap-3 font-semibold"><input type="checkbox" class="size-5 accent-tomato" name="tshirt">Add a Makers Night T-shirt (+$18)</label>
+                <div class="flex items-center justify-between rounded-lg border-[2.5px] border-line bg-bg-2 px-4 py-3">
+                  <span class="font-bold">Total</span>
+                  <output class="font-display text-2xl" data-logic-total aria-live="polite">$40.00</output>
+                </div>
+              </form>
+              <div class="border-t-[2.5px] border-line bg-bg-2 p-5 md:border-t-0 md:border-l-[2.5px]">
+                <p class="eyebrow text-ink-soft">Rules</p>
+                <ol class="mt-3 grid gap-2.5 font-mono text-[13px] leading-snug" data-rules-list>
+                  <li class="rounded-md border-2 border-line bg-card p-2.5" data-rule="r1"><span class="font-semibold">IF</span> join = In person<br><span class="font-semibold">SHOW</span> Ticket type</li>
+                  <li class="rounded-md border-2 border-line bg-card p-2.5" data-rule="r2"><span class="font-semibold">IF</span> join = In person<br><span class="font-semibold">SHOW</span> Dietary needs</li>
+                  <li class="rounded-md border-2 border-line bg-card p-2.5" data-rule="r3"><span class="font-semibold">IF</span> ticket = Student<br><span class="font-semibold">SHOW</span> School email</li>
+                  <li class="rounded-md border-2 border-line bg-card p-2.5" data-rule="r4"><span class="font-semibold">IF</span> join = Online stream<br><span class="font-semibold">SHOW</span> Recording checkbox</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Payments -->
+      <section id="payments" class="scroll-mt-36 border-y-[2.5px] border-line bg-butter py-16 text-coal sm:py-24" aria-labelledby="payments-title">
+        <div class="wrap grid items-center gap-12 lg:grid-cols-2">
+          <div class="order-2 lg:order-1">
+            <div class="mx-auto max-w-md rotate-[-1.5deg] rounded-xl border-[2.5px] border-coal bg-cream p-6 shadow-[8px_8px_0_0_#16130f]">
+              <p class="font-mono text-sm font-semibold">RECEIPT &middot; TS-48213</p>
+              <dl class="mt-4 grid gap-2 border-y-2 border-dashed border-coal py-4">
+                <div class="flex justify-between"><dt>Supporter ticket</dt><dd class="font-mono">$75.00</dd></div>
+                <div class="flex justify-between"><dt>Makers Night T-shirt, L</dt><dd class="font-mono">$18.00</dd></div>
+                <div class="flex justify-between"><dt>Donation to the tool library</dt><dd class="font-mono">$10.00</dd></div>
+              </dl>
+              <div class="mt-4 flex items-center justify-between"><span class="font-extrabold">Paid</span><span class="font-display text-3xl">$103.00</span></div>
+              <svg viewBox="0 0 300 40" class="mt-4 w-full" aria-hidden="true"><path d="M0 20h300" stroke="#16130f" stroke-width="2" stroke-dasharray="2 6"/><g fill="#16130f"><rect x="10" y="6" width="4" height="28"/><rect x="18" y="6" width="2" height="28"/><rect x="24" y="6" width="6" height="28"/><rect x="34" y="6" width="2" height="28"/><rect x="40" y="6" width="4" height="28"/><rect x="48" y="6" width="8" height="28"/><rect x="60" y="6" width="2" height="28"/><rect x="66" y="6" width="4" height="28"/><rect x="74" y="6" width="2" height="28"/><rect x="80" y="6" width="6" height="28"/></g></svg>
+            </div>
+          </div>
+          <div class="order-1 lg:order-2">
+            <p class="eyebrow">02 &middot; Payments</p>
+            <h2 id="payments-title" class="mt-3 font-display text-4xl leading-[1.05] sm:text-5xl">The checkout is the form.</h2>
+            <p class="mt-5 text-lg font-medium">Add a payment field and Tessel works out the total from the answers: ticket tiers, quantities, add-ons and tips. No second page, no lost carts.</p>
+            <ul class="mt-7 grid gap-3 font-semibold sm:grid-cols-2">
+              <li class="rounded-lg border-[2.5px] border-coal bg-cream px-4 py-3">Cards and digital wallets</li>
+              <li class="rounded-lg border-[2.5px] border-coal bg-cream px-4 py-3">Monthly giving and memberships</li>
+              <li class="rounded-lg border-[2.5px] border-coal bg-cream px-4 py-3">Coupons and early-bird prices</li>
+              <li class="rounded-lg border-[2.5px] border-coal bg-cream px-4 py-3">Receipts with your logo</li>
+            </ul>
+            <p class="mt-6 text-sm font-semibold">No Tessel fee on paid plans. On Free, a 2.9% platform fee applies on top of your processor's.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Integrations -->
+      <section id="integrations" class="scroll-mt-36 py-16 sm:py-24" aria-labelledby="int-title">
+        <div class="wrap">
+          <div class="flex flex-wrap items-end justify-between gap-6">
+            <div class="max-w-2xl">
+              <p class="eyebrow text-ink-soft">03 &middot; Integrations</p>
+              <h2 id="int-title" class="mt-3 font-display text-4xl leading-[1.05] sm:text-5xl">Answers go where the work is.</h2>
+              <p class="mt-5 text-lg text-ink-soft">Connect once, then forget about it. Every new response lands as a row, a contact, a card or a ping, with field mapping you can see.</p>
+            </div>
+            <a href="integrations.html" class="btn btn-mint">Browse all integrations</a>
+          </div>
+          <ul class="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6" data-integration-strip="slatebook pipewren quaychat tidepay mailcairn zipcrest"></ul>
+        </div>
+      </section>
+
+      <!-- Analytics (main.js: initAnalytics) -->
+      <section id="analytics" class="scroll-mt-36 grid-paper border-t-[2.5px] border-line bg-bg-2 py-16 sm:py-24" aria-labelledby="ana-title">
+        <div class="wrap grid gap-12 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-center">
+          <div>
+            <p class="eyebrow text-ink-soft">04 &middot; Analytics</p>
+            <h2 id="ana-title" class="mt-3 font-display text-4xl leading-[1.05] sm:text-5xl">Find the question that loses people.</h2>
+            <p class="mt-5 text-lg text-ink-soft">Views, starts and finishes for every form, plus drop-off by field. When one question loses a third of your audience, you'll see it the same day.</p>
+          </div>
+          <div class="card p-5 sm:p-6" data-analytics>
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <h3 class="font-extrabold">Spring open house RSVP</h3>
+              <div class="flex gap-2" role="group" aria-label="Date range">
+                <button type="button" class="btn btn-sm btn-plain aria-pressed:bg-peri! aria-pressed:text-coal" data-range="7" aria-pressed="false">7 days</button>
+                <button type="button" class="btn btn-sm btn-plain aria-pressed:bg-peri! aria-pressed:text-coal" data-range="30" aria-pressed="true">30 days</button>
+              </div>
+            </div>
+            <dl class="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">
+              <div class="rounded-lg border-2 border-line bg-bg p-3"><dt class="font-mono text-xs font-semibold text-ink-soft">Views</dt><dd class="font-display text-2xl" data-stat="views">4,812</dd></div>
+              <div class="rounded-lg border-2 border-line bg-bg p-3"><dt class="font-mono text-xs font-semibold text-ink-soft">Starts</dt><dd class="font-display text-2xl" data-stat="starts">2,966</dd></div>
+              <div class="rounded-lg border-2 border-line bg-bg p-3"><dt class="font-mono text-xs font-semibold text-ink-soft">Finishes</dt><dd class="font-display text-2xl" data-stat="finishes">2,288</dd></div>
+              <div class="rounded-lg border-2 border-line bg-mint p-3 text-coal"><dt class="font-mono text-xs font-semibold">Completion</dt><dd class="font-display text-2xl" data-stat="rate">77%</dd></div>
+            </dl>
+            <p class="mt-6 font-bold">Who reached each question</p>
+            <ol class="mt-3 grid gap-2" data-dropoff></ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Everything else -->
+      <section class="py-16 sm:py-24" aria-labelledby="more-title">
+        <div class="wrap">
+          <h2 id="more-title" class="font-display text-4xl leading-[1.05] sm:text-5xl">And the small stuff that matters.</h2>
+          <ul class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <li class="reveal card p-6"><svg viewBox="0 0 40 40" class="size-10" aria-hidden="true"><circle cx="20" cy="20" r="17" fill="#86e2b6" stroke="var(--color-line)" stroke-width="3"/><circle cx="20" cy="12" r="3" fill="#16130f"/><path d="M11 17h18M20 17v8l-5 8M20 25l5 8" stroke="#16130f" stroke-width="3" fill="none" stroke-linecap="round"/></svg><h3 class="mt-4 text-lg font-extrabold">Accessible by default</h3><p class="mt-2 text-ink-soft">Labels, focus order and error messages that screen readers announce. Contrast is checked before you publish.</p></li>
+            <li class="reveal card p-6"><svg viewBox="0 0 40 40" class="size-10" aria-hidden="true"><rect x="5" y="8" width="30" height="26" rx="4" fill="#ffd84a" stroke="var(--color-line)" stroke-width="3"/><path d="M20 28V15m-6 6 6-6 6 6" stroke="#16130f" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><h3 class="mt-4 text-lg font-extrabold">File uploads</h3><p class="mt-2 text-ink-soft">Résumés, photos and receipts up to 1 GB each, scanned for viruses and stored in the US.</p></li>
+            <li class="reveal card p-6"><svg viewBox="0 0 40 40" class="size-10" aria-hidden="true"><rect x="4" y="9" width="32" height="22" rx="4" fill="#a9b2ff" stroke="var(--color-line)" stroke-width="3"/><path d="M12 16l-4 4 4 4M28 16l4 4-4 4M22 14l-4 12" stroke="#16130f" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><h3 class="mt-4 text-lg font-extrabold">Embed anywhere</h3><p class="mt-2 text-ink-soft">Inline, full page, pop-up or slide-in, with one line of code or a plugin for your site builder.</p></li>
+            <li class="reveal card p-6"><svg viewBox="0 0 40 40" class="size-10" aria-hidden="true"><path d="M20 4l14 6v9c0 9-6 15-14 17-8-2-14-8-14-17v-9z" fill="#ff6b42" stroke="var(--color-line)" stroke-width="3" stroke-linejoin="round"/><path d="m14 20 4 4 8-8" stroke="#16130f" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><h3 class="mt-4 text-lg font-extrabold">Spam that stays out</h3><p class="mt-2 text-ink-soft">Invisible bot checks, rate limits and a honeypot on every form. No puzzles for real people.</p></li>
+            <li class="reveal card p-6"><svg viewBox="0 0 40 40" class="size-10" aria-hidden="true"><circle cx="20" cy="20" r="16" fill="#ffb4d0" stroke="var(--color-line)" stroke-width="3"/><path d="M20 11v9l6 4" stroke="#16130f" stroke-width="3" fill="none" stroke-linecap="round"/></svg><h3 class="mt-4 text-lg font-extrabold">Closing dates and limits</h3><p class="mt-2 text-ink-soft">Close a form at 100 sign-ups or at midnight, and show your own message when it's full.</p></li>
+            <li class="reveal card p-6"><svg viewBox="0 0 40 40" class="size-10" aria-hidden="true"><circle cx="14" cy="16" r="7" fill="#86e2b6" stroke="var(--color-line)" stroke-width="3"/><circle cx="27" cy="16" r="7" fill="#ffd84a" stroke="var(--color-line)" stroke-width="3"/><path d="M4 36c1-7 5-11 10-11s9 4 10 11M18 36c1-7 4-11 9-11s8 4 9 11" fill="none" stroke="var(--color-line)" stroke-width="3"/></svg><h3 class="mt-4 text-lg font-extrabold">Team workspaces</h3><p class="mt-2 text-ink-soft">Shared folders, roles, comments on responses and an audit log of who changed what.</p></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="pb-16 sm:pb-24" aria-labelledby="f-cta">
+        <div class="wrap">
+          <div class="card flex flex-col items-start justify-between gap-6 bg-mint! p-8 text-coal sm:flex-row sm:items-center sm:p-10">
+            <h2 id="f-cta" class="font-display text-3xl leading-tight sm:text-4xl">Try every feature free for 14 days.</h2>
+            <a href="signup.html?plan=team" class="btn btn-lg btn-tomato shrink-0">Start a Team trial</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-auto border-t-[2.5px] border-line bg-bg-2">
+      <div class="wrap grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div>
+          <a href="index.html" class="flex items-center gap-2.5" aria-label="Tessel home"><svg viewBox="0 0 40 40" class="size-10 shrink-0" aria-hidden="true"><rect x="5" y="5" width="33" height="33" rx="5" fill="var(--color-line)"/><rect x="2" y="2" width="33" height="33" rx="5" fill="var(--color-card)" stroke="var(--color-line)" stroke-width="2.5"/><path d="M2 18.5h33M18.5 2v33" stroke="var(--color-line)" stroke-width="2.5"/><path d="M4.6 4.6h12.6v12.6H4.6z" fill="#ff6b42"/><path d="M19.8 4.6h12.6v12.6H19.8z" fill="#ffd84a"/><path d="M4.6 19.8h12.6v12.6H4.6z" fill="#a9b2ff"/><path d="M19.8 19.8h12.6v12.6H19.8z" fill="#86e2b6"/><circle cx="26.1" cy="26.1" r="3.2" fill="#16130f"/></svg><span class="font-display text-2xl tracking-tight">tessel</span></a>
+          <p class="mt-4 max-w-xs text-ink-soft">Online forms and surveys that people actually finish. Built in Omaha, Nebraska, since 2019.</p>
+          <p class="mt-5 inline-flex items-center gap-2 rounded-full border-2 border-line bg-card px-3 py-1 font-mono text-sm font-semibold"><span class="size-2.5 rounded-full border-2 border-line bg-mint" aria-hidden="true"></span>All systems normal</p>
+        </div>
+        <div>
+          <h2 class="eyebrow text-ink-soft">Product</h2>
+          <ul class="mt-4 grid gap-2.5 font-semibold">
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="features.html">Features</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="templates.html">Templates</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="integrations.html">Integrations</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="pricing.html">Pricing</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="changelog.html">Changelog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="eyebrow text-ink-soft">Company</h2>
+          <ul class="mt-4 grid gap-2.5 font-semibold">
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="customers.html">Customers</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="contact.html">Talk to sales</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="signup.html">Start free</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="signup.html#signin">Sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="eyebrow text-ink-soft">Say hello</h2>
+          <address class="mt-4 grid gap-2.5 not-italic">
+            <span>1110 Harney Street, Suite 400<br>Omaha, NE 68102</span>
+            <a class="font-semibold hover:underline" href="tel:+14025550134">(402) 555-0134</a>
+            <a class="font-semibold hover:underline" href="mailto:hello@tessel.example">hello@tessel.example</a>
+          </address>
+        </div>
+      </div>
+      <div class="border-t-2 border-line">
+        <div class="wrap flex flex-col gap-2 py-5 text-sm text-ink-soft sm:flex-row sm:items-center sm:justify-between">
+          <p>&copy; <span data-year>2026</span> Tessel Forms, Inc. Tessel is a fictional company.</p>
+          <p class="font-mono">Made on the prairie, one field at a time.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

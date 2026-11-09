@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Services &amp; prices — Bloom Hair &amp; Spa</title>
+  <meta name="description" content="The full Bloom menu: cuts, color, balayage, nails, facials, lashes and massage, with durations and prices by stylist level.">
+  <meta name="theme-color" content="#faf6f2">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bloom Hair &amp; Spa">
+  <meta property="og:title" content="Services &amp; prices — Bloom Hair &amp; Spa">
+  <meta property="og:description" content="The full Bloom menu: cuts, color, balayage, nails, facials, lashes and massage, with durations and prices by stylist level.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&amp;family=Jost:wght@300..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="services" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm text-shell focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <header id="site-header" class="site-header">
+    <div class="container-x flex h-18 items-center justify-between gap-6">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Bloom Hair &amp; Spa, home">
+        <svg viewBox="0 0 32 32" class="h-9 w-9 text-plum" aria-hidden="true"><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(0 16 16)" opacity="0.55"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(72 16 16)" opacity="0.64"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(144 16 16)" opacity="0.73"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(216 16 16)" opacity="0.82"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(288 16 16)" opacity="0.91"/><circle cx="16" cy="16" r="3.4" fill="#faf6f2"/></svg>
+        <span class="font-display text-2xl tracking-tight">Bloom</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-8">
+            <li><a href="services.html" class="nav-link" aria-current="page">Services</a></li>
+            <li><a href="team.html" class="nav-link">Team</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="gift-cards.html" class="nav-link">Gift cards</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="book.html" class="btn-primary hidden sm:inline-flex">Book now</a>
+        <button id="menu-toggle" type="button" class="menu-toggle lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <svg data-icon-open viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="mobile-menu lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="services.html" class="mobile-link" aria-current="page">Services</a></li>
+          <li><a href="team.html" class="mobile-link">Team</a></li>
+          <li><a href="gallery.html" class="mobile-link">Gallery</a></li>
+          <li><a href="gift-cards.html" class="mobile-link">Gift cards</a></li>
+          <li><a href="about.html" class="mobile-link">About</a></li>
+          <li><a href="contact.html" class="mobile-link">Contact</a></li>
+        </ul>
+        <a href="book.html" class="btn-primary mt-8 w-full">Book an appointment</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="flex-1">
+    <section class="page-hero">
+      <div class="container-x reveal max-w-3xl text-center">
+        <p class="eyebrow">Services &amp; prices</p>
+        <h1 class="mt-4 font-display text-[clamp(2.5rem,5vw,4.25rem)] leading-[1.05] tracking-tight">The Bloom menu</h1>
+        <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-mute">Every appointment starts with a proper consultation. Prices for hair and color depend on your stylist's level; nails, skin and massage are the same with everyone.</p>
+      </div>
+    </section>
+
+    <section class="container-x pb-20">
+      <div data-services>
+        <div class="sticky-filter"><div class="flex flex-wrap gap-2" role="group" aria-label="Filter treatments"><button type="button" class="chip" data-filter="all" aria-pressed="true">All</button><button type="button" class="chip" data-filter="hair" aria-pressed="false">Hair</button><button type="button" class="chip" data-filter="colour" aria-pressed="false">Color</button><button type="button" class="chip" data-filter="nails" aria-pressed="false">Nails</button><button type="button" class="chip" data-filter="skin" aria-pressed="false">Skin</button><button type="button" class="chip" data-filter="massage" aria-pressed="false">Massage</button></div><p class="text-sm text-mute" aria-live="polite" data-services-count>22 treatments</p></div>
+        <div class="mt-10 space-y-14"><section class="service-group reveal" data-service-group="hair" aria-labelledby="cat-hair"><div class="service-group-head"><span class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-blush text-plum"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4c4 0 6 3 6 8M6 20a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zm12 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5zM8 15.6 16.5 4M16 15.6 7.5 4"/></svg></span><div><h2 id="cat-hair" class="font-display text-3xl">Hair</h2><p class="mt-1 text-sm text-mute">Precision cuts and soft, lived-in shapes, finished with a blowout.</p></div></div><ul class="divide-y divide-line"><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Signature cut & finish</h3><p class="mt-1 text-sm leading-relaxed text-mute">Consultation, wash with scalp massage, precision cut and a lasting blowout.</p></div><div class="service-meta"><span class="text-sm text-mute">1 hr</span><span class="font-medium">from $85</span><a href="book.html?service=signature-cut" class="link-arrow text-sm">Book<span class="sr-only"> Signature cut & finish</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Restyle consultation & cut</h3><p class="mt-1 text-sm leading-relaxed text-mute">For a big change: a longer consultation, a new shape and styling lesson.</p></div><div class="service-meta"><span class="text-sm text-mute">1 hr 15 min</span><span class="font-medium">from $110</span><a href="book.html?service=restyle" class="link-arrow text-sm">Book<span class="sr-only"> Restyle consultation & cut</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Blowout & style</h3><p class="mt-1 text-sm leading-relaxed text-mute">Smooth, bouncy or undone waves that hold for days.</p></div><div class="service-meta"><span class="text-sm text-mute">45 min</span><span class="font-medium">from $55</span><a href="book.html?service=blow-dry" class="link-arrow text-sm">Book<span class="sr-only"> Blowout & style</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Short cut & clipper work</h3><p class="mt-1 text-sm leading-relaxed text-mute">Crops, fades and cleanups, finished with a styling product.</p></div><div class="service-meta"><span class="text-sm text-mute">30 min</span><span class="font-medium">from $45</span><a href="book.html?service=short-cut" class="link-arrow text-sm">Book<span class="sr-only"> Short cut & clipper work</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Bridal & event styling</h3><p class="mt-1 text-sm leading-relaxed text-mute">Updos and soft waves for weddings and occasions, with a trial on request.</p></div><div class="service-meta"><span class="text-sm text-mute">1 hr 30 min</span><span class="font-medium">from $175</span><a href="book.html?service=event-styling" class="link-arrow text-sm">Book<span class="sr-only"> Bridal & event styling</span></a></div></li></ul></section><section class="service-group reveal" data-service-group="colour" aria-labelledby="cat-colour"><div class="service-group-head"><span class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-blush text-plum"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3s6 6.4 6 11a6 6 0 0 1-12 0c0-4.6 6-11 6-11z"/><path d="M9 14.5a3 3 0 0 0 3 3"/></svg></span><div><h2 id="cat-colour" class="font-display text-3xl">Color</h2><p class="mt-1 text-sm text-mute">Hand-painted balayage, glossing and gray blending with low-ammonia color.</p></div></div><ul class="divide-y divide-line"><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Balayage</h3><p class="mt-1 text-sm leading-relaxed text-mute">Hand-painted, sun-kissed brightness that grows out softly. Includes gloss and blowout.</p></div><div class="service-meta"><span class="text-sm text-mute">3 hr</span><span class="font-medium">from $260</span><a href="book.html?service=balayage" class="link-arrow text-sm">Book<span class="sr-only"> Balayage</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Full color</h3><p class="mt-1 text-sm leading-relaxed text-mute">All-over tint from root to tip, with a bond-building treatment.</p></div><div class="service-meta"><span class="text-sm text-mute">1 hr 45 min</span><span class="font-medium">from $145</span><a href="book.html?service=full-colour" class="link-arrow text-sm">Book<span class="sr-only"> Full color</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Root touch-up</h3><p class="mt-1 text-sm leading-relaxed text-mute">Regrowth and gray coverage up to 1 inch.</p></div><div class="service-meta"><span class="text-sm text-mute">1 hr 15 min</span><span class="font-medium">from $95</span><a href="book.html?service=root-touch-up" class="link-arrow text-sm">Book<span class="sr-only"> Root touch-up</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Partial highlights</h3><p class="mt-1 text-sm leading-relaxed text-mute">Foil highlights through the top and sides for brightness around the face.</p></div><div class="service-meta"><span class="text-sm text-mute">2 hr</span><span class="font-medium">from $165</span><a href="book.html?service=half-highlights" class="link-arrow text-sm">Book<span class="sr-only"> Partial highlights</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Gloss & tone</h3><p class="mt-1 text-sm leading-relaxed text-mute">Refreshes faded color and adds mirror shine between appointments.</p></div><div class="service-meta"><span class="text-sm text-mute">45 min</span><span class="font-medium">from $65</span><a href="book.html?service=gloss" class="link-arrow text-sm">Book<span class="sr-only"> Gloss & tone</span></a></div></li></ul></section><section class="service-group reveal" data-service-group="nails" aria-labelledby="cat-nails"><div class="service-group-head"><span class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-blush text-plum"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 21h6M10 21V11h4v10M9.5 11 11 3h2l1.5 8"/></svg></span><div><h2 id="cat-nails" class="font-display text-3xl">Nails</h2><p class="mt-1 text-sm text-mute">Unhurried manicures and pedicures with vegan, 10-free polishes.</p></div></div><ul class="divide-y divide-line"><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Gel manicure</h3><p class="mt-1 text-sm leading-relaxed text-mute">Shape, cuticle care and a chip-free gel finish that lasts two weeks.</p></div><div class="service-meta"><span class="text-sm text-mute">50 min</span><span class="font-medium">$50</span><a href="book.html?service=gel-manicure" class="link-arrow text-sm">Book<span class="sr-only"> Gel manicure</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Classic manicure</h3><p class="mt-1 text-sm leading-relaxed text-mute">Shape, buff, hand massage and your choice of polish.</p></div><div class="service-meta"><span class="text-sm text-mute">40 min</span><span class="font-medium">$35</span><a href="book.html?service=classic-manicure" class="link-arrow text-sm">Book<span class="sr-only"> Classic manicure</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Spa pedicure</h3><p class="mt-1 text-sm leading-relaxed text-mute">Warm soak, exfoliation, callus care, massage and polish.</p></div><div class="service-meta"><span class="text-sm text-mute">55 min</span><span class="font-medium">$65</span><a href="book.html?service=spa-pedicure" class="link-arrow text-sm">Book<span class="sr-only"> Spa pedicure</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Nail art (add-on)</h3><p class="mt-1 text-sm leading-relaxed text-mute">Minimal lines, dots or chrome accents on up to four nails.</p></div><div class="service-meta"><span class="text-sm text-mute">15 min</span><span class="font-medium">$15</span><a href="book.html?service=nail-art" class="link-arrow text-sm">Book<span class="sr-only"> Nail art (add-on)</span></a></div></li></ul></section><section class="service-group reveal" data-service-group="skin" aria-labelledby="cat-skin"><div class="service-group-head"><span class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-blush text-plum"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c-5-3-8-7-8-11 3-1 6 0 8 3 2-3 5-4 8-3 0 4-3 8-8 11z"/><path d="M12 13v8"/></svg></span><div><h2 id="cat-skin" class="font-display text-3xl">Skin</h2><p class="mt-1 text-sm text-mute">Facials, brows and lashes using plant-based actives.</p></div></div><ul class="divide-y divide-line"><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Bloom signature facial</h3><p class="mt-1 text-sm leading-relaxed text-mute">Double cleanse, enzyme peel, extractions, sculpting massage and mask.</p></div><div class="service-meta"><span class="text-sm text-mute">1 hr</span><span class="font-medium">$130</span><a href="book.html?service=signature-facial" class="link-arrow text-sm">Book<span class="sr-only"> Bloom signature facial</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Hydrating facial</h3><p class="mt-1 text-sm leading-relaxed text-mute">A plumping hyaluronic treatment for tired or dehydrated skin.</p></div><div class="service-meta"><span class="text-sm text-mute">45 min</span><span class="font-medium">$100</span><a href="book.html?service=hydrating-facial" class="link-arrow text-sm">Book<span class="sr-only"> Hydrating facial</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Brow shape & tint</h3><p class="mt-1 text-sm leading-relaxed text-mute">Mapping, wax and tint for full, natural-looking brows.</p></div><div class="service-meta"><span class="text-sm text-mute">30 min</span><span class="font-medium">$40</span><a href="book.html?service=brow-tint" class="link-arrow text-sm">Book<span class="sr-only"> Brow shape & tint</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Lash lift & tint</h3><p class="mt-1 text-sm leading-relaxed text-mute">Lifted, darker lashes for six to eight weeks, no extensions needed.</p></div><div class="service-meta"><span class="text-sm text-mute">50 min</span><span class="font-medium">$85</span><a href="book.html?service=lash-lift" class="link-arrow text-sm">Book<span class="sr-only"> Lash lift & tint</span></a></div></li></ul></section><section class="service-group reveal" data-service-group="massage" aria-labelledby="cat-massage"><div class="service-group-head"><span class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-blush text-plum"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="17" rx="8" ry="3"/><ellipse cx="12" cy="11" rx="6" ry="2.5"/><ellipse cx="12" cy="6" rx="4" ry="2"/></svg></span><div><h2 id="cat-massage" class="font-display text-3xl">Massage</h2><p class="mt-1 text-sm text-mute">Deep, restorative bodywork in our candlelit treatment rooms.</p></div></div><ul class="divide-y divide-line"><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Swedish massage, 60 min</h3><p class="mt-1 text-sm leading-relaxed text-mute">Flowing full-body massage with warm oils to release tension.</p></div><div class="service-meta"><span class="text-sm text-mute">1 hr</span><span class="font-medium">$110</span><a href="book.html?service=swedish-60" class="link-arrow text-sm">Book<span class="sr-only"> Swedish massage, 60 min</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Swedish massage, 90 min</h3><p class="mt-1 text-sm leading-relaxed text-mute">The full-body ritual with extra time for back, neck and scalp.</p></div><div class="service-meta"><span class="text-sm text-mute">1 hr 30 min</span><span class="font-medium">$155</span><a href="book.html?service=swedish-90" class="link-arrow text-sm">Book<span class="sr-only"> Swedish massage, 90 min</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Hot stone massage</h3><p class="mt-1 text-sm leading-relaxed text-mute">Heated basalt stones melt deep muscle tension.</p></div><div class="service-meta"><span class="text-sm text-mute">1 hr 15 min</span><span class="font-medium">$140</span><a href="book.html?service=hot-stone" class="link-arrow text-sm">Book<span class="sr-only"> Hot stone massage</span></a></div></li><li class="service-row"><div class="min-w-0"><h3 class="font-display text-xl">Scalp, neck & shoulder</h3><p class="mt-1 text-sm leading-relaxed text-mute">A quick reset for desk-bound shoulders. Easy to add to any visit.</p></div><div class="service-meta"><span class="text-sm text-mute">30 min</span><span class="font-medium">$55</span><a href="book.html?service=scalp-shoulder" class="link-arrow text-sm">Book<span class="sr-only"> Scalp, neck & shoulder</span></a></div></li></ul></section></div>
+      </div>
+    </section>
+
+    <section class="bg-cream py-20" aria-labelledby="levels-title">
+      <div class="container-x grid gap-10 lg:grid-cols-[1fr_1.4fr]">
+        <div class="reveal">
+          <p class="eyebrow">Pricing by level</p>
+          <h2 id="levels-title" class="section-title mt-3">Why prices vary for hair &amp; color</h2>
+          <p class="mt-5 leading-relaxed text-mute">Our stylists progress through three levels as their experience grows. Hair and color prices above are for a Stylist; Seniors and Directors charge a little more for their time. <a href="team.html" class="text-link">See who's who</a>.</p>
+        </div>
+        <div class="reveal relative overflow-x-auto">
+          <table class="w-full min-w-[30rem] text-sm">
+            <caption class="sr-only">Price difference by stylist level</caption>
+            <thead><tr class="border-b border-line text-left text-xs uppercase tracking-[0.16em] text-mute"><th scope="col" class="pb-3 font-medium">Level</th><th scope="col" class="pb-3 font-medium">Experience</th><th scope="col" class="pb-3 text-right font-medium">Hair &amp; color</th></tr></thead>
+            <tbody class="divide-y divide-line">
+            <tr><th scope="row" class="py-3 pr-4 text-left font-medium">Stylist</th><td class="py-3 pr-4 text-mute">Fully licensed, at least two years on the floor.</td><td class="py-3 text-right">standard price</td></tr>
+            <tr><th scope="row" class="py-3 pr-4 text-left font-medium">Senior</th><td class="py-3 pr-4 text-mute">Five years or more, with advanced color or cutting training.</td><td class="py-3 text-right">+20%</td></tr>
+            <tr><th scope="row" class="py-3 pr-4 text-left font-medium">Director</th><td class="py-3 pr-4 text-mute">Our most experienced artists, who also train the team.</td><td class="py-3 text-right">+40%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20" aria-labelledby="policy-title">
+      <div class="container-x grid gap-6 md:grid-cols-3">
+        <h2 id="policy-title" class="sr-only">Good to know</h2>
+        <div class="card reveal p-7"><h3 class="font-display text-xl">Patch tests</h3><p class="mt-2 text-sm leading-relaxed text-mute">New color clients need a quick skin test 48 hours before. Stop by any time we're open; it takes five minutes.</p></div>
+        <div class="card reveal p-7"><h3 class="font-display text-xl">Changes &amp; cancellations</h3><p class="mt-2 text-sm leading-relaxed text-mute">Move or cancel free of charge up to 24 hours before. Later changes may incur a 50% fee.</p></div>
+        <div class="card reveal p-7"><h3 class="font-display text-xl">Running late?</h3><p class="mt-2 text-sm leading-relaxed text-mute">Call us and we'll do our best. After 15 minutes we may need to shorten or rebook your treatment.</p></div>
+      </div>
+    </section>
+  </main>
+  <footer class="mt-auto bg-ink text-shell">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.4fr]">
+      <div>
+        <a href="index.html" class="flex items-center gap-2.5" aria-label="Bloom Hair &amp; Spa, home">
+          <svg viewBox="0 0 32 32" class="h-9 w-9 text-blush" aria-hidden="true"><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(0 16 16)" opacity="0.55"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(72 16 16)" opacity="0.64"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(144 16 16)" opacity="0.73"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(216 16 16)" opacity="0.82"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(288 16 16)" opacity="0.91"/><circle cx="16" cy="16" r="3.4" fill="#2a2127"/></svg>
+          <span class="font-display text-2xl">Bloom</span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-shell/75">An independent hair, nail and skin salon on Burns Court, Sarasota. Unhurried appointments since 2016.</p>
+        <p class="mt-5 text-sm"><span class="open-badge" data-open-now><span class="open-dot" aria-hidden="true"></span><span data-open-text>Tue–Sun · see hours</span></span></p>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="services.html" class="footer-link">Services &amp; prices</a></li>
+          <li><a href="team.html" class="footer-link">Our team</a></li>
+          <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+          <li><a href="gift-cards.html" class="footer-link">Gift cards</a></li>
+          <li><a href="about.html" class="footer-link">About Bloom</a></li>
+          <li><a href="book.html" class="footer-link">Book online</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer-heading">Visit</h2>
+        <address class="mt-4 space-y-2.5 text-sm not-italic text-shell/80">
+          <p>48 Burns Court<br>Sarasota, FL 34236</p>
+          <p><a href="tel:+19415550173" class="footer-link">(941) 555-0173</a></p>
+          <p><a href="mailto:hello@bloomhairspa.example" class="footer-link">hello@bloomhairspa.example</a></p>
+          <p><a href="contact.html" class="footer-link">Hours &amp; directions</a></p>
+        </address>
+      </div>
+      <div>
+        <h2 class="footer-heading">Notes from the salon</h2>
+        <p class="mt-4 text-sm text-shell/75">Seasonal offers and new-season color, about once a month. No spam, ever.</p>
+        <form class="mt-5" data-newsletter novalidate>
+          <label for="n-email" class="sr-only">Email address</label>
+          <div class="flex gap-2"><input id="n-email" name="email" type="email" placeholder="you@example.com" class="field-dark min-w-0 flex-1" autocomplete="email" required aria-describedby="n-email-error"><button type="submit" class="btn-light shrink-0">Sign up</button></div>
+          <p id="n-email-error" class="field-error on-dark" data-error="email"></p>
+          <p class="mt-2 text-sm text-blush" data-newsletter-success hidden>Thank you! Look out for a confirmation email; once you click the link, you're on the list for Notes from the salon.</p>
+        </form>
+      </div>
+    </div>
+    <div class="border-t border-shell/15">
+      <div class="container-x flex flex-col gap-3 py-6 text-xs text-shell/70 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Bloom Hair &amp; Spa. A fictional salon from a free Freeframe template.</p>
+        <ul class="flex gap-5">
+          <li><a href="#" class="footer-link">Instagram</a></li>
+          <li><a href="#" class="footer-link">Pinterest</a></li>
+          <li><a href="#" class="footer-link">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

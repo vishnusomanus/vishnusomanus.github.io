@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+<rect width="1200" height="630" fill="#f1f6f8"/>
+<circle cx="1120" cy="-20" r="260" fill="#dcf0f1"/>
+<circle cx="60" cy="640" r="150" fill="none" stroke="#ffc531" stroke-opacity=".35" stroke-width="40"/>
+<g transform="translate(64 60)"><rect width="64" height="64" rx="20" fill="#0b4f6c"/><circle cx="50.7" cy="13.3" r="5.3" fill="#ffc531"/><path d="M17.3 58.7C17.3 40 46.7 40 46.7 21.3V5.3" fill="none" stroke="#ffc531" stroke-width="12" stroke-linecap="round"/><path d="M17.3 56C17.3 40 46.7 40 46.7 21.3V8" fill="none" stroke="#0b4f6c" stroke-width="2.4" stroke-dasharray="4.3 4.8"/></g>
+<text x="146" y="100" font-family="Readex Pro, sans-serif" font-size="38" font-weight="700" fill="#0b4f6c">Brayline</text>
+<text x="148" y="122" font-family="Inclusive Sans, sans-serif" font-size="15" font-weight="600" letter-spacing="3.5" fill="#48606f">DRIVING SCHOOL · EAU CLAIRE</text>
+<text x="64" y="250" font-family="Readex Pro, sans-serif" font-size="64" font-weight="700" letter-spacing="-2" fill="#0b4f6c">Calm lessons.</text>
+<text x="64" y="324" font-family="Readex Pro, sans-serif" font-size="64" font-weight="700" letter-spacing="-2" fill="#0b4f6c">Confident drivers.</text>
+<path d="M68 352C180 342 360 342 520 348" fill="none" stroke="#ffc531" stroke-width="10" stroke-linecap="round" stroke-dasharray="46 20"/>
+<text x="64" y="420" font-family="Inclusive Sans, sans-serif" font-size="24" fill="#48606f">Automatic and manual lessons around Eau Claire, WI,</text>
+<text x="64" y="454" font-family="Inclusive Sans, sans-serif" font-size="24" fill="#48606f">with six licensed instructors.</text>
+<g transform="translate(64 510)"><rect width="250" height="60" rx="30" fill="#ffc531"/><text x="125" y="39" text-anchor="middle" font-family="Readex Pro, sans-serif" font-size="23" font-weight="600" fill="#0d2230">Book a lesson</text></g>
+<g transform="translate(334 510)"><rect width="262" height="60" rx="30" fill="#0b4f6c"/><text x="131" y="39" text-anchor="middle" font-family="Readex Pro, sans-serif" font-size="23" font-weight="600" fill="#fff">68% pass first time</text></g>
+<g transform="translate(704 150) scale(.82)"><rect x="-12" y="-12" width="584" height="404" rx="40" fill="#fff"/><clipPath id="c"><rect width="560" height="300" rx="30"/></clipPath><g clip-path="url(#c)"><rect width="560" height="300" fill="#dcf0f1"/><g>
+              
+              <path d="M0 150C90 120 160 128 240 108S420 70 560 96V300H0Z" fill="#b8e0e3"/>
+              <g fill="#0c6e78" opacity=".28">
+                <path d="M286 104V78h20v26Z"/><path d="M309 104V50h22v54Z"/><path d="M334 104V70h18v34Z"/><path d="M355 104V60h16v44Z"/>
+              </g>
+              <path d="M0 196C120 170 210 180 300 168S470 150 560 160V300H0Z" fill="#8fcbb3"/>
+              <g fill="#17734a" opacity=".55"><circle cx="64" cy="186" r="16"/><circle cx="86" cy="180" r="12"/><circle cx="492" cy="160" r="15"/><circle cx="514" cy="166" r="11"/></g>
+              <path d="M-10 270C100 250 170 246 230 236" fill="none" stroke="#48606f" stroke-width="38"/>
+              <path d="M370 226C440 214 500 196 570 200" fill="none" stroke="#48606f" stroke-width="38"/>
+              <path d="M300 300V262" fill="none" stroke="#48606f" stroke-width="38"/>
+              <ellipse cx="300" cy="236" rx="96" ry="44" fill="none" stroke="#48606f" stroke-width="36"/>
+              <ellipse cx="300" cy="236" rx="96" ry="44" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="10 9" opacity=".8"/>
+              <ellipse cx="300" cy="236" rx="74" ry="28" fill="#5fae86"/>
+              <ellipse cx="300" cy="236" rx="40" ry="14" fill="#ffc531"/>
+              <path d="M-10 270C100 250 170 246 230 236M370 226C440 214 500 196 570 200" fill="none" stroke="#ffc531" stroke-width="2" stroke-dasharray="14 12" opacity=".8"/>
+              <g transform="translate(372 196) rotate(-12)">
+                <rect x="-46" y="-20" width="92" height="34" rx="14" fill="#0b4f6c"/>
+                <path d="M-26-20-16-38h30l12 18Z" fill="#0b4f6c"/>
+                <path d="M-20-22-13-34h11v12Zm22 0v-12h10l8 12Z" fill="#dcf0f1"/>
+                <rect x="-24" y="-14" width="48" height="13" rx="2" fill="#fff"/><text x="0" y="-4.4" text-anchor="middle" font-family="Readex Pro, sans-serif" font-size="9.5" font-weight="700" fill="#b42318">STUDENT</text>
+                <rect x="38" y="-12" width="8" height="6" rx="2" fill="#ffc531"/>
+                <circle cx="-26" cy="14" r="10" fill="#062536"/><circle cx="-26" cy="14" r="4" fill="#b7cdd7"/>
+                <circle cx="26" cy="14" r="10" fill="#062536"/><circle cx="26" cy="14" r="4" fill="#b7cdd7"/>
+              </g>
+              <g transform="translate(468 126)">
+                <rect x="-3" y="10" width="6" height="56" rx="3" fill="#48606f"/>
+                <rect x="-34" y="-20" width="68" height="36" rx="12" fill="#0b4f6c"/>
+                <path d="M-14 -2h22m-8-9 9 9-9 9" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <circle cx="80" cy="70" r="24" fill="#ffc531"/>
+            </g></g><circle cx="28" cy="342" r="7" fill="none" stroke="#ffc531" stroke-width="4"/><text x="46" y="348" font-family="Readex Pro, sans-serif" font-size="17" font-weight="600" letter-spacing="2" fill="#0c6e78">LESSONS MON–SAT, 7AM–8PM</text></g>
+</svg>

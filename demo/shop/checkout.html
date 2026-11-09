@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Checkout — Lumen Goods</title>
+<meta name="description" content="Send a Lumen Goods order to your address." />
+<style>:focus-visible { outline: 2px solid #5c1a3a; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }</style>
+</head>
+<body class="bg-[#fff7f2] text-[#2a1420] font-sans antialiased">
+<header class="sticky top-0 z-30 border-b border-[#ead9cf] bg-[#fff7f2]/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-2xl">Lumen Goods</a>
+    <div class="flex items-center gap-3">
+      <a href="bag.html" class="rounded-full bg-[#5c1a3a] px-4 py-2 text-sm text-[#fff6ef]">Bag <span data-bag-count class="ml-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-[#f0c9a0] px-1 text-xs text-[#5c1a3a]">0</span></a>
+      <button id="menuBtn" class="rounded-full border border-[#ead9cf] px-3 py-1 text-sm md:hidden" aria-expanded="false">Menu</button>
+    </div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t border-[#ead9cf] pt-3 text-sm md:flex md:basis-auto md:flex-row md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html">Shop</a><a href="about.html">About</a><a href="shipping.html">Shipping</a><a href="bag.html">Bag</a></nav>
+  </div>
+</header>
+<main class="mx-auto grid max-w-6xl gap-10 px-5 py-12 sm:px-8 lg:grid-cols-2">
+  <div>
+    <h1 class="font-display text-5xl">Checkout</h1>
+    <p id="checkoutEmpty" hidden class="mt-4">Your bag is empty. <a class="underline underline-offset-4" href="index.html">Return to the shop</a>.</p>
+    <ul id="checkoutLines" class="mt-6"></ul>
+    <div id="checkoutSummary" class="mt-4"></div>
+  </div>
+  <form id="checkoutForm" class="space-y-4 rounded-3xl bg-white p-6 ring-1 ring-[#ead9cf]">
+    <h2 class="font-display text-3xl">Where it should go</h2>
+    <label class="block text-sm">Full name<input required name="name" class="mt-1 w-full rounded-xl border border-[#ead9cf] px-3 py-3" /></label>
+    <label class="block text-sm">Email<input required type="email" name="email" class="mt-1 w-full rounded-xl border border-[#ead9cf] px-3 py-3" /></label>
+    <label class="block text-sm">Street<input required name="street" class="mt-1 w-full rounded-xl border border-[#ead9cf] px-3 py-3" /></label>
+    <div class="grid grid-cols-2 gap-3">
+      <label class="block text-sm">City<input required name="city" class="mt-1 w-full rounded-xl border border-[#ead9cf] px-3 py-3" /></label>
+      <label class="block text-sm">Postcode<input required name="postcode" class="mt-1 w-full rounded-xl border border-[#ead9cf] px-3 py-3" /></label>
+    </div>
+    <button class="w-full rounded-full bg-[#5c1a3a] py-3 text-sm text-[#fff6ef]">Place order</button>
+    <p class="text-xs text-[#7a5564]">We pack the order in Hudson and email the receipt to the address above.</p>
+  </form>
+</main>
+<footer class="border-t border-[#ead9cf]">
+  <div class="mx-auto grid max-w-6xl gap-6 px-5 py-10 text-sm text-[#7a5564] sm:px-8 md:grid-cols-3">
+    <div><p class="font-display text-2xl text-[#2a1420]">Lumen Goods</p><p class="mt-2">18 Calder Street<br />Hudson, New York 12534</p></div>
+    <div><p>Open Thursday to Sunday, 11:00–17:00. The online desk ships Monday to Wednesday.</p><p class="mt-2"><span class="underline underline-offset-4" >hello@lumengoods.com</span></p></div>
+    <div class="space-y-1"><a href="shipping.html">Shipping and returns</a><br /><a href="about.html">The shop</a><br /><a href="bag.html">Your bag</a></div>
+  </div>
+</footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+<script src="shop.js"></script>
+
+</body>
+</html>

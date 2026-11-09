@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bicycle repairs & labor prices — Cogmere Bicycle Workshop</title>
+    <meta
+      name="description"
+      content="Explore sixteen bicycle repair services, filter by repair area and compare labor, parts allowances and workshop times at Cogmere in Chico."
+    />
+    <meta name="theme-color" content="#1747d1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Cogmere Bicycle Workshop" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Bicycle repairs & labor prices — Cogmere Bicycle Workshop" />
+    <meta
+      property="og:description"
+      content="Explore sixteen bicycle repair services, filter by repair area and compare labor, parts allowances and workshop times at Cogmere in Chico."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@500;600;700;900&amp;family=Spline+Sans:wght@400..700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body data-page="services" class="flex min-h-screen flex-col">
+    <a class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 z-50 bg-acid p-3 font-bold" href="#main"
+      >Skip to content</a
+    >
+    <header class="border-b border-ink bg-paper">
+      <div class="bg-ink text-white">
+        <div class="wrap flex min-h-9 items-center justify-between gap-3 text-xs">
+          <p>Independent bicycle workshop · Chico</p>
+          <a class="hidden sm:inline underline underline-offset-4" href="tel:+15305550174">(530) 555-0174</a>
+          <p>Tue–Sat / 9am–5:30pm</p>
+        </div>
+      </div>
+      <div class="wrap flex min-h-24 items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center gap-3"
+          ><svg viewBox="0 0 40 40" class="size-10" aria-hidden="true">
+            <rect width="40" height="40" fill="#1747d1" />
+            <path d="M32 10H12v20h20v-7h-6v2h-7V16h7v2h6Z" fill="#e8f65b" /></svg
+          ><span class="font-display text-3xl font-black tracking-tight"
+            >COGMERE<span class="block text-[9px] font-medium tracking-[.2em]">BICYCLE WORKSHOP</span></span
+          ></a
+        >
+        <nav aria-label="Main" class="hidden lg:block">
+          <ul class="flex gap-1">
+            <li><a class="nav-link" href="services.html" aria-current="page">Repairs</a></li>
+            <li><a class="nav-link" href="estimate.html">Estimate</a></li>
+            <li><a class="nav-link" href="workshop.html">Workshop</a></li>
+            <li><a class="nav-link" href="journal.html">Ride notes</a></li>
+            <li><a class="nav-link" href="visit.html">Visit</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a class="btn btn-small hidden sm:inline-flex" href="book.html"
+            >Find a repair slot
+            <svg
+              viewBox="0 0 24 24"
+              class="size-5 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M4 12h16m-7-7 7 7-7 7" /></svg></a
+          ><button
+            class="border border-ink p-3 lg:hidden"
+            id="menu-toggle"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              class="size-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" aria-label="Mobile" class="wrap pb-6 lg:hidden" hidden>
+        <ul class="grid grid-cols-2 gap-2">
+          <li><a class="nav-link" href="services.html" aria-current="page">Repairs</a></li>
+          <li><a class="nav-link" href="estimate.html">Estimate</a></li>
+          <li><a class="nav-link" href="workshop.html">Workshop</a></li>
+          <li><a class="nav-link" href="journal.html">Ride notes</a></li>
+          <li><a class="nav-link" href="visit.html">Visit</a></li>
+        </ul>
+        <a class="btn mt-4 w-full" href="book.html">Find a repair slot</a>
+      </nav>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="border-b border-ink bg-mist">
+        <div class="wrap grid items-center gap-8 py-10 md:grid-cols-[1.2fr_1fr] md:py-14">
+          <div>
+            <p class="eyebrow text-blue">Repairs &amp; prices</p>
+            <h1 class="mt-5 text-[clamp(2.5rem,5.4vw,4.75rem)] font-black leading-[1.02] tracking-tight">
+              A repair for<br />the ride ahead.
+            </h1>
+            <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+              From a fresh inner tube to a complete teardown. Start with the symptom, check the price and build a plan
+              that fits your bike.
+            </p>
+          </div>
+          <img src="assets/img/tool-wall.svg" alt="" class="block w-full border border-ink" width="560" height="420" />
+        </div>
+      </section>
+      <section class="wrap py-12" aria-labelledby="board-title">
+        <h2 id="board-title" class="mb-6 text-3xl font-bold tracking-tight">The repair board</h2>
+        <div class="grid gap-6 border-b border-line pb-8 md:grid-cols-[1fr_1.4fr]">
+          <div>
+            <label for="repair-search" class="label">Find a repair or symptom</label
+            ><input
+              class="field"
+              id="repair-search"
+              type="search"
+              placeholder="Try flat, squeal or creak"
+              data-service-search
+            />
+          </div>
+          <div>
+            <p class="label" id="category-label">Repair area</p>
+            <div data-service-filters class="flex flex-wrap gap-2" role="group" aria-labelledby="category-label"></div>
+          </div>
+        </div>
+        <div class="mt-7 flex flex-wrap items-center justify-between gap-4">
+          <p data-service-count role="status" aria-live="polite" class="text-sm text-muted"></p>
+          <div class="flex items-center gap-3">
+            <label class="text-sm font-semibold" for="repair-sort">Sort by</label
+            ><select id="repair-sort" class="field w-auto" data-service-sort>
+              <option value="recommended">Workshop order</option>
+              <option value="price">Labor price</option>
+              <option value="time">Bench time</option>
+            </select>
+          </div>
+        </div>
+        <div data-service-grid class="mt-7 grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4"></div>
+        <div data-service-empty class="border border-line bg-mist p-10 text-center" hidden>
+          <h2 class="text-2xl font-bold">Nothing on this part of the board.</h2>
+          <p class="mt-3 text-muted">Try a shorter search or choose all repair areas.</p>
+          <button data-reset-filters class="btn mt-5">Reset repairs</button>
+        </div>
+      </section>
+      <section class="border-t border-line bg-mist py-12">
+        <div class="wrap grid gap-7 md:grid-cols-2">
+          <h2 class="text-3xl font-bold">What does the price include?</h2>
+          <div class="space-y-4 text-muted">
+            <p>
+              Labor prices include inspection of the part being worked on, installation or adjustment and a short test ride
+              where appropriate. Prices shown don't include sales tax.
+            </p>
+            <p>
+              Parts allowances are estimates for everyday components. We confirm compatibility and the exact parts price
+              before work starts. Specialty, electronic and proprietary systems may need a referral.
+            </p>
+            <a href="estimate.html" class="text-link text-ink inline-block">Put your jobs together</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-auto bg-ink py-12 text-white">
+      <div class="wrap grid gap-9 md:grid-cols-[1.2fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="font-display text-4xl font-black">COGMERE /</a>
+          <p class="mt-4 max-w-xs text-sm leading-relaxed text-white/80">
+            Good bikes deserve another mile.<br />Independent repairs, clear prices and a properly explained handoff.
+          </p>
+        </div>
+        <div>
+          <h2 class="eyebrow text-acid">Find the workshop</h2>
+          <p class="mt-4 text-sm leading-relaxed">
+            Shop 7, Flume Street Yard<br />Chico, CA 95928<br />Tuesday–Saturday, 9am–5:30pm
+          </p>
+          <a href="visit.html" class="mt-4 inline-block text-link">Plan your visit</a>
+        </div>
+        <div>
+          <h2 class="eyebrow text-acid">Keep rolling</h2>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a class="underline underline-offset-4" href="prep.html">Your pre-ride checklist</a></li>
+            <li><a class="underline underline-offset-4" href="journal.html">Workshop ride notes</a></li>
+            <li>
+              <a class="underline underline-offset-4" href="mailto:hello@cogmere.example">hello@cogmere.example</a>
+            </li>
+            <li><a class="underline underline-offset-4" href="tel:+15305550174">(530) 555-0174</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap mt-10 flex flex-wrap justify-between gap-3 border-t border-white/25 pt-5 text-xs text-white/70">
+        <p>© <span data-year></span> Cogmere Bicycle Workshop.</p>
+        <p>Cogmere is a fictional business.</p>
+      </div>
+    </footer>
+    <p
+      id="notice"
+      role="status"
+      aria-live="polite"
+      class="fixed bottom-5 right-5 left-5 z-40 mx-auto max-w-xl border border-ink bg-acid px-5 py-4 text-sm font-semibold shadow-lg"
+      hidden
+    ></p>
+  </body>
+</html>

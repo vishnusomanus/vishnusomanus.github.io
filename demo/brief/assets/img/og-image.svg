@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#f5f3ec"/>
+  <g stroke="#13221c" stroke-opacity=".06" stroke-width="1.5"><path d="M0 70h1200M0 140h1200M0 210h1200M0 280h1200M0 350h1200M0 420h1200M0 490h1200M0 560h1200"/></g>
+  <g transform="translate(80 80)"><rect width="52" height="52" rx="12" fill="#13221c"/><rect x="9" y="29" width="34" height="10" rx="2.5" fill="#d4eb5c" transform="rotate(-4 26 34)"/><path fill="#fffdf8" fill-rule="evenodd" d="M17 11h11.7a9.1 9.1 0 0 1 0 18.2h-6v11.7H17Zm5.7 5.2v7.8h5.5a3.9 3.9 0 0 0 0-7.8Z"/></g>
+  <text x="150" y="114" font-family="Literata, Georgia, serif" font-size="34" fill="#13221c">Pennington</text>
+  <text x="152" y="138" font-family="'Albert Sans', sans-serif" font-weight="600" font-size="14" letter-spacing="3.5" fill="#4c5852">EMPLOYMENT LAW</text>
+  <rect x="78" y="318" width="470" height="34" rx="4" fill="#d4eb5c"/>
+  <text x="80" y="262" font-family="Literata, Georgia, serif" font-size="70" letter-spacing="-1.5" fill="#13221c">Employment law</text>
+  <text x="80" y="342" font-family="Literata, Georgia, serif" font-size="70" letter-spacing="-1.5" fill="#13221c">in plain English,</text>
+  <text x="80" y="422" font-family="Literata, Georgia, serif" font-size="70" letter-spacing="-1.5" fill="#13221c">at a fixed fee.</text>
+  <text x="82" y="510" font-family="'Albert Sans', sans-serif" font-size="25" fill="#4c5852">Tessa Pennington · Employment attorney · Dayton</text>
+  <g transform="translate(800 70)">
+    <rect width="320" height="490" rx="22" fill="#dfe9e2"/>
+    <circle cx="164" cy="200" r="120" fill="#d4eb5c"/>
+    <path d="M90 228c-6-72 26-124 80-126 54-2 84 46 80 110-2 30 6 66-2 100-4 20-22 34-44 34h-72c-26 0-40-16-44-42-2-26 2-48 2-76Z" fill="#2f1d14"/>
+    <path d="M144 262h44v62c-8 10-36 10-44 0Z" fill="#b97a57"/>
+    <path d="M30 490c4-82 46-134 136-138 90 4 132 56 136 138Z" fill="#13221c"/>
+    <path d="M140 352c18-6 42-6 60 0l-30 72Z" fill="#fffdf8"/>
+    <path d="M140 352 170 424l-20 20-34-82c8-6 16-8 24-10ZM200 352 170 424l20 20 34-82c-8-6-16-8-24-10Z" fill="#2c473b"/>
+    <ellipse cx="116" cy="214" rx="9" ry="13" fill="#b97a57"/><ellipse cx="218" cy="214" rx="9" ry="13" fill="#b97a57"/>
+    <path d="M117 202c0-40 22-64 50-64s50 24 50 64c0 42-22 72-50 72s-50-30-50-72Z" fill="#c98b67"/>
+    <path d="M112 212c-4-48 20-88 60-90 40-2 62 26 60 76-12-24-34-40-62-44-12 18-28 32-58 58Z" fill="#2f1d14"/>
+    <g fill="none" stroke="#13221c" stroke-width="3.2"><rect x="131" y="196" width="31" height="23" rx="9"/><rect x="173" y="196" width="31" height="23" rx="9"/><path d="M162 205c3-2 8-2 11 0"/></g>
+    <circle cx="147" cy="208" r="3" fill="#13221c"/><circle cx="189" cy="208" r="3" fill="#13221c"/>
+    <path d="M154 244c9 9 25 9 34 0" stroke="#7d3b2c" stroke-width="3.2" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

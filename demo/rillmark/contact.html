@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Start a project — Rillmark</title>
+  <meta name="description" content="Tell Rillmark about your title sequence, brand motion, explainer or music video. Budget, timeline and brief; a reply within two business days.">
+  <meta name="theme-color" content="#efecf4">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rillmark">
+  <meta property="og:title" content="Start a project — Rillmark">
+  <meta property="og:description" content="Tell Rillmark about your title sequence, brand motion, explainer or music video. Budget, timeline and brief; a reply within two business days.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:ital,wdth,wght@0,50..150,500..900;1,50..150,700..900&amp;family=Gelasio:ital,wght@0,400..700;1,400..700&amp;family=Red+Hat+Mono:wght@400..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="flex min-h-screen flex-col font-serif text-[1.125rem] leading-relaxed text-ink antialiased" data-page="contact">
+  <a href="#main" class="slate sr-only z-[70] bg-ink px-4 py-3 text-card focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+
+  <div class="on-dark bg-plum text-card">
+    <div class="wrap flex min-h-9 items-center justify-between gap-4 py-1.5">
+      <p class="slate flex items-center gap-2"><span class="rec-dot size-2 rounded-full bg-coral" aria-hidden="true"></span>Booking from <a href="contact.html" class="text-mint underline decoration-mint/40 underline-offset-4 hover:decoration-mint" data-booking-month>December</a></p>
+      <p class="slate hidden items-center gap-5 text-haze sm:flex"><span>Hartford <span class="text-card" data-local-clock>9:00 AM EST</span></span><a href="mailto:studio@rillmark.example" class="hover:text-mint">studio@rillmark.example</a></p>
+    </div>
+  </div>
+
+  <header id="site-header" class="sticky top-0 z-50 border-b-2 border-ink bg-paper/95 backdrop-blur-sm">
+    <div class="wrap flex h-16 items-center justify-between gap-4 lg:h-[4.5rem]">
+      <a href="index.html" class="flex items-center gap-3">
+        <svg class="h-7 w-7 shrink-0" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" fill="#24152f"/><rect x="6" y="7" width="20" height="4" fill="#8ff0c8"/><rect x="6" y="14" width="14" height="4" fill="#efecf4"/><rect x="6" y="21" width="8" height="4" fill="#ff6f5e"/></svg>
+        <span class="font-display text-[1.65rem] leading-none font-extrabold tracking-tight uppercase font-stretch-72%">Rillmark</span>
+        <span class="slate hidden border-l border-line pl-3 text-muted xl:inline">Motion · Hartford</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center">
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="journal.html" class="nav-link">Journal</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="work.html?shortlist=1" class="slate hidden min-h-11 items-center gap-2 border-2 border-ink/25 px-3 hover:border-ink sm:inline-flex">
+          <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4Z"/></svg>
+          Shortlist <span class="bg-ink px-1.5 text-card" data-shortlist-count>0</span>
+        </a>
+        <a href="contact.html" class="btn btn-solid btn-sm hidden lg:inline-flex">Start a project</a>
+        <button type="button" id="menu-button" class="grid size-11 place-items-center border-2 border-ink lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span data-icon-open><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 6h18M3 12h12M3 18h6"/></svg></span>
+          <span data-icon-close class="hidden"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 18 18 6M6 6l12 12"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-paper lg:hidden" hidden>
+      <nav aria-label="Mobile" class="wrap pt-4 pb-12">
+        <ul>
+          <li><a href="index.html" class="mnav-link">Home</a></li>
+          <li><a href="work.html" class="mnav-link">Work</a></li>
+          <li><a href="services.html" class="mnav-link">Services</a></li>
+          <li><a href="journal.html" class="mnav-link">Journal</a></li>
+          <li><a href="about.html" class="mnav-link">About</a></li>
+          <li><a href="contact.html" class="mnav-link" aria-current="page">Contact</a></li>
+          <li><a href="work.html?shortlist=1" class="mnav-link">Shortlist <span class="slate" data-shortlist-count>0</span></a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-solid mt-8 w-full">Start a project</a>
+        <p class="slate mt-6 text-muted">Hartford <span data-local-clock>9:00 AM EST</span></p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="wrap pt-10 pb-10 sm:pt-14" aria-labelledby="contact-title">
+      <div class="slate flex flex-wrap items-center justify-between gap-3 border-b-2 border-ink pb-3 text-muted">
+        <span>Project inquiry</span>
+        <span>Replies within two business days</span>
+      </div>
+      <div class="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-end">
+        <h1 id="contact-title" class="h-page kinetic"><span>What are we</span> <span class="text-violet">making move?</span></h1>
+        <p class="lead text-muted">Tell me what the film is for, roughly what you can spend and when it has to be finished. I read every inquiry myself and reply with honest availability and a few questions.</p>
+      </div>
+    </section>
+
+    <div class="wrap grid gap-12 pb-20 lg:grid-cols-[minmax(0,1fr)_22rem] lg:gap-14">
+      <section class="min-w-0" aria-labelledby="form-title">
+        <h2 id="form-title" class="sr-only">Inquiry form</h2>
+        <form class="space-y-8 border-2 border-ink bg-card p-5 shadow-[8px_8px_0_var(--color-violet)] sm:p-8" data-enquiry-form novalidate>
+          <div class="on-dark flex flex-wrap items-center justify-between gap-4 bg-plum p-4 text-card" data-enquiry-estimate hidden>
+            <div class="min-w-0">
+              <p class="slate text-mint">Your estimate is attached</p>
+              <p class="mt-1 text-lg"><span data-estimate-summary>Title sequence, 1 min, 2D graphic</span>: <strong class="font-semibold" data-estimate-total>$10,200 before sales tax</strong></p>
+            </div>
+            <div class="flex gap-3">
+              <a href="services.html#estimate" class="slate text-haze underline underline-offset-4 hover:text-mint">Change</a>
+              <button type="button" class="slate text-haze underline underline-offset-4 hover:text-mint" data-estimate-remove>Remove</button>
+            </div>
+            <input type="hidden" id="enq-estimate" name="estimate" value="">
+          </div>
+
+          <fieldset class="grid gap-6 sm:grid-cols-2">
+            <legend class="slate mb-4 text-violet">01 — You</legend>
+            <div data-field>
+              <label for="enq-name" class="label">Your name</label>
+              <input id="enq-name" name="name" type="text" autocomplete="name" class="input" required data-name="Your name">
+            </div>
+            <div data-field>
+              <label for="enq-email" class="label">Email</label>
+              <input id="enq-email" name="email" type="email" autocomplete="email" class="input" required data-name="Your email" placeholder="you@studio.example">
+            </div>
+            <div class="sm:col-span-2" data-field>
+              <label for="enq-org" class="label">Organization <span class="font-serif text-sm tracking-normal normal-case opacity-80">(optional)</span></label>
+              <input id="enq-org" name="organisation" type="text" autocomplete="organization" class="input">
+            </div>
+          </fieldset>
+
+          <fieldset class="grid gap-6 sm:grid-cols-2">
+            <legend class="slate mb-4 text-violet">02 — The project</legend>
+            <div data-field>
+              <label for="enq-service" class="label">What do you need?</label>
+              <select id="enq-service" name="service" class="input" required data-name="The kind of project">
+                <option value="">Choose one</option>
+                <option value="titles">A title sequence</option>
+                <option value="brand">Brand motion</option>
+                <option value="explainer">An explainer animation</option>
+                <option value="music">A music video</option>
+                <option value="other">Not sure yet</option>
+              </select>
+            </div>
+            <div data-field>
+              <label for="enq-budget" class="label">Budget, before sales tax</label>
+              <select id="enq-budget" name="budget" class="input" required data-name="A budget">
+                <option value="">Choose a range</option>
+                <option value="under-5k">Under $5,000</option>
+                <option value="5k-10k">$5,000 to $10,000</option>
+                <option value="10k-20k">$10,000 to $20,000</option>
+                <option value="20k-plus">Over $20,000</option>
+                <option value="unknown">I don’t know yet</option>
+              </select>
+            </div>
+            <div class="sm:col-span-2" data-field>
+              <label for="enq-deadline" class="label">When does it need to be finished?</label>
+              <input id="enq-deadline" name="deadline" type="date" class="input sm:max-w-xs" required data-name="A finish date" data-hint-id="enq-deadline-hint" aria-describedby="enq-deadline-hint">
+              <p id="enq-deadline-hint" class="hint" data-deadline-hint>Most projects take six to ten weeks.</p>
+            </div>
+            <div class="sm:col-span-2" data-field>
+              <label for="enq-message" class="label">Tell me about it</label>
+              <textarea id="enq-message" name="message" class="input" required data-name="Your brief" data-minlength="40" data-hint-id="enq-message-hint" aria-describedby="enq-message-hint" placeholder="What is it for, who will watch it, and is there anything you already love (or hate)?"></textarea>
+              <p id="enq-message-hint" class="hint font-mono text-sm" data-message-count>0 / 40 characters minimum</p>
+            </div>
+          </fieldset>
+
+          <fieldset data-refs-box hidden>
+            <legend class="slate mb-4 text-violet">03 — References from your shortlist</legend>
+            <ul class="grid gap-3 sm:grid-cols-2" data-enquiry-refs></ul>
+            <p class="hint">Uncheck any you’d rather leave out. <a href="work.html" class="link">Add more from the work</a>.</p>
+          </fieldset>
+
+          <div class="flex flex-col gap-4 border-t-2 border-ink pt-6 sm:flex-row sm:items-center sm:justify-between">
+            <p class="text-base text-muted">Your details are used to reply to this inquiry and nothing else.</p>
+            <button type="submit" class="btn btn-solid shrink-0">Send the inquiry</button>
+          </div>
+        </form>
+
+        <div class="border-2 border-ink bg-card p-6 shadow-[8px_8px_0_var(--color-mint)] focus:outline-none sm:p-8" data-enquiry-success hidden tabindex="-1">
+          <p class="slate flex items-center gap-2 text-violet"><span class="size-2 rounded-full bg-coral" aria-hidden="true"></span>Inquiry received · <span data-success-ref>RM-0000</span></p>
+          <p class="h-section mt-4">Thanks, <span data-success-name>there</span>. It’s on Marika’s desk.</p>
+          <p class="mt-4 text-xl leading-relaxed text-muted">Your inquiry came through <span data-success-refs>with your brief</span>. Keep the reference above if you need to follow up.</p>
+          <ol class="mt-8 space-y-5 border-t-2 border-ink pt-6">
+            <li class="grid grid-cols-[3rem_minmax(0,1fr)] gap-3"><span class="slate pt-1 text-violet">01</span><span class="text-lg">Marika reads it and replies by <strong class="font-semibold" data-reply-date>Tuesday, October 27</strong>, with availability and a few questions.</span></li>
+            <li class="grid grid-cols-[3rem_minmax(0,1fr)] gap-3"><span class="slate pt-1 text-violet">02</span><span class="text-lg">A 30-minute call about what the film is for and what’s fixed.</span></li>
+            <li class="grid grid-cols-[3rem_minmax(0,1fr)] gap-3"><span class="slate pt-1 text-violet">03</span><span class="text-lg">A written proposal with a fixed fee within a week of the call. The next free start is <span data-success-start>Monday, December 7</span>.</span></li>
+          </ol>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="work.html" class="btn btn-line btn-sm">Back to the work</a>
+            <button type="button" class="btn btn-line btn-sm" data-enquiry-again>Send another inquiry</button>
+          </div>
+        </div>
+      </section>
+
+      <aside class="space-y-10" aria-label="Studio details">
+        <div class="on-dark bg-plum p-6 text-card">
+          <p class="slate text-mint">Availability</p>
+          <p class="h-card mt-2">Next start: <span data-next-start>Monday, December 7</span></p>
+          <ul class="mt-5 grid grid-cols-3 gap-3" data-availability aria-label="Availability for the next six months"></ul>
+        </div>
+        <div>
+          <h2 class="slate border-b-2 border-ink pb-2">Direct</h2>
+          <p class="mt-4 text-lg">Marika Drever<br><a href="mailto:studio@rillmark.example" class="link">studio@rillmark.example</a><br><a href="tel:+18605550152" class="link">(860) 555-0152</a></p>
+          <p class="slate mt-4 text-muted">Hartford, <span data-local-clock>9:00 AM EST</span> · <span data-open-state>Out of the studio</span></p>
+        </div>
+        <div>
+          <h2 class="slate border-b-2 border-ink pb-2">Studio hours</h2>
+          <dl class="mt-3 space-y-1 text-lg">
+            <div class="flex justify-between gap-4"><dt>Monday to Thursday</dt><dd>9:30 AM–5:30 PM</dd></div>
+            <div class="flex justify-between gap-4"><dt>Friday</dt><dd>9:30 AM–2:00 PM</dd></div>
+            <div class="flex justify-between gap-4"><dt>Weekends and federal holidays</dt><dd>Closed</dd></div>
+          </dl>
+          <p class="mt-3 text-base text-muted">Eastern time. Closed from December 24 to January 4 every winter.</p>
+        </div>
+        <div>
+          <h2 class="slate border-b-2 border-ink pb-2">Visit</h2>
+          <address class="mt-4 text-lg not-italic">Studio 3, 61 Arch Street<br>Hartford, CT 06103</address>
+          <p class="mt-2 text-base text-muted">By appointment. Elevator to the second floor.</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="on-dark mt-auto bg-plum text-card">
+    <div class="wrap pt-16 pb-10 sm:pt-20">
+      <a href="contact.html" class="group block border-b border-plum-line pb-8">
+        <span class="slate text-mint">Got something that needs to move?</span>
+        <span class="mt-3 block font-display text-[clamp(3.5rem,15vw,13rem)] leading-[0.82] font-extrabold tracking-[-0.02em] uppercase stretch-hover group-hover:text-mint font-stretch-60%">Rillmark</span>
+      </a>
+      <div class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div>
+          <p class="font-display text-2xl leading-tight font-bold font-stretch-85%">Title sequences, brand motion, explainers and music videos.</p>
+          <p class="mt-3 text-lg text-haze">Designed and directed by Marika Drever in Hartford, for clients across the US and further.</p>
+        </div>
+        <div>
+          <h2 class="slate text-haze">Pages</h2>
+          <ul class="mt-4 space-y-2 text-lg">
+            <li><a href="work.html" class="hover:text-mint">Work</a></li>
+            <li><a href="services.html" class="hover:text-mint">Services and fees</a></li>
+            <li><a href="journal.html" class="hover:text-mint">Journal</a></li>
+            <li><a href="about.html" class="hover:text-mint">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="slate text-haze">The work</h2>
+          <ul class="mt-4 space-y-2 text-lg">
+            <li><a href="work.html?discipline=titles" class="hover:text-mint">Title sequences</a></li>
+            <li><a href="work.html?discipline=brand" class="hover:text-mint">Brand motion</a></li>
+            <li><a href="work.html?discipline=explainer" class="hover:text-mint">Explainer animation</a></li>
+            <li><a href="work.html?discipline=music" class="hover:text-mint">Music videos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="slate text-haze">Studio</h2>
+          <address class="mt-4 text-lg not-italic">Studio 3, 61 Arch Street<br>Hartford, CT 06103</address>
+          <p class="mt-3 text-lg"><a href="mailto:studio@rillmark.example" class="link">studio@rillmark.example</a><br><a href="tel:+18605550152" class="link">(860) 555-0152</a></p>
+        </div>
+      </div>
+      <div class="slate mt-14 flex flex-col gap-2 border-t border-plum-line pt-6 text-haze sm:flex-row sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Rillmark. Made frame by frame in Hartford.</p>
+        <p>Rillmark, its clients and projects are fictional.</p>
+      </div>
+    </div>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

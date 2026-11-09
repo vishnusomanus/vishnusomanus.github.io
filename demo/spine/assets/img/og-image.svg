@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0f3229"/>
+  <rect x="0" y="0" width="1200" height="630" fill="#17463a" opacity=".35"/>
+  <g transform="translate(70 70)">
+    <rect width="54" height="54" rx="8" fill="#f7f1e3"/>
+    <path d="M13 12h11v32H13zM27 12h8v32h-8zM37 15.5l7-1.8 6 29-7 1.6z" fill="#17463a"/>
+    <path d="M15 6v19l3.5-3.4L22 25V6z" fill="#c8401f"/>
+    <text x="74" y="40" font-family="'Brygada 1918', Georgia, serif" font-size="40" font-weight="600" fill="#f7f1e3">Larchmere Books</text>
+  </g>
+  <text x="70" y="250" font-family="'Brygada 1918', Georgia, serif" font-size="84" font-weight="500" fill="#f7f1e3">Books worth</text>
+  <text x="70" y="345" font-family="'Brygada 1918', Georgia, serif" font-size="84" font-style="italic" font-weight="500" fill="#f0714f">staying up <tspan font-style="normal" fill="#f7f1e3">for.</tspan></text>
+  <text x="72" y="430" font-family="Lato, Arial, sans-serif" font-size="27" fill="#f7f1e3" opacity=".88">An independent bookshop &amp; café in Burlington, Vermont</text>
+  <text x="72" y="474" font-family="Lato, Arial, sans-serif" font-size="27" fill="#f7f1e3" opacity=".88">Staff picks · author readings · book clubs · free pickup</text>
+  <text x="72" y="560" font-family="Lato, Arial, sans-serif" font-size="20" font-weight="700" letter-spacing="4" fill="#e3b25a">112 MAPLE STREET · SINCE 1998</text>
+  <g transform="translate(800 120)">
+    <rect x="0" y="0" width="340" height="400" fill="#123b30"/>
+    <rect x="0" y="180" width="340" height="14" fill="#3a6a59"/>
+    <rect x="0" y="380" width="340" height="14" fill="#3a6a59"/>
+    <g>
+      <rect x="14" y="54" width="30" height="126" fill="#1f3b57"/><rect x="14" y="66" width="30" height="5" fill="#f2a541"/>
+      <rect x="46" y="40" width="26" height="140" fill="#e9e4d8"/><rect x="46" y="52" width="26" height="5" fill="#b23a2a"/>
+      <rect x="74" y="64" width="22" height="116" fill="#d9c9a3"/><rect x="74" y="76" width="22" height="5" fill="#c8401f"/>
+      <rect x="98" y="46" width="34" height="134" fill="#21243d"/><rect x="98" y="58" width="34" height="5" fill="#f5c35b"/>
+      <rect x="134" y="58" width="26" height="122" fill="#7a1f1f"/><rect x="134" y="70" width="26" height="5" fill="#e8b04b"/>
+      <rect x="162" y="44" width="24" height="136" fill="#8fb3b0"/><rect x="162" y="56" width="24" height="5" fill="#f4efe1"/>
+      <rect x="188" y="62" width="30" height="118" fill="#123a3a"/><rect x="188" y="74" width="30" height="5" fill="#c9a24a"/>
+      <rect x="220" y="38" width="36" height="142" fill="#2c1e4a"/><rect x="220" y="50" width="36" height="5" fill="#5fd0c4"/>
+      <path d="M262 180l26-118 22 5-26 117z" fill="#0f1b2d"/>
+      <path d="M303 140h24v28a8 8 0 0 1-8 8h-8a8 8 0 0 1-8-8z" fill="#c8401f"/>
+    </g>
+    <g>
+      <rect x="14" y="250" width="28" height="130" fill="#0e5a63"/><rect x="14" y="262" width="28" height="5" fill="#f2b134"/>
+      <rect x="44" y="236" width="24" height="144" fill="#f2d3a5"/><rect x="44" y="248" width="24" height="5" fill="#c8401f"/>
+      <rect x="70" y="262" width="22" height="118" fill="#dfe7ea"/><rect x="70" y="274" width="22" height="5" fill="#3f7ea6"/>
+      <rect x="94" y="244" width="30" height="136" fill="#e7d77a"/><rect x="94" y="256" width="30" height="5" fill="#5b7a2e"/>
+      <rect x="126" y="256" width="26" height="124" fill="#c7562f"/><rect x="126" y="268" width="26" height="5" fill="#f4c27a"/>
+      <rect x="154" y="240" width="32" height="140" fill="#8a4b22"/><rect x="154" y="252" width="32" height="5" fill="#e9a23b"/>
+      <rect x="188" y="258" width="24" height="122" fill="#ffd36b"/><rect x="188" y="270" width="24" height="5" fill="#7a68c9"/>
+      <rect x="214" y="248" width="28" height="132" fill="#9fd1c2"/><rect x="214" y="260" width="28" height="5" fill="#8a5a35"/>
+      <rect x="244" y="236" width="30" height="144" fill="#2f5d3a"/><rect x="244" y="248" width="30" height="5" fill="#f2a74b"/>
+      <path d="M284 344h40l-5 36h-30z" fill="#e3b25a"/><path d="M304 344c-6-14-18-20-26-16M304 344c4-14 16-22 26-18M304 344v-22" fill="none" stroke="#7fb27a" stroke-width="4" stroke-linecap="round"/>
+    </g>
+  </g>
+  <path d="M1080 0v96l-20-18-20 18V0z" fill="#c8401f"/>
+</svg>

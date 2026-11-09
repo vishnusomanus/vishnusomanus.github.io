@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sites & cabins — Tamarack Pines Campground, Marquette, Michigan</title>
+  <meta name="description" content="An interactive map of all 25 sites and cabins at Tamarack Pines: filter by tent, RV or cabin, hookups, RV length and pet-friendly, then book the one you like.">
+  <meta name="theme-color" content="#1f4b37">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tamarack Pines Campground &amp; Cabins">
+  <meta property="og:title" content="Sites & cabins — Tamarack Pines Campground, Marquette, Michigan">
+  <meta property="og:description" content="An interactive map of all 25 sites and cabins at Tamarack Pines: filter by tent, RV or cabin, hookups, RV length and pet-friendly, then book the one you like.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&amp;family=Overpass:wght@400;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="sites" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-lg bg-blaze px-5 py-3 font-bold text-bark focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <aside class="on-dark bg-pine-dark text-birch" aria-label="Campground status" data-status data-state="closed">
+    <div class="container-x flex min-h-9 items-center justify-between gap-4 py-1.5 text-[0.9rem]">
+      <p class="flex items-center gap-2.5"><span class="status-dot" aria-hidden="true"></span><span data-status-short>Closed for the winter · we open Fri, May 21, 2027</span></p>
+      <p class="hidden sm:block"><a href="tel:+19065550182" class="link">(906) 555-0182</a><span class="mx-2 text-birch/50" aria-hidden="true">/</span>Marquette, Michigan &middot; on Lake Superior</p>
+    </div>
+  </aside>
+  <header id="site-header" class="sticky top-0 z-40 border-b-2 border-bark bg-birch/95 backdrop-blur-sm">
+    <div class="container-x flex h-[4.5rem] items-center justify-between gap-6">
+      <a href="index.html" class="inline-flex items-center gap-3">
+        <svg viewBox="0 0 48 48" class="h-11 w-11 shrink-0" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#1f4b37"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="#f26a21" stroke-width="1.6" stroke-dasharray="3 2.4"/><path d="M24 8.5 30.5 19H27.4L32.6 27.5H28.2L33.8 35.5H14.2L19.8 27.5H15.4L20.6 19H17.5Z" fill="#f6f4ec"/><rect x="22.7" y="35" width="2.6" height="4.5" fill="#f6f4ec"/><path d="M10 37.5c3-1.6 6 .8 9 0M29 40.5c3-1.6 6 .8 9 0" stroke="#8cc2e0" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+        <span class="leading-none"><span class="block font-display text-[1.35rem] font-bold tracking-tight">Tamarack Pines</span><span class="mt-1 block text-[0.8rem] font-bold uppercase tracking-[0.16em] text-lichen">Campground &amp; Cabins</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden xl:block"><ul class="flex items-center gap-6"><li><a href="sites.html" aria-current="page" class="relative inline-flex items-center py-2 text-[0.98rem] font-bold text-bark/85 transition hover:text-pine aria-[current=page]:text-pine aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-1 aria-[current=page]:after:h-[3px] aria-[current=page]:after:rounded-full aria-[current=page]:after:bg-blaze">Sites &amp; cabins</a></li><li><a href="activities.html" class="relative inline-flex items-center py-2 text-[0.98rem] font-bold text-bark/85 transition hover:text-pine aria-[current=page]:text-pine aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-1 aria-[current=page]:after:h-[3px] aria-[current=page]:after:rounded-full aria-[current=page]:after:bg-blaze">Activities</a></li><li><a href="rates.html" class="relative inline-flex items-center py-2 text-[0.98rem] font-bold text-bark/85 transition hover:text-pine aria-[current=page]:text-pine aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-1 aria-[current=page]:after:h-[3px] aria-[current=page]:after:rounded-full aria-[current=page]:after:bg-blaze">Rates &amp; policies</a></li><li><a href="store.html" class="relative inline-flex items-center py-2 text-[0.98rem] font-bold text-bark/85 transition hover:text-pine aria-[current=page]:text-pine aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-1 aria-[current=page]:after:h-[3px] aria-[current=page]:after:rounded-full aria-[current=page]:after:bg-blaze">Camp store<span data-basket-badge hidden class="ml-1.5 inline-grid h-5 min-w-5 place-items-center rounded-full bg-blaze px-1 text-[0.72rem] font-extrabold text-bark"><span data-basket-count>0</span><span class="sr-only"> in basket</span></span></a></li><li><a href="visit.html" class="relative inline-flex items-center py-2 text-[0.98rem] font-bold text-bark/85 transition hover:text-pine aria-[current=page]:text-pine aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-1 aria-[current=page]:after:h-[3px] aria-[current=page]:after:rounded-full aria-[current=page]:after:bg-blaze">Visit &amp; FAQ</a></li><li><a href="contact.html" class="relative inline-flex items-center py-2 text-[0.98rem] font-bold text-bark/85 transition hover:text-pine aria-[current=page]:text-pine aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-1 aria-[current=page]:after:h-[3px] aria-[current=page]:after:rounded-full aria-[current=page]:after:bg-blaze">Contact</a></li></ul></nav>
+      <div class="flex items-center gap-3">
+        <a href="book.html" class="btn-blaze btn-sm hidden sm:inline-flex">Book a site</a>
+        <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-lg border-2 border-bark bg-birch xl:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <span data-icon-open><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span>
+          <span data-icon-close class="hidden"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div class="h-1.5 grid-ticks opacity-60" aria-hidden="true"></div>
+    <div id="mobile-menu" hidden class="h-[calc(100dvh-5rem)] overflow-y-auto border-t-2 border-bark bg-birch xl:hidden">
+      <nav aria-label="Mobile" class="container-x pb-10 pt-2">
+        <ul><li><a href="index.html" class="flex items-center justify-between border-b border-dashed border-bark/25 py-3.5 font-display text-2xl font-bold aria-[current=page]:text-pine">Home<span aria-hidden="true" class="text-blaze-dark">&rarr;</span></a></li><li><a href="book.html" class="flex items-center justify-between border-b border-dashed border-bark/25 py-3.5 font-display text-2xl font-bold aria-[current=page]:text-pine">Book a site<span aria-hidden="true" class="text-blaze-dark">&rarr;</span></a></li><li><a href="sites.html" aria-current="page" class="flex items-center justify-between border-b border-dashed border-bark/25 py-3.5 font-display text-2xl font-bold aria-[current=page]:text-pine">Sites &amp; cabins<span aria-hidden="true" class="text-blaze-dark">&rarr;</span></a></li><li><a href="activities.html" class="flex items-center justify-between border-b border-dashed border-bark/25 py-3.5 font-display text-2xl font-bold aria-[current=page]:text-pine">Activities<span aria-hidden="true" class="text-blaze-dark">&rarr;</span></a></li><li><a href="rates.html" class="flex items-center justify-between border-b border-dashed border-bark/25 py-3.5 font-display text-2xl font-bold aria-[current=page]:text-pine">Rates &amp; policies<span aria-hidden="true" class="text-blaze-dark">&rarr;</span></a></li><li><a href="store.html" class="flex items-center justify-between border-b border-dashed border-bark/25 py-3.5 font-display text-2xl font-bold aria-[current=page]:text-pine">Camp store<span aria-hidden="true" class="text-blaze-dark">&rarr;</span></a></li><li><a href="visit.html" class="flex items-center justify-between border-b border-dashed border-bark/25 py-3.5 font-display text-2xl font-bold aria-[current=page]:text-pine">Visit &amp; FAQ<span aria-hidden="true" class="text-blaze-dark">&rarr;</span></a></li><li><a href="contact.html" class="flex items-center justify-between border-b border-dashed border-bark/25 py-3.5 font-display text-2xl font-bold aria-[current=page]:text-pine">Contact<span aria-hidden="true" class="text-blaze-dark">&rarr;</span></a></li></ul>
+        <p class="mt-6 text-lichen">Call the office: <a href="tel:+19065550182" class="link">(906) 555-0182</a></p>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="topo border-b-2 border-bark">
+      <div class="container-x grid gap-8 py-12 lg:grid-cols-[1.2fr_1fr] lg:items-end lg:py-16">
+        <div>
+          <p class="eyebrow">Sites &amp; cabins</p>
+          <h1 class="display mt-3 text-[2.6rem] sm:text-6xl">Find your spot on the map</h1>
+          <p class="lede mt-5 max-w-2xl">Twenty sites and five cabins on forty acres between the lake and the creek. Every site has a picnic table and a steel fire ring; most are separated by a good screen of balsam and birch.</p>
+        </div>
+        <ul class="grid grid-cols-2 gap-3 text-[0.95rem] font-bold sm:grid-cols-4 lg:grid-cols-2" aria-label="Map key">
+          <li class="flex items-center gap-2.5"><svg viewBox="-20 -20 40 40" class="h-7 w-7 shrink-0" aria-hidden="true"><path d="M0 -17 L16 12 L-16 12 Z" fill="#1f4b37"/></svg>Walk-in tent</li>
+          <li class="flex items-center gap-2.5"><svg viewBox="-20 -20 40 40" class="h-7 w-7 shrink-0" aria-hidden="true"><rect x="-15" y="-14" width="30" height="28" rx="6" fill="#1b5c86"/></svg>Water &amp; electric</li>
+          <li class="flex items-center gap-2.5"><svg viewBox="-20 -20 40 40" class="h-7 w-7 shrink-0" aria-hidden="true"><rect x="-15" y="-14" width="30" height="28" rx="6" fill="#0e3a57"/></svg>Full hookup</li>
+          <li class="flex items-center gap-2.5"><svg viewBox="-20 -20 40 40" class="h-7 w-7 shrink-0" aria-hidden="true"><path d="M-16 -2 L0 -17 L16 -2 L16 14 L-16 14 Z" fill="#f26a21" stroke="#1c2420" stroke-width="2"/></svg>Cabin</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container-x py-10 lg:py-14" aria-labelledby="map-title">
+      <h2 id="map-title" class="sr-only">Campground map and filters</h2>
+      <div class="flex flex-col gap-4 rounded-xl border-2 border-bark/15 bg-white p-4 sm:p-5" role="group" aria-label="Filter sites">
+        <div class="flex flex-wrap items-center gap-2"><span class="mr-1 w-full text-sm font-extrabold uppercase tracking-[0.14em] text-lichen sm:w-28">Stay in</span>
+          <button type="button" class="chip" data-filter-type="any" aria-pressed="true">Anything</button>
+          <button type="button" class="chip" data-filter-type="tent" aria-pressed="false"><span class="tick" aria-hidden="true">&check;</span>Tent</button>
+          <button type="button" class="chip" data-filter-type="rv" aria-pressed="false"><span class="tick" aria-hidden="true">&check;</span>RV or trailer</button>
+          <button type="button" class="chip" data-filter-type="cabin" aria-pressed="false"><span class="tick" aria-hidden="true">&check;</span>Cabin</button>
+        </div>
+        <div class="flex flex-wrap items-center gap-2"><span class="mr-1 w-full text-sm font-extrabold uppercase tracking-[0.14em] text-lichen sm:w-28">Hookups</span>
+          <button type="button" class="chip" data-filter-hookups="any" aria-pressed="true">Any</button>
+          <button type="button" class="chip" data-filter-hookups="none" aria-pressed="false"><span class="tick" aria-hidden="true">&check;</span>None</button>
+          <button type="button" class="chip" data-filter-hookups="electric" aria-pressed="false"><span class="tick" aria-hidden="true">&check;</span>Water &amp; electric</button>
+          <button type="button" class="chip" data-filter-hookups="full" aria-pressed="false"><span class="tick" aria-hidden="true">&check;</span>Full hookup</button>
+        </div>
+        <div class="flex flex-wrap items-end gap-4">
+          <div class="w-full sm:w-64"><label for="rv-length" class="field-label">My RV or trailer is up to</label>
+            <select id="rv-length" class="field py-2"><option value="0">No RV, or any length</option><option value="20">20 feet</option><option value="25">25 feet</option><option value="30">30 feet</option><option value="35">35 feet</option><option value="40">40 feet</option><option value="45">45 feet</option></select></div>
+          <button type="button" class="chip" data-filter-pets aria-pressed="false"><span class="tick" aria-hidden="true">&check;</span><svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true"><ellipse cx="6" cy="10" rx="2.2" ry="2.8"/><ellipse cx="10" cy="5.5" rx="2.2" ry="2.8"/><ellipse cx="14.5" cy="5.5" rx="2.2" ry="2.8"/><ellipse cx="18.5" cy="10" rx="2.2" ry="2.8"/><path d="M12 11c-3.5 0-6 4.5-6 7 0 2 1.6 2.6 3 2.2 1.2-.3 2-.9 3-.9s1.8.6 3 .9c1.4.4 3-.2 3-2.2 0-2.5-2.5-7-6-7Z"/></svg>Pet-friendly only</button>
+          <button type="button" class="link ml-auto text-sm" data-site-reset>Clear filters</button>
+        </div>
+        <p class="text-[0.95rem] font-bold text-pine" data-site-count aria-live="polite">Showing 25 sites of 25.</p>
+      </div>
+
+      <div class="mt-6 grid gap-6 lg:grid-cols-[1fr_20rem]">
+        <div class="min-w-0">
+          <p class="mb-2 flex items-center gap-2 text-[0.95rem] font-bold text-pine" data-map-hint hidden><svg viewBox="0 0 24 24" class="h-5 w-5 shrink-0 text-blaze-dark" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15m-5-5 5 5-5 5"/></svg>Swipe the map sideways for Pine Loop and the cabins.</p>
+          <div class="relative">
+        <div class="relative min-w-0 overflow-x-auto overscroll-x-contain rounded-xl border-2 border-bark bg-[#eef0e4] focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-blaze" tabindex="0" role="region" aria-label="Campground map" data-site-map>
+          <svg viewBox="0 0 1000 640" class="block w-full min-w-[760px]" role="group" aria-labelledby="map-svg-title map-svg-desc">
+            <title id="map-svg-title">Map of Tamarack Pines Campground</title>
+            <desc id="map-svg-desc">Lake Superior is to the north. Walk-in tent sites T1 to T6 sit on the bluff, water and electric sites E1 to E8 are on Birch Loop to the west, full-hookup sites F1 to F6 on Pine Loop to the east, and cabins C1 to C5 along Cabin Lane by the shore. Use Tab or the arrow keys to move between sites and Enter to choose one.</desc>
+            <g aria-hidden="true">
+              <g fill="none" stroke="#c8d1c0" stroke-width="1.4">
+                <path d="M0 260C120 240 160 280 260 262S420 230 520 256 700 300 820 270 960 240 1000 250"/>
+                <path d="M0 560C80 540 140 590 240 570S400 530 470 560"/>
+                <path d="M0 600C90 585 150 625 250 610S400 585 480 600"/>
+                <path d="M560 600C640 580 720 610 820 590S960 560 1000 572"/>
+                <ellipse cx="737" cy="380" rx="150" ry="122"/>
+                <ellipse cx="290" cy="380" rx="168" ry="122"/>
+                <path d="M0 140C100 130 200 150 300 140S500 128 600 142 800 150 1000 138"/>
+              </g>
+              <path d="M0 0H1000V104C930 96 880 112 800 104S660 92 580 100 420 110 340 100 180 92 100 100 30 96 0 98Z" fill="#bcd8e8"/>
+              <path d="M0 98C30 96 70 104 100 100S260 92 340 100 500 110 580 100 740 96 800 104 930 96 1000 104V124C930 118 860 128 780 122S620 114 540 120 380 128 300 120 120 114 0 120Z" fill="#eadfbf"/>
+              <g fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity=".8"><path d="M140 40c20-6 40 6 60 0"/><path d="M700 30c20-6 40 6 60 0"/><path d="M840 66c16-5 32 5 48 0"/><path d="M60 72c16-5 32 5 48 0"/></g>
+              <text x="500" y="56" text-anchor="middle" font-family="Arvo, Georgia, serif" font-size="22" font-weight="700" letter-spacing="8" fill="#0e3a57">LAKE SUPERIOR</text>
+              <g transform="translate(60 44)"><circle r="22" fill="#f6f4ec" stroke="#1c2420" stroke-width="2"/><path d="M0 -18 6 0 0 18 -6 0Z" fill="#1c2420"/><path d="M0 -18 6 0H-6Z" fill="#f26a21"/><text y="-26" text-anchor="middle" font-family="Overpass, sans-serif" font-size="12" font-weight="800" fill="#1c2420">N</text></g>
+              <path d="M968 100C950 160 990 220 958 290S920 400 950 470 930 580 944 640" fill="none" stroke="#7fb6d6" stroke-width="10" stroke-linecap="round"/>
+              <text transform="translate(984 520) rotate(-84)" font-family="Overpass, sans-serif" font-size="13" font-weight="700" fill="#0e3a57" letter-spacing="1">Thimbleberry Creek</text>
+              <g fill="#7f9a5c" opacity=".55"><circle cx="40" cy="250" r="12"/><circle cx="58" cy="262" r="9"/><circle cx="30" cy="520" r="11"/><circle cx="44" cy="540" r="8"/><circle cx="460" cy="600" r="12"/><circle cx="440" cy="615" r="9"/><circle cx="880" cy="580" r="13"/><circle cx="900" cy="598" r="9"/><circle cx="860" cy="250" r="10"/><circle cx="660" cy="250" r="9"/><circle cx="200" cy="250" r="9"/><circle cx="60" cy="380" r="12"/><circle cx="560" cy="500" r="10"/><circle cx="420" cy="250" r="7"/></g>
+              <g fill="none" stroke="#c9b98f" stroke-linecap="round" stroke-linejoin="round" stroke-width="14">
+                <path d="M520 640V150"/>
+                <rect x="150" y="290" width="280" height="180" rx="70"/>
+                <rect x="615" y="290" width="245" height="180" rx="70"/>
+                <path d="M430 380H615"/>
+                <path d="M520 216H900"/>
+              </g>
+              <g fill="none" stroke="#ffffff" stroke-width="1.6" stroke-dasharray="8 8"><path d="M520 640V150"/><path d="M520 216H900"/></g>
+              <path d="M505 210H70" fill="none" stroke="#7a6a45" stroke-width="2.5" stroke-dasharray="2 6" stroke-linecap="round"/>
+              <path d="M160 520C130 560 90 590 40 612" fill="none" stroke="#f26a21" stroke-width="3" stroke-dasharray="6 6" stroke-linecap="round"/>
+              <text x="28" y="632" font-family="Overpass, sans-serif" font-size="13" font-weight="700" fill="#b23f0a">To Bunchberry Bog</text>
+              <path d="M910 240C925 255 935 262 950 270" fill="none" stroke="#f26a21" stroke-width="3" stroke-dasharray="6 6" stroke-linecap="round"/>
+              <text x="936" y="262" text-anchor="end" font-family="Overpass, sans-serif" font-size="13" font-weight="700" fill="#b23f0a">Creek trail</text>
+              <rect x="492" y="124" width="56" height="34" rx="6" fill="#dcd8c7" stroke="#1c2420" stroke-width="1.5"/>
+              <text x="520" y="147" text-anchor="middle" font-family="Overpass, sans-serif" font-size="16" font-weight="800" fill="#1c2420">P</text>
+              <g transform="translate(605 116)"><rect x="-16" y="-6" width="32" height="12" rx="6" fill="#f26a21" stroke="#1c2420" stroke-width="1.5"/><rect x="-12" y="-1.5" width="24" height="3" rx="1.5" fill="#1c2420"/></g>
+              <text x="628" y="121" font-family="Overpass, sans-serif" font-size="13" font-weight="700" fill="#1c2420">Kayak rack</text>
+              <g transform="translate(395 115)" stroke="#1c2420" stroke-width="1.6" fill="none"><path d="M-8 6H8M-8 0H8M-8 -6H8M-8 -10V10M8 -10V10"/></g>
+              <text x="380" y="120" text-anchor="end" font-family="Overpass, sans-serif" font-size="12" font-weight="700" fill="#1c2420">Beach stairs</text>
+              <text x="290" y="336" text-anchor="middle" font-family="Arvo, Georgia, serif" font-size="15" font-weight="700" fill="#1f4b37" letter-spacing="2">BIRCH LOOP</text>
+              <g transform="translate(290 376)"><rect x="-22" y="-14" width="44" height="26" rx="3" fill="#f6f4ec" stroke="#1c2420" stroke-width="2"/><path d="M-26 -12 0 -26 26 -12" fill="none" stroke="#1c2420" stroke-width="2.5" stroke-linejoin="round"/><path d="M-8 0h4v12h-4zM4 0h4v12h-4z" fill="#1b5c86"/></g>
+              <text x="290" y="410" text-anchor="middle" font-family="Overpass, sans-serif" font-size="13" font-weight="700" fill="#1c2420">Bathhouse &amp; laundry</text>
+              <text x="737" y="336" text-anchor="middle" font-family="Arvo, Georgia, serif" font-size="15" font-weight="700" fill="#1f4b37" letter-spacing="2">PINE LOOP</text>
+              <g transform="translate(737 378)"><circle r="18" fill="#dcd8c7" stroke="#1c2420" stroke-width="2"/><path d="M-6 6 0 -10 6 6Z" fill="#f26a21"/><path d="M-3 6 0 -2 3 6Z" fill="#ffd25a"/></g>
+              <text x="737" y="414" text-anchor="middle" font-family="Overpass, sans-serif" font-size="13" font-weight="700" fill="#1c2420">Fire ring</text>
+              <g transform="translate(392 248)" stroke="#1c2420" stroke-width="2" fill="none"><path d="M-14 12 -6 -10H6L14 12"/><path d="M-6 -10H6" stroke-width="3"/><path d="M0 -10V4"/><rect x="-4" y="4" width="8" height="3" fill="#f26a21"/></g>
+              <text x="392" y="276" text-anchor="middle" font-family="Overpass, sans-serif" font-size="12" font-weight="700" fill="#1c2420">Playground</text>
+              <text x="760" y="236" text-anchor="middle" font-family="Overpass, sans-serif" font-size="12" font-weight="700" fill="#4c5850" letter-spacing="1">CABIN LANE</text>
+              <g transform="translate(578 585)"><rect x="-26" y="-16" width="52" height="30" rx="3" fill="#1f4b37" stroke="#1c2420" stroke-width="2"/><path d="M-30 -14 0 -32 30 -14" fill="#7a6a45" stroke="#1c2420" stroke-width="2" stroke-linejoin="round"/><rect x="-6" y="-2" width="12" height="16" fill="#f26a21"/></g>
+              <text x="614" y="590" font-family="Overpass, sans-serif" font-size="13" font-weight="800" fill="#1c2420">Office &amp; camp store</text>
+              <text x="508" y="630" text-anchor="end" font-family="Overpass, sans-serif" font-size="12" font-weight="700" fill="#4c5850">From Kivi Lake Road</text>
+              <g transform="translate(830 620)" font-family="Overpass, sans-serif" font-size="11" font-weight="700" fill="#1c2420"><rect width="40" height="6" fill="#1c2420"/><rect x="40" width="40" height="6" fill="#f6f4ec" stroke="#1c2420"/><text x="0" y="-5">0</text><text x="74" y="-5">300 ft</text></g>
+            </g>
+            <g data-site-layer></g>
+          </svg>
+        </div>
+            <div class="pointer-events-none absolute inset-y-0.5 right-0.5 w-16 rounded-r-[0.6rem] bg-linear-to-l from-[#eef0e4] via-[#eef0e4]/70 to-transparent" data-map-fade hidden aria-hidden="true"></div>
+          </div>
+        </div>
+        <aside class="card self-start p-5 lg:sticky lg:top-28" aria-live="polite" data-site-detail>
+          <p class="font-display text-xl font-bold">Pick a site on the map</p>
+          <p class="mt-2 text-lichen">Click or tab to a pin to see its hookups, size and price. Use the filters to narrow it down.</p>
+        </aside>
+      </div>
+
+      <h2 class="display mt-14 text-3xl sm:text-4xl">Every site at a glance</h2>
+      <ul class="mt-6 grid gap-5 sm:grid-cols-2 xl:grid-cols-4" data-site-list></ul>
+      <div class="panel mt-6 p-6" data-site-empty hidden><p class="font-display text-xl font-bold">No site matches all of those.</p><p class="mt-1 text-lichen">Try a shorter RV length or fewer filters, or call us at <a class="link" href="tel:+19065550182">(906) 555-0182</a>: we know every site by heart.</p><button type="button" class="btn-pine btn-sm mt-4" data-site-reset>Clear filters</button></div>
+    </section>
+
+    <section id="cabins" class="border-y-2 border-bark bg-birch-2" aria-labelledby="cabins-title">
+      <div class="container-x py-16 lg:py-24">
+        <p class="eyebrow">The cabins</p>
+        <h2 id="cabins-title" class="display mt-3 max-w-3xl text-4xl sm:text-5xl">Five cabins, each built for a different kind of trip</h2>
+        <p class="lede mt-5 max-w-3xl">Every cabin has beds with mattresses (bring sleeping bags or sheets and pillows), electric heat, lights and outlets, a mini fridge, a porch with a picnic table and a fire ring. Water and showers are at the bathhouse, except in Trillium Cabin.</p>
+        <div class="mt-12 grid gap-8">
+          <article id="cabin-agate" class="reveal card grid overflow-hidden md:grid-cols-[1fr_1.2fr]">
+            <div class="art aspect-[4/3] border-b border-bark/15 md:border-b-0 md:border-r"><img src="assets/img/cabin-agate.svg" alt="Agate Cabin: board-and-batten walls, a deck facing the lake and two Adirondack chairs" width="800" height="600" loading="lazy" decoding="async"></div>
+            <div class="flex flex-col p-6 sm:p-8">
+              <div class="flex flex-wrap items-start justify-between gap-3"><div><p class="text-sm font-extrabold uppercase tracking-[0.14em] text-blaze-dark">C1 &middot; Lake view</p><h3 class="mt-1 font-display text-3xl font-bold">Agate Cabin</h3></div><p class="text-right text-sm text-lichen">from<span class="block font-display text-2xl font-bold text-bark" data-rate-from="C1">$95</span>a night</p></div>
+              <p class="mt-3 text-lichen">The closest cabin to the water: one room with a queen bed and a twin bunk, a deck facing north over the lake and two chairs we have to chase people out of at sunset.</p>
+              <ul class="mt-4 grid gap-1.5 text-[0.98rem] sm:grid-cols-2"><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Sleeps 4</li><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Lake view deck</li><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>No pets</li><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>90 yards to the bathhouse</li></ul>
+              <div class="mt-auto flex flex-wrap gap-3 pt-6"><a href="book.html?site=C1" class="btn-blaze btn-sm">Book Agate Cabin</a><a href="sites.html?site=C1" class="btn-birch btn-sm">Show on the map</a></div>
+            </div>
+          </article>
+          <article id="cabin-chickadee" class="reveal card grid overflow-hidden md:grid-cols-[1fr_1.2fr]">
+            <div class="art aspect-[4/3] border-b border-bark/15 md:border-b-0 md:border-r"><img src="assets/img/cabin-chickadee.svg" alt="Chickadee Cabin: a red cabin with a screened porch, a fenced yard and a dog bowl by the step" width="800" height="600" loading="lazy" decoding="async"></div>
+            <div class="flex flex-col p-6 sm:p-8">
+              <div class="flex flex-wrap items-start justify-between gap-3"><div><p class="text-sm font-extrabold uppercase tracking-[0.14em] text-blaze-dark">C2 &middot; Dog-friendly</p><h3 class="mt-1 font-display text-3xl font-bold">Chickadee Cabin</h3></div><p class="text-right text-sm text-lichen">from<span class="block font-display text-2xl font-bold text-bark" data-rate-from="C2">$89</span>a night</p></div>
+              <p class="mt-3 text-lichen">Painted barn red, with a screened porch for blackfly season and a fenced yard, so the dog can come along. Two dogs at most; there&rsquo;s a towel hook by the door for after the beach.</p>
+              <ul class="mt-4 grid gap-1.5 text-[0.98rem] sm:grid-cols-2"><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Sleeps 4</li><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Screened porch</li><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Up to 2 dogs ($15 each per stay)</li><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Fenced yard</li></ul>
+              <div class="mt-auto flex flex-wrap gap-3 pt-6"><a href="book.html?site=C2" class="btn-blaze btn-sm">Book Chickadee Cabin</a><a href="sites.html?site=C2" class="btn-birch btn-sm">Show on the map</a></div>
+            </div>
+          </article>
+          <article id="cabin-osprey" class="reveal card grid overflow-hidden md:grid-cols-[1fr_1.2fr]">
+            <div class="art aspect-[4/3] border-b border-bark/15 md:border-b-0 md:border-r"><img src="assets/img/cabin-osprey.svg" alt="Osprey Cabin: a narrow two-story cabin raised on cedar posts, with an outside stair and a loft window among the pine tops" width="800" height="600" loading="lazy" decoding="async"></div>
+            <div class="flex flex-col p-6 sm:p-8">
+              <div class="flex flex-wrap items-start justify-between gap-3"><div><p class="text-sm font-extrabold uppercase tracking-[0.14em] text-blaze-dark">C3 &middot; Two floors</p><h3 class="mt-1 font-display text-3xl font-bold">Osprey Cabin</h3></div><p class="text-right text-sm text-lichen">from<span class="block font-display text-2xl font-bold text-bark" data-rate-from="C3">$125</span>a night</p></div>
+              <p class="mt-3 text-lichen">Our biggest cabin stands on cedar posts with an outside stair. Downstairs has a queen and a bunk; the loft has two twins and a window level with the pine tops, looking out to the lake.</p>
+              <ul class="mt-4 grid gap-1.5 text-[0.98rem] sm:grid-cols-2"><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Sleeps 6</li><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Sleeping loft</li><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>No pets</li><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Steep stairs: not for toddlers</li></ul>
+              <div class="mt-auto flex flex-wrap gap-3 pt-6"><a href="book.html?site=C3" class="btn-blaze btn-sm">Book Osprey Cabin</a><a href="sites.html?site=C3" class="btn-birch btn-sm">Show on the map</a></div>
+            </div>
+          </article>
+          <article id="cabin-balsam" class="reveal card grid overflow-hidden md:grid-cols-[1fr_1.2fr]">
+            <div class="art aspect-[4/3] border-b border-bark/15 md:border-b-0 md:border-r"><img src="assets/img/cabin-balsam.svg" alt="Balsam Cabin: a round-log cabin with a stone chimney, woodpile and smoke rising among balsam firs" width="800" height="600" loading="lazy" decoding="async"></div>
+            <div class="flex flex-col p-6 sm:p-8">
+              <div class="flex flex-wrap items-start justify-between gap-3"><div><p class="text-sm font-extrabold uppercase tracking-[0.14em] text-blaze-dark">C4 &middot; Wood stove</p><h3 class="mt-1 font-display text-3xl font-bold">Balsam Cabin</h3></div><p class="text-right text-sm text-lichen">from<span class="block font-display text-2xl font-bold text-bark" data-rate-from="C4">$105</span>a night</p></div>
+              <p class="mt-3 text-lichen">Round logs, a stone chimney and a little cast-iron wood stove: the one to book for opening weekend in May or fall color in October. Dogs welcome, and the first armful of wood is on us.</p>
+              <ul class="mt-4 grid gap-1.5 text-[0.98rem] sm:grid-cols-2"><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Sleeps 5</li><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Wood stove</li><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Up to 2 dogs ($15 each per stay)</li><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Closest to the creek trail</li></ul>
+              <div class="mt-auto flex flex-wrap gap-3 pt-6"><a href="book.html?site=C4" class="btn-blaze btn-sm">Book Balsam Cabin</a><a href="sites.html?site=C4" class="btn-birch btn-sm">Show on the map</a></div>
+            </div>
+          </article>
+          <article id="cabin-trillium" class="reveal card grid overflow-hidden md:grid-cols-[1fr_1.2fr]">
+            <div class="art aspect-[4/3] border-b border-bark/15 md:border-b-0 md:border-r"><img src="assets/img/cabin-trillium.svg" alt="Trillium Cabin: a single-level cabin with a long gentle ramp, wide door and white trillium flowers in the grass" width="800" height="600" loading="lazy" decoding="async"></div>
+            <div class="flex flex-col p-6 sm:p-8">
+              <div class="flex flex-wrap items-start justify-between gap-3"><div><p class="text-sm font-extrabold uppercase tracking-[0.14em] text-blaze-dark">C5 &middot; Fully accessible</p><h3 class="mt-1 font-display text-3xl font-bold">Trillium Cabin</h3></div><p class="text-right text-sm text-lichen">from<span class="block font-display text-2xl font-bold text-bark" data-rate-from="C5">$99</span>a night</p></div>
+              <p class="mt-3 text-lichen">Built in 2019 with a 1:14 ramp, 36-inch doors, a roll-in shower and its own toilet, and a firm, level path to the beach overlook and the boardwalk. Paved parking right at the ramp.</p>
+              <ul class="mt-4 grid gap-1.5 text-[0.98rem] sm:grid-cols-2"><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Sleeps 4</li><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Private accessible bathroom</li><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Service animals welcome</li><li class="flex gap-2"><span class="blaze-mark mt-1" aria-hidden="true"></span>Raised fire ring</li></ul>
+              <div class="mt-auto flex flex-wrap gap-3 pt-6"><a href="book.html?site=C5" class="btn-blaze btn-sm">Book Trillium Cabin</a><a href="sites.html?site=C5" class="btn-birch btn-sm">Show on the map</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-x py-16 lg:py-20" aria-labelledby="amenities-title">
+      <p class="eyebrow">Around camp</p>
+      <h2 id="amenities-title" class="display mt-3 text-4xl sm:text-5xl">What every camper gets</h2>
+      <ul class="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <li class="panel p-5"><svg viewBox="0 0 24 24" class="h-8 w-8 text-lake" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 4h6a4 4 0 0 1 4 4v2"/><path d="M14 10h4"/><path d="M12 14v1m4-1v1m-8-1v1m2 3v1m4-1v1"/></svg><h3 class="mt-3 font-display text-lg font-bold">Hot showers</h3><p class="mt-1 text-[0.95rem] text-lichen">Two heated bathhouses, cleaned twice a day. Showers are free and the hot water doesn&rsquo;t run out.</p></li>
+        <li class="panel p-5"><svg viewBox="0 0 24 24" class="h-8 w-8 text-lake" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="13" r="4.5"/><path d="M7 6h2"/></svg><h3 class="mt-3 font-display text-lg font-bold">Laundry</h3><p class="mt-1 text-[0.95rem] text-lichen">Two washers and two dryers on Birch Loop, open 7 am to 10 pm. Quarters at the store.</p></li>
+        <li class="panel p-5"><svg viewBox="0 0 24 24" class="h-8 w-8 text-lake" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 18c3 2 15 2 18 0M12 3v11m-5-5 5 5 5-5"/></svg><h3 class="mt-3 font-display text-lg font-bold">Dump station</h3><p class="mt-1 text-[0.95rem] text-lichen">By the office, with a rinse hose. Free for campers, $10 for passers-through.</p></li>
+        <li class="panel p-5"><svg viewBox="0 0 24 24" class="h-8 w-8 text-lake" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><circle cx="12" cy="19.5" r="1"/></svg><h3 class="mt-3 font-display text-lg font-bold">Wi-Fi at the office</h3><p class="mt-1 text-[0.95rem] text-lichen">On the porch and in the store. Out at the sites, enjoy the quiet: cell coverage is patchy.</p></li>
+      </ul>
+    </section>
+  </main>
+  <footer class="on-dark topo-dark mt-auto bg-pine-dark text-birch">
+    <svg viewBox="0 0 1200 48" preserveAspectRatio="none" class="block h-8 w-full bg-birch sm:h-12" aria-hidden="true"><path d="M0 48V30C90 14 170 10 260 22s170 22 260 8 180-28 280-16 200 26 300 12 100-10 100-10V48Z" fill="#12301f"/><path d="M0 40C120 28 220 34 330 36s220-14 330-8 220 14 330 8 210-8 210-8" fill="none" stroke="#f26a21" stroke-width="2" stroke-dasharray="6 7"/></svg>
+    <div class="container-x grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.8fr_1.3fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-3"><svg viewBox="0 0 48 48" class="h-12 w-12 shrink-0" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#1f4b37"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="#f26a21" stroke-width="1.6" stroke-dasharray="3 2.4"/><path d="M24 8.5 30.5 19H27.4L32.6 27.5H28.2L33.8 35.5H14.2L19.8 27.5H15.4L20.6 19H17.5Z" fill="#f6f4ec"/><rect x="22.7" y="35" width="2.6" height="4.5" fill="#f6f4ec"/><path d="M10 37.5c3-1.6 6 .8 9 0M29 40.5c3-1.6 6 .8 9 0" stroke="#8cc2e0" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg><span class="font-display text-2xl font-bold">Tamarack Pines</span></a>
+        <address class="mt-5 not-italic leading-relaxed text-birch/85">2150 Kivi Lake Road<br>Marquette, MI 49855</address>
+        <p class="mt-3 leading-relaxed text-birch/85"><a href="tel:+19065550182" class="link">(906) 555-0182</a><br><a href="mailto:hello@tamarackpines.example" class="link">hello@tamarackpines.example</a></p>
+      </div>
+      <div><h2 class="eyebrow">Stay</h2><ul class="mt-4 space-y-2"><li><a href="sites.html" class="link">Sites &amp; cabins</a></li><li><a href="book.html" class="link">Book a site</a></li><li><a href="rates.html" class="link">Rates &amp; policies</a></li><li><a href="store.html" class="link">Camp store</a></li></ul></div>
+      <div><h2 class="eyebrow">Explore</h2><ul class="mt-4 space-y-2"><li><a href="activities.html" class="link">Trails &amp; paddling</a></li><li><a href="activities.html#programs" class="link">Guided programs</a></li><li><a href="visit.html" class="link">Visit &amp; FAQ</a></li><li><a href="contact.html" class="link">Contact</a></li></ul></div>
+      <div>
+        <h2 class="eyebrow">The Campfire Letter</h2>
+        <p class="mt-4 text-birch/85">Three letters a year: winter news and next season&rsquo;s dates, what&rsquo;s new before opening day, and how the fall color is coming along.</p>
+        <!-- Shows a success message; connect it to your mailing list in assets/js/main.js (initForms), see DOCS.md "Forms". -->
+        <form id="newsletter" class="mt-4 flex flex-col gap-3 sm:flex-row sm:items-start" data-validate data-success="newsletter-success" data-hide-on-success novalidate>
+          <div class="flex-1">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input id="newsletter-email" name="email" type="email" autocomplete="email" required data-required-msg="Enter your email address." placeholder="you@example.com" class="field" aria-describedby="newsletter-email-error">
+            <p id="newsletter-email-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <button type="submit" class="btn-blaze shrink-0">Sign up</button>
+        </form>
+        <div id="newsletter-success" class="mt-4 rounded-lg border-2 border-birch/50 p-3" tabindex="-1" role="status" hidden data-success-panel><p>You&rsquo;re on the list. Look out for the next Campfire Letter in your inbox.</p></div>
+      </div>
+    </div>
+    <div class="border-t border-white/15">
+      <div class="container-x flex flex-col gap-2 py-5 text-[0.92rem] text-birch/80 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Tamarack Pines Campground &amp; Cabins, Marquette, Michigan. A fictional campground.</p>
+        <p>Leave no trace &middot; Buy firewood where you burn it</p>
+      </div>
+    </div>
+  </footer>
+  <p id="live-region" class="sr-only" aria-live="polite"></p>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

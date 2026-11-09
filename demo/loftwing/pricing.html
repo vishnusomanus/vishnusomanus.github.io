@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Founding-member pricing calculator | Loftwing</title>
+    <meta
+      name="description"
+      content="Work out your Loftwing price by list size and sending volume, monthly or annual, with the 25% founding discount for waitlist members and a full plan comparison."
+    />
+    <meta name="theme-color" content="#170c2c" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Loftwing" />
+    <meta property="og:title" content="Founding-member pricing calculator | Loftwing" />
+    <meta
+      property="og:description"
+      content="Work out your Loftwing price by list size and sending volume, monthly or annual, with the 25% founding discount for waitlist members and a full plan comparison."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;800;900&amp;family=Sen:wght@400;500;600;700&amp;family=Overpass+Mono:wght@400;600;700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="pricing" class="flex min-h-screen flex-col">
+    <a
+      href="#main"
+      class="sr-only z-50 rounded-lg bg-apricot px-4 py-3 font-bold text-night focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      >Skip to content</a
+    >
+    <div class="sky" aria-hidden="true"></div>
+    <header class="sticky top-0 z-40 pt-3">
+      <div class="wrap">
+        <div
+          class="relative flex min-h-16 items-center justify-between gap-3 rounded-2xl border border-white/15 bg-[#190e2e]/75 px-3 shadow-[0_18px_40px_-24px_rgba(4,0,18,0.9)] backdrop-blur-xl sm:px-4"
+        >
+          <a href="index.html" class="flex items-center gap-2.5 rounded-lg" aria-label="Loftwing home"
+            ><svg viewBox="0 0 40 40" class="size-9 shrink-0" aria-hidden="true">
+              <defs>
+                <linearGradient id="logo-sky" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ffcb9e" />
+                  <stop offset="1" stop-color="#ff8f70" />
+                </linearGradient>
+              </defs>
+              <rect width="40" height="40" rx="11" fill="url(#logo-sky)" />
+              <path
+                d="M6 28 20 10l14 18"
+                fill="none"
+                stroke="#241238"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path d="M13.5 28c1-6 4-9.5 8-11 .5 4.5 2.5 7 7 8-3.5 3-10 4.5-15 3Z" fill="#241238" />
+              <circle cx="20" cy="9" r="2" fill="#241238" /></svg
+            ><span class="font-display text-[1.4rem] font-extrabold tracking-tight">Loftwing</span></a
+          >
+          <nav class="hidden lg:block" aria-label="Main">
+            <ul class="flex items-center gap-0.5">
+              <li><a class="nav-link" href="product.html">Product</a></li>
+              <li><a class="nav-link" href="pricing.html" aria-current="page">Pricing</a></li>
+              <li><a class="nav-link" href="migrate.html">Switch</a></li>
+              <li><a class="nav-link" href="roadmap.html">Roadmap</a></li>
+              <li><a class="nav-link" href="journal.html">Journal</a></li>
+              <li><a class="nav-link" href="about.html">About</a></li>
+            </ul>
+          </nav>
+          <div class="flex items-center gap-2">
+            <a class="btn btn-sm hidden whitespace-nowrap sm:inline-flex" href="waitlist.html" data-spot-cta
+              >Join the waitlist</a
+            >
+            <button
+              type="button"
+              class="inline-flex size-11 items-center justify-center rounded-xl border border-white/25 lg:hidden"
+              data-menu-button
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              aria-label="Open menu"
+            >
+              <svg viewBox="0 0 24 24" class="size-6" aria-hidden="true" data-menu-open>
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="size-6" aria-hidden="true" data-menu-close hidden>
+                <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+          <nav
+            id="mobile-menu"
+            class="absolute inset-x-0 top-[calc(100%+0.5rem)] rounded-2xl border border-white/15 bg-plum p-3 lg:hidden"
+            aria-label="Mobile"
+            hidden
+          >
+            <ul class="grid gap-1">
+              <li><a class="nav-link !py-3 text-lg" href="product.html">Product</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="pricing.html" aria-current="page">Pricing</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="migrate.html">Switch</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="roadmap.html">Roadmap</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="journal.html">Journal</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="about.html">About</a></li>
+              <li class="pt-2"><a class="btn w-full" href="waitlist.html" data-spot-cta>Join the waitlist</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="pt-10 lg:pt-14">
+        <div class="wrap">
+          <div class="grid items-end gap-6 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)]">
+            <div>
+              <p class="eyebrow">
+                Founding pricing closes
+                <time data-date="foundingEnd" data-format="medium" datetime="2027-03-08">Mar 8, 2027</time>
+              </p>
+              <h1 class="mt-4 text-[clamp(2.5rem,5vw,4rem)] leading-[1.05] font-black">
+                Priced by your list, not by how often you write
+              </h1>
+              <p class="mt-4 max-w-2xl text-lg text-haze">
+                Tell us your list size and how often you send. Founding members keep 25% off for as long as they stay.
+              </p>
+            </div>
+            <svg viewBox="0 0 320 170" class="hidden w-full max-w-xs justify-self-end lg:block" aria-hidden="true">
+              <g fill="#3a1d52" stroke="#ffcb9e" stroke-width="2" stroke-linejoin="round">
+                <path d="M16 150v-50l40-26 40 26v50Z" />
+                <path d="M116 150V76l44-30 44 30v74Z" />
+                <path d="M224 150V48l42-34 42 34v102Z" />
+              </g>
+              <g fill="#ff8f70">
+                <rect x="46" y="110" width="20" height="24" rx="10" />
+                <rect x="134" y="86" width="16" height="20" rx="8" />
+                <rect x="170" y="86" width="16" height="20" rx="8" />
+                <rect x="150" y="116" width="20" height="30" rx="10" />
+                <rect x="240" y="58" width="14" height="18" rx="7" />
+                <rect x="278" y="58" width="14" height="18" rx="7" />
+                <rect x="240" y="88" width="14" height="18" rx="7" />
+                <rect x="278" y="88" width="14" height="18" rx="7" />
+                <rect x="256" y="116" width="20" height="30" rx="10" />
+              </g>
+              <path d="M4 150h312" stroke="#8c7da6" stroke-width="2" />
+            </svg>
+          </div>
+
+          <form class="glass mt-8 grid gap-6 p-5 sm:p-7 lg:grid-cols-2" data-price-form novalidate>
+            <div>
+              <div class="flex flex-wrap items-end justify-between gap-3">
+                <label class="label" for="price-subs">Subscribers</label>
+                <input
+                  class="field !mt-0 !w-36 text-right font-mono"
+                  id="price-subs"
+                  name="subscribers"
+                  type="number"
+                  inputmode="numeric"
+                  min="1"
+                  max="1000000"
+                  step="1"
+                  value="5000"
+                  aria-describedby="price-error"
+                />
+              </div>
+              <input
+                class="range mt-2"
+                type="range"
+                name="subscribersRange"
+                min="100"
+                max="100000"
+                step="100"
+                value="5000"
+                aria-label="Subscribers slider"
+              />
+              <span class="error" id="price-error" data-price-error></span>
+              <label class="label mt-4" for="price-sends">Emails per subscriber, per month</label>
+              <input
+                class="range mt-1"
+                id="price-sends"
+                name="sends"
+                type="range"
+                min="1"
+                max="30"
+                step="1"
+                value="4"
+                aria-describedby="sends-output"
+              />
+              <p class="text-[0.95rem] text-haze" id="sends-output" data-sends-output></p>
+            </div>
+            <div class="flex flex-col gap-5">
+              <fieldset>
+                <legend class="label">Billing</legend>
+                <div class="mt-2 flex flex-wrap gap-2">
+                  <label class="chip"
+                    ><input class="sr-only" type="radio" name="billing" value="monthly" checked />Monthly</label
+                  >
+                  <label class="chip"
+                    ><input class="sr-only" type="radio" name="billing" value="annual" />Annual, save 15%</label
+                  >
+                </div>
+              </fieldset>
+              <div>
+                <label class="pane flex min-h-12 items-start gap-3 p-3"
+                  ><input type="checkbox" name="founding" class="mt-0.5 size-5 shrink-0 accent-coral" checked /><span
+                    ><strong class="block font-semibold">Founding-member price</strong
+                    ><span class="block text-sm text-haze" data-member-note
+                      >Join the waitlist to lock in 25% off for as long as you stay.</span
+                    ></span
+                  ></label
+                >
+              </div>
+              <div class="mt-auto flex flex-wrap items-center justify-between gap-3">
+                <p class="min-w-0 flex-1 font-semibold" data-price-summary aria-live="polite">
+                  Solo fits best: $29.25 a month for 5,000 subscribers.
+                </p>
+                <button type="button" class="btn btn-ghost btn-sm" data-price-reset>Reset</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="mt-5 grid gap-4 md:grid-cols-3" data-plan-cards></div>
+          <div class="glass mt-5 p-6 sm:p-8" data-custom-quote hidden>
+            <h2 class="text-2xl font-extrabold">More than 100,000 subscribers?</h2>
+            <p class="mt-2 max-w-xl text-haze">
+              Lists this size get a dedicated sending address and a real conversation about warm-up, so we quote them
+              one by one.
+            </p>
+            <a class="btn mt-4" href="about.html#contact">Ask for a quote</a>
+          </div>
+          <p class="mt-3 text-sm text-fog">
+            Prices in US dollars. Extra emails beyond a plan cost $0.40 per 1,000 and aren't discounted. Annual plans
+            are billed once a year.
+          </p>
+        </div>
+      </section>
+
+      <section class="reveal wrap mt-16" aria-labelledby="compare-heading">
+        <h2 id="compare-heading" class="text-[clamp(1.9rem,3.8vw,2.8rem)] leading-tight font-extrabold">
+          Compare the plans
+        </h2>
+        <p class="mt-1 text-sm text-fog sm:hidden">Swipe the table sideways to see every plan.</p>
+        <div class="glass relative mt-5 overflow-x-auto" tabindex="0" role="region" aria-labelledby="compare-heading">
+          <table class="w-full min-w-[32rem] text-[0.95rem]">
+            <thead>
+              <tr class="text-left">
+                <th scope="col" class="px-4 py-3 font-semibold text-haze"><span class="sr-only">Feature</span></th>
+                <th scope="col" class="px-3 py-3 text-center">
+                  <span class="block font-display text-lg font-extrabold">Solo</span
+                  ><span class="block font-mono text-sm font-medium text-apricot" data-compare-price="solo"
+                    >$29.25/mo</span
+                  >
+                </th>
+                <th scope="col" class="px-3 py-3 text-center">
+                  <span class="block font-display text-lg font-extrabold">Shop</span
+                  ><span class="block font-mono text-sm font-medium text-apricot" data-compare-price="shop"
+                    >$44.25/mo</span
+                  >
+                </th>
+                <th scope="col" class="px-3 py-3 text-center">
+                  <span class="block font-display text-lg font-extrabold">Press</span
+                  ><span class="block font-mono text-sm font-medium text-apricot" data-compare-price="press"
+                    >$64.50/mo</span
+                  >
+                </th>
+              </tr>
+            </thead>
+            <tbody data-compare-body></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section
+        class="reveal wrap mt-16 grid gap-8 lg:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)]"
+        aria-labelledby="price-faq"
+      >
+        <div>
+          <h2 id="price-faq" class="text-[clamp(1.9rem,3.8vw,2.8rem)] leading-tight font-extrabold">
+            Pricing questions
+          </h2>
+          <p class="mt-2 text-haze">
+            Not sure which plan fits? <a class="text-link" href="about.html#contact">Tell us about your list</a>.
+          </p>
+        </div>
+        <div class="space-y-3">
+          <details class="glass group p-0">
+            <summary
+              class="flex min-h-14 cursor-pointer items-center justify-between gap-4 rounded-[1.25rem] px-5 py-3 font-display text-lg font-bold"
+            >
+              Who gets the founding price?<span
+                class="faq-mark inline-block shrink-0 text-2xl leading-none font-normal text-apricot transition-transform"
+                aria-hidden="true"
+                >+</span
+              >
+            </summary>
+            <div class="px-5 pb-5 text-haze">
+              Anyone on the waitlist when founding pricing closes on
+              <time data-date="foundingEnd" data-format="monthDay" datetime="2027-03-08">March 8</time>. It stays with
+              your account for as long as you remain subscribed, whichever plan you choose.
+            </div>
+          </details>
+          <details class="glass group p-0">
+            <summary
+              class="flex min-h-14 cursor-pointer items-center justify-between gap-4 rounded-[1.25rem] px-5 py-3 font-display text-lg font-bold"
+            >
+              What happens when my list crosses a price band?<span
+                class="faq-mark inline-block shrink-0 text-2xl leading-none font-normal text-apricot transition-transform"
+                aria-hidden="true"
+                >+</span
+              >
+            </summary>
+            <div class="px-5 pb-5 text-haze">
+              Your price moves up at your next renewal, not mid-month. Bands include their top number, so 1,000
+              subscribers is in the first band and 1,001 is in the next.
+            </div>
+          </details>
+          <details class="glass group p-0">
+            <summary
+              class="flex min-h-14 cursor-pointer items-center justify-between gap-4 rounded-[1.25rem] px-5 py-3 font-display text-lg font-bold"
+            >
+              Do unsubscribed readers count?<span
+                class="faq-mark inline-block shrink-0 text-2xl leading-none font-normal text-apricot transition-transform"
+                aria-hidden="true"
+                >+</span
+              >
+            </summary>
+            <div class="px-5 pb-5 text-haze">
+              No. You only pay for people you can actually email. Readers resting after a win-back don't count either.
+            </div>
+          </details>
+          <details class="glass group p-0">
+            <summary
+              class="flex min-h-14 cursor-pointer items-center justify-between gap-4 rounded-[1.25rem] px-5 py-3 font-display text-lg font-bold"
+            >
+              Can I change plans later?<span
+                class="faq-mark inline-block shrink-0 text-2xl leading-none font-normal text-apricot transition-transform"
+                aria-hidden="true"
+                >+</span
+              >
+            </summary>
+            <div class="px-5 pb-5 text-haze">
+              Yes, at any time. Going up takes effect right away, and going down takes effect at your next renewal. You
+              keep your founding discount either way.
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="reveal wrap mt-16 text-center" aria-labelledby="price-cta">
+        <h2 id="price-cta" class="text-[clamp(1.9rem,3.8vw,2.8rem)] font-extrabold">Lock in the founding price</h2>
+        <p class="mt-2 text-lg text-haze">It takes a minute, and joining costs nothing.</p>
+        <a class="btn mt-5" href="waitlist.html">Join the waitlist</a>
+      </section>
+    </main>
+    <footer class="mt-auto pt-16">
+      <div class="wrap pb-8">
+        <div class="glass grid gap-8 p-6 sm:grid-cols-2 sm:p-8 lg:grid-cols-[1.6fr_1fr_1fr_1.2fr]">
+          <div>
+            <a href="index.html" class="inline-flex items-center gap-2.5 rounded-lg" aria-label="Loftwing home"
+              ><svg viewBox="0 0 40 40" class="size-9 shrink-0" aria-hidden="true">
+                <defs>
+                  <linearGradient id="logo-sky-footer" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#ffcb9e" />
+                    <stop offset="1" stop-color="#ff8f70" />
+                  </linearGradient>
+                </defs>
+                <rect width="40" height="40" rx="11" fill="url(#logo-sky-footer)" />
+                <path
+                  d="M6 28 20 10l14 18"
+                  fill="none"
+                  stroke="#241238"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path d="M13.5 28c1-6 4-9.5 8-11 .5 4.5 2.5 7 7 8-3.5 3-10 4.5-15 3Z" fill="#241238" />
+                <circle cx="20" cy="9" r="2" fill="#241238" /></svg
+              ><span class="font-display text-xl font-extrabold">Loftwing</span></a
+            >
+            <p class="mt-3 max-w-xs text-[0.95rem] text-haze">
+              Email marketing for independent newsletters and small online shops, built in Spokane, Washington.
+            </p>
+            <p class="mt-3 text-[0.95rem] text-haze">
+              Public launch <time data-date="launch" data-format="medium" datetime="2027-03-09">Mar 9, 2027</time>
+            </p>
+          </div>
+          <div>
+            <h2 class="mono-label !text-apricot">Product</h2>
+            <ul class="mt-3 space-y-1.5 text-[0.95rem] text-haze">
+              <li><a class="hover:text-mist hover:underline" href="product.html">Tour the tools</a></li>
+              <li><a class="hover:text-mist hover:underline" href="pricing.html">Founding pricing</a></li>
+              <li><a class="hover:text-mist hover:underline" href="migrate.html">Switch to Loftwing</a></li>
+              <li><a class="hover:text-mist hover:underline" href="roadmap.html">Roadmap</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mono-label !text-apricot">Company</h2>
+            <ul class="mt-3 space-y-1.5 text-[0.95rem] text-haze">
+              <li><a class="hover:text-mist hover:underline" href="about.html">About us</a></li>
+              <li><a class="hover:text-mist hover:underline" href="journal.html">Build journal</a></li>
+              <li><a class="hover:text-mist hover:underline" href="waitlist.html">Waitlist</a></li>
+              <li><a class="hover:text-mist hover:underline" href="about.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mono-label !text-apricot">Find us</h2>
+            <address class="mt-3 text-[0.95rem] text-haze not-italic">
+              218 W Sprague Ave, Suite 4<br />Spokane, WA 99201
+            </address>
+            <p class="mt-2 text-[0.95rem] text-haze">
+              <a class="hover:text-mist hover:underline" href="mailto:hello@loftwing.example">hello@loftwing.example</a
+              ><br /><a class="hover:text-mist hover:underline" href="tel:+15095550147">(509) 555-0147</a>
+            </p>
+          </div>
+        </div>
+        <p class="mt-5 flex flex-wrap justify-between gap-x-6 gap-y-1 px-1 text-sm text-fog">
+          <span>&copy; <span data-year>2026</span> Loftwing, Inc.</span><span>Loftwing is a fictional company.</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

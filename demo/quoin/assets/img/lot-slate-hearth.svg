@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" width="400" height="330" fill="none">
+  <defs>
+    <linearGradient id="top" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#6c7774"/><stop offset=".5" stop-color="#7d8885"/><stop offset="1" stop-color="#5f6a68"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9aa4a0"/><stop offset=".35" stop-color="#58625f"/><stop offset="1" stop-color="#3b4442"/>
+    </linearGradient>
+    <linearGradient id="end" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#47504e"/><stop offset="1" stop-color="#363e3c"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="330" fill="#e9e4d8"/>
+  <path d="M28 300h344M28 296v8m344-8v8M365 38v240m-4-240h8m-8 240h8" stroke="#b9b7a6"/>
+  <path d="M30 24h35m-35 7h18" stroke="#929783"/>
+  <ellipse cx="200" cy="262" rx="160" ry="16" fill="#cfc8b6"/>
+  <!-- right end (rough sawn) -->
+  <path d="M342 168l2 24-46 54-1-24z" fill="url(#end)" stroke="#2e3533" stroke-width="2" stroke-linejoin="round"/>
+  <!-- front edge, softened -->
+  <path d="M46 186q-2 12 4 22l246 40q4-14 1-26z" fill="url(#edge)" stroke="#2e3533" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M52 190l244 38" stroke="#b7c0bc" stroke-width="2" stroke-linecap="round" opacity=".8"/>
+  <!-- top face; back edge rough-cut -->
+  <path d="M46 186L96 128 106 128 116 131 127 129 137 137 147 138 158 136 168 136 178 137 188 139 198 147 209 149 219 148 229 146 240 149 250 156 260 158 270 156 280 158 291 158 301 157 311 163 322 163 332 162 342 168 L296 222z" fill="url(#top)" stroke="#2e3533" stroke-width="2" stroke-linejoin="round"/>
+  <!-- riven grain and color patches -->
+  <g stroke="#a5afab" stroke-linecap="round" opacity=".45">
+    <path d="M80 160q120 14 236 36"/><path d="M96 146q110 12 228 34"/><path d="M64 176q110 14 236 38"/><path d="M110 136q100 10 214 30"/>
+  </g>
+  <path d="M140 178q40-20 90-6 20 8 40 12l-8 14q-60 0-122-14z" fill="#89948f" opacity=".35"/>
+  <!-- faint fossil trace -->
+  <g stroke="#c3cbc6" stroke-width="1.2" stroke-linecap="round" opacity=".7">
+    <path d="M196 170q8-12 22-12m-15 6q-2-6-8-8m15 3q2-7 0-12m4 10q7-3 10-9"/>
+  </g>
+  <!-- two faint scratches -->
+  <path d="M110 192l40 4m100 18 30 6" stroke="#cdd4d0" stroke-width="1" opacity=".6"/>
+  <!-- dimension along the front -->
+  <path d="M48 222l246 40m-246-46v12m246 28v12" stroke="#7e4035" stroke-width="1.5"/>
+  <text x="152" y="262" fill="#7e4035" font-family="Sarabun, Arial, sans-serif" font-size="12" letter-spacing="1" transform="rotate(9.2 152 262)">40 IN</text>
+  <text x="318" y="230" fill="#7e4035" font-family="Sarabun, Arial, sans-serif" font-size="12" letter-spacing="1">1¼ IN</text>
+  <text x="200" y="98" fill="#596450" font-family="Sarabun, Arial, sans-serif" font-size="11" letter-spacing="1">ROUGH-CUT BACK EDGE</text>
+  <path d="M224 104l-6 26" stroke="#596450"/>
+</svg>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Camp store pre-orders — Tamarack Pines Campground</title>
+  <meta name="description" content="Pre-order firewood, pasties, s'mores kits, ice and camp gear from the Tamarack Pines camp store and pick it all up when you check in.">
+  <meta name="theme-color" content="#1f4b37">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tamarack Pines Campground &amp; Cabins">
+  <meta property="og:title" content="Camp store pre-orders — Tamarack Pines Campground">
+  <meta property="og:description" content="Pre-order firewood, pasties, s'mores kits, ice and camp gear from the Tamarack Pines camp store and pick it all up when you check in.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&amp;family=Overpass:wght@400;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="store" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-lg bg-blaze px-5 py-3 font-bold text-bark focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <aside class="on-dark bg-pine-dark text-birch" aria-label="Campground status" data-status data-state="closed">
+    <div class="container-x flex min-h-9 items-center justify-between gap-4 py-1.5 text-[0.9rem]">
+      <p class="flex items-center gap-2.5"><span class="status-dot" aria-hidden="true"></span><span data-status-short>Closed for the winter · we open Fri, May 21, 2027</span></p>
+      <p class="hidden sm:block"><a href="tel:+19065550182" class="link">(906) 555-0182</a><span class="mx-2 text-birch/50" aria-hidden="true">/</span>Marquette, Michigan &middot; on Lake Superior</p>
+    </div>
+  </aside>
+  <header id="site-header" class="sticky top-0 z-40 border-b-2 border-bark bg-birch/95 backdrop-blur-sm">
+    <div class="container-x flex h-[4.5rem] items-center justify-between gap-6">
+      <a href="index.html" class="inline-flex items-center gap-3">
+        <svg viewBox="0 0 48 48" class="h-11 w-11 shrink-0" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#1f4b37"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="#f26a21" stroke-width="1.6" stroke-dasharray="3 2.4"/><path d="M24 8.5 30.5 19H27.4L32.6 27.5H28.2L33.8 35.5H14.2L19.8 27.5H15.4L20.6 19H17.5Z" fill="#f6f4ec"/><rect x="22.7" y="35" width="2.6" height="4.5" fill="#f6f4ec"/><path d="M10 37.5c3-1.6 6 .8 9 0M29 40.5c3-1.6 6 .8 9 0" stroke="#8cc2e0" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+        <span class="leading-none"><span class="block font-display text-[1.35rem] font-bold tracking-tight">Tamarack Pines</span><span class="mt-1 block text-[0.8rem] font-bold uppercase tracking-[0.16em] text-lichen">Campground &amp; Cabins</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden xl:block"><ul class="flex items-center gap-6"><li><a href="sites.html" class="relative inline-flex items-center py-2 text-[0.98rem] font-bold text-bark/85 transition hover:text-pine aria-[current=page]:text-pine aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-1 aria-[current=page]:after:h-[3px] aria-[current=page]:after:rounded-full aria-[current=page]:after:bg-blaze">Sites &amp; cabins</a></li><li><a href="activities.html" class="relative inline-flex items-center py-2 text-[0.98rem] font-bold text-bark/85 transition hover:text-pine aria-[current=page]:text-pine aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-1 aria-[current=page]:after:h-[3px] aria-[current=page]:after:rounded-full aria-[current=page]:after:bg-blaze">Activities</a></li><li><a href="rates.html" class="relative inline-flex items-center py-2 text-[0.98rem] font-bold text-bark/85 transition hover:text-pine aria-[current=page]:text-pine aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-1 aria-[current=page]:after:h-[3px] aria-[current=page]:after:rounded-full aria-[current=page]:after:bg-blaze">Rates &amp; policies</a></li><li><a href="store.html" aria-current="page" class="relative inline-flex items-center py-2 text-[0.98rem] font-bold text-bark/85 transition hover:text-pine aria-[current=page]:text-pine aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-1 aria-[current=page]:after:h-[3px] aria-[current=page]:after:rounded-full aria-[current=page]:after:bg-blaze">Camp store<span data-basket-badge hidden class="ml-1.5 inline-grid h-5 min-w-5 place-items-center rounded-full bg-blaze px-1 text-[0.72rem] font-extrabold text-bark"><span data-basket-count>0</span><span class="sr-only"> in basket</span></span></a></li><li><a href="visit.html" class="relative inline-flex items-center py-2 text-[0.98rem] font-bold text-bark/85 transition hover:text-pine aria-[current=page]:text-pine aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-1 aria-[current=page]:after:h-[3px] aria-[current=page]:after:rounded-full aria-[current=page]:after:bg-blaze">Visit &amp; FAQ</a></li><li><a href="contact.html" class="relative inline-flex items-center py-2 text-[0.98rem] font-bold text-bark/85 transition hover:text-pine aria-[current=page]:text-pine aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-1 aria-[current=page]:after:h-[3px] aria-[current=page]:after:rounded-full aria-[current=page]:after:bg-blaze">Contact</a></li></ul></nav>
+      <div class="flex items-center gap-3">
+        <a href="book.html" class="btn-blaze btn-sm hidden sm:inline-flex">Book a site</a>
+        <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-lg border-2 border-bark bg-birch xl:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <span data-icon-open><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span>
+          <span data-icon-close class="hidden"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div class="h-1.5 grid-ticks opacity-60" aria-hidden="true"></div>
+    <div id="mobile-menu" hidden class="h-[calc(100dvh-5rem)] overflow-y-auto border-t-2 border-bark bg-birch xl:hidden">
+      <nav aria-label="Mobile" class="container-x pb-10 pt-2">
+        <ul><li><a href="index.html" class="flex items-center justify-between border-b border-dashed border-bark/25 py-3.5 font-display text-2xl font-bold aria-[current=page]:text-pine">Home<span aria-hidden="true" class="text-blaze-dark">&rarr;</span></a></li><li><a href="book.html" class="flex items-center justify-between border-b border-dashed border-bark/25 py-3.5 font-display text-2xl font-bold aria-[current=page]:text-pine">Book a site<span aria-hidden="true" class="text-blaze-dark">&rarr;</span></a></li><li><a href="sites.html" class="flex items-center justify-between border-b border-dashed border-bark/25 py-3.5 font-display text-2xl font-bold aria-[current=page]:text-pine">Sites &amp; cabins<span aria-hidden="true" class="text-blaze-dark">&rarr;</span></a></li><li><a href="activities.html" class="flex items-center justify-between border-b border-dashed border-bark/25 py-3.5 font-display text-2xl font-bold aria-[current=page]:text-pine">Activities<span aria-hidden="true" class="text-blaze-dark">&rarr;</span></a></li><li><a href="rates.html" class="flex items-center justify-between border-b border-dashed border-bark/25 py-3.5 font-display text-2xl font-bold aria-[current=page]:text-pine">Rates &amp; policies<span aria-hidden="true" class="text-blaze-dark">&rarr;</span></a></li><li><a href="store.html" aria-current="page" class="flex items-center justify-between border-b border-dashed border-bark/25 py-3.5 font-display text-2xl font-bold aria-[current=page]:text-pine">Camp store<span aria-hidden="true" class="text-blaze-dark">&rarr;</span></a></li><li><a href="visit.html" class="flex items-center justify-between border-b border-dashed border-bark/25 py-3.5 font-display text-2xl font-bold aria-[current=page]:text-pine">Visit &amp; FAQ<span aria-hidden="true" class="text-blaze-dark">&rarr;</span></a></li><li><a href="contact.html" class="flex items-center justify-between border-b border-dashed border-bark/25 py-3.5 font-display text-2xl font-bold aria-[current=page]:text-pine">Contact<span aria-hidden="true" class="text-blaze-dark">&rarr;</span></a></li></ul>
+        <p class="mt-6 text-lichen">Call the office: <a href="tel:+19065550182" class="link">(906) 555-0182</a></p>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="topo border-b-2 border-bark">
+      <div class="container-x grid gap-10 py-12 lg:grid-cols-[1.2fr_1fr] lg:items-center lg:py-16">
+        <div>
+          <p class="eyebrow">Camp store</p>
+          <h1 class="display mt-3 text-[2.6rem] sm:text-6xl">Pre-order now, pick up at check-in</h1>
+          <p class="lede mt-5 max-w-2xl">Helmi runs the store by the office: firewood, ice, s&rsquo;mores, pasties from a Marquette bakery, her own thimbleberry jam and the gear people forget. Fill a basket here and it&rsquo;ll be bagged with your name on it when you arrive.</p>
+          <ol class="mt-8 grid gap-3 sm:grid-cols-3">
+            <li class="flex items-center gap-3 font-bold"><span class="step-num" aria-hidden="true">1</span>Fill your basket</li>
+            <li class="flex items-center gap-3 font-bold"><span class="step-num" aria-hidden="true">2</span>Tell us your arrival day</li>
+            <li class="flex items-center gap-3 font-bold"><span class="step-num" aria-hidden="true">3</span>Pay when you pick up</li>
+          </ol>
+        </div>
+        <div class="overflow-hidden rounded-2xl border-2 border-bark bg-white"><div class="art aspect-[4/3]"><img src="assets/img/store-porch.svg" alt="The camp store: a green clapboard building with a porch, firewood stacked by the steps, an ice chest and a chalk sign" width="800" height="600" loading="eager" decoding="async"></div></div>
+      </div>
+    </section>
+
+    <div class="container-x grid gap-8 py-10 lg:grid-cols-[1fr_22rem] lg:py-14">
+      <section class="min-w-0" aria-labelledby="products-title">
+        <div class="flex flex-wrap items-center justify-between gap-4">
+          <h2 id="products-title" class="display text-3xl sm:text-4xl">On the shelves</h2>
+          <div class="flex flex-wrap gap-2" role="group" aria-label="Filter by category">
+            <button type="button" class="chip" data-store-cat="all" aria-pressed="true">Everything</button>
+            <button type="button" class="chip" data-store-cat="fire" aria-pressed="false"><span class="tick" aria-hidden="true">&check;</span>Campfire</button>
+            <button type="button" class="chip" data-store-cat="food" aria-pressed="false"><span class="tick" aria-hidden="true">&check;</span>Food &amp; ice</button>
+            <button type="button" class="chip" data-store-cat="gear" aria-pressed="false"><span class="tick" aria-hidden="true">&check;</span>Gear</button>
+            <button type="button" class="chip" data-store-cat="gifts" aria-pressed="false"><span class="tick" aria-hidden="true">&check;</span>Gifts</button>
+          </div>
+        </div>
+        <ul class="mt-6 grid gap-5 sm:grid-cols-2 xl:grid-cols-3" data-product-grid></ul>
+      </section>
+
+      <aside id="basket" class="scroll-mt-28 lg:sticky lg:top-28 lg:self-start" aria-labelledby="basket-title">
+        <div class="card p-5">
+          <div class="flex items-baseline justify-between gap-3"><h2 id="basket-title" class="font-display text-2xl font-bold">Your basket</h2><button type="button" class="link text-sm" data-basket-clear>Empty</button></div>
+          <p class="text-sm text-lichen" data-basket-summary aria-live="polite">0 items, $0</p>
+          <p class="mt-4 rounded-lg bg-birch-2 p-4 text-[0.95rem] text-lichen" data-basket-empty>Nothing here yet. Firewood and a s&rsquo;mores kit is the classic first night.</p>
+          <ul class="mt-2" data-basket-list></ul>
+          <dl class="mt-3 grid gap-1" data-basket-totals hidden></dl>
+          <!-- Shows an order reference; connect it to your store inbox, see DOCS.md "Forms". -->
+          <form id="pickup-form" class="mt-5 grid gap-3 border-t-2 border-dashed border-bark/25 pt-5" data-validate data-success="pickup-success" data-ref-prefix="ST" novalidate hidden>
+            <p class="rounded-lg bg-lake-light px-3 py-2 text-sm text-lake-deep" data-booking-note hidden>We&rsquo;ve filled in your booking <strong data-booking-ref>TP-0000</strong>.</p>
+            <div><label class="field-label" for="pickup-date">Arrival day</label><input id="pickup-date" name="pickup" type="date" class="field" required data-required-msg="Choose the day you arrive." aria-describedby="pickup-date-error"><p id="pickup-date-error" class="field-error" aria-live="polite"></p></div>
+            <div><label class="field-label" for="pickup-ref">Booking reference <span class="font-normal text-lichen">(optional)</span></label><input id="pickup-ref" name="ref" class="field" placeholder="TP-7K2Q" autocomplete="off" aria-describedby="pickup-ref-error"><p id="pickup-ref-error" class="field-error" aria-live="polite"></p></div>
+            <div><label class="field-label" for="pickup-name">Name</label><input id="pickup-name" name="name" class="field" autocomplete="name" required data-required-msg="Tell us whose name goes on the bag." aria-describedby="pickup-name-error"><p id="pickup-name-error" class="field-error" aria-live="polite"></p></div>
+            <div><label class="field-label" for="pickup-email">Email</label><input id="pickup-email" name="email" type="email" class="field" autocomplete="email" required data-required-msg="Enter your email." aria-describedby="pickup-email-error"><p id="pickup-email-error" class="field-error" aria-live="polite"></p></div>
+            <p class="field-error" data-form-error aria-live="polite"></p>
+            <button type="submit" class="btn-blaze w-full">Place pre-order</button>
+            <p class="text-sm text-lichen">Nothing to pay now. Pay at the store when you pick up.</p>
+          </form>
+          <div id="pickup-success" class="mt-5 rounded-xl border-2 border-pine bg-[#eef5ea] p-4" tabindex="-1" role="status" hidden data-success-panel>
+            <p class="font-display text-xl font-bold">Thanks<span data-success-name></span>. Order <span data-success-ref>ST-0000</span> is in.</p>
+            <p class="mt-2 text-[0.98rem]"><span data-success-items>0 items</span>, <span data-success-total>$0</span> to pay at pickup. We&rsquo;ll have it bagged at the store on <span data-success-date>your arrival day</span>.</p>
+          </div>
+        </div>
+        <div class="panel mt-5 p-5 text-[0.95rem]">
+          <h2 class="font-display text-lg font-bold">Store hours</h2>
+          <p class="mt-1 text-lichen">In season, every day 8 am to 9 pm. Pasties arrive at 2 pm on Fridays and Saturdays; on other days, order them at least a day ahead. Questions? <a href="tel:+19065550186" class="link">(906) 555-0186</a></p>
+        </div>
+      </aside>
+    </div>
+    <a href="#basket" class="btn-pine fixed bottom-5 left-5 z-40 shadow-lg lg:hidden" data-basket-badge hidden>View basket (<span data-basket-count>0</span>)</a>
+  </main>
+  <footer class="on-dark topo-dark mt-auto bg-pine-dark text-birch">
+    <svg viewBox="0 0 1200 48" preserveAspectRatio="none" class="block h-8 w-full bg-birch sm:h-12" aria-hidden="true"><path d="M0 48V30C90 14 170 10 260 22s170 22 260 8 180-28 280-16 200 26 300 12 100-10 100-10V48Z" fill="#12301f"/><path d="M0 40C120 28 220 34 330 36s220-14 330-8 220 14 330 8 210-8 210-8" fill="none" stroke="#f26a21" stroke-width="2" stroke-dasharray="6 7"/></svg>
+    <div class="container-x grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_0.8fr_1.3fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-3"><svg viewBox="0 0 48 48" class="h-12 w-12 shrink-0" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#1f4b37"/><circle cx="24" cy="24" r="19.5" fill="none" stroke="#f26a21" stroke-width="1.6" stroke-dasharray="3 2.4"/><path d="M24 8.5 30.5 19H27.4L32.6 27.5H28.2L33.8 35.5H14.2L19.8 27.5H15.4L20.6 19H17.5Z" fill="#f6f4ec"/><rect x="22.7" y="35" width="2.6" height="4.5" fill="#f6f4ec"/><path d="M10 37.5c3-1.6 6 .8 9 0M29 40.5c3-1.6 6 .8 9 0" stroke="#8cc2e0" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg><span class="font-display text-2xl font-bold">Tamarack Pines</span></a>
+        <address class="mt-5 not-italic leading-relaxed text-birch/85">2150 Kivi Lake Road<br>Marquette, MI 49855</address>
+        <p class="mt-3 leading-relaxed text-birch/85"><a href="tel:+19065550182" class="link">(906) 555-0182</a><br><a href="mailto:hello@tamarackpines.example" class="link">hello@tamarackpines.example</a></p>
+      </div>
+      <div><h2 class="eyebrow">Stay</h2><ul class="mt-4 space-y-2"><li><a href="sites.html" class="link">Sites &amp; cabins</a></li><li><a href="book.html" class="link">Book a site</a></li><li><a href="rates.html" class="link">Rates &amp; policies</a></li><li><a href="store.html" class="link">Camp store</a></li></ul></div>
+      <div><h2 class="eyebrow">Explore</h2><ul class="mt-4 space-y-2"><li><a href="activities.html" class="link">Trails &amp; paddling</a></li><li><a href="activities.html#programs" class="link">Guided programs</a></li><li><a href="visit.html" class="link">Visit &amp; FAQ</a></li><li><a href="contact.html" class="link">Contact</a></li></ul></div>
+      <div>
+        <h2 class="eyebrow">The Campfire Letter</h2>
+        <p class="mt-4 text-birch/85">Three letters a year: winter news and next season&rsquo;s dates, what&rsquo;s new before opening day, and how the fall color is coming along.</p>
+        <!-- Shows a success message; connect it to your mailing list in assets/js/main.js (initForms), see DOCS.md "Forms". -->
+        <form id="newsletter" class="mt-4 flex flex-col gap-3 sm:flex-row sm:items-start" data-validate data-success="newsletter-success" data-hide-on-success novalidate>
+          <div class="flex-1">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input id="newsletter-email" name="email" type="email" autocomplete="email" required data-required-msg="Enter your email address." placeholder="you@example.com" class="field" aria-describedby="newsletter-email-error">
+            <p id="newsletter-email-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <button type="submit" class="btn-blaze shrink-0">Sign up</button>
+        </form>
+        <div id="newsletter-success" class="mt-4 rounded-lg border-2 border-birch/50 p-3" tabindex="-1" role="status" hidden data-success-panel><p>You&rsquo;re on the list. Look out for the next Campfire Letter in your inbox.</p></div>
+      </div>
+    </div>
+    <div class="border-t border-white/15">
+      <div class="container-x flex flex-col gap-2 py-5 text-[0.92rem] text-birch/80 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Tamarack Pines Campground &amp; Cabins, Marquette, Michigan. A fictional campground.</p>
+        <p>Leave no trace &middot; Buy firewood where you burn it</p>
+      </div>
+    </div>
+  </footer>
+  <p id="live-region" class="sr-only" aria-live="polite"></p>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

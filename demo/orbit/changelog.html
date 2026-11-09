@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Changelog — What’s new in Orbit</title>
+  <meta name="description" content="Every new feature, improvement and fix in Orbit, the shift scheduler for hospitality and retail. Filter by topic and subscribe to product updates.">
+  <meta name="theme-color" content="#fdfaf5">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Orbit">
+  <meta property="og:title" content="Changelog — What’s new in Orbit">
+  <meta property="og:description" content="Every new feature, improvement and fix in Orbit, the shift scheduler for hospitality and retail. Filter by topic and subscribe to product updates.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500..800&amp;family=Rethink+Sans:ital,wght@0,400..700;1,400&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="changelog" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[95] rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 px-3 pt-3 sm:px-5">
+    <div class="bar mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 rounded-full border border-transparent pr-2.5 pl-4 sm:pl-5">
+      <a href="index.html" class="group inline-flex items-center gap-2" aria-label="Orbit home">
+        <svg viewBox="0 0 40 40" class="h-9 w-9 transition-transform duration-500 group-hover:rotate-[20deg] shrink-0" aria-hidden="true"><g transform="rotate(-22 20 20)"><ellipse cx="20" cy="20" rx="17.5" ry="7" fill="none" stroke="#1f1d3d" stroke-width="2.6"/></g><circle cx="20" cy="20" r="9.5" fill="#ff6b4a"/><circle cx="16.6" cy="16.4" r="2.6" fill="#fff" opacity=".45"/><g transform="rotate(-22 20 20)"><path d="M2.5 20a17.5 7 0 0 0 35 0" fill="none" stroke="#1f1d3d" stroke-width="2.6" stroke-linecap="round"/><circle cx="37.5" cy="20" r="3.4" fill="#ffd84d" stroke="#1f1d3d" stroke-width="2"/></g></svg>
+        <span class="font-display text-[22px] font-bold tracking-[-0.03em]">orbit</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-0.5">
+          <li><a href="features.html" class="nav-link">Product</a></li>
+          <li><a href="integrations.html" class="nav-link">Integrations</a></li>
+          <li><a href="customers.html" class="nav-link">Customers</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="about.html" class="nav-link">Company</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="nav-link hidden sm:inline-flex">Talk to sales</a>
+        <a href="signup.html" class="btn-primary btn-sm hidden sm:inline-flex">Start free trial</a>
+        <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-full border border-line bg-white text-ink lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="mx-auto mt-2 max-w-7xl rounded-4xl border border-line bg-white p-3 shadow-[0_24px_48px_-24px_rgba(31,29,61,.4)] lg:hidden">
+      <nav aria-label="Mobile">
+        <ul class="grid gap-0.5">
+          <li><a href="features.html" class="m-link">Product<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="integrations.html" class="m-link">Integrations<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="customers.html" class="m-link">Customers<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="pricing.html" class="m-link">Pricing<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="about.html" class="m-link">Company<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="changelog.html" class="m-link" aria-current="page">Changelog<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="contact.html" class="m-link">Talk to sales<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+        </ul>
+        <a href="signup.html" class="btn-primary btn-lg mt-3 w-full">Start free trial</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="relative -mt-[5.75rem] overflow-hidden pt-[5.75rem]">
+      <div class="bg-mesh pointer-events-none absolute inset-0 opacity-60" aria-hidden="true"></div>
+      <div class="container-x relative pt-14 pb-12 sm:pt-20">
+        <p class="eyebrow reveal"><span class="eyebrow-dot"></span>Changelog</p>
+        <h1 class="h-display reveal reveal-d1 mt-6 max-w-3xl">What’s new in <span class="marker marker-lilac">Orbit</span></h1>
+        <p class="lead reveal reveal-d2 mt-6 max-w-2xl">We ship something every two weeks. Most of it starts as a message from a manager in the middle of service.</p>
+      </div>
+    </section>
+
+    <section class="container-x pb-20 sm:pb-28">
+      <div class="grid gap-12 lg:grid-cols-[18rem_minmax(0,1fr)] lg:gap-16">
+        <aside class="lg:sticky lg:top-28 lg:self-start" data-back-to-top-hide>
+          <div class="reveal grid gap-6">
+            <div>
+              <h2 class="text-sm font-bold">Filter by topic</h2>
+              <div data-filter="changelog" data-filter-param="tag" data-filter-noun="update" role="group" aria-label="Filter updates by topic" class="mt-3 flex flex-wrap gap-2 lg:flex-col lg:items-start">
+                <button type="button" class="pill" data-filter-value="all" aria-pressed="true">All updates <span class="pill-count"></span></button>
+                <button type="button" class="pill" data-filter-value="new" aria-pressed="false"><span class="h-2.5 w-2.5 rounded-full bg-mint ring-1 ring-mint-ink/30" aria-hidden="true"></span>New <span class="pill-count"></span></button>
+                <button type="button" class="pill" data-filter-value="improved" aria-pressed="false"><span class="h-2.5 w-2.5 rounded-full bg-lilac ring-1 ring-lilac-ink/30" aria-hidden="true"></span>Improved <span class="pill-count"></span></button>
+                <button type="button" class="pill" data-filter-value="fixed" aria-pressed="false"><span class="h-2.5 w-2.5 rounded-full bg-peach ring-1 ring-peach-ink/30" aria-hidden="true"></span>Fixed <span class="pill-count"></span></button>
+                <button type="button" class="pill" data-filter-value="mobile" aria-pressed="false"><span class="h-2.5 w-2.5 rounded-full bg-sky ring-1 ring-sky-ink/30" aria-hidden="true"></span>Mobile <span class="pill-count"></span></button>
+                <button type="button" class="pill" data-filter-value="integrations" aria-pressed="false"><span class="h-2.5 w-2.5 rounded-full bg-butter ring-1 ring-butter-ink/30" aria-hidden="true"></span>Integrations <span class="pill-count"></span></button>
+              </div>
+            </div>
+            <div class="rounded-4xl bg-lilac p-6">
+              <h2 class="font-display text-lg font-bold">Get updates by email</h2>
+              <p class="mt-1.5 text-sm text-lilac-ink">No marketing, just what shipped.</p>
+              <form data-form="updates" class="mt-4 grid gap-3" novalidate>
+                <div>
+                  <label for="u-email" class="label">Work email</label>
+                  <input id="u-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@yourbusiness.example" class="input">
+                </div>
+                <fieldset>
+                  <legend class="label">How often</legend>
+                  <div class="grid gap-2">
+                    <label class="option p-3 text-sm"><input type="radio" name="frequency" value="release" class="sr-only" checked><span class="font-semibold">Every release</span><span class="option-tick"><svg viewBox="0 0 20 20" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span></label>
+                    <label class="option p-3 text-sm"><input type="radio" name="frequency" value="monthly" class="sr-only"><span class="font-semibold">Monthly digest</span><span class="option-tick"><svg viewBox="0 0 20 20" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span></label>
+                  </div>
+                </fieldset>
+                <button type="submit" class="btn-primary w-full">Subscribe</button>
+              </form>
+            </div>
+          </div>
+        </aside>
+        <div class="min-w-0">
+          <p class="text-sm font-semibold text-ink-soft" data-filter-status="changelog" aria-live="polite">Showing 9 updates</p>
+          <ol class="relative mt-6 border-l-2 border-dashed border-line pl-6 sm:pl-10">
+            <li id="fair-auto-fill" data-filter-item="changelog" data-tags="new improved" class="relative pb-12 last:pb-0">
+              <span class="absolute top-1.5 -left-[2.05rem] h-4 w-4 rounded-full border-[3px] border-paper bg-coral-500 ring-2 ring-coral-200 sm:-left-[3.05rem]" aria-hidden="true"></span>
+              <article class="reveal">
+                <p class="flex flex-wrap items-center gap-2 text-sm"><time datetime="2026-10-08" class="font-semibold text-ink-soft">October 8, 2026</time><span class="chip bg-mint text-mint-ink">New</span><span class="chip bg-lilac text-lilac-ink">Improved</span></p>
+                <h2 class="mt-3 font-display text-2xl font-bold tracking-[-0.02em]"><a href="#fair-auto-fill" class="hover:underline">Auto-fill now balances hours fairly</a></h2>
+                <div class="mt-3 grid max-w-2xl gap-3 text-[16px] leading-relaxed text-ink-soft [&_li]:ml-5 [&_ul]:list-disc"><p>Auto-fill used to pick the first available person. Now it looks at everyone’s hours for the week and spreads shifts evenly, while keeping minimum hours and never pushing anyone into overtime unless you allow it.</p><p>You’ll see a small “fair” score under each person. Hover it to see why Orbit picked them.</p></div>
+                <div class="mt-6 grid gap-2 rounded-3xl bg-cream p-4" aria-hidden="true"><div class="flex items-center gap-3 text-sm"><svg viewBox="0 0 80 80" class="h-7 w-7 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#d7ebff"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#4c35b0"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#c98d63"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#c98d63"/><path d="M25 25c0-9 6-13 15-13s15 4 15 13v4c-2-5-6-8-15-8s-13 3-15 8z" fill="#8a6a4f"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg><span class="w-14 font-semibold">Maya</span><span class="h-2.5 flex-1 overflow-hidden rounded-full bg-sand"><span class="block h-full rounded-full bg-[#5ccf9a]" style="width:100%"></span></span><span class="w-10 text-right font-semibold tabular-nums">40h</span></div><div class="flex items-center gap-3 text-sm"><svg viewBox="0 0 80 80" class="h-7 w-7 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#d7ebff"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#0d6440"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#c98d63"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#c98d63"/><path d="M25 25c0-9 6-13 15-13s15 4 15 13v4c-2-5-6-8-15-8s-13 3-15 8z" fill="#5a3825"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg><span class="w-14 font-semibold">Tomás</span><span class="h-2.5 flex-1 overflow-hidden rounded-full bg-sand"><span class="block h-full rounded-full bg-[#5ccf9a]" style="width:100%"></span></span><span class="w-10 text-right font-semibold tabular-nums">40h</span></div><div class="flex items-center gap-3 text-sm"><svg viewBox="0 0 80 80" class="h-7 w-7 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#fff0b0"/><path d="M24 31c-2-12 4-19 16-19s18 7 16 19c-1 6-1 13 2 18H22c3-5 3-12 2-18z" fill="#3b2a5c"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#9d1f55"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#f1c7a5"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#f1c7a5"/><path d="M25 26c0-8 6-12 15-12s15 4 15 12c-4-3-9-5-15-5s-11 2-15 5z" fill="#3b2a5c"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg><span class="w-14 font-semibold">Priya</span><span class="h-2.5 flex-1 overflow-hidden rounded-full bg-sand"><span class="block h-full rounded-full bg-[#5ccf9a]" style="width:100%"></span></span><span class="w-10 text-right font-semibold tabular-nums">40h</span></div><div class="flex items-center gap-3 text-sm"><svg viewBox="0 0 80 80" class="h-7 w-7 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#ffe3d4"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#0d6440"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#f6d3b8"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#f6d3b8"/><path d="M25 25c0-9 6-13 15-13s15 4 15 13v4c-2-5-6-8-15-8s-13 3-15 8z" fill="#2b2140"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg><span class="w-14 font-semibold">Jonah</span><span class="h-2.5 flex-1 overflow-hidden rounded-full bg-sand"><span class="block h-full rounded-full bg-[#5ccf9a]" style="width:100%"></span></span><span class="w-10 text-right font-semibold tabular-nums">40h</span></div><div class="flex items-center gap-3 text-sm"><svg viewBox="0 0 80 80" class="h-7 w-7 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#e6e0ff"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#1f1d3d"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#e8b48f"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#e8b48f"/><circle cx="40" cy="12" r="6" fill="#b7672f"/><path d="M25 27c0-9 6-14 15-14s15 5 15 14c-3-4-8-6-15-6s-12 2-15 6z" fill="#b7672f"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg><span class="w-14 font-semibold">Aisha</span><span class="h-2.5 flex-1 overflow-hidden rounded-full bg-sand"><span class="block h-full rounded-full bg-[#f2c94c]" style="width:60%"></span></span><span class="w-10 text-right font-semibold tabular-nums">24h</span></div></div>
+              </article>
+            </li>
+            <li id="tablebook" data-filter-item="changelog" data-tags="integrations new" class="relative pb-12 last:pb-0">
+              <span class="absolute top-1.5 -left-[2.05rem] h-4 w-4 rounded-full border-[3px] border-paper bg-coral-500 ring-2 ring-coral-200 sm:-left-[3.05rem]" aria-hidden="true"></span>
+              <article class="reveal">
+                <p class="flex flex-wrap items-center gap-2 text-sm"><time datetime="2026-09-29" class="font-semibold text-ink-soft">September 29, 2026</time><span class="chip bg-butter text-butter-ink">Integrations</span><span class="chip bg-mint text-mint-ink">New</span></p>
+                <h2 class="mt-3 font-display text-2xl font-bold tracking-[-0.02em]"><a href="#tablebook" class="hover:underline">Tablebook reservations on the schedule</a></h2>
+                <div class="mt-3 grid max-w-2xl gap-3 text-[16px] leading-relaxed text-ink-soft [&_li]:ml-5 [&_ul]:list-disc"><p>Connect Tablebook and booked covers appear above each day. Parties of 12 or more get a flag and a suggestion to add a server.</p></div>
+                <div class="mt-6 flex flex-wrap items-center gap-3 rounded-3xl bg-cream p-4" aria-hidden="true"><svg viewBox="0 0 40 40" class="h-10 w-10 shrink-0" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#b91c1c"/><g fill="#fff"><circle cx="20" cy="20" r="6" fill="#fff"/><circle cx="20" cy="9.5" r="2.5" fill="#fff"/><circle cx="20" cy="30.5" r="2.5" fill="#fff"/><circle cx="9.5" cy="20" r="2.5" fill="#fff"/><circle cx="30.5" cy="20" r="2.5" fill="#fff"/></g></svg><div class="flex-1"><p class="text-sm font-semibold">Sat 24 · 186 covers booked</p><p class="text-xs text-ink-faint">Party of 18 at 7:30 pm · suggestion: +1 server</p></div><span class="btn-primary btn-sm">Add shift</span></div>
+              </article>
+            </li>
+            <li id="widgets" data-filter-item="changelog" data-tags="mobile new" class="relative pb-12 last:pb-0">
+              <span class="absolute top-1.5 -left-[2.05rem] h-4 w-4 rounded-full border-[3px] border-paper bg-coral-500 ring-2 ring-coral-200 sm:-left-[3.05rem]" aria-hidden="true"></span>
+              <article class="reveal">
+                <p class="flex flex-wrap items-center gap-2 text-sm"><time datetime="2026-09-16" class="font-semibold text-ink-soft">September 16, 2026</time><span class="chip bg-sky text-sky-ink">Mobile</span><span class="chip bg-mint text-mint-ink">New</span></p>
+                <h2 class="mt-3 font-display text-2xl font-bold tracking-[-0.02em]"><a href="#widgets" class="hover:underline">Home-screen widgets for your next shift</a></h2>
+                <div class="mt-3 grid max-w-2xl gap-3 text-[16px] leading-relaxed text-ink-soft [&_li]:ml-5 [&_ul]:list-disc"><p>The team app now has widgets for iOS and Android. Your next shift, who you’re working with and a clock-in button, right on the home screen.</p></div>
+                <div class="mt-6 flex gap-3" aria-hidden="true"><div class="w-40 rounded-3xl bg-ink p-4 text-white"><p class="text-xs text-white/70">Next shift</p><p class="mt-1 font-display text-lg font-bold">Tomorrow 7 am</p><p class="text-xs text-white/70">with Maya, Priya</p><p class="mt-3 rounded-xl bg-coral-500 py-1.5 text-center text-xs font-bold text-ink">Clock in</p></div><div class="grid w-28 place-items-center rounded-3xl bg-lilac p-4 text-center"><p class="font-display text-3xl font-extrabold">32h</p><p class="text-xs font-semibold text-lilac-ink">this week</p></div></div>
+              </article>
+            </li>
+            <li id="break-rules" data-filter-item="changelog" data-tags="improved" class="relative pb-12 last:pb-0">
+              <span class="absolute top-1.5 -left-[2.05rem] h-4 w-4 rounded-full border-[3px] border-paper bg-coral-500 ring-2 ring-coral-200 sm:-left-[3.05rem]" aria-hidden="true"></span>
+              <article class="reveal">
+                <p class="flex flex-wrap items-center gap-2 text-sm"><time datetime="2026-09-02" class="font-semibold text-ink-soft">September 2, 2026</time><span class="chip bg-lilac text-lilac-ink">Improved</span></p>
+                <h2 class="mt-3 font-display text-2xl font-bold tracking-[-0.02em]"><a href="#break-rules" class="hover:underline">Break rules by location</a></h2>
+                <div class="mt-3 grid max-w-2xl gap-3 text-[16px] leading-relaxed text-ink-soft [&_li]:ml-5 [&_ul]:list-disc"><p>Different sites, different rules. Set paid and unpaid breaks per location and Orbit warns you before you publish a shift that breaks them.</p><ul><li>Rules can depend on shift length and age</li><li>Warnings show in the builder and on timesheets</li></ul></div>
+
+              </article>
+            </li>
+            <li id="timesheet-fix" data-filter-item="changelog" data-tags="fixed" class="relative pb-12 last:pb-0">
+              <span class="absolute top-1.5 -left-[2.05rem] h-4 w-4 rounded-full border-[3px] border-paper bg-coral-500 ring-2 ring-coral-200 sm:-left-[3.05rem]" aria-hidden="true"></span>
+              <article class="reveal">
+                <p class="flex flex-wrap items-center gap-2 text-sm"><time datetime="2026-08-21" class="font-semibold text-ink-soft">August 21, 2026</time><span class="chip bg-peach text-peach-ink">Fixed</span></p>
+                <h2 class="mt-3 font-display text-2xl font-bold tracking-[-0.02em]"><a href="#timesheet-fix" class="hover:underline">Overnight shifts on timesheets</a></h2>
+                <div class="mt-3 grid max-w-2xl gap-3 text-[16px] leading-relaxed text-ink-soft [&_li]:ml-5 [&_ul]:list-disc"><p>Shifts that cross midnight now count toward the day they started, which fixes double-counted hours for late-night bars. Thanks to everyone who reported it.</p></div>
+
+              </article>
+            </li>
+            <li id="skycast" data-filter-item="changelog" data-tags="integrations" class="relative pb-12 last:pb-0">
+              <span class="absolute top-1.5 -left-[2.05rem] h-4 w-4 rounded-full border-[3px] border-paper bg-coral-500 ring-2 ring-coral-200 sm:-left-[3.05rem]" aria-hidden="true"></span>
+              <article class="reveal">
+                <p class="flex flex-wrap items-center gap-2 text-sm"><time datetime="2026-08-07" class="font-semibold text-ink-soft">August 7, 2026</time><span class="chip bg-butter text-butter-ink">Integrations</span></p>
+                <h2 class="mt-3 font-display text-2xl font-bold tracking-[-0.02em]"><a href="#skycast" class="hover:underline">Weather from Skycast, with staffing rules</a></h2>
+                <div class="mt-3 grid max-w-2xl gap-3 text-[16px] leading-relaxed text-ink-soft [&_li]:ml-5 [&_ul]:list-disc"><p>Add the forecast to every day and set rules like “over 72°F, add one person to the patio”. Orbit suggests the change; you decide.</p></div>
+                <div class="mt-6 grid grid-cols-4 gap-2 sm:grid-cols-7" aria-hidden="true"><div class="rounded-2xl bg-sky p-3 text-center"><p class="text-xs font-semibold">Mon</p><p class="font-display text-lg font-bold">63°</p></div><div class="rounded-2xl bg-sky p-3 text-center"><p class="text-xs font-semibold">Tue</p><p class="font-display text-lg font-bold">66°</p></div><div class="rounded-2xl bg-butter p-3 text-center"><p class="text-xs font-semibold">Wed</p><p class="font-display text-lg font-bold">73°</p><p class="text-[10px] font-bold text-butter-ink">+1 patio</p></div><div class="rounded-2xl bg-butter p-3 text-center"><p class="text-xs font-semibold">Thu</p><p class="font-display text-lg font-bold">75°</p><p class="text-[10px] font-bold text-butter-ink">+1 patio</p></div><div class="hidden sm:block rounded-2xl bg-sky p-3 text-center"><p class="text-xs font-semibold">Fri</p><p class="font-display text-lg font-bold">70°</p></div><div class="hidden sm:block rounded-2xl bg-sky p-3 text-center"><p class="text-xs font-semibold">Sat</p><p class="font-display text-lg font-bold">64°</p></div><div class="hidden sm:block rounded-2xl bg-sky p-3 text-center"><p class="text-xs font-semibold">Sun</p><p class="font-display text-lg font-bold">61°</p></div></div>
+              </article>
+            </li>
+            <li id="read-receipts" data-filter-item="changelog" data-tags="new mobile" class="relative pb-12 last:pb-0">
+              <span class="absolute top-1.5 -left-[2.05rem] h-4 w-4 rounded-full border-[3px] border-paper bg-coral-500 ring-2 ring-coral-200 sm:-left-[3.05rem]" aria-hidden="true"></span>
+              <article class="reveal">
+                <p class="flex flex-wrap items-center gap-2 text-sm"><time datetime="2026-07-24" class="font-semibold text-ink-soft">July 24, 2026</time><span class="chip bg-mint text-mint-ink">New</span><span class="chip bg-sky text-sky-ink">Mobile</span></p>
+                <h2 class="mt-3 font-display text-2xl font-bold tracking-[-0.02em]"><a href="#read-receipts" class="hover:underline">Read receipts on announcements</a></h2>
+                <div class="mt-3 grid max-w-2xl gap-3 text-[16px] leading-relaxed text-ink-soft [&_li]:ml-5 [&_ul]:list-disc"><p>See who has read an announcement and nudge the rest with one tap. Handy for menu changes, fire drills and anything nobody can miss.</p></div>
+
+              </article>
+            </li>
+            <li id="swap-speed" data-filter-item="changelog" data-tags="improved mobile" class="relative pb-12 last:pb-0">
+              <span class="absolute top-1.5 -left-[2.05rem] h-4 w-4 rounded-full border-[3px] border-paper bg-coral-500 ring-2 ring-coral-200 sm:-left-[3.05rem]" aria-hidden="true"></span>
+              <article class="reveal">
+                <p class="flex flex-wrap items-center gap-2 text-sm"><time datetime="2026-07-10" class="font-semibold text-ink-soft">July 10, 2026</time><span class="chip bg-lilac text-lilac-ink">Improved</span><span class="chip bg-sky text-sky-ink">Mobile</span></p>
+                <h2 class="mt-3 font-display text-2xl font-bold tracking-[-0.02em]"><a href="#swap-speed" class="hover:underline">Faster swaps on slow connections</a></h2>
+                <div class="mt-3 grid max-w-2xl gap-3 text-[16px] leading-relaxed text-ink-soft [&_li]:ml-5 [&_ul]:list-disc"><p>Swap requests now work offline and sync when you’re back on signal. Basement stockrooms, we see you.</p></div>
+
+              </article>
+            </li>
+            <li id="export-fix" data-filter-item="changelog" data-tags="fixed integrations" class="relative pb-12 last:pb-0">
+              <span class="absolute top-1.5 -left-[2.05rem] h-4 w-4 rounded-full border-[3px] border-paper bg-coral-500 ring-2 ring-coral-200 sm:-left-[3.05rem]" aria-hidden="true"></span>
+              <article class="reveal">
+                <p class="flex flex-wrap items-center gap-2 text-sm"><time datetime="2026-06-26" class="font-semibold text-ink-soft">June 26, 2026</time><span class="chip bg-peach text-peach-ink">Fixed</span><span class="chip bg-butter text-butter-ink">Integrations</span></p>
+                <h2 class="mt-3 font-display text-2xl font-bold tracking-[-0.02em]"><a href="#export-fix" class="hover:underline">Paywell export with PTO pay</a></h2>
+                <div class="mt-3 grid max-w-2xl gap-3 text-[16px] leading-relaxed text-ink-soft [&_li]:ml-5 [&_ul]:list-disc"><p>PTO pay codes now export correctly to Paywell when a person has both a shift and a half day of PTO on the same date.</p></div>
+
+              </article>
+            </li>
+          </ol>
+          <div data-filter-empty="changelog" hidden class="rounded-3xl border-2 border-dashed border-line p-10 text-center text-ink-soft">No updates with that topic yet.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="mt-auto px-3 pb-3 sm:px-5 sm:pb-5">
+    <div class="relative mx-auto max-w-7xl overflow-hidden rounded-5xl bg-cream">
+      <div class="grid gap-12 px-6 pt-14 pb-10 sm:px-10 lg:grid-cols-12 lg:px-14">
+        <div class="lg:col-span-4">
+          <a href="index.html" class="inline-flex items-center gap-2" aria-label="Orbit home">
+            <svg viewBox="0 0 40 40" class="h-9 w-9 shrink-0" aria-hidden="true"><g transform="rotate(-22 20 20)"><ellipse cx="20" cy="20" rx="17.5" ry="7" fill="none" stroke="#1f1d3d" stroke-width="2.6"/></g><circle cx="20" cy="20" r="9.5" fill="#ff6b4a"/><circle cx="16.6" cy="16.4" r="2.6" fill="#fff" opacity=".45"/><g transform="rotate(-22 20 20)"><path d="M2.5 20a17.5 7 0 0 0 35 0" fill="none" stroke="#1f1d3d" stroke-width="2.6" stroke-linecap="round"/><circle cx="37.5" cy="20" r="3.4" fill="#ffd84d" stroke="#1f1d3d" stroke-width="2"/></g></svg>
+            <span class="font-display text-[22px] font-bold tracking-[-0.03em]">orbit</span>
+          </a>
+          <p class="mt-4 max-w-xs text-[15px] leading-relaxed text-ink-soft">Shift scheduling for restaurants, cafés, hotels and shops. Made by Orbit Works in Overland Park, Kansas.</p>
+          <form data-form="newsletter" class="mt-7 max-w-sm" novalidate>
+            <label for="footer-email" class="text-sm font-bold">Product updates, once a month</label>
+            <div class="mt-2.5 flex gap-2">
+              <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@yourbusiness.example" class="input py-2.5">
+              <button type="submit" class="btn-primary shrink-0 px-4">Subscribe</button>
+            </div>
+          </form>
+        </div>
+        <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-7 lg:col-start-6">
+        <nav aria-label="Product">
+          <h2 class="text-sm font-bold text-ink">Product</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="features.html" class="text-ink-soft transition hover:text-ink">Features</a></li>
+            <li><a href="integrations.html" class="text-ink-soft transition hover:text-ink">Integrations</a></li>
+            <li><a href="pricing.html" class="text-ink-soft transition hover:text-ink">Pricing</a></li>
+            <li><a href="changelog.html" class="text-ink-soft transition hover:text-ink" aria-current="page">Changelog</a></li>
+            <li><a href="signup.html" class="text-ink-soft transition hover:text-ink">Start free trial</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2 class="text-sm font-bold text-ink">Company</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="about.html" class="text-ink-soft transition hover:text-ink">About us</a></li>
+            <li><a href="about.html#careers" class="text-ink-soft transition hover:text-ink">Careers</a></li>
+            <li><a href="customers.html" class="text-ink-soft transition hover:text-ink">Customers</a></li>
+            <li><a href="contact.html" class="text-ink-soft transition hover:text-ink">Talk to sales</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Resources">
+          <h2 class="text-sm font-bold text-ink">Resources</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="features.html#compare" class="text-ink-soft transition hover:text-ink">Orbit vs spreadsheets</a></li>
+            <li><a href="pricing.html#calculator" class="text-ink-soft transition hover:text-ink">Price calculator</a></li>
+            <li><a href="pricing.html#faq" class="text-ink-soft transition hover:text-ink">FAQ</a></li>
+            <li><a href="integrations.html?category=payroll" class="text-ink-soft transition hover:text-ink">Payroll integrations</a></li>
+          </ul>
+        </nav>
+        </div>
+      </div>
+      <div class="mx-6 flex flex-col gap-3 border-t border-line py-6 text-sm text-ink-faint sm:mx-10 sm:flex-row sm:items-center sm:justify-between lg:mx-14">
+        <p>© <span data-year>2026</span> Orbit Works, Inc. Orbit is a fictional product.</p>
+        <p class="inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#1fa16a]" aria-hidden="true"></span>All systems running · Website template by Freeframe</p>
+      </div>
+      <svg viewBox="0 40 1000 210" class="pointer-events-none mx-auto -mb-1 block w-full max-w-5xl px-4 text-ink/[.05] select-none" aria-hidden="true"><text x="500" y="276" text-anchor="middle" font-family="Gabarito, sans-serif" font-size="330" font-weight="800" letter-spacing="-16" fill="currentColor">orbit</text></svg>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

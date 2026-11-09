@@ -1,0 +1,684 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Product tour: editor, automations, segments and more | Loftwing</title>
+    <meta
+      name="description"
+      content="Tour the Loftwing tools: the Loft Editor, Flightpaths automations, Flocks segments, the Homing Check for deliverability and the Logbook for analytics."
+    />
+    <meta name="theme-color" content="#170c2c" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Loftwing" />
+    <meta property="og:title" content="Product tour: editor, automations, segments and more | Loftwing" />
+    <meta
+      property="og:description"
+      content="Tour the Loftwing tools: the Loft Editor, Flightpaths automations, Flocks segments, the Homing Check for deliverability and the Logbook for analytics."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;800;900&amp;family=Sen:wght@400;500;600;700&amp;family=Overpass+Mono:wght@400;600;700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="product" class="flex min-h-screen flex-col">
+    <a
+      href="#main"
+      class="sr-only z-50 rounded-lg bg-apricot px-4 py-3 font-bold text-night focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      >Skip to content</a
+    >
+    <div class="sky" aria-hidden="true"></div>
+    <header class="sticky top-0 z-40 pt-3">
+      <div class="wrap">
+        <div
+          class="relative flex min-h-16 items-center justify-between gap-3 rounded-2xl border border-white/15 bg-[#190e2e]/75 px-3 shadow-[0_18px_40px_-24px_rgba(4,0,18,0.9)] backdrop-blur-xl sm:px-4"
+        >
+          <a href="index.html" class="flex items-center gap-2.5 rounded-lg" aria-label="Loftwing home"
+            ><svg viewBox="0 0 40 40" class="size-9 shrink-0" aria-hidden="true">
+              <defs>
+                <linearGradient id="logo-sky" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ffcb9e" />
+                  <stop offset="1" stop-color="#ff8f70" />
+                </linearGradient>
+              </defs>
+              <rect width="40" height="40" rx="11" fill="url(#logo-sky)" />
+              <path
+                d="M6 28 20 10l14 18"
+                fill="none"
+                stroke="#241238"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path d="M13.5 28c1-6 4-9.5 8-11 .5 4.5 2.5 7 7 8-3.5 3-10 4.5-15 3Z" fill="#241238" />
+              <circle cx="20" cy="9" r="2" fill="#241238" /></svg
+            ><span class="font-display text-[1.4rem] font-extrabold tracking-tight">Loftwing</span></a
+          >
+          <nav class="hidden lg:block" aria-label="Main">
+            <ul class="flex items-center gap-0.5">
+              <li><a class="nav-link" href="product.html" aria-current="page">Product</a></li>
+              <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+              <li><a class="nav-link" href="migrate.html">Switch</a></li>
+              <li><a class="nav-link" href="roadmap.html">Roadmap</a></li>
+              <li><a class="nav-link" href="journal.html">Journal</a></li>
+              <li><a class="nav-link" href="about.html">About</a></li>
+            </ul>
+          </nav>
+          <div class="flex items-center gap-2">
+            <a class="btn btn-sm hidden whitespace-nowrap sm:inline-flex" href="waitlist.html" data-spot-cta
+              >Join the waitlist</a
+            >
+            <button
+              type="button"
+              class="inline-flex size-11 items-center justify-center rounded-xl border border-white/25 lg:hidden"
+              data-menu-button
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              aria-label="Open menu"
+            >
+              <svg viewBox="0 0 24 24" class="size-6" aria-hidden="true" data-menu-open>
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="size-6" aria-hidden="true" data-menu-close hidden>
+                <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+          <nav
+            id="mobile-menu"
+            class="absolute inset-x-0 top-[calc(100%+0.5rem)] rounded-2xl border border-white/15 bg-plum p-3 lg:hidden"
+            aria-label="Mobile"
+            hidden
+          >
+            <ul class="grid gap-1">
+              <li><a class="nav-link !py-3 text-lg" href="product.html" aria-current="page">Product</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="pricing.html">Pricing</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="migrate.html">Switch</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="roadmap.html">Roadmap</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="journal.html">Journal</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="about.html">About</a></li>
+              <li class="pt-2"><a class="btn w-full" href="waitlist.html" data-spot-cta>Join the waitlist</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="relative pt-10 pb-8 lg:pt-16">
+        <div class="wrap grid items-center gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+          <div>
+            <p class="eyebrow">The tour</p>
+            <h1 class="mt-4 text-[clamp(2.5rem,5vw,4rem)] leading-[1.05] font-black">
+              Five tools that fly in formation
+            </h1>
+            <p class="mt-4 max-w-xl text-lg text-haze">
+              Each one does a single job and hands off cleanly to the next. Everything below is a working piece of the
+              beta, so go ahead and press things.
+            </p>
+          </div>
+          <svg
+            viewBox="0 0 520 260"
+            class="art-fade w-full"
+            role="img"
+            aria-label="Five homing pigeons flying in a V formation above a line of hills."
+          >
+            <defs>
+              <linearGradient id="pf-sun" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffcb9e" />
+                <stop offset="1" stop-color="#ff8f70" stop-opacity=".2" />
+              </linearGradient>
+            </defs>
+            <circle cx="350" cy="130" r="92" fill="url(#pf-sun)" />
+            <path d="M0 226c70-22 130-26 200-10s150 16 320-22v66H0Z" fill="#2a1442" />
+            <defs>
+              <g id="pf-bird">
+                <path
+                  d="M0 26c5-4 12-5 19-4 4-4 10-5 14-3 3-1 5 0 6 2l5 2-5 1c-1 4-6 8-13 9-9 1-19-1-26-7Z"
+                  fill="#f7f1fb"
+                />
+                <path d="M17 21c2-9 8-15 19-17-1 8-5 14-11 20Z" fill="#b9b1ff" />
+              </g>
+            </defs>
+            <use href="#pf-bird" transform="translate(300 40) scale(1.5)" />
+            <use href="#pf-bird" transform="translate(220 80) scale(1.25)" />
+            <use href="#pf-bird" transform="translate(236 16) scale(1.25)" />
+            <use href="#pf-bird" transform="translate(150 120)" />
+            <use href="#pf-bird" transform="translate(170 2)" />
+            <path
+              d="M40 200C110 180 150 170 214 130"
+              fill="none"
+              stroke="#ffcb9e"
+              stroke-opacity=".55"
+              stroke-width="2"
+              stroke-dasharray="2 8"
+              stroke-linecap="round"
+            />
+          </svg>
+        </div>
+      </section>
+
+      <section class="wrap" aria-label="Product tools">
+        <div class="glass relative overflow-x-auto p-1.5">
+          <div role="tablist" aria-label="Loftwing tools" data-tabs class="flex min-w-max gap-1">
+            <button
+              type="button"
+              role="tab"
+              class="tab"
+              id="tab-editor"
+              data-tab="editor"
+              aria-controls="panel-editor"
+              aria-selected="true"
+            >
+              Loft Editor
+            </button>
+            <button
+              type="button"
+              role="tab"
+              class="tab"
+              id="tab-automations"
+              data-tab="automations"
+              aria-controls="panel-automations"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Flightpaths
+            </button>
+            <button
+              type="button"
+              role="tab"
+              class="tab"
+              id="tab-segments"
+              data-tab="segments"
+              aria-controls="panel-segments"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Flocks
+            </button>
+            <button
+              type="button"
+              role="tab"
+              class="tab"
+              id="tab-deliverability"
+              data-tab="deliverability"
+              aria-controls="panel-deliverability"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Homing Check
+            </button>
+            <button
+              type="button"
+              role="tab"
+              class="tab"
+              id="tab-analytics"
+              data-tab="analytics"
+              aria-controls="panel-analytics"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              Logbook
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="panel-editor"
+          role="tabpanel"
+          aria-labelledby="tab-editor"
+          tabindex="0"
+          class="mt-6 grid gap-6 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]"
+        >
+          <div>
+            <h2 class="text-3xl font-extrabold">Loft Editor</h2>
+            <p class="mt-3 text-haze">
+              A page, a cursor and your words. Type a slash when you need a photo, a button or a product. The spacing
+              and the dark-mode fixes are our problem.
+            </p>
+            <ul class="mt-4 space-y-2.5 text-[0.97rem]">
+              <li class="flex gap-2.5">
+                <svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-leaf" aria-hidden="true">
+                  <path
+                    d="M4 10.5 8.2 15 16 5.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg
+                ><span>Saved sections for your header, sign-off and sponsor slot</span>
+              </li>
+              <li class="flex gap-2.5">
+                <svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-leaf" aria-hidden="true">
+                  <path
+                    d="M4 10.5 8.2 15 16 5.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg
+                ><span>Plain-text version beside the HTML, edited by hand</span>
+              </li>
+              <li class="flex gap-2.5">
+                <svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-leaf" aria-hidden="true">
+                  <path
+                    d="M4 10.5 8.2 15 16 5.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg
+                ><span>Paste from anywhere, including a 40-row table, and it holds up</span>
+              </li>
+              <li class="flex gap-2.5">
+                <svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-leaf" aria-hidden="true">
+                  <path
+                    d="M4 10.5 8.2 15 16 5.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg
+                ><span
+                  >The <a class="text-link" href="index.html#subject-tester">subject-line check</a> runs as you
+                  type</span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="glass p-4 sm:p-5">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <p class="mono-label" data-device-label>Desktop preview</p>
+              <div class="flex gap-1.5" role="group" aria-label="Preview size">
+                <button type="button" class="chip !min-h-9 text-sm" data-device="desktop" aria-pressed="true">
+                  Desktop
+                </button>
+                <button type="button" class="chip !min-h-9 text-sm" data-device="phone" aria-pressed="false">
+                  Phone
+                </button>
+              </div>
+            </div>
+            <div
+              class="mx-auto mt-4 max-w-full rounded-xl bg-[#fbf6ef] p-5 text-[#2a1838] transition-all"
+              data-device-frame
+            >
+              <p class="font-display text-sm font-extrabold tracking-wide text-[#8a3a24] uppercase">
+                The Palouse Ledger
+              </p>
+              <h3 class="mt-2 text-2xl leading-tight font-black">The long way round the Palouse</h3>
+              <p class="mt-2 text-[0.95rem]">
+                The wheat is in, the roads are empty and I've found a bakery in Colfax that's worth the drive.
+              </p>
+              <svg
+                viewBox="0 0 400 120"
+                class="mt-3 w-full rounded-lg"
+                role="img"
+                aria-label="Rolling hills under a low sun"
+              >
+                <rect width="400" height="120" fill="#f6c9a0" />
+                <circle cx="300" cy="46" r="24" fill="#ff8f70" />
+                <path d="M0 86c60-30 120-30 190-6s140 10 210-16v56H0Z" fill="#b5683f" />
+                <path d="M0 100c80-20 170-14 240 0s110 6 160-6v26H0Z" fill="#6d3a4c" />
+              </svg>
+              <p class="mt-3 text-[0.95rem]">
+                This week: three small towns, one good pie and a note from a reader who's driven all of it on a tractor.
+              </p>
+              <span class="mt-3 inline-block rounded-lg bg-[#2a1838] px-4 py-2 text-sm font-bold text-[#fbf6ef]"
+                >Read the whole issue</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          id="panel-automations"
+          role="tabpanel"
+          aria-labelledby="tab-automations"
+          tabindex="0"
+          class="mt-6 grid gap-6 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]"
+          hidden
+        >
+          <div>
+            <h2 class="text-3xl font-extrabold">Flightpaths</h2>
+            <p class="mt-3 text-haze">
+              Automations that behave like a person would. They wait for a reasonable hour, skip weekends if you ask,
+              and stop as soon as somebody replies or buys.
+            </p>
+            <fieldset class="mt-5">
+              <legend class="label">Pick a Flightpath</legend>
+              <div class="mt-2 flex flex-wrap gap-2">
+                <label class="chip"
+                  ><input class="sr-only" type="radio" name="flow" value="welcome" checked />Welcome</label
+                >
+                <label class="chip"><input class="sr-only" type="radio" name="flow" value="cart" />Cart reminder</label>
+                <label class="chip"><input class="sr-only" type="radio" name="flow" value="winback" />Win-back</label>
+              </div>
+            </fieldset>
+            <p class="mt-4 text-haze" data-flow-summary aria-live="polite"></p>
+          </div>
+          <div class="glass p-5 sm:p-6"><ol data-flow-nodes></ol></div>
+        </div>
+
+        <div
+          id="panel-segments"
+          role="tabpanel"
+          aria-labelledby="tab-segments"
+          tabindex="0"
+          class="mt-6 grid gap-6 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]"
+          hidden
+        >
+          <div>
+            <h2 class="text-3xl font-extrabold">Flocks</h2>
+            <p class="mt-3 text-haze">
+              A Flock is a saved group of readers that keeps itself up to date. Build one from what people do, and see
+              how many people it reaches before you write a word.
+            </p>
+            <div class="mt-5 flex items-center gap-4">
+              <svg viewBox="0 0 120 80" class="h-20 w-28 shrink-0" aria-hidden="true">
+                <g fill="#b9b1ff">
+                  <circle cx="22" cy="20" r="6" />
+                  <circle cx="44" cy="12" r="6" />
+                  <circle cx="36" cy="36" r="6" />
+                  <circle cx="18" cy="50" r="6" />
+                </g>
+                <g fill="#ffcb9e">
+                  <circle cx="70" cy="30" r="7" />
+                  <circle cx="92" cy="20" r="7" />
+                  <circle cx="86" cy="46" r="7" />
+                  <circle cx="64" cy="58" r="7" />
+                  <circle cx="104" cy="60" r="7" />
+                </g>
+              </svg>
+              <p class="text-[0.95rem] text-haze">The figures here use a typical beta list of 12,480 subscribers.</p>
+            </div>
+          </div>
+          <form class="glass p-5 sm:p-6" data-segment-form>
+            <fieldset>
+              <legend class="label">Match</legend>
+              <div class="mt-2 flex gap-2">
+                <label class="chip"
+                  ><input class="sr-only" type="radio" name="match" value="all" checked />All of these</label
+                >
+                <label class="chip"><input class="sr-only" type="radio" name="match" value="any" />Any of these</label>
+              </div>
+            </fieldset>
+            <fieldset class="mt-4">
+              <legend class="label">Rules</legend>
+              <div class="mt-2 grid gap-2 sm:grid-cols-2">
+                <label class="pane flex min-h-11 items-center gap-2.5 px-3 py-2 text-[0.95rem]"
+                  ><input
+                    type="checkbox"
+                    name="rule"
+                    value="opened"
+                    class="size-5 shrink-0 accent-coral"
+                    checked
+                  />Opened in the last 90 days</label
+                >
+                <label class="pane flex min-h-11 items-center gap-2.5 px-3 py-2 text-[0.95rem]"
+                  ><input type="checkbox" name="rule" value="clicked" class="size-5 shrink-0 accent-coral" />Clicked in
+                  the last 30 days</label
+                >
+                <label class="pane flex min-h-11 items-center gap-2.5 px-3 py-2 text-[0.95rem]"
+                  ><input type="checkbox" name="rule" value="bought" class="size-5 shrink-0 accent-coral" />Bought in
+                  the last year</label
+                >
+                <label class="pane flex min-h-11 items-center gap-2.5 px-3 py-2 text-[0.95rem]"
+                  ><input type="checkbox" name="rule" value="shop" class="size-5 shrink-0 accent-coral" />Signed up at
+                  your shop</label
+                >
+                <label class="pane flex min-h-11 items-center gap-2.5 px-3 py-2 text-[0.95rem] sm:col-span-2"
+                  ><input type="checkbox" name="rule" value="nearby" class="size-5 shrink-0 accent-coral" />Lives within
+                  50 miles</label
+                >
+              </div>
+            </fieldset>
+            <div class="mt-5" aria-live="polite">
+              <p class="flex flex-wrap items-baseline gap-2">
+                <strong class="font-display text-4xl font-black text-apricot" data-seg-count>7,738</strong
+                ><span class="text-haze">people in this Flock</span>
+              </p>
+              <p class="mt-1 text-sm text-fog" data-seg-share>62% of your 12,480 subscribers</p>
+            </div>
+            <div class="mt-3 h-2.5 overflow-hidden rounded-full bg-dusk" aria-hidden="true">
+              <div
+                class="h-full rounded-full bg-gradient-to-r from-apricot to-coral"
+                style="width: 62%"
+                data-seg-bar
+              ></div>
+            </div>
+          </form>
+        </div>
+
+        <div
+          id="panel-deliverability"
+          role="tabpanel"
+          aria-labelledby="tab-deliverability"
+          tabindex="0"
+          class="mt-6 grid gap-6 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]"
+          hidden
+        >
+          <div>
+            <h2 class="text-3xl font-extrabold">Homing Check</h2>
+            <p class="mt-3 text-haze">
+              The send button stays locked until your email is ready to find its way. And a new domain gets a warm-up
+              plan sized to your list, because a sudden 20,000 emails looks exactly like spam.
+            </p>
+            <ul class="mt-4 space-y-2 text-[0.95rem]">
+              <li class="pane flex items-center justify-between gap-3 px-3 py-2">
+                <span>SPF record found</span><span class="font-semibold text-leaf">Passing</span>
+              </li>
+              <li class="pane flex items-center justify-between gap-3 px-3 py-2">
+                <span>DKIM signature verified</span><span class="font-semibold text-leaf">Passing</span>
+              </li>
+              <li class="pane flex items-center justify-between gap-3 px-3 py-2">
+                <span>DMARC policy published</span><span class="font-semibold text-leaf">Passing</span>
+              </li>
+              <li class="pane flex items-center justify-between gap-3 px-3 py-2">
+                <span>Links in this issue</span><span class="font-semibold text-honey">1 to check</span>
+              </li>
+            </ul>
+          </div>
+          <div class="glass p-5 sm:p-6">
+            <h3 class="text-xl font-bold">Warm-up planner</h3>
+            <fieldset class="mt-3">
+              <legend class="text-[0.95rem] text-haze">Your list size</legend>
+              <div class="mt-2 flex flex-wrap gap-2">
+                <label class="chip"><input class="sr-only" type="radio" name="warm" value="5000" />5,000</label>
+                <label class="chip"
+                  ><input class="sr-only" type="radio" name="warm" value="25000" checked />25,000</label
+                >
+                <label class="chip"><input class="sr-only" type="radio" name="warm" value="100000" />100,000</label>
+                <label class="chip"><input class="sr-only" type="radio" name="warm" value="250000" />250,000</label>
+              </div>
+            </fieldset>
+            <p class="mt-4 text-[0.95rem]" data-warm-note aria-live="polite"></p>
+            <ol class="mt-4 flex h-44 items-stretch gap-1 border-b border-wire sm:gap-1.5" data-warm-chart></ol>
+            <p class="mt-2 flex justify-between font-mono text-xs text-fog"><span>Day 1</span><span>Full list</span></p>
+          </div>
+        </div>
+
+        <div
+          id="panel-analytics"
+          role="tabpanel"
+          aria-labelledby="tab-analytics"
+          tabindex="0"
+          class="mt-6 grid gap-6 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]"
+          hidden
+        >
+          <div>
+            <h2 class="text-3xl font-extrabold">Logbook</h2>
+            <p class="mt-3 text-haze">
+              One page. Your last ten issues, what they earned and who actually read them. If a number can't change what
+              you do next week, we leave it out.
+            </p>
+            <ul class="mt-4 space-y-2.5 text-[0.97rem]">
+              <li class="flex gap-2.5">
+                <svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-leaf" aria-hidden="true">
+                  <path
+                    d="M4 10.5 8.2 15 16 5.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg
+                ><span>Opens counted honestly, with privacy-proxy opens set apart</span>
+              </li>
+              <li class="flex gap-2.5">
+                <svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-leaf" aria-hidden="true">
+                  <path
+                    d="M4 10.5 8.2 15 16 5.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg
+                ><span>Sales matched to the issue that earned them</span>
+              </li>
+              <li class="flex gap-2.5">
+                <svg viewBox="0 0 20 20" class="mt-0.5 size-5 shrink-0 text-leaf" aria-hidden="true">
+                  <path
+                    d="M4 10.5 8.2 15 16 5.5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg
+                ><span>A weekly plain-English note on what changed</span>
+              </li>
+            </ul>
+          </div>
+          <div class="glass p-5 sm:p-6">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <fieldset>
+                <legend class="sr-only">Metric</legend>
+                <div class="flex flex-wrap gap-2">
+                  <label class="chip"
+                    ><input class="sr-only" type="radio" name="metric" value="opens" checked />Opens</label
+                  >
+                  <label class="chip"><input class="sr-only" type="radio" name="metric" value="clicks" />Clicks</label>
+                  <label class="chip"
+                    ><input class="sr-only" type="radio" name="metric" value="revenue" />Revenue</label
+                  >
+                </div>
+              </fieldset>
+              <div class="text-right" aria-live="polite">
+                <p class="text-sm text-haze"><span data-analytics-summary>Opens</span>, latest issue</p>
+                <p class="font-display text-3xl font-black text-apricot" data-analytics-latest>58.7%</p>
+                <p class="text-sm text-fog" data-analytics-change>Up 22% over 10 campaigns</p>
+              </div>
+            </div>
+            <svg
+              viewBox="0 0 600 220"
+              class="mt-3 w-full"
+              role="img"
+              data-analytics-chart
+              aria-label="Opens for the last 10 campaigns."
+            ></svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal wrap mt-16" aria-labelledby="tour-cta">
+        <div class="glass flex flex-col items-start justify-between gap-5 p-6 sm:p-8 md:flex-row md:items-center">
+          <div>
+            <h2 id="tour-cta" class="text-2xl font-extrabold sm:text-3xl">Like what you've pressed?</h2>
+            <p class="mt-1.5 text-haze">
+              Public launch is
+              <time data-date="launch" data-format="long" datetime="2027-03-09">Tuesday, March 9, 2027</time>. Waitlist
+              members get in first.
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a class="btn" href="waitlist.html">Join the waitlist</a
+            ><a class="btn btn-ghost" href="pricing.html">See founding prices</a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-auto pt-16">
+      <div class="wrap pb-8">
+        <div class="glass grid gap-8 p-6 sm:grid-cols-2 sm:p-8 lg:grid-cols-[1.6fr_1fr_1fr_1.2fr]">
+          <div>
+            <a href="index.html" class="inline-flex items-center gap-2.5 rounded-lg" aria-label="Loftwing home"
+              ><svg viewBox="0 0 40 40" class="size-9 shrink-0" aria-hidden="true">
+                <defs>
+                  <linearGradient id="logo-sky-footer" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#ffcb9e" />
+                    <stop offset="1" stop-color="#ff8f70" />
+                  </linearGradient>
+                </defs>
+                <rect width="40" height="40" rx="11" fill="url(#logo-sky-footer)" />
+                <path
+                  d="M6 28 20 10l14 18"
+                  fill="none"
+                  stroke="#241238"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path d="M13.5 28c1-6 4-9.5 8-11 .5 4.5 2.5 7 7 8-3.5 3-10 4.5-15 3Z" fill="#241238" />
+                <circle cx="20" cy="9" r="2" fill="#241238" /></svg
+              ><span class="font-display text-xl font-extrabold">Loftwing</span></a
+            >
+            <p class="mt-3 max-w-xs text-[0.95rem] text-haze">
+              Email marketing for independent newsletters and small online shops, built in Spokane, Washington.
+            </p>
+            <p class="mt-3 text-[0.95rem] text-haze">
+              Public launch <time data-date="launch" data-format="medium" datetime="2027-03-09">Mar 9, 2027</time>
+            </p>
+          </div>
+          <div>
+            <h2 class="mono-label !text-apricot">Product</h2>
+            <ul class="mt-3 space-y-1.5 text-[0.95rem] text-haze">
+              <li><a class="hover:text-mist hover:underline" href="product.html">Tour the tools</a></li>
+              <li><a class="hover:text-mist hover:underline" href="pricing.html">Founding pricing</a></li>
+              <li><a class="hover:text-mist hover:underline" href="migrate.html">Switch to Loftwing</a></li>
+              <li><a class="hover:text-mist hover:underline" href="roadmap.html">Roadmap</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mono-label !text-apricot">Company</h2>
+            <ul class="mt-3 space-y-1.5 text-[0.95rem] text-haze">
+              <li><a class="hover:text-mist hover:underline" href="about.html">About us</a></li>
+              <li><a class="hover:text-mist hover:underline" href="journal.html">Build journal</a></li>
+              <li><a class="hover:text-mist hover:underline" href="waitlist.html">Waitlist</a></li>
+              <li><a class="hover:text-mist hover:underline" href="about.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mono-label !text-apricot">Find us</h2>
+            <address class="mt-3 text-[0.95rem] text-haze not-italic">
+              218 W Sprague Ave, Suite 4<br />Spokane, WA 99201
+            </address>
+            <p class="mt-2 text-[0.95rem] text-haze">
+              <a class="hover:text-mist hover:underline" href="mailto:hello@loftwing.example">hello@loftwing.example</a
+              ><br /><a class="hover:text-mist hover:underline" href="tel:+15095550147">(509) 555-0147</a>
+            </p>
+          </div>
+        </div>
+        <p class="mt-5 flex flex-wrap justify-between gap-x-6 gap-y-1 px-1 text-sm text-fog">
+          <span>&copy; <span data-year>2026</span> Loftwing, Inc.</span><span>Loftwing is a fictional company.</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

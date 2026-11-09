@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Technology — How the Heatloop thermal battery works</title>
+  <meta name="description" content="Inside a Heatloop: a phase-change heat store, a 7 kW charger and smart controls that follow your rate plan. See a day of charging and releasing, and the full specifications.">
+  <meta name="theme-color" content="#f5f2ea" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0c1511" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Heatloop">
+  <meta property="og:title" content="Technology — How the Heatloop thermal battery works">
+  <meta property="og:description" content="Inside a Heatloop: a phase-change heat store, a 7 kW charger and smart controls that follow your rate plan. See a day of charging and releasing, and the full specifications.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&amp;family=Hedvig+Letters+Serif:opsz@12..24&amp;family=Source+Code+Pro:wght@400;500&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>(function(){var d=document.documentElement;d.classList.add('js');var t=null;try{t=window.localStorage.getItem('heatloop:theme')}catch(e){}if(t==='dark'||(t!=='light'&&window.matchMedia('(prefers-color-scheme: dark)').matches))d.classList.add('dark')})();</script>
+</head>
+<body data-page="technology" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] border border-ink bg-paper px-5 py-3 font-mono text-sm uppercase tracking-[0.08em] focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-40 border-b border-rule bg-paper/95 backdrop-blur-sm">
+    <div class="container-x flex h-16 items-center justify-between gap-6">
+      <a href="index.html" class="inline-flex items-center gap-2.5 text-ink"><svg viewBox="0 0 32 32" class="h-8 w-8 shrink-0" aria-hidden="true"><path d="M23.6 8.4A11 11 0 1 0 27 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M27 10.2 27 16 21.4 14.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 20.5c1.6-1.8 1.6-3.6 0-5.4s-1.6-3.6 0-5.4M16 20.5c1.6-1.8 1.6-3.6 0-5.4s-1.6-3.6 0-5.4" fill="none" stroke="var(--ochre)" stroke-width="1.8" stroke-linecap="round"/></svg><span class="font-serif text-[1.6rem] leading-none tracking-[-0.02em]">Heatloop</span></a>
+      <nav aria-label="Main" class="hidden lg:block"><ul class="flex items-center gap-7"><li><a href="technology.html" aria-current="page" class="relative py-2 text-[0.98rem] text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-px aria-[current=page]:after:bg-copper">Technology</a></li><li><a href="estimator.html" class="relative py-2 text-[0.98rem] text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-px aria-[current=page]:after:bg-copper">Estimator</a></li><li><a href="company.html" class="relative py-2 text-[0.98rem] text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-px aria-[current=page]:after:bg-copper">Company</a></li><li><a href="careers.html" class="relative py-2 text-[0.98rem] text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-px aria-[current=page]:after:bg-copper">Careers</a></li><li><a href="news.html" class="relative py-2 text-[0.98rem] text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-px aria-[current=page]:after:bg-copper">News</a></li><li><a href="contact.html" class="relative py-2 text-[0.98rem] text-ink/80 transition hover:text-ink aria-[current=page]:text-ink aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-px aria-[current=page]:after:h-px aria-[current=page]:after:bg-copper">Contact</a></li></ul></nav>
+      <div class="flex items-center gap-2.5">
+        <button type="button" class="grid h-10 w-10 place-items-center border border-rule text-ink transition hover:border-ink" data-theme-toggle aria-pressed="false">
+          <span class="sr-only">Dark theme</span>
+          <svg viewBox="0 0 24 24" class="h-[1.15rem] w-[1.15rem] dark:hidden" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+          <svg viewBox="0 0 24 24" class="hidden h-[1.15rem] w-[1.15rem] dark:block" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.3 5.3l1.4 1.4M17.3 17.3l1.4 1.4M5.3 18.7l1.4-1.4M17.3 6.7l1.4-1.4"/></svg>
+        </button>
+        <a href="reserve.html" class="btn-primary btn-sm hidden sm:inline-flex" data-reserve-cta>Reserve</a>
+        <button id="menu-toggle" type="button" class="grid h-10 w-10 place-items-center border border-rule text-ink lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <span data-icon-open><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg></span>
+          <span data-icon-close class="hidden"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="h-[calc(100dvh-4rem)] overflow-y-auto border-t border-rule bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-10 pt-2">
+        <ul><li><a href="index.html" class="flex items-baseline gap-4 border-b border-rule py-3.5 font-serif text-[1.7rem] leading-tight aria-[current=page]:text-copper"><span class="font-mono text-[0.75rem] text-muted" aria-hidden="true">00</span>Home</a></li><li><a href="technology.html" aria-current="page" class="flex items-baseline gap-4 border-b border-rule py-3.5 font-serif text-[1.7rem] leading-tight aria-[current=page]:text-copper"><span class="font-mono text-[0.75rem] text-muted" aria-hidden="true">01</span>Technology</a></li><li><a href="estimator.html" class="flex items-baseline gap-4 border-b border-rule py-3.5 font-serif text-[1.7rem] leading-tight aria-[current=page]:text-copper"><span class="font-mono text-[0.75rem] text-muted" aria-hidden="true">02</span>Estimator</a></li><li><a href="company.html" class="flex items-baseline gap-4 border-b border-rule py-3.5 font-serif text-[1.7rem] leading-tight aria-[current=page]:text-copper"><span class="font-mono text-[0.75rem] text-muted" aria-hidden="true">03</span>Company</a></li><li><a href="careers.html" class="flex items-baseline gap-4 border-b border-rule py-3.5 font-serif text-[1.7rem] leading-tight aria-[current=page]:text-copper"><span class="font-mono text-[0.75rem] text-muted" aria-hidden="true">04</span>Careers</a></li><li><a href="news.html" class="flex items-baseline gap-4 border-b border-rule py-3.5 font-serif text-[1.7rem] leading-tight aria-[current=page]:text-copper"><span class="font-mono text-[0.75rem] text-muted" aria-hidden="true">05</span>News</a></li><li><a href="contact.html" class="flex items-baseline gap-4 border-b border-rule py-3.5 font-serif text-[1.7rem] leading-tight aria-[current=page]:text-copper"><span class="font-mono text-[0.75rem] text-muted" aria-hidden="true">06</span>Contact</a></li><li><a href="reserve.html" class="flex items-baseline gap-4 border-b border-rule py-3.5 font-serif text-[1.7rem] leading-tight aria-[current=page]:text-copper"><span class="font-mono text-[0.75rem] text-muted" aria-hidden="true">07</span>Reserve</a></li></ul>
+        <p class="mt-8 text-muted">Call the Bangor office: <a href="tel:+12075550176" class="link">(207) 555-0176</a></p>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="container-x grid gap-12 pb-16 pt-10 sm:pt-14 lg:grid-cols-[1fr_1fr] lg:items-center lg:gap-16 lg:pb-24">
+      <div class="reveal">
+        <p class="label">Technology</p>
+        <h1 class="display mt-5 text-[2.7rem] sm:text-6xl lg:text-[4.2rem]">A heat store that reads your electric rates.</h1>
+        <p class="lede mt-6 max-w-xl">Three modules in one cabinet: controls that decide when to buy power, a store of phase-change cells that holds it as heat, and the hydraulics that deliver it to your radiators and faucets. No flame, no flue, no fuel tank.</p>
+        <ul class="mt-8 grid gap-3 border-t border-rule pt-6 sm:grid-cols-3">
+          <li><p class="label-muted">Store</p><p class="mt-1 font-serif text-2xl">136&deg;F melt</p></li>
+          <li><p class="label-muted">Loss</p><p class="mt-1 font-serif text-2xl">&lt;3% a day</p></li>
+          <li><p class="label-muted">Cycles tested</p><p class="mt-1 font-serif text-2xl">10,000</p></li>
+        </ul>
+      </div>
+      <figure class="reveal figure p-4 sm:p-6">
+        <div class="flex items-center justify-between gap-4 border-b border-rule pb-3 text-right"><p class="label-muted shrink-0 whitespace-nowrap">Fig. 2</p><p class="label-muted">Exploded view</p></div>
+        <svg viewBox="0 0 640 540" class="mt-4 h-auto w-full text-ink" role="img" aria-labelledby="exploded-title">
+          <title id="exploded-title">Exploded drawing of a Heatloop: the controls module on top, the insulated store of phase-change cells in the middle and the hydraulics module with pump, valves and pipe connections at the bottom</title>
+          <defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1" opacity=".45"/></pattern></defs>
+          <g stroke="currentColor" stroke-width=".8" stroke-dasharray="3 5" opacity=".5"><path d="M80 92V150M280 92V150M320 68V126M80 410V452M280 410V452M320 386V428"/></g>
+          <!-- A controls -->
+          <path d="M80 52L120 28H320L280 52Z" fill="var(--paper-2)" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+          <path d="M280 52L320 28V68L280 92Z" fill="var(--paper-3)" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+          <rect x="80" y="52" width="200" height="40" fill="var(--paper)" stroke="currentColor" stroke-width="1.3"/>
+          <rect x="96" y="60" width="64" height="24" fill="var(--paper-2)" stroke="currentColor"/><path d="M104 72h28M104 78h18" stroke="var(--forest)" stroke-width="2.4"/><circle cx="262" cy="72" r="4" fill="var(--forest)"/>
+          <path d="M176 64h70M176 72h56M176 80h66" stroke="currentColor" stroke-width=".8" opacity=".4"/>
+          <!-- B store -->
+          <path d="M80 150L120 126H320L280 150Z" fill="var(--paper-2)" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+          <path d="M280 150L320 126V386L280 410Z" fill="var(--paper-3)" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+          <rect x="80" y="150" width="200" height="260" class="hatch" stroke="currentColor" stroke-width="1.3"/>
+          <rect x="94" y="164" width="172" height="232" fill="var(--paper)" stroke="currentColor"/>
+          <g fill="var(--ochre)" fill-opacity=".35" stroke="currentColor" stroke-width=".9">
+            <rect x="104" y="176" width="46" height="26" rx="6"/><rect x="157" y="176" width="46" height="26" rx="6"/><rect x="210" y="176" width="46" height="26" rx="6"/>
+            <rect x="104" y="214" width="46" height="26" rx="6"/><rect x="157" y="214" width="46" height="26" rx="6"/><rect x="210" y="214" width="46" height="26" rx="6"/>
+            <rect x="104" y="252" width="46" height="26" rx="6"/><rect x="157" y="252" width="46" height="26" rx="6"/><rect x="210" y="252" width="46" height="26" rx="6"/>
+            <rect x="104" y="290" width="46" height="26" rx="6"/><rect x="157" y="290" width="46" height="26" rx="6"/><rect x="210" y="290" width="46" height="26" rx="6"/>
+            <rect x="104" y="328" width="46" height="26" rx="6"/><rect x="157" y="328" width="46" height="26" rx="6"/><rect x="210" y="328" width="46" height="26" rx="6"/>
+          </g>
+          <path d="M100 368l7-10 7 10 7-10 7 10 7-10 7 10 7-10 7 10 7-10 7 10 7-10 7 10 7-10 7 10 7-10 7 10 7-10 7 10 7-10 7 10 7-10 7 10" fill="none" stroke="var(--ember)" stroke-width="2"/>
+          <path d="M270 170V208H98V246H262V284H98V322H262" fill="none" stroke="var(--copper)" stroke-width="2.4" stroke-linejoin="round"/>
+          <!-- C hydraulics -->
+          <path d="M80 452L120 428H320L280 452Z" fill="var(--paper-2)" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+          <path d="M280 452L320 428V488L280 512Z" fill="var(--paper-3)" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+          <rect x="80" y="452" width="200" height="60" fill="var(--paper)" stroke="currentColor" stroke-width="1.3"/>
+          <circle cx="120" cy="482" r="16" fill="var(--paper-2)" stroke="currentColor"/><path d="M120 470v24M108 482h24" stroke="currentColor" stroke-width=".8"/>
+          <rect x="152" y="466" width="40" height="32" fill="var(--paper-2)" stroke="currentColor"/><path d="M156 474h32M156 482h32M156 490h32" stroke="var(--copper)" stroke-width="1.4"/>
+          <path d="M212 466l12 16-12 16M248 466l-12 16 12 16" fill="none" stroke="currentColor"/>
+          <g stroke-linecap="round"><path d="M320 440h30" stroke="var(--ochre)" stroke-width="5"/><path d="M320 456h30" stroke="var(--forest)" stroke-width="5"/><path d="M320 472h30" stroke="var(--copper)" stroke-width="5"/></g>
+          <!-- labels -->
+          <g fill="none" stroke="currentColor" stroke-width=".8" opacity=".7"><path d="M330 56H404"/><path d="M330 250H404"/><path d="M362 470H404"/></g>
+          <g fill="currentColor" font-family="Source Code Pro, monospace">
+            <text x="414" y="52" font-size="17">A &#183; CONTROLS</text><text x="414" y="74" font-size="14" opacity=".8">Rates, weather, display</text>
+            <text x="414" y="246" font-size="17">B &#183; STORE</text><text x="414" y="268" font-size="14" opacity=".8">54 cells, 28 kWh, 7 kW</text><text x="414" y="288" font-size="14" opacity=".8">vacuum-panel walls</text>
+            <text x="414" y="466" font-size="17">C &#183; HYDRAULICS</text><text x="414" y="488" font-size="14" opacity=".8">Pump, valves, hot water</text>
+          </g>
+        </svg>
+      </figure>
+    </section>
+
+    <section class="border-y border-rule bg-paper-2/60" aria-labelledby="day-title">
+      <div class="container-x py-20 lg:py-24">
+        <div class="section-head"><span class="section-no">01</span><span class="label-muted">A day in the life</span></div>
+        <div class="mt-6 grid gap-6 lg:grid-cols-[1fr_1.3fr] lg:gap-16">
+          <h2 id="day-title" class="display text-4xl sm:text-5xl">Watch a cold day go by.</h2>
+          <p class="lede self-end">Slide through 24 hours on an illustrative time-of-use rate plan. The green line is how full the store is; the ochre line is the price of electricity. Shaded bands are the cheap hours.</p>
+        </div>
+        <!-- Driven by initDayChart() in assets/js/main.js: TARIFF_BANDS, DEMAND_WEIGHTS and MODELS. -->
+        <div class="mt-10 grid gap-8 lg:grid-cols-[1.7fr_1fr]" data-day>
+          <div class="figure min-w-0 p-4 sm:p-6">
+            <div class="flex flex-wrap items-center justify-between gap-3 border-b border-rule pb-4">
+              <div class="flex flex-wrap gap-2" role="group" aria-label="Model">
+                <button type="button" class="toggle" data-day-model="hl18" aria-pressed="false">Heatloop 18</button>
+                <button type="button" class="toggle" data-day-model="hl28" aria-pressed="true">Heatloop 28</button>
+                <button type="button" class="toggle" data-day-model="hl40" aria-pressed="false">Heatloop 40</button>
+              </div>
+              <button type="button" class="btn-line btn-sm" data-day-play aria-pressed="false"><svg viewBox="0 0 24 24" class="h-3.5 w-3.5" fill="currentColor" aria-hidden="true"><path d="M7 4v16l13-8Z"/></svg><span data-day-play-label>Play the day</span></button>
+            </div>
+            <div class="mt-4" data-day-chart><p class="py-10 text-muted">The day chart needs JavaScript.</p></div>
+            <label for="day-time" class="field-label mt-4">Time of day: <span class="text-copper" data-day-time-out>5:30 PM</span></label>
+            <input id="day-time" type="range" min="0" max="47" step="1" value="35" class="w-full accent-[var(--forest)]" data-day-time>
+            <div class="mt-1 flex justify-between tick"><span>12 AM</span><span>12 PM</span><span>11:30 PM</span></div>
+          </div>
+          <div class="flex flex-col gap-6">
+            <dl class="grid grid-cols-2 gap-px border border-rule bg-rule" aria-live="polite">
+              <div class="bg-paper p-4"><dt class="label-muted">Half hour</dt><dd class="mt-1 font-serif text-2xl" data-day-out="time">5:30 PM&ndash;6:00 PM</dd></div>
+              <div class="bg-paper p-4"><dt class="label-muted">Price</dt><dd class="mt-1 font-serif text-2xl" data-day-out="price">40&cent; / kWh</dd></div>
+              <div class="bg-paper p-4"><dt class="label-muted">Store</dt><dd class="mt-1 font-serif text-xl sm:text-2xl" data-day-out="soc">&ndash;</dd></div>
+              <div class="bg-paper p-4"><dt class="label-muted">Heat to home</dt><dd class="mt-1 font-serif text-2xl" data-day-out="heat">&ndash;</dd></div>
+              <div class="col-span-2 bg-paper p-4"><dt class="label-muted">Mode</dt><dd class="mt-1"><span class="font-serif text-2xl text-forest" data-day-out="mode">Releasing</span><span class="mt-1 block text-[0.98rem] text-muted" data-day-out="mode-text">Peak or day rate: the radiators and faucets are fed from the store.</span></dd></div>
+            </dl>
+            <p class="border-l-2 border-ochre pl-4 text-[0.98rem]" data-day-summary>Over this cold day the Heatloop 28 buys most of its electricity at the cheap rate.</p>
+            <p class="text-[0.92rem] text-muted">Modeled for a home using 90 kWh of heat on a cold day. The rate plan is illustrative; your Heatloop follows the real prices of the plan you choose.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-x py-20 lg:py-28" aria-labelledby="inside-title">
+      <div class="section-head"><span class="section-no">02</span><span class="label-muted">Inside the store</span></div>
+      <h2 id="inside-title" class="display mt-6 max-w-3xl text-4xl sm:text-5xl">Most of the energy hides in a melt, not a temperature.</h2>
+      <div class="mt-12 grid gap-12 lg:grid-cols-3 lg:gap-10">
+        <article class="reveal">
+          <svg viewBox="0 0 320 220" class="h-auto w-full text-ink" role="img" aria-labelledby="melt-title">
+            <title id="melt-title">Chart of store temperature against energy stored: temperature rises to 136 degrees Fahrenheit, stays flat while the cells melt and most energy is absorbed, then rises again</title>
+            <path d="M40 180H306M40 180V14" stroke="currentColor" stroke-width="1"/>
+            <path d="M40 98H306" stroke="var(--rule)" stroke-dasharray="3 4"/>
+            <rect x="92" y="20" width="166" height="160" fill="var(--ochre)" opacity=".12"/>
+            <path d="M40 168C60 140 78 112 92 98H258C272 86 286 70 300 52" fill="none" stroke="var(--ember)" stroke-width="2.4"/>
+            <g class="tick" fill="currentColor"><text x="34" y="102" text-anchor="end">136&#176;F</text><text x="34" y="56" text-anchor="end">158&#176;F</text><text x="34" y="172" text-anchor="end">68&#176;F</text><text x="175" y="200" text-anchor="middle">ENERGY STORED</text><text x="175" y="40" text-anchor="middle">MELTING: ~80% OF CAPACITY</text></g>
+          </svg>
+          <h3 class="mt-6 font-serif text-2xl">Phase change</h3>
+          <p class="mt-3 text-muted">Our cells hold a salt hydrate that melts at 136&deg;F. While it melts, it soaks up a large amount of energy without getting much hotter, so the store stays compact and loses less heat. Freezing gives that energy back at a steady temperature.</p>
+        </article>
+        <article class="reveal">
+          <svg viewBox="0 0 320 220" class="h-auto w-full text-ink" role="img" aria-labelledby="loss-title">
+            <title id="loss-title">Bar chart of heat lost over 24 hours: a Heatloop loses under 3 percent, a typical hot water tank about 8 percent, an old storage heater about 25 percent</title>
+            <path d="M40 180H306" stroke="currentColor"/>
+            <rect x="60" y="158" width="58" height="22" fill="var(--forest)"/>
+            <rect x="142" y="120" width="58" height="60" fill="var(--paper-3)" stroke="currentColor" stroke-width=".8"/>
+            <rect x="224" y="40" width="58" height="140" class="hatch" stroke="currentColor" stroke-width=".8"/>
+            <g class="tick" fill="currentColor" text-anchor="middle"><text x="89" y="150">&lt;3%</text><text x="171" y="112">~8%</text><text x="253" y="32">~25%</text><text x="89" y="198">HEATLOOP</text><text x="171" y="198">TANK</text><text x="253" y="198">STORAGE HTR</text></g>
+          </svg>
+          <h3 class="mt-6 font-serif text-2xl">Vacuum-panel walls</h3>
+          <p class="mt-3 text-muted">Three-quarters of an inch of vacuum insulation panel lines every face of the store. In our lab tests a full Heatloop 28 loses less than 3% of its heat in a day, and that heat leaks into the room it stands in. Figures for other stores are typical values for comparison.</p>
+        </article>
+        <article class="reveal">
+          <svg viewBox="0 0 320 220" class="h-auto w-full text-ink" role="img" aria-labelledby="ctrl-title">
+            <title id="ctrl-title">Diagram: electric rates, the weather forecast and your household's habits feed the controller, which sets tomorrow's charging plan</title>
+            <g fill="var(--paper)" stroke="currentColor" stroke-width="1"><rect x="10" y="22" width="104" height="40"/><rect x="10" y="90" width="104" height="40"/><rect x="10" y="158" width="104" height="40"/><rect x="200" y="90" width="110" height="40"/></g>
+            <rect x="200" y="90" width="110" height="40" fill="var(--forest)" opacity=".15"/>
+            <path d="M114 42C160 42 160 104 200 104M114 110H200M114 178C160 178 160 116 200 116" fill="none" stroke="var(--copper)" stroke-width="1.6" class="flow"/>
+            <g class="tick" fill="currentColor" text-anchor="middle"><text x="62" y="46">ELECTRIC RATES</text><text x="62" y="114">WEATHER</text><text x="62" y="182">YOUR HABITS</text><text x="255" y="114">TOMORROW&#8217;S PLAN</text></g>
+          </svg>
+          <h3 class="mt-6 font-serif text-2xl">Controls that plan ahead</h3>
+          <p class="mt-3 text-muted">Each evening the controller reads tomorrow&rsquo;s prices, the weather forecast and how your home used heat last week, then plans when to charge. Comfort always comes first: if the store runs low, it heats directly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="specs" class="container-x pb-20 lg:pb-28" aria-labelledby="specs-title">
+      <div class="section-head"><span class="section-no">03</span><span class="label-muted">Specifications</span></div>
+      <div class="mt-6 flex flex-wrap items-end justify-between gap-4">
+        <h2 id="specs-title" class="display text-4xl sm:text-5xl">Three sizes, one design.</h2>
+        <p class="max-w-md text-muted">Indicative prices include installation and don&rsquo;t count any rebate or tax credit. Federal, state and utility incentives change often and a thermal battery may not qualify, so we can&rsquo;t promise any: check what&rsquo;s current with Efficiency Maine, your utility and a tax professional. The final price, before sales tax where it applies, is confirmed after a free home assessment.</p>
+      </div>
+      <div class="relative mt-10 overflow-x-auto">
+        <table class="spec w-full min-w-[40rem] text-[0.98rem]">
+          <caption class="sr-only">Heatloop model specifications</caption>
+          <thead><tr><th scope="col">&nbsp;</th><th scope="col">Heatloop 18</th><th scope="col">Heatloop 28</th><th scope="col">Heatloop 40</th></tr></thead>
+          <tbody>
+            <tr><th scope="row" class="font-mono text-[0.8rem] uppercase tracking-[0.08em] text-muted">Suits</th><td>Apartments and small homes</td><td>Most mid-size homes</td><td>Large homes</td></tr>
+            <tr><th scope="row" class="font-mono text-[0.8rem] uppercase tracking-[0.08em] text-muted">Heat stored</th><td class="font-serif text-xl">18 kWh</td><td class="font-serif text-xl">28 kWh</td><td class="font-serif text-xl">40 kWh</td></tr>
+            <tr><th scope="row" class="font-mono text-[0.8rem] uppercase tracking-[0.08em] text-muted">Charging element</th><td>5 kW</td><td>7 kW</td><td>9 kW</td></tr>
+            <tr><th scope="row" class="font-mono text-[0.8rem] uppercase tracking-[0.08em] text-muted">Heat output</th><td>up to 12 kW</td><td>up to 16 kW</td><td>up to 20 kW</td></tr>
+            <tr><th scope="row" class="font-mono text-[0.8rem] uppercase tracking-[0.08em] text-muted">Hot water</th><td>up to 5 gal/min</td><td>up to 6 gal/min</td><td>up to 7 gal/min</td></tr>
+            <tr><th scope="row" class="font-mono text-[0.8rem] uppercase tracking-[0.08em] text-muted">W &times; D &times; H</th><td>24 &times; 24 &times; 45 in</td><td>24 &times; 24 &times; 65 in</td><td>30 &times; 24 &times; 73 in</td></tr>
+            <tr><th scope="row" class="font-mono text-[0.8rem] uppercase tracking-[0.08em] text-muted">Weight, full</th><td>460 lb</td><td>705 lb</td><td>990 lb</td></tr>
+            <tr><th scope="row" class="font-mono text-[0.8rem] uppercase tracking-[0.08em] text-muted">Supply</th><td>30 A, 240 V circuit</td><td>40 A, 240 V circuit</td><td>50 A, 240 V circuit</td></tr>
+            <tr><th scope="row" class="font-mono text-[0.8rem] uppercase tracking-[0.08em] text-muted">Noise</th><td colspan="3">Under 30 dB(A) at three feet, a quiet pump and nothing else</td></tr>
+            <tr><th scope="row" class="font-mono text-[0.8rem] uppercase tracking-[0.08em] text-muted">Warranty</th><td colspan="3">10 years on the store, 5 years on controls and hydraulics</td></tr>
+            <tr><th scope="row" class="font-mono text-[0.8rem] uppercase tracking-[0.08em] text-muted">Indicative price</th><td class="font-serif text-xl">$8,900</td><td class="font-serif text-xl">$11,500</td><td class="font-serif text-xl">$14,500</td></tr>
+            <tr><th scope="row"><span class="sr-only">Reserve</span></th><td><a href="reserve.html?model=hl18" class="link">Reserve a Heatloop 18</a></td><td><a href="reserve.html?model=hl28" class="link">Reserve a Heatloop 28</a></td><td><a href="reserve.html?model=hl40" class="link">Reserve a Heatloop 40</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="container-x pb-24" aria-labelledby="faq-title">
+      <div class="section-head"><span class="section-no">04</span><span class="label-muted">Good questions</span></div>
+      <div class="mt-6 grid gap-10 lg:grid-cols-[1fr_2fr] lg:gap-16">
+        <h2 id="faq-title" class="display text-4xl sm:text-5xl">What engineers and neighbors ask us.</h2>
+        <div class="border-t border-ink">
+          <details class="group border-b border-rule py-5"><summary class="flex items-start justify-between gap-6 font-serif text-xl">Is it the same as an electric thermal storage heater?<span class="font-mono text-copper transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-3 text-muted">No. A thermal storage heater warms one room and leaks its heat whether you want it or not. A Heatloop sits in a closet, basement or utility room, keeps its heat until it&rsquo;s asked for, and feeds a whole hot-water heating system and your hot water.</p></details>
+          <details class="group border-b border-rule py-5"><summary class="flex items-start justify-between gap-6 font-serif text-xl">Will it work with my radiators or baseboard?<span class="font-mono text-copper transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-3 text-muted">It delivers water at up to 144&deg;F. Many radiator systems sized for a boiler handle that well, especially with modern controls, while baseboard often needs more length. Our home assessment checks what you have and tells you honestly if any of it would need upgrading.</p></details>
+          <details class="group border-b border-rule py-5"><summary class="flex items-start justify-between gap-6 font-serif text-xl">What happens if the store runs out?<span class="font-mono text-copper transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-3 text-muted">The element heats water directly, like an electric boiler, so you are never left cold. You pay the going rate for that heat, which is why the controller plans to avoid it.</p></details>
+          <details class="group border-b border-rule py-5"><summary class="flex items-start justify-between gap-6 font-serif text-xl">Is the material inside safe?<span class="font-mono text-copper transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-3 text-muted">The salt hydrate is non-flammable and sealed in welded cells inside a steel case. Nothing burns, and there is no combustion gas in your home. We are working through product certification with an independent testing lab and will publish the results.</p></details>
+          <details class="group border-b border-rule py-5"><summary class="flex items-start justify-between gap-6 font-serif text-xl">Do I need a special rate plan?<span class="font-mono text-copper transition group-open:rotate-45" aria-hidden="true">+</span></summary><p class="mt-3 text-muted">You&rsquo;ll get the most from a plan with cheap hours, such as a time-of-use rate; ask your utility what it offers today. On a flat rate a Heatloop still works, but there is nothing cheaper to shift to. The <a href="estimator.html" class="link">estimator</a> shows the difference.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="mt-auto bg-pine text-cream">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_0.8fr_0.8fr_1.5fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-2.5 text-cream"><svg viewBox="0 0 32 32" class="h-9 w-9 shrink-0" aria-hidden="true"><path d="M23.6 8.4A11 11 0 1 0 27 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M27 10.2 27 16 21.4 14.6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 20.5c1.6-1.8 1.6-3.6 0-5.4s-1.6-3.6 0-5.4M16 20.5c1.6-1.8 1.6-3.6 0-5.4s-1.6-3.6 0-5.4" fill="none" stroke="var(--ochre)" stroke-width="1.8" stroke-linecap="round"/></svg><span class="font-serif text-[1.8rem] leading-none">Heatloop</span></a>
+        <p class="mt-5 max-w-xs text-cream/80">Thermal batteries for homes. Designed in Bangor, built in Hermon.</p>
+        <address class="mt-5 not-italic leading-relaxed text-cream/80">Heatloop, Inc., Exchange Street<br>Bangor, ME 04401</address>
+        <p class="mt-3 leading-relaxed"><a href="tel:+12075550176" class="underline decoration-cream/40 underline-offset-4 hover:decoration-cream">(207) 555-0176</a><br><a href="mailto:hello@heatloop.example" class="underline decoration-cream/40 underline-offset-4 hover:decoration-cream">hello@heatloop.example</a></p>
+      </div>
+      <div><h2 class="font-mono text-[0.78rem] uppercase tracking-[0.14em] text-wheat">Product</h2><ul class="mt-4 space-y-2 text-cream/85"><li><a href="technology.html" class="hover:text-cream hover:underline">Technology</a></li><li><a href="estimator.html" class="hover:text-cream hover:underline">Estimator</a></li><li><a href="reserve.html" class="hover:text-cream hover:underline">Reserve</a></li><li><a href="technology.html#specs" class="hover:text-cream hover:underline">Specifications</a></li></ul></div>
+      <div><h2 class="font-mono text-[0.78rem] uppercase tracking-[0.14em] text-wheat">Company</h2><ul class="mt-4 space-y-2 text-cream/85"><li><a href="company.html" class="hover:text-cream hover:underline">About us</a></li><li><a href="careers.html" class="hover:text-cream hover:underline">Careers</a></li><li><a href="news.html" class="hover:text-cream hover:underline">News</a></li><li><a href="company.html#press" class="hover:text-cream hover:underline">Press kit</a></li><li><a href="contact.html" class="hover:text-cream hover:underline">Contact</a></li></ul></div>
+      <div>
+        <h2 class="font-mono text-[0.78rem] uppercase tracking-[0.14em] text-wheat">Field notes</h2>
+        <p class="mt-4 text-cream/85">One letter a month: install news, what the pilot homes are telling us and when the next open house is.</p>
+        <!-- Connect this form in assets/js/main.js (initForms); see DOCS.md "Forms". -->
+        <form id="newsletter" class="mt-4 flex flex-col gap-3 sm:flex-row sm:items-start" data-validate data-success="newsletter-success" data-hide-on-success novalidate>
+          <div class="flex-1">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input id="newsletter-email" name="email" type="email" autocomplete="email" required data-required-msg="Enter your email address." placeholder="you@example.com" class="w-full border border-cream/50 bg-pine-deep px-3.5 py-2.5 text-cream placeholder:text-cream/60 focus:border-cream focus:outline-none" aria-describedby="newsletter-email-error">
+            <p id="newsletter-email-error" class="mt-1.5 text-[0.95rem] text-[#ffb59f] empty:hidden" aria-live="polite"></p>
+          </div>
+          <button type="submit" class="btn-cream shrink-0">Subscribe</button>
+        </form>
+        <div id="newsletter-success" class="mt-4 border border-cream/40 p-3" tabindex="-1" role="status" hidden data-success-panel><p>Thanks for subscribing. Look out for a short email asking you to confirm; the next Field notes follows.</p></div>
+      </div>
+    </div>
+    <div class="border-t border-cream/15">
+      <div class="container-x flex flex-col gap-2 py-5 font-mono text-[0.78rem] uppercase tracking-[0.08em] text-cream/70 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Heatloop, Inc., Bangor, Maine. A fictional company.</p>
+        <p>Estimates on this site are illustrative, not financial advice.</p>
+      </div>
+    </div>
+  </footer>
+  <p id="live-region" class="sr-only" aria-live="polite"></p>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

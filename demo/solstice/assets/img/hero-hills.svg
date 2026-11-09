@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 300">
+  <path d="M0 150c150-52 300-60 450-22s270 36 400 0 300-52 420-14c70 22 120 22 170 8V300H0Z" fill="#e8673a"/>
+  <path d="M0 150c150-52 300-60 450-22s270 36 400 0 300-52 420-14c70 22 120 22 170 8" fill="none" stroke="#24122e" stroke-width="3"/>
+  <!-- ferris wheel -->
+  <g transform="translate(1190 52)" stroke="#24122e" stroke-width="3.5" stroke-linecap="round" fill="none">
+    <path d="M60 64 28 150M60 64l32 86"/>
+    <circle cx="60" cy="64" r="56"/>
+    <path d="M60 8v112M4 64h112M20 24l80 80M100 24l-80 80"/>
+    <g fill="#ffc53d"><circle cx="60" cy="8" r="9"/><circle cx="116" cy="64" r="9" fill="#ff8a2b"/><circle cx="60" cy="120" r="9" fill="#8fd0ee"/><circle cx="4" cy="64" r="9" fill="#ffb3a1"/><circle cx="100" cy="24" r="8" fill="#9fd88a"/><circle cx="100" cy="104" r="8"/><circle cx="20" cy="104" r="8" fill="#ff8a2b"/><circle cx="20" cy="24" r="8" fill="#8fd0ee"/></g>
+    <circle cx="60" cy="64" r="7" fill="#24122e"/>
+  </g>
+  <path d="M0 205c160-40 330-46 500-10s320 34 470 2 320-40 470-6V300H0Z" fill="#0b6e66"/>
+  <path d="M0 205c160-40 330-46 500-10s320 34 470 2 320-40 470-6" fill="none" stroke="#24122e" stroke-width="3"/>
+  <!-- main stage -->
+  <g transform="translate(860 128)" stroke="#24122e" stroke-width="3" stroke-linejoin="round">
+    <path d="M10 46 70 8l60 38Z" fill="#c73a1e"/>
+    <path d="M18 46h104v42H18Z" fill="#24122e"/>
+    <path d="M28 54h84v28H28Z" fill="#ffc53d"/>
+    <path d="M70 8V-18" stroke-linecap="round"/><path d="M70-18l22 7-22 7Z" fill="#ffc53d"/>
+    <path d="M4 88h132" stroke-linecap="round"/>
+  </g>
+  <!-- trees -->
+  <g stroke="#24122e" stroke-width="3">
+    <path d="M232 196v-26M262 190v-20M640 206v-30M1056 204v-24M1100 200v-20"/>
+    <g fill="#2f7d4a"><circle cx="232" cy="160" r="20"/><circle cx="262" cy="162" r="15"/><circle cx="640" cy="164" r="22"/><circle cx="1056" cy="170" r="18"/><circle cx="1100" cy="172" r="14"/></g>
+  </g>
+  <path d="M0 252c220-34 470-36 720-6s500 26 720-10V300H0Z" fill="#2f7d4a"/>
+  <path d="M0 252c220-34 470-36 720-6s500 26 720-10" fill="none" stroke="#24122e" stroke-width="3"/>
+  <!-- tents -->
+  <g stroke="#24122e" stroke-width="3" stroke-linejoin="round">
+    <path d="M120 262l34-46 34 46Z" fill="#ffc53d"/><path d="M154 216v46" />
+    <path d="M196 264l26-34 26 34Z" fill="#ffb3a1"/>
+    <path d="M330 254l30-40 30 40Z" fill="#ff8a2b"/><path d="M360 214v40"/>
+    <path d="M1200 262l30-40 30 40Z" fill="#8fd0ee"/><path d="M1230 222v40"/>
+    <path d="M1268 266l24-32 24 32Z" fill="#ffc53d"/>
+  </g>
+  <!-- flowers -->
+  <g fill="#ffc53d" stroke="#24122e" stroke-width="2"><circle cx="520" cy="270" r="6"/><circle cx="560" cy="282" r="5"/><circle cx="820" cy="276" r="6"/><circle cx="900" cy="286" r="5"/><circle cx="1010" cy="272" r="6"/><circle cx="60" cy="282" r="5"/></g>
+</svg>

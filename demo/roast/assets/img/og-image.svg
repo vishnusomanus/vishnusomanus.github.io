@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#2338b5"/>
+  <rect x="0" y="560" width="1200" height="70" fill="#ffcd4a"/>
+  <path d="M0 560h1200" stroke="#141a3c" stroke-width="4"/>
+  <text x="80" y="606" font-family="Unbounded, sans-serif" font-size="26" font-weight="700" fill="#141a3c" letter-spacing="2">JASMINE ✺ BLACKCURRANT ✺ RED APPLE ✺ BROWN BUTTER</text>
+  <g transform="translate(80 92)">
+    <circle cx="28" cy="28" r="26" fill="#2338b5" stroke="#fff6df" stroke-width="3.5"/>
+    <ellipse cx="28" cy="28" rx="12" ry="17.5" transform="rotate(32 28 28)" fill="#ffcd4a" stroke="#141a3c" stroke-width="3"/>
+    <path d="M20.5 18.5c7.8 4.8-.8 14.8 15.1 18.5" fill="none" stroke="#141a3c" stroke-width="3" stroke-linecap="round"/>
+    <text x="72" y="40" font-family="Unbounded, sans-serif" font-size="32" font-weight="700" fill="#fff6df">First Crack</text>
+  </g>
+  <text font-family="Unbounded, sans-serif" font-size="64" font-weight="700" fill="#fff6df" letter-spacing="-1.5">
+    <tspan x="80" y="262">Coffee that tastes</tspan>
+    <tspan x="80" y="346">like where</tspan>
+    <tspan x="80" y="430">it grew.</tspan>
+  </text>
+  <text x="80" y="498" font-family="Onest, sans-serif" font-size="28" font-weight="500" fill="#fff6df">Specialty coffee, roasted every Monday</text>
+  <g transform="translate(830 70) rotate(4 120 200)">
+    <rect x="12" y="12" width="240" height="420" rx="34" fill="#141a3c"/>
+    <path d="M30 60h200l10 330q0 30-30 30H50q-30 0-30-30z" fill="#f4a6c4" stroke="#141a3c" stroke-width="5"/>
+    <rect x="30" y="30" width="200" height="34" fill="#c47a96" stroke="#141a3c" stroke-width="5"/>
+    <rect x="62" y="140" width="136" height="210" rx="18" fill="#fffcf4" stroke="#141a3c" stroke-width="5"/>
+    <circle cx="130" cy="196" r="17" fill="#e0522f"/>
+    <text x="130" y="262" text-anchor="middle" font-family="Unbounded, sans-serif" font-size="17" font-weight="700" fill="#141a3c">ETHIOPIA</text>
+    <text x="130" y="292" text-anchor="middle" font-family="Onest, sans-serif" font-size="14" font-weight="600" fill="#141a3c">Washed · Light</text>
+  </g>
+</svg>

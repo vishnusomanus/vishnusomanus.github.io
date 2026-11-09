@@ -1,0 +1,162 @@
+@import "tailwindcss" source("../");
+@theme {
+  --font-sans: "Overpass", Arial, sans-serif;
+  --font-display: "Bitter", Georgia, serif;
+  --color-paper: #f6f3ed;
+  --color-card: #fffcf8;
+  --color-wash: #ece5dc;
+  --color-ink: #2d2625;
+  --color-muted: #625851;
+  --color-oxblood: #601e2d;
+  --color-rose: #ead5d5;
+  --color-rule: #cfc3b7;
+}
+@layer base {
+  body {
+    @apply bg-paper text-ink;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-oxblood);
+    outline-offset: 4px;
+  }
+  .bg-oxblood :focus-visible,
+  .bg-ink :focus-visible {
+    outline-color: var(--color-paper);
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  button,
+  summary {
+    cursor: pointer;
+  }
+  input,
+  select,
+  textarea {
+    min-width: 0;
+  }
+  input[type="checkbox"] {
+    accent-color: var(--color-oxblood);
+  }
+  ::selection {
+    background: var(--color-rose);
+    color: var(--color-oxblood);
+  }
+}
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-[1320px] px-5 sm:px-8 lg:px-12;
+  }
+  .eyebrow {
+    @apply text-[.7rem] font-semibold uppercase tracking-[.18em];
+  }
+  .nav-link {
+    @apply block px-3 py-3 text-sm transition hover:text-oxblood;
+  }
+  .nav-link[aria-current="page"] {
+    @apply text-oxblood underline underline-offset-8;
+  }
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-3 border border-oxblood bg-oxblood px-5 py-3 text-sm font-semibold text-white transition hover:bg-ink;
+  }
+  .btn-outline {
+    @apply inline-flex min-h-12 items-center justify-center gap-3 border border-ink px-5 py-3 text-sm font-semibold transition hover:bg-wash;
+  }
+  .btn-light {
+    @apply inline-flex min-h-12 items-center justify-center gap-3 border border-paper bg-paper px-5 py-3 text-sm font-semibold text-oxblood transition hover:bg-rose;
+  }
+  .text-link {
+    @apply font-semibold underline decoration-rule underline-offset-4 transition hover:text-oxblood hover:decoration-oxblood;
+  }
+  .footer-link {
+    @apply underline decoration-paper/40 underline-offset-4 transition hover:decoration-paper;
+  }
+  .label {
+    @apply block text-sm font-semibold;
+  }
+  .field {
+    @apply mt-2 block min-h-12 w-full border border-muted bg-card px-3 py-3 text-base font-normal text-ink;
+  }
+  .field[aria-invalid="true"] {
+    @apply border-2 border-oxblood;
+  }
+  .error {
+    @apply mt-2 block text-sm font-normal text-oxblood;
+  }
+  .process-tab {
+    @apply border border-paper/50 px-4 py-3 text-sm text-paper;
+  }
+  .process-tab[aria-selected="true"] {
+    @apply bg-paper text-oxblood;
+  }
+  .scope-toggle::before {
+    content: "";
+    @apply size-4 shrink-0 border border-current;
+  }
+  .scope-toggle[aria-pressed="true"] {
+    @apply border-oxblood bg-oxblood text-white hover:bg-ink;
+  }
+  .scope-toggle[aria-pressed="true"]::before {
+    border-color: #fff;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='m3.5 8.5 3 3 6-7' fill='none' stroke='%23fff' stroke-width='2'/%3E%3C/svg%3E")
+      center / contain no-repeat;
+  }
+  .service-card {
+    @apply min-w-0 border-t border-rule pt-5;
+  }
+  .control-check {
+    @apply mt-1 size-5 shrink-0;
+  }
+  .tag {
+    @apply inline-block border border-rule px-2 py-1 text-[.7rem] uppercase tracking-wide;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity 0.5s,
+      transform 0.5s;
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+dialog {
+  max-height: 90dvh;
+}
+dialog::backdrop {
+  background: rgb(45 38 37 / 0.65);
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Long submitted names must wrap within the business success panel. */
+[data-contact-success] {
+  overflow-wrap: anywhere;
+}

@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Plans for a team that thinks ahead — Planwick</title>
+    <meta
+      name="description"
+      content="Compare plans, then calculate planning seats, annual savings and optional packs."
+    />
+    <meta name="theme-color" content="#1c2752" />
+    <meta name="color-scheme" content="light" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Planwick" />
+    <meta property="og:title" content="Plans for a team that thinks ahead — Planwick" />
+    <meta
+      property="og:description"
+      content="Compare plans, then calculate planning seats, annual savings and optional packs."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@700&amp;family=Hind+Vadodara:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="pricing" class="flex min-h-screen flex-col">
+    <a
+      href="#main"
+      class="sr-only z-50 rounded-full bg-sun px-5 py-3 text-ink focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      >Skip to content</a
+    >
+    <header class="relative z-30 border-b border-line bg-paper">
+      <div class="wrap flex min-h-24 items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center gap-2.5"
+          ><svg class="size-9 shrink-0" viewBox="0 0 40 40" aria-hidden="true">
+            <rect width="40" height="40" rx="13" fill="#1c2752" />
+            <path
+              d="M12 29V11h9a7 7 0 0 1 0 14h-4"
+              fill="none"
+              stroke="#ffc65c"
+              stroke-width="4"
+              stroke-linecap="round"
+            />
+            <circle cx="21" cy="18" r="2" fill="#ffc65c" /></svg
+          ><span class="font-display text-4xl font-bold tracking-tight">planwick</span></a
+        >
+        <nav aria-label="Main" class="hidden lg:block">
+          <ul class="flex items-center">
+            <li><a href="product.html" class="nav-link">Product</a></li>
+            <li><a href="workspace.html" class="nav-link">Workspace</a></li>
+            <li><a href="use-cases.html" class="nav-link">Use cases</a></li>
+            <li><a href="pricing.html" class="nav-link" aria-current="page">Pricing</a></li>
+            <li><a href="integrations.html" class="nav-link">Integrations</a></li>
+            <li><a href="resources.html" class="nav-link">Resources</a></li>
+          </ul>
+        </nav>
+        <a href="contact.html" class="btn hidden sm:inline-flex"
+          >Let’s make a plan
+          <svg
+            class="size-5 shrink-0"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path d="M4 12h16m-6-6 6 6-6 6" /></svg></a
+        ><button
+          id="menu-toggle"
+          type="button"
+          class="rounded-full border border-ink p-3 lg:hidden"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg
+            class="size-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path d="M4 7h16M4 12h16M4 17h16" />
+          </svg>
+        </button>
+      </div>
+      <nav id="mobile-menu" aria-label="Mobile" hidden class="wrap pb-6 lg:hidden">
+        <ul class="grid grid-cols-2 gap-2">
+          <li><a href="product.html" class="nav-link">Product</a></li>
+          <li><a href="workspace.html" class="nav-link">Workspace</a></li>
+          <li><a href="use-cases.html" class="nav-link">Use cases</a></li>
+          <li><a href="pricing.html" class="nav-link" aria-current="page">Pricing</a></li>
+          <li><a href="integrations.html" class="nav-link">Integrations</a></li>
+          <li><a href="resources.html" class="nav-link">Resources</a></li>
+        </ul>
+        <a href="contact.html" class="btn mt-5 w-full"
+          >Let’s make a plan
+          <svg
+            class="size-5 shrink-0"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path d="M4 12h16m-6-6 6 6-6 6" /></svg
+        ></a>
+      </nav>
+    </header>
+    <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+      <section class="wrap grid gap-8 pt-12 pb-12 lg:grid-cols-[1.15fr_.85fr] lg:items-center lg:pt-16">
+        <div>
+          <p class="eyebrow">Clear plans, a useful starting point</p>
+          <h1 class="mt-5 font-display text-[clamp(3.8rem,6vw,6.7rem)] font-bold leading-[.92] tracking-[-.045em]">
+            A little structure.<br />A lot of room to grow.
+          </h1>
+          <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+            Start with your team size. See the full cost before a conversation, then choose the planning support that
+            fits.
+          </p>
+        </div>
+        <img src="assets/img/seats.svg" width="540" height="400" alt="" class="w-full rounded-[2rem]" />
+      </section>
+      <section class="wrap py-8"><div class="grid gap-6 md:grid-cols-3" data-pricing-cards></div></section>
+      <section id="calculator" class="bg-mist py-12">
+        <div class="wrap grid gap-8 lg:grid-cols-[1.1fr_1fr]">
+          <div>
+            <p class="eyebrow">Your team, your numbers</p>
+            <h2 class="mt-4 font-display text-5xl font-bold leading-[.95]">An honest cost<br />for a shared plan.</h2>
+            <form id="pricing-form" class="mt-7 grid gap-5 sm:grid-cols-2">
+              <label class="label" for="price-plan"
+                >Plan<select id="price-plan" name="plan" class="field">
+                  <option value="start">Start</option>
+                  <option value="team">Team</option>
+                  <option value="scale">Scale</option>
+                </select></label
+              ><label class="label" for="price-seats"
+                >Planning seats<input
+                  id="price-seats"
+                  name="seats"
+                  type="number"
+                  min="2"
+                  max="200"
+                  value="10"
+                  class="field"
+              /></label>
+              <fieldset class="sm:col-span-2">
+                <legend class="label">Billing rhythm</legend>
+                <div class="flex flex-wrap gap-5">
+                  <label class="flex items-center gap-2"
+                    ><input type="radio" name="billing" value="monthly" checked /> Monthly</label
+                  ><label class="flex items-center gap-2"
+                    ><input type="radio" name="billing" value="annual" /> Annual / save 20% on seats</label
+                  >
+                </div>
+              </fieldset>
+              <fieldset class="sm:col-span-2">
+                <legend class="label">Optional extras</legend>
+                <div class="space-y-3">
+                  <label class="flex items-start gap-3"
+                    ><input class="mt-1" type="checkbox" name="insights" />
+                    <span>Insights pack <span class="text-muted">/ $40 per month</span></span></label
+                  ><label class="flex items-start gap-3"
+                    ><input class="mt-1" type="checkbox" name="archive" />
+                    <span>Extended archive <span class="text-muted">/ $20 per month</span></span></label
+                  >
+                </div>
+              </fieldset>
+            </form>
+            <button type="button" class="text-link mt-6" data-reset-pricing>Reset pricing choices</button>
+          </div>
+          <div class="rounded-[2rem] bg-ink p-7 text-white sm:p-10">
+            <p class="eyebrow text-sun">Your planning allowance</p>
+            <p
+              class="mt-5 font-display text-7xl font-bold leading-none"
+              data-price-total
+              role="status"
+              aria-live="polite"
+              aria-atomic="true"
+            ></p>
+            <p class="mt-2 text-white/75" data-price-period></p>
+            <dl class="mt-7 space-y-4 text-sm" data-price-breakdown></dl>
+            <p class="mt-6 border-t border-white/20 pt-5 text-sm text-white/80" data-price-saving></p>
+            <p class="mt-4 text-xs text-white/75">All prices exclude sales tax. Minimum two seats.</p>
+            <a class="btn btn-sun mt-7 w-full" data-plan-contact href="contact.html?plan=team"
+              >Talk through this plan</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="wrap grid gap-8 py-14 md:grid-cols-2">
+        <div>
+          <p class="eyebrow">A few useful answers</p>
+          <h2 class="mt-4 font-display text-5xl font-bold leading-[.95]">Simple on purpose.</h2>
+        </div>
+        <div class="space-y-4">
+          <details class="rounded-2xl border border-line bg-white p-6">
+            <summary class="font-medium">Who needs a planning seat?</summary>
+            <p class="mt-4 text-muted">
+              People who create, edit and prioritize work. People who only read a roadmap can use a shared view without
+              a paid seat.
+            </p>
+          </details>
+          <details class="rounded-2xl border border-line bg-white p-6">
+            <summary class="font-medium">Can we change our team size?</summary>
+            <p class="mt-4 text-muted">
+              We review seat changes with you before the next billing period. Annual agreements keep the agreed price
+              for the year.
+            </p>
+          </details>
+          <details class="rounded-2xl border border-line bg-white p-6">
+            <summary class="font-medium">How does the annual saving work?</summary>
+            <p class="mt-4 text-muted">
+              Annual seats cost 20% less than twelve monthly payments. Optional packs keep their monthly equivalent
+              price.
+            </p>
+          </details>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-16 bg-ink py-12 text-white">
+      <div class="wrap grid gap-10 md:grid-cols-[1.5fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="font-display text-5xl font-bold tracking-tight">planwick</a>
+          <p class="mt-4 max-w-xs text-white/80">A little less noise.<br />A much clearer next step.</p>
+          <a href="workspace.html" class="btn btn-sun mt-6"
+            >Open your roadmap
+            <svg
+              class="size-5 shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              aria-hidden="true"
+            >
+              <path d="M4 12h16m-6-6 6 6-6 6" /></svg
+          ></a>
+        </div>
+        <div>
+          <h2 class="eyebrow text-sun">Make room for good work</h2>
+          <ul class="mt-5 space-y-3 text-sm">
+            <li><a class="underline underline-offset-4" href="product.html">See the product</a></li>
+            <li><a class="underline underline-offset-4" href="pricing.html">Plans & pricing</a></li>
+            <li><a class="underline underline-offset-4" href="integrations.html">Bring your tools together</a></li>
+            <li><a class="underline underline-offset-4" href="resources.html">The planning library</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="eyebrow text-sun">Come say hello</h2>
+          <p class="mt-5 text-sm leading-relaxed">
+            The Courtyard, West Rosemary Street<br />Chapel Hill, North Carolina<br />Monday–Friday, 9 AM–5 PM
+          </p>
+          <a href="contact.html" class="mt-4 inline-block underline underline-offset-4">Contact the team</a>
+          <p class="mt-3 text-sm">hello@planwick.example<br />(919) 555-0186</p>
+        </div>
+      </div>
+      <div class="wrap mt-10 flex flex-wrap justify-between gap-3 border-t border-white/20 pt-5 text-xs text-white/75">
+        <p>© <span data-year></span> Planwick.</p>
+        <p>Planwick is a fictional business.</p>
+      </div>
+    </footer>
+    <p id="announcement" role="status" aria-live="polite" class="sr-only"></p>
+  </body>
+</html>

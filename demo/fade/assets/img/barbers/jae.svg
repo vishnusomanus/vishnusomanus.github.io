@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-label="Illustrated portrait of Jae-won Park">
+<rect width="400" height="480" fill="#2f6b6b"/>
+<path d="M200 230L620.0 230.0L618.4 266.6ZM200 230L594.7 373.6L580.6 407.5ZM200 230L521.7 500.0L497.0 527.0ZM200 230L410.0 593.7L377.5 610.6ZM200 230L272.9 643.6L236.6 648.4ZM200 230L127.1 643.6L91.3 635.7ZM200 230L-10.0 593.7L-40.9 574.0ZM200 230L-121.7 500.0L-144.0 470.9ZM200 230L-194.7 373.6L-205.7 338.7ZM200 230L-220.0 230.0L-218.4 193.4ZM200 230L-194.7 86.4L-180.6 52.5ZM200 230L-121.7 -40.0L-97.0 -67.0ZM200 230L-10.0 -133.7L22.5 -150.6ZM200 230L127.1 -183.6L163.4 -188.4ZM200 230L272.9 -183.6L308.7 -175.7ZM200 230L410.0 -133.7L440.9 -114.0ZM200 230L521.7 -40.0L544.0 -10.9ZM200 230L594.7 86.4L605.7 121.3Z" fill="#285f5f"/>
+<circle cx="200" cy="230" r="150" fill="#f2ead9" opacity=".9"/>
+<circle cx="200" cy="230" r="150" fill="none" stroke="#151515" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round" opacity=".5"/>
+<path d="M30 480C46 392 120 362 200 362C280 362 354 392 370 480Z" fill="#e0a83a"/>
+<path d="M164 362L200 420L236 362Z" fill="#151515"/>
+<path d="M172 300h56v62c0 18-56 18-56 0Z" fill="#ba9477"/>
+<path d="M164 362L200 420L182 440L150 372Z M236 362L200 420L218 440L250 372Z" fill="#b3862e"/>
+<rect x="284" y="414" width="34" height="8" rx="2" fill="#151515" transform="rotate(-8 300 418)"/>
+<path d="M286 412v-26M292 412v-26M298 412v-26M304 412v-26M310 412v-26" stroke="#151515" stroke-width="3" transform="rotate(-8 300 418)"/>
+<ellipse cx="129" cy="228" rx="13" ry="20" fill="#ba9477"/>
+<ellipse cx="271" cy="228" rx="13" ry="20" fill="#ba9477"/>
+<ellipse cx="200" cy="216" rx="71" ry="92" fill="#e3b591"/>
+<path d="M131 204C130 186 132 172 138 162L140 236C136 226 132 216 131 204ZM269 204C270 186 268 172 262 162L260 236C264 226 268 216 269 204Z" fill="#121212" opacity=".45"/>
+
+<path d="M128 214C116 150 150 106 204 106C256 106 286 148 274 210C268 186 258 172 246 166C236 190 214 200 202 200C214 186 216 172 212 160C196 182 170 196 146 196C140 200 134 206 128 214Z" fill="#121212"/>
+<path d="M186 118C206 128 226 150 230 176M160 128C176 140 188 160 190 180" stroke="#464646" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+<path d="M160 196q12-8 26-2M214 194q14-6 26 2" stroke="#121212" stroke-width="6" fill="none" stroke-linecap="round"/>
+<ellipse cx="173" cy="222" rx="5.5" ry="6.5" fill="#151515"/>
+<ellipse cx="227" cy="222" rx="5.5" ry="6.5" fill="#151515"/>
+<path d="M200 232c-4 14-8 22-12 26q10 6 22 0" stroke="#94765e" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M182 284q18 12 36 0" stroke="#7d6450" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+
+<g fill="none" stroke="#151515" stroke-width="5"><circle cx="172" cy="222" r="19"/><circle cx="228" cy="222" r="19"/><path d="M191 220q9-6 18 0M153 218l-22-6M247 218l22-6"/></g>
+</svg>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pomelo Press — illustration by Pipa Valdespino, Louisville</title>
+  <meta name="description" content="Pipa Valdespino is an independent illustrator in Louisville, Kentucky: editorial illustration, picture books, packaging and posters, printed in three riso inks at Pomelo Press.">
+  <meta name="theme-color" content="#f7f0e1">
+  <meta name="color-scheme" content="light dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pomelo Press">
+  <meta property="og:title" content="Pomelo Press — illustration by Pipa Valdespino, Louisville">
+  <meta property="og:description" content="Pipa Valdespino is an independent illustrator in Louisville, Kentucky: editorial illustration, picture books, packaging and posters, printed in three riso inks at Pomelo Press.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&amp;family=Quicksand:wght@500;600;700&amp;family=Rammetto+One&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>(function(){var d=document.documentElement,t=null;d.classList.add('js');try{t=localStorage.getItem('overprint-theme');}catch(e){}if(t!=='light'&&t!=='dark')t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';if(t==='dark')d.classList.add('dark');})();</script>
+</head>
+<body class="flex min-h-screen flex-col" data-page="home">
+  <a href="#main" class="sr-only z-[70] rounded-full bg-ink px-5 py-3 font-bold text-paper focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+
+  <header id="site-header" class="sticky top-0 z-50 border-b-2 border-ink bg-paper/95 backdrop-blur-sm transition-shadow">
+    <div class="wrap flex h-[4.5rem] items-center justify-between gap-3">
+      <a href="index.html" class="flex items-center gap-2.5 rounded-full" aria-current="page">
+        <svg class="size-10 shrink-0" viewBox="0 0 40 40" aria-hidden="true"><circle cx="16" cy="21" r="13" class="fill-yellow"/><circle cx="24" cy="18" r="12" class="fill-pink blend"/><circle cx="19" cy="22" r="6" class="fill-blue blend"/></svg>
+        <span class="leading-none"><span class="block font-display text-[1.3rem] sm:text-[1.45rem]">Pomelo Press</span><span class="stamp mt-1 hidden text-[0.7rem] text-muted sm:block">Pipa Valdespino · Illustration</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1">
+          <li><a href="work.html" class="nav-link">Work</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="commissions.html" class="nav-link">Commissions</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Dark paper">
+          <svg data-icon-moon class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg>
+          <svg data-icon-sun class="hidden size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        </button>
+        <a href="checkout.html" class="icon-btn" data-cart-open aria-label="Cart, 0 items">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span data-cart-count class="absolute -top-1.5 -right-1.5 grid h-5 min-w-5 place-items-center rounded-full border-2 border-ink bg-pink px-1 font-mono text-[0.72rem] font-bold text-on-ink" hidden>0</span>
+        </a>
+        <a href="commissions.html" class="btn btn-pink btn-sm hidden xl:inline-flex">Commission me</a>
+        <button type="button" id="menu-button" class="icon-btn lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span data-icon-open><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h13"/></svg></span>
+          <span data-icon-close class="hidden"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t-2 border-ink bg-paper lg:hidden" hidden>
+      <nav aria-label="Mobile" class="wrap pt-3 pb-12">
+        <ul>
+          <li><a href="index.html" class="mnav-link" aria-current="page">Home</a></li>
+          <li><a href="work.html" class="mnav-link">Work</a></li>
+          <li><a href="shop.html" class="mnav-link">Shop</a></li>
+          <li><a href="commissions.html" class="mnav-link">Commissions</a></li>
+          <li><a href="about.html" class="mnav-link">About</a></li>
+          <li><a href="contact.html" class="mnav-link">Contact</a></li>
+        </ul>
+        <a href="commissions.html" class="btn btn-pink mt-8 w-full">Commission me</a>
+        <p class="mt-6 text-muted">Louisville, Kentucky · <a href="mailto:hello@pomelopress.example" class="link">hello@pomelopress.example</a></p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="relative overflow-hidden" aria-labelledby="hero-title">
+      <div class="halftone-yellow blend pointer-events-none absolute -top-40 -left-32 size-[34rem] rounded-full opacity-80" aria-hidden="true"></div>
+      <div class="wrap relative grid items-center gap-12 pt-12 pb-16 sm:pt-16 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-10 lg:pb-24">
+        <div class="min-w-0">
+          <p class="sticker -rotate-2">Now booking from <span data-booking-from>November</span></p>
+          <h1 id="hero-title" class="h-display misreg mt-6" data-ink="Pictures with a little ink on their elbows.">Pictures with a little ink on their elbows.</h1>
+          <p class="lead mt-6 max-w-xl">I’m Pipa Valdespino, an illustrator in Louisville, Kentucky. I draw for magazines, picture books, packaging and posters, and print a lot of it myself on a two-drum riso at Pomelo Press, my studio on Frankfort Ave.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="work.html" class="btn btn-blue">See the work</a>
+            <a href="commissions.html" class="btn btn-pink">Commission me</a>
+          </div>
+          <p class="mt-8 flex max-w-xl items-start gap-3 text-[0.98rem]"><span class="stamp mt-0.5 shrink-0 rounded-full bg-ink px-2.5 py-0.5 text-paper">Next fair</span><span data-next-event><span class="font-bold">Junebug Small Press Fair</span> · Saturday, November 14 · Haberdash Hall, NuLu</span></p>
+        </div>
+        <div class="relative mx-auto w-full max-w-[30rem] min-w-0 pb-8 lg:max-w-none">
+          <div class="art absolute top-6 -left-2 aspect-[4/5] w-[62%] -rotate-6 shadow-[6px_6px_0_var(--color-ink)]" data-art="moth-choir"></div>
+          <div class="art relative ml-auto aspect-[4/5] w-[74%] rotate-3 shadow-[8px_8px_0_var(--color-ink)]" data-art="upside-down-moon" data-art-label="Otto climbs a ladder from his roof to an upside-down moon, printed in blue, yellow and pink"></div>
+          <div class="absolute -bottom-2 left-[8%] size-28 sm:size-32"><svg class="spin-slow size-full" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="spin-home" d="M60 60m-44 0a44 44 0 1 1 88 0a44 44 0 1 1-88 0"/></defs><circle cx="60" cy="60" r="58" class="fill-yellow stroke-ink" stroke-width="2.5"/><text font-family="Courier Prime, monospace" font-weight="700" font-size="12.5" letter-spacing="2.2" class="fill-ink"><textPath href="#spin-home">RISO PRINTED · LOUISVILLE · THREE INKS ·</textPath></text><circle cx="60" cy="60" r="16" class="fill-pink blend"/><circle cx="66" cy="56" r="16" class="fill-blue blend"/></svg></div>
+          <p class="sticker absolute top-0 right-2 rotate-6 bg-pink shadow-[2px_2px_0_var(--color-blue)]">Ed. of 100</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="border-y-2 border-ink bg-card py-10" aria-labelledby="clients-title">
+      <div class="wrap">
+        <h2 id="clients-title" class="stamp text-muted">Drawn for</h2>
+        <ul class="mt-5 flex flex-wrap gap-3" data-clients>
+          <li class="rounded-full border-2 border-ink bg-card px-4 py-2 font-display">The Harbinger Quarterly</li>
+          <li class="rounded-full border-2 border-ink bg-card px-4 py-2 font-display">Flicker Weekly</li>
+          <li class="rounded-full border-2 border-ink bg-card px-4 py-2 font-display">Dovetail Books</li>
+          <li class="rounded-full border-2 border-ink bg-card px-4 py-2 font-display">Mossgrove Cider</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="wrap py-16 sm:py-24" aria-labelledby="selected-title">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="stamp text-pink-text">Selected work</p>
+          <h2 id="selected-title" class="h-section mt-2">Recent pictures, fresh off the drum</h2>
+        </div>
+        <a href="work.html" class="btn btn-line btn-sm">All twelve projects <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="mt-10 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-4" data-featured-work></div>
+    </section>
+
+    <section class="torn border-t-2 border-ink bg-paper-2 pt-16 pb-24 sm:pt-20" aria-labelledby="what-title">
+      <div class="wrap">
+        <p class="stamp text-pink-text">What I do</p>
+        <h2 id="what-title" class="h-section mt-2 max-w-3xl">Four kinds of job, one way of drawing</h2>
+        <p class="lead mt-4 max-w-2xl">Every picture is drawn as separate ink plates, the way a riso prints. It keeps the color bold, the files simple for printers, and the work looking like it was made by a person.</p>
+        <ul class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="reveal card flex flex-col p-6 shadow-[5px_5px_0_var(--color-pink)]">
+            <svg class="h-16 w-20" viewBox="0 0 80 64" aria-hidden="true"><rect x="6" y="6" width="44" height="54" class="fill-blue blend"/><rect x="22" y="14" width="52" height="8" class="fill-pink blend"/><rect x="22" y="28" width="40" height="8" class="fill-pink blend"/><circle cx="30" cy="48" r="10" class="fill-yellow blend"/></svg>
+            <h3 class="h-card mt-4">Editorial</h3>
+            <p class="mt-2 flex-1">Covers, spots and openers for magazines and weeklies, usually turned around in two weeks.</p>
+            <a href="work.html?type=editorial" class="link mt-4 self-start"><span data-cat-count="editorial">3 projects</span><span class="sr-only"> in editorial</span></a>
+          </li>
+          <li class="reveal card flex flex-col p-6 shadow-[5px_5px_0_var(--color-blue)]">
+            <svg class="h-16 w-20" viewBox="0 0 80 64" aria-hidden="true"><path d="M4 12q18-8 36 0v46q-18-8-36 0z" class="fill-yellow blend"/><path d="M40 12q18-8 36 0v46q-18-8-36 0z" class="fill-pink blend"/><circle cx="40" cy="30" r="12" class="fill-blue blend"/></svg>
+            <h3 class="h-card mt-4">Picture books</h3>
+            <p class="mt-2 flex-1">Thirty-two pages of night skies, buses and mice, from thumbnails to color separations.</p>
+            <a href="work.html?type=picture-books" class="link mt-4 self-start"><span data-cat-count="picture-books">3 projects</span><span class="sr-only"> in picture books</span></a>
+          </li>
+          <li class="reveal card flex flex-col p-6 shadow-[5px_5px_0_var(--color-yellow)]">
+            <svg class="h-16 w-20" viewBox="0 0 80 64" aria-hidden="true"><rect x="8" y="16" width="26" height="44" rx="4" class="fill-blue blend"/><rect x="28" y="12" width="26" height="48" rx="4" class="fill-pink blend"/><rect x="48" y="20" width="26" height="40" rx="4" class="fill-yellow blend"/></svg>
+            <h3 class="h-card mt-4">Packaging</h3>
+            <p class="mt-2 flex-1">Tins, labels and wrappers that sit together on a shelf and stand out across a room.</p>
+            <a href="work.html?type=packaging" class="link mt-4 self-start"><span data-cat-count="packaging">3 projects</span><span class="sr-only"> in packaging</span></a>
+          </li>
+          <li class="reveal card flex flex-col p-6 shadow-[5px_5px_0_var(--color-pink)]">
+            <svg class="h-16 w-20" viewBox="0 0 80 64" aria-hidden="true"><rect x="16" y="4" width="44" height="58" class="fill-yellow blend"/><ellipse cx="38" cy="34" rx="14" ry="20" class="fill-blue blend"/><rect x="10" y="28" width="56" height="10" class="fill-pink blend"/></svg>
+            <h3 class="h-card mt-4">Posters</h3>
+            <p class="mt-2 flex-1">Gig, film and fair posters, printed here in editions of a few hundred or sent to your printer.</p>
+            <a href="work.html?type=posters" class="link mt-4 self-start"><span data-cat-count="posters">3 projects</span><span class="sr-only"> in posters</span></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="wrap py-16 sm:py-24" aria-labelledby="how-title">
+      <div class="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:items-center">
+        <div>
+          <p class="stamp text-pink-text">How a commission runs</p>
+          <h2 id="how-title" class="h-section mt-2">From a brief to print-ready plates</h2>
+          <p class="lead mt-4">You tell me about the job, I send a fee and a timeline, and we start on a Monday. New projects can start from <strong data-start-date>Monday, November 16</strong>.</p>
+          <a href="commissions.html" class="btn btn-blue mt-8">Get an estimate</a>
+        </div>
+        <ol class="grid gap-4 sm:grid-cols-2">
+          <li class="reveal card p-5"><p class="font-display text-4xl text-pink-text">1</p><h3 class="h-card mt-2">Brief and quote</h3><p class="mt-1">A short call, then a fee, a license and dates in writing.</p></li>
+          <li class="reveal card p-5 sm:translate-y-6"><p class="font-display text-4xl text-blue-text">2</p><h3 class="h-card mt-2">Sketches</h3><p class="mt-1">Two or three pencil ideas. You pick one, or a mix.</p></li>
+          <li class="reveal card p-5"><p class="font-display text-4xl text-pink-text">3</p><h3 class="h-card mt-2">Color and plates</h3><p class="mt-1">Finals drawn as separate ink plates, with one round of changes.</p></li>
+          <li class="reveal card p-5 sm:translate-y-6"><p class="font-display text-4xl text-blue-text">4</p><h3 class="h-card mt-2">Files or prints</h3><p class="mt-1">Print-ready files for your printer, or an edition from the studio riso.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="border-y-2 border-ink bg-pink text-on-ink" aria-labelledby="quote-title">
+      <div class="wrap grid gap-8 py-16 sm:py-20 lg:grid-cols-[auto_minmax(0,1fr)] lg:items-center lg:gap-14">
+        <h2 id="quote-title" class="sr-only">What clients say</h2>
+        <p class="font-display text-[7rem] leading-[0.6] text-blue blend" aria-hidden="true">“</p>
+        <blockquote>
+          <p class="font-display text-[clamp(1.4rem,3vw,2.3rem)] leading-snug">Pipa sends sketches that already have an opinion. We ran the first idea she drew, which has never happened before.</p>
+          <footer class="mt-5 text-lg"><span class="font-bold">Kiki Shimabukuro</span>, art director, The Harbinger Quarterly</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="wrap py-16 sm:py-24" aria-labelledby="shop-title">
+      <div class="flex flex-wrap items-end justify-between gap-4">
+        <div>
+          <p class="stamp text-pink-text">From the shop</p>
+          <h2 id="shop-title" class="h-section mt-2">Prints, zines and stickers</h2>
+          <p class="mt-3 max-w-xl">Printed in numbered editions at the studio. Orders go out on Tuesdays and Fridays, free in the US over $75.</p>
+        </div>
+        <a href="shop.html" class="btn btn-line btn-sm">Visit the shop <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="mt-10 grid grid-cols-2 gap-6 lg:grid-cols-4" data-shop-teaser></div>
+    </section>
+
+    <section id="stickers" class="relative overflow-hidden border-t-2 border-ink bg-yellow text-on-ink" aria-labelledby="stickers-title">
+      <div class="halftone-pink blend pointer-events-none absolute -right-20 -bottom-20 size-96 rounded-full" aria-hidden="true"></div>
+      <div class="wrap relative grid gap-10 py-16 sm:py-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] lg:items-center">
+        <div>
+          <p class="stamp">The newsletter</p>
+          <h2 id="stickers-title" class="h-section mt-2">A free sticker sheet, by mail</h2>
+          <p class="lead mt-4 max-w-lg">One letter a month: new prints, fair dates and what’s on the drawing table. Sign up and I’ll mail you the Pantry Friends sticker sheet. US addresses only, I’m afraid.</p>
+        </div>
+        <form class="rounded-[1.25rem] border-2 border-ink bg-card p-6 text-ink shadow-[6px_6px_0_var(--color-blue)] sm:p-8" data-form="stickers" aria-labelledby="stickers-title">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="sm:col-span-2">
+              <label for="st-name" class="label">Your name</label>
+              <input id="st-name" name="name" class="input" autocomplete="name" required data-label="Your name" maxlength="80">
+            </div>
+            <div>
+              <label for="st-email" class="label">Email</label>
+              <input id="st-email" name="email" type="email" class="input" autocomplete="email" required data-label="Email">
+            </div>
+            <div>
+              <label for="st-zip" class="label">ZIP code</label>
+              <input id="st-zip" name="zip" class="input" inputmode="numeric" autocomplete="postal-code" required data-label="ZIP code" data-validate="zip" maxlength="10">
+            </div>
+          </div>
+          <button type="submit" class="btn btn-blue mt-6 w-full sm:w-auto">Send me stickers</button>
+          <p class="hint">We ask for your street address in the confirmation email. One sheet per household.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="on-blue relative mt-auto overflow-hidden border-t-2 border-ink bg-blue text-on-blue">
+    <div class="halftone-pink blend pointer-events-none absolute -top-24 -right-24 size-80 rounded-full opacity-70" aria-hidden="true"></div>
+    <div class="halftone-yellow blend pointer-events-none absolute -bottom-28 left-[30%] size-72 rounded-full opacity-60" aria-hidden="true"></div>
+    <div class="wrap relative pt-16 pb-10">
+      <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1.3fr]">
+        <div>
+          <p class="font-display text-[clamp(2rem,4vw,2.8rem)] leading-none">Pomelo Press</p>
+          <p class="mt-4 max-w-sm text-lg">Illustration by Pipa Valdespino for magazines, picture books, packaging and posters. Drawn in plates, printed in three inks, mailed from Louisville.</p>
+          <a href="index.html#stickers" class="mt-5 inline-flex items-center gap-2 rounded-full border-2 border-current px-4 py-2 font-bold hover:bg-yellow hover:text-on-ink">Get a free sticker sheet <span aria-hidden="true">→</span></a>
+        </div>
+        <div>
+          <h2 class="stamp">Pages</h2>
+          <ul class="mt-4 space-y-2 font-bold">
+            <li><a href="work.html" class="underline-offset-4 hover:underline">Work</a></li>
+            <li><a href="shop.html" class="underline-offset-4 hover:underline">Shop</a></li>
+            <li><a href="commissions.html" class="underline-offset-4 hover:underline">Commissions</a></li>
+            <li><a href="about.html" class="underline-offset-4 hover:underline">About and events</a></li>
+            <li><a href="contact.html" class="underline-offset-4 hover:underline">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="stamp">The work</h2>
+          <ul class="mt-4 space-y-2 font-bold">
+            <li><a href="work.html?type=editorial" class="underline-offset-4 hover:underline">Editorial</a></li>
+            <li><a href="work.html?type=picture-books" class="underline-offset-4 hover:underline">Picture books</a></li>
+            <li><a href="work.html?type=packaging" class="underline-offset-4 hover:underline">Packaging</a></li>
+            <li><a href="work.html?type=posters" class="underline-offset-4 hover:underline">Posters</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="stamp">Studio</h2>
+          <address class="mt-4 not-italic">Studio 4, 1830 Frankfort Ave<br>Louisville, KY 40206</address>
+          <p class="mt-3"><a href="mailto:hello@pomelopress.example" class="font-bold underline underline-offset-4">hello@pomelopress.example</a><br><a href="tel:+15025550184" class="font-bold underline underline-offset-4">(502) 555-0184</a></p>
+          <p class="mt-3">Weekdays 10am to 5pm Eastern. Open studio on the first Saturday of the month.</p>
+        </div>
+      </div>
+      <div class="stamp mt-14 flex flex-col gap-2 border-t-2 border-dashed border-current/50 pt-6 sm:flex-row sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Pomelo Press. Printed in Louisville.</p>
+        <p>Pomelo Press, Pipa Valdespino and the clients shown are fictional.</p>
+      </div>
+    </div>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

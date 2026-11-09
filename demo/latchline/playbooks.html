@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Onboarding playbooks: fifteen tested starting points | Latchline</title>
+    <meta
+      name="description"
+      content="Browse fifteen customer onboarding playbooks by segment, motion and length. Each has milestones, roles, a first-value moment and a target timeline."
+    />
+    <meta name="theme-color" content="#f2f4f7" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Latchline" />
+    <meta property="og:title" content="Onboarding playbooks: fifteen tested starting points | Latchline" />
+    <meta
+      property="og:description"
+      content="Browse fifteen customer onboarding playbooks by segment, motion and length. Each has milestones, roles, a first-value moment and a target timeline."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@500;600;700&amp;family=Funnel+Sans:ital,wght@0,400;0,500;0,600;1,400&amp;family=Spline+Sans+Mono:wght@500&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="playbooks" class="flex min-h-screen flex-col">
+    <a
+      href="#main"
+      class="sr-only z-50 rounded-lg bg-ink px-4 py-3 text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      >Skip to content</a
+    >
+    <header class="sticky top-0 z-40 border-b border-line bg-card/95 backdrop-blur">
+      <div class="wrap flex min-h-16 items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center gap-2.5" aria-label="Latchline home"
+          ><svg viewBox="0 0 32 32" class="size-8 shrink-0" aria-hidden="true">
+            <rect x="1.5" y="1.5" width="29" height="29" rx="8" fill="#0c1427" />
+            <path
+              d="M9 9v14h8"
+              fill="none"
+              stroke="#fff"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M17 16h6.5a2.5 2.5 0 0 1 0 5H21"
+              fill="none"
+              stroke="#ffcf3f"
+              stroke-width="3"
+              stroke-linecap="round"
+            /></svg
+          ><span class="font-display text-xl font-semibold tracking-tight">Latchline</span></a
+        >
+        <nav class="hidden lg:block" aria-label="Main">
+          <ul class="flex items-center gap-1">
+            <li><a class="nav-link" href="product.html">Product</a></li>
+            <li><a class="nav-link" href="playbooks.html" aria-current="page">Playbooks</a></li>
+            <li><a class="nav-link" href="customers.html">Customers</a></li>
+            <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li><a class="nav-link" href="resources.html">Resources</a></li>
+            <li><a class="nav-link" href="company.html">Company</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-2">
+          <a href="contact.html#demo" class="nav-link hidden sm:block">Book a demo</a>
+          <a href="contact.html" class="btn btn-sm hidden sm:inline-flex"
+            >Talk to sales
+            <svg
+              viewBox="0 0 20 20"
+              class="size-4 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" /></svg
+          ></a>
+          <button
+            id="menu-toggle"
+            type="button"
+            class="grid size-11 place-items-center rounded-lg border border-line-strong lg:hidden"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              class="size-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              aria-hidden="true"
+            >
+              <path d="M4 7h16M4 12h16M4 17h10" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" class="wrap border-t border-line py-4 lg:hidden" aria-label="Mobile" hidden>
+        <ul class="grid gap-1">
+          <li><a class="nav-link text-base" href="product.html">Product</a></li>
+          <li><a class="nav-link text-base" href="playbooks.html" aria-current="page">Playbooks</a></li>
+          <li><a class="nav-link text-base" href="customers.html">Customers</a></li>
+          <li><a class="nav-link text-base" href="pricing.html">Pricing</a></li>
+          <li><a class="nav-link text-base" href="resources.html">Resources</a></li>
+          <li><a class="nav-link text-base" href="company.html">Company</a></li>
+          <li><a class="nav-link text-base" href="contact.html#demo">Book a demo</a></li>
+        </ul>
+        <a href="contact.html" class="btn mt-3 w-full"
+          >Talk to sales
+          <svg
+            viewBox="0 0 20 20"
+            class="size-4 shrink-0"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" /></svg
+        ></a>
+      </nav>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="border-b border-line bg-card">
+        <div class="wrap grid gap-10 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div class="reveal">
+            <p class="tick text-cobalt">Playbook library</p>
+            <h1 class="mt-3 text-[clamp(2.4rem,5vw,4rem)] leading-[1.04] font-semibold tracking-[-0.03em]">
+              A strong start, without starting from zero.
+            </h1>
+            <p class="mt-5 max-w-xl text-lg leading-relaxed text-ink-soft">
+              Fifteen playbooks drawn from more than 24,000 onboardings run on Latchline. Each one comes with
+              milestones, owners on both sides, a target timeline and the moment that counts as first value. Shortlist
+              the ones that fit and we'll walk through them with you.
+            </p>
+          </div>
+          <img class="reveal w-full" src="assets/img/hero-playbooks.svg" alt="" width="560" height="380" />
+        </div>
+      </section>
+
+      <section aria-labelledby="library-heading" class="py-12">
+        <div class="wrap grid gap-8 lg:grid-cols-[1fr_19rem]">
+          <div class="min-w-0">
+            <h2 id="library-heading" class="sr-only">Find a playbook</h2>
+            <form class="panel grid gap-4 p-5" data-playbook-filters role="search" aria-label="Filter playbooks">
+              <fieldset>
+                <legend class="label">Segment</legend>
+                <div class="mt-2 flex flex-wrap gap-2" data-segment-chips></div>
+              </fieldset>
+              <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+                <div class="sm:col-span-2 xl:col-span-1">
+                  <label class="label" for="pb-q">Search</label>
+                  <input
+                    id="pb-q"
+                    name="q"
+                    type="search"
+                    class="field"
+                    placeholder="Try “migration” or “IT”"
+                    maxlength="60"
+                    autocomplete="off"
+                  />
+                </div>
+                <div>
+                  <label class="label" for="pb-motion">Motion</label>
+                  <select id="pb-motion" name="motion" class="field"></select>
+                </div>
+                <div>
+                  <label class="label" for="pb-duration">Target length</label>
+                  <select id="pb-duration" name="duration" class="field">
+                    <option value="any">Any length</option>
+                    <option value="14">Up to 2 weeks</option>
+                    <option value="30">Up to 30 days</option>
+                    <option value="60">Up to 60 days</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="label" for="pb-sort">Sort by</label>
+                  <select id="pb-sort" name="sort" class="field">
+                    <option value="recommended">Most used first</option>
+                    <option value="fastest">Fastest to value</option>
+                    <option value="lightest">Fewest tasks</option>
+                    <option value="az">Name, A to Z</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+            <p class="mt-6 font-semibold" role="status" aria-live="polite" data-playbook-count></p>
+            <div class="mt-4 grid gap-6 md:grid-cols-2 xl:grid-cols-3" data-playbook-grid></div>
+            <div class="panel mt-4 p-8 text-center" data-playbook-empty hidden>
+              <p class="font-display text-xl font-semibold">No playbook matches all of those.</p>
+              <p class="mt-2 text-ink-soft">
+                Loosen a filter, or tell us what you're onboarding and we'll suggest a starting point.
+              </p>
+              <div class="mt-5 flex flex-wrap justify-center gap-3">
+                <button type="button" class="btn btn-quiet" data-playbook-reset>Clear filters</button>
+                <a class="btn" href="contact.html?topic=sales">Ask for a recommendation</a>
+              </div>
+            </div>
+          </div>
+
+          <aside class="min-w-0 lg:sticky lg:top-24 lg:self-start" aria-labelledby="shortlist-heading">
+            <div class="rounded-2xl bg-ink p-5 text-white">
+              <h2
+                id="shortlist-heading"
+                class="flex items-baseline gap-2 text-lg font-semibold"
+                tabindex="-1"
+                data-shortlist-heading
+              >
+                <span class="font-display text-4xl" data-shortlist-count>0</span>
+                <span data-shortlist-label>playbooks shortlisted</span>
+              </h2>
+              <p class="mt-1 text-sm text-haze" data-shortlist-total></p>
+              <p class="mt-3 text-sm text-haze" data-shortlist-empty>
+                Shortlist playbooks to compare them and bring them to a call. Your shortlist stays on this device.
+              </p>
+              <ul class="mt-3" data-shortlist-list></ul>
+              <div class="mt-4 grid gap-2" data-shortlist-actions hidden>
+                <a class="btn bg-sun! text-ink hover:bg-white!" href="contact.html?topic=sales"
+                  >Discuss these with us</a
+                >
+                <button
+                  type="button"
+                  class="text-sm text-haze underline underline-offset-4 hover:text-white"
+                  data-shortlist-clear
+                >
+                  Clear shortlist
+                </button>
+              </div>
+            </div>
+            <div class="panel mt-4 p-5 text-sm">
+              <h2 class="font-semibold">Need your own playbook?</h2>
+              <p class="mt-1 text-ink-soft">
+                Every plan can copy and edit any playbook. Nkechi's customer practice team will help you build one from
+                scratch on Enterprise.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="dotgrid-ink mt-auto text-white">
+      <div class="wrap grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div>
+          <a href="index.html" class="inline-flex items-center gap-2.5" aria-label="Latchline home"
+            ><svg viewBox="0 0 32 32" class="size-8 shrink-0" aria-hidden="true">
+              <rect x="1.5" y="1.5" width="29" height="29" rx="8" fill="#1f45d6" />
+              <path
+                d="M9 9v14h8"
+                fill="none"
+                stroke="#fff"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M17 16h6.5a2.5 2.5 0 0 1 0 5H21"
+                fill="none"
+                stroke="#ffcf3f"
+                stroke-width="3"
+                stroke-linecap="round"
+              /></svg
+            ><span class="font-display text-xl font-semibold">Latchline</span></a
+          >
+          <p class="mt-4 max-w-xs text-sm leading-relaxed text-haze">
+            Customer onboarding software for teams who want every new customer to feel expected, from signed contract to
+            first value.
+          </p>
+        </div>
+        <div>
+          <h2 class="tick text-sky">Platform</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a class="hover:underline" href="product.html">How it works</a></li>
+            <li><a class="hover:underline" href="playbooks.html">Playbooks</a></li>
+            <li><a class="hover:underline" href="pricing.html">Pricing</a></li>
+            <li><a class="hover:underline" href="customers.html">Customer stories</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="tick text-sky">Company</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a class="hover:underline" href="company.html">About us</a></li>
+            <li><a class="hover:underline" href="resources.html">Resources</a></li>
+            <li><a class="hover:underline" href="contact.html">Contact sales</a></li>
+            <li><a class="hover:underline" href="contact.html#demo">Book a demo</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="tick text-sky">Reno office</h2>
+          <address class="mt-4 text-sm leading-relaxed not-italic text-haze">
+            38 N Sierra St, Suite 310<br />Reno, NV 89501<br />Mon–Fri, 7:00 a.m.–5:00 p.m. PT
+          </address>
+          <p class="mt-3 text-sm">
+            <a class="hover:underline" href="mailto:hello@latchline.example">hello@latchline.example</a><br /><a
+              class="hover:underline"
+              href="tel:+17755550162"
+              >(775) 555-0162</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="wrap flex flex-wrap justify-between gap-3 border-t border-white/15 py-6 text-xs text-haze">
+        <p>© <span data-year></span> Latchline, Inc. Reno, Nevada.</p>
+        <p>Latchline is a fictional company.</p>
+      </div>
+    </footer>
+    <p
+      id="notice"
+      class="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-md rounded-xl bg-ink px-5 py-3.5 text-sm text-white shadow-xl"
+      role="status"
+      aria-live="polite"
+      hidden
+    ></p>
+  </body>
+</html>

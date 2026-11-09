@@ -1,0 +1,261 @@
+/* Tally — Tailwind CSS v4 source.
+   Edit the tokens in @theme below, then rebuild with `npm run build`. */
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+@theme {
+  --font-sans: "Mona Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Azeret Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+
+  /* Surfaces: crisp off-white paper, lightest first. */
+  --color-paper: #f7f6f1;     /* page background */
+  --color-paper-2: #efede5;   /* alternate sections, table stripes */
+  --color-line: #dcd9ce;      /* hairlines and card borders */
+  --color-line-strong: #c4c0b2;
+
+  /* Text: a deep green-black ink. */
+  --color-ink: #0d1f1b;       /* headings, body, primary buttons, dark bands */
+  --color-ink-2: #17302a;     /* raised surfaces on dark bands */
+  --color-ink-soft: #3c4a45;  /* secondary text (AA on paper and white) */
+  --color-ink-faint: #59655f; /* captions, meta (AA on paper and white) */
+  --color-fog: #a9bab3;       /* secondary text on ink (AA on ink) */
+
+  /* Brand: one confident mint. 400/500 for fills (ink text on top), 700/800 for text on light surfaces. */
+  --color-mint-50: #edfbf4;
+  --color-mint-100: #d4f6e5;
+  --color-mint-200: #a9edcd;
+  --color-mint-300: #74e3b2;
+  --color-mint-400: #45d99b;
+  --color-mint-500: #1fc786;
+  --color-mint-700: #0a6e4c;
+  --color-mint-800: #08573d;
+
+  /* Status colors for invoice chips. */
+  --color-amber-soft: #fbeccb;
+  --color-amber-ink: #7a4300;
+  --color-rose-soft: #fbe1dd;
+  --color-rose-ink: #a1261a;
+  --color-sky-soft: #dde9f7;
+  --color-sky-ink: #1f4f86;
+
+  --radius-card: 14px;
+
+  --ease-out-soft: cubic-bezier(.2, .8, .2, 1);
+}
+
+:root { color-scheme: light; }
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+  body { @apply bg-paper font-sans text-ink antialiased; font-variant-numeric: tabular-nums; }
+  h1, h2, h3 { font-stretch: 112%; }
+  ::selection { background: var(--color-mint-200); color: var(--color-ink); }
+  :focus-visible { outline: 2.5px solid var(--color-mint-700); outline-offset: 3px; border-radius: 6px; }
+  .on-ink :focus-visible, .on-ink:focus-visible { outline-color: var(--color-mint-400); }
+  [id] { scroll-margin-top: 5.5rem; }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+}
+
+/* Smooth scrolling for in-page links only, so scripted scrolling stays instant. */
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within { scroll-behavior: smooth; }
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-lg px-4.5 py-2.5 text-[15px] font-semibold whitespace-nowrap transition duration-200 select-none disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-[78rem] px-5 sm:px-8; }
+
+  .btn-lg { @apply px-5.5 py-3.5 text-base; }
+  .btn-sm { @apply px-3.5 py-2 text-sm; }
+  .btn-primary { @apply btn bg-ink text-white hover:bg-ink-2 hover:shadow-[0_0_0_4px_var(--color-mint-200)]; }
+  .btn-accent { @apply btn bg-mint-400 text-ink hover:bg-mint-300 hover:shadow-[0_0_0_4px_rgba(69,217,155,.25)]; }
+  .btn-ghost { @apply btn border border-line-strong bg-white text-ink hover:border-ink; }
+  .btn-ghost-ink { @apply btn border border-white/25 text-white hover:border-white; }
+
+  .h-display { @apply text-[2.5rem] leading-[1.02] font-semibold tracking-[-0.035em] text-balance sm:text-[3.6rem] lg:text-[4.1rem]; }
+  .h-section { @apply text-[1.95rem] leading-[1.08] font-semibold tracking-[-0.03em] text-balance sm:text-[2.6rem]; }
+  .h-card { @apply text-lg leading-snug font-semibold tracking-[-0.01em]; }
+  .lead { @apply text-lg leading-relaxed text-ink-soft text-pretty sm:text-[1.2rem]; }
+
+  /* Mono label above headings: "01 / Invoicing". */
+  .eyebrow { @apply inline-flex items-center gap-2.5 font-mono text-[12px] font-medium tracking-[0.08em] text-ink-soft uppercase; }
+  .eyebrow::before { content: ""; @apply h-2.5 w-2.5 rounded-[2px] bg-mint-500; }
+  .on-ink .eyebrow { @apply text-fog; }
+  .mono { @apply font-mono; }
+
+  /* Ledger rule: a hairline with a short ink tick at the start. */
+  .rule { @apply relative border-t border-line; }
+  .rule::before { content: ""; @apply absolute -top-px left-0 h-px w-12 bg-ink; }
+
+  .card { @apply rounded-[var(--radius-card)] border border-line bg-white; }
+  .card-lift { @apply shadow-[0_1px_0_rgba(13,31,27,.04),0_30px_60px_-34px_rgba(13,31,27,.35)]; }
+  .card-hover { @apply transition duration-300 hover:-translate-y-0.5 hover:border-line-strong hover:shadow-[0_24px_40px_-28px_rgba(13,31,27,.35)]; }
+
+  .chip { @apply inline-flex items-center gap-1.5 rounded-md px-2 py-0.5 text-xs font-semibold whitespace-nowrap; }
+  .chip-paid { @apply bg-mint-100 text-mint-800; }
+  .chip-sent { @apply bg-sky-soft text-sky-ink; }
+  .chip-due { @apply bg-amber-soft text-amber-ink; }
+  .chip-late { @apply bg-rose-soft text-rose-ink; }
+  .chip-draft { @apply bg-paper-2 text-ink-soft; }
+  .chip-dot { @apply h-1.5 w-1.5 rounded-full bg-current; }
+
+  .link { @apply font-semibold text-mint-800 underline decoration-mint-300 decoration-2 underline-offset-4 transition hover:decoration-mint-700; }
+  .on-ink .link { @apply text-mint-300 decoration-mint-700 hover:decoration-mint-300; }
+
+  /* Header */
+  #site-header { transition: box-shadow .25s, background-color .25s; }
+  #site-header.is-scrolled { @apply bg-paper/95 shadow-[0_10px_30px_-24px_rgba(13,31,27,.45)] backdrop-blur-md; }
+  .nav-link { @apply relative px-3 py-2 text-[15px] font-medium text-ink-soft transition hover:text-ink; }
+  .nav-link[aria-current="page"] { @apply text-ink; }
+  .nav-link[aria-current="page"]::after { content: ""; @apply absolute right-3 -bottom-[13px] left-3 h-[3px] rounded-t bg-mint-500; }
+  .m-link { @apply flex items-center justify-between border-b border-line py-3.5 text-lg font-semibold text-ink; }
+  .m-link[aria-current="page"] { @apply text-mint-800; }
+
+  /* Forms */
+  .label { @apply mb-1.5 block text-sm font-semibold text-ink; }
+  .hint { @apply mt-1.5 text-sm text-ink-faint; }
+  .input {
+    @apply block w-full rounded-lg border border-line-strong bg-white px-3.5 py-2.5 text-[15px] text-ink transition placeholder:text-ink-faint
+      focus:border-ink focus:ring-4 focus:ring-mint-400/30 focus:outline-none
+      aria-[invalid=true]:border-rose-ink aria-[invalid=true]:focus:ring-rose-ink/15;
+  }
+  select.input {
+    @apply appearance-none bg-no-repeat pr-10;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%233c4a45' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right .85rem center; background-size: 1.1rem;
+  }
+  .input-affix { @apply relative; }
+  .input-affix > span { @apply pointer-events-none absolute inset-y-0 left-3.5 grid place-items-center text-[15px] font-semibold text-ink-faint; }
+  .input-affix > .input { @apply pl-8; }
+  .field-error { @apply mt-1.5 flex items-center gap-1.5 text-sm font-medium text-rose-ink; }
+  .check {
+    @apply h-5 w-5 shrink-0 cursor-pointer appearance-none rounded border-2 border-ink/30 bg-white transition checked:border-ink checked:bg-ink;
+  }
+  .check:checked {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%2345d99b' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 10.5 3.2 3.2L15 7'/%3E%3C/svg%3E");
+    background-size: 100%;
+  }
+  .option {
+    @apply relative flex cursor-pointer items-center gap-3 rounded-lg border border-line-strong bg-white px-4 py-3 text-[15px] font-medium transition hover:border-ink
+      has-[:checked]:border-ink has-[:checked]:bg-mint-50 has-[:checked]:shadow-[inset_0_0_0_1px_var(--color-ink)]
+      has-[:focus-visible]:outline-[2.5px] has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-mint-700 has-[:focus-visible]:outline-solid;
+  }
+
+  /* Range sliders (calculator). --fill is set by main.js. */
+  .range { -webkit-appearance: none; appearance: none; width: 100%; height: 1.75rem; background: transparent; cursor: pointer; }
+  .range::-webkit-slider-runnable-track {
+    height: 6px; border-radius: 999px;
+    background: linear-gradient(90deg, var(--color-ink), var(--color-ink)) 0 / var(--fill, 0%) 100% no-repeat, var(--color-line);
+  }
+  .range::-moz-range-track { height: 6px; border-radius: 999px; background: var(--color-line); }
+  .range::-moz-range-progress { height: 6px; border-radius: 999px; background: var(--color-ink); }
+  .range::-webkit-slider-thumb {
+    -webkit-appearance: none; width: 22px; height: 22px; margin-top: -8px; border-radius: 6px;
+    background: var(--color-mint-400); border: 2px solid var(--color-ink);
+  }
+  .range::-moz-range-thumb { width: 18px; height: 18px; border-radius: 6px; background: var(--color-mint-400); border: 2px solid var(--color-ink); }
+  .range:focus-visible { outline: none; }
+  .range:focus-visible::-webkit-slider-thumb { box-shadow: 0 0 0 5px rgba(10, 110, 76, .35); }
+  .range:focus-visible::-moz-range-thumb { box-shadow: 0 0 0 5px rgba(10, 110, 76, .35); }
+
+  /* Segmented control (billing period). */
+  .seg-group { @apply inline-flex rounded-lg border border-line-strong bg-white p-1; }
+  .seg-btn { @apply inline-flex items-center gap-2 rounded-md px-3.5 py-2 text-sm font-semibold text-ink-soft transition hover:text-ink aria-pressed:bg-ink aria-pressed:text-white; }
+  .pill { @apply inline-flex items-center gap-2 rounded-md border border-line-strong bg-white px-3 py-1.5 text-sm font-semibold text-ink-soft transition hover:border-ink hover:text-ink aria-pressed:border-ink aria-pressed:bg-ink aria-pressed:text-white; }
+  .pill-count { @apply font-mono text-xs font-medium text-ink-faint; }
+  .pill[aria-pressed="true"] .pill-count { @apply text-mint-300; }
+
+  /* Feature tabs */
+  .tab { @apply flex w-full items-center gap-3 border-l-2 border-line px-4 py-3 text-left text-[15px] font-semibold text-ink-soft transition hover:text-ink aria-selected:border-mint-500 aria-selected:bg-white aria-selected:text-ink; }
+
+  /* FAQ (native <details>) */
+  .faq { @apply border-b border-line; }
+  .faq summary { @apply flex items-center justify-between gap-6 py-5 text-[17px] font-semibold; }
+  .faq-icon { @apply grid h-7 w-7 shrink-0 place-items-center rounded-md border border-line-strong transition-transform duration-300; }
+  .faq[open] .faq-icon { @apply rotate-45 border-ink bg-ink text-mint-400; }
+
+  /* Hero invoice */
+  .qty-btn { @apply grid h-7 w-7 place-items-center rounded-md border border-line-strong bg-white text-ink transition hover:border-ink disabled:opacity-40 disabled:hover:border-line-strong; }
+  .stage { @apply flex items-center gap-1.5 text-xs font-semibold text-ink-faint; }
+  .stage-dot { @apply grid h-5 w-5 place-items-center rounded-full border-2 border-line-strong bg-white transition duration-300; }
+  .stage[data-state="done"] .stage-dot { @apply border-mint-700 bg-mint-700 text-white; }
+  .stage[data-state="current"] .stage-dot { @apply border-ink bg-mint-400; }
+  .stage[data-state="done"], .stage[data-state="current"] { @apply text-ink; }
+  .stage-line { @apply h-0.5 min-w-3 flex-1 rounded bg-line transition-colors duration-500; }
+  .stage-line[data-state="done"] { @apply bg-mint-700; }
+  .flash { animation: flash .6s var(--ease-out-soft); }
+  @keyframes flash { 0% { background-color: var(--color-mint-200); } 100% { background-color: transparent; } }
+  .slide-in { animation: slide-in .5s var(--ease-out-soft); }
+  @keyframes slide-in { 0% { opacity: 0; transform: translateY(10px); } 100% { opacity: 1; transform: none; } }
+
+  /* Paper grain behind the hero: faint ledger lines. Decorative, aria-hidden. */
+  .ledger-lines {
+    background-image: repeating-linear-gradient(to bottom, transparent 0 31px, rgba(13, 31, 27, .055) 31px 32px);
+    mask-image: linear-gradient(to bottom, #000 30%, transparent 95%);
+  }
+  .ledger-margin { background: linear-gradient(to right, transparent calc(100% - 1px), rgba(31, 199, 134, .45) 0); }
+
+  /* Comparison table */
+  .cmp th, .cmp td { @apply border-b border-line px-2 py-3.5 text-left align-middle text-sm sm:px-4 sm:text-[15px]; }
+  .cmp thead th { @apply sticky top-16 z-10 bg-paper text-sm; }
+  .cmp tbody th { @apply font-medium text-ink-soft; }
+  .cmp .grp th { @apply bg-paper-2 pt-6 font-mono text-xs font-medium tracking-[0.08em] text-ink uppercase; }
+
+  /* Toast */
+  .toast { @apply pointer-events-none fixed bottom-5 left-1/2 z-[85] flex -translate-x-1/2 translate-y-4 items-center gap-3 rounded-lg bg-ink px-4 py-3 text-sm font-semibold text-white opacity-0 shadow-2xl transition duration-300; }
+  .toast.is-shown { @apply translate-y-0 opacity-100; }
+
+  /* Scroll reveal: only hidden once JS has loaded (html.js). */
+  .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s var(--ease-out-soft), transform .7s var(--ease-out-soft); }
+  .js .reveal.is-visible { opacity: 1; transform: none; }
+  .reveal-d1 { transition-delay: .08s !important; }
+  .reveal-d2 { transition-delay: .16s !important; }
+  .reveal-d3 { transition-delay: .24s !important; }
+
+  /* Chart bars grow and lines draw when revealed. */
+  .js .reveal .grow-y { transform: scaleY(0); transform-box: fill-box; transform-origin: bottom; transition: transform .9s var(--ease-out-soft); }
+  .js .reveal.is-visible .grow-y { transform: none; }
+  .js .reveal .draw { stroke-dasharray: 1; stroke-dashoffset: 1; transition: stroke-dashoffset 1.4s var(--ease-out-soft) .2s; }
+  .js .reveal.is-visible .draw { stroke-dashoffset: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .js .reveal .grow-y { transform: none; }
+  .js .reveal .draw { stroke-dashoffset: 0; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+
+/* With JavaScript only the selected tab panel shows, so drop the spacing used when they stack. */
+.js [data-tabs] [role="tabpanel"] { margin-top: 0; }
+
+/* Back to top button (created by assets/js/main.js). Remove this block to drop it. */
+@layer components {
+  .back-to-top {
+    position: fixed; z-index: 40;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px) + var(--btt-lift, 0px));
+    display: grid; place-items: center; width: 2.75rem; height: 2.75rem; padding: 0; cursor: pointer;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, bottom .25s ease, visibility 0s linear .25s,
+      background-color .2s, color .2s, border-color .2s, box-shadow .2s;
+    @apply rounded-lg border border-ink bg-ink text-mint-400 shadow-[0_12px_28px_-12px_rgba(13,31,27,.6)] hover:bg-ink-2;
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; transition: transform .2s ease; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top.is-visible:hover svg { transform: translateY(-2px); }
+  .back-to-top:active { transform: translateY(1px); }
+  .back-to-top:focus-visible { @apply outline-[2.5px] outline-offset-2 outline-mint-700; }
+  .back-to-top-target:focus { outline: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top, .back-to-top svg { transition: opacity .01s linear, visibility 0s linear; transform: none !important; }
+  }
+  @media print { .back-to-top { display: none !important; } }
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="480" height="270">
+  <defs>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="9" cy="9" r="1.2" fill="#0c1427" fill-opacity=".12"/></pattern>
+  </defs>
+  <rect width="480" height="270" fill="#d6f0e2"/>
+  <rect width="480" height="270" fill="url(#dots)"/>
+  <rect x="60" y="34" width="250" height="202" rx="12" fill="#ffffff" stroke="#0c1427" stroke-width="2.5"/>
+  <path d="M60 70h250" stroke="#0c1427" stroke-width="2"/>
+  <path d="M60 104h250" stroke="#d3d9e3"/>
+  <path d="M60 130h250" stroke="#d3d9e3"/>
+  <path d="M60 156h250" stroke="#d3d9e3"/>
+  <path d="M60 182h250" stroke="#d3d9e3"/>
+  <path d="M60 208h250" stroke="#d3d9e3"/>
+  <rect x="80" y="78" width="90" height="20" rx="5" fill="#1f45d6"/>
+  <rect x="180" y="104" width="110" height="20" rx="5" fill="#186b48"/>
+  <rect x="80" y="130" width="70" height="20" rx="5" fill="#ffcf3f"/>
+  <rect x="160" y="156" width="120" height="20" rx="5" fill="#1f45d6"/>
+  <rect x="80" y="182" width="130" height="20" rx="5" fill="#186b48"/>
+  <rect x="220" y="208" width="70" height="20" rx="5" fill="#ffcf3f"/>
+  <rect x="80" y="44" width="70" height="14" rx="7" fill="#0c1427"/>
+  <circle cx="380" cy="120" r="58" fill="#b83218" stroke="#0c1427" stroke-width="2.5"/><path d="M368 88h24v20h20v24h-20v20h-24v-20h-20v-24h20z" fill="#fff"/>
+
+</svg>

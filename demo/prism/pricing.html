@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing — Prism</title>
+  <meta name="description" content="Free for individuals, $20 per seat for teams, custom plans for enterprises. Pay-as-you-go API pricing with a live cost calculator.">
+  <meta name="theme-color" content="#05060a">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Prism">
+  <meta property="og:title" content="Pricing — Prism">
+  <meta property="og:description" content="Free for individuals, $20 per seat for teams, custom plans for enterprises. Pay-as-you-go API pricing with a live cost calculator.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="pricing" class="grain flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[80] rounded-full bg-fg px-5 py-3 text-sm font-medium text-ink-950 focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 border-b border-transparent">
+    <div class="container-x flex h-16 items-center justify-between gap-6">
+      <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Prism home">
+        <svg viewBox="0 0 32 32" class="h-7 w-7 shrink-0 transition-transform duration-500 group-hover:rotate-[-8deg]" aria-hidden="true"><path d="M16 3.5 28.5 26.5H16z" fill="#7cf2c8"/><path d="M16 3.5 3.5 26.5H16z" fill="#ff7eb3"/><path d="M16 3.5 16 26.5 9.75 26.5z" fill="#ffb86b" opacity=".9"/><path d="M16 3.5 22.25 26.5H16z" fill="#6fb6ff" opacity=".9"/><path d="M16 3.5 28.5 26.5h-25z" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.2" stroke-linejoin="round"/></svg>
+        <span class="text-[17px] font-semibold tracking-[-0.02em]">Prism</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1">
+          <li><a href="product.html" class="nav-link">Product</a></li>
+          <li><a href="developers.html" class="nav-link">Developers</a></li>
+          <li><a href="pricing.html" class="nav-link" aria-current="page">Pricing</a></li>
+          <li><a href="changelog.html" class="nav-link">Changelog</a></li>
+          <li><a href="about.html" class="nav-link">Company</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="nav-link hidden sm:inline-flex">Talk to sales</a>
+        <a href="pricing.html" class="btn-primary hidden px-4 py-2 sm:inline-flex">Start free</a>
+        <button id="menu-toggle" type="button" class="grid h-10 w-10 place-items-center rounded-full border border-white/12 bg-white/[.03] text-fg lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-white/[.08] lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-8">
+        <ul>
+          <li><a href="product.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Product<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="developers.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Developers<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="pricing.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300" aria-current="page">Pricing<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="changelog.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Changelog<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Company<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="contact.html" class="flex items-center justify-between border-b border-white/[.07] py-4 text-lg text-fg aria-[current=page]:text-brand-300">Talk to sales<svg viewBox="0 0 20 20" class="h-4 w-4 text-subtle" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+        </ul>
+        <a href="pricing.html" class="btn-primary btn-lg mt-6 w-full">Start free</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="relative overflow-hidden">
+      <div class="bg-grid pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="aurora pointer-events-none absolute top-[22rem] left-1/2 h-[24rem] w-[64rem] max-w-[160%] -translate-x-1/2 opacity-50" aria-hidden="true"></div>
+      <div class="container-x relative pt-16 pb-24 sm:pt-24">
+        <div class="mx-auto max-w-3xl text-center">
+          <p class="eyebrow reveal justify-center">Pricing</p>
+          <h1 class="h-display reveal reveal-d1 mt-5">Simple per seat. <span class="serif text-spectrum pr-1">Fair</span> per token.</h1>
+          <p class="lead reveal reveal-d2 mx-auto mt-6 max-w-xl">Start free. Add your team when you’re ready, and pay for API usage only above what’s included.</p>
+          <div class="reveal reveal-d3 mt-9 inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[.03] py-1.5 pr-4 pl-1.5 text-sm">
+            <button id="billing-toggle" type="button" role="switch" aria-checked="true" class="switch" aria-labelledby="billing-label"></button>
+            <span id="billing-label" class="text-fg">Bill annually</span>
+            <span class="rounded-full bg-brand-400/15 px-2 py-0.5 font-mono text-[11px] text-brand-200">Save 17%</span>
+          </div>
+        </div>
+
+        <div class="mx-auto mt-14 grid max-w-6xl gap-4 lg:grid-cols-3">
+          <article class="card reveal flex flex-col p-7 sm:p-8">
+            <h2 class="text-lg font-medium">Free</h2>
+            <p class="mt-1.5 text-sm text-muted">For trying Prism on your own work.</p>
+            <p class="mt-7 flex items-baseline gap-1.5"><span class="text-5xl font-medium tracking-tight">$0</span><span class="text-sm text-subtle">forever</span></p>
+            <p class="mt-1 h-5 text-sm text-subtle">No card needed</p>
+            <a href="developers.html#quickstart" class="btn-ghost btn-lg mt-7">Get a free API key</a>
+            <ul class="mt-8 grid gap-3 border-t border-white/[.07] pt-7 text-sm text-muted">
+              <li class="flex gap-3"><svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>1 user, 3 connected sources</li>
+              <li class="flex gap-3"><svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>50 cited answers a day</li>
+              <li class="flex gap-3"><svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>prism-2-flash in the app</li>
+              <li class="flex gap-3"><svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>API test keys, 100k tokens a month</li>
+            </ul>
+          </article>
+
+          <article class="glass reveal reveal-d1 relative flex flex-col rounded-2xl p-7 sm:p-8 lg:-my-3 lg:py-11">
+            <div class="flex items-center justify-between">
+              <h2 class="text-lg font-medium">Team</h2>
+              <span class="rounded-full bg-fg px-2.5 py-0.5 font-mono text-[11px] font-medium text-ink-950">Most popular</span>
+            </div>
+            <p class="mt-1.5 text-sm text-muted">For teams that research and build together.</p>
+            <p class="mt-7 flex items-baseline gap-1.5"><span class="text-5xl font-medium tracking-tight"><span data-price-monthly="$24" data-price-annual="$20">$20</span></span><span class="text-sm text-subtle">per seat / month</span></p>
+            <p class="mt-1 h-5 text-sm text-subtle" data-billing-note data-monthly="Billed monthly" data-annual="Billed annually, $240 per seat">Billed annually, $240 per seat</p>
+            <a href="contact.html?topic=trial" class="btn-primary btn-lg mt-7">Start 14-day trial</a>
+            <ul class="mt-8 grid gap-3 border-t border-white/[.07] pt-7 text-sm text-muted">
+              <li class="flex gap-3"><svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Everything in Free, unlimited answers</li>
+              <li class="flex gap-3"><svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>All 40+ connectors and shared briefs</li>
+              <li class="flex gap-3"><svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>prism-2 with 1M-token context</li>
+              <li class="flex gap-3"><svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>1M API tokens a month included</li>
+              <li class="flex gap-3"><svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>SSO, audit log, admin roles</li>
+            </ul>
+          </article>
+
+          <article class="card reveal reveal-d2 flex flex-col p-7 sm:p-8">
+            <h2 class="text-lg font-medium">Enterprise</h2>
+            <p class="mt-1.5 text-sm text-muted">For security reviews, scale and custom terms.</p>
+            <p class="mt-7 flex items-baseline gap-1.5"><span class="text-5xl font-medium tracking-tight">Custom</span></p>
+            <p class="mt-1 h-5 text-sm text-subtle">Volume pricing from 150 seats</p>
+            <a href="contact.html?topic=enterprise" class="btn-ghost btn-lg mt-7">Talk to sales</a>
+            <ul class="mt-8 grid gap-3 border-t border-white/[.07] pt-7 text-sm text-muted">
+              <li class="flex gap-3"><svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Everything in Team</li>
+              <li class="flex gap-3"><svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>Zero data retention for the API</li>
+              <li class="flex gap-3"><svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>SCIM, data residency, 7-year audit logs</li>
+              <li class="flex gap-3"><svg viewBox="0 0 20 20" class="h-5 w-5 shrink-0 text-brand-400" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg>99.9% uptime SLA and a named engineer</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- API pricing -->
+    <section class="container-x pb-24" aria-labelledby="api-price-title">
+      <div class="grid gap-10 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-16">
+        <div>
+          <p class="eyebrow">API</p>
+          <h2 id="api-price-title" class="mt-4 text-2xl font-medium tracking-tight sm:text-3xl">Pay as you go</h2>
+          <p class="mt-4 text-muted">Billed per million tokens, metered to the token. Team workspaces include 1M tokens each month.</p>
+        </div>
+        <div class="card relative min-w-0 overflow-x-auto" role="region" aria-label="API prices per million tokens (scrolls sideways)" tabindex="0">
+          <table class="w-full min-w-[34rem] text-left text-sm">
+            <thead>
+              <tr class="text-subtle">
+                <th scope="col" class="px-6 py-4 font-normal">Model</th>
+                <th scope="col" class="px-4 py-4 font-normal">Input</th>
+                <th scope="col" class="px-4 py-4 font-normal">Output</th>
+                <th scope="col" class="px-6 py-4 font-normal">Best for</th>
+              </tr>
+            </thead>
+            <tbody class="text-muted">
+              <tr class="border-t border-white/[.07]"><th scope="row" class="px-6 py-4 font-normal"><code class="whitespace-nowrap text-fg">prism-2</code></th><td class="px-4 py-4 font-mono text-fg">$3.00</td><td class="px-4 py-4 font-mono text-fg">$12.00</td><td class="px-6 py-4">Research, long documents, writing</td></tr>
+              <tr class="border-t border-white/[.07]"><th scope="row" class="px-6 py-4 font-normal"><code class="whitespace-nowrap text-fg">prism-2-flash</code></th><td class="px-4 py-4 font-mono text-fg">$0.40</td><td class="px-4 py-4 font-mono text-fg">$1.60</td><td class="px-6 py-4">Search boxes, chat, high volume</td></tr>
+              <tr class="border-t border-white/[.07]"><th scope="row" class="px-6 py-4 font-normal"><code class="whitespace-nowrap text-fg">prism-embed-1</code></th><td class="px-4 py-4 font-mono text-fg">$0.05</td><td class="px-4 py-4 font-mono">—</td><td class="px-6 py-4">Your own retrieval</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator -->
+    <section id="calculator" class="border-y border-white/[.06] bg-ink-900/40 py-24 sm:py-32" aria-labelledby="calc-title">
+      <div class="container-x">
+        <div class="max-w-2xl">
+          <p class="eyebrow">Cost calculator</p>
+          <h2 id="calc-title" class="h-section mt-4">Estimate your monthly bill.</h2>
+          <p class="lead mt-5">Move the sliders to match your team and API traffic. The estimate follows the billing period you picked above.</p>
+        </div>
+        <div class="mt-14 grid gap-4 lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)]">
+          <form class="card space-y-9 p-6 sm:p-8" onsubmit="return false" aria-label="Cost calculator">
+            <div>
+              <div class="flex items-baseline justify-between gap-4">
+                <label for="calc-seats" class="font-medium">Team seats</label>
+                <output id="calc-seats-value" for="calc-seats" class="font-mono text-sm text-brand-200">10 seats</output>
+              </div>
+              <input id="calc-seats" type="range" min="1" max="250" step="1" value="10" class="range mt-3">
+              <p class="mt-1 flex justify-between font-mono text-[11px] text-subtle" aria-hidden="true"><span>1</span><span>250</span></p>
+            </div>
+            <div>
+              <div class="flex items-baseline justify-between gap-4">
+                <label for="calc-tokens" class="font-medium">API tokens per month</label>
+                <output id="calc-tokens-value" for="calc-tokens" class="font-mono text-sm text-brand-200">25M tokens</output>
+              </div>
+              <input id="calc-tokens" type="range" min="0" max="10" step="1" value="5" class="range mt-3">
+              <p class="mt-1 flex justify-between font-mono text-[11px] text-subtle" aria-hidden="true"><span>0</span><span>1B</span></p>
+            </div>
+            <fieldset>
+              <legend class="font-medium">API model</legend>
+              <div class="mt-3 grid gap-2 sm:grid-cols-2">
+                <label class="flex cursor-pointer items-center gap-3 rounded-xl border border-white/10 bg-ink-850 px-4 py-3 transition has-checked:border-brand-400/60 has-checked:bg-brand-400/[.06]">
+                  <input type="radio" name="calc-model" value="prism-2" checked class="h-4 w-4 accent-brand-400">
+                  <span><code class="text-sm">prism-2</code><span class="block text-xs text-subtle">$3 in · $12 out</span></span>
+                </label>
+                <label class="flex cursor-pointer items-center gap-3 rounded-xl border border-white/10 bg-ink-850 px-4 py-3 transition has-checked:border-brand-400/60 has-checked:bg-brand-400/[.06]">
+                  <input type="radio" name="calc-model" value="prism-2-flash" class="h-4 w-4 accent-brand-400">
+                  <span><code class="text-sm">prism-2-flash</code><span class="block text-xs text-subtle">$0.40 in · $1.60 out</span></span>
+                </label>
+              </div>
+              <p class="mt-3 text-xs text-subtle">Assumes 75% input and 25% output tokens, a typical mix for cited answers.</p>
+            </fieldset>
+          </form>
+
+          <div class="glass flex flex-col rounded-2xl p-6 sm:p-8">
+            <p class="text-sm text-muted">Estimated monthly cost</p>
+            <p class="mt-2 text-6xl font-medium tracking-tight tabular-nums" id="calc-total">$326</p>
+            <p class="mt-1 font-mono text-sm text-subtle" id="calc-year">$3,912 per year</p>
+            <p id="calc-live" class="sr-only" aria-live="polite"></p>
+            <dl class="mt-8 grid gap-4 border-t border-white/[.07] pt-6 text-sm">
+              <div class="flex items-start justify-between gap-4">
+                <dt><span class="block text-fg">Seats</span><span id="calc-seat-line" class="text-subtle">10 × $20 (billed annually)</span></dt>
+                <dd id="calc-seat-cost" class="font-mono text-fg tabular-nums">$200</dd>
+              </div>
+              <div class="flex items-start justify-between gap-4">
+                <dt><span class="block text-fg">API usage</span><span id="calc-api-line" class="text-subtle">24M × $5.25 (prism-2, 1M included)</span></dt>
+                <dd id="calc-api-cost" class="font-mono text-fg tabular-nums">$126.00</dd>
+              </div>
+            </dl>
+            <p id="calc-note" hidden class="mt-6 rounded-xl border border-brand-400/25 bg-brand-400/[.06] p-4 text-sm text-brand-200">At this size, Enterprise volume pricing usually costs less. <a href="contact.html?topic=enterprise" class="font-medium text-fg underline underline-offset-4">Ask for a quote</a></p>
+            <div class="mt-auto pt-8">
+              <a href="contact.html?topic=trial" class="btn-primary btn-lg w-full">Start a 14-day trial</a>
+              <p class="mt-3 text-center text-xs text-subtle">Estimates exclude sales tax. Prices in USD.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="container-x py-24 sm:py-32" aria-labelledby="faq-title">
+      <div class="grid gap-12 lg:grid-cols-[minmax(0,4fr)_minmax(0,8fr)] lg:gap-16">
+        <div>
+          <p class="eyebrow">FAQ</p>
+          <h2 id="faq-title" class="h-section mt-4">Questions, answered.</h2>
+          <p class="mt-5 text-muted">Something else? <a href="contact.html" class="link">Talk to our team</a>.</p>
+        </div>
+        <div data-accordion class="divide-y divide-white/[.07] border-y border-white/[.07]">
+          <div class="acc-item">
+            <h3><button type="button" id="faq-1-btn" aria-expanded="false" aria-controls="faq-1" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[17px] font-medium transition hover:text-white">What counts as a seat?<span class="acc-icon grid h-7 w-7 shrink-0 place-items-center rounded-full border border-white/10 text-muted" aria-hidden="true"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></span></button></h3>
+            <div id="faq-1" role="region" aria-labelledby="faq-1-btn" class="acc-panel"><div><p class="max-w-2xl pb-6 text-muted">Anyone who can sign in and ask questions. People who only receive scheduled briefs by email are free, and so are admins who never use the assistant.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button type="button" id="faq-2-btn" aria-expanded="false" aria-controls="faq-2" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[17px] font-medium transition hover:text-white">How is API usage billed?<span class="acc-icon grid h-7 w-7 shrink-0 place-items-center rounded-full border border-white/10 text-muted" aria-hidden="true"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></span></button></h3>
+            <div id="faq-2" role="region" aria-labelledby="faq-2-btn" class="acc-panel"><div><p class="max-w-2xl pb-6 text-muted">Per million tokens, input and output priced separately, metered to the token and invoiced monthly in arrears. Retrieved source passages count as input tokens. You can set a hard monthly cap per key.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button type="button" id="faq-3-btn" aria-expanded="false" aria-controls="faq-3" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[17px] font-medium transition hover:text-white">Do you train on our data?<span class="acc-icon grid h-7 w-7 shrink-0 place-items-center rounded-full border border-white/10 text-muted" aria-hidden="true"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></span></button></h3>
+            <div id="faq-3" role="region" aria-labelledby="faq-3-btn" class="acc-panel"><div><p class="max-w-2xl pb-6 text-muted">No. Customer content is never used to train or tune models, on any plan, including Free. It’s in our terms, not just our privacy policy. See <a href="product.html#security" class="link">security and privacy</a>.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button type="button" id="faq-4-btn" aria-expanded="false" aria-controls="faq-4" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[17px] font-medium transition hover:text-white">Can we switch between monthly and annual?<span class="acc-icon grid h-7 w-7 shrink-0 place-items-center rounded-full border border-white/10 text-muted" aria-hidden="true"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></span></button></h3>
+            <div id="faq-4" role="region" aria-labelledby="faq-4-btn" class="acc-panel"><div><p class="max-w-2xl pb-6 text-muted">Yes. Moving to annual takes effect immediately and we credit the rest of your month. Moving to monthly takes effect at your next renewal.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button type="button" id="faq-5-btn" aria-expanded="false" aria-controls="faq-5" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[17px] font-medium transition hover:text-white">What happens when the trial ends?<span class="acc-icon grid h-7 w-7 shrink-0 place-items-center rounded-full border border-white/10 text-muted" aria-hidden="true"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></span></button></h3>
+            <div id="faq-5" role="region" aria-labelledby="faq-5-btn" class="acc-panel"><div><p class="max-w-2xl pb-6 text-muted">Your workspace moves to the Free plan unless you add a card. Nothing is deleted: connectors pause and briefs stop running until you upgrade.</p></div></div>
+          </div>
+          <div class="acc-item">
+            <h3><button type="button" id="faq-6-btn" aria-expanded="false" aria-controls="faq-6" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[17px] font-medium transition hover:text-white">Do you offer discounts for nonprofits and schools?<span class="acc-icon grid h-7 w-7 shrink-0 place-items-center rounded-full border border-white/10 text-muted" aria-hidden="true"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></span></button></h3>
+            <div id="faq-6" role="region" aria-labelledby="faq-6-btn" class="acc-panel"><div><p class="max-w-2xl pb-6 text-muted">Yes, 50% off Team seats for registered nonprofits and accredited schools. <a href="contact.html?topic=sales" class="link">Contact sales</a> with proof of status.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="relative mt-auto border-t border-white/[.07] bg-ink-950">
+    <div class="container-x grid gap-12 py-16 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="inline-flex items-center gap-2.5" aria-label="Prism home">
+          <svg viewBox="0 0 32 32" class="h-7 w-7 shrink-0" aria-hidden="true"><path d="M16 3.5 28.5 26.5H16z" fill="#7cf2c8"/><path d="M16 3.5 3.5 26.5H16z" fill="#ff7eb3"/><path d="M16 3.5 16 26.5 9.75 26.5z" fill="#ffb86b" opacity=".9"/><path d="M16 3.5 22.25 26.5H16z" fill="#6fb6ff" opacity=".9"/><path d="M16 3.5 28.5 26.5h-25z" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.2" stroke-linejoin="round"/></svg>
+          <span class="text-[17px] font-semibold tracking-[-0.02em]">Prism</span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-muted">The research assistant that shows its work. Made by Prism Labs in San Jose and Salt Lake City.</p>
+        <p class="mt-6 inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[.03] px-3 py-1.5 text-xs text-muted"><span class="pulse-dot h-2 w-2 rounded-full bg-brand-400 text-brand-400" aria-hidden="true"></span>All systems normal</p>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-5">
+      <nav aria-label="Product">
+        <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">Product</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="product.html" class="text-muted transition hover:text-fg">Overview</a></li>
+          <li><a href="product.html#integrations" class="text-muted transition hover:text-fg">Integrations</a></li>
+          <li><a href="product.html#security" class="text-muted transition hover:text-fg">Security</a></li>
+          <li><a href="pricing.html" class="text-muted transition hover:text-fg">Pricing</a></li>
+          <li><a href="changelog.html" class="text-muted transition hover:text-fg">Changelog</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Developers">
+        <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">Developers</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="developers.html" class="text-muted transition hover:text-fg">API overview</a></li>
+          <li><a href="developers.html#quickstart" class="text-muted transition hover:text-fg">Quickstart</a></li>
+          <li><a href="developers.html#endpoints" class="text-muted transition hover:text-fg">Endpoints</a></li>
+          <li><a href="developers.html#sdks" class="text-muted transition hover:text-fg">SDKs</a></li>
+          <li><a href="developers.html#rate-limits" class="text-muted transition hover:text-fg">Rate limits</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">Company</h2>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href="about.html" class="text-muted transition hover:text-fg">About</a></li>
+          <li><a href="about.html#careers" class="text-muted transition hover:text-fg">Careers</a></li>
+          <li><a href="contact.html" class="text-muted transition hover:text-fg">Talk to sales</a></li>
+          <li><a href="pricing.html#faq" class="text-muted transition hover:text-fg">FAQ</a></li>
+        </ul>
+      </nav>
+      </div>
+      <div class="lg:col-span-3">
+        <h2 class="font-mono text-xs font-medium tracking-[0.14em] text-subtle uppercase">Release notes by email</h2>
+        <p class="mt-4 text-sm text-muted">One email a month with everything we shipped. No marketing.</p>
+        <form data-form="newsletter" class="mt-4" novalidate>
+          <label for="footer-email" class="sr-only">Email address</label>
+          <div class="flex gap-2">
+            <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@company.example" class="input py-2 text-sm">
+            <button type="submit" class="btn-ghost shrink-0 px-4 py-2">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="divider">
+      <div class="container-x flex flex-col gap-2 py-6 text-xs text-subtle sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Prism Labs, Inc. Prism is a fictional product.</p>
+        <p>Website template by Freeframe.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

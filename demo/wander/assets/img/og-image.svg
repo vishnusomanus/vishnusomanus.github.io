@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e2603f"/><stop offset="1" stop-color="#f9b867"/></linearGradient>
+    <radialGradient id="glow"><stop offset="0" stop-color="#ffc98a" stop-opacity=".9"/><stop offset="1" stop-color="#ffc98a" stop-opacity="0"/></radialGradient>
+    <clipPath id="arch"><path d="M740 630V280a200 200 0 0 1 400 0v350z"/></clipPath>
+  </defs>
+  <rect width="1200" height="630" fill="#fbf5ea"/>
+  <circle cx="1120" cy="40" r="260" fill="#f4a62a" opacity=".18"/>
+  <path d="M728 630V280a212 212 0 0 1 424 0v350z" fill="#fffaf1"/>
+  <g clip-path="url(#arch)">
+    <rect x="700" y="60" width="480" height="600" fill="url(#sky)"/>
+    <circle cx="990" cy="300" r="190" fill="url(#glow)"/>
+    <circle cx="990" cy="300" r="72" fill="#fff0c8"/>
+    <path d="M700 400C800 360 900 380 980 404S1100 370 1180 390V660H700Z" fill="#ee9a5e"/>
+    <path d="M700 460C790 420 880 430 960 470S1100 420 1180 450V660H700Z" fill="#d8733d"/>
+    <g fill="#7f3519"><path d="M1010 440c3-10 10-14 16-9 4-6 11-6 13 0l6-5 4 1-4 7v14h-3v-11h-16v11h-3v-14c-6 2-12 1-17 5z"/><path d="M1062 434c3-10 10-14 16-9 4-6 11-6 13 0l6-5 4 1-4 7v14h-3v-11h-16v11h-3v-14c-6 2-12 1-17 5z"/></g>
+    <path d="M700 530C820 500 930 560 1060 548S1150 520 1180 526V660H700Z" fill="#7f3519"/>
+  </g>
+  <g transform="translate(990 92) rotate(6)">
+    <rect x="-56" y="-44" width="112" height="88" fill="#fffaf1"/>
+    <rect x="-46" y="-34" width="92" height="68" fill="#f4a62a" stroke="#b0431d" stroke-width="2" stroke-dasharray="5 4"/>
+    <text y="4" text-anchor="middle" font-family="Caprasimo, Georgia, serif" font-size="34" fill="#23180f">12</text>
+    <text y="24" text-anchor="middle" font-family="Outfit, sans-serif" font-size="11" font-weight="700" letter-spacing="2" fill="#23180f">MAX GROUP</text>
+  </g>
+  <g transform="translate(80 70)">
+    <circle cx="26" cy="26" r="25" fill="#b0431d"/><circle cx="26" cy="27" r="10" fill="#f4a62a"/><path d="M6.5 34l10-10 6.5 6.5 7.5-10 15.5 13" fill="#0e5a5f"/><path d="M4.5 36h43v2a21.5 21.5 0 0 1-43 0z" fill="#0e5a5f"/>
+    <text x="68" y="36" font-family="Caprasimo, Georgia, serif" font-size="34" fill="#23180f">Saltwind</text>
+  </g>
+  <text font-family="Caprasimo, Georgia, serif" font-size="88" fill="#23180f">
+    <tspan x="76" y="270">Wander</tspan>
+    <tspan x="76" y="362">further,</tspan>
+    <tspan x="76" y="454" fill="#b0431d">together.</tspan>
+  </text>
+  <path d="M80 476C200 462 300 458 470 468" fill="none" stroke="#f4a62a" stroke-width="9" stroke-linecap="round"/>
+  <text x="80" y="548" font-family="Outfit, sans-serif" font-size="28" font-weight="500" fill="#66523f">Small-group journeys, from the Sahara to the Arctic</text>
+</svg>

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Your salvage cart | Quoin</title>
+    <meta
+      name="description"
+      content="Review your chosen salvage pieces, finishes and quantities. Estimate delivery or choose free pickup from the Quoin yard in Troy."
+    />
+    <meta name="theme-color" content="#f3efe5" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Quoin" />
+    <meta property="og:title" content="Your salvage cart | Quoin" />
+    <meta
+      property="og:description"
+      content="Review your chosen salvage pieces, finishes and quantities. Estimate delivery or choose free pickup from the Quoin yard in Troy."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Antic+Didone&amp;family=Sarabun:wght@400;600&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+  <body data-page="basket" class="flex min-h-screen flex-col">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 z-50 bg-ink text-white p-4"
+      >Skip to content</a
+    >
+    <div class="border-b border-line bg-wash">
+      <div class="wrap flex justify-between gap-4 py-2 text-xs tracking-wide">
+        <p>Architectural salvage, carefully considered.</p>
+        <p class="hidden sm:block">Troy · Wednesday–Saturday, 10–5</p>
+      </div>
+    </div>
+    <header class="border-b border-line bg-paper" id="site-header">
+      <div class="wrap flex min-h-24 items-center justify-between gap-4">
+        <a href="index.html" class="font-display text-5xl tracking-tight" aria-label="Quoin home"
+          >Quoin<span class="text-rust">.</span></a
+        >
+        <nav aria-label="Main" class="hidden lg:flex items-center gap-3">
+          <a
+            href="stock.html"
+            class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+            >Stock</a
+          ><a
+            href="projects.html"
+            class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+            >Project board</a
+          ><a
+            href="care.html"
+            class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+            >Care notes</a
+          ><a
+            href="yard.html"
+            class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+            >The yard</a
+          ><a
+            href="visit.html"
+            class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+            >Visit & delivery</a
+          >
+        </nav>
+        <div class="flex items-center gap-3">
+          <a
+            href="basket.html"
+            data-basket-link
+            aria-label="Cart, 0 items"
+            class="flex min-h-11 items-center border-l border-line pl-4 text-sm"
+            >Cart <span data-basket-count class="ml-2 rounded-full bg-moss px-2 py-1 text-xs text-white">0</span></a
+          ><button
+            type="button"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open menu"
+            class="border border-line p-3 lg:hidden"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              class="size-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" hidden aria-label="Mobile" class="wrap grid gap-1 border-t border-line py-4 lg:hidden">
+        <a
+          href="stock.html"
+          class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+          >Stock</a
+        ><a
+          href="projects.html"
+          class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+          >Project board</a
+        ><a
+          href="care.html"
+          class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+          >Care notes</a
+        ><a
+          href="yard.html"
+          class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+          >The yard</a
+        ><a
+          href="visit.html"
+          class="px-2 py-3 text-sm font-semibold hover:text-rust aria-[current=page]:underline underline-offset-8"
+          >Visit & delivery</a
+        >
+      </nav>
+    </header>
+    <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+      <section class="wrap grid gap-8 border-b border-line py-12 md:grid-cols-[1.3fr_1fr] md:items-end lg:py-16">
+        <div>
+          <p class="eyebrow">Your considered selection</p>
+          <h1 class="mt-5 text-5xl leading-[1.06] tracking-tight sm:text-6xl lg:text-7xl">
+            The pieces<br />coming together.
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+            Gather the pieces here, then ask us to hold them. We check stock, condition and pickup or delivery with
+            you before taking payment.
+          </p>
+        </div>
+        <figure
+          class="grid grid-cols-[1fr_auto] items-end gap-6 border-b border-line pb-4 md:grid-cols-1 lg:grid-cols-[1fr_auto]"
+        >
+          <img
+            src="assets/img/sack-truck.svg"
+            width="400"
+            height="330"
+            alt="A yard hand truck loaded with an oak door, a pack of tiles and a brass lantern"
+            class="w-full max-w-[340px]"
+          />
+          <figcaption class="max-w-[13rem] pb-2 text-sm leading-relaxed text-muted">
+            Still deciding? <a href="projects.html" class="text-link">Open your project board</a> and compare pieces
+            room by room.
+          </figcaption>
+        </figure>
+      </section>
+      <section class="wrap grid gap-10 py-12 lg:grid-cols-[1.6fr_1fr]">
+        <div data-basket-lines></div>
+        <aside class="self-start border border-line bg-white/30 p-6 sm:p-8">
+          <h2 class="text-3xl">The particulars</h2>
+          <div data-basket-summary class="mt-6"></div>
+          <a href="checkout.html" data-checkout-link class="btn mt-7 w-full">Request a reservation</a>
+          <p class="mt-4 text-sm leading-relaxed text-muted">
+            No payment is taken online. Send a reservation request and we hold the pieces for 48 hours while we call
+            you.
+          </p>
+          <a href="visit.html#delivery" class="text-link mt-5 inline-block text-sm">Check delivery options</a>
+        </aside>
+      </section>
+    </main>
+    <footer class="mt-auto bg-ink text-paper">
+      <div class="wrap grid gap-10 py-14 sm:grid-cols-3">
+        <div>
+          <a href="index.html" class="font-display text-5xl">Quoin.</a>
+          <p class="mt-5 max-w-xs text-sm leading-relaxed">
+            Good old things, ready for the next chapter. Come with a measurement, leave with a possibility.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-sans text-xs uppercase tracking-widest">Find the yard</h2>
+          <p class="mt-4 text-sm leading-relaxed">
+            The old freight yard, Ferry Street<br />Troy, New York<br />Wednesday–Saturday · 10am–5pm
+          </p>
+          <a href="visit.html" class="mt-4 inline-block text-sm underline underline-offset-4">Plan your visit</a>
+        </div>
+        <div>
+          <h2 class="font-sans text-xs uppercase tracking-widest">Talk a piece through</h2>
+          <a href="mailto:hello@quoin.example" class="mt-4 block break-all text-sm underline underline-offset-4"
+            >hello@quoin.example</a
+          ><a href="tel:+15185550142" class="mt-3 block text-sm">(518) 555-0142</a>
+          <p class="mt-4 text-sm">Bring photographs. We like a good puzzle.</p>
+        </div>
+      </div>
+      <div class="wrap flex flex-col justify-between gap-3 border-t border-paper/20 py-6 text-xs sm:flex-row">
+        <p>© <span data-year></span> Quoin. Materials with more to give.</p>
+        <p class="text-paper/75">Quoin is a fictional business.</p>
+      </div>
+    </footer>
+    <div
+      class="fixed bottom-5 left-5 right-5 z-50 mx-auto max-w-md bg-moss px-5 py-4 text-sm text-white shadow-lg"
+      role="status"
+      data-toast
+      hidden
+    ></div>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </body>
+</html>

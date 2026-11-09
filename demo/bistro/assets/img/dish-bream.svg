@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <radialGradient id="table" cx="50%" cy="40%" r="80%"><stop offset="0" stop-color="#3f4b52"/><stop offset="1" stop-color="#141a1e"/></radialGradient>
+    <linearGradient id="platter" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8f2e8"/><stop offset="1" stop-color="#ddd0bc"/></linearGradient>
+    <linearGradient id="fish" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#9a7a4e"/><stop offset=".45" stop-color="#d8b77a"/><stop offset="1" stop-color="#f1dfb8"/></linearGradient>
+    <radialGradient id="lemon" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#fff6a8"/><stop offset=".8" stop-color="#f6d443"/><stop offset="1" stop-color="#e3b21c"/></radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="16"/></filter>
+    <filter id="char"><feGaussianBlur stdDeviation="2"/></filter>
+  </defs>
+  <rect width="800" height="800" fill="url(#table)"/>
+  <rect x="80" y="210" width="650" height="400" rx="200" fill="#000" opacity=".5" filter="url(#shadow)"/>
+  <rect x="70" y="195" width="660" height="400" rx="200" fill="url(#platter)"/>
+  <rect x="110" y="235" width="580" height="320" rx="160" fill="none" stroke="#cdbea6" stroke-width="2" opacity=".6"/>
+  <!-- fennel fronds -->
+  <g fill="none" stroke="#6f9b3a" stroke-width="3" stroke-linecap="round" opacity=".9">
+    <path d="M200 520c40-30 90-40 140-30M240 510l-10-30M280 500l-5-32M320 494l5-30"/>
+    <path d="M560 300c40 10 80 30 100 60M600 312l20-24M630 326l24-18"/>
+  </g>
+  <!-- fish -->
+  <g transform="rotate(-6 400 400)">
+    <path d="M170 400c60-110 260-130 400-50l90-60c-10 50-10 110 0 160l-90-50c-140 80-340 60-400-0z" fill="url(#fish)"/>
+    <path d="M170 400c60-110 260-130 400-50" fill="none" stroke="#6b4f2c" stroke-width="5" opacity=".5"/>
+    <g stroke="#3a220e" stroke-width="12" stroke-linecap="round" opacity=".55" filter="url(#char)">
+      <path d="M260 340l-40 100M330 325l-45 125M400 322l-45 135M470 332l-40 120M535 350l-30 90"/>
+    </g>
+    <path d="M220 395c25-10 40 5 30 20" fill="none" stroke="#3a220e" stroke-width="3"/>
+    <circle cx="215" cy="385" r="11" fill="#fff"/><circle cx="215" cy="385" r="6" fill="#1b130c"/>
+    <path d="M380 300c30-30 80-30 110 10" fill="#b8925a" opacity=".8"/>
+  </g>
+  <!-- lemon halves -->
+  <circle cx="600" cy="510" r="56" fill="url(#lemon)"/>
+  <g stroke="#fff9d0" stroke-width="3" opacity=".8"><path d="M600 460v100M550 510h100M565 475l70 70M635 475l-70 70"/></g>
+  <circle cx="600" cy="510" r="56" fill="none" stroke="#f0c430" stroke-width="7"/>
+  <path d="M640 445a46 46 0 1 1 1 0" fill="#f6d443" opacity="0"/>
+  <ellipse cx="190" cy="290" rx="44" ry="30" fill="url(#lemon)" transform="rotate(-30 190 290)"/>
+  <!-- chili & olives -->
+  <g fill="#c4271c"><circle cx="420" cy="500" r="5"/><circle cx="460" cy="490" r="4"/><circle cx="350" cy="510" r="4"/></g>
+  <g fill="#2a2416"><ellipse cx="500" cy="520" rx="14" ry="10"/><ellipse cx="300" cy="280" rx="13" ry="9"/><ellipse cx="520" cy="270" rx="12" ry="9"/></g>
+  <g fill="#fff" opacity=".35"><ellipse cx="497" cy="516" rx="4" ry="2"/><ellipse cx="297" cy="276" rx="4" ry="2"/></g>
+</svg>

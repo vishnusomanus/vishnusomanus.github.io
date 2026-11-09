@@ -1,0 +1,197 @@
+/* The Fallow Hart — Hearth template. Tailwind CSS v4 source.
+   Rebuild with: npm run build   (writes assets/css/style.css) */
+@import "tailwindcss" source(none);
+@source "../*.html";
+@source "../assets/js";
+
+/* Brand tokens: change these to re-skin the whole site. */
+@theme {
+  --font-display: "Zilla Slab", "Rockwell", "Roboto Slab", Georgia, serif;
+  --font-serif: "Alegreya", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-chalk: "Caveat Brush", "Comic Sans MS", "Segoe Print", cursive;
+
+  --color-paper: #f4ecdc;    /* page background, warm cream */
+  --color-paper-2: #ebdfc6;  /* panels */
+  --color-paper-3: #ddcca9;  /* deeper panels, rules */
+  --color-ink: #211b15;      /* text and woodcut ink */
+  --color-muted: #5c5043;    /* secondary text on paper */
+  --color-forest: #22402f;   /* deep forest green */
+  --color-forest-2: #2f5540;
+  --color-forest-dark: #15291e;
+  --color-oxblood: #7d2431;  /* accent */
+  --color-oxblood-dark: #5f1a24;
+  --color-moss: #6d7a45;
+  --color-ember: #d9932f;    /* firelight; decorative only */
+  --color-ember-light: #ecb45a; /* firelight text on green and the chalkboard */
+  --color-chalk: #f2ede1;    /* text on green and on the chalkboard */
+  --color-board: #1e2622;    /* chalkboard */
+
+  --ease-press: cubic-bezier(.2, .8, .2, 1);
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: no-preference) {
+    html:focus-within { scroll-behavior: smooth; }
+  }
+  body {
+    @apply bg-paper font-serif text-[1.075rem] text-ink antialiased;
+    /* Paper grain: an inline SVG noise tile, no external request. */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .27 0 0 0 0 .17 0 0 0 .07 0'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  ::selection { background: var(--color-oxblood); color: var(--color-chalk); }
+  :focus-visible { outline: 3px solid var(--color-oxblood); outline-offset: 3px; }
+  .on-green :focus-visible, .on-board :focus-visible { outline-color: var(--color-ember-light); }
+  h1, h2, h3 { text-wrap: balance; }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  img, svg { max-width: 100%; }
+  [hidden] { display: none !important; }
+}
+
+/* Buttons: square-cut blocks with a printed offset shadow */
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 border-2 border-ink px-5 py-2.5 font-display text-[0.95rem] font-semibold tracking-[0.02em] transition duration-150 disabled:cursor-not-allowed disabled:opacity-50;
+  box-shadow: 3px 3px 0 var(--color-ink);
+  &:hover { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--color-ink); }
+  &:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--color-ink); }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+
+  /* Letterpress type */
+  .display { @apply font-display font-bold leading-[1.02] tracking-[-0.01em]; }
+  .press { text-shadow: 0 1px 0 rgb(255 250 238 / .55); }
+  .on-green .press, .press-dark { text-shadow: 0 2px 0 rgb(0 0 0 / .25); }
+  .eyebrow { @apply font-display text-[0.8rem] font-semibold uppercase tracking-[0.22em] text-oxblood; }
+  .on-green .eyebrow { color: var(--color-ember-light); }
+  .kicker { @apply font-serif text-xl italic text-muted; }
+
+  /* Rules and fleurons */
+  .rule-double { border-top: 3px double var(--color-ink); }
+  .fleuron { @apply flex items-center gap-4 text-oxblood; }
+  .fleuron::before, .fleuron::after { content: ""; @apply h-px flex-1 bg-current opacity-60; }
+
+  .btn-primary { @apply btn bg-oxblood text-chalk hover:bg-oxblood-dark; }
+  .btn-green { @apply btn bg-forest text-chalk hover:bg-forest-dark; }
+  .btn-paper { @apply btn bg-paper text-ink hover:bg-white; }
+  .btn-sm { @apply px-3.5 py-1.5 text-sm; }
+  .on-green .btn-paper { @apply border-ink; }
+
+  .link { @apply underline decoration-oxblood/50 decoration-2 underline-offset-4 transition hover:decoration-oxblood; }
+  .on-green .link { @apply decoration-ember-light/60 hover:decoration-ember-light; }
+
+  /* Cards: printed panels with a hard edge */
+  .card { @apply border-2 border-ink bg-paper; box-shadow: 5px 5px 0 rgb(33 27 21 / .9); }
+  .panel { @apply border border-ink/25 bg-paper-2; }
+  .stamp {
+    @apply inline-flex items-center gap-1.5 border border-current px-2 py-0.5 font-display text-[0.72rem] font-semibold uppercase tracking-[0.14em];
+  }
+
+  /* Forms */
+  .field-label { @apply mb-1.5 block font-display text-sm font-semibold text-ink; }
+  .field-hint { @apply mt-1 text-sm text-muted; }
+  .field {
+    @apply w-full border-2 border-ink/70 bg-[#fbf6ea] px-3.5 py-2.5 font-serif text-base text-ink transition placeholder:text-muted/80 focus:border-ink focus:outline-none focus:ring-4 focus:ring-forest/20;
+  }
+  .field[aria-invalid="true"] { @apply border-oxblood ring-4 ring-oxblood/15; }
+  .field-error { @apply mt-1.5 text-[0.95rem] font-semibold text-oxblood; }
+  .field-error:empty { display: none; }
+  .on-green .field-label { color: var(--color-chalk); }
+  .on-green .field { @apply border-chalk/70 bg-forest-dark text-chalk placeholder:text-chalk/60 focus:border-chalk; }
+  .on-green .field-error { color: #ffc7b8; }
+
+  /* Toggle chips (filters) */
+  .toggle {
+    @apply inline-flex items-center gap-2 border-2 border-ink/70 bg-paper px-3.5 py-1.5 font-display text-sm font-semibold text-ink transition hover:border-ink;
+  }
+  .toggle[aria-pressed="true"] { @apply border-ink bg-forest text-chalk; }
+  .toggle .tick { @apply hidden; }
+  .toggle[aria-pressed="true"] .tick { @apply inline; }
+
+  /* Diet marks */
+  .diet { @apply inline-grid h-6 min-w-6 place-items-center border border-current px-1 font-display text-[0.68rem] font-bold uppercase; }
+  .diet-v { @apply text-moss; }
+  .diet-vg { @apply text-forest; }
+  .diet-gf { @apply text-oxblood; }
+
+  /* Tabs */
+  .tab {
+    @apply relative -mb-[2px] border-2 border-transparent px-4 py-2.5 font-display text-base font-semibold text-muted transition hover:text-ink sm:px-5;
+  }
+  .tab[aria-selected="true"] { @apply border-ink border-b-paper bg-paper text-ink; }
+
+  /* Chalkboard */
+  .board {
+    @apply relative bg-board text-chalk;
+    background-image:
+      radial-gradient(ellipse at 20% 15%, rgb(255 255 255 / .07), transparent 55%),
+      radial-gradient(ellipse at 80% 85%, rgb(255 255 255 / .05), transparent 50%);
+    border: 14px solid #6b4a2e;
+    box-shadow: inset 0 0 0 2px #4e3520, inset 0 0 40px rgb(0 0 0 / .45), 6px 6px 0 var(--color-ink);
+  }
+  .chalk { @apply font-chalk; letter-spacing: .01em; }
+
+  /* Voucher ticket */
+  .ticket {
+    @apply relative border-2 border-ink bg-[#fbf6ea];
+    box-shadow: 6px 6px 0 var(--color-forest);
+    background-image: repeating-linear-gradient(0deg, transparent 0 27px, rgb(125 36 49 / .06) 27px 28px);
+  }
+  .ticket::before, .ticket::after {
+    content: ""; @apply absolute top-1/2 h-6 w-6 -translate-y-1/2 rounded-full border-2 border-ink bg-paper;
+  }
+  .ticket::before { left: -13px; clip-path: inset(0 0 0 50%); }
+  .ticket::after { right: -13px; clip-path: inset(0 50% 0 0); }
+
+  /* Status dot (fire's lit / resting) */
+  .status-dot { @apply relative inline-block h-2.5 w-2.5 shrink-0 rounded-full bg-ember; }
+  [data-state="open"] .status-dot::after {
+    content: ""; @apply absolute inset-0 rounded-full bg-ember;
+    animation: ember 2.4s ease-out infinite;
+  }
+  [data-state="resting"] .status-dot { background: #9fb1a4; }
+
+  /* Woodcut art frames */
+  .art { @apply block overflow-hidden bg-paper-2; }
+  .art img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .art-frame { @apply border-2 border-ink p-1.5 bg-paper; }
+
+  /* Walk map */
+  .route { fill: none; stroke: var(--color-ink); stroke-width: 2.5; stroke-dasharray: 2 7; stroke-linecap: round; opacity: .35; transition: opacity .2s, stroke .2s; }
+  .route[data-active] { stroke: var(--color-oxblood); stroke-width: 5; stroke-dasharray: none; opacity: 1; }
+  .route[data-dim] { opacity: .12; }
+}
+
+@keyframes ember { from { transform: scale(1); opacity: .7; } to { transform: scale(2.6); opacity: 0; } }
+@keyframes smoke { 0% { transform: translateY(0); opacity: .75; } 100% { transform: translateY(-14px); opacity: .25; } }
+.smoke { animation: smoke 5s ease-in-out infinite alternate; }
+
+/* Scroll reveal: only hidden when JS is running and motion is allowed. */
+.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s var(--ease-press), transform .7s var(--ease-press); }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+.menu-open { overflow: hidden; }
+
+/* Back to top button (created by assets/js/main.js). Remove this block to drop it. */
+@layer components {
+  .back-to-top {
+    position: fixed; z-index: 40;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+    display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; cursor: pointer;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, visibility 0s linear .25s, background-color .2s;
+    border: 2px solid var(--color-ink); background: var(--color-forest); color: var(--color-chalk);
+    box-shadow: 3px 3px 0 var(--color-ink);
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top:hover { background: var(--color-forest-dark); }
+  .back-to-top-target:focus { outline: none; }
+  @media print { .back-to-top { display: none !important; } }
+}

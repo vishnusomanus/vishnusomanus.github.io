@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#f8f1e4"/>
+  <svg x="730" y="70" width="470" height="500" viewBox="0 0 640 600">
+  
+  <path d="M58 70 120 52l84 10 72-14 90 12 70-8 96 14 46-6 8 84-10 70 12 96-8 74 6 84-10 50-90 6-80-10-88 8-76-6-92 10-66-6-12-70 10-88-8-80 8-96-10-78z" fill="#fde8bd"/>
+  <path d="M96 520 548 500l6 30-454 22z" fill="#1f1d36" opacity=".08"/>
+  
+  <path d="M132 486V226a158 158 0 0 1 316 0v260z" fill="#5b34a8"/>
+  <path d="M156 470V232a134 134 0 0 1 268 0v238z" fill="#ddeef8"/>
+  <circle cx="352" cy="190" r="42" fill="#f3b23a"/>
+  <path d="M156 330c40-30 76-44 118-36s80-34 150-18v194H156z" fill="#7fb069"/>
+  <path d="M156 380c60-26 120-30 268-6v96H156z" fill="#17685a"/>
+  
+  <path d="M262 296h22l-4-58h-14z" fill="#1f1d36"/>
+  <path d="M259 238h28l-14-20z" fill="#1f1d36"/>
+  <rect x="268" y="252" width="9" height="12" rx="2" fill="#f3b23a"/>
+  <path d="M156 232a134 134 0 0 1 268 0" fill="none" stroke="#fffaf1" stroke-width="10"/>
+  <path d="M290 98v372M156 300h268" stroke="#fffaf1" stroke-width="10"/>
+  
+  <path d="M84 120c90 40 170 48 248 34s150-36 236-16" fill="none" stroke="#1f1d36" stroke-width="3"/>
+  <path d="m108 128 14 34 16-30zM170 146l10 36 20-30zM238 156l6 36 22-28zM306 154l2 38 24-26zM372 142l-2 38 26-22zM438 128l-4 36 28-18zM504 126l-6 34 30-14z" fill="#e0532f"/>
+  <path d="m138 134 12 34 18-28zM204 152l8 36 22-28zM272 156l4 38 22-28zM340 150v38l26-24zM406 136l-4 36 28-20zM470 126l-6 36 30-16z" fill="#f2a7bf"/>
+  
+  <circle cx="214" cy="402" r="24" fill="#1f1d36"/>
+  <path d="M176 532c0-62 18-100 38-100s38 38 38 100z" fill="#e0532f"/>
+  <circle cx="300" cy="420" r="20" fill="#5b34a8"/>
+  <path d="M268 532c0-52 14-84 32-84s32 32 32 84z" fill="#f3b23a"/>
+  <path d="M248 468c18 6 26 6 40-2" stroke="#1f1d36" stroke-width="10" stroke-linecap="round" fill="none"/>
+  
+  <path d="M470 532c-34-30-42-82-18-112 10-12 12-26 6-38h66c-6 12-4 26 6 38 24 30 16 82-18 112z" fill="#e0532f"/>
+  <path d="M452 430h92M448 470h100M458 506h80" stroke="#fde8bd" stroke-width="6" stroke-linecap="round"/>
+  <path d="M488 382c-2-16 34-16 32 0" fill="#1f1d36"/>
+  
+  <rect x="38" y="402" width="122" height="94" rx="6" transform="rotate(-10 99 449)" fill="#fffaf1"/>
+  <path d="M60 456c16-14 30 8 48-4s28 6 44-4M64 480c14-10 26 6 40-2" fill="none" stroke="#5b34a8" stroke-width="5" stroke-linecap="round" transform="rotate(-10 99 449)"/>
+  <circle cx="102" cy="430" r="15" fill="#f3b23a" transform="rotate(-10 99 449)"/>
+  <rect x="58" y="532" width="100" height="30" rx="15" fill="#1f1d36"/>
+  <rect x="100" y="498" width="12" height="40" rx="6" fill="#1f1d36"/>
+  
+  <circle cx="540" cy="134" r="64" fill="#1f1d36"/>
+  <circle cx="540" cy="134" r="44" fill="none" stroke="#fffaf1" stroke-width="2" opacity=".35"/>
+  <circle cx="540" cy="134" r="18" fill="#f2a7bf"/>
+  <circle cx="540" cy="134" r="4" fill="#1f1d36"/>
+  <path d="M580 238v-66l40-10v54" fill="none" stroke="#5b34a8" stroke-width="7"/>
+  <ellipse cx="568" cy="240" rx="15" ry="11" fill="#5b34a8"/>
+  <ellipse cx="608" cy="218" rx="15" ry="11" fill="#5b34a8"/>
+  
+  <path d="M40 300c40-30 70 10 54 40s-60 20-34 60" fill="none" stroke="#e0532f" stroke-width="5" stroke-linecap="round"/>
+  <rect x="70" y="222" width="10" height="70" rx="3" transform="rotate(28 75 257)" fill="#1f1d36"/>
+  
+  <rect x="34" y="58" width="44" height="44" rx="6" transform="rotate(-14 56 80)" fill="#5b34a8"/>
+  <circle cx="56" cy="80" r="11" fill="#f3b23a"/>
+  <rect x="566" y="300" width="40" height="40" rx="5" transform="rotate(16 586 320)" fill="#8ec5e6"/>
+  <path d="M566 380h40v40z" fill="#17685a"/>
+  <rect x="384" y="40" width="30" height="30" rx="4" transform="rotate(22 399 55)" fill="#7fb069"/>
+  <path d="M594 470a30 30 0 0 1-30 30v-30z" fill="#f3b23a"/>
+  <rect x="560" y="520" width="34" height="34" rx="4" transform="rotate(-10 577 537)" fill="#f2a7bf"/>
+</svg>
+  <g transform="translate(64 70)"><rect x="0" y="0" width="30" height="30" rx="4" fill="#5b34a8"/><circle cx="15" cy="15" r="8" fill="#f3b23a"/><path d="M34 0h30v30A30 30 0 0 1 34 0z" fill="#e0532f"/><path d="M0 34h30v30z" fill="#17685a"/><rect x="38" y="38" width="22" height="22" rx="3" transform="rotate(12 49 49)" fill="#f2a7bf"/></g>
+  <text x="148" y="118" font-family="'Bagel Fat One', sans-serif" font-size="52" fill="#1f1d36">mosaic</text>
+  <text x="64" y="200" font-family="Epilogue, sans-serif" font-weight="800" font-size="22" letter-spacing="3" fill="#a8361a">COMMUNITY ARTS CENTER · HOLYOKE</text>
+  <text x="60" y="310" font-family="'Bagel Fat One', sans-serif" font-size="78" fill="#1f1d36">Make something.</text>
+  <text x="60" y="410" font-family="'Bagel Fat One', sans-serif" font-size="78" fill="#5b34a8">Meet someone.</text>
+  <path d="M64 432c120-14 280-18 520-8" fill="none" stroke="#f3b23a" stroke-width="12" stroke-linecap="round"/>
+  <text x="64" y="510" font-family="Epilogue, sans-serif" font-weight="600" font-size="28" fill="#57536b">Print, clay, music, film and free exhibitions</text>
+  <text x="64" y="550" font-family="Epilogue, sans-serif" font-weight="600" font-size="28" fill="#57536b">on Race Street, Holyoke.</text>
+</svg>

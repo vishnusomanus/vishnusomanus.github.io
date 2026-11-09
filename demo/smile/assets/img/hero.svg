@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 520" role="img" aria-labelledby="t">
+  <title id="t">Pip, the Grin Lane tooth, waving with a toothbrush among sparkles and bubbles</title>
+  <defs>
+    <clipPath id="tooth-clip"><path d="M100 28C82 12 40 8 32 48c-6 32 8 56 16 80 8 28 10 68 26 72 16 4 14-40 26-50 12 10 10 54 26 50 16-4 18-44 26-72 8-24 22-48 16-80-8-40-50-36-68-20Z"/></clipPath>
+  </defs>
+  <!-- background shapes -->
+  <path d="M286 26c94-6 196 40 240 128 44 90 22 210-52 278-72 66-196 92-292 62C88 466 20 386 28 288 36 192 70 110 132 66c44-30 96-38 154-40Z" fill="#e6e4ff"/>
+  <circle cx="452" cy="104" r="58" fill="#ffdc4f"/>
+  <circle cx="452" cy="104" r="80" fill="none" stroke="#ffdc4f" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round"/>
+  <path d="M60 392c26-34 76-40 104-14 26 24 18 70-18 84-40 16-110-28-86-70Z" fill="#a3ead2"/>
+  <path d="M96 120c18-10 40-2 46 16 6 20-8 36-28 36-26 0-36-38-18-52Z" fill="#ffc6d7"/>
+  <!-- bubbles -->
+  <g fill="none" stroke="#aea8fb" stroke-width="3">
+    <circle cx="136" cy="250" r="14"/><circle cx="110" cy="214" r="8"/><circle cx="470" cy="300" r="12"/><circle cx="498" cy="262" r="7"/>
+  </g>
+  <g fill="#fff" opacity=".9"><circle cx="131" cy="245" r="3.5"/><circle cx="466" cy="296" r="3"/></g>
+  <!-- shadow -->
+  <ellipse cx="292" cy="470" rx="128" ry="16" fill="#cfcbff"/>
+  <!-- left arm waving -->
+  <path d="M236 252c-44 2-76-22-90-56" fill="none" stroke="#1d1a4d" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="142" cy="186" r="19" fill="#fff" stroke="#1d1a4d" stroke-width="6"/>
+  <path d="M112 160c-6 6-8 14-6 22M104 146c-10 10-14 26-10 40" fill="none" stroke="#5146d4" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- tooth body -->
+  <g transform="translate(178 120) scale(1.14)">
+    <path d="M100 28C82 12 40 8 32 48c-6 32 8 56 16 80 8 28 10 68 26 72 16 4 14-40 26-50 12 10 10 54 26 50 16-4 18-44 26-72 8-24 22-48 16-80-8-40-50-36-68-20Z" fill="#fff"/>
+    <g clip-path="url(#tooth-clip)">
+      <path d="M150 0c30 40 30 120-10 220h80V0Z" fill="#f3f2ff"/>
+      <path d="M44 40c6-14 20-20 34-18" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round"/>
+    </g>
+    <path d="M100 28C82 12 40 8 32 48c-6 32 8 56 16 80 8 28 10 68 26 72 16 4 14-40 26-50 12 10 10 54 26 50 16-4 18-44 26-72 8-24 22-48 16-80-8-40-50-36-68-20Z" fill="none" stroke="#1d1a4d" stroke-width="5.5" stroke-linejoin="round"/>
+    <!-- face -->
+    <ellipse cx="78" cy="78" rx="7.5" ry="10" fill="#1d1a4d"/>
+    <ellipse cx="122" cy="78" rx="7.5" ry="10" fill="#1d1a4d"/>
+    <circle cx="80.5" cy="74" r="2.8" fill="#fff"/><circle cx="124.5" cy="74" r="2.8" fill="#fff"/>
+    <ellipse cx="62" cy="98" rx="11" ry="7" fill="#ffc6d7"/>
+    <ellipse cx="138" cy="98" rx="11" ry="7" fill="#ffc6d7"/>
+    <path d="M84 96c6 18 26 18 32 0Z" fill="#1d1a4d" stroke="#1d1a4d" stroke-width="5" stroke-linejoin="round"/>
+    <path d="M91 104c5-4 13-4 18 0-4 5-14 5-18 0Z" fill="#fb6f97"/>
+  </g>
+  <!-- right arm with toothbrush -->
+  <path d="M350 252c40 2 70-8 84-26" fill="none" stroke="#1d1a4d" stroke-width="7" stroke-linecap="round"/>
+  <g transform="rotate(24 446 150)">
+    <rect x="436" y="120" width="20" height="150" rx="10" fill="#5146d4" stroke="#1d1a4d" stroke-width="5"/>
+    <rect x="432" y="76" width="28" height="52" rx="8" fill="#fff" stroke="#1d1a4d" stroke-width="5"/>
+    <path d="M432 88h-10M432 100h-10M432 112h-10" stroke="#1d1a4d" stroke-width="5" stroke-linecap="round"/>
+    <path d="M420 76c-10-4-12-18 0-22 6-12 24-10 26 2 12 2 12 18 0 20Z" fill="#a3ead2" stroke="#1d1a4d" stroke-width="4.5" stroke-linejoin="round"/>
+    <circle cx="444" cy="166" r="4" fill="#ffdc4f"/>
+  </g>
+  <rect x="420" y="208" width="36" height="34" rx="17" fill="#fff" stroke="#1d1a4d" stroke-width="6"/>
+  <!-- sparkles -->
+  <g fill="#ffcc22" stroke="#1d1a4d" stroke-width="4" stroke-linejoin="round">
+    <path d="M206 88c3 16 9 22 25 25-16 3-22 9-25 25-3-16-9-22-25-25 16-3 22-9 25-25Z"/>
+    <path d="M498 380c2 11 6 15 17 17-11 2-15 6-17 17-2-11-6-15-17-17 11-2 15-6 17-17Z"/>
+    <path d="M84 312c2 9 5 12 14 14-9 2-12 5-14 14-2-9-5-12-14-14 9-2 12-5 14-14Z"/>
+  </g>
+  <g fill="#fb6f97"><circle cx="372" cy="70" r="7"/><circle cx="518" cy="190" r="5"/><circle cx="196" cy="420" r="6"/></g>
+</svg>

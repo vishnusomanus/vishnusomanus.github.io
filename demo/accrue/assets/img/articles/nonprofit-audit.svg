@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <rect width="640" height="400" fill="#e1e5c8"/>
+  <g stroke="#1f2316" stroke-width="3" stroke-linejoin="round">
+    <rect x="90" y="250" width="320" height="56" rx="6" fill="#9a3b1e"/>
+    <rect x="110" y="196" width="300" height="56" rx="6" fill="#e8b13a"/>
+    <rect x="80" y="142" width="320" height="56" rx="6" fill="#4f5b1c"/>
+    <rect x="100" y="88" width="300" height="56" rx="6" fill="#fffcf4"/>
+  </g>
+  <g fill="#fffcf4" stroke="#1f2316" stroke-width="2"><rect x="120" y="102" width="70" height="26" rx="3" fill="#f8e7bb"/><rect x="104" y="156" width="70" height="26" rx="3"/><rect x="132" y="210" width="70" height="26" rx="3"/><rect x="112" y="264" width="70" height="26" rx="3"/></g>
+  <g transform="translate(430 70)" stroke="#1f2316" stroke-width="3">
+    <rect width="150" height="250" rx="10" fill="#fffcf4"/>
+    <rect x="45" y="-12" width="60" height="28" rx="6" fill="#1f2316"/>
+    <g fill="none" stroke="#4f5b1c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 62l8 8 14-16M22 112l8 8 14-16M22 162l8 8 14-16"/></g>
+    <rect x="22" y="200" width="22" height="22" rx="4" fill="#fffcf4" stroke-width="2.5"/>
+    <g stroke="#b9b096" stroke-width="3"><path d="M58 64h70M58 114h56M58 164h64M58 212h48"/></g>
+  </g>
+</svg>

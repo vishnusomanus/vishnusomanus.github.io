@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" width="480" height="270">
+  <defs>
+    <pattern id="dots" width="18" height="18" patternUnits="userSpaceOnUse"><circle cx="9" cy="9" r="1.2" fill="#0c1427" fill-opacity=".12"/></pattern>
+  </defs>
+  <rect width="480" height="270" fill="#dfe6ff"/>
+  <rect width="480" height="270" fill="url(#dots)"/>
+  <path d="M60 40h28v120a14 14 0 0 1-28 0z" fill="#ffffff" stroke="#0c1427" stroke-width="2.5"/><path d="M60 100h28v60a14 14 0 0 1-28 0z" fill="#1f45d6"/>
+  <path d="M74 176v34h230" fill="none" stroke="#0c1427" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M110 40h28v120a14 14 0 0 1-28 0z" fill="#ffffff" stroke="#0c1427" stroke-width="2.5"/><path d="M110 86h28v60a14 14 0 0 1-28 0z" fill="#b83218"/>
+  <path d="M124 176v34h180" fill="none" stroke="#0c1427" stroke-width="2" stroke-dasharray="4 4"/>
+  <path d="M160 40h28v120a14 14 0 0 1-28 0z" fill="#ffffff" stroke="#0c1427" stroke-width="2.5"/><path d="M160 72h28v60a14 14 0 0 1-28 0z" fill="#186b48"/>
+  <path d="M174 176v34h130" fill="none" stroke="#0c1427" stroke-width="2" stroke-dasharray="4 4"/>
+  <rect x="244" y="60" width="200" height="150" rx="14" fill="#0c1427"/>
+  <rect x="264" y="80" width="120" height="24" rx="6" fill="#2b3754"/><rect x="274" y="89" width="80" height="6" rx="3" fill="#8fb0ff"/>
+  <circle cx="414" cy="92" r="11" fill="#186b48"/>
+  <rect x="264" y="120" width="120" height="24" rx="6" fill="#2b3754"/><rect x="274" y="129" width="60" height="6" rx="3" fill="#8fb0ff"/>
+  <circle cx="414" cy="132" r="11" fill="#186b48"/>
+  <rect x="264" y="160" width="120" height="24" rx="6" fill="#2b3754"/><rect x="274" y="169" width="90" height="6" rx="3" fill="#8fb0ff"/>
+  <circle cx="414" cy="172" r="11" fill="#ffcf3f"/>
+
+</svg>

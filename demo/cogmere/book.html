@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Arrange a bicycle repair drop-off — Cogmere Bicycle Workshop</title>
+    <meta
+      name="description"
+      content="Choose a rolling opening-day drop-off window and mechanic, review your bicycle repair request and prepare an email to the Cogmere workshop."
+    />
+    <meta name="theme-color" content="#1747d1" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Cogmere Bicycle Workshop" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Arrange a bicycle repair drop-off — Cogmere Bicycle Workshop" />
+    <meta
+      property="og:description"
+      content="Choose a rolling opening-day drop-off window and mechanic, review your bicycle repair request and prepare an email to the Cogmere workshop."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@500;600;700;900&amp;family=Spline+Sans:wght@400..700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body data-page="book" class="flex min-h-screen flex-col">
+    <a class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 z-50 bg-acid p-3 font-bold" href="#main"
+      >Skip to content</a
+    >
+    <header class="border-b border-ink bg-paper">
+      <div class="bg-ink text-white">
+        <div class="wrap flex min-h-9 items-center justify-between gap-3 text-xs">
+          <p>Independent bicycle workshop · Chico</p>
+          <a class="hidden sm:inline underline underline-offset-4" href="tel:+15305550174">(530) 555-0174</a>
+          <p>Tue–Sat / 9am–5:30pm</p>
+        </div>
+      </div>
+      <div class="wrap flex min-h-24 items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center gap-3"
+          ><svg viewBox="0 0 40 40" class="size-10" aria-hidden="true">
+            <rect width="40" height="40" fill="#1747d1" />
+            <path d="M32 10H12v20h20v-7h-6v2h-7V16h7v2h6Z" fill="#e8f65b" /></svg
+          ><span class="font-display text-3xl font-black tracking-tight"
+            >COGMERE<span class="block text-[9px] font-medium tracking-[.2em]">BICYCLE WORKSHOP</span></span
+          ></a
+        >
+        <nav aria-label="Main" class="hidden lg:block">
+          <ul class="flex gap-1">
+            <li><a class="nav-link" href="services.html">Repairs</a></li>
+            <li><a class="nav-link" href="estimate.html">Estimate</a></li>
+            <li><a class="nav-link" href="workshop.html">Workshop</a></li>
+            <li><a class="nav-link" href="journal.html">Ride notes</a></li>
+            <li><a class="nav-link" href="visit.html">Visit</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a class="btn btn-small hidden sm:inline-flex" href="book.html"
+            >Find a repair slot
+            <svg
+              viewBox="0 0 24 24"
+              class="size-5 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M4 12h16m-7-7 7 7-7 7" /></svg></a
+          ><button
+            class="border border-ink p-3 lg:hidden"
+            id="menu-toggle"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              class="size-5"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" aria-label="Mobile" class="wrap pb-6 lg:hidden" hidden>
+        <ul class="grid grid-cols-2 gap-2">
+          <li><a class="nav-link" href="services.html">Repairs</a></li>
+          <li><a class="nav-link" href="estimate.html">Estimate</a></li>
+          <li><a class="nav-link" href="workshop.html">Workshop</a></li>
+          <li><a class="nav-link" href="journal.html">Ride notes</a></li>
+          <li><a class="nav-link" href="visit.html">Visit</a></li>
+        </ul>
+        <a class="btn mt-4 w-full" href="book.html">Find a repair slot</a>
+      </nav>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="border-b border-ink bg-mist">
+        <div class="wrap grid items-end gap-8 pt-10 md:grid-cols-[1.1fr_1fr] md:pt-14">
+          <div class="md:pb-14">
+            <div>
+              <p class="eyebrow text-blue">Drop-off booking</p>
+              <h1 class="mt-5 text-[clamp(2.5rem,5.4vw,4.75rem)] font-black leading-[1.02] tracking-tight">
+                A place on<br />the repair stand.
+              </h1>
+              <p class="mt-6 max-w-xl text-lg leading-relaxed text-muted">
+                Choose a drop-off conversation with a mechanic. We inspect the bike, agree on the work and discuss
+                pickup time together.
+              </p>
+            </div>
+          </div>
+          <img
+            src="assets/img/handover-desk.svg"
+            alt=""
+            class="block w-full border-x border-t border-ink"
+            width="560"
+            height="420"
+          />
+        </div>
+      </section>
+      <section class="wrap grid items-start gap-10 py-12 lg:grid-cols-[1.4fr_1fr]">
+        <div>
+          <form data-booking-form novalidate>
+            <fieldset>
+              <legend class="text-2xl font-bold">01 / Choose your drop-off</legend>
+              <p class="mt-3 text-muted">
+                The next ten opening days, in Pacific time. Drop-off windows allow 20 minutes to discuss the bike;
+                they are not repair completion times.
+              </p>
+              <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                <div>
+                  <label for="book-date" class="label">Opening day</label
+                  ><select
+                    class="field"
+                    id="book-date"
+                    name="date"
+                    aria-describedby="book-date-error"
+                    data-book-date
+                  ></select>
+                  <p id="book-date-error" class="error" data-book-error="date"></p>
+                </div>
+                <div>
+                  <label for="book-mechanic" class="label">Mechanic</label
+                  ><select
+                    class="field"
+                    id="book-mechanic"
+                    name="mechanic"
+                    aria-describedby="book-mechanic-error"
+                    data-book-mechanic
+                  >
+                    <option value="any">First suitable mechanic</option>
+                  </select>
+                  <p id="book-mechanic-error" class="error" data-book-error="mechanic"></p>
+                </div>
+              </div>
+              <div class="mt-5">
+                <p id="slot-label" class="label">Drop-off time</p>
+                <div
+                  data-book-slots
+                  class="grid grid-cols-2 gap-3 sm:grid-cols-3"
+                  role="group"
+                  aria-labelledby="slot-label"
+                  aria-describedby="book-slot-error"
+                ></div>
+                <input type="hidden" name="slot" data-book-slot />
+                <p id="book-slot-error" class="error" data-book-error="slot"></p>
+              </div>
+            </fieldset>
+            <fieldset class="mt-9 border-t border-line pt-8">
+              <legend class="text-2xl font-bold">02 / You and your bike</legend>
+              <div class="mt-5 grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label for="book-name" class="label">Your name</label
+                  ><input
+                    class="field"
+                    id="book-name"
+                    name="name"
+                    autocomplete="name"
+                    required
+                    maxlength="80"
+                    aria-describedby="book-name-error"
+                  />
+                  <p class="error" id="book-name-error" data-book-error="name"></p>
+                </div>
+                <div>
+                  <label for="book-email" class="label">Email address</label
+                  ><input
+                    class="field"
+                    id="book-email"
+                    type="email"
+                    name="email"
+                    autocomplete="email"
+                    required
+                    maxlength="150"
+                    aria-describedby="book-email-error"
+                  />
+                  <p class="error" id="book-email-error" data-book-error="email"></p>
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="book-bike" class="label">Bike make / model or a short description</label
+                  ><input
+                    class="field"
+                    id="book-bike"
+                    name="bike"
+                    required
+                    maxlength="120"
+                    placeholder="For example: blue steel hybrid, rim brakes"
+                    aria-describedby="book-bike-error"
+                  />
+                  <p class="error" id="book-bike-error" data-book-error="bike"></p>
+                </div>
+                <div class="sm:col-span-2">
+                  <label for="book-notes" class="label">What have you noticed? (optional)</label
+                  ><textarea class="field min-h-28" id="book-notes" name="notes" maxlength="1000" rows="4"></textarea>
+                </div>
+              </div>
+            </fieldset>
+            <p class="mt-6 text-sm text-muted">
+              We hold the time for you and confirm by email within a business day. No payment is taken until the work is
+              done and you have agreed on the price.
+            </p>
+            <button class="btn mt-5" type="submit">Book drop-off</button>
+          </form>
+          <section
+            data-book-done
+            class="border-2 border-ink bg-white"
+            tabindex="-1"
+            aria-labelledby="book-done-title"
+            hidden
+          >
+            <div class="border-b-2 border-ink bg-acid p-6 sm:p-8">
+              <p class="eyebrow">Drop-off booked</p>
+              <h2 id="book-done-title" class="mt-3 text-3xl font-bold tracking-tight">
+                Booked for <span data-done-day></span>
+              </h2>
+              <p class="mt-3 font-semibold">Reference <span data-done-ref></span></p>
+            </div>
+            <div class="p-6 sm:p-8">
+              <dl data-book-summary class="grid gap-5 text-sm sm:grid-cols-2"></dl>
+              <h3 class="mt-8 text-xl font-bold">What happens next</h3>
+              <ol class="mt-4 space-y-4 text-sm leading-relaxed">
+                <li class="flex gap-3">
+                  <span class="font-display font-bold text-blue">01</span
+                  ><span data-done-step-confirm>We email you within a business day to confirm the time.</span>
+                </li>
+                <li class="flex gap-3">
+                  <span class="font-display font-bold text-blue">02</span
+                  ><span data-done-step-drop
+                    >At drop-off we look over the bike with you and write the price on your job ticket. Nothing starts
+                    until you agree to it.</span
+                  >
+                </li>
+                <li class="flex gap-3">
+                  <span class="font-display font-bold text-blue">03</span
+                  ><span
+                    >We call when the bike is ready. Most repairs are ready the same or next opening day; we call first
+                    if a part has to be ordered.</span
+                  >
+                </li>
+              </ol>
+              <p class="mt-6 border-t border-line pt-5 text-sm text-muted">
+                Need to change the time? Call
+                <a class="text-link text-ink" href="tel:+15305550174">(530) 555-0174</a> and quote your reference.
+              </p>
+              <button class="btn btn-line mt-6" type="button" data-book-again>Book another bike</button>
+            </div>
+          </section>
+        </div>
+        <aside class="border border-line bg-white p-7">
+          <p class="eyebrow text-blue">BEFORE YOU ARRIVE</p>
+          <h2 class="mt-4 text-2xl font-bold">Bike. Key. A little context.</h2>
+          <ul class="mt-5 space-y-4 text-muted">
+            <li>Bring the bike reasonably clean, with lights and bags removed.</li>
+            <li>Bring an e-bike battery key if access is needed. We work on mechanical parts only.</li>
+            <li>Tell us about any recent crash, loose part or change in handling.</li>
+            <li>If riding feels unsafe, walk the bike or arrange transport.</li>
+          </ul>
+          <div class="mt-7 border-t border-line pt-6">
+            <h3 class="font-semibold">Your repair plan</h3>
+            <div data-book-plan class="mt-3 text-sm leading-relaxed text-muted"></div>
+            <a class="text-link mt-4 inline-block" href="estimate.html">Edit your estimate</a>
+          </div>
+          <p class="mt-7 border-t border-line pt-6 text-sm text-muted">
+            Tue–Sat 9am–5:30pm<br />Closed on federal holidays.<br /><a
+              href="tel:+15305550174"
+              class="text-link mt-2 inline-block"
+              >(530) 555-0174</a
+            >
+          </p>
+        </aside>
+      </section>
+    </main>
+    <footer class="mt-auto bg-ink py-12 text-white">
+      <div class="wrap grid gap-9 md:grid-cols-[1.2fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="font-display text-4xl font-black">COGMERE /</a>
+          <p class="mt-4 max-w-xs text-sm leading-relaxed text-white/80">
+            Good bikes deserve another mile.<br />Independent repairs, clear prices and a properly explained handoff.
+          </p>
+        </div>
+        <div>
+          <h2 class="eyebrow text-acid">Find the workshop</h2>
+          <p class="mt-4 text-sm leading-relaxed">
+            Shop 7, Flume Street Yard<br />Chico, CA 95928<br />Tuesday–Saturday, 9am–5:30pm
+          </p>
+          <a href="visit.html" class="mt-4 inline-block text-link">Plan your visit</a>
+        </div>
+        <div>
+          <h2 class="eyebrow text-acid">Keep rolling</h2>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a class="underline underline-offset-4" href="prep.html">Your pre-ride checklist</a></li>
+            <li><a class="underline underline-offset-4" href="journal.html">Workshop ride notes</a></li>
+            <li>
+              <a class="underline underline-offset-4" href="mailto:hello@cogmere.example">hello@cogmere.example</a>
+            </li>
+            <li><a class="underline underline-offset-4" href="tel:+15305550174">(530) 555-0174</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap mt-10 flex flex-wrap justify-between gap-3 border-t border-white/25 pt-5 text-xs text-white/70">
+        <p>© <span data-year></span> Cogmere Bicycle Workshop.</p>
+        <p>Cogmere is a fictional business.</p>
+      </div>
+    </footer>
+    <p
+      id="notice"
+      role="status"
+      aria-live="polite"
+      class="fixed bottom-5 right-5 left-5 z-40 mx-auto max-w-xl border border-ink bg-acid px-5 py-4 text-sm font-semibold shadow-lg"
+      hidden
+    ></p>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Class schedule — Keel Athletic Club</title>
+  <meta name="description" content="This week&#x27;s Keel class schedule. Filter by class, intensity and coach, and book your spot in seconds.">
+  <meta name="theme-color" content="#0a0b0c">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Keel Athletic Club">
+  <meta property="og:title" content="Class schedule — Keel Athletic Club">
+  <meta property="og:description" content="This week&#x27;s Keel class schedule. Filter by class, intensity and coach, and book your spot in seconds.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400..800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="min-h-screen font-sans antialiased" data-page="classes">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header fixed inset-x-0 top-0 z-50">
+    <div class="container-x flex h-[4.5rem] items-center gap-8">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Keel Athletic Club, home">
+        <svg class="size-8 shrink-0" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#c8ff2e"/><path d="M9 7h5v6.5L19.5 7h6L18 15.5 26 25h-6l-6-7.2V25H9Z" fill="#0a0b0c"/></svg><span class="display text-2xl tracking-wide">Keel</span>
+      </a>
+      <nav aria-label="Main" class="ml-auto hidden lg:block">
+        <ul class="flex items-center gap-9"><li><a href="classes.html" class="nav-link" aria-current="page">Classes</a></li><li><a href="trainers.html" class="nav-link">Trainers</a></li><li><a href="membership.html" class="nav-link">Membership</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+      </nav>
+      <div class="ml-auto flex items-center gap-3 lg:ml-0">
+        <a href="trial.html" class="btn btn-primary btn-sm hidden sm:inline-flex">Free trial</a>
+        <button type="button" class="grid size-11 place-items-center rounded-md border border-line lg:hidden" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path data-icon-open d="M4 7h16M4 12h16M4 17h16"/><path data-icon-close hidden d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="fixed inset-x-0 top-[4.5rem] bottom-0 overflow-y-auto bg-bg lg:hidden" hidden>
+      <nav aria-label="Mobile" class="container-x pt-4 pb-10">
+        <ul><li><a href="classes.html" class="display flex items-center justify-between border-b border-line py-4 text-4xl text-volt" aria-current="page">Classes<span class="font-sans text-sm text-muted">01</span></a></li><li><a href="trainers.html" class="display flex items-center justify-between border-b border-line py-4 text-4xl">Trainers<span class="font-sans text-sm text-muted">02</span></a></li><li><a href="membership.html" class="display flex items-center justify-between border-b border-line py-4 text-4xl">Membership<span class="font-sans text-sm text-muted">03</span></a></li><li><a href="contact.html" class="display flex items-center justify-between border-b border-line py-4 text-4xl">Contact<span class="font-sans text-sm text-muted">04</span></a></li></ul>
+        <a href="trial.html" class="btn btn-primary btn-lg mt-8 w-full">Claim your free week</a>
+        <p class="mt-6 text-sm text-muted">Harbor &amp; Northgate · Open from 5:30am</p>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="relative overflow-hidden border-b border-line pt-36 pb-16 md:pt-44 md:pb-20">
+      <div class="grid-lines pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_70%_80%_at_70%_0%,#000,transparent)]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -top-40 right-0 h-[30rem] w-[30rem] rounded-full bg-volt/10 blur-3xl" aria-hidden="true"></div>
+      <div class="container-x relative">
+        <p class="eyebrow">Schedule</p>
+        <h1 class="display mt-5 max-w-4xl text-[clamp(3rem,8vw,6.5rem)]">This week at <span class="text-volt">Keel</span></h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">Filter by class, intensity or coach, then tap a class to book your spot. Bookings open seven days ahead and you can cancel up to two hours before.</p>
+        
+      </div>
+    </section>
+
+    <section class="container-x pt-12" aria-labelledby="tt-title">
+      <h2 id="tt-title" class="sr-only">Weekly schedule</h2>
+      <div class="card grid gap-4 p-5 md:grid-cols-[repeat(3,minmax(0,1fr))_auto] md:items-end">
+        <div><label class="label" for="f-type">Class</label><select id="f-type" class="field" data-filter="type"><option value="">All classes</option><option value="strength">Strength Lab</option><option value="ignite">Ignite HIIT</option><option value="ride">Keel Ride</option><option value="box">Box &amp; Burn</option><option value="flow">Mobility Flow</option><option value="engine">Engine Room</option></select></div>
+        <div><label class="label" for="f-int">Intensity</label><select id="f-int" class="field" data-filter="intensity"><option value="">Any intensity</option><option value="1">Low</option><option value="2">Medium</option><option value="3">High</option></select></div>
+        <div><label class="label" for="f-coach">Coach</label><select id="f-coach" class="field" data-filter="coach"><option value="">All coaches</option><option value="maya">Maya Torres</option><option value="dev">Dev Okonjo</option><option value="jonah">Jonah Reed</option><option value="lena">Lena Brandt</option><option value="sami">Sami Haddad</option><option value="chloe">Chloe Park</option></select></div>
+        <button type="button" class="btn btn-outline" data-filter-reset>Reset</button>
+      </div>
+      <div class="mt-6 flex flex-wrap items-center justify-between gap-4 text-sm text-muted">
+        <p aria-live="polite" data-tt-count>36 classes this week</p>
+        <p class="flex flex-wrap gap-4"><span class="inline-flex items-center gap-2"><span class="inline-flex items-center gap-2"><span class="meter" data-level="1" role="img" aria-label="Intensity: Low"><i></i><i></i><i></i></span></span> Low</span><span class="inline-flex items-center gap-2"><span class="inline-flex items-center gap-2"><span class="meter" data-level="2" role="img" aria-label="Intensity: Medium"><i></i><i></i><i></i></span></span> Medium</span><span class="inline-flex items-center gap-2"><span class="inline-flex items-center gap-2"><span class="meter" data-level="3" role="img" aria-label="Intensity: High"><i></i><i></i><i></i></span></span> High</span><span class="inline-flex items-center gap-2"><span class="size-2.5 rounded-full bg-volt"></span>Booked by you</span></p>
+      </div>
+
+      <div class="mt-6 flex gap-2 overflow-x-auto pb-2 lg:hidden" role="tablist" aria-label="Day of the week"><button type="button" role="tab" class="chip shrink-0" id="tab-0" aria-controls="day-0" aria-selected="false" data-day-tab="0">Mon</button><button type="button" role="tab" class="chip shrink-0" id="tab-1" aria-controls="day-1" aria-selected="false" data-day-tab="1">Tue</button><button type="button" role="tab" class="chip shrink-0" id="tab-2" aria-controls="day-2" aria-selected="false" data-day-tab="2">Wed</button><button type="button" role="tab" class="chip shrink-0" id="tab-3" aria-controls="day-3" aria-selected="false" data-day-tab="3">Thu</button><button type="button" role="tab" class="chip shrink-0" id="tab-4" aria-controls="day-4" aria-selected="false" data-day-tab="4">Fri</button><button type="button" role="tab" class="chip shrink-0" id="tab-5" aria-controls="day-5" aria-selected="false" data-day-tab="5">Sat</button><button type="button" role="tab" class="chip shrink-0" id="tab-6" aria-controls="day-6" aria-selected="false" data-day-tab="6">Sun</button></div>
+      <div class="mt-4 grid gap-4 lg:mt-6 lg:grid-cols-7" id="timetable" data-timetable>
+        <noscript><div class="grid gap-6 sm:grid-cols-2 lg:col-span-7 lg:grid-cols-4"><div><h3 class="font-bold">Monday</h3><ul class="mt-2 grid gap-1 text-sm text-muted"><li>6am · Ignite HIIT · Dev Okonjo</li><li>7:15am · Strength Lab · Maya Torres</li><li>12:15pm · Mobility Flow · Lena Brandt</li><li>5:30pm · Box &amp; Burn · Jonah Reed</li><li>6:30pm · Strength Lab · Chloe Park</li><li>7:30pm · Keel Ride · Sami Haddad</li></ul></div><div><h3 class="font-bold">Tuesday</h3><ul class="mt-2 grid gap-1 text-sm text-muted"><li>6am · Keel Ride · Sami Haddad</li><li>7:15am · Engine Room · Dev Okonjo</li><li>12:15pm · Strength Lab · Maya Torres</li><li>5:30pm · Ignite HIIT · Dev Okonjo</li><li>6:30pm · Box &amp; Burn · Jonah Reed</li><li>7:30pm · Mobility Flow · Lena Brandt</li></ul></div><div><h3 class="font-bold">Wednesday</h3><ul class="mt-2 grid gap-1 text-sm text-muted"><li>6am · Strength Lab · Chloe Park</li><li>7:15am · Ignite HIIT · Dev Okonjo</li><li>12:15pm · Keel Ride · Sami Haddad</li><li>5:30pm · Engine Room · Dev Okonjo</li><li>6:30pm · Strength Lab · Maya Torres</li><li>7:30pm · Mobility Flow · Lena Brandt</li></ul></div><div><h3 class="font-bold">Thursday</h3><ul class="mt-2 grid gap-1 text-sm text-muted"><li>6am · Box &amp; Burn · Jonah Reed</li><li>7:15am · Keel Ride · Sami Haddad</li><li>12:15pm · Mobility Flow · Lena Brandt</li><li>5:30pm · Strength Lab · Maya Torres</li><li>6:30pm · Ignite HIIT · Dev Okonjo</li><li>7:30pm · Box &amp; Burn · Jonah Reed</li></ul></div><div><h3 class="font-bold">Friday</h3><ul class="mt-2 grid gap-1 text-sm text-muted"><li>6am · Ignite HIIT · Dev Okonjo</li><li>7:15am · Strength Lab · Chloe Park</li><li>12:15pm · Engine Room · Dev Okonjo</li><li>5:30pm · Keel Ride · Sami Haddad</li><li>6:30pm · Box &amp; Burn · Jonah Reed</li></ul></div><div><h3 class="font-bold">Saturday</h3><ul class="mt-2 grid gap-1 text-sm text-muted"><li>8am · Strength Lab · Maya Torres</li><li>9am · Ignite HIIT · Dev Okonjo</li><li>10am · Box &amp; Burn · Jonah Reed</li><li>11am · Mobility Flow · Lena Brandt</li></ul></div><div><h3 class="font-bold">Sunday</h3><ul class="mt-2 grid gap-1 text-sm text-muted"><li>9am · Keel Ride · Sami Haddad</li><li>10am · Mobility Flow · Lena Brandt</li><li>11am · Engine Room · Chloe Park</li></ul></div></div></noscript>
+      </div>
+      <p class="mt-8 text-sm text-muted">Bookings in this template are stored in your browser only. <button type="button" class="font-semibold text-volt underline" data-clear-bookings>Clear my bookings</button></p>
+    </section>
+
+    <dialog class="modal" id="booking-modal" aria-labelledby="bm-title">
+      <form method="dialog" class="p-6 sm:p-8" data-booking-form>
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <p class="text-xs font-bold tracking-widest text-volt uppercase" data-bm="when">Monday · 6am</p>
+            <h2 id="bm-title" class="display mt-2 text-4xl" data-bm="name">Class</h2>
+          </div>
+          <button type="button" class="grid size-10 shrink-0 place-items-center rounded-md border border-line hover:border-ink" data-bm-close aria-label="Close">
+            <svg class="size-4" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg>
+          </button>
+        </div>
+        <dl class="mt-6 grid grid-cols-2 gap-4 text-sm">
+          <div><dt class="text-muted">Coach</dt><dd class="mt-0.5 font-semibold" data-bm="coach"></dd></div>
+          <div><dt class="text-muted">Location</dt><dd class="mt-0.5 font-semibold" data-bm="loc"></dd></div>
+          <div><dt class="text-muted">Duration</dt><dd class="mt-0.5 font-semibold" data-bm="duration"></dd></div>
+          <div><dt class="text-muted">Spots left</dt><dd class="mt-0.5 font-semibold" data-bm="spots"></dd></div>
+        </dl>
+        <p class="mt-5 text-sm leading-relaxed text-muted" data-bm="short"></p>
+        <p class="mt-5 rounded-lg border border-line bg-bg p-4 text-sm" data-bm="status" role="status"></p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <button type="button" class="btn btn-primary flex-1" data-bm-action>Book my spot</button>
+          <a class="btn btn-outline" href="class.html" data-bm="link">Class details</a>
+        </div>
+      </form>
+    </dialog>
+  </main>
+
+  <footer class="mt-28 border-t border-line">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.4fr]">
+      <div>
+        <a href="index.html" class="flex items-center gap-2.5"><svg class="size-8 shrink-0" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#c8ff2e"/><path d="M9 7h5v6.5L19.5 7h6L18 15.5 26 25h-6l-6-7.2V25H9Z" fill="#0a0b0c"/></svg><span class="display text-2xl">Keel</span></a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-muted">Coached strength, conditioning and recovery for people who want to train with purpose. Two clubs, one community.</p>
+        <ul class="mt-6 grid gap-3 text-sm"><li><span class="block font-semibold">Keel Harbor</span><span class="text-muted" data-open-status="harbor">Mon–Fri 5:30am–10pm</span></li><li><span class="block font-semibold">Keel Northgate</span><span class="text-muted" data-open-status="northgate">Mon–Fri 6am–9pm</span></li></ul>
+      </div>
+      <div>
+        <h2 class="text-xs font-bold tracking-[.2em] text-muted uppercase">Train</h2>
+        <ul class="mt-4 grid gap-2.5 text-sm">
+          <li><a class="hover:text-volt" href="classes.html">Schedule</a></li>
+          <li><a class="hover:text-volt" href="class.html?type=strength">Strength Lab</a></li>
+          <li><a class="hover:text-volt" href="class.html?type=ignite">Ignite HIIT</a></li>
+          <li><a class="hover:text-volt" href="class.html?type=box">Box &amp; Burn</a></li>
+          <li><a class="hover:text-volt" href="membership.html#calculator">BMI &amp; calorie calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-xs font-bold tracking-[.2em] text-muted uppercase">Club</h2>
+        <ul class="mt-4 grid gap-2.5 text-sm">
+          <li><a class="hover:text-volt" href="trainers.html">Coaches</a></li>
+          <li><a class="hover:text-volt" href="membership.html">Membership</a></li>
+          <li><a class="hover:text-volt" href="trial.html">Free trial</a></li>
+          <li><a class="hover:text-volt" href="contact.html">Locations &amp; contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-xs font-bold tracking-[.2em] text-muted uppercase">Weekly programming, in your inbox</h2>
+        <form class="mt-4" novalidate data-validate>
+          <!-- Demo form: connect it to your email provider in assets/js/main.js (see onValid). -->
+          <div class="flex gap-2">
+            <div class="min-w-0 flex-1">
+              <label for="news-email" class="sr-only">Email address</label>
+              <input id="news-email" name="email" type="email" class="field" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+            <button class="btn btn-primary" type="submit">Join</button>
+          </div>
+          <p class="mt-3 hidden text-sm text-volt" data-success role="status">You're on the list. Look out for a confirmation email; once you click the link, our weekly programming lands in your inbox.</p>
+        </form>
+        <ul class="mt-6 flex gap-3" aria-label="Social media">
+          <li><a href="#" class="grid size-10 place-items-center rounded-md border border-line hover:border-volt hover:text-volt" aria-label="Instagram"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a></li>
+          <li><a href="#" class="grid size-10 place-items-center rounded-md border border-line hover:border-volt hover:text-volt" aria-label="YouTube"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor"/></svg></a></li>
+          <li><a href="#" class="grid size-10 place-items-center rounded-md border border-line hover:border-volt hover:text-volt" aria-label="Strava"><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 2 4 14h4l2-4 2 4h4Zm5 12-2 4-2-4H9l4 8 4-8Z"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-x flex flex-wrap justify-between gap-3 border-t border-line py-6 text-xs text-muted">
+      <p>© <span data-year>2026</span> Keel Athletic Club. All rights reserved.</p>
+      <p><a class="hover:text-ink" href="#">Privacy</a> · <a class="hover:text-ink" href="#">Terms</a> · <a class="hover:text-ink" href="#">Accessibility</a></p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

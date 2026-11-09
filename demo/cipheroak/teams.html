@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Multisig signer planner for teams — Cipheroak</title>
+<meta name="description" content="Plan signers, a threshold and where every key lives. See how many keys you can lose, how many a thief would need and what one bad day at one site would do." />
+<meta name="theme-color" content="#f4ece0" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Cipheroak" />
+<meta property="og:title" content="Multisig signer planner for teams — Cipheroak" />
+<meta property="og:description" content="Plan signers, a threshold and where every key lives. See how many keys you can lose, how many a thief would need and what one bad day at one site would do." />
+<meta property="og:image" content="assets/img/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="assets/img/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,500;0,600;0,700;1,500&amp;family=Radio+Canada:wght@400;500;600&amp;family=Sometype+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<script>document.documentElement.classList.add("js");</script>
+<script src="assets/js/main.js" defer></script>
+</head>
+<body data-page="teams" class="flex min-h-screen flex-col">
+
+<a href="#main" class="sr-only z-50 rounded-full bg-bark px-5 py-3 text-parchment focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+<div class="bg-bark text-caliche">
+  <div class="wrap flex min-h-10 items-center justify-between gap-4 py-2 text-xs">
+    <p class="flex items-center gap-2">
+      <svg viewBox="0 0 20 20" class="size-4 shrink-0 text-ochre" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="9" width="12" height="8" rx="2" /><path d="M7 9V6.5a3 3 0 0 1 6 0V9" /></svg>
+      <span>We will never ask for your recovery phrase. Not by email, phone or in person.</span>
+    </p>
+    <p class="hidden md:block" data-studio-status>Studio on Galisteo Street, Santa Fe</p>
+  </div>
+</div>
+<header id="site-header" class="sticky top-0 z-40 border-b border-line bg-caliche/95 backdrop-blur">
+  <div class="wrap flex min-h-20 items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-3" aria-label="Cipheroak home"><svg viewBox="0 0 40 40" class="size-9 shrink-0" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1f5a52" /><path d="M20 5.5c8 0 14.5 6.5 14.5 14.5" stroke="#f1dcae" stroke-width="1.6" stroke-linecap="round" /><circle cx="19" cy="21" r="11" stroke="#f4ece0" stroke-width="1.4" stroke-dasharray="40 6" /><circle cx="19.5" cy="20.5" r="6.5" stroke="#f4ece0" stroke-width="1.4" /><circle cx="20" cy="18.6" r="2.2" fill="#c98d2e" /><path d="M18.9 20.2h2.2l.7 4.6h-3.6z" fill="#c98d2e" /></svg><span class="font-display text-2xl font-semibold tracking-tight">Cipheroak</span></a>
+    <nav class="hidden xl:block" aria-label="Main">
+      <ul class="flex items-center gap-1">
+<li><a class="nav-link" href="assessment.html">Assessment</a></li>
+<li><a class="nav-link" href="guides.html">Guides</a></li>
+<li><a class="nav-link" href="teams.html" aria-current="page">For teams</a></li>
+<li><a class="nav-link" href="pricing.html">Pricing</a></li>
+<li><a class="nav-link" href="notes.html">Field notes</a></li>
+<li><a class="nav-link" href="company.html">Company</a></li>
+      </ul>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="contact.html" class="btn btn-sm hidden sm:inline-flex">Book a review <svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></a>
+      <button id="menu-toggle" type="button" class="inline-flex size-11 items-center justify-center rounded-full border-[1.5px] border-bark xl:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg data-icon-open viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" /></svg>
+        <svg data-icon-close viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-menu" class="wrap border-t border-line pt-3 pb-6 xl:hidden" aria-label="Mobile" hidden>
+    <ul class="grid gap-1 sm:grid-cols-2">
+<li><a class="nav-link text-base" href="assessment.html">Assessment</a></li>
+<li><a class="nav-link text-base" href="guides.html">Guides</a></li>
+<li><a class="nav-link text-base" href="teams.html" aria-current="page">For teams</a></li>
+<li><a class="nav-link text-base" href="pricing.html">Pricing</a></li>
+<li><a class="nav-link text-base" href="notes.html">Field notes</a></li>
+<li><a class="nav-link text-base" href="company.html">Company</a></li>
+    </ul>
+    <a href="contact.html" class="btn mt-4 w-full sm:w-auto">Book a security review <svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></a>
+  </nav>
+</header>
+<main id="main" class="flex-1">
+<section class="border-b border-line bg-adobe">
+  <div class="wrap grid items-end gap-10 pt-12 lg:grid-cols-[1fr_22rem]">
+    <div class="reveal pb-12">
+      <p class="eyebrow text-juniper">For teams, families and anyone sharing a vault</p>
+      <h1 class="mt-5 font-display text-[clamp(2.4rem,5vw,4.2rem)] leading-[1.05] font-semibold">A shared vault needs a shared plan.</h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-bark-soft">Choose how many signers you have, how many must agree, and where every key lives. The planner shows what you could lose, what a thief would need, and what one bad day at one place would do.</p>
+    </div>
+    <div class="reveal arch mx-auto hidden w-full max-w-[22rem] border border-b-0 border-line bg-caliche sm:block">
+      <img src="assets/img/hero-teams.svg" width="352" height="300" class="block h-auto w-full" alt="Five keys hanging from a ring shaped like the growth rings of an oak, three of them highlighted." />
+    </div>
+  </div>
+</section>
+
+<section class="wrap py-12" aria-labelledby="planner-title">
+  <div class="flex flex-wrap items-end justify-between gap-4">
+    <div>
+      <p class="eyebrow text-juniper">Signer planner</p>
+      <h2 id="planner-title" class="mt-3 font-display text-3xl font-semibold sm:text-4xl">Plan your keys</h2>
+    </div>
+    <p class="max-w-md text-sm leading-relaxed text-bark-soft">Your plan is kept in this browser so you can come back to it. Use roles, not anything secret.</p>
+  </div>
+
+  <div class="mt-8 grid gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:items-start">
+    <div data-planner class="min-w-0 rounded-3xl border border-line bg-parchment p-5 sm:p-7">
+      <p class="label">Start from an example</p>
+      <div role="group" aria-label="Example plans" class="mt-3 flex flex-wrap gap-2" data-presets></div>
+
+      <div class="mt-7 flex flex-wrap items-center justify-between gap-4 rounded-2xl bg-caliche p-4">
+        <div>
+          <p class="font-semibold" id="threshold-label">Keys needed to sign</p>
+          <p class="text-sm text-bark-soft">Out of <span data-key-total>3 keys</span></p>
+        </div>
+        <div class="flex items-center gap-3" role="group" aria-labelledby="threshold-label">
+          <button type="button" class="inline-flex size-11 items-center justify-center rounded-full border-[1.5px] border-bark text-xl disabled:opacity-40" data-threshold-down aria-label="One fewer key needed">−</button>
+          <output class="w-10 text-center font-display text-3xl font-semibold" data-threshold aria-live="polite">2</output>
+          <button type="button" class="inline-flex size-11 items-center justify-center rounded-full border-[1.5px] border-bark text-xl disabled:opacity-40" data-threshold-up aria-label="One more key needed">+</button>
+        </div>
+      </div>
+
+      <ul class="mt-6 grid gap-3" data-keys aria-label="Keys"></ul>
+      <button type="button" class="btn btn-ghost btn-sm mt-4" data-add-key>Add a key</button>
+    </div>
+
+    <div class="grid gap-6 lg:sticky lg:top-28">
+      <div class="rounded-3xl bg-bark p-6 text-caliche sm:p-7" aria-live="polite">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <h3 class="font-display text-xl font-semibold">Resilience</h3>
+          <p data-verdict class="rounded-full bg-juniper px-3 py-1 text-sm font-semibold text-parchment">Mostly resilient</p>
+        </div>
+        <div class="mt-5 rounded-2xl bg-parchment p-4 text-bark"><div class="mx-auto flex justify-center" data-ring></div></div>
+        <dl class="mt-5 grid grid-cols-2 gap-3">
+          <div class="rounded-2xl border border-caliche/25 p-4"><dt class="sr-only">Loss tolerance</dt><dd><span class="block font-display text-4xl font-semibold text-ochre" data-lose>1</span><span class="text-sm" data-lose-label>key can be lost</span></dd></div>
+          <div class="rounded-2xl border border-caliche/25 p-4"><dt class="sr-only">Theft tolerance</dt><dd><span class="block font-display text-4xl font-semibold text-ochre" data-steal>1</span><span class="text-sm" data-steal-label>key can be stolen safely</span></dd></div>
+        </dl>
+        <p class="mt-4 text-sm leading-relaxed text-caliche/85" data-verdict-text></p>
+        <ul class="mt-4 grid gap-1.5 text-sm text-caliche/85" data-legend aria-label="Where the keys are"></ul>
+      </div>
+      <div class="rounded-3xl border border-line bg-parchment p-6 sm:p-7">
+        <h3 class="font-display text-xl font-semibold">Five bad days</h3>
+        <ul class="mt-2" data-checks></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="border-y border-line bg-adobe/60" aria-labelledby="explain-title">
+  <div class="wrap py-16">
+    <h2 id="explain-title" class="max-w-2xl font-display text-3xl font-semibold sm:text-4xl">How to read the numbers</h2>
+    <div class="mt-10 grid gap-6 md:grid-cols-3">
+      <div class="reveal rounded-3xl border border-line bg-parchment p-6">
+        <p class="font-mono text-sm text-juniper">Keys − threshold</p>
+        <h3 class="mt-3 font-display text-xl font-semibold">How many you can lose</h3>
+        <p class="mt-2 text-sm leading-relaxed text-bark-soft">With three keys and a threshold of two, one key can be lost, broken or forgotten and the vault still opens. With two of two, none can.</p>
+      </div>
+      <div class="reveal rounded-3xl border border-line bg-parchment p-6">
+        <p class="font-mono text-sm text-juniper">Threshold − 1</p>
+        <h3 class="mt-3 font-display text-xl font-semibold">How many a thief can take</h3>
+        <p class="mt-2 text-sm leading-relaxed text-bark-soft">A thief needs as many keys as you do. With a threshold of three, two stolen keys are still useless, as long as you notice and move funds.</p>
+      </div>
+      <div class="reveal rounded-3xl border border-line bg-parchment p-6">
+        <p class="font-mono text-sm text-juniper">Places and people</p>
+        <h3 class="mt-3 font-display text-xl font-semibold">Why location matters</h3>
+        <p class="mt-2 text-sm leading-relaxed text-bark-soft">Two keys in one safe count as one place. A fire there is two losses, and a break-in is two thefts. Spread keys across buildings and people.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wrap grid gap-10 py-16 lg:grid-cols-[1fr_1fr]" aria-labelledby="team-work-title">
+  <div class="reveal">
+    <p class="eyebrow text-juniper">Team vault engagements</p>
+    <h2 id="team-work-title" class="mt-4 font-display text-3xl font-semibold sm:text-4xl">Roles before devices.</h2>
+    <p class="mt-5 max-w-lg leading-relaxed text-bark-soft">Most team losses we see are not hacks. They are a signer who left, a policy nobody wrote down, or an urgent message that skipped a step. We start there.</p>
+    <a href="pricing.html?plan=team" class="btn mt-7">Price a team vault <svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></a>
+  </div>
+  <ol class="grid gap-4">
+    <li class="reveal flex gap-4 rounded-3xl border border-line p-5"><span class="font-mono text-sm text-chile">01</span><div><h3 class="font-semibold">Policy workshop</h3><p class="mt-1 text-sm leading-relaxed text-bark-soft">Agree signers, backups for each role, a threshold, and the checks above your withdrawal limit.</p></div></li>
+    <li class="reveal flex gap-4 rounded-3xl border border-line p-5"><span class="font-mono text-sm text-chile">02</span><div><h3 class="font-semibold">Key ceremony on site</h3><p class="mt-1 text-sm leading-relaxed text-bark-soft">Every signer creates their key in the same room, with devices from two makers.</p></div></li>
+    <li class="reveal flex gap-4 rounded-3xl border border-line p-5"><span class="font-mono text-sm text-chile">03</span><div><h3 class="font-semibold">Tabletop drills</h3><p class="mt-1 text-sm leading-relaxed text-bark-soft">We walk through a lost device, an unavailable signer and a convincing fake request, without moving funds.</p></div></li>
+    <li class="reveal flex gap-4 rounded-3xl border border-line p-5"><span class="font-mono text-sm text-chile">04</span><div><h3 class="font-semibold">Quarterly check-ins</h3><p class="mt-1 text-sm leading-relaxed text-bark-soft">People, locations and backups confirmed while changes are still easy to make.</p></div></li>
+  </ol>
+</section>
+
+</main>
+
+<footer class="mt-auto bg-bark text-caliche">
+  <svg viewBox="0 0 1200 28" preserveAspectRatio="none" class="block h-5 w-full bg-caliche text-bark" fill="currentColor" aria-hidden="true"><path d="M0 28V16h90v-8h70V0h120v8h70v8h260V8h70V0h120v8h70v8h330v12z" /></svg>
+  <div class="wrap grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+    <div>
+      <a href="index.html" class="flex items-center gap-3"><svg viewBox="0 0 40 40" class="size-10 shrink-0" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1f5a52" /><path d="M20 5.5c8 0 14.5 6.5 14.5 14.5" stroke="#f1dcae" stroke-width="1.6" stroke-linecap="round" /><circle cx="19" cy="21" r="11" stroke="#f4ece0" stroke-width="1.4" stroke-dasharray="40 6" /><circle cx="19.5" cy="20.5" r="6.5" stroke="#f4ece0" stroke-width="1.4" /><circle cx="20" cy="18.6" r="2.2" fill="#c98d2e" /><path d="M18.9 20.2h2.2l.7 4.6h-3.6z" fill="#c98d2e" /></svg><span class="font-display text-3xl font-semibold">Cipheroak</span></a>
+      <p class="mt-5 max-w-xs text-sm leading-relaxed text-caliche/80">Self-custody security for households and small teams. Reviews, setups, recovery plans and key ceremonies, from a small studio in Santa Fe.</p>
+      <p class="mt-5 max-w-xs rounded-2xl border border-caliche/25 p-4 text-sm leading-relaxed">We never hold your keys, never sell devices and never give investment advice.</p>
+    </div>
+    <div>
+      <h2 class="eyebrow text-ochre">Services</h2>
+      <ul class="mt-5 space-y-3 text-sm">
+        <li><a class="underline-offset-4 hover:underline" href="pricing.html">Security reviews</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="pricing.html?plan=household">Household vaults</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="teams.html">Team vaults</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="contact.html">Book a review</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="eyebrow text-ochre">Learn</h2>
+      <ul class="mt-5 space-y-3 text-sm">
+        <li><a class="underline-offset-4 hover:underline" href="assessment.html">Readiness assessment</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="guides.html">Security guides</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="notes.html">Field notes</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="company.html">Our principles</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="eyebrow text-ochre">Visit the studio</h2>
+      <address class="mt-5 text-sm leading-relaxed not-italic">Studio 3, 418 Galisteo Street<br />Santa Fe, NM 87501</address>
+      <p class="mt-3 text-sm leading-relaxed text-caliche/80">Mon–Thu 9 AM–5 PM, Fri 9 AM–3 PM<br />Mountain Time. Key ceremonies on Saturdays by arrangement.</p>
+      <p class="mt-4 text-sm"><a class="underline underline-offset-4" href="tel:+15055550172">(505) 555-0172</a></p>
+      <p class="mt-2 text-sm"><a class="underline underline-offset-4" href="mailto:hello@cipheroak.example">hello@cipheroak.example</a></p>
+    </div>
+  </div>
+  <div class="wrap flex flex-wrap justify-between gap-3 border-t border-caliche/20 py-6 text-xs text-caliche/75">
+    <p>© <span data-year>2026</span> Cipheroak Security Studio. Security education, not financial, legal or tax advice.</p>
+    <p>Cipheroak is a fictional business.</p>
+  </div>
+</footer>
+<p id="notice" class="fixed right-4 bottom-4 left-4 z-50 mx-auto max-w-lg rounded-2xl border border-bark bg-ochre-soft px-5 py-4 text-sm shadow-lg" role="status" aria-live="polite" hidden></p>
+</body>
+</html>

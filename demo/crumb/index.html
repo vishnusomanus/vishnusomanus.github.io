@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bramble &amp; Rye — Bakery &amp; café in Saratoga Springs with order-ahead pickup</title>
+  <meta name="description" content="Sourdough, pastries and celebration cakes from a neighborhood bakery on Phila Street, Saratoga Springs. Preorder by 2pm and pick up tomorrow, or stop by the café.">
+  <meta name="theme-color" content="#fbf5ec">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bramble &amp; Rye">
+  <meta property="og:title" content="Bramble &amp; Rye — Bakery &amp; café in Saratoga Springs with order-ahead pickup">
+  <meta property="og:description" content="Sourdough, pastries and celebration cakes from a neighborhood bakery on Phila Street, Saratoga Springs. Preorder by 2pm and pick up tomorrow, or stop by the café.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&amp;family=Delicious+Handrawn&amp;family=Karla:ital,wght@0,400..800;1,400..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="home" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[80] rounded-full bg-ink px-5 py-3 text-sm font-bold text-paper focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <div class="bg-ink text-paper on-dark">
+    <div class="container-x flex min-h-10 items-center justify-center gap-x-5 py-2 text-[13px] font-semibold sm:justify-between">
+      <p class="inline-flex items-center gap-2" data-open-status>Open Tuesday to Sunday</p>
+      <p class="hidden items-center gap-2 sm:inline-flex"><svg viewBox="0 0 24 24" class="size-4 text-butter" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-cutoff>Order by 2pm for tomorrow</span></p>
+    </div>
+  </div>
+  <header id="site-header" class="sticky top-0 z-40 bg-flour/95 backdrop-blur transition-shadow duration-300">
+    <div class="container-x flex h-[4.75rem] items-center justify-between gap-4">
+      <a href="index.html" class="group inline-flex min-w-0 items-center gap-2.5 sm:gap-3">
+        <svg viewBox="0 0 48 48" class="size-11 shrink-0 transition-transform duration-500 group-hover:-rotate-6" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#f3dce7"/><path d="M9 31c-1-9 6-16 15-16s16 7 15 16c0 4-7 5-15 5s-15-1-15-5Z" fill="#c98744" stroke="#3a2620" stroke-width="1.8" stroke-linejoin="round"/><path d="M15 26c4-5 13-6 19-2" fill="none" stroke="#f6e6ca" stroke-width="2.6" stroke-linecap="round"/><path d="M30 13c3-4 8-4 10-1-3 3-7 3-10 1Z" fill="#6f9440" stroke="#3a2620" stroke-width="1.2" stroke-linejoin="round"/><circle cx="31" cy="15.5" r="2.6" fill="#74305a" stroke="#3a2620" stroke-width="1"/><circle cx="34.6" cy="17.4" r="2.6" fill="#74305a" stroke="#3a2620" stroke-width="1"/><circle cx="31.8" cy="19.6" r="2.6" fill="#74305a" stroke="#3a2620" stroke-width="1"/></svg>
+        <span class="flex flex-col"><span class="whitespace-nowrap font-display text-[1.22rem] font-bold leading-none tracking-[-0.02em] sm:text-[1.45rem]">Bramble <span class="hand text-[1.6rem] font-normal text-bramble">&amp;</span> Rye</span><span class="mt-1 hidden text-[11px] font-bold uppercase tracking-[0.22em] text-muted min-[400px]:block">Bakery · Café · Saratoga</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-0.5">
+          <li><a href="shop.html" class="relative rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-oat hover:text-ink aria-[current=page]:bg-ink aria-[current=page]:text-paper">Preorder</a></li>
+          <li><a href="cakes.html" class="relative rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-oat hover:text-ink aria-[current=page]:bg-ink aria-[current=page]:text-paper">Celebration cakes</a></li>
+          <li><a href="cafe.html" class="relative rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-oat hover:text-ink aria-[current=page]:bg-ink aria-[current=page]:text-paper">Café</a></li>
+          <li><a href="about.html" class="relative rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-oat hover:text-ink aria-[current=page]:bg-ink aria-[current=page]:text-paper">Our story</a></li>
+          <li><a href="visit.html" class="relative rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-oat hover:text-ink aria-[current=page]:bg-ink aria-[current=page]:text-paper">Visit</a></li>
+        </ul>
+      </nav>
+      <div class="flex shrink-0 items-center gap-2">
+        <button type="button" data-basket-open data-basket-label aria-controls="basket-drawer" aria-expanded="false" aria-label="Basket" class="relative inline-flex h-11 items-center gap-2 rounded-full bg-bramble px-3.5 font-bold sm:px-4 text-paper shadow-[0_8px_18px_-10px_rgb(86_31_66/.9)] transition hover:bg-bramble-deep">
+          <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+          <span class="hidden text-[15px] sm:inline">Basket</span>
+          <span data-basket-count hidden class="absolute -right-1.5 -top-1.5 grid h-6 min-w-6 place-items-center rounded-full bg-butter px-1 text-xs font-extrabold text-ink ring-2 ring-flour">0</span>
+        </button>
+        <button id="menu-toggle" type="button" class="grid size-11 place-items-center rounded-full bg-oat lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-dashed border-line bg-flour lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="index.html" aria-current="page" class="flex items-center justify-between border-b border-dashed border-line py-4 font-display text-[1.65rem] aria-[current=page]:text-bramble">Home<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="shop.html" class="flex items-center justify-between border-b border-dashed border-line py-4 font-display text-[1.65rem] aria-[current=page]:text-bramble">Preorder<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="cakes.html" class="flex items-center justify-between border-b border-dashed border-line py-4 font-display text-[1.65rem] aria-[current=page]:text-bramble">Celebration cakes<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="cafe.html" class="flex items-center justify-between border-b border-dashed border-line py-4 font-display text-[1.65rem] aria-[current=page]:text-bramble">Café<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b border-dashed border-line py-4 font-display text-[1.65rem] aria-[current=page]:text-bramble">Our story<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="visit.html" class="flex items-center justify-between border-b border-dashed border-line py-4 font-display text-[1.65rem] aria-[current=page]:text-bramble">Visit<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+        </ul>
+        <a href="shop.html" class="btn-primary mt-6 w-full py-3.5 text-base">Preorder for pickup</a>
+        <p class="mt-4 text-center text-sm text-muted">27 Phila Street, Saratoga Springs</p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="grain relative overflow-hidden">
+      <div class="pointer-events-none absolute -left-24 top-24 size-72 rounded-full bg-butter/60 blur-3xl" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -right-20 bottom-0 size-96 rounded-full bg-blush/70 blur-3xl" aria-hidden="true"></div>
+      <div class="container-x relative grid items-center gap-12 pb-20 pt-10 sm:pt-14 lg:grid-cols-[1.08fr_1fr] lg:gap-14 lg:pb-24 lg:pt-12">
+        <div class="reveal max-w-xl">
+          <p class="hand -rotate-2 text-[1.9rem] text-bramble">Good morning, Saratoga</p>
+          <h1 class="h-display mt-3 text-[2.9rem] sm:text-[4rem] xl:text-[4.6rem]">Baked at dawn. Saved with <span class="squiggle">your name</span> on it.</h1>
+          <p class="mt-6 text-lg leading-relaxed text-muted sm:text-xl">We’re a small bakery and café on Phila Street. Preorder sourdough, pastries and celebration cakes by 2pm, and your bag will be waiting on the shelf when you stop in tomorrow.</p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="shop.html" class="btn-primary px-7 py-4 text-base">Preorder for pickup <span aria-hidden="true">→</span></a>
+            <a href="cakes.html" class="btn-line px-6 py-4 text-base">Design a cake</a>
+          </div>
+          <div class="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3 text-[15px]">
+            <p class="inline-flex items-center gap-2 rounded-full bg-paper px-3.5 py-2 font-bold shadow-[0_8px_20px_-14px_rgb(58_38_32/.6)] ring-1 ring-ink/10"><svg viewBox="0 0 24 24" class="size-4 text-bramble" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>Free pickup, Tuesday to Sunday</p>
+            <p class="inline-flex items-center gap-2 text-muted"><svg viewBox="0 0 24 24" class="size-4 text-bramble" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-cutoff>Order by 2pm for tomorrow</span></p>
+          </div>
+        </div>
+        <div class="reveal relative mx-auto w-full max-w-[30rem] lg:max-w-none">
+          <svg viewBox="0 0 560 660" class="h-auto w-full" role="img" aria-label="An arched bakery window: a country sourdough, a baguette and a seeded rye on the top shelf; a croissant, a cardamom knot and a vanilla berry cake below, with hand-written price tags">
+    <ellipse cx="280" cy="644" rx="250" ry="12" fill="#3a2620" opacity=".1"/>
+    <path d="M30 640V292a250 250 0 0 1 500 0v348Z" fill="#f3dce7" stroke="#3a2620" stroke-width="3"/>
+    <path d="M44 640V292a236 236 0 0 1 472 0v348" fill="none" stroke="#e2b9cc" stroke-width="3"/>
+    <path d="M62 628V292a218 218 0 0 1 436 0v336Z" fill="#fdf4e6" stroke="#3a2620" stroke-width="2.6"/>
+    <path d="M62 292a218 218 0 0 1 436 0Z" fill="#fbe9c2"/>
+    <path d="M280 292L75.1 217.4" stroke="#3a2620" stroke-width="1.6" opacity=".35"/><path d="M280 292L113.0 151.9" stroke="#3a2620" stroke-width="1.6" opacity=".35"/><path d="M280 292L171.0 103.2" stroke="#3a2620" stroke-width="1.6" opacity=".35"/><path d="M280 292L242.1 77.3" stroke="#3a2620" stroke-width="1.6" opacity=".35"/><path d="M280 292L317.9 77.3" stroke="#3a2620" stroke-width="1.6" opacity=".35"/><path d="M280 292L389.0 103.2" stroke="#3a2620" stroke-width="1.6" opacity=".35"/><path d="M280 292L447.0 151.9" stroke="#3a2620" stroke-width="1.6" opacity=".35"/><path d="M280 292L484.9 217.4" stroke="#3a2620" stroke-width="1.6" opacity=".35"/>
+    <path d="M62 292h436" stroke="#3a2620" stroke-width="2.6"/>
+    <path d="M62 292a218 218 0 0 1 436 0" fill="none" stroke="#3a2620" stroke-width="2.6"/>
+    <circle cx="280" cy="292" r="26" fill="#fdf4e6" stroke="#3a2620" stroke-width="2.4"/>
+    <path fill="none" d="M104 330c40-12 90-16 132-10" stroke="#ffffff" stroke-width="9" stroke-linecap="round" opacity=".8"/>
+    <path fill="none" d="M110 352c24-6 50-8 74-6" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity=".8"/>
+    <g class="steam" fill="none" stroke="#c98a4b" stroke-width="3.4" stroke-linecap="round"><path d="M120 330c-6-9 6-12 0-22"/><path d="M140 326c-6-9 6-12 0-22"/><path d="M160 330c-6-9 6-12 0-22"/></g>
+    <svg x="72" y="318" width="150" height="150" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><ellipse cx="60" cy="95" rx="44" ry="5" fill="#3a2620" opacity=".12"/><path d="M15 80C13 52 36 31 60 31s47 21 45 49c-1 12-19 16-45 16S16 92 15 80Z" fill="#c98744" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M25 66c4-17 19-27 35-27 17 0 31 9 35 24" fill="none" stroke="#dea468" stroke-width="11" stroke-linecap="round" opacity=".85"/><path d="M36 63C48 49 72 46 88 56" fill="none" stroke="#3a2620" stroke-width="1.6" stroke-linecap="round" opacity=".55"/><path d="M34 59C46 45 70 41 87 51" fill="none" stroke="#f6e6ca" stroke-width="6" stroke-linecap="round"/><circle cx="56.2" cy="67.4" r="1.8" fill="#fff8ec" opacity=".9"/><circle cx="55.3" cy="64.9" r="0.9" fill="#fff8ec" opacity=".9"/><circle cx="51" cy="62.4" r="0.8" fill="#fff8ec" opacity=".9"/><circle cx="73.4" cy="43.3" r="1.1" fill="#fff8ec" opacity=".9"/><circle cx="40.8" cy="66" r="1" fill="#fff8ec" opacity=".9"/><circle cx="86.2" cy="61.7" r="1.1" fill="#fff8ec" opacity=".9"/><circle cx="31.1" cy="52.3" r="1.8" fill="#fff8ec" opacity=".9"/><circle cx="37.2" cy="62.7" r="1.5" fill="#fff8ec" opacity=".9"/><circle cx="89.9" cy="57.8" r="1.3" fill="#fff8ec" opacity=".9"/><circle cx="59.8" cy="41.1" r="1.5" fill="#fff8ec" opacity=".9"/><circle cx="70.7" cy="45.4" r="0.9" fill="#fff8ec" opacity=".9"/><circle cx="32.7" cy="51.8" r="1.6" fill="#fff8ec" opacity=".9"/><circle cx="31.6" cy="63.1" r="1.2" fill="#fff8ec" opacity=".9"/><circle cx="43.9" cy="46.1" r="1" fill="#fff8ec" opacity=".9"/></svg>
+    <svg x="204" y="296" width="160" height="160" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><ellipse cx="60" cy="94" rx="46" ry="5" fill="#3a2620" opacity=".12"/><g transform="rotate(-22 60 64)"><rect x="6" y="50" width="108" height="28" rx="14" fill="#d08f4a" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M16 58h88" stroke="#e6b06d" stroke-width="7" stroke-linecap="round" opacity=".8"/><path d="M23 64q8-9 17-3" fill="none" stroke="#3a2620" stroke-width="1.5" opacity=".5" stroke-linecap="round"/><path d="M22 61q8-9 17-3" fill="none" stroke="#f6e6ca" stroke-width="4.5" stroke-linecap="round"/><path d="M43 64q8-9 17-3" fill="none" stroke="#3a2620" stroke-width="1.5" opacity=".5" stroke-linecap="round"/><path d="M42 61q8-9 17-3" fill="none" stroke="#f6e6ca" stroke-width="4.5" stroke-linecap="round"/><path d="M63 64q8-9 17-3" fill="none" stroke="#3a2620" stroke-width="1.5" opacity=".5" stroke-linecap="round"/><path d="M62 61q8-9 17-3" fill="none" stroke="#f6e6ca" stroke-width="4.5" stroke-linecap="round"/><path d="M83 64q8-9 17-3" fill="none" stroke="#3a2620" stroke-width="1.5" opacity=".5" stroke-linecap="round"/><path d="M82 61q8-9 17-3" fill="none" stroke="#f6e6ca" stroke-width="4.5" stroke-linecap="round"/></g></svg>
+    <svg x="340" y="322" width="146" height="146" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><ellipse cx="60" cy="96" rx="46" ry="5" fill="#3a2620" opacity=".12"/><path d="M19 93V62c0-20 20-28 41-28s41 8 41 28v31a3 3 0 0 1-3 3H22a3 3 0 0 1-3-3Z" fill="#7b4a2b" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M24 58c2-13 18-18 36-18s34 5 36 18" fill="none" stroke="#946038" stroke-width="10" stroke-linecap="round"/><path d="M19 66h82" stroke="#3a2620" stroke-width="1.6" opacity=".35"/><path d="M30 76v12M46 76v12M62 76v12M78 76v12M92 76v12" stroke="#3a2620" stroke-width="1.4" opacity=".18" stroke-linecap="round"/><ellipse cx="80.5" cy="50.6" rx="2.2" ry="1.3" transform="rotate(46.2 80.5 50.6)" fill="#efdcab"/><ellipse cx="69.1" cy="43.6" rx="2.2" ry="1.3" transform="rotate(117.9 69.1 43.6)" fill="#efdcab"/><ellipse cx="36.7" cy="58.1" rx="2.2" ry="1.3" transform="rotate(105.1 36.7 58.1)" fill="#4b3a2c"/><ellipse cx="47.3" cy="43.9" rx="2.2" ry="1.3" transform="rotate(169.3 47.3 43.9)" fill="#efdcab"/><ellipse cx="55.7" cy="45.9" rx="2.2" ry="1.3" transform="rotate(142 55.7 45.9)" fill="#4b3a2c"/><ellipse cx="87.5" cy="63.2" rx="2.2" ry="1.3" transform="rotate(174.9 87.5 63.2)" fill="#efdcab"/><ellipse cx="53.2" cy="42.2" rx="2.2" ry="1.3" transform="rotate(42.1 53.2 42.2)" fill="#4b3a2c"/><ellipse cx="29.4" cy="62.8" rx="2.2" ry="1.3" transform="rotate(104.8 29.4 62.8)" fill="#efdcab"/><ellipse cx="83.9" cy="55.3" rx="2.2" ry="1.3" transform="rotate(131.3 83.9 55.3)" fill="#efdcab"/><ellipse cx="53" cy="49.6" rx="2.2" ry="1.3" transform="rotate(137.1 53 49.6)" fill="#4b3a2c"/><ellipse cx="76.5" cy="55.3" rx="2.2" ry="1.3" transform="rotate(13.8 76.5 55.3)" fill="#4b3a2c"/><ellipse cx="77.6" cy="49.1" rx="2.2" ry="1.3" transform="rotate(101.7 77.6 49.1)" fill="#4b3a2c"/><ellipse cx="53.7" cy="42.3" rx="2.2" ry="1.3" transform="rotate(93 53.7 42.3)" fill="#4b3a2c"/><ellipse cx="73.1" cy="57.7" rx="2.2" ry="1.3" transform="rotate(112.2 73.1 57.7)" fill="#4b3a2c"/><ellipse cx="56.5" cy="45.5" rx="2.2" ry="1.3" transform="rotate(104 56.5 45.5)" fill="#efdcab"/><ellipse cx="55.1" cy="47.7" rx="2.2" ry="1.3" transform="rotate(84.7 55.1 47.7)" fill="#efdcab"/><ellipse cx="47" cy="51.9" rx="2.2" ry="1.3" transform="rotate(112.2 47 51.9)" fill="#4b3a2c"/><ellipse cx="62.4" cy="60.6" rx="2.2" ry="1.3" transform="rotate(72.8 62.4 60.6)" fill="#4b3a2c"/><ellipse cx="47.7" cy="48.2" rx="2.2" ry="1.3" transform="rotate(78.3 47.7 48.2)" fill="#efdcab"/><ellipse cx="56.2" cy="56.7" rx="2.2" ry="1.3" transform="rotate(17.4 56.2 56.7)" fill="#4b3a2c"/><ellipse cx="54.4" cy="55.1" rx="2.2" ry="1.3" transform="rotate(97.8 54.4 55.1)" fill="#efdcab"/><ellipse cx="51.5" cy="57.9" rx="2.2" ry="1.3" transform="rotate(96.8 51.5 57.9)" fill="#efdcab"/><ellipse cx="56.2" cy="52.3" rx="2.2" ry="1.3" transform="rotate(48.3 56.2 52.3)" fill="#4b3a2c"/><ellipse cx="80.9" cy="49.4" rx="2.2" ry="1.3" transform="rotate(38 80.9 49.4)" fill="#4b3a2c"/><ellipse cx="36.8" cy="63.5" rx="2.2" ry="1.3" transform="rotate(63 36.8 63.5)" fill="#efdcab"/><ellipse cx="56.9" cy="59" rx="2.2" ry="1.3" transform="rotate(112.7 56.9 59)" fill="#efdcab"/></svg>
+    <rect x="62" y="432" width="436" height="16" rx="4" fill="#c98a4b" stroke="#3a2620" stroke-width="2.6"/><path d="M68 437h424" stroke="#e2ab6e" stroke-width="3" stroke-linecap="round"/><path d="M96 448v16l14-16M464 448v16l-14-16" fill="#b9733c" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round"/>
+    <svg x="78" y="494" width="130" height="130" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><ellipse cx="60" cy="92" rx="46" ry="5" fill="#3a2620" opacity=".12"/><path d="M13 76c0-12 12-19 23-15l7 21c-12 7-29 6-30-6Z" fill="#c57a37" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M107 76c0-12-12-19-23-15l-7 21c12 7 29 6 30-6Z" fill="#c57a37" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M31 60c4-11 15-16 23-15l3 40c-8 2-16 1-21-2Z" fill="#d8954a" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M89 60c-4-11-15-16-23-15l-3 40c8 2 16 1 21-2Z" fill="#d8954a" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M47 46c6-10 20-10 26 0l1 40c-8 3-20 3-28 0Z" fill="#e6ad5f" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M52 52c4-5 12-5 16 0M38 60c3-4 8-6 12-6M82 60c-3-4-8-6-12-6" fill="none" stroke="#f3cf8f" stroke-width="3" stroke-linecap="round"/></svg>
+    <svg x="196" y="496" width="124" height="124" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><ellipse cx="60" cy="96" rx="42" ry="5" fill="#3a2620" opacity=".12"/><ellipse cx="60" cy="62" rx="36" ry="17" transform="rotate(0 60 62)" fill="#cf8a45" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="60" cy="62" rx="36" ry="17" transform="rotate(60 60 62)" fill="#d99a52" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="60" cy="62" rx="36" ry="17" transform="rotate(120 60 62)" fill="#e3a961" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="60" cy="62" rx="16" ry="14" fill="#e8b46d" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M50 58c6-6 14-6 20 0" fill="none" stroke="#f4d197" stroke-width="3" stroke-linecap="round"/><rect x="59.5" y="54.3" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(65.4 59.5 54.3)"/><rect x="34.8" y="67.5" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(34.1 34.8 67.5)"/><rect x="30.7" y="46.5" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(39.6 30.7 46.5)"/><rect x="71.6" y="65.7" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(5.5 71.6 65.7)"/><rect x="67.8" y="87.6" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(86.5 67.8 87.6)"/><rect x="47.1" y="78" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(58.2 47.1 78)"/><rect x="61.7" y="88.2" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(39.3 61.7 88.2)"/><rect x="43" y="84.9" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(25.7 43 84.9)"/><rect x="62" y="33.8" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(80.2 62 33.8)"/><rect x="76.3" y="61.1" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(49 76.3 61.1)"/><rect x="64.1" y="88.1" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(2.1 64.1 88.1)"/><rect x="84.9" y="56" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(82.4 84.9 56)"/><rect x="77.6" y="63.9" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(33.7 77.6 63.9)"/><rect x="68" y="84.2" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(44.5 68 84.2)"/><rect x="82.1" y="72.7" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(48.9 82.1 72.7)"/><rect x="78.6" y="60.8" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(89.2 78.6 60.8)"/><rect x="49.9" y="53.4" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(27 49.9 53.4)"/><rect x="79.8" y="66.3" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(20.3 79.8 66.3)"/><rect x="62.1" y="54.8" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(44.2 62.1 54.8)"/><rect x="73.8" y="78.9" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(34.5 73.8 78.9)"/><rect x="89" y="72.3" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(64.3 89 72.3)"/><rect x="47" y="41.9" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(84.9 47 41.9)"/></svg>
+    <svg x="318" y="452" width="168" height="168" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><ellipse cx="60" cy="95" rx="52" ry="7" fill="#fffdf8" stroke="#3a2620" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/><rect x="18" y="40" width="84" height="52" rx="5" fill="#f3d38b" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><rect x="19" y="56" width="82" height="5" fill="#c2334d"/><rect x="19" y="73" width="82" height="5" fill="#c2334d"/><rect x="18" y="40" width="84" height="52" rx="5" fill="#fff6e8" opacity=".38"/><rect x="18" y="40" width="84" height="52" rx="5" fill="none" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="60" cy="40" rx="42" ry="9" fill="#fff6e8" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="40" cy="38" r="4.2" fill="#c42f47" stroke="#3a2620" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="52" cy="35" r="4.2" fill="#5b4fa3" stroke="#3a2620" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="62" cy="39" r="4.2" fill="#c42f47" stroke="#3a2620" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="74" cy="36" r="4.2" fill="#c42f47" stroke="#3a2620" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="83" cy="40" r="4.2" fill="#5b4fa3" stroke="#3a2620" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/><circle cx="47" cy="42" r="4.2" fill="#5b4fa3" stroke="#3a2620" stroke-width="1.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M60 31l2-4 3 3" fill="none" stroke="#4d6b35" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <rect x="62" y="600" width="436" height="16" rx="4" fill="#c98a4b" stroke="#3a2620" stroke-width="2.6"/><path d="M68 605h424" stroke="#e2ab6e" stroke-width="3" stroke-linecap="round"/><path d="M96 616v16l14-16M464 616v16l-14-16" fill="#b9733c" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round"/>
+    <g transform="rotate(-4 136 494)"><path d="M136 466v10" stroke="#3a2620" stroke-width="1.4"/><path d="M92 476h88l8 18-8 18h-88Z" fill="#fffdf8" stroke="#3a2620" stroke-width="2"/><circle cx="170" cy="494" r="3" fill="none" stroke="#3a2620" stroke-width="1.4"/><text x="130" y="492" text-anchor="middle" font-family="'Delicious Handrawn', cursive" font-size="17" fill="#3a2620">Sourdough</text><text x="130" y="508" text-anchor="middle" font-family="'Delicious Handrawn', cursive" font-size="16" fill="#74305a">$9</text></g>
+    <g transform="rotate(5 420 290)"><path d="M420 262v10" stroke="#3a2620" stroke-width="1.4"/><path d="M376 272h88l8 18-8 18h-88Z" fill="#fffdf8" stroke="#3a2620" stroke-width="2"/><circle cx="454" cy="290" r="3" fill="none" stroke="#3a2620" stroke-width="1.4"/><text x="414" y="288" text-anchor="middle" font-family="'Delicious Handrawn', cursive" font-size="17" fill="#3a2620">Fresh today</text><text x="414" y="304" text-anchor="middle" font-family="'Delicious Handrawn', cursive" font-size="16" fill="#74305a">7:15am</text></g>
+    <g transform="translate(-22 -300) rotate(-10 70 570)"><circle cx="70" cy="570" r="52" fill="#f9e8b2" stroke="#3a2620" stroke-width="2.6"/><circle cx="70" cy="570" r="43" fill="none" stroke="#3a2620" stroke-width="1.4" stroke-dasharray="4 5"/><text x="70" y="562" text-anchor="middle" font-family="Karla, sans-serif" font-size="11" font-weight="800" letter-spacing="2" fill="#3a2620">BAKED IN</text><text x="70" y="584" text-anchor="middle" font-family="Corben, serif" font-size="14" font-weight="700" fill="#74305a">Saratoga</text><text x="70" y="599" text-anchor="middle" font-family="Karla, sans-serif" font-size="10" font-weight="800" letter-spacing="2" fill="#3a2620">SINCE 2017</text></g>
+  </svg>
+        </div>
+      </div>
+      <div class="border-y border-line bg-paper/70">
+        <ul class="container-x grid grid-cols-2 gap-x-6 gap-y-3 py-5 text-[15px] font-bold sm:grid-cols-4">
+          <li class="flex items-center gap-2.5"><span class="grid size-9 shrink-0 place-items-center rounded-full bg-butter text-butter-deep" aria-hidden="true"><svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>36-hour sourdough</li>
+          <li class="flex items-center gap-2.5"><span class="grid size-9 shrink-0 place-items-center rounded-full bg-pistachio text-pistachio-deep" aria-hidden="true"><svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21V8M12 8c-3-1-5-3-5-6 3 0 5 2 5 6Zm0 0c3-1 5-3 5-6-3 0-5 2-5 6Zm0 5c-3-1-5-3-5-6 3 0 5 2 5 6Zm0 0c3-1 5-3 5-6-3 0-5 2-5 6Z"/></svg></span>Flour milled 14 miles away</li>
+          <li class="flex items-center gap-2.5"><span class="grid size-9 shrink-0 place-items-center rounded-full bg-blush text-blush-deep" aria-hidden="true"><svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 12H6.2Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg></span>Free pickup</li>
+          <li class="flex items-center gap-2.5"><span class="grid size-9 shrink-0 place-items-center rounded-full bg-lilac text-bramble" aria-hidden="true"><svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10Z"/></svg></span>Leftovers go to the Pantry</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="container-x mt-24" aria-labelledby="board-title">
+      <div class="flex flex-wrap items-end justify-between gap-x-8 gap-y-4">
+        <div>
+          <p class="eyebrow"><span class="status-pill status-baking px-2 py-0.5"><span class="dot" aria-hidden="true"></span>Live</span> From the bake sheet</p>
+          <h2 id="board-title" class="h-display mt-3 text-4xl sm:text-5xl">Fresh out of the oven</h2>
+          <p class="mt-3 text-lg"><span class="font-display" data-board-title>Today</span> <span class="mx-1 text-line" aria-hidden="true">/</span> <span class="text-muted" data-board-note>What’s on the shelf right now</span></p>
+        </div>
+        <a href="shop.html" class="link">Preorder for tomorrow →</a>
+      </div>
+      <ul id="bake-board" class="scroll-x -mx-5 mt-8 flex snap-x gap-4 px-5 pb-2 sm:mx-0 sm:grid sm:grid-cols-3 sm:overflow-visible sm:px-0 md:grid-cols-4 lg:grid-cols-6" aria-label="Today’s bakes and when they come out of the oven"></ul>
+      <p class="mt-6 flex flex-wrap items-center gap-2 text-sm text-muted"><span class="status-pill status-fresh"><span class="dot" aria-hidden="true"></span>On the shelf</span><span class="status-pill status-baking"><span class="dot" aria-hidden="true"></span>Baking now</span><span class="status-pill status-out"><span class="dot" aria-hidden="true"></span>Still to come</span><span class="status-pill status-sold"><span class="dot" aria-hidden="true"></span>Sold out</span><span class="ml-1">Sold out? Preorder and we’ll save you one tomorrow.</span></p>
+    </section>
+
+    <section class="container-x mt-28" aria-labelledby="how-title">
+      <div class="panel grain relative overflow-hidden px-6 py-14 sm:px-12">
+        <div class="mx-auto max-w-2xl text-center">
+          <p class="eyebrow justify-center">Order ahead</p>
+          <h2 id="how-title" class="h-display mt-3 text-4xl sm:text-5xl">How preordering works</h2>
+          <p class="mt-4 text-lg text-muted">No line, no disappointment, no 6am alarm.</p>
+        </div>
+        <ol class="relative mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
+          <li class="reveal relative flex flex-col items-center text-center">
+            <span class="relative grid size-36 place-items-center rounded-full bg-paper ring-1 ring-ink/10"><span class="art block w-24"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><ellipse cx="60" cy="92" rx="46" ry="5" fill="#3a2620" opacity=".12"/><path d="M13 76c0-12 12-19 23-15l7 21c-12 7-29 6-30-6Z" fill="#c57a37" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M107 76c0-12-12-19-23-15l-7 21c12 7 29 6 30-6Z" fill="#c57a37" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M31 60c4-11 15-16 23-15l3 40c-8 2-16 1-21-2Z" fill="#d8954a" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M89 60c-4-11-15-16-23-15l-3 40c8 2 16 1 21-2Z" fill="#d8954a" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M47 46c6-10 20-10 26 0l1 40c-8 3-20 3-28 0Z" fill="#e6ad5f" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M52 52c4-5 12-5 16 0M38 60c3-4 8-6 12-6M82 60c-3-4-8-6-12-6" fill="none" stroke="#f3cf8f" stroke-width="3" stroke-linecap="round"/></svg></span><span class="hand absolute -left-1 -top-1 grid size-12 place-items-center rounded-full bg-bramble text-3xl text-paper">1</span></span>
+            <h3 class="mt-6 font-display text-2xl">Fill your bag by 2pm</h3>
+            <p class="mt-2 max-w-xs leading-relaxed text-muted">Choose loaves, pastries and cakes. Some breads only come out on certain days, and we’ll show you which.</p>
+          </li>
+          <li class="reveal relative flex flex-col items-center text-center">
+            <span class="relative grid size-36 place-items-center rounded-full bg-paper ring-1 ring-ink/10"><svg viewBox="0 0 120 120" class="w-24" aria-hidden="true"><circle cx="60" cy="62" r="42" fill="#f9e8b2" stroke="#3a2620" stroke-width="2.4"/><circle cx="60" cy="62" r="34" fill="#fffdf8" stroke="#3a2620" stroke-width="1.6"/><path d="M60 40v22l14 9" fill="none" stroke="#74305a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="60" cy="62" r="3.5" fill="#3a2620"/><path d="M30 26l-8-8M90 26l8-8" stroke="#3a2620" stroke-width="3" stroke-linecap="round"/><path d="M60 30v4M60 90v4M28 62h4M88 62h4" stroke="#3a2620" stroke-width="2" stroke-linecap="round"/></svg><span class="hand absolute -left-1 -top-1 grid size-12 place-items-center rounded-full bg-bramble text-3xl text-paper">2</span></span>
+            <h3 class="mt-6 font-display text-2xl">Choose a pickup slot</h3>
+            <p class="mt-2 max-w-xs leading-relaxed text-muted">Any half hour while we’re open, up to two weeks ahead. Pay online now or at the counter.</p>
+          </li>
+          <li class="reveal relative flex flex-col items-center text-center">
+            <span class="relative grid size-36 place-items-center rounded-full bg-paper ring-1 ring-ink/10"><svg viewBox="0 0 120 120" class="w-24" aria-hidden="true"><path d="M30 44h60l-5 60H35Z" fill="#e8d3b4" stroke="#3a2620" stroke-width="2.4" stroke-linejoin="round"/><path d="M30 44l6-10h48l6 10" fill="#f3e7d5" stroke="#3a2620" stroke-width="2.4" stroke-linejoin="round"/><rect x="44" y="62" width="32" height="20" rx="3" fill="#fffdf8" stroke="#3a2620" stroke-width="1.6"/><text x="60" y="77" text-anchor="middle" font-family="'Delicious Handrawn', cursive" font-size="14" fill="#74305a">Nell</text><path d="M40 30c2-6 6-6 8 0M58 24c2-6 6-6 8 0M76 30c2-6 6-6 8 0" fill="none" stroke="#b9733c" stroke-width="2" stroke-linecap="round"/></svg><span class="hand absolute -left-1 -top-1 grid size-12 place-items-center rounded-full bg-bramble text-3xl text-paper">3</span></span>
+            <h3 class="mt-6 font-display text-2xl">Grab it off the shelf</h3>
+            <p class="mt-2 max-w-xs leading-relaxed text-muted">Your bag waits by the door with your name on it. Say hello, skip the line, add a coffee.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="container-x mt-28" aria-labelledby="specials-title">
+      <div class="flex flex-wrap items-end justify-between gap-x-8 gap-y-3">
+        <div>
+          <p class="eyebrow">This week</p>
+          <h2 id="specials-title" class="h-display mt-3 text-4xl sm:text-5xl">Fall specials</h2>
+        </div>
+        <p class="hand max-w-xs text-2xl text-bramble sm:text-right">while the Kettle Lane plums &amp; apples last</p>
+      </div>
+      <div id="specials" class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></div>
+    </section>
+
+    <section class="container-x mt-28" aria-labelledby="cakes-title">
+      <div class="grid items-center gap-10 overflow-hidden rounded-[2.5rem] bg-blush px-6 py-12 sm:px-12 lg:grid-cols-2 lg:py-6">
+        <div class="reveal max-w-lg">
+          <p class="eyebrow text-blush-deep">Celebration cakes</p>
+          <h2 id="cakes-title" class="h-display mt-3 text-4xl sm:text-5xl">Birthdays, weddings and the odd Tuesday</h2>
+          <p class="mt-5 text-lg leading-relaxed text-ink/80">Build your cake online: one tier or three, five cake flavors, real fillings and a hand-piped message. You’ll see it drawn as you choose, with the price to the penny.</p>
+          <ul class="mt-6 space-y-2 text-[15px] font-bold">
+            <li class="flex items-center gap-2"><span class="text-bramble" aria-hidden="true">✿</span>From $68 for a 6-inch that serves 8–10</li>
+            <li class="flex items-center gap-2"><span class="text-bramble" aria-hidden="true">✿</span>Four days’ notice, picked up in a ribboned box</li>
+            <li class="flex items-center gap-2"><span class="text-bramble" aria-hidden="true">✿</span>Vegan cake and fillings on request</li>
+          </ul>
+          <a href="cakes.html" class="btn-primary mt-8">Design your cake <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="reveal relative mx-auto w-full max-w-md">
+          <div class="arch bg-paper/70 p-4 pt-10 ring-1 ring-ink/10"><svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A two-tier cream cake with pressed flowers and a ribbon reading Happy 80th, Nana"><ellipse cx="180" cy="294" rx="150" ry="9" fill="#3a2620" opacity=".1"/><path d="M150 278h60l10 20h-80Z" fill="#fffdf8" stroke="#3a2620" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="180" cy="272" rx="146" ry="14" fill="#fffdf8" stroke="#3a2620" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><rect x="67.5" y="178" width="225" height="92" rx="6" fill="#fbf1dc" stroke="#3a2620" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><rect x="74.5" y="188" width="7" height="70" rx="3.5" fill="#ffffff" opacity=".45"/><circle cx="74.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="85.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="96.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="107.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="118.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="129.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="140.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="151.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="162.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="173.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="184.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="195.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="206.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="217.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="228.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="239.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="250.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="261.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="272.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="283.5" cy="268" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="181.1" cy="227.5" r="4.3" fill="#6b4fa8"/><circle cx="176.9" cy="233.2" r="4.3" fill="#6b4fa8"/><circle cx="170.2" cy="231" r="4.3" fill="#6b4fa8"/><circle cx="170.2" cy="224" r="4.3" fill="#6b4fa8"/><circle cx="176.9" cy="221.8" r="4.3" fill="#6b4fa8"/><circle cx="175.1" cy="227.5" r="2.7" fill="#f2c94c"/><path d="M183.1 229.5q5 3 9 0" fill="none" stroke="#5f8a3c" stroke-width="1.6" stroke-linecap="round"/><circle cx="144.3" cy="196.2" r="3.3" fill="#3f73b8"/><circle cx="138.9" cy="195.9" r="3.3" fill="#3f73b8"/><circle cx="137.5" cy="190.6" r="3.3" fill="#3f73b8"/><circle cx="142.1" cy="187.6" r="3.3" fill="#3f73b8"/><circle cx="146.3" cy="191.1" r="3.3" fill="#3f73b8"/><circle cx="141.8" cy="192.3" r="2.1" fill="#ffffff"/><path d="M148.4 194.3q5 3 9 0" fill="none" stroke="#5f8a3c" stroke-width="1.6" stroke-linecap="round"/><circle cx="196.1" cy="237.8" r="3.9" fill="#e9a1b4"/><circle cx="192.9" cy="232.2" r="3.9" fill="#e9a1b4"/><circle cx="197.3" cy="227.5" r="3.9" fill="#e9a1b4"/><circle cx="203.1" cy="230.2" r="3.9" fill="#e9a1b4"/><circle cx="202.3" cy="236.5" r="3.9" fill="#e9a1b4"/><circle cx="198.3" cy="232.8" r="2.4" fill="#c97a1e"/><path d="M205.8 234.8q5 3 9 0" fill="none" stroke="#5f8a3c" stroke-width="1.6" stroke-linecap="round"/><circle cx="265.7" cy="243.1" r="4" fill="#f2c94c"/><circle cx="268.8" cy="237.3" r="4" fill="#f2c94c"/><circle cx="275.3" cy="238.4" r="4" fill="#f2c94c"/><circle cx="276.2" cy="244.9" r="4" fill="#f2c94c"/><circle cx="270.3" cy="247.8" r="4" fill="#f2c94c"/><circle cx="271.2" cy="242.3" r="2.5" fill="#c97a1e"/><path d="M278.8 244.3q5 3 9 0" fill="none" stroke="#5f8a3c" stroke-width="1.6" stroke-linecap="round"/><circle cx="203" cy="234.9" r="4" fill="#6b4fa8"/><circle cx="209.5" cy="234.3" r="4" fill="#6b4fa8"/><circle cx="212" cy="240.3" r="4" fill="#6b4fa8"/><circle cx="207.1" cy="244.5" r="4" fill="#6b4fa8"/><circle cx="201.6" cy="241.2" r="4" fill="#6b4fa8"/><circle cx="206.6" cy="239" r="2.5" fill="#f2c94c"/><path d="M214.1 241q5 3 9 0" fill="none" stroke="#5f8a3c" stroke-width="1.6" stroke-linecap="round"/><circle cx="145.6" cy="205.6" r="3.5" fill="#3f73b8"/><circle cx="149.1" cy="210.2" r="3.5" fill="#3f73b8"/><circle cx="145.8" cy="214.9" r="3.5" fill="#3f73b8"/><circle cx="140.4" cy="213.2" r="3.5" fill="#3f73b8"/><circle cx="140.2" cy="207.5" r="3.5" fill="#3f73b8"/><circle cx="144.2" cy="210.3" r="2.2" fill="#ffffff"/><path d="M151.1 212.3q5 3 9 0" fill="none" stroke="#5f8a3c" stroke-width="1.6" stroke-linecap="round"/><circle cx="111.9" cy="217.9" r="4.1" fill="#e9a1b4"/><circle cx="109.7" cy="224.2" r="4.1" fill="#e9a1b4"/><circle cx="103" cy="224" r="4.1" fill="#e9a1b4"/><circle cx="101.1" cy="217.6" r="4.1" fill="#e9a1b4"/><circle cx="106.6" cy="213.8" r="4.1" fill="#e9a1b4"/><circle cx="106.5" cy="219.5" r="2.6" fill="#c97a1e"/><path d="M114.1 221.5q5 3 9 0" fill="none" stroke="#5f8a3c" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="180" cy="178" rx="112.5" ry="13.5" fill="#fbf1dc" stroke="#3a2620" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><rect x="105" y="86" width="150" height="92" rx="6" fill="#fbf1dc" stroke="#3a2620" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><rect x="112" y="96" width="7" height="70" rx="3.5" fill="#ffffff" opacity=".45"/><circle cx="112" cy="176" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="123" cy="176" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="134" cy="176" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="145" cy="176" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="156" cy="176" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="167" cy="176" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="178" cy="176" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="189" cy="176" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="200" cy="176" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="211" cy="176" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="222" cy="176" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="233" cy="176" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="244" cy="176" r="5.2" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="173.7" cy="123.8" r="3.3" fill="#6b4fa8"/><circle cx="170.5" cy="128.2" r="3.3" fill="#6b4fa8"/><circle cx="165.4" cy="126.5" r="3.3" fill="#6b4fa8"/><circle cx="165.4" cy="121.1" r="3.3" fill="#6b4fa8"/><circle cx="170.5" cy="119.4" r="3.3" fill="#6b4fa8"/><circle cx="169.1" cy="123.8" r="2.1" fill="#f2c94c"/><path d="M175.7 125.8q5 3 9 0" fill="none" stroke="#5f8a3c" stroke-width="1.6" stroke-linecap="round"/><circle cx="241.5" cy="107.9" r="4.6" fill="#3f73b8"/><circle cx="234" cy="107.5" r="4.6" fill="#3f73b8"/><circle cx="232.1" cy="100.2" r="4.6" fill="#3f73b8"/><circle cx="238.4" cy="96.2" r="4.6" fill="#3f73b8"/><circle cx="244.2" cy="100.9" r="4.6" fill="#3f73b8"/><circle cx="238.1" cy="102.5" r="2.9" fill="#ffffff"/><path d="M246.4 104.5q5 3 9 0" fill="none" stroke="#5f8a3c" stroke-width="1.6" stroke-linecap="round"/><circle cx="186.7" cy="117.5" r="4.7" fill="#e9a1b4"/><circle cx="182.9" cy="110.8" r="4.7" fill="#e9a1b4"/><circle cx="188.1" cy="105.1" r="4.7" fill="#e9a1b4"/><circle cx="195.2" cy="108.3" r="4.7" fill="#e9a1b4"/><circle cx="194.3" cy="116" r="4.7" fill="#e9a1b4"/><circle cx="189.4" cy="111.5" r="3" fill="#c97a1e"/><path d="M198 113.5q5 3 9 0" fill="none" stroke="#5f8a3c" stroke-width="1.6" stroke-linecap="round"/><circle cx="201.4" cy="140.5" r="3.8" fill="#f2c94c"/><circle cx="204.2" cy="135.1" r="3.8" fill="#f2c94c"/><circle cx="210.3" cy="136.1" r="3.8" fill="#f2c94c"/><circle cx="211.1" cy="142.2" r="3.8" fill="#f2c94c"/><circle cx="205.6" cy="144.9" r="3.8" fill="#f2c94c"/><circle cx="206.5" cy="139.7" r="2.3" fill="#c97a1e"/><path d="M213.8 141.7q5 3 9 0" fill="none" stroke="#5f8a3c" stroke-width="1.6" stroke-linecap="round"/><ellipse cx="180" cy="86" rx="75" ry="9" fill="#fbf1dc" stroke="#3a2620" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/><circle cx="116" cy="86" r="5.6" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="114.4" cy="84.2" r="1.6" fill="#ffffff" opacity=".7"/><circle cx="120.9" cy="83.7" r="5.6" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="119.3" cy="81.9" r="1.6" fill="#ffffff" opacity=".7"/><circle cx="134.7" cy="81.8" r="5.6" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="133.1" cy="80" r="1.6" fill="#ffffff" opacity=".7"/><circle cx="155.5" cy="80.5" r="5.6" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="153.9" cy="78.7" r="1.6" fill="#ffffff" opacity=".7"/><circle cx="180" cy="80" r="5.6" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="178.4" cy="78.2" r="1.6" fill="#ffffff" opacity=".7"/><circle cx="204.5" cy="80.5" r="5.6" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="202.9" cy="78.7" r="1.6" fill="#ffffff" opacity=".7"/><circle cx="225.3" cy="81.8" r="5.6" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="223.7" cy="80" r="1.6" fill="#ffffff" opacity=".7"/><circle cx="239.1" cy="83.7" r="5.6" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="237.5" cy="81.9" r="1.6" fill="#ffffff" opacity=".7"/><circle cx="244" cy="86" r="5.6" fill="#fbf1dc" stroke="#3a2620" stroke-width="1.3" stroke-linejoin="round" stroke-linecap="round"/><circle cx="242.4" cy="84.2" r="1.6" fill="#ffffff" opacity=".7"/><path d="M68.5 214h18v26h-18l7-13Z" fill="#561f42"/><path d="M291.5 214h-18v26h18l-7-13Z" fill="#561f42"/><rect x="82.5" y="210" width="195" height="32" rx="3" fill="#74305a" stroke="#3a2620" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><text x="180" y="233" text-anchor="middle" font-family="'Delicious Handrawn', cursive" font-size="22" fill="#fffdf8">Happy 80th, Nana</text></svg></div>
+          <p class="hand absolute -bottom-2 right-4 rotate-3 text-2xl text-bramble">made for Ivy’s nana, last Saturday</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-x mt-28 grid items-center gap-12 lg:grid-cols-[1fr_1.1fr]" aria-labelledby="cafe-title">
+      <div class="reveal relative order-2 mx-auto w-full max-w-md lg:order-1">
+        <div class="arch grain overflow-hidden bg-sky px-10 pb-8 pt-16">
+          <div class="relative"><svg viewBox="0 0 240 220" class="h-auto w-full" role="img" aria-label="A cup of coffee with latte art, steam rising">
+    <ellipse cx="120" cy="196" rx="96" ry="10" fill="#3a2620" opacity=".1"/>
+    <ellipse cx="112" cy="182" rx="86" ry="18" fill="#fffdf8" stroke="#3a2620" stroke-width="2.6"/>
+    <ellipse cx="112" cy="178" rx="60" ry="11" fill="#f3e7d5"/>
+    <path d="M154 98c26-6 36 8 32 24s-20 24-38 20" fill="none" stroke="#3a2620" stroke-width="2.6"/>
+    <path d="M154 104c18-3 24 6 21 17s-14 15-26 13" fill="none" stroke="#9fc3d1" stroke-width="7"/>
+    <path d="M52 82h120l-10 78c-2 12-16 20-50 20s-48-8-50-20Z" fill="#9fc3d1" stroke="#3a2620" stroke-width="2.6" stroke-linejoin="round"/>
+    <path d="M62 104c4 30 8 48 18 62" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity=".5"/>
+    <ellipse cx="112" cy="82" rx="60" ry="12" fill="#b07a4b" stroke="#3a2620" stroke-width="2.6"/>
+    <path d="M100 80c4-6 14-8 20-4 4 3 2 8-4 8-8 0-10-6-2-10" fill="none" stroke="#f3e2c9" stroke-width="3" stroke-linecap="round"/>
+    <g class="steam" fill="none" stroke="#c98a4b" stroke-width="3.4" stroke-linecap="round"><path d="M92 62c-7-10 7-13 0-26"/><path d="M114 58c-7-10 7-13 0-26"/><path d="M136 62c-7-10 7-13 0-26"/></g>
+  </svg></div>
+          <div class="art absolute bottom-8 right-6 w-28 rotate-6"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><ellipse cx="60" cy="96" rx="42" ry="5" fill="#3a2620" opacity=".12"/><ellipse cx="60" cy="62" rx="36" ry="17" transform="rotate(0 60 62)" fill="#cf8a45" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="60" cy="62" rx="36" ry="17" transform="rotate(60 60 62)" fill="#d99a52" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="60" cy="62" rx="36" ry="17" transform="rotate(120 60 62)" fill="#e3a961" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><ellipse cx="60" cy="62" rx="16" ry="14" fill="#e8b46d" stroke="#3a2620" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/><path d="M50 58c6-6 14-6 20 0" fill="none" stroke="#f4d197" stroke-width="3" stroke-linecap="round"/><rect x="59.5" y="54.3" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(65.4 59.5 54.3)"/><rect x="34.8" y="67.5" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(34.1 34.8 67.5)"/><rect x="30.7" y="46.5" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(39.6 30.7 46.5)"/><rect x="71.6" y="65.7" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(5.5 71.6 65.7)"/><rect x="67.8" y="87.6" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(86.5 67.8 87.6)"/><rect x="47.1" y="78" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(58.2 47.1 78)"/><rect x="61.7" y="88.2" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(39.3 61.7 88.2)"/><rect x="43" y="84.9" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(25.7 43 84.9)"/><rect x="62" y="33.8" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(80.2 62 33.8)"/><rect x="76.3" y="61.1" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(49 76.3 61.1)"/><rect x="64.1" y="88.1" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(2.1 64.1 88.1)"/><rect x="84.9" y="56" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(82.4 84.9 56)"/><rect x="77.6" y="63.9" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(33.7 77.6 63.9)"/><rect x="68" y="84.2" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(44.5 68 84.2)"/><rect x="82.1" y="72.7" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(48.9 82.1 72.7)"/><rect x="78.6" y="60.8" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(89.2 78.6 60.8)"/><rect x="49.9" y="53.4" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(27 49.9 53.4)"/><rect x="79.8" y="66.3" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(20.3 79.8 66.3)"/><rect x="62.1" y="54.8" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(44.2 62.1 54.8)"/><rect x="73.8" y="78.9" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(34.5 73.8 78.9)"/><rect x="89" y="72.3" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(64.3 89 72.3)"/><rect x="47" y="41.9" width="2.6" height="2.4" rx=".8" fill="#ffffff" stroke="#3a2620" stroke-width=".5" transform="rotate(84.9 47 41.9)"/></svg></div>
+        </div>
+      </div>
+      <div class="order-1 lg:order-2">
+        <p class="eyebrow">The café</p>
+        <h2 id="cafe-title" class="h-display mt-3 text-4xl sm:text-5xl">Stay for a coffee</h2>
+        <p class="mt-4 max-w-lg text-lg leading-relaxed text-muted">Twenty seats, a big communal table and a window for watching Phila Street go by. Brunch from 9 to 2.</p>
+        <ul class="mt-8 max-w-lg space-y-4">
+          <li><div class="flex items-baseline gap-3"><span class="font-bold">Flat white</span><span class="mb-1 flex-1 border-b-2 border-dotted border-ink/20" aria-hidden="true"></span><span class="font-display">$4.75</span></div><p class="text-[15px] text-muted">High Rock Coffee house blend, oat milk at no extra cost</p></li>
+          <li><div class="flex items-baseline gap-3"><span class="font-bold">Eggs on toast</span><span class="mb-1 flex-1 border-b-2 border-dotted border-ink/20" aria-hidden="true"></span><span class="font-display">$12</span></div><p class="text-[15px] text-muted">Wren Hollow Farm eggs, soft scrambled, on country sourdough</p></li>
+          <li><div class="flex items-baseline gap-3"><span class="font-bold">Mushrooms on rye</span><span class="mb-1 flex-1 border-b-2 border-dotted border-ink/20" aria-hidden="true"></span><span class="font-display">$14</span></div><p class="text-[15px] text-muted">White bean purée, herbs and chili oil. Vegan</p></li>
+          <li><div class="flex items-baseline gap-3"><span class="font-bold">Cardamom knot &amp; a coffee</span><span class="mb-1 flex-1 border-b-2 border-dotted border-ink/20" aria-hidden="true"></span><span class="font-display">$8.75</span></div><p class="text-[15px] text-muted">The breakfast of champions (and Ruth)</p></li>
+        </ul>
+        <a href="cafe.html" class="btn-line mt-8">See the café menu</a>
+      </div>
+    </section>
+
+    <section class="mt-28 bg-paper py-24" aria-labelledby="reviews-title">
+      <div class="container-x">
+        <div class="flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <p class="eyebrow">Kind words</p>
+            <h2 id="reviews-title" class="h-display mt-3 text-4xl sm:text-5xl">Worth crossing town for</h2>
+          </div>
+          <p class="flex items-center gap-3"><span class="font-display text-4xl">4.9</span><span class="text-[15px] leading-tight text-muted"><span class="flex text-[#d89a1e]" aria-hidden="true">★★★★★</span>from 612 reviews</span></p>
+        </div>
+        <div class="mt-12 grid gap-6 md:grid-cols-3">
+          <figure class="reveal card relative flex flex-col p-7">
+            <span class="hand absolute -top-5 left-6 text-7xl leading-none text-blush-deep/70" aria-hidden="true">“</span>
+            <p class="flex text-[#b07812]" role="img" aria-label="5 out of 5 stars">★★★★★</p>
+            <blockquote class="mt-4 flex-1 text-lg leading-relaxed">The cardamom knots are the best I’ve had outside Stockholm, and I lived there for six years. I preorder four every Saturday so I never miss out.</blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 border-t border-dashed border-line pt-5"><span class="grid size-10 place-items-center rounded-full bg-butter font-display text-butter-deep">H</span><span><span class="block font-bold">Hanne L.</span><span class="text-sm text-muted">East Side</span></span></figcaption>
+          </figure>
+          <figure class="reveal card relative flex flex-col p-7">
+            <span class="hand absolute -top-5 left-6 text-7xl leading-none text-blush-deep/70" aria-hidden="true">“</span>
+            <p class="flex text-[#b07812]" role="img" aria-label="5 out of 5 stars">★★★★★</p>
+            <blockquote class="mt-4 flex-1 text-lg leading-relaxed">Ordered a two-tier cake for my mom’s 70th using the builder. It looked exactly like the drawing, only better, and the lemon curd filling had the whole table quiet.</blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 border-t border-dashed border-line pt-5"><span class="grid size-10 place-items-center rounded-full bg-blush font-display text-blush-deep">D</span><span><span class="block font-bold">Dev P.</span><span class="text-sm text-muted">Ballston Spa</span></span></figcaption>
+          </figure>
+          <figure class="reveal card relative flex flex-col p-7">
+            <span class="hand absolute -top-5 left-6 text-7xl leading-none text-blush-deep/70" aria-hidden="true">“</span>
+            <p class="flex text-[#b07812]" role="img" aria-label="5 out of 5 stars">★★★★★</p>
+            <blockquote class="mt-4 flex-1 text-lg leading-relaxed">Our Friday treat: a seeded rye for the week and a coffee at the window table. The staff remember the dog’s name, which says it all.</blockquote>
+            <figcaption class="mt-6 flex items-center gap-3 border-t border-dashed border-line pt-5"><span class="grid size-10 place-items-center rounded-full bg-pistachio font-display text-pistachio-deep">M</span><span><span class="block font-bold">Margery &amp; Pip</span><span class="text-sm text-muted">West Side</span></span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-x mt-28" aria-labelledby="visit-title">
+      <div class="grid gap-10 lg:grid-cols-[1fr_1.15fr] lg:items-center">
+        <div>
+          <p class="eyebrow">Visit us</p>
+          <h2 id="visit-title" class="h-display mt-3 text-4xl sm:text-5xl">Halfway down Phila Street</h2>
+          <p class="mt-4 text-lg text-muted">27 Phila Street, Saratoga Springs, NY 12866. Look for the pink door and the line of dogs.</p>
+          <p class="mt-6 inline-flex items-center gap-2 rounded-full bg-paper px-4 py-2 font-bold ring-1 ring-ink/10" data-open-status>Open Tuesday to Sunday</p>
+          <ul class="mt-6 max-w-sm divide-y divide-dashed divide-line text-[15px] text-muted" data-hours-list aria-label="Opening hours"></ul>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="visit.html" class="btn-primary">Directions &amp; hours</a>
+            <a href="tel:+15185550129" class="btn-soft">Call (518) 555-0129</a>
+          </div>
+        </div>
+        <div class="reveal overflow-hidden rounded-[2rem] ring-1 ring-ink/10"><svg viewBox="0 0 640 440" class="h-full w-full" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustrated map: Bramble &amp; Rye is on Phila Street, between Broadway and Putnam Street, a short walk from Congress Park and the Spring Run Trail">
+    <rect width="640" height="440" fill="#eef0e0"/>
+    <path d="M-10 70C80 40 150 120 250 96s160-80 260-48 120 40 150 30" fill="none" stroke="#bcd7e0" stroke-width="34" stroke-linecap="round"/>
+    <path d="M-10 70C80 40 150 120 250 96s160-80 260-48 120 40 150 30" fill="none" stroke="#a7cad6" stroke-width="2" stroke-dasharray="2 10" stroke-linecap="round"/>
+    <text x="470" y="44" transform="rotate(-8 470 44)" text-anchor="middle" font-family="Karla, sans-serif" font-size="14" font-weight="700" letter-spacing=".5" fill="#6c574a">Spring Run</text>
+    <path d="M30 330h170l60-30 110-6 90 10 200-14" fill="none" stroke="#fffdf8" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M150 440l40-180 30-120 20-60" fill="none" stroke="#fffdf8" stroke-width="16" stroke-linecap="round"/>
+    <path d="M380 440l-10-150 10-120 20-90" fill="none" stroke="#fffdf8" stroke-width="16" stroke-linecap="round"/>
+    <path d="M520 440l-20-160 0-80" fill="none" stroke="#fffdf8" stroke-width="14" stroke-linecap="round"/>
+    <path d="M40 210h560" fill="none" stroke="#fffdf8" stroke-width="26" stroke-linecap="round"/>
+    <path d="M40 210h560" fill="none" stroke="#f6e3b8" stroke-width="20" stroke-linecap="round"/>
+    <text x="110" y="196" transform="rotate(0 110 196)" text-anchor="middle" font-family="Karla, sans-serif" font-size="12" font-weight="700" letter-spacing=".5" fill="#6c574a">PHILA STREET</text>
+    <text x="470" y="196" transform="rotate(0 470 196)" text-anchor="middle" font-family="Karla, sans-serif" font-size="12" font-weight="700" letter-spacing=".5" fill="#6c574a">PHILA STREET</text>
+    <text x="290" y="322" transform="rotate(-2 290 322)" text-anchor="middle" font-family="Karla, sans-serif" font-size="12" font-weight="700" letter-spacing=".5" fill="#6c574a">SPRING STREET</text>
+    <text x="172" y="120" transform="rotate(-76 172 120)" text-anchor="middle" font-family="Karla, sans-serif" font-size="11" font-weight="700" letter-spacing=".5" fill="#6c574a">BROADWAY</text>
+    <text x="392" y="166" transform="rotate(-84 392 166)" text-anchor="middle" font-family="Karla, sans-serif" font-size="11" font-weight="700" letter-spacing=".5" fill="#6c574a">PUTNAM ST</text>
+    <text x="560" y="260" transform="rotate(-86 560 260)" text-anchor="middle" font-family="Karla, sans-serif" font-size="11" font-weight="700" letter-spacing=".5" fill="#6c574a">HENRY STREET</text>
+    <rect x="60" y="244" width="64" height="52" rx="10" fill="#dfe8cb" stroke="#3a2620" stroke-width="1.6"/>
+    <text x="92" y="275" transform="rotate(0 92 275)" text-anchor="middle" font-family="Karla, sans-serif" font-size="12" font-weight="700" letter-spacing=".5" fill="#6c574a">Park</text>
+    <path d="M430 244h56v60h-56Z" fill="#f3e7d5" stroke="#3a2620" stroke-width="1.6"/>
+    <path d="M458 226l-12 18h24Z" fill="#e7d6bf" stroke="#3a2620" stroke-width="1.6"/>
+    <text x="458" y="320" transform="rotate(0 458 320)" text-anchor="middle" font-family="Karla, sans-serif" font-size="11" font-weight="700" letter-spacing=".5" fill="#6c574a">Old church</text>
+    <rect x="250" y="246" width="70" height="40" rx="8" fill="#f9e8b2" stroke="#3a2620" stroke-width="1.6"/>
+    <text x="285" y="271" transform="rotate(0 285 271)" text-anchor="middle" font-family="Karla, sans-serif" font-size="11" font-weight="700" letter-spacing=".5" fill="#6c574a">Parking lot</text>
+    <rect x="520" y="350" width="96" height="60" rx="10" fill="#f7dcd3" stroke="#3a2620" stroke-width="1.6"/>
+    <text x="568" y="385" transform="rotate(0 568 385)" text-anchor="middle" font-family="Karla, sans-serif" font-size="11" font-weight="700" letter-spacing=".5" fill="#6c574a">To the track</text>
+    <circle cx="214" cy="180" r="6" fill="#74305a"/>
+    <g transform="translate(300 210)">
+      <ellipse cx="0" cy="10" rx="20" ry="6" fill="#3a2620" opacity=".2"/>
+      <path d="M0 8c-18-18-28-30-28-44a28 28 0 0 1 56 0c0 14-10 26-28 44Z" fill="#74305a" stroke="#3a2620" stroke-width="2.4"/>
+      <circle cx="0" cy="-36" r="12" fill="#fffdf8" stroke="#3a2620" stroke-width="2"/>
+      <path d="M-7 -33c0-6 3-9 7-9s7 3 7 9c0 2-3 3-7 3s-7-1-7-3Z" fill="#c98744"/>
+    </g>
+    <g transform="translate(300 116)"><rect x="-104" y="-20" width="208" height="40" rx="20" fill="#fffdf8" stroke="#3a2620" stroke-width="2"/><text x="0" y="7" text-anchor="middle" font-family="Corben, serif" font-size="18" font-weight="700" fill="#3a2620">Bramble &amp; Rye</text></g>
+    <path d="M300 136v20" stroke="#3a2620" stroke-width="2" stroke-dasharray="3 4"/>
+    <g transform="translate(46 396)"><circle r="22" fill="#fffdf8" stroke="#3a2620" stroke-width="1.6"/><path d="M0 -14l5 14h-10Z" fill="#74305a"/><path d="M0 14l5 -14h-10Z" fill="#e7d6bf"/><text x="0" y="-26" transform="rotate(0 0 -26)" text-anchor="middle" font-family="Karla, sans-serif" font-size="11" font-weight="700" letter-spacing=".5" fill="#6c574a">N</text></g>
+  </svg></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="on-dark mt-28 bg-ink text-paper">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-3"><svg viewBox="0 0 48 48" class="size-11 shrink-0 transition-transform duration-500 group-hover:-rotate-6" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#f3dce7"/><path d="M9 31c-1-9 6-16 15-16s16 7 15 16c0 4-7 5-15 5s-15-1-15-5Z" fill="#c98744" stroke="#3a2620" stroke-width="1.8" stroke-linejoin="round"/><path d="M15 26c4-5 13-6 19-2" fill="none" stroke="#f6e6ca" stroke-width="2.6" stroke-linecap="round"/><path d="M30 13c3-4 8-4 10-1-3 3-7 3-10 1Z" fill="#6f9440" stroke="#3a2620" stroke-width="1.2" stroke-linejoin="round"/><circle cx="31" cy="15.5" r="2.6" fill="#74305a" stroke="#3a2620" stroke-width="1"/><circle cx="34.6" cy="17.4" r="2.6" fill="#74305a" stroke="#3a2620" stroke-width="1"/><circle cx="31.8" cy="19.6" r="2.6" fill="#74305a" stroke="#3a2620" stroke-width="1"/></svg><span class="font-display text-2xl font-bold">Bramble <span class="hand text-[1.7rem] font-normal text-butter">&amp;</span> Rye</span></a>
+        <p class="mt-4 max-w-sm leading-relaxed text-paper/80">A small bakery and café on Phila Street, Saratoga Springs. Sourdough, pastries and celebration cakes, baked before sunrise.</p>
+        <form data-form="newsletter" class="mt-6 max-w-sm" novalidate>
+          <label for="nl-email" class="block font-bold">The bake list</label>
+          <p id="nl-hint" class="mt-0.5 text-sm text-paper/75">One short email on Thursdays: specials, new bakes, the odd recipe.</p>
+          <div class="mt-3 flex gap-2" data-error-after>
+            <input id="nl-email" name="email" type="email" required autocomplete="email" data-label="Your email" aria-describedby="nl-hint" placeholder="you@example.com" class="min-w-0 flex-1 rounded-full border border-paper/25 bg-paper/10 px-4 py-2.5 text-paper placeholder:text-paper/55 focus:border-butter focus:outline-none focus:ring-2 focus:ring-butter/40">
+            <button type="submit" class="btn shrink-0 bg-butter px-5 py-2.5 text-ink hover:bg-paper">Sign up</button>
+          </div>
+        </form>
+      </div>
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-butter">Visit</h2>
+        <address class="mt-4 not-italic leading-relaxed text-paper/85">27 Phila Street<br>Saratoga Springs, NY 12866</address>
+        <p class="mt-3"><a href="tel:+15185550129" class="text-paper/85 underline decoration-paper/30 underline-offset-4 hover:text-paper hover:decoration-paper">(518) 555-0129</a></p>
+        <p class="mt-1"><a href="mailto:hello@brambleandrye.example" class="text-paper/85 underline decoration-paper/30 underline-offset-4 hover:text-paper hover:decoration-paper">hello@brambleandrye.example</a></p>
+      </div>
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-butter">Hours</h2>
+        <dl class="mt-4 space-y-1.5 text-paper/85">
+          <div class="flex justify-between gap-4"><dt>Tue–Fri</dt><dd>7:30am–4pm</dd></div>
+          <div class="flex justify-between gap-4"><dt>Saturday</dt><dd>8am–4pm</dd></div>
+          <div class="flex justify-between gap-4"><dt>Sunday</dt><dd>9am–2pm</dd></div>
+          <div class="flex justify-between gap-4"><dt>Monday</dt><dd>Closed</dd></div>
+        </dl>
+        <p class="mt-4 inline-flex items-center gap-2 text-sm text-paper/85" data-open-status></p>
+      </div>
+      <div>
+        <h2 class="text-sm font-bold uppercase tracking-[0.18em] text-butter">Explore</h2>
+        <ul class="mt-4 space-y-2">
+          <li><a href="shop.html" class="text-paper/85 hover:text-paper hover:underline hover:underline-offset-4">Preorder for pickup</a></li>
+          <li><a href="cakes.html" class="text-paper/85 hover:text-paper hover:underline hover:underline-offset-4">Celebration cakes</a></li>
+          <li><a href="cafe.html" class="text-paper/85 hover:text-paper hover:underline hover:underline-offset-4">Café menu</a></li>
+          <li><a href="about.html" class="text-paper/85 hover:text-paper hover:underline hover:underline-offset-4">Our story</a></li>
+          <li><a href="visit.html#wholesale" class="text-paper/85 hover:text-paper hover:underline hover:underline-offset-4">Wholesale</a></li>
+          <li><a href="checkout.html" class="text-paper/85 hover:text-paper hover:underline hover:underline-offset-4">Checkout</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-paper/15">
+      <div class="container-x flex flex-col gap-2 py-6 text-sm text-paper/70 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Bramble &amp; Rye Bakehouse LLC. A Freeframe template.</p>
+        <p>Allergies? Ask us anything: we bake everything in one small kitchen.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="basket-backdrop" hidden class="fixed inset-0 z-50 bg-ink/45 opacity-0"></div>
+  <aside id="basket-drawer" hidden role="dialog" aria-modal="true" aria-labelledby="basket-title" class="fixed inset-y-0 right-0 z-[60] flex w-full max-w-[28rem] translate-x-full flex-col bg-flour shadow-2xl">
+    <div class="flex items-center justify-between gap-4 border-b border-line px-5 py-4 sm:px-6">
+      <h2 id="basket-title" class="font-display text-[1.75rem]">Your basket <span data-drawer-count class="ml-1 align-middle font-sans text-sm font-bold text-muted"></span></h2>
+      <button type="button" data-basket-close class="grid size-11 place-items-center rounded-full bg-oat transition hover:bg-line" aria-label="Close basket">
+        <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div data-basket-body class="flex-1 overflow-y-auto"></div>
+    <div data-basket-foot hidden class="border-t border-line bg-paper px-5 py-5 sm:px-6"></div>
+  </aside>
+
+  <div id="toast" hidden data-show="false" role="status" aria-live="polite" class="fixed inset-x-3 bottom-4 z-[70] mx-auto flex max-w-lg items-start gap-3 rounded-[1.4rem] bg-ink p-4 pl-5 text-paper shadow-2xl on-dark sm:bottom-6">
+    <svg viewBox="0 0 24 24" class="mt-0.5 size-5 shrink-0 text-butter" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+    <p data-toast-text class="flex-1 text-[15px] leading-snug"></p>
+    <button type="button" data-toast-link class="shrink-0 rounded-full bg-butter px-3 py-1.5 text-sm font-bold text-ink hover:bg-paper">View basket</button>
+    <button type="button" data-toast-close class="grid size-8 shrink-0 place-items-center rounded-full text-paper/80 hover:bg-paper/10 hover:text-paper" aria-label="Dismiss">
+      <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4b5888"/><stop offset="1" stop-color="#e8a586"/></linearGradient></defs>
+  <rect width="1200" height="630" fill="url(#s)"/>
+  <circle cx="930" cy="430" r="90" fill="#ffd9b3" opacity=".8"/>
+  <path d="M0 470 C200 420 380 450 600 440 S1000 410 1200 450 V630 H0Z" fill="#59664f"/>
+  <rect x="640" y="300" width="420" height="170" fill="#cfc6b8"/><rect x="760" y="210" width="400" height="100" fill="#2f3532"/>
+  <rect x="660" y="320" width="230" height="130" fill="#ffcd78"/><rect x="790" y="226" width="340" height="66" fill="#ffcd78"/>
+  <rect width="1200" height="630" fill="#1b2420" opacity=".25"/>
+  <rect x="0" y="0" width="660" height="630" fill="#1b2420" opacity=".55"/>
+  <g transform="translate(80 120)"><rect width="72" height="72" rx="18" fill="#22362c"/><path d="M16 54V32l20-14 20 14v22" fill="none" stroke="#a7834b" stroke-width="4"/><path d="M29 54V40h14v14" fill="none" stroke="#fff" stroke-width="4"/></g>
+  <text x="80" y="300" font-family="DM Serif Display, Georgia, serif" font-size="76" fill="#fff">Harbor &amp; Hill</text>
+  <text x="80" y="370" font-family="DM Sans, Helvetica, Arial, sans-serif" font-size="32" fill="#f4ecdd">Homes for sale &amp; rent in Marlow Bay</text>
+  <text x="80" y="520" font-family="DM Sans, Helvetica, Arial, sans-serif" font-size="24" font-weight="700" letter-spacing="4" fill="#a7834b">INDEPENDENT REAL ESTATE AGENTS SINCE 1999</text>
+</svg>

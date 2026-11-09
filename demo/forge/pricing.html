@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing — Pay for the events you send | Forge</title>
+  <meta name="description" content="Usage-based pricing for webhooks. Start free with 100,000 events a month, then pay per million with automatic volume discounts. No per-endpoint fees.">
+  <meta name="theme-color" content="#09090a">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Forge">
+  <meta property="og:title" content="Pricing — Pay for the events you send | Forge">
+  <meta property="og:description" content="Usage-based pricing for webhooks. Start free with 100,000 events a month, then pay per million with automatic volume discounts. No per-endpoint fees.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400..700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="pricing" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[80] bg-brand-400 px-4 py-2.5 font-mono text-sm font-medium text-ink-950 focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 border-b border-line">
+    <div class="container-x flex h-[60px] items-center justify-between gap-6">
+      <div class="flex items-center gap-8">
+        <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Forge home">
+          <svg viewBox="0 0 28 28" class="h-7 w-7 shrink-0" aria-hidden="true"><rect width="28" height="28" rx="3" fill="#ffbe3d"/><path d="M7.5 6.5h13v3.6h-8.9v3.2h7.4v3.6h-7.4v4.6H7.5z" fill="#09090a"/><path d="M17 18h3.5v3.5H17z" fill="#09090a"/></svg>
+          <span class="font-mono text-[15px] font-semibold tracking-tight">forge<span class="logo-cursor text-brand-400">_</span></span>
+        </a>
+        <nav aria-label="Main" class="hidden lg:block">
+          <ul class="flex items-center">
+            <li><a href="docs.html" class="nav-link">Quickstart</a></li>
+            <li><a href="sdks.html" class="nav-link">SDKs</a></li>
+            <li><a href="pricing.html" aria-current="page" class="nav-link">Pricing</a></li>
+            <li><a href="changelog.html" class="nav-link">Changelog</a></li>
+            <li><a href="status.html" class="nav-link">Status</a></li>
+            <li><a href="company.html" class="nav-link">Company</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="nav-link hidden sm:inline-flex">Talk to sales</a>
+        <a href="signup.html" class="btn-primary btn-sm hidden sm:inline-flex">Get API key</a>
+        <button id="menu-toggle" type="button" class="grid h-10 w-10 place-items-center rounded-[3px] border border-line-strong bg-ink-900 text-fg lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-line lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-8">
+        <ul class="font-mono">
+          <li><a href="index.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>home</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="docs.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>quickstart</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="sdks.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>sdks</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="pricing.html" aria-current="page" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>pricing</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="changelog.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>changelog</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="status.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>status</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="company.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>company</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="contact.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>talk-to-sales</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+        </ul>
+        <a href="signup.html" class="btn-primary btn-lg mt-6 w-full">Get an API key</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <div class="frame">
+      <!-- Header and billing switch -->
+      <section class="relative overflow-hidden" aria-labelledby="pricing-title">
+        <div class="bg-plus pointer-events-none absolute inset-0" aria-hidden="true"></div>
+        <div class="pad-x relative grid gap-8 pt-14 pb-12 sm:pt-20 lg:grid-cols-12 lg:items-end">
+          <div class="lg:col-span-8">
+            <p class="eyebrow reveal"><span class="eyebrow-num">$</span>/ Pricing</p>
+            <h1 id="pricing-title" class="h-display reveal reveal-d1 mt-5">Pay for events, not&nbsp;endpoints.</h1>
+            <p class="lead reveal reveal-d2 mt-6 max-w-2xl">One price per event you send, however many endpoints it fans out to. Retries are free. Volume discounts kick in automatically, and you can start without a card.</p>
+          </div>
+          <div class="reveal reveal-d2 flex items-center gap-3 font-mono text-sm lg:col-span-4 lg:justify-end">
+            <span id="billing-monthly" class="text-muted">Monthly</span>
+            <button id="billing-toggle" type="button" role="switch" aria-checked="false" aria-labelledby="billing-monthly billing-annual" class="switch"></button>
+            <span id="billing-annual" class="text-muted">Annual <span class="ml-1 rounded-[2px] bg-brand-400/15 px-1.5 py-0.5 text-xs text-brand-300">−20%</span></span>
+          </div>
+        </div>
+
+        <!-- Plans. Prices also live in PRICING in assets/js/main.js: keep them in step. -->
+        <ul class="cells relative grid-cols-1 border-t border-line md:grid-cols-2 xl:grid-cols-4">
+          <li data-plan="free" class="reveal flex flex-col p-6 sm:p-8">
+            <div class="flex items-center justify-between gap-3"><h2 class="font-mono text-sm font-semibold tracking-wide uppercase">Free</h2><span data-rec-badge class="chip border-brand-400/60 text-brand-300">Fits your volume</span></div>
+            <p class="mt-5 flex items-baseline gap-1.5"><span class="font-mono text-4xl font-medium tracking-tight">$0</span><span class="font-mono text-sm text-subtle">/ month</span></p>
+            <p class="mt-1 h-5 font-mono text-xs text-subtle">Forever, no card</p>
+            <p class="mt-5 text-[15px] text-muted">For side projects and for trying Forge in staging.</p>
+            <div class="mt-6 border-y border-line py-4 font-mono text-[13px]">
+              <p class="flex justify-between gap-4"><span class="text-subtle">Included</span><span>100k events</span></p>
+              <p class="mt-2 flex justify-between gap-4"><span class="text-subtle">Overage</span><span>Hard limit</span></p>
+            </div>
+            <ul class="mt-6 flex-1 space-y-2.5 text-[15px] text-muted">
+              <li class="flex gap-3"><span class="font-mono text-brand-400" aria-hidden="true">+</span>Up to 10 endpoints</li>
+              <li class="flex gap-3"><span class="font-mono text-brand-400" aria-hidden="true">+</span>Signing, retries and replay</li>
+              <li class="flex gap-3"><span class="font-mono text-brand-400" aria-hidden="true">+</span>3-day delivery logs</li>
+              <li class="flex gap-3"><span class="font-mono text-brand-400" aria-hidden="true">+</span>Community support</li>
+            </ul>
+            <a href="signup.html?plan=free" class="btn-ghost mt-8 w-full">Start free</a>
+          </li>
+          <li data-plan="build" class="reveal reveal-d1 flex flex-col p-6 sm:p-8">
+            <div class="flex items-center justify-between gap-3"><h2 class="font-mono text-sm font-semibold tracking-wide uppercase">Build</h2><span data-rec-badge class="chip border-brand-400/60 text-brand-300">Fits your volume</span></div>
+            <p class="mt-5 flex items-baseline gap-1.5"><span class="font-mono text-4xl font-medium tracking-tight" data-price-monthly="$29" data-price-annual="$23">$29</span><span class="font-mono text-sm text-subtle">/ month</span></p>
+            <p class="mt-1 h-5 font-mono text-xs text-subtle" data-billing-note data-monthly="Billed monthly" data-annual="$278 billed yearly">Billed monthly</p>
+            <p class="mt-5 text-[15px] text-muted">For products with paying customers and real traffic.</p>
+            <div class="mt-6 border-y border-line py-4 font-mono text-[13px]">
+              <p class="flex justify-between gap-4"><span class="text-subtle">Included</span><span>1M events</span></p>
+              <p class="mt-2 flex justify-between gap-4"><span class="text-subtle">Overage</span><span>$20 / million</span></p>
+            </div>
+            <ul class="mt-6 flex-1 space-y-2.5 text-[15px] text-muted">
+              <li class="flex gap-3"><span class="font-mono text-brand-400" aria-hidden="true">+</span>Unlimited endpoints</li>
+              <li class="flex gap-3"><span class="font-mono text-brand-400" aria-hidden="true">+</span>14-day delivery logs</li>
+              <li class="flex gap-3"><span class="font-mono text-brand-400" aria-hidden="true">+</span>Customer portal</li>
+              <li class="flex gap-3"><span class="font-mono text-brand-400" aria-hidden="true">+</span>Email support, 1 business day</li>
+            </ul>
+            <a href="signup.html?plan=build" class="btn-ghost mt-8 w-full">Start with Build</a>
+          </li>
+          <li data-plan="scale" class="reveal reveal-d2 relative flex flex-col bg-ink-900! p-6 sm:p-8">
+            <div class="flex items-center justify-between gap-3"><h2 class="font-mono text-sm font-semibold tracking-wide text-brand-400 uppercase">Scale</h2><span data-rec-badge class="chip border-brand-400/60 text-brand-300">Fits your volume</span></div>
+            <p class="mt-5 flex items-baseline gap-1.5"><span class="font-mono text-4xl font-medium tracking-tight" data-price-monthly="$249" data-price-annual="$199">$249</span><span class="font-mono text-sm text-subtle">/ month</span></p>
+            <p class="mt-1 h-5 font-mono text-xs text-subtle" data-billing-note data-monthly="Billed monthly" data-annual="$2,390 billed yearly">Billed monthly</p>
+            <p class="mt-5 text-[15px] text-muted">For platforms where webhooks are part of the product.</p>
+            <div class="mt-6 border-y border-line py-4 font-mono text-[13px]">
+              <p class="flex justify-between gap-4"><span class="text-subtle">Included</span><span>15M events</span></p>
+              <p class="mt-2 flex justify-between gap-4"><span class="text-subtle">Overage</span><span>$12 → $8 / million</span></p>
+            </div>
+            <ul class="mt-6 flex-1 space-y-2.5 text-[15px] text-muted">
+              <li class="flex gap-3"><span class="font-mono text-brand-400" aria-hidden="true">+</span>Everything in Build</li>
+              <li class="flex gap-3"><span class="font-mono text-brand-400" aria-hidden="true">+</span>30-day logs, white-label portal</li>
+              <li class="flex gap-3"><span class="font-mono text-brand-400" aria-hidden="true">+</span>Per-endpoint rate limits, SSO</li>
+              <li class="flex gap-3"><span class="font-mono text-brand-400" aria-hidden="true">+</span>99.99% SLA, shared Slack channel</li>
+            </ul>
+            <a href="signup.html?plan=scale" class="btn-primary mt-8 w-full">Start with Scale</a>
+          </li>
+          <li data-plan="enterprise" class="reveal reveal-d3 flex flex-col p-6 sm:p-8">
+            <div class="flex items-center justify-between gap-3"><h2 class="font-mono text-sm font-semibold tracking-wide uppercase">Enterprise</h2><span data-rec-badge class="chip border-brand-400/60 text-brand-300">Fits your volume</span></div>
+            <p class="mt-5 flex items-baseline gap-1.5"><span class="font-mono text-4xl font-medium tracking-tight">Custom</span></p>
+            <p class="mt-1 h-5 font-mono text-xs text-subtle">Annual contract</p>
+            <p class="mt-5 text-[15px] text-muted">For 250M+ events a month, regulated data and strict SLAs.</p>
+            <div class="mt-6 border-y border-line py-4 font-mono text-[13px]">
+              <p class="flex justify-between gap-4"><span class="text-subtle">Included</span><span>Committed volume</span></p>
+              <p class="mt-2 flex justify-between gap-4"><span class="text-subtle">Overage</span><span>from $6 / million</span></p>
+            </div>
+            <ul class="mt-6 flex-1 space-y-2.5 text-[15px] text-muted">
+              <li class="flex gap-3"><span class="font-mono text-brand-400" aria-hidden="true">+</span>Everything in Scale</li>
+              <li class="flex gap-3"><span class="font-mono text-brand-400" aria-hidden="true">+</span>Dedicated region, private networking</li>
+              <li class="flex gap-3"><span class="font-mono text-brand-400" aria-hidden="true">+</span>SAML, SCIM and audit log export</li>
+              <li class="flex gap-3"><span class="font-mono text-brand-400" aria-hidden="true">+</span>99.995% SLA, named engineer</li>
+            </ul>
+            <a href="contact.html" class="btn-ghost mt-8 w-full">Talk to sales</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Calculator -->
+      <section id="calculator" class="rule" aria-labelledby="calc-title">
+        <div class="pad-x grid gap-10 py-16 lg:grid-cols-12 lg:py-24">
+          <div class="lg:col-span-5">
+            <p class="eyebrow reveal"><span class="eyebrow-num">01</span>/ Estimate</p>
+            <h2 id="calc-title" class="h-section reveal reveal-d1 mt-4">What will my bill be?</h2>
+            <p class="lead reveal reveal-d2 mt-5">Drag to your monthly event volume. We pick the cheapest plan for it, the same way your invoice would. An event counts once, no matter how many endpoints or retries it takes.</p>
+            <ul class="reveal reveal-d2 mt-8 space-y-3 font-mono text-[13px] text-muted">
+              <li class="flex gap-3"><span class="text-brand-400" aria-hidden="true">→</span>Retries and replays are never billed</li>
+              <li class="flex gap-3"><span class="text-brand-400" aria-hidden="true">→</span>Scale overage drops to $8/M above 100M</li>
+              <li class="flex gap-3"><span class="text-brand-400" aria-hidden="true">→</span>Annual billing takes 20% off the base fee</li>
+            </ul>
+          </div>
+          <div id="calc-result" class="term reveal min-w-0 lg:col-span-7">
+            <div class="term-bar h-10 justify-between font-mono text-xs text-subtle"><span>estimate.json</span><span>USD, excl. tax</span></div>
+            <div class="p-6 sm:p-8">
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <label for="calc-volume" class="label mb-0">Events per month</label>
+                <output for="calc-volume" id="calc-volume-out" class="font-mono text-2xl font-medium tracking-tight">5,000,000</output>
+              </div>
+              <input id="calc-volume" type="range" class="range mt-4" min="0" max="19" step="1" value="9">
+              <div class="mt-1 flex justify-between font-mono text-[11px] text-subtle" aria-hidden="true"><span>10k</span><span>1M</span><span>15M</span><span>500M</span></div>
+              <div class="mt-8 grid gap-6 border-t border-line pt-6 sm:grid-cols-2">
+                <div>
+                  <p class="font-mono text-xs text-subtle">Best plan</p>
+                  <p id="calc-plan" class="mt-1 font-mono text-xl text-brand-400">Build</p>
+                  <p class="mt-4 font-mono text-xs text-subtle">Per month</p>
+                  <p class="mt-1 font-mono text-5xl font-medium tracking-tight"><span id="calc-total">$109</span></p>
+                  <p id="calc-per" class="mt-2 font-mono text-xs text-muted">$0.0218 per 1,000 events</p>
+                </div>
+                <div class="min-w-0">
+                  <p class="font-mono text-xs text-subtle">Breakdown</p>
+                  <ul id="calc-breakdown" class="mt-2 space-y-2 font-mono text-[13px] text-muted">
+                    <li class="flex justify-between gap-4"><span>Build base fee</span><span class="text-fg">$29</span></li>
+                    <li class="flex justify-between gap-4"><span>Included events</span><span class="text-fg">1,000,000</span></li>
+                    <li class="flex justify-between gap-4"><span>4M × $20/M</span><span class="text-fg">$80</span></li>
+                  </ul>
+                  <a id="calc-cta" href="signup.html?plan=build" class="btn-primary mt-6 w-full">Start with Build</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comparison table -->
+      <section id="compare" class="rule" aria-labelledby="compare-title">
+        <div class="pad-x pt-16 pb-10 lg:pt-24">
+          <p class="eyebrow reveal"><span class="eyebrow-num">02</span>/ Compare</p>
+          <h2 id="compare-title" class="h-section reveal reveal-d1 mt-4">Every plan, line by line.</h2>
+        </div>
+        <div class="reveal relative overflow-x-auto border-t border-line" role="region" aria-labelledby="compare-title" tabindex="0">
+          <table class="w-full min-w-[46rem] border-collapse text-left text-sm">
+            <thead class="font-mono text-xs tracking-wide text-subtle uppercase">
+              <tr class="border-b border-line">
+                <th scope="col" class="w-[34%] px-5 py-4 font-medium sm:px-8 lg:px-12">Feature</th>
+                <th scope="col" class="px-4 py-4 font-medium">Free</th>
+                <th scope="col" class="px-4 py-4 font-medium">Build</th>
+                <th scope="col" class="px-4 py-4 font-medium text-brand-400">Scale</th>
+                <th scope="col" class="px-4 py-4 font-medium">Enterprise</th>
+              </tr>
+            </thead>
+            <tbody class="font-mono text-[13px] text-muted">
+              <tr class="bg-ink-900"><th scope="colgroup" colspan="5" class="px-5 py-2.5 text-xs font-medium text-fg sm:px-8 lg:px-12">Usage</th></tr>
+              <tr class="border-b border-line"><th scope="row" class="px-5 py-3.5 font-sans text-sm font-normal text-fg sm:px-8 lg:px-12">Events included / month</th><td class="px-4">100k</td><td class="px-4">1M</td><td class="px-4">15M</td><td class="px-4">Committed</td></tr>
+              <tr class="border-b border-line"><th scope="row" class="px-5 py-3.5 font-sans text-sm font-normal text-fg sm:px-8 lg:px-12">Overage per million</th><td class="px-4">—</td><td class="px-4">$20</td><td class="px-4">$12, then $8</td><td class="px-4">from $6</td></tr>
+              <tr class="border-b border-line"><th scope="row" class="px-5 py-3.5 font-sans text-sm font-normal text-fg sm:px-8 lg:px-12">Endpoints</th><td class="px-4">10</td><td class="px-4">Unlimited</td><td class="px-4">Unlimited</td><td class="px-4">Unlimited</td></tr>
+              <tr class="border-b border-line"><th scope="row" class="px-5 py-3.5 font-sans text-sm font-normal text-fg sm:px-8 lg:px-12">API rate limit</th><td class="px-4">50 req/s</td><td class="px-4">500 req/s</td><td class="px-4">5,000 req/s</td><td class="px-4">Custom</td></tr>
+              <tr class="bg-ink-900"><th scope="colgroup" colspan="5" class="px-5 py-2.5 text-xs font-medium text-fg sm:px-8 lg:px-12">Delivery</th></tr>
+              <tr class="border-b border-line"><th scope="row" class="px-5 py-3.5 font-sans text-sm font-normal text-fg sm:px-8 lg:px-12">Signing, retries, replay</th><td class="px-4 text-ok">✓<span class="sr-only">Included</span></td><td class="px-4 text-ok">✓<span class="sr-only">Included</span></td><td class="px-4 text-ok">✓<span class="sr-only">Included</span></td><td class="px-4 text-ok">✓<span class="sr-only">Included</span></td></tr>
+              <tr class="border-b border-line"><th scope="row" class="px-5 py-3.5 font-sans text-sm font-normal text-fg sm:px-8 lg:px-12">Delivery log retention</th><td class="px-4">3 days</td><td class="px-4">14 days</td><td class="px-4">30 days</td><td class="px-4">90 days + export</td></tr>
+              <tr class="border-b border-line"><th scope="row" class="px-5 py-3.5 font-sans text-sm font-normal text-fg sm:px-8 lg:px-12">Per-endpoint rate limits</th><td class="px-4">—</td><td class="px-4">—</td><td class="px-4 text-ok">✓<span class="sr-only">Included</span></td><td class="px-4 text-ok">✓<span class="sr-only">Included</span></td></tr>
+              <tr class="border-b border-line"><th scope="row" class="px-5 py-3.5 font-sans text-sm font-normal text-fg sm:px-8 lg:px-12">Customer portal</th><td class="px-4">—</td><td class="px-4">Forge branded</td><td class="px-4">White-label</td><td class="px-4">White-label</td></tr>
+              <tr class="border-b border-line"><th scope="row" class="px-5 py-3.5 font-sans text-sm font-normal text-fg sm:px-8 lg:px-12">Data residency</th><td class="px-4">1 region</td><td class="px-4">Choose region</td><td class="px-4">Choose region</td><td class="px-4">Dedicated</td></tr>
+              <tr class="bg-ink-900"><th scope="colgroup" colspan="5" class="px-5 py-2.5 text-xs font-medium text-fg sm:px-8 lg:px-12">Security and support</th></tr>
+              <tr class="border-b border-line"><th scope="row" class="px-5 py-3.5 font-sans text-sm font-normal text-fg sm:px-8 lg:px-12">Single sign-on</th><td class="px-4">—</td><td class="px-4">—</td><td class="px-4">Google, GitHub</td><td class="px-4">SAML + SCIM</td></tr>
+              <tr class="border-b border-line"><th scope="row" class="px-5 py-3.5 font-sans text-sm font-normal text-fg sm:px-8 lg:px-12">Uptime SLA</th><td class="px-4">—</td><td class="px-4">—</td><td class="px-4">99.99%</td><td class="px-4">99.995%</td></tr>
+              <tr><th scope="row" class="px-5 py-3.5 font-sans text-sm font-normal text-fg sm:px-8 lg:px-12">Support</th><td class="px-4">Community</td><td class="px-4">Email</td><td class="px-4">Slack, 4h</td><td class="px-4">Named engineer, 1h</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="rule" aria-labelledby="faq-title">
+        <div class="pad-x grid gap-10 py-16 lg:grid-cols-12 lg:py-24">
+          <div class="lg:col-span-4">
+            <p class="eyebrow reveal"><span class="eyebrow-num">03</span>/ FAQ</p>
+            <h2 id="faq-title" class="h-section reveal reveal-d1 mt-4">Billing questions.</h2>
+            <p class="reveal reveal-d2 mt-5 text-muted">Something else? <a href="contact.html" class="link">Ask the team</a>, a real engineer answers.</p>
+          </div>
+          <div class="divide-y divide-line border-y border-line lg:col-span-8" data-accordion>
+            <div class="acc-item is-open">
+              <h3><button type="button" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[17px] font-medium" aria-expanded="true" aria-controls="faq-1">What counts as an event?<span class="acc-icon font-mono text-xl text-brand-400" aria-hidden="true">+</span></button></h3>
+              <div id="faq-1" class="acc-panel"><div><p class="pb-5 leading-relaxed text-muted">One successful <code class="font-mono text-sm text-fg">POST /v1/events</code> call. If that event fans out to five endpoints and one of them needs three retries, it is still one event. Requests rejected with a 4xx error and duplicates caught by an idempotency key are not counted.</p></div></div>
+            </div>
+            <div class="acc-item">
+              <h3><button type="button" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[17px] font-medium" aria-expanded="false" aria-controls="faq-2">What happens when I hit the Free limit?<span class="acc-icon font-mono text-xl text-brand-400" aria-hidden="true">+</span></button></h3>
+              <div id="faq-2" class="acc-panel"><div><p class="pb-5 leading-relaxed text-muted">New events are rejected with a <code class="font-mono text-sm text-fg">429</code> and a clear error until the month resets or you upgrade. Events already accepted keep being delivered and retried. We email you at 80% and 100%.</p></div></div>
+            </div>
+            <div class="acc-item">
+              <h3><button type="button" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[17px] font-medium" aria-expanded="false" aria-controls="faq-3">Can I set a spending cap?<span class="acc-icon font-mono text-xl text-brand-400" aria-hidden="true">+</span></button></h3>
+              <div id="faq-3" class="acc-panel"><div><p class="pb-5 leading-relaxed text-muted">Yes. Every paid plan has an optional monthly cap in the dashboard. When you reach it Forge behaves like the Free limit: new events are rejected, nothing already accepted is lost.</p></div></div>
+            </div>
+            <div class="acc-item">
+              <h3><button type="button" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[17px] font-medium" aria-expanded="false" aria-controls="faq-4">Do test-mode events cost anything?<span class="acc-icon font-mono text-xl text-brand-400" aria-hidden="true">+</span></button></h3>
+              <div id="faq-4" class="acc-panel"><div><p class="pb-5 leading-relaxed text-muted">No. Events sent with an <code class="font-mono text-sm text-fg">fk_test_</code> key are free up to 1M a month on every plan, including Free, and are kept separate from live data.</p></div></div>
+            </div>
+            <div class="acc-item">
+              <h3><button type="button" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[17px] font-medium" aria-expanded="false" aria-controls="faq-5">How does annual billing work?<span class="acc-icon font-mono text-xl text-brand-400" aria-hidden="true">+</span></button></h3>
+              <div id="faq-5" class="acc-panel"><div><p class="pb-5 leading-relaxed text-muted">You pay the base fee for twelve months up front with 20% off. Overage is still billed monthly in arrears at your plan’s rate, so a quiet month never costs you more.</p></div></div>
+            </div>
+            <div class="acc-item">
+              <h3><button type="button" class="flex w-full items-center justify-between gap-6 py-5 text-left text-[17px] font-medium" aria-expanded="false" aria-controls="faq-6">Which payment methods do you accept?<span class="acc-icon font-mono text-xl text-brand-400" aria-hidden="true">+</span></button></h3>
+              <div id="faq-6" class="acc-panel"><div><p class="pb-5 leading-relaxed text-muted">Cards on Build and Scale, plus ACH debit and invoices with 30-day terms on annual Scale and Enterprise contracts. Prices are in US dollars.</p></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="mt-auto border-t border-line bg-ink-950">
+    <div class="container-x grid gap-12 py-14 lg:grid-cols-12">
+      <div class="lg:col-span-3">
+        <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Forge home">
+          <svg viewBox="0 0 28 28" class="h-7 w-7 shrink-0" aria-hidden="true"><rect width="28" height="28" rx="3" fill="#ffbe3d"/><path d="M7.5 6.5h13v3.6h-8.9v3.2h7.4v3.6h-7.4v4.6H7.5z" fill="#09090a"/><path d="M17 18h3.5v3.5H17z" fill="#09090a"/></svg>
+          <span class="font-mono text-[15px] font-semibold tracking-tight">forge<span class="logo-cursor text-brand-400">_</span></span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-muted">Webhooks infrastructure for teams that ship. Built in Erie and Bellingham.</p>
+        <a href="status.html" class="mt-6 inline-flex items-center gap-2.5 rounded-[3px] border border-line-strong bg-ink-900 px-3 py-1.5 font-mono text-xs text-muted transition hover:border-ink-600 hover:text-fg"><span class="dot s-ok pulse" aria-hidden="true"></span>All systems operational</a>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-5">
+        <nav aria-label="Product">
+          <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">Product</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="index.html#features" class="text-muted transition hover:text-fg">Features</a></li>
+            <li><a href="pricing.html" aria-current="page" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Pricing</a></li>
+            <li><a href="changelog.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Changelog</a></li>
+            <li><a href="status.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Status</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Developers">
+          <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">Developers</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="docs.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Quickstart</a></li>
+            <li><a href="docs.html#verify" class="text-muted transition hover:text-fg">Verify signatures</a></li>
+            <li><a href="sdks.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">SDKs and tools</a></li>
+            <li><a href="index.html#inspector" class="text-muted transition hover:text-fg">API explorer</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">Company</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="company.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">About</a></li>
+            <li><a href="company.html#careers" class="text-muted transition hover:text-fg">Careers</a></li>
+            <li><a href="contact.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Talk to sales</a></li>
+            <li><a href="pricing.html#faq" class="text-muted transition hover:text-fg">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="lg:col-span-4">
+        <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">API changes by email</h2>
+        <p class="mt-4 text-sm text-muted">Breaking changes, new versions and deprecations. About one email a month.</p>
+        <form data-form="newsletter" class="mt-4" novalidate>
+          <label for="footer-email" class="sr-only">Email address</label>
+          <div class="flex gap-2">
+            <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@company.example" class="input py-2 text-sm">
+            <button type="submit" class="btn-ghost shrink-0">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="border-t border-line">
+      <div class="container-x flex flex-col gap-2 py-5 font-mono text-xs text-subtle sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Forge Systems, Inc. Forge is a fictional company.</p>
+        <p>API version <span class="text-muted">2026-09-01</span> · Template by Freeframe</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

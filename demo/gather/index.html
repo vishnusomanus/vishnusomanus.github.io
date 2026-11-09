@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Riverbend Church — A church for everyone in Lawrence, Kansas</title>
+  <meta name="description" content="Riverbend is a non-denominational community church in Lawrence, Kansas. Sundays at 9:00 and 11:00 am on Riverside Avenue, with kids’ programs, small groups and a seat saved for you.">
+  <meta name="theme-color" content="#fbf6ee">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Riverbend Church">
+  <meta property="og:title" content="Riverbend Church — A church for everyone in Lawrence, Kansas">
+  <meta property="og:description" content="Riverbend is a non-denominational community church in Lawrence, Kansas. Sundays at 9:00 and 11:00 am on Riverside Avenue, with kids’ programs, small groups and a seat saved for you.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400..800;1,6..12,400..600&amp;family=Urbanist:wght@500..900&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="home" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm font-bold text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <div class="bg-ink text-white">
+    <div class="container-x flex min-h-10 items-center justify-between gap-4 py-2 text-[13px]">
+      <p data-service-status class="flex items-center gap-2 font-semibold"><span class="chip-dot bg-apricot" aria-hidden="true"></span>Sundays at 9:00 &amp; 11:00 am</p>
+      <p class="hidden items-center gap-5 text-white/85 md:flex"><span>418 Riverside Avenue, Lawrence, KS</span><a href="visit.html" class="font-bold text-apricot underline-offset-4 hover:underline">New here? Start here</a></p>
+    </div>
+  </div>
+  <header id="site-header" class="sticky top-0 z-40 border-b border-transparent bg-paper/95 backdrop-blur transition-[box-shadow,border-color] duration-300">
+    <div class="container-x flex h-20 items-center justify-between gap-4">
+      <a href="index.html" class="group inline-flex items-center gap-3">
+          <svg viewBox="0 0 40 40" class="h-10 w-10 transition-transform duration-500 group-hover:rotate-[-8deg] shrink-0" aria-hidden="true"><defs><clipPath id="logo-h"><circle cx="20" cy="20" r="19"/></clipPath></defs><circle cx="20" cy="20" r="19" fill="#5b2a6e"/><g clip-path="url(#logo-h)"><circle cx="20" cy="19" r="8" fill="#f6a96b"/><path d="M0 25c7-4 13-4 20-1s13 3 20-1v18H0z" fill="#c9dcc0"/><path d="M4 41c4-6 14-7 16-12s8-5 13-4c-6 1-8 4-10 8s-9 5-12 9z" fill="#bcd9e8"/></g></svg>
+          <span class="leading-none"><span class="block font-display text-[1.35rem] font-extrabold tracking-tight">Riverbend</span><span class="mt-0.5 block text-[10px] font-extrabold uppercase tracking-[0.28em] text-apricot-dark">Church · Lawrence</span></span>
+        </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-0.5">
+          <li><a href="visit.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">Plan a visit</a></li>
+          <li><a href="sermons.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">Sermons</a></li>
+          <li><a href="events.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">Events</a></li>
+          <li><a href="groups.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">Groups</a></li>
+          <li><a href="about.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">About</a></li>
+          <li><a href="contact.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="give.html" class="btn-warm btn-sm hidden aria-[current=page]:ring-2 aria-[current=page]:ring-plum sm:inline-flex">Give</a>
+        <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-full bg-shell ring-1 ring-ink/15 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-line bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="visit.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Plan a visit<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="sermons.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Sermons<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="events.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Events<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="groups.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Groups<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">About<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="contact.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Contact<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="give.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Give<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+        </ul>
+        <p class="mt-6 text-sm text-muted">Sundays 9:00 &amp; 11:00 am · 418 Riverside Avenue, Lawrence, KS 66044</p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="relative overflow-hidden">
+      <svg viewBox="0 0 800 800" class="pointer-events-none absolute -left-64 -top-56 w-[46rem] text-apricot-light" aria-hidden="true"><path d="M402 62c118 6 238 74 296 182s54 254-8 352-188 152-312 140S124 652 78 548 30 316 104 210 284 56 402 62z" fill="currentColor"/></svg>
+      <div class="container-x relative grid items-center gap-12 pb-28 pt-10 lg:grid-cols-[1.02fr_1fr] lg:gap-14 lg:pb-36 lg:pt-14">
+        <div class="reveal">
+          <p class="eyebrow">A church for everyone in Lawrence, Kansas</p>
+          <h1 class="h-display mt-5 text-[2.75rem] leading-[1.02] sm:text-6xl xl:text-[4.6rem]">There’s a seat
+            <span class="relative inline-block whitespace-nowrap text-plum">saved for you.<svg viewBox="0 0 300 24" preserveAspectRatio="none" class="absolute -bottom-2 left-0 h-3.5 w-full text-apricot sm:-bottom-3 sm:h-4" aria-hidden="true"><path d="M4 16C70 6 170 2 296 12" fill="none" stroke="currentColor" stroke-width="7" stroke-linecap="round"/></svg></span></h1>
+          <p class="mt-8 max-w-xl text-lg leading-relaxed text-ink/80 sm:text-xl">Riverbend is a non-denominational church on the bend of the Kansas River. Whether you’ve been to church all your life or never at all, come as you are. The coffee is good, the kids’ rooms are safe and the questions are welcome.</p>
+          <div class="mt-9 flex flex-wrap gap-3">
+            <a href="visit.html" class="btn-primary px-7 py-3.5 text-base">Plan your visit</a>
+            <a href="sermons.html" class="btn-outline px-7 py-3.5 text-base">Listen to a sermon</a>
+          </div>
+          <ul class="mt-9 flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold text-ink/80">
+            <li class="flex items-center gap-2"><svg viewBox="0 0 20 20" class="h-4 w-4 text-sage-dark" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10.5 4 4 8-9"/></svg>Jeans welcome</li>
+            <li class="flex items-center gap-2"><svg viewBox="0 0 20 20" class="h-4 w-4 text-sage-dark" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10.5 4 4 8-9"/></svg>Kids from birth to 5th grade</li>
+            <li class="flex items-center gap-2"><svg viewBox="0 0 20 20" class="h-4 w-4 text-sage-dark" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 10.5 4 4 8-9"/></svg>Step-free entrance</li>
+          </ul>
+        </div>
+        <div class="reveal relative">
+          <div class="relative overflow-hidden rounded-[2.75rem] shadow-lift ring-1 ring-line">
+            <svg viewBox="0 0 600 540" class="block h-auto w-full" role="img" aria-labelledby="hero-art-title">
+              <title id="hero-art-title">Illustration: Riverbend Church on a green hill beside a winding river at sunrise, with people walking down the path</title>
+              <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f9d4b4"/><stop offset=".6" stop-color="#fdeee0"/></linearGradient></defs>
+              <rect width="600" height="540" fill="url(#sky)"/>
+              <circle cx="430" cy="160" r="112" fill="#f6a96b" opacity=".22"/>
+              <circle cx="430" cy="160" r="64" fill="#f6a96b"/>
+              <g fill="#fffdf9" opacity=".9"><rect x="70" y="112" width="120" height="26" rx="13"/><circle cx="112" cy="110" r="21"/><circle cx="146" cy="104" r="17"/><rect x="420" y="250" width="96" height="20" rx="10" opacity=".8"/><circle cx="458" cy="248" r="15" opacity=".8"/></g>
+              <path d="M266 118q9-9 18 0q9-9 18 0M312 96q6-6 12 0q6-6 12 0" fill="none" stroke="#2b1b36" stroke-width="2.6" stroke-linecap="round"/>
+              <path d="M0 292c90-48 170-58 262-28s178-32 338-6v282H0z" fill="#c9dcc0"/>
+              <g fill="#8fb486"><circle cx="520" cy="268" r="11"/><circle cx="542" cy="272" r="8"/><circle cx="60" cy="282" r="10"/></g>
+              <path d="M0 360c100-62 222-64 330-32s190 0 270-22v234H0z" fill="#a9c79e"/>
+              <path d="M600 330c-80 14-130 22-168 34-50 16-30 38-92 48-80 13-140 20-170 50S90 510 0 520v20h126c64-18 126-40 176-70 50-30 140-40 170-64 30-24 70-44 128-60z" fill="#bcd9e8"/>
+              <g class="drift" fill="none" stroke="#e3f0f6" stroke-width="3.5" stroke-linecap="round"><path d="M244 460q22-7 44-2"/><path d="M420 398q16-5 32-1"/><path d="M110 512q26-8 52-3"/><path d="M520 360q14-4 28-1"/></g>
+              <path d="M330 540c50-64 150-92 270-100v100z" fill="#8fb486"/>
+              <path d="M0 470c50-6 90 4 104 24 10 16 2 34-6 46H0z" fill="#8fb486"/>
+              <path d="M226 334c4 26 30 44 62 60" fill="none" stroke="#f4eadb" stroke-width="9" stroke-linecap="round"/>
+              <g>
+                <rect x="140" y="214" width="30" height="116" fill="#f4eadb"/>
+                <path d="M134 218l21-34 21 34z" fill="#5b2a6e"/>
+                <path d="M155 162v22M148 170h14" stroke="#5b2a6e" stroke-width="4" stroke-linecap="round"/>
+                <rect x="149" y="232" width="12" height="24" rx="6" fill="#f6a96b"/>
+                <path d="M172 332V252l54-46 54 46v80z" fill="#fffdf9"/>
+                <path d="M162 258l64-56 64 56" fill="none" stroke="#5b2a6e" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+                <rect x="212" y="232" width="28" height="50" rx="14" fill="#f6a96b"/>
+                <path d="M226 234v46M214 256h24" stroke="#fffdf9" stroke-width="2.5"/>
+                <path d="M210 332v-22a16 16 0 0 1 32 0v22z" fill="#431d52"/>
+                <rect x="280" y="276" width="82" height="56" fill="#f4eadb"/>
+                <rect x="275" y="268" width="92" height="10" rx="5" fill="#5b2a6e"/>
+                <g fill="#f6a96b"><rect x="291" y="290" width="16" height="28" rx="3"/><rect x="313" y="290" width="16" height="28" rx="3"/><rect x="335" y="290" width="16" height="28" rx="3"/></g>
+                <path d="M126 332h252" stroke="#8fb486" stroke-width="5" stroke-linecap="round"/>
+              </g>
+              <g><rect x="104" y="300" width="5" height="32" rx="2" fill="#6b4a33"/><circle cx="106.5" cy="296" r="22" fill="#6f9a66"/><rect x="388" y="304" width="5" height="28" rx="2" fill="#6b4a33"/><circle cx="390.5" cy="300" r="18" fill="#33603b"/><rect x="418" y="314" width="4" height="20" rx="2" fill="#6b4a33"/><circle cx="420" cy="310" r="13" fill="#6f9a66"/></g>
+              <g>
+                <circle cx="262" cy="362" r="5.5" fill="#6b4029"/><rect x="255" y="369" width="14" height="22" rx="7" fill="#5b2a6e"/>
+                <circle cx="282" cy="372" r="5.5" fill="#f1c7a6"/><rect x="275" y="379" width="14" height="22" rx="7" fill="#f6a96b"/>
+                <circle cx="296" cy="384" r="4" fill="#c48a5f"/><rect x="291" y="389" width="10" height="15" rx="5" fill="#1f5577"/>
+              </g>
+              <g fill="#fffdf9"><circle cx="470" cy="470" r="4"/><circle cx="500" cy="490" r="3.5"/><circle cx="540" cy="462" r="4"/><circle cx="566" cy="500" r="3.5"/></g>
+              <g fill="#f6a96b"><circle cx="486" cy="478" r="3.5"/><circle cx="526" cy="500" r="4"/><circle cx="556" cy="478" r="3"/><circle cx="40" cy="500" r="3.5"/><circle cx="64" cy="488" r="3"/></g>
+            </svg>
+          </div>
+          <p class="absolute -left-3 top-8 rotate-[-4deg] rounded-2xl bg-shell px-4 py-3 text-sm font-bold shadow-lift ring-1 ring-line sm:-left-6"><span class="block text-xs font-extrabold uppercase tracking-wider text-apricot-dark">Sundays</span>Coffee’s on from 8:30</p>
+          <p class="absolute -right-2 bottom-10 rotate-[3deg] rounded-2xl bg-plum px-4 py-3 text-sm font-bold text-white shadow-lift sm:-right-5">Kids’ check-in opens 8:40</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="sunday-h" class="container-x relative z-10 -mt-16 lg:-mt-24">
+      <div class="reveal card grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.1fr_1fr_0.9fr] lg:gap-10 lg:p-10">
+        <div>
+          <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-apricot-dark">This Sunday</p>
+          <h2 id="sunday-h" class="mt-2 font-display text-2xl font-extrabold sm:text-3xl" data-this-sunday>Sunday</h2>
+          <ul class="mt-5 space-y-3">
+            <li class="flex items-center gap-4 rounded-2xl bg-sand px-4 py-3"><span class="whitespace-nowrap font-display text-xl font-extrabold tabular-nums">9:00 am</span><span class="text-sm text-muted">Gathering · kids from birth to 5th grade</span></li>
+            <li class="flex items-center gap-4 rounded-2xl bg-sand px-4 py-3"><span class="whitespace-nowrap font-display text-xl font-extrabold tabular-nums">11:00 am</span><span class="text-sm text-muted">Gathering · kids, plus ASL interpretation</span></li>
+          </ul>
+        </div>
+        <div class="lg:border-l lg:border-line lg:pl-10" data-countdown aria-live="off">
+          <p class="text-sm font-bold text-muted">Sundays at 9:00 and 11:00 am</p>
+        </div>
+        <div class="flex flex-col justify-between gap-6 lg:border-l lg:border-line lg:pl-10">
+          <div>
+            <p class="text-xs font-extrabold uppercase tracking-[0.16em] text-apricot-dark">Where</p>
+            <address class="mt-2 not-italic leading-relaxed"><span class="font-bold">418 Riverside Avenue</span><br>Lawrence, KS 66044</address>
+            <p class="mt-2 text-sm text-muted">Free parking in the north lot and across the street at Riverside Elementary.</p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <a href="visit.html#plan" class="btn-primary btn-sm">Plan your visit</a>
+            <a href="visit.html#parking" class="btn-outline btn-sm">Map &amp; parking</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="new-h" class="container-x mt-28">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <div class="max-w-2xl">
+          <p class="eyebrow">I’m new</p>
+          <h2 id="new-h" class="h-section mt-4">New here? Three small steps, no pressure.</h2>
+        </div>
+        <a href="visit.html" class="link">Everything about your first visit</a>
+      </div>
+      <ol class="relative mt-12 grid gap-6 md:grid-cols-3">
+        <li class="reveal relative">
+          <a href="visit.html#plan" class="card card-hover group flex h-full flex-col p-7">
+            <span class="grid size-16 place-items-center rounded-full bg-apricot font-display text-2xl font-extrabold text-ink">1</span>
+            <h3 class="mt-6 font-display text-2xl font-extrabold">Tell us you’re coming</h3>
+            <p class="mt-2 flex-1 leading-relaxed text-muted">Pick a Sunday and we’ll save you seats, get the kids’ check-in ready and have someone meet you at the welcome tent.</p>
+            <span class="mt-6 inline-flex items-center gap-2 font-bold text-plum">Plan your visit<svg viewBox="0 0 20 20" class="h-4 w-4 transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span>
+          </a>
+        </li>
+        <li class="reveal relative">
+          <a href="visit.html#expect" class="card card-hover group flex h-full flex-col p-7">
+            <span class="grid size-16 place-items-center rounded-full bg-sage font-display text-2xl font-extrabold text-ink">2</span>
+            <h3 class="mt-6 font-display text-2xl font-extrabold">Come as you are</h3>
+            <p class="mt-2 flex-1 leading-relaxed text-muted">Seventy-five minutes of songs, a short prayer, a practical message and good coffee. Nobody will ask you to stand up or say anything.</p>
+            <span class="mt-6 inline-flex items-center gap-2 font-bold text-plum">What to expect<svg viewBox="0 0 20 20" class="h-4 w-4 transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span>
+          </a>
+        </li>
+        <li class="reveal relative">
+          <a href="groups.html" class="card card-hover group flex h-full flex-col p-7">
+            <span class="grid size-16 place-items-center rounded-full bg-river font-display text-2xl font-extrabold text-ink">3</span>
+            <h3 class="mt-6 font-display text-2xl font-extrabold">Find your people</h3>
+            <p class="mt-2 flex-1 leading-relaxed text-muted">Church gets smaller when you join a group. Thirteen meet around Lawrence and online, on every night of the week.</p>
+            <span class="mt-6 inline-flex items-center gap-2 font-bold text-plum">Find a group<svg viewBox="0 0 20 20" class="h-4 w-4 transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></span>
+          </a>
+        </li>
+      </ol>
+    </section>
+
+    <section aria-labelledby="latest-h" class="relative mt-28 bg-sand py-20 sm:py-24">
+      <svg viewBox="0 0 1440 40" preserveAspectRatio="none" class="absolute inset-x-0 -top-px h-8 w-full text-paper" aria-hidden="true"><path d="M0 0h1440v14c-160 22-320 26-520 8S560 0 360 16 120 36 0 22z" fill="currentColor"/></svg>
+      <div class="container-x grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <div class="reveal">
+          <p class="eyebrow">Latest message</p>
+          <h2 id="latest-h" class="sr-only">Latest message</h2>
+          <div class="mt-5 flex items-start gap-5">
+            <div id="latest-art" class="art hidden aspect-square w-28 shrink-0 overflow-hidden rounded-3xl shadow-soft sm:block"></div>
+            <div class="min-w-0">
+              <p id="latest-title" class="font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">Room at the Table</p>
+              <p id="latest-meta" class="mt-2 text-sm font-semibold text-muted">Open Table · Dana Okafor</p>
+            </div>
+          </div>
+          <p id="latest-summary" class="mt-6 max-w-xl text-lg leading-relaxed text-ink/85">Jesus tells a dinner host to invite the people who can never invite him back.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a id="latest-link" href="sermon.html" class="btn-primary">Notes &amp; discussion questions</a>
+            <a href="sermons.html" class="btn-outline">All sermons</a>
+          </div>
+        </div>
+        <div id="latest-sermon" class="reveal min-w-0"></div>
+      </div>
+    </section>
+
+    <section aria-labelledby="events-h" class="container-x mt-24">
+      <div class="flex flex-wrap items-end justify-between gap-6">
+        <div>
+          <p class="eyebrow">Coming up</p>
+          <h2 id="events-h" class="h-section mt-4">What’s on at Riverbend</h2>
+        </div>
+        <a href="events.html" class="link">See the full calendar</a>
+      </div>
+      <ul id="home-events" class="mt-10 grid gap-4 md:grid-cols-2"></ul>
+    </section>
+
+    <section aria-labelledby="min-h" class="container-x mt-28">
+      <div class="max-w-2xl">
+        <p class="eyebrow">Ministries</p>
+        <h2 id="min-h" class="h-section mt-4">Something for every age and every season</h2>
+      </div>
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <a href="groups.html#kids" class="reveal group flex flex-col rounded-[1.75rem] bg-river-light p-7 transition duration-300 hover:-translate-y-1 hover:shadow-lift">
+          <svg viewBox="0 0 64 64" class="h-14 w-14" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#bcd9e8"/><rect x="16" y="30" width="14" height="14" rx="3" fill="#1f5577"/><rect x="34" y="30" width="14" height="14" rx="3" fill="#f6a96b"/><rect x="25" y="16" width="14" height="14" rx="3" fill="#5b2a6e"/></svg>
+          <h3 class="mt-6 font-display text-xl font-extrabold">Riverbend Kids</h3>
+          <p class="mt-2 flex-1 text-[15px] leading-relaxed text-ink/80">Birth to 5th grade, every Sunday at both gatherings. Secure check-in and trained, background-checked teams.</p>
+          <span class="mt-5 font-bold text-river-dark group-hover:underline">For families →</span>
+        </a>
+        <a href="groups.html#youth" class="reveal group flex flex-col rounded-[1.75rem] bg-apricot-light p-7 transition duration-300 hover:-translate-y-1 hover:shadow-lift">
+          <svg viewBox="0 0 64 64" class="h-14 w-14" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#f6a96b"/><path d="M20 42l12-22 12 22z" fill="#fffdf9"/><circle cx="32" cy="38" r="4" fill="#9a4716"/></svg>
+          <h3 class="mt-6 font-display text-xl font-extrabold">Youth</h3>
+          <p class="mt-2 flex-1 text-[15px] leading-relaxed text-ink/80">Grades 6–12 on Wednesday nights in the Loft: dinner, games, worship and small groups led by people who care.</p>
+          <span class="mt-5 font-bold text-apricot-dark group-hover:underline">For students →</span>
+        </a>
+        <a href="groups.html#care" class="reveal group flex flex-col rounded-[1.75rem] bg-sage-light p-7 transition duration-300 hover:-translate-y-1 hover:shadow-lift">
+          <svg viewBox="0 0 64 64" class="h-14 w-14" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#c9dcc0"/><path d="M32 46s-14-8-14-18a7.5 7.5 0 0 1 14-4 7.5 7.5 0 0 1 14 4c0 10-14 18-14 18z" fill="#33603b"/></svg>
+          <h3 class="mt-6 font-display text-xl font-extrabold">Care &amp; Pantry</h3>
+          <p class="mt-2 flex-1 text-[15px] leading-relaxed text-ink/80">Meals after a new baby or a hard diagnosis, grief and recovery groups, and the Riverbend Pantry every Saturday.</p>
+          <span class="mt-5 font-bold text-sage-dark group-hover:underline">Get or give help →</span>
+        </a>
+        <a href="groups.html#music" class="reveal group flex flex-col rounded-[1.75rem] bg-lilac p-7 transition duration-300 hover:-translate-y-1 hover:shadow-lift">
+          <svg viewBox="0 0 64 64" class="h-14 w-14" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#d9c6e6"/><path d="M27 42V20l16-4v22" fill="none" stroke="#5b2a6e" stroke-width="4" stroke-linejoin="round"/><circle cx="23" cy="42" r="5" fill="#5b2a6e"/><circle cx="39" cy="38" r="5" fill="#5b2a6e"/></svg>
+          <h3 class="mt-6 font-display text-xl font-extrabold">Music &amp; Arts</h3>
+          <p class="mt-2 flex-1 text-[15px] leading-relaxed text-ink/80">A band, a choir anyone can join and a Thursday open rehearsal. Bring your instrument, or just your voice.</p>
+          <span class="mt-5 font-bold text-plum group-hover:underline">Join the band →</span>
+        </a>
+      </div>
+    </section>
+
+    <section aria-labelledby="quote-h" class="container-x mt-28">
+      <div class="reveal relative overflow-hidden rounded-[2.25rem] bg-ink px-7 py-14 text-white sm:px-14 sm:py-16">
+        <svg viewBox="0 0 600 300" class="pointer-events-none absolute -right-24 -top-10 w-[36rem] text-white/[.05]" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round" aria-hidden="true"><path d="M0 60q50-40 100 0t100 0 100 0 100 0 100 0 100 0M0 140q50-40 100 0t100 0 100 0 100 0 100 0 100 0M0 220q50-40 100 0t100 0 100 0 100 0 100 0 100 0"/></svg>
+        <div class="relative grid gap-12 lg:grid-cols-[1.3fr_1fr] lg:items-center">
+          <figure>
+            <h2 id="quote-h" class="text-xs font-extrabold uppercase tracking-[0.18em] text-apricot">Why we keep the door open</h2>
+            <blockquote class="mt-5 font-display text-3xl font-bold leading-snug tracking-tight sm:text-4xl">“Be not forgetful to entertain strangers: for thereby some have entertained angels unawares.”</blockquote>
+            <figcaption class="mt-5 text-white/75">Hebrews 13:2, King James Version</figcaption>
+          </figure>
+          <dl class="grid grid-cols-2 gap-4">
+            <div class="rounded-3xl bg-white/[.07] p-5 ring-1 ring-white/10"><dt class="text-sm text-white/75">On a Sunday</dt><dd class="mt-1 font-display text-3xl font-extrabold">~650</dd></div>
+            <div class="rounded-3xl bg-white/[.07] p-5 ring-1 ring-white/10"><dt class="text-sm text-white/75">Small groups</dt><dd class="mt-1 font-display text-3xl font-extrabold">13</dd></div>
+            <div class="rounded-3xl bg-white/[.07] p-5 ring-1 ring-white/10"><dt class="text-sm text-white/75">Pantry meals in 2025</dt><dd class="mt-1 font-display text-3xl font-extrabold">9,400</dd></div>
+            <div class="rounded-3xl bg-white/[.07] p-5 ring-1 ring-white/10"><dt class="text-sm text-white/75">By the river since</dt><dd class="mt-1 font-display text-3xl font-extrabold">2011</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="news-h" class="container-x mt-28">
+      <div class="reveal card relative grid gap-10 overflow-hidden p-7 sm:p-10 lg:grid-cols-2 lg:items-center lg:p-14">
+        <svg viewBox="0 0 200 200" class="pointer-events-none absolute -right-20 -top-20 w-72 text-apricot-light" aria-hidden="true"><circle cx="100" cy="100" r="100" fill="currentColor"/></svg>
+        <div class="relative">
+          <p class="eyebrow">Riverbend Weekly</p>
+          <h2 id="news-h" class="h-section mt-4">One short email, every Thursday.</h2>
+          <p class="mt-4 max-w-md leading-relaxed text-muted">What’s on this week, who needs a meal, prayer requests the church can share, and Sunday’s message in case you missed it. Unsubscribe in one click.</p>
+        </div>
+        <form data-form="newsletter" class="relative" novalidate>
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div>
+              <label for="n-name" class="field-label">First name <span class="font-normal text-muted">(optional)</span></label>
+              <input id="n-name" name="name" type="text" autocomplete="given-name" class="field" placeholder="Sam">
+            </div>
+            <div>
+              <label for="n-email" class="field-label">Email</label>
+              <input id="n-email" name="email" type="email" required data-label="Email" autocomplete="email" class="field" placeholder="you@example.com">
+            </div>
+          </div>
+          <button type="submit" class="btn-primary mt-5 w-full sm:w-auto">Sign me up</button>
+          <p data-form-status role="status" class="mt-3 text-sm font-semibold text-rose"></p>
+        </form>
+      </div>
+    </section>
+    <dialog id="event-dialog" aria-labelledby="event-dialog-title" class="m-auto w-[calc(100%-2rem)] max-w-lg rounded-[1.75rem] bg-shell p-0 shadow-lift">
+      <div class="relative overflow-hidden rounded-t-[1.75rem] bg-sand px-6 pb-6 pt-7 sm:px-8">
+        <svg viewBox="0 0 400 80" class="pointer-events-none absolute -bottom-3 -right-6 w-56 text-apricot/30" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M0 30q25-14 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0M0 55q25-14 50 0t50 0 50 0 50 0 50 0 50 0 50 0 50 0"/></svg>
+        <button type="button" data-ev-close class="absolute right-4 top-4 grid size-10 place-items-center rounded-full bg-shell text-ink shadow-soft transition hover:bg-lilac" aria-label="Close">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+        <span data-ev="cat" class="inline-flex items-center rounded-full bg-lilac px-3 py-1 text-xs font-bold text-plum">Event</span>
+        <h2 id="event-dialog-title" data-ev="title" tabindex="-1" class="relative mt-3 pr-10 font-display text-2xl font-extrabold leading-tight focus:outline-none sm:text-[1.75rem]">Event</h2>
+      </div>
+      <div class="px-6 pb-7 pt-5 sm:px-8">
+        <dl class="space-y-3 text-[15px]">
+          <div class="flex gap-3"><dt class="mt-0.5 text-apricot-dark"><span class="sr-only">When</span><svg viewBox="0 0 20 20" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="10" cy="10" r="7.5"/><path d="M10 6v4l2.5 2"/></svg></dt><dd><span data-ev="when" class="font-bold"></span><span data-ev="repeat" class="block text-sm text-muted"></span></dd></div>
+          <div class="flex gap-3"><dt class="mt-0.5 text-apricot-dark"><span class="sr-only">Where</span><svg viewBox="0 0 20 20" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M10 18s6-5.2 6-10a6 6 0 1 0-12 0c0 4.8 6 10 6 10z"/><circle cx="10" cy="8" r="2"/></svg></dt><dd data-ev="where"></dd></div>
+        </dl>
+        <p data-ev="summary" class="mt-5 leading-relaxed text-ink/85"></p>
+        <div class="mt-7 flex flex-wrap gap-3">
+          <button type="button" data-ev="ics" class="btn-primary">
+            <svg viewBox="0 0 20 20" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="14" height="12.5" rx="2"/><path d="M3 8.5h14M7 3v3M13 3v3M10 11v4M8 13h4"/></svg>
+            Add to calendar
+          </button>
+          <button type="button" data-ev-close class="btn-outline">Close</button>
+        </div>
+        <p data-ev="status" role="status" class="mt-3 text-sm font-semibold text-sage-dark"></p>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="relative mt-28 bg-ink text-white">
+    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" class="absolute inset-x-0 -top-[47px] h-12 w-full text-ink" aria-hidden="true"><path d="M0 48V30c120-18 260-28 420-14s300 28 480 10 360-30 540-8v30z" fill="currentColor"/></svg>
+    <div class="container-x grid gap-12 pb-14 pt-16 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="group inline-flex items-center gap-3">
+          <svg viewBox="0 0 40 40" class="h-10 w-10 transition-transform duration-500 group-hover:rotate-[-8deg] shrink-0" aria-hidden="true"><defs><clipPath id="logo-f"><circle cx="20" cy="20" r="19"/></clipPath></defs><circle cx="20" cy="20" r="19" fill="#5b2a6e"/><g clip-path="url(#logo-f)"><circle cx="20" cy="19" r="8" fill="#f6a96b"/><path d="M0 25c7-4 13-4 20-1s13 3 20-1v18H0z" fill="#c9dcc0"/><path d="M4 41c4-6 14-7 16-12s8-5 13-4c-6 1-8 4-10 8s-9 5-12 9z" fill="#bcd9e8"/></g></svg>
+          <span class="leading-none"><span class="block font-display text-[1.35rem] font-extrabold tracking-tight text-white">Riverbend</span><span class="mt-0.5 block text-[10px] font-extrabold uppercase tracking-[0.28em] text-apricot">Church · Lawrence</span></span>
+        </a>
+        <p class="mt-5 max-w-sm leading-relaxed text-white/80">A non-denominational church by the Kansas River. Ordinary people, learning to follow Jesus together and to love our city well.</p>
+        <dl class="mt-7 grid grid-cols-2 gap-4 text-sm">
+          <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10"><dt class="text-white/70">Sunday gatherings</dt><dd class="mt-1 font-display text-lg font-bold">9:00 &amp; 11:00 am</dd></div>
+          <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10"><dt class="text-white/70">Youth night</dt><dd class="mt-1 font-display text-lg font-bold">Wed 6:30 pm</dd></div>
+        </dl>
+      </div>
+      <nav aria-label="Visit" class="lg:col-span-2 lg:col-start-6">
+        <h2 class="text-xs font-extrabold uppercase tracking-[0.18em] text-apricot">Visit</h2>
+        <ul class="mt-4 space-y-2.5 text-[15px] text-white/90">
+          <li><a href="visit.html" class="underline-offset-4 hover:underline">Plan a visit</a></li>
+          <li><a href="visit.html#kids" class="underline-offset-4 hover:underline">Kids’ check-in</a></li>
+          <li><a href="visit.html#parking" class="underline-offset-4 hover:underline">Parking &amp; map</a></li>
+          <li><a href="visit.html#faq" class="underline-offset-4 hover:underline">Questions</a></li>
+          <li><a href="about.html" class="underline-offset-4 hover:underline">About us</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Connect" class="lg:col-span-2">
+        <h2 class="text-xs font-extrabold uppercase tracking-[0.18em] text-apricot">Connect</h2>
+        <ul class="mt-4 space-y-2.5 text-[15px] text-white/90">
+          <li><a href="sermons.html" class="underline-offset-4 hover:underline">Sermons</a></li>
+          <li><a href="events.html" class="underline-offset-4 hover:underline">Events</a></li>
+          <li><a href="groups.html" class="underline-offset-4 hover:underline">Small groups</a></li>
+          <li><a href="groups.html#ministries" class="underline-offset-4 hover:underline">Ministries</a></li>
+          <li><a href="contact.html#prayer" class="underline-offset-4 hover:underline">Prayer requests</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-3">
+        <h2 class="text-xs font-extrabold uppercase tracking-[0.18em] text-apricot">Find us</h2>
+        <address class="mt-4 not-italic leading-relaxed text-white/90">418 Riverside Avenue<br>Lawrence, KS 66044</address>
+        <p class="mt-3 text-[15px] text-white/90"><a href="tel:+17855550142" class="underline-offset-4 hover:underline">(785) 555-0142</a><br><a href="mailto:hello@riverbend.example" class="underline-offset-4 hover:underline">hello@riverbend.example</a></p>
+        <a href="give.html" class="btn-warm btn-sm mt-6">Give online</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="container-x flex flex-col gap-3 py-6 text-[13px] text-white/75 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Riverbend Church, Lawrence, Kansas. A fictional church.</p>
+        <p>Template by Freeframe</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

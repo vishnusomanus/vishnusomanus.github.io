@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" role="img" aria-labelledby="t">
+  <title id="t">Illustrated portrait of Nadia Whitcombe in a navy blazer, framed by an arch with a golden sun behind her</title>
+  <defs>
+    <clipPath id="arch"><path d="M0 600V240a240 240 0 0 1 480 0v360Z"/></clipPath>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e4d8c5"/><stop offset="1" stop-color="#f1eadf"/></linearGradient>
+    <linearGradient id="coat" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b4677"/><stop offset="1" stop-color="#1f2544"/></linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a2d28"/><stop offset="1" stop-color="#211917"/></linearGradient>
+  </defs>
+  <g clip-path="url(#arch)">
+    <rect width="480" height="600" fill="url(#bg)"/>
+    <g fill="none" stroke="#cfbfa6" stroke-width="1.2">
+      <circle cx="240" cy="250" r="214"/><circle cx="240" cy="250" r="172" stroke-dasharray="2 8"/>
+    </g>
+    <circle cx="282" cy="214" r="128" fill="#f0c464"/>
+    <circle cx="282" cy="214" r="98" fill="#f6d88f" opacity=".55"/>
+    <!-- plant -->
+    <path d="M412 600c-8-74 2-134 30-178 8 54-4 118-30 178Z" fill="#8d9a76"/>
+    <path d="M426 600c10-66 36-110 68-134-4 52-30 100-68 134Z" fill="#76845f"/>
+    <path d="M400 600c-26-50-62-78-104-88 18 44 56 74 104 88Z" fill="#a3ae8e"/>
+    <!-- hair, back layer -->
+    <path d="M240 150c-58 0-96 42-96 100 0 30 2 54 6 76 4 24 20 38 44 40h92c24-2 40-16 44-40 4-22 6-46 6-76 0-58-38-100-96-100Z" fill="url(#hair)"/>
+    <!-- neck -->
+    <path d="M218 300h44v78c-6 8-14 12-22 12s-16-4-22-12Z" fill="#a8704f"/>
+    <path d="M218 312c14 12 30 12 44 0v-12h-44Z" fill="#8f5b3e"/>
+    <!-- body -->
+    <path d="M56 600c4-92 30-160 94-190 26-12 58-20 90-20s64 8 90 20c64 30 90 98 94 190Z" fill="url(#coat)"/>
+    <path d="M208 392 240 470l32-78c-10-2-21-3-32-3s-22 1-32 3Z" fill="#f5e3da"/>
+    <path d="M240 470 208 392l-24 6 36 84-14 30Z" fill="#2a3259"/>
+    <path d="M240 470l32-78 24 6-36 84 14 30Z" fill="#2a3259"/>
+    <path d="M150 410c-30 40-44 110-48 190h30c2-70 10-130 26-176Z" fill="#1f2544" opacity=".45"/>
+    <circle cx="296" cy="520" r="5" fill="#f0c464"/>
+    <!-- face -->
+    <ellipse cx="240" cy="246" rx="54" ry="66" fill="#b67d5a"/>
+    <path d="M190 262c6 34 26 50 50 50s44-16 50-50c-8 26-26 40-50 40s-42-14-50-40Z" fill="#a8704f"/>
+    <!-- hair, side-swept fringe -->
+    <path d="M184 244c0-52 24-86 62-86 34 0 58 26 62 62-32-2-62-20-78-44-10 30-26 54-46 68Z" fill="url(#hair)"/>
+    <path d="M292 206c10 26 12 58 8 92l14-6c4-30 0-62-10-88Z" fill="#2a211f"/>
+    <!-- earrings -->
+    <circle cx="187" cy="270" r="5.5" fill="#f0c464"/><circle cx="293" cy="270" r="5.5" fill="#f0c464"/>
+  </g>
+  <path d="M1 600V240a239 239 0 0 1 478 0v360" fill="none" stroke="#cfbfa6" stroke-width="2"/>
+</svg>

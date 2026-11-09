@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dining — Casa Marea</title>
+  <meta name="description" content="Breakfast on the terrace, New England coastal dinners by chef Lucia Ferraro and sunset aperitivo at Bar Marea.">
+  <meta name="theme-color" content="#f6f1e8">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Casa Marea">
+  <meta property="og:title" content="Dining — Casa Marea">
+  <meta property="og:description" content="Breakfast on the terrace, New England coastal dinners by chef Lucia Ferraro and sunset aperitivo at Bar Marea.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&amp;family=Jost:wght@300..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="dining" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm text-foam focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-40 border-b border-transparent bg-linen/90 backdrop-blur-md transition-[border-color,box-shadow] duration-300">
+    <div class="container-x flex h-18 items-center justify-between gap-6">
+      <a href="index.html" class="group inline-flex items-center gap-3">
+        <svg viewBox="0 0 64 64" class="h-9 w-9 shrink-0" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#13232b"/><circle cx="32" cy="27" r="11" fill="#e9b25c"/><path d="M10 40q5.5-5 11 0t11 0 11 0 11 0" stroke="#fbf8f2" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M10 48q5.5-5 11 0t11 0 11 0 11 0" stroke="#7fb6bd" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>
+        <span class="leading-none"><span class="block font-display text-[1.4rem] tracking-tight">Casa Marea</span><span class="mt-1 block text-[0.68rem] uppercase tracking-[0.28em] text-mist">Newport · Rhode Island</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-8"><li><a href="rooms.html" class="link-underline text-[0.95rem] aria-[current=page]:bg-[length:100%_1px]">Rooms</a></li><li><a href="dining.html" aria-current="page" class="link-underline text-[0.95rem] aria-[current=page]:bg-[length:100%_1px]">Dining</a></li><li><a href="experiences.html" class="link-underline text-[0.95rem] aria-[current=page]:bg-[length:100%_1px]">Experiences</a></li><li><a href="offers.html" class="link-underline text-[0.95rem] aria-[current=page]:bg-[length:100%_1px]">Offers</a></li><li><a href="contact.html" class="link-underline text-[0.95rem] aria-[current=page]:bg-[length:100%_1px]">Location</a></li></ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="booking.html" class="btn-primary hidden px-5 py-2.5 sm:inline-flex">Book a stay</a>
+        <button id="menu-toggle" type="button" class="-mr-2 grid h-11 w-11 place-items-center rounded-full hover:bg-shell lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <span data-icon-open><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></span>
+          <span data-icon-close class="hidden"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-line bg-linen lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-10 pt-2">
+        <ul><li><a href="index.html" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Home</a></li><li><a href="rooms.html" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Rooms</a></li><li><a href="dining.html" aria-current="page" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Dining</a></li><li><a href="experiences.html" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Experiences</a></li><li><a href="offers.html" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Offers</a></li><li><a href="contact.html" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Location</a></li></ul>
+        <a href="booking.html" class="btn-primary mt-8 w-full py-4">Book a stay</a>
+        <p class="mt-6 text-sm text-mist">Reservations: <a href="tel:+14015550186" class="underline underline-offset-4">(401) 555-0186</a></p>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="relative isolate overflow-hidden text-foam">
+      <div class="absolute inset-0 -z-10"><div class="art h-full w-full"><img src="assets/img/dining.svg" alt="Dinner on the terrace under string lights" width="1600" height="1000" loading="eager" decoding="async"></div></div>
+      <div class="absolute inset-0 -z-10 bg-[linear-gradient(180deg,rgb(19_35_43/.45),rgb(19_35_43/.85))]"></div>
+      <div class="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgb(19_35_43/.7)_0%,rgb(19_35_43/.35)_50%,transparent_80%)]"></div>
+      <div class="container-x pb-20 pt-40 lg:pb-28 lg:pt-56">
+        <p class="eyebrow eyebrow-light">Dining</p>
+        <h1 class="display mt-4 max-w-3xl text-5xl sm:text-7xl">The Terrazza, from breakfast to the last glass</h1>
+        <p class="mt-6 max-w-xl text-lg text-foam/90">Coastal New England cooking by chef Lucia Ferraro, served on the terrace from May to October and by the fire in winter.</p>
+      </div>
+    </section>
+
+    <section class="container-x grid gap-12 py-24 lg:grid-cols-3" aria-label="Where to eat">
+      <article class="reveal"><div class="art aspect-[4/3] rounded-2xl"><img src="assets/img/breakfast.svg" alt="Breakfast" width="1600" height="1000" loading="lazy" decoding="async"></div><h2 class="display mt-6 text-3xl">Breakfast</h2><p class="mt-2 text-sm uppercase tracking-[0.2em] text-coral">7:30 – 10:30 am</p><p class="mt-4 text-mist">Served on the terrace or in your room: warm johnnycakes, fruit from the market, eggs and pancakes made to order.</p></article><article class="reveal"><div class="art aspect-[4/3] rounded-2xl"><img src="assets/img/dining.svg" alt="Terrazza" width="1600" height="1000" loading="lazy" decoding="async"></div><h2 class="display mt-6 text-3xl">Terrazza</h2><p class="mt-2 text-sm uppercase tracking-[0.2em] text-coral">Lunch 12:30 – 3 pm · Dinner 7:30 – 10:30 pm</p><p class="mt-4 text-mist">Fish from the morning boats, pasta made by hand each afternoon and vegetables from the garden terraces.</p></article><article class="reveal"><div class="art aspect-[4/3] rounded-2xl"><img src="assets/img/bar.svg" alt="Bar Marea" width="1600" height="1000" loading="lazy" decoding="async"></div><h2 class="display mt-6 text-3xl">Bar Marea</h2><p class="mt-2 text-sm uppercase tracking-[0.2em] text-coral">5 pm – late</p><p class="mt-4 text-mist">Aperitivo hour as the sun sets: Rhode Island white wine, a basil negroni and focaccia still warm from the oven.</p></article>
+    </section>
+
+    <section class="bg-shell py-24" aria-labelledby="menus-title">
+      <div class="container-x grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
+        <div><p class="eyebrow">Menus</p><h2 id="menus-title" class="display mt-4 text-4xl sm:text-5xl">A taste of this week</h2><p class="mt-5 max-w-sm text-mist">Menus change with the catch and the season. Tell us about allergies when you book and the kitchen will plan around them.</p></div>
+        <div>
+          <div role="tablist" aria-label="Menus" class="flex flex-wrap gap-2" data-tabs><button type="button" role="tab" id="tab-breakfast" aria-controls="panel-breakfast" aria-selected="true" tabindex="0" class="rounded-full px-5 py-2.5 text-sm transition aria-selected:bg-ink aria-selected:text-foam hover:bg-shell aria-selected:hover:bg-ink">Breakfast</button><button type="button" role="tab" id="tab-lunch" aria-controls="panel-lunch" aria-selected="false" tabindex="-1" class="rounded-full px-5 py-2.5 text-sm transition aria-selected:bg-ink aria-selected:text-foam hover:bg-shell aria-selected:hover:bg-ink">Lunch</button><button type="button" role="tab" id="tab-dinner" aria-controls="panel-dinner" aria-selected="false" tabindex="-1" class="rounded-full px-5 py-2.5 text-sm transition aria-selected:bg-ink aria-selected:text-foam hover:bg-shell aria-selected:hover:bg-ink">Dinner</button><button type="button" role="tab" id="tab-bar" aria-controls="panel-bar" aria-selected="false" tabindex="-1" class="rounded-full px-5 py-2.5 text-sm transition aria-selected:bg-ink aria-selected:text-foam hover:bg-shell aria-selected:hover:bg-ink">Bar</button></div>
+          <div class="mt-6"><div role="tabpanel" id="panel-breakfast" aria-labelledby="tab-breakfast" tabindex="0" class="focus:outline-none"><ul class="divide-y divide-line"><li class="flex items-baseline justify-between gap-6 py-5"><div><p class="font-display text-xl">Johnnycakes</p><p class="mt-1 text-mist">Rhode Island white cornmeal, maple butter</p></div><p class="shrink-0 font-display text-xl">$14</p></li><li class="flex items-baseline justify-between gap-6 py-5"><div><p class="font-display text-xl">Eggs any way</p><p class="mt-1 text-mist">Garden herbs, sourdough toast</p></div><p class="shrink-0 font-display text-xl">$16</p></li><li class="flex items-baseline justify-between gap-6 py-5"><div><p class="font-display text-xl">Lemon ricotta pancakes</p><p class="mt-1 text-mist">Honey from the farms of Aquidneck Island</p></div><p class="shrink-0 font-display text-xl">$18</p></li><li class="flex items-baseline justify-between gap-6 py-5"><div><p class="font-display text-xl">Fruit from the market</p><p class="mt-1 text-mist">With yogurt and toasted hazelnuts</p></div><p class="shrink-0 font-display text-xl">$14</p></li></ul></div><div role="tabpanel" id="panel-lunch" aria-labelledby="tab-lunch" tabindex="0" class="focus:outline-none" hidden><ul class="divide-y divide-line"><li class="flex items-baseline justify-between gap-6 py-5"><div><p class="font-display text-xl">Trofie al pesto</p><p class="mt-1 text-mist">Basil from the garden, potatoes, green beans</p></div><p class="shrink-0 font-display text-xl">$26</p></li><li class="flex items-baseline justify-between gap-6 py-5"><div><p class="font-display text-xl">Rhode Island calamari</p><p class="mt-1 text-mist">Point Judith squid, hot cherry peppers, garlic butter</p></div><p class="shrink-0 font-display text-xl">$19</p></li><li class="flex items-baseline justify-between gap-6 py-5"><div><p class="font-display text-xl">Catch of the day</p><p class="mt-1 text-mist">Baked in salt, served for two</p></div><p class="shrink-0 font-display text-xl">$78</p></li><li class="flex items-baseline justify-between gap-6 py-5"><div><p class="font-display text-xl">Clam cakes</p><p class="mt-1 text-mist">Narragansett Bay clams, sea salt, lemon</p></div><p class="shrink-0 font-display text-xl">$14</p></li></ul></div><div role="tabpanel" id="panel-dinner" aria-labelledby="tab-dinner" tabindex="0" class="focus:outline-none" hidden><ul class="divide-y divide-line"><li class="flex items-baseline justify-between gap-6 py-5"><div><p class="font-display text-xl">Raw bar oysters</p><p class="mt-1 text-mist">Narragansett Bay oysters, citrus mignonette</p></div><p class="shrink-0 font-display text-xl">$26</p></li><li class="flex items-baseline justify-between gap-6 py-5"><div><p class="font-display text-xl">Pansoti</p><p class="mt-1 text-mist">Herb ravioli, walnut sauce</p></div><p class="shrink-0 font-display text-xl">$32</p></li><li class="flex items-baseline justify-between gap-6 py-5"><div><p class="font-display text-xl">Roasted striped bass</p><p class="mt-1 text-mist">Potatoes, olives, cherry tomatoes</p></div><p class="shrink-0 font-display text-xl">$44</p></li><li class="flex items-baseline justify-between gap-6 py-5"><div><p class="font-display text-xl">Lemon tart</p><p class="mt-1 text-mist">Burnt meringue, basil sorbet</p></div><p class="shrink-0 font-display text-xl">$14</p></li></ul></div><div role="tabpanel" id="panel-bar" aria-labelledby="tab-bar" tabindex="0" class="focus:outline-none" hidden><ul class="divide-y divide-line"><li class="flex items-baseline justify-between gap-6 py-5"><div><p class="font-display text-xl">Marea spritz</p><p class="mt-1 text-mist">Bitter orange, prosecco, rosemary</p></div><p class="shrink-0 font-display text-xl">$16</p></li><li class="flex items-baseline justify-between gap-6 py-5"><div><p class="font-display text-xl">Basil negroni</p><p class="mt-1 text-mist">Gin infused with basil, sweet vermouth, amaro</p></div><p class="shrink-0 font-display text-xl">$18</p></li><li class="flex items-baseline justify-between gap-6 py-5"><div><p class="font-display text-xl">Rhode Island white by the glass</p><p class="mt-1 text-mist">From Aquidneck Island vineyards, chilled</p></div><p class="shrink-0 font-display text-xl">$15</p></li><li class="flex items-baseline justify-between gap-6 py-5"><div><p class="font-display text-xl">Aperitivo board</p><p class="mt-1 text-mist">Focaccia, olives, anchovies, local cheeses</p></div><p class="shrink-0 font-display text-xl">$24</p></li></ul></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-x py-24" aria-labelledby="reserve-title">
+      <div class="grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
+        <div>
+          <p class="eyebrow">Reserve a table</p>
+          <h2 id="reserve-title" class="display mt-4 text-4xl sm:text-5xl">Dinner on the terrace</h2>
+          <p class="mt-5 max-w-md text-mist">Hotel guests always have a table; we keep a few for neighbors too. For groups larger than eight, write to us.</p>
+          <p class="mt-6 flex items-center gap-3 text-mist"><svg viewBox="0 0 24 24" class="h-5 w-5 text-sea" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1C10.7 20 4 13.3 4 5a1 1 0 0 1 1-1z"/></svg><a href="tel:+14015550186" class="link-underline">(401) 555-0186</a></p>
+        </div>
+        <!-- Demo form: connect it to your reservations system in assets/js/main.js (initForms). -->
+        <form class="grid gap-5 rounded-2xl border border-line bg-foam p-6 sm:grid-cols-2 sm:p-8" data-form="table" novalidate>
+          <div><label class="field-label" for="t-date">Date</label><input class="field" id="t-date" name="date" type="date" required data-min-today aria-describedby="t-date-error"><p class="field-error" id="t-date-error" aria-live="polite"></p></div>
+          <div><label class="field-label" for="t-time">Time</label><select class="field" id="t-time" name="time"><option>7:30 pm</option><option>8 pm</option><option>8:30 pm</option><option>9 pm</option><option>9:30 pm</option><option>10 pm</option></select></div>
+          <div><label class="field-label" for="t-guests">Guests</label><select class="field" id="t-guests" name="guests"><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option></select></div>
+          <div><label class="field-label" for="t-name">Name</label><input class="field" id="t-name" name="name" autocomplete="name" required aria-describedby="t-name-error"><p class="field-error" id="t-name-error" aria-live="polite"></p></div>
+          <div class="sm:col-span-2"><label class="field-label" for="t-email">Email</label><input class="field" id="t-email" name="email" type="email" autocomplete="email" required aria-describedby="t-email-error"><p class="field-error" id="t-email-error" aria-live="polite"></p></div>
+          <div class="sm:col-span-2"><label class="field-label" for="t-notes">Allergies or occasions <span class="font-normal text-mist">(optional)</span></label><textarea class="field min-h-28" id="t-notes" name="notes"></textarea></div>
+          <button type="submit" class="btn-primary sm:col-span-2 sm:justify-self-start">Request a table</button>
+          <p class="hidden rounded-xl bg-shell p-4 text-sm sm:col-span-2" data-form-success role="status">Thank you. Your table request is with the restaurant, and we&#x27;ll email within a day to confirm it. Your reference is <strong class="font-mono text-ink" data-form-ref>CM-0000</strong>.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="on-dark mt-auto bg-ink text-foam">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-[1.3fr_1fr_1fr] lg:grid-cols-[1.4fr_0.8fr_0.8fr_1.4fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-3"><svg viewBox="0 0 64 64" class="h-9 w-9 shrink-0" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#13232b"/><circle cx="32" cy="27" r="11" fill="#e9b25c"/><path d="M10 40q5.5-5 11 0t11 0 11 0 11 0" stroke="#fbf8f2" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M10 48q5.5-5 11 0t11 0 11 0 11 0" stroke="#7fb6bd" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg><span class="font-display text-2xl">Casa Marea</span></a>
+        <address class="mt-5 not-italic leading-relaxed text-foam/80">12 Lighthouse Lane<br>Newport, RI 02840</address>
+        <p class="mt-4 space-y-1 text-foam/80"><a href="tel:+14015550186" class="link-underline">(401) 555-0186</a><br><a href="mailto:stay@casamarea.example" class="link-underline">stay@casamarea.example</a></p>
+      </div>
+      <div><h2 class="text-xs font-medium uppercase tracking-[0.24em] text-sun">Stay</h2><ul class="mt-4 space-y-2.5"><li><a href="rooms.html" class="link-underline text-foam/85 hover:text-foam">Rooms & suites</a></li><li><a href="offers.html" class="link-underline text-foam/85 hover:text-foam">Offers</a></li><li><a href="booking.html" class="link-underline text-foam/85 hover:text-foam">Book a stay</a></li></ul></div><div><h2 class="text-xs font-medium uppercase tracking-[0.24em] text-sun">Discover</h2><ul class="mt-4 space-y-2.5"><li><a href="dining.html" class="link-underline text-foam/85 hover:text-foam">Dining</a></li><li><a href="experiences.html" class="link-underline text-foam/85 hover:text-foam">Experiences</a></li><li><a href="contact.html" class="link-underline text-foam/85 hover:text-foam">Location & contact</a></li></ul></div>
+      <div class="md:col-span-3 lg:col-span-1">
+        <h2 class="text-xs font-medium uppercase tracking-[0.24em] text-sun">Letters from the coast</h2>
+        <p class="mt-4 text-foam/80">Four emails a year: new rooms, the season's menu and quiet weeks worth knowing about.</p>
+        <!-- Demo form: connect it to your email provider in assets/js/main.js (initForms). -->
+        <form class="mt-5 flex flex-col gap-3 sm:flex-row" data-form="newsletter" novalidate>
+          <div class="flex-1">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input id="newsletter-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" class="field" aria-describedby="newsletter-email-error">
+            <p id="newsletter-email-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <button type="submit" class="btn-light h-[3.125rem] shrink-0">Subscribe</button>
+        </form>
+        <p class="mt-3 hidden text-sm text-sun" data-form-success role="status">Thank you. Look out for a confirmation email from us; once you click the link, the next letter from the coast is yours.</p>
+      </div>
+    </div>
+    <div class="container-x flex flex-col gap-3 border-t border-foam/15 py-6 text-sm text-foam/70 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; <span data-year>2026</span> Casa Marea, Newport. A fictional hotel.</p>
+      <ul class="flex gap-6"><li><a href="#" class="link-underline">Instagram</a></li><li><a href="#" class="link-underline">Privacy</a></li><li><a href="#" class="link-underline">Terms</a></li></ul>
+    </div>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

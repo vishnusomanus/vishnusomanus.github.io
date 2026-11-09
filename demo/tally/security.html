@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security and trust — How Tally protects your data</title>
+  <meta name="description" content="Encryption, US data hosting, read-only bank feeds, two-factor sign-in, backups, privacy and responsible disclosure. How Tally keeps your financial data safe.">
+  <meta name="theme-color" content="#f7f6f1">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tally">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Security and trust — How Tally protects your data">
+  <meta property="og:description" content="Encryption, US data hosting, read-only bank feeds, two-factor sign-in, backups, privacy and responsible disclosure. How Tally keeps your financial data safe.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400..600&amp;family=Mona+Sans:wdth,wght@75..125,300..800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="security" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[95] rounded-lg bg-ink px-5 py-3 text-sm font-semibold text-white focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 border-b border-line bg-paper">
+    <div class="container-x flex h-16 items-center gap-6">
+      <a href="index.html" class="inline-flex items-center gap-2.5" aria-label="Tally home">
+        <svg viewBox="0 0 32 32" class="h-8 w-8 shrink-0" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#0d1f1b"/><path d="M9.5 9v14M13.5 9v14M17.5 9v14M21.5 9v14" stroke="#f7f6f1" stroke-width="2.2" stroke-linecap="round"/><path d="M6.5 20.5 25.5 11.5" stroke="#45d99b" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <span class="text-[21px] font-semibold tracking-[-0.03em] [font-stretch:120%]">tally</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center">
+          <li><a href="features.html" class="nav-link">Features</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+          <li><a href="integrations.html" class="nav-link">Integrations</a></li>
+          <li><a href="customers.html" class="nav-link">Customers</a></li>
+          <li><a href="security.html" class="nav-link" aria-current="page">Security</a></li>
+        </ul>
+      </nav>
+      <div class="ml-auto flex items-center gap-2">
+        <a href="pricing.html#plans" class="btn-ghost btn-sm hidden sm:inline-flex">See plans</a>
+        <a href="contact.html" class="btn-primary btn-sm hidden sm:inline-flex">Book a demo</a>
+        <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-lg border border-line-strong bg-white text-ink lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-line bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-6">
+        <ul>
+          <li><a href="features.html" class="m-link">Features<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="pricing.html" class="m-link">Pricing<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="calculator.html" class="m-link">Calculator<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="integrations.html" class="m-link">Integrations<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="customers.html" class="m-link">Customers<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="security.html" class="m-link" aria-current="page">Security<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="changelog.html" class="m-link">Changelog<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+        </ul>
+        <div class="mt-5 grid gap-2 sm:grid-cols-2">
+          <a href="contact.html" class="btn-primary btn-lg">Book a demo</a>
+          <a href="pricing.html#plans" class="btn-ghost btn-lg">See plans</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="relative overflow-hidden border-b border-line">
+      <div class="ledger-lines pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="container-x relative grid gap-10 py-16 sm:py-20 lg:grid-cols-12 lg:items-center">
+        <div class="lg:col-span-7">
+          <p class="eyebrow">Security and trust</p>
+          <h1 class="h-display mt-5">Your numbers, kept carefully.</h1>
+          <p class="lead mt-6 max-w-2xl">Invoices, bank transactions and client details are the most sensitive data a small business has. Here’s exactly how we look after them, in plain English.</p>
+        </div>
+        <div class="lg:col-span-5">
+          <ul class="card divide-y divide-line text-[15px]">
+            <li class="flex items-center justify-between gap-4 px-5 py-4"><span>Data stored in</span><span class="font-semibold">Ohio, USA</span></li>
+            <li class="flex items-center justify-between gap-4 px-5 py-4"><span>Backup copy in</span><span class="font-semibold">Oregon, USA</span></li>
+            <li class="flex items-center justify-between gap-4 px-5 py-4"><span>Uptime, last 12 months</span><span class="font-semibold">99.97%</span></li>
+            <li class="flex items-center justify-between gap-4 px-5 py-4"><span>Last independent test</span><span class="font-semibold">August 2026</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="pillars-title" class="py-20 sm:py-24">
+      <div class="container-x">
+        <p class="eyebrow">How we protect it</p>
+        <h2 id="pillars-title" class="h-section mt-4 max-w-2xl">Six things we never cut corners on.</h2>
+        <div class="mt-12 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          <article class="rule reveal pt-6">
+            <svg viewBox="0 0 24 24" class="h-7 w-7 text-mint-700" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            <h3 class="h-card mt-4">Encrypted everywhere</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink-soft">TLS 1.3 between your browser and us, AES-256 for everything we store, and separate keys for backups.</p>
+          </article>
+          <article class="rule reveal reveal-d1 pt-6">
+            <svg viewBox="0 0 24 24" class="h-7 w-7 text-mint-700" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.5 5.5 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-5.5-3.5-9s1-6.5 3.5-9z"/></svg>
+            <h3 class="h-card mt-4">Kept in the US</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink-soft">Your data lives in Ohio with an encrypted copy in Oregon. It isn’t moved outside the US.</p>
+          </article>
+          <article class="rule reveal reveal-d2 pt-6">
+            <svg viewBox="0 0 24 24" class="h-7 w-7 text-mint-700" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10h18M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18M12 3l9 5H3z"/></svg>
+            <h3 class="h-card mt-4">Read-only bank feeds</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink-soft">Secure bank connections that can read transactions and nothing else. No banking passwords, ever.</p>
+          </article>
+          <article class="rule reveal pt-6">
+            <svg viewBox="0 0 24 24" class="h-7 w-7 text-mint-700" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10 18h4M9.5 9.5l2 2 3-3.5"/></svg>
+            <h3 class="h-card mt-4">Two-factor and passkeys</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink-soft">Authenticator apps and passkeys on every plan. Owners can require them for the whole team.</p>
+          </article>
+          <article class="rule reveal reveal-d1 pt-6">
+            <svg viewBox="0 0 24 24" class="h-7 w-7 text-mint-700" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6c0-1.7 3.6-3 8-3s8 1.3 8 3-3.6 3-8 3-8-1.3-8-3z"/><path d="M4 6v6c0 1.7 3.6 3 8 3s8-1.3 8-3V6M4 12v6c0 1.7 3.6 3 8 3s8-1.3 8-3v-6"/></svg>
+            <h3 class="h-card mt-4">Hourly backups</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink-soft">Point-in-time backups every hour, kept for 35 days and restored as a test every month.</p>
+          </article>
+          <article class="rule reveal reveal-d2 pt-6">
+            <svg viewBox="0 0 24 24" class="h-7 w-7 text-mint-700" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8l4 4v14H4V3h4z"/><path d="M8 11h8M8 15h8M8 7h3"/></svg>
+            <h3 class="h-card mt-4">A full audit trail</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink-soft">Every invoice edit, payment match and export is logged with who did it and when.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="gdpr-title" class="border-y border-line bg-paper-2/60 py-20 sm:py-24">
+      <div class="container-x grid gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-5">
+          <p class="eyebrow">Privacy</p>
+          <h2 id="gdpr-title" class="h-section mt-4">Your data is yours.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-ink-soft">We process your clients’ details only to run Tally for you. We don’t sell data, show ads or train anything on your invoices.</p>
+          <ul class="mt-7 space-y-3 text-[15px]">
+            <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 shrink-0 rounded-[2px] bg-mint-500" aria-hidden="true"></span>Data processing agreement included in our terms</li>
+            <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 shrink-0 rounded-[2px] bg-mint-500" aria-hidden="true"></span>A named privacy lead in Grand Rapids</li>
+            <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 shrink-0 rounded-[2px] bg-mint-500" aria-hidden="true"></span>Export or delete everything from your settings</li>
+          </ul>
+        </div>
+        <div class="min-w-0 lg:col-span-7">
+          <h3 class="font-semibold">Sub-processors</h3>
+          <p class="mt-1 text-sm text-ink-soft">The companies that help us run Tally and what they handle.</p>
+          <div class="relative mt-5 overflow-x-auto rounded-[var(--radius-card)] border border-line bg-white">
+            <table class="w-full min-w-[30rem] text-left text-sm">
+              <caption class="sr-only">Tally sub-processors, their purpose and where data is processed</caption>
+              <thead class="bg-paper font-mono text-xs tracking-[0.06em] text-ink-faint uppercase">
+                <tr><th scope="col" class="px-4 py-3 font-medium">Company</th><th scope="col" class="px-4 py-3 font-medium">Purpose</th><th scope="col" class="px-4 py-3 font-medium">Location</th></tr>
+              </thead>
+              <tbody class="divide-y divide-line">
+                <tr><th scope="row" class="px-4 py-3 font-semibold">Stratus Cloud</th><td class="px-4 py-3 text-ink-soft">Hosting and backups</td><td class="px-4 py-3">Ohio, Oregon</td></tr>
+                <tr><th scope="row" class="px-4 py-3 font-semibold">Openlink</th><td class="px-4 py-3 text-ink-soft">Secure bank connections</td><td class="px-4 py-3">Illinois</td></tr>
+                <tr><th scope="row" class="px-4 py-3 font-semibold">Puffin Pay</th><td class="px-4 py-3 text-ink-soft">Card payments on invoices</td><td class="px-4 py-3">California</td></tr>
+                <tr><th scope="row" class="px-4 py-3 font-semibold">Post Road Mail</th><td class="px-4 py-3 text-ink-soft">Sending invoices and reminders</td><td class="px-4 py-3">Virginia</td></tr>
+                <tr><th scope="row" class="px-4 py-3 font-semibold">Helpdesk North</th><td class="px-4 py-3 text-ink-soft">Support conversations</td><td class="px-4 py-3">Minnesota</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="disclosure-title" class="py-20 sm:py-24">
+      <div class="container-x grid gap-10 lg:grid-cols-2">
+        <div>
+          <p class="eyebrow">Responsible disclosure</p>
+          <h2 id="disclosure-title" class="h-section mt-4">Found a problem? Tell us first.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-ink-soft">Email <a href="mailto:security@tally.example" class="link">security@tally.example</a> with the details. We reply within one business day, keep you updated while we fix it and credit you if you’d like.</p>
+        </div>
+        <div>
+          <details class="faq border-t">
+            <summary>Do you have an independent security test?<span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></span></summary>
+            <p class="pb-5 leading-relaxed text-ink-soft">Yes. An outside firm tests the app and our infrastructure every year; the latest was in August 2026. Practice customers can ask for the summary report.</p>
+          </details>
+          <details class="faq">
+            <summary>Who at Tally can see my data?<span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></span></summary>
+            <p class="pb-5 leading-relaxed text-ink-soft">Only support staff you give permission to, for the length of a support conversation. Every access is logged and appears in your audit trail.</p>
+          </details>
+          <details class="faq">
+            <summary>What happens to my data if I leave?<span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M10 4v12M4 10h12"/></svg></span></summary>
+            <p class="pb-5 leading-relaxed text-ink-soft">Your account stays read-only so you can export everything. When you ask us to delete it, it’s gone from live systems straight away and from backups within 35 days. Keep your own copy for as long as you need it for business and tax records.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="on-ink mt-auto bg-ink text-white">
+    <div class="container-x grid gap-12 pt-16 pb-12 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="inline-flex items-center gap-2.5" aria-label="Tally home">
+          <svg viewBox="0 0 32 32" class="h-8 w-8 shrink-0" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#45d99b"/><path d="M9.5 9v14M13.5 9v14M17.5 9v14M21.5 9v14" stroke="#0d1f1b" stroke-width="2.2" stroke-linecap="round"/><path d="M6.5 20.5 25.5 11.5" stroke="#f7f6f1" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <span class="text-[21px] font-semibold tracking-[-0.03em] [font-stretch:120%]">tally</span>
+        </a>
+        <p class="mt-4 max-w-xs text-[15px] leading-relaxed text-fog">Invoicing, expenses and simple bookkeeping for freelancers and small studios. Built by Tally Software in Grand Rapids, Michigan.</p>
+        <form data-form="newsletter" class="mt-7 max-w-sm" novalidate>
+          <label for="footer-email" class="text-sm font-semibold">Getting-paid notes, once a month</label>
+          <div class="mt-2.5 flex gap-2">
+            <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@studio.example" class="input border-white/20 bg-ink-2 py-2.5 text-white placeholder:text-fog focus:border-mint-400">
+            <button type="submit" class="btn-accent shrink-0">Subscribe</button>
+          </div>
+        </form>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-7 lg:col-start-6">
+        <nav aria-label="Product">
+          <h2 class="font-mono text-xs font-medium tracking-[0.08em] text-fog uppercase">Product</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="features.html" class="text-white/85 transition hover:text-mint-300">Features</a></li>
+            <li><a href="pricing.html" class="text-white/85 transition hover:text-mint-300">Pricing</a></li>
+            <li><a href="integrations.html" class="text-white/85 transition hover:text-mint-300">Integrations</a></li>
+            <li><a href="changelog.html" class="text-white/85 transition hover:text-mint-300">Changelog</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2 class="font-mono text-xs font-medium tracking-[0.08em] text-fog uppercase">Company</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="customers.html" class="text-white/85 transition hover:text-mint-300">Customers</a></li>
+            <li><a href="security.html" class="text-white/85 transition hover:text-mint-300">Security &amp; trust</a></li>
+            <li><a href="contact.html" class="text-white/85 transition hover:text-mint-300">Book a demo</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Tools">
+          <h2 class="font-mono text-xs font-medium tracking-[0.08em] text-fog uppercase">Tools</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="calculator.html" class="text-white/85 transition hover:text-mint-300">Late-payment calculator</a></li>
+            <li><a href="calculator.html#time-saved" class="text-white/85 transition hover:text-mint-300">Time-saved estimate</a></li>
+            <li><a href="pricing.html#faq" class="text-white/85 transition hover:text-mint-300">Sales tax and billing FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="container-x">
+      <div class="flex flex-col gap-3 border-t border-white/15 py-6 text-sm text-fog md:flex-row md:items-center md:justify-between">
+        <p>© <span data-year>2026</span> Tally Software, Inc., Ionia Avenue, Grand Rapids. Tally is a fictional product.</p>
+        <p>Nothing on this site is tax, legal or financial advice. · Website template by Freeframe</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

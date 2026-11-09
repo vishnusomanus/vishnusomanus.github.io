@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#f5f2ea"/>
+  <path d="M60 96H700M60 540H700" stroke="#14251d" stroke-width="1.5"/>
+  <g transform="translate(60 34) scale(1.5)"><path d="M23.6 8.4A11 11 0 1 0 27 16" fill="none" stroke="#1f4a37" stroke-width="2.2" stroke-linecap="round"/><path d="M27 10.2 27 16 21.4 14.6" fill="none" stroke="#1f4a37" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M11 20.5c1.6-1.8 1.6-3.6 0-5.4s-1.6-3.6 0-5.4M16 20.5c1.6-1.8 1.6-3.6 0-5.4s-1.6-3.6 0-5.4" fill="none" stroke="#c98a3a" stroke-width="1.8" stroke-linecap="round"/></g>
+  <text x="118" y="72" font-family="'Hedvig Letters Serif', Georgia, serif" font-size="38" fill="#14251d">Heatloop</text>
+  <text x="700" y="70" text-anchor="end" font-family="'Source Code Pro', monospace" font-size="18" letter-spacing="2" fill="#8c4f17">THERMAL STORAGE · BANGOR, ME</text>
+  <text font-family="'Hedvig Letters Serif', Georgia, serif" font-size="78" letter-spacing="-1.5" fill="#14251d"><tspan x="60" y="220">Buy your heat</tspan><tspan x="60" y="310">at night. Use it</tspan><tspan x="60" y="400">all day.</tspan></text>
+  <text x="60" y="478" font-family="'Hedvig Letters Sans', sans-serif" font-size="25" fill="#4d5a52">A thermal battery that stores cheap electricity as heat.</text>
+  <text x="60" y="578" font-family="'Source Code Pro', monospace" font-size="18" letter-spacing="2" fill="#4d5a52">18 · 28 · 40 KWH  —  RESERVE AT HEATLOOP.EXAMPLE</text>
+  <rect x="760" y="30" width="410" height="570" fill="#ece7da"/>
+  <svg x="770" y="40" width="390" height="550" viewBox="0 0 600 640" color="#14251d">
+          
+          <defs>
+            <pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="currentColor" stroke-width="1" opacity=".45"/></pattern>
+            <linearGradient id="charge-fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d4682a" stop-opacity=".55"/><stop offset=".62" stop-color="#c98a3a" stop-opacity=".4"/><stop offset=".63" stop-color="#1f4a37" stop-opacity=".14"/><stop offset="1" stop-color="#1f4a37" stop-opacity=".14"/></linearGradient>
+          </defs>
+          <!-- ground line and dimension -->
+          <path d="M60 604H560" stroke="currentColor" stroke-width="1" opacity=".5"/>
+          <path d="M108 70V590M102 70H114M102 590H114" stroke="currentColor" stroke-width=".8" opacity=".55"/>
+          <text x="96" y="334" transform="rotate(-90 96 334)" text-anchor="middle" font-family="Source Code Pro, monospace" font-size="11" fill="currentColor" opacity=".75" letter-spacing="1">65 IN</text>
+          <!-- cable from the grid -->
+          <path d="M318 46V14H372" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="3 4"/>
+          <path d="M384 4l-8 11h7l-6 11" fill="none" stroke="#c98a3a" stroke-width="1.8" stroke-linejoin="round"/>
+          <!-- cabinet: top, side, front -->
+          <path d="M140 70L200 34H440L380 70Z" fill="#ece7da" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          <path d="M380 70L440 34V554L380 590Z" fill="#e1dac8" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+          <path d="M392 120L428 98M392 140L428 118M392 160L428 138" stroke="currentColor" stroke-width=".8" opacity=".35"/>
+          <rect x="140" y="70" width="240" height="520" fill="#f5f2ea" stroke="currentColor" stroke-width="1.4"/>
+          <!-- controls -->
+          <rect x="168" y="90" width="98" height="40" fill="#ece7da" stroke="currentColor" stroke-width="1"/>
+          <text x="178" y="116" font-family="Source Code Pro, monospace" font-size="15" fill="currentColor">144&#176;F</text>
+          <path d="M226 104h30M226 112h22M226 120h26" stroke="#1f4a37" stroke-width="3"/>
+          <circle cx="350" cy="110" r="4" fill="#1f4a37"/>
+          <path d="M290 100h44M290 110h36M290 120h44" stroke="currentColor" stroke-width=".8" opacity=".4"/>
+          <!-- cut window: insulation, then the store -->
+          <path d="M160 150H360V540H160Z" fill="url(#hatch)" stroke="currentColor" stroke-width="1"/>
+          <rect x="174" y="164" width="172" height="362" fill="#f5f2ea" stroke="currentColor" stroke-width="1"/>
+          <rect x="174" y="164" width="172" height="362" fill="url(#charge-fill)"/>
+          <g fill="#f5f2ea" stroke="currentColor" stroke-width="1">
+            <rect x="186" y="178" width="44" height="32" rx="7"/><rect x="238" y="178" width="44" height="32" rx="7"/><rect x="290" y="178" width="44" height="32" rx="7"/>
+            <rect x="186" y="226" width="44" height="32" rx="7"/><rect x="238" y="226" width="44" height="32" rx="7"/><rect x="290" y="226" width="44" height="32" rx="7"/>
+            <rect x="186" y="274" width="44" height="32" rx="7"/><rect x="238" y="274" width="44" height="32" rx="7"/><rect x="290" y="274" width="44" height="32" rx="7"/>
+            <rect x="186" y="322" width="44" height="32" rx="7"/><rect x="238" y="322" width="44" height="32" rx="7"/><rect x="290" y="322" width="44" height="32" rx="7"/>
+            <rect x="186" y="370" width="44" height="32" rx="7"/><rect x="238" y="370" width="44" height="32" rx="7"/><rect x="290" y="370" width="44" height="32" rx="7"/>
+            <rect x="186" y="418" width="44" height="32" rx="7"/><rect x="238" y="418" width="44" height="32" rx="7"/><rect x="290" y="418" width="44" height="32" rx="7"/>
+          </g>
+          <g fill="#d4682a" opacity=".5">
+            <rect x="190" y="182" width="36" height="24" rx="5"/><rect x="242" y="182" width="36" height="24" rx="5"/><rect x="294" y="182" width="36" height="24" rx="5"/>
+            <rect x="190" y="230" width="36" height="24" rx="5"/><rect x="242" y="230" width="36" height="24" rx="5"/><rect x="294" y="230" width="36" height="24" rx="5"/>
+            <rect x="190" y="278" width="36" height="24" rx="5"/><rect x="242" y="278" width="36" height="24" rx="5"/><rect x="294" y="278" width="36" height="24" rx="5"/>
+            <rect x="190" y="326" width="36" height="24" rx="5" opacity=".6"/><rect x="242" y="326" width="36" height="24" rx="5" opacity=".6"/><rect x="294" y="326" width="36" height="24" rx="5" opacity=".6"/>
+          </g>
+          <!-- heat exchanger -->
+          <path d="M360 170H340V218H182V266H340V314H182V362H340V410H182V458H360" fill="none" stroke="#8c4f17" stroke-width="3" stroke-linejoin="round"/>
+          <!-- charging element -->
+          <path d="M184 488l8-12 8 12 8-12 8 12 8-12 8 12 8-12 8 12 8-12 8 12 8-12 8 12 8-12 8 12 8-12 8 12 8-12 8 12" fill="none" stroke="#d4682a" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M184 508H336" stroke="currentColor" stroke-width="1" opacity=".5"/>
+          <!-- kick plate and feet -->
+          <path d="M176 560h168M176 568h168M176 576h168" stroke="currentColor" stroke-width=".8" opacity=".4"/>
+          <path d="M156 590v10h20v-10M344 590v10h20v-10" fill="#ece7da" stroke="currentColor" stroke-width="1"/>
+          <!-- pipe connections -->
+          <g stroke-linecap="round" fill="none">
+            <path d="M440 470H540" stroke="#c98a3a" stroke-width="6"/>
+            <path d="M440 492H540" stroke="#1f4a37" stroke-width="6"/>
+            <path d="M440 514H540" stroke="#8c4f17" stroke-width="6"/>
+            <path d="M440 536H540" stroke="currentColor" stroke-width="6" opacity=".55"/>
+          </g>
+          <g fill="#f5f2ea" stroke="currentColor" stroke-width="1"><rect x="540" y="463" width="8" height="14"/><rect x="540" y="485" width="8" height="14"/><rect x="540" y="507" width="8" height="14"/><rect x="540" y="529" width="8" height="14"/></g>
+          <!-- callouts -->
+          <g fill="none" stroke="currentColor" stroke-width=".8" opacity=".7">
+            <path d="M58 110H168"/><path d="M58 300H166"/><path d="M58 388H212"/>
+            <path d="M542 366H340"/><path d="M58 482H184"/><path d="M542 580V545"/>
+          </g>
+          <g font-family="Source Code Pro, monospace" font-size="11" text-anchor="middle">
+            <circle cx="46" cy="110" r="12" fill="#f5f2ea" stroke="currentColor"/><text x="46" y="114" fill="currentColor">01</text>
+            <circle cx="46" cy="300" r="12" fill="#f5f2ea" stroke="currentColor"/><text x="46" y="304" fill="currentColor">02</text>
+            <circle cx="46" cy="388" r="12" fill="#f5f2ea" stroke="currentColor"/><text x="46" y="392" fill="currentColor">03</text>
+            <circle cx="554" cy="366" r="12" fill="#f5f2ea" stroke="currentColor"/><text x="554" y="370" fill="currentColor">04</text>
+            <circle cx="46" cy="482" r="12" fill="#f5f2ea" stroke="currentColor"/><text x="46" y="486" fill="currentColor">05</text>
+            <circle cx="542" cy="592" r="12" fill="#f5f2ea" stroke="currentColor"/><text x="542" y="596" fill="currentColor">06</text>
+          </g>
+        </svg>
+</svg>

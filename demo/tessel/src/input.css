@@ -1,0 +1,465 @@
+/* Tessel: Tailwind CSS v4 source.
+   Edit the tokens in @theme, then rebuild with `npm run build`.
+   Light ("cream") is the default. Dark mode swaps the same tokens under `html.dark`,
+   so every utility (bg-bg, text-ink, border-line, shadow-brut...) follows the theme. */
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+/* `dark:` targets the `dark` class on <html>, set by the theme toggle (or the visitor's system setting). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-display: "Bowlby One", "Arial Black", Impact, ui-sans-serif, sans-serif;
+  --font-sans: "Ubuntu Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Ubuntu Sans Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Theme tokens (light values; dark values are below under html.dark). */
+  --color-bg: #fbf3e4; /* page background, warm cream */
+  --color-bg-2: #f3e5c9; /* alternate bands */
+  --color-card: #fffaf1; /* cards, inputs, panels */
+  --color-ink: #16130f; /* text */
+  --color-ink-soft: #4a4238; /* secondary text (AA on bg, bg-2 and card) */
+  --color-line: #16130f; /* the thick borders and hard shadows */
+  --color-grid: rgb(22 19 15 / 0.09); /* the visible grid behind sections */
+  --color-danger: #b3261e; /* error text */
+
+  /* Fixed brand colors, the same in both themes. Text on them is always coal. */
+  --color-coal: #16130f;
+  --color-cream: #fbf3e4;
+  --color-tomato: #ff6b42;
+  --color-butter: #ffd84a;
+  --color-mint: #86e2b6;
+  --color-peri: #a9b2ff;
+  --color-bubble: #ffb4d0;
+
+  /* Hard, unblurred offset shadows. */
+  --shadow-brut-sm: 2px 2px 0 0 var(--color-line);
+  --shadow-brut: 4px 4px 0 0 var(--color-line);
+  --shadow-brut-lg: 8px 8px 0 0 var(--color-line);
+}
+
+html.dark {
+  --color-bg: #151310;
+  --color-bg-2: #1e1b17;
+  --color-card: #24211c;
+  --color-ink: #f6ecd8;
+  --color-ink-soft: #cdc2ab;
+  --color-line: #f6ecd8;
+  --color-grid: rgb(246 236 216 / 0.07);
+  --color-danger: #ff8f7d;
+  color-scheme: dark;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    color-scheme: light;
+  }
+  body {
+    background: var(--color-bg);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-ink);
+    outline-offset: 3px;
+  }
+  ::selection {
+    background: var(--color-butter);
+    color: var(--color-coal);
+  }
+  button,
+  summary,
+  select,
+  label:has(input[type="checkbox"]),
+  label:has(input[type="radio"]) {
+    cursor: pointer;
+  }
+  input,
+  select,
+  textarea {
+    min-width: 0;
+  }
+}
+
+@layer components {
+  .wrap {
+    width: min(1240px, calc(100% - 2rem));
+    margin-inline: auto;
+  }
+  /* The visible grid paper behind heroes and bands. */
+  .grid-paper {
+    background-image:
+      linear-gradient(var(--color-grid) 1.5px, transparent 1.5px),
+      linear-gradient(90deg, var(--color-grid) 1.5px, transparent 1.5px);
+    background-size: 36px 36px;
+  }
+  /* Chunky buttons that press down into their shadow. */
+  .btn {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.55rem;
+    border: 2.5px solid var(--color-line);
+    border-radius: 0.6rem;
+    background: var(--color-butter);
+    color: var(--color-coal);
+    padding: 0.65rem 1.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+    text-align: center;
+    box-shadow: var(--shadow-brut);
+    transition:
+      transform 0.08s ease,
+      box-shadow 0.08s ease;
+  }
+  .btn:hover:not(:disabled) {
+    transform: translate(-1px, -1px);
+    box-shadow: 5px 5px 0 0 var(--color-line);
+  }
+  .btn:active:not(:disabled) {
+    transform: translate(4px, 4px);
+    box-shadow: 0 0 0 0 var(--color-line);
+  }
+  .btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  .btn-tomato {
+    background: var(--color-tomato);
+  }
+  .btn-mint {
+    background: var(--color-mint);
+  }
+  .btn-plain {
+    background: var(--color-card);
+    color: var(--color-ink);
+  }
+  .btn-sm {
+    min-height: 2.5rem;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.9rem;
+    box-shadow: var(--shadow-brut-sm);
+  }
+  .btn-sm:hover:not(:disabled) {
+    box-shadow: 3px 3px 0 0 var(--color-line);
+  }
+  .btn-sm:active:not(:disabled) {
+    transform: translate(2px, 2px);
+  }
+  .btn-lg {
+    min-height: 3.5rem;
+    padding: 0.85rem 1.5rem;
+    font-size: 1.08rem;
+  }
+  /* Square icon button (theme toggle, menu, move up and down). */
+  .icon-btn {
+    display: inline-grid;
+    width: 2.75rem;
+    height: 2.75rem;
+    flex-shrink: 0;
+    place-items: center;
+    border: 2.5px solid var(--color-line);
+    border-radius: 0.55rem;
+    background: var(--color-card);
+    color: var(--color-ink);
+    box-shadow: var(--shadow-brut-sm);
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+  }
+  .icon-btn:active:not(:disabled) {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
+  .icon-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+  .card {
+    border: 2.5px solid var(--color-line);
+    border-radius: 0.75rem;
+    background: var(--color-card);
+    box-shadow: var(--shadow-brut);
+  }
+  /* Sticker-like badge. */
+  .sticker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    border: 2px solid var(--color-line);
+    border-radius: 999px;
+    background: var(--color-butter);
+    color: var(--color-coal);
+    padding: 0.2rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    box-shadow: var(--shadow-brut-sm);
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .nav-link {
+    display: block;
+    border: 2px solid transparent;
+    border-radius: 0.5rem;
+    padding: 0.4rem 0.7rem;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .nav-link:hover {
+    border-color: var(--color-line);
+    background: var(--color-card);
+  }
+  .nav-link[aria-current="page"] {
+    border-color: var(--color-line);
+    background: var(--color-mint);
+    color: var(--color-coal);
+    box-shadow: var(--shadow-brut-sm);
+  }
+  .m-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--color-line);
+    padding: 0.85rem 0.25rem;
+    font-weight: 800;
+    font-size: 1.1rem;
+  }
+  .m-link[aria-current="page"] {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 0.3em;
+    text-decoration-color: var(--color-tomato);
+  }
+  .label {
+    display: block;
+    font-weight: 700;
+    font-size: 0.95rem;
+  }
+  .field {
+    display: block;
+    width: 100%;
+    margin-top: 0.4rem;
+    min-height: 2.9rem;
+    border: 2.5px solid var(--color-line);
+    border-radius: 0.55rem;
+    background: var(--color-card);
+    padding: 0.55rem 0.8rem;
+    color: var(--color-ink);
+  }
+  .field:focus-visible {
+    outline: none;
+    box-shadow: var(--shadow-brut);
+    background: var(--color-bg);
+  }
+  .field[aria-invalid="true"] {
+    border-style: dashed;
+    border-color: var(--color-danger);
+  }
+  .field::placeholder {
+    color: var(--color-ink-soft);
+    opacity: 0.85;
+  }
+  .error {
+    display: block;
+    margin-top: 0.35rem;
+    color: var(--color-danger);
+    font-size: 0.86rem;
+    font-weight: 700;
+  }
+  .error:empty {
+    display: none;
+  }
+  /* Filter chip: a label around a visually hidden radio or checkbox. */
+  .chip {
+    display: inline-flex;
+    min-height: 2.5rem;
+    align-items: center;
+    gap: 0.4rem;
+    border: 2px solid var(--color-line);
+    border-radius: 999px;
+    background: var(--color-card);
+    padding: 0.3rem 0.95rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+  }
+  .chip:hover {
+    background: var(--color-bg-2);
+  }
+  .chip:has(:checked),
+  .chip[aria-current="true"] {
+    background: var(--color-coal);
+    color: var(--color-cream);
+    box-shadow: 3px 3px 0 0 var(--color-tomato);
+  }
+  .dark .chip:has(:checked),
+  .dark .chip[aria-current="true"] {
+    background: var(--color-cream);
+    color: var(--color-coal);
+  }
+  .chip:has(:focus-visible) {
+    outline: 3px solid var(--color-ink);
+    outline-offset: 3px;
+  }
+  .text-link {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.25em;
+    text-decoration-color: var(--color-tomato);
+  }
+  .text-link:hover {
+    text-decoration-thickness: 4px;
+  }
+  /* A thick highlighter stroke behind a word. */
+  .marker {
+    background: linear-gradient(transparent 55%, var(--color-butter) 55%, var(--color-butter) 92%, transparent 92%);
+    color: inherit;
+  }
+  .dark .marker {
+    background: linear-gradient(transparent 55%, #6b5a14 55%, #6b5a14 92%, transparent 92%);
+  }
+  /* On/off switch (aria-pressed button). */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 2.6rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+    border: 2px solid var(--color-line);
+    border-radius: 999px;
+    background: var(--color-card);
+  }
+  .switch::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid var(--color-line);
+    border-radius: 999px;
+    background: var(--color-card);
+    transition: transform 0.12s ease;
+  }
+  [aria-pressed="true"] > .switch,
+  [aria-checked="true"] > .switch {
+    background: var(--color-mint);
+  }
+  [aria-pressed="true"] > .switch::after,
+  [aria-checked="true"] > .switch::after {
+    transform: translateX(1.1rem);
+    background: var(--color-coal);
+  }
+  .reveal {
+    opacity: 1;
+  }
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.45s ease,
+      transform 0.45s ease;
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  /* Range slider. */
+  .range {
+    width: 100%;
+    height: 2rem;
+    appearance: none;
+    background: transparent;
+  }
+  .range::-webkit-slider-runnable-track {
+    height: 0.9rem;
+    border: 2.5px solid var(--color-line);
+    border-radius: 999px;
+    background: var(--color-card);
+  }
+  .range::-moz-range-track {
+    height: 0.6rem;
+    border: 2.5px solid var(--color-line);
+    border-radius: 999px;
+    background: var(--color-card);
+  }
+  .range::-webkit-slider-thumb {
+    appearance: none;
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-top: -0.55rem;
+    border: 2.5px solid var(--color-line);
+    border-radius: 0.4rem;
+    background: var(--color-tomato);
+    box-shadow: var(--shadow-brut-sm);
+  }
+  .range::-moz-range-thumb {
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2.5px solid var(--color-line);
+    border-radius: 0.4rem;
+    background: var(--color-tomato);
+  }
+  .range:focus-visible {
+    outline-offset: 6px;
+  }
+  dialog::backdrop {
+    background: rgb(22 19 15 / 0.6);
+  }
+  .faq summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq[open] .faq-plus {
+    transform: rotate(45deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  .wiggle:hover {
+    animation: wiggle 0.4s ease;
+  }
+  @keyframes wiggle {
+    25% {
+      transform: rotate(-3deg);
+    }
+    75% {
+      transform: rotate(3deg);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Welcome — Nimbus</title>
+<meta name="description" content="Your Nimbus board is ready." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }</style>
+</head>
+<body class="bg-[#f4f8fb] text-[#102433] font-sans font-sans antialiased">
+<header class="sticky top-0 z-30 border-b border-[#d5e4ee] bg-[#f4f8fb]/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-xl font-bold">Nimbus</a>
+    <div class="flex items-center gap-3"><button id="menuBtn" class="rounded-lg border border-[#c5d7e4] px-3 py-1 text-sm md:hidden" aria-expanded="false">Menu</button></div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t pt-3 text-sm md:flex md:basis-auto md:flex-row md:items-center md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html">Home</a><a href="product.html">Product</a><a href="pricing.html">Pricing</a><a href="customers.html">Customers</a><a href="start.html">Start</a></nav>
+  </div>
+</header><main class="mx-auto max-w-3xl px-5 py-20 sm:px-8">
+  <p class="text-xs font-semibold uppercase tracking-wider text-[#0b6e8a]">Board ready</p>
+  <h1 id="title" class="mt-3 font-display text-5xl font-bold">Your board is open.</h1>
+  <p id="line" class="mt-4 text-[#3d5566]">Check the inbox on the address you gave us. The first board is named after your studio, with three lanes: Today, In review, and Later.</p>
+  <p class="mt-8"><a class="font-semibold text-[#0b6e8a] underline underline-offset-4" href="product.html">Read how the week is meant to run</a></p>
+</main>
+<script>
+const data = JSON.parse(sessionStorage.getItem("nimbus-signup") || "null");
+if (data) {
+  document.getElementById("title").textContent = `${data.studio} is on the board.`;
+  document.getElementById("line").textContent = `We sent the sign-in to ${data.email}. The plan on the account is ${data.plan}. The first board has three lanes: Today, In review, and Later.`;
+}
+</script><footer class="border-t border-[#d5e4ee]"><div class="mx-auto grid max-w-6xl gap-6 px-5 py-10 text-sm text-[#3d5566] sm:px-8 md:grid-cols-3"><div><p class="font-display text-xl font-bold text-[#102433]">Nimbus</p><p class="mt-2">440 Brannan Street<br />San Francisco, CA 94107</p></div><div><p>Weekday support, 9:00–17:00 Pacific.</p><p class="mt-2"><span class="underline underline-offset-4" >hello@nimbusboard.com</span></p></div><div class="space-y-1"><a href="product.html">Product</a><br /><a href="pricing.html">Pricing</a><br /><a href="customers.html">Customers</a></div></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

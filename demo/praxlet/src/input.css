@@ -1,0 +1,135 @@
+@import "tailwindcss" source("../");
+@source not "../*.md";
+@source not "../*.json";
+@theme {
+  --font-display: "Teko", sans-serif;
+  --font-sans: "Mada", sans-serif;
+  --color-paper: #f5f3ec;
+  --color-ink: #252522;
+  --color-red: #b92e20;
+  --color-line: #cbc9bf;
+  --color-muted: #56574f;
+  --color-wash: #e8e5db;
+  --color-soft: #f3d7ce;
+}
+@layer base {
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display font-medium;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  :focus-visible {
+    outline: 3px solid #b92e20;
+    outline-offset: 4px;
+  }
+  .bg-ink :focus-visible {
+    outline-color: #f5f3ec;
+  }
+  button,
+  summary {
+    cursor: pointer;
+  }
+  input,
+  select,
+  textarea {
+    min-width: 0;
+  }
+  ::selection {
+    background: #b92e20;
+    color: white;
+  }
+  [id] {
+    scroll-margin-top: 6rem;
+  }
+}
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-[1360px] px-5 sm:px-8 lg:px-12;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[.16em];
+  }
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-3 border border-ink bg-ink px-5 py-3 text-base font-semibold leading-tight text-paper transition hover:bg-red hover:border-red;
+  }
+  .btn-red {
+    @apply bg-red border-red text-white hover:bg-ink hover:border-ink;
+  }
+  .btn-line {
+    @apply bg-transparent text-ink hover:bg-ink hover:text-paper;
+  }
+  .btn-light {
+    @apply border-paper bg-paper text-ink hover:bg-soft hover:border-soft;
+  }
+  .btn-small {
+    @apply min-h-10 px-3 py-2 text-sm;
+  }
+  .field {
+    @apply block min-h-12 w-full border border-muted bg-paper px-3 py-2 text-base text-ink placeholder:text-muted;
+  }
+  .label {
+    @apply mb-2 block text-sm font-semibold;
+  }
+  .nav-link {
+    @apply block px-3 py-2 text-sm font-semibold hover:text-red;
+  }
+  .nav-link[aria-current] {
+    @apply underline underline-offset-8 decoration-red;
+  }
+  .text-link {
+    @apply font-semibold underline underline-offset-4 hover:text-red;
+  }
+  .chip {
+    @apply min-h-10 border border-line px-3 py-2 text-sm;
+  }
+  .chip[aria-pressed="true"] {
+    @apply border-ink bg-ink text-paper;
+  }
+  .spec-line {
+    @apply flex justify-between gap-4 border-b border-line py-3 text-sm;
+  }
+  .error {
+    @apply mt-2 text-sm font-semibold text-red;
+  }
+  [data-contact-success] {
+    overflow-wrap: anywhere;
+  }
+  .reveal {
+    opacity: 1;
+  }
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition:
+      opacity 0.45s,
+      transform 0.45s;
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

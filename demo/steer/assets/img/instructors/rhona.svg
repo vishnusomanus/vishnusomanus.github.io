@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Illustrated portrait of Rhona Tealby">
+  <rect width="200" height="200" fill="#fff3d0"/>
+  <g fill="#c4501c"><circle cx="62" cy="80" r="18"/><circle cx="58" cy="108" r="17"/><circle cx="64" cy="132" r="15"/><circle cx="138" cy="80" r="18"/><circle cx="142" cy="108" r="17"/><circle cx="136" cy="132" r="15"/><circle cx="80" cy="54" r="18"/><circle cx="120" cy="54" r="18"/><circle cx="100" cy="46" r="18"/></g>
+  <path d="M28 200c4-40 34-60 72-60s68 20 72 60Z" fill="#17734a"/>
+  <path d="M76 150c6 20 18 32 24 50 6-18 18-30 24-50" fill="#dcf3e6"/>
+  <g fill="#fff3d0"><circle cx="70" cy="178" r="3"/><circle cx="130" cy="178" r="3"/><circle cx="72" cy="192" r="3"/><circle cx="128" cy="192" r="3"/></g>
+  
+  <path d="M86 120h28v28c0 9-28 9-28 0Z" fill="#dbad94"/>
+  <ellipse cx="66" cy="96" rx="6.5" ry="9.5" fill="#f8d9c4"/><ellipse cx="134" cy="96" rx="6.5" ry="9.5" fill="#f8d9c4"/>
+  <ellipse cx="100" cy="92" rx="34" ry="40" fill="#f8d9c4"/>
+  <circle cx="87" cy="95" r="3.6" fill="#0d2230"/><circle cx="113" cy="95" r="3.6" fill="#0d2230"/>
+  <path d="M80 85q7-4.5 14 0M106 85q7-4.5 14 0" fill="none" stroke="#a8431a" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M100 98v10.5h-4.5" fill="none" stroke="#dbad94" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M88 115q12 9 24 0" fill="none" stroke="#7d2b22" stroke-width="3.2" stroke-linecap="round"/>
+  <ellipse cx="80" cy="108" rx="6" ry="3.6" fill="#e07a6a" opacity=".28"/><ellipse cx="120" cy="108" rx="6" ry="3.6" fill="#e07a6a" opacity=".28"/>
+  <g fill="#c06a4a" opacity=".6"><circle cx="82" cy="104" r="1.4"/><circle cx="87" cy="106" r="1.4"/><circle cx="78" cy="107" r="1.4"/><circle cx="118" cy="104" r="1.4"/><circle cx="113" cy="106" r="1.4"/><circle cx="122" cy="107" r="1.4"/></g>
+  <g fill="#c4501c"><circle cx="82" cy="60" r="12"/><circle cx="100" cy="56" r="13"/><circle cx="118" cy="60" r="12"/><circle cx="70" cy="70" r="10"/><circle cx="130" cy="70" r="10"/></g>
+</svg>

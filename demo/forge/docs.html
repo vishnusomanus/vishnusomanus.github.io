@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quickstart — Send your first webhook in five minutes | Forge</title>
+  <meta name="description" content="Install a Forge SDK, create an endpoint, send a signed event and verify it on the receiving side. Examples in curl, Node.js, Python and Go.">
+  <meta name="theme-color" content="#09090a">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Forge">
+  <meta property="og:title" content="Quickstart — Send your first webhook in five minutes | Forge">
+  <meta property="og:description" content="Install a Forge SDK, create an endpoint, send a signed event and verify it on the receiving side. Examples in curl, Node.js, Python and Go.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400..700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="docs" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[80] bg-brand-400 px-4 py-2.5 font-mono text-sm font-medium text-ink-950 focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 border-b border-line">
+    <div class="container-x flex h-[60px] items-center justify-between gap-6">
+      <div class="flex items-center gap-8">
+        <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Forge home">
+          <svg viewBox="0 0 28 28" class="h-7 w-7 shrink-0" aria-hidden="true"><rect width="28" height="28" rx="3" fill="#ffbe3d"/><path d="M7.5 6.5h13v3.6h-8.9v3.2h7.4v3.6h-7.4v4.6H7.5z" fill="#09090a"/><path d="M17 18h3.5v3.5H17z" fill="#09090a"/></svg>
+          <span class="font-mono text-[15px] font-semibold tracking-tight">forge<span class="logo-cursor text-brand-400">_</span></span>
+        </a>
+        <nav aria-label="Main" class="hidden lg:block">
+          <ul class="flex items-center">
+            <li><a href="docs.html" aria-current="page" class="nav-link">Quickstart</a></li>
+            <li><a href="sdks.html" class="nav-link">SDKs</a></li>
+            <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li><a href="changelog.html" class="nav-link">Changelog</a></li>
+            <li><a href="status.html" class="nav-link">Status</a></li>
+            <li><a href="company.html" class="nav-link">Company</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="nav-link hidden sm:inline-flex">Talk to sales</a>
+        <a href="signup.html" class="btn-primary btn-sm hidden sm:inline-flex">Get API key</a>
+        <button id="menu-toggle" type="button" class="grid h-10 w-10 place-items-center rounded-[3px] border border-line-strong bg-ink-900 text-fg lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-line lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-8">
+        <ul class="font-mono">
+          <li><a href="index.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>home</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="docs.html" aria-current="page" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>quickstart</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="sdks.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>sdks</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="pricing.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>pricing</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="changelog.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>changelog</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="status.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>status</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="company.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>company</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="contact.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>talk-to-sales</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+        </ul>
+        <a href="signup.html" class="btn-primary btn-lg mt-6 w-full">Get an API key</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <div class="frame">
+      <div class="pad-x grid gap-10 py-12 sm:py-16 lg:grid-cols-[13rem_minmax(0,1fr)] lg:gap-16 xl:grid-cols-[13rem_minmax(0,1fr)_14rem]">
+        <!-- On this page -->
+        <nav class="hidden lg:block" aria-label="On this page" data-toc>
+          <div class="sticky top-24">
+            <p class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">On this page</p>
+            <ol class="mt-4">
+              <li><a href="#install" class="toc-link">01 Install</a></li>
+              <li><a href="#auth" class="toc-link">02 Authenticate</a></li>
+              <li><a href="#endpoint" class="toc-link">03 Create an endpoint</a></li>
+              <li><a href="#send" class="toc-link">04 Send an event</a></li>
+              <li><a href="#verify" class="toc-link">05 Verify signatures</a></li>
+              <li><a href="#test" class="toc-link">06 Test locally</a></li>
+              <li><a href="#next" class="toc-link">Next steps</a></li>
+            </ol>
+          </div>
+        </nav>
+
+        <article class="min-w-0">
+          <header class="border-b border-line pb-10">
+            <p class="eyebrow reveal"><span class="eyebrow-num">docs</span>/ Quickstart</p>
+            <h1 class="h-section reveal reveal-d1 mt-4 sm:text-5xl">Send your first webhook in five minutes.</h1>
+            <p class="lead reveal reveal-d2 mt-5 max-w-2xl">Install an SDK, create an endpoint, send a signed event and verify it on the other side. Everything here works with a free test key.</p>
+            <dl class="reveal reveal-d2 mt-6 flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs text-subtle">
+              <div class="flex gap-2"><dt>Updated</dt><dd class="text-muted">Oct 8, 2026</dd></div>
+              <div class="flex gap-2"><dt>API version</dt><dd class="text-muted">2026-09-01</dd></div>
+              <div class="flex gap-2"><dt>Time</dt><dd class="text-muted">about 5 min</dd></div>
+            </dl>
+            <div class="reveal reveal-d3 mt-8 flex flex-wrap items-center gap-3">
+              <p id="lang-pick-label" class="font-mono text-xs text-subtle">Language</p>
+              <div role="tablist" aria-labelledby="lang-pick-label" class="flex border border-line-strong bg-ink-900" data-lang-tabs>
+                <button type="button" role="tab" class="tab" data-lang="curl" aria-selected="true">curl</button>
+                <button type="button" role="tab" class="tab" data-lang="node" aria-selected="false" tabindex="-1">node</button>
+                <button type="button" role="tab" class="tab" data-lang="python" aria-selected="false" tabindex="-1">python</button>
+                <button type="button" role="tab" class="tab" data-lang="go" aria-selected="false" tabindex="-1">go</button>
+              </div>
+            </div>
+          </header>
+          <div class="pt-10">
+            <section id="install" class="scroll-mt-24 border-t border-line pt-10 pb-12 first:border-t-0 first:pt-0" aria-labelledby="install-title">
+              <p class="font-mono text-xs text-brand-400">Step 01</p>
+              <h2 id="install-title" class="mt-2 text-2xl font-semibold tracking-[-0.025em] sm:text-[1.75rem]">Install an SDK</h2>
+              <div class="prose-doc mt-4"><p>Forge has official SDKs for eight languages; this guide uses Node.js, Python and Go, or plain <code>curl</code>. Pick a language once with the tabs: every example on this page switches with it, and we remember your choice for next time.</p></div>
+              <div class="term mt-6 min-w-0" data-code-group>
+                <div class="term-bar justify-between pr-2 pl-0">
+                  <div role="tablist" aria-label="Code language" class="flex" data-lang-tabs><button type="button" role="tab" id="qs1-tab-curl" class="tab" data-lang="curl" aria-selected="true" aria-controls="qs1-curl">curl</button><button type="button" role="tab" id="qs1-tab-node" class="tab" data-lang="node" aria-selected="false" aria-controls="qs1-node" tabindex="-1">node</button><button type="button" role="tab" id="qs1-tab-python" class="tab" data-lang="python" aria-selected="false" aria-controls="qs1-python" tabindex="-1">python</button><button type="button" role="tab" id="qs1-tab-go" class="tab" data-lang="go" aria-selected="false" aria-controls="qs1-go" tabindex="-1">go</button></div>
+                  <button type="button" class="btn-ghost btn-sm" data-copy="">Copy</button>
+                </div>
+                <div id="qs1-curl" role="tabpanel" aria-labelledby="qs1-tab-curl" data-lang-panel="curl">
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Install, curl"><code data-highlight="curl"># Nothing to install. Any curl from the last five years works.
+curl --version</code></pre>
+                </div>
+                <div id="qs1-node" role="tabpanel" aria-labelledby="qs1-tab-node" data-lang-panel="node" hidden>
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Install, node"><code data-highlight="node">npm install @forgehq/node</code></pre>
+                </div>
+                <div id="qs1-python" role="tabpanel" aria-labelledby="qs1-tab-python" data-lang-panel="python" hidden>
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Install, python"><code data-highlight="python">pip install forgehq</code></pre>
+                </div>
+                <div id="qs1-go" role="tabpanel" aria-labelledby="qs1-tab-go" data-lang-panel="go" hidden>
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Install, go"><code data-highlight="go">go get github.com/forgehq/forge-go/v4</code></pre>
+                </div>
+              </div>
+              <p class="mt-4 text-sm text-subtle">Other languages and tools are on the <a href="sdks.html" class="link">SDKs page</a>.</p>
+            </section>
+            <section id="auth" class="scroll-mt-24 border-t border-line pt-10 pb-12 first:border-t-0 first:pt-0" aria-labelledby="auth-title">
+              <p class="font-mono text-xs text-brand-400">Step 02</p>
+              <h2 id="auth-title" class="mt-2 text-2xl font-semibold tracking-[-0.025em] sm:text-[1.75rem]">Authenticate</h2>
+              <div class="prose-doc mt-4"><p>Create a key on the <a href="signup.html" class="link">sign-up page</a> and export it. Test keys start with <code>fk_test_</code> and live keys with <code>fk_live_</code>; the two never see each other’s data.</p></div>
+              <div class="term mt-6 min-w-0" data-copy-scope>
+                <div class="term-bar h-10 justify-between pr-2 font-mono text-xs text-subtle"><span>Terminal</span><button type="button" class="btn-ghost btn-sm" data-copy="">Copy</button></div>
+                <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Terminal"><code data-highlight="curl">export FORGE_KEY="fk_test_4eC39HqLyjWDarjtT1zdp7dc"</code></pre>
+              </div>
+              <div class="term mt-6 min-w-0" data-code-group>
+                <div class="term-bar justify-between pr-2 pl-0">
+                  <div role="tablist" aria-label="Code language" class="flex" data-lang-tabs><button type="button" role="tab" id="qs2-tab-curl" class="tab" data-lang="curl" aria-selected="true" aria-controls="qs2-curl">curl</button><button type="button" role="tab" id="qs2-tab-node" class="tab" data-lang="node" aria-selected="false" aria-controls="qs2-node" tabindex="-1">node</button><button type="button" role="tab" id="qs2-tab-python" class="tab" data-lang="python" aria-selected="false" aria-controls="qs2-python" tabindex="-1">python</button><button type="button" role="tab" id="qs2-tab-go" class="tab" data-lang="go" aria-selected="false" aria-controls="qs2-go" tabindex="-1">go</button></div>
+                  <button type="button" class="btn-ghost btn-sm" data-copy="">Copy</button>
+                </div>
+                <div id="qs2-curl" role="tabpanel" aria-labelledby="qs2-tab-curl" data-lang-panel="curl">
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Ping, curl"><code data-highlight="curl">curl https://api.forge.example/v1/ping \
+  -H "Authorization: Bearer $FORGE_KEY"</code></pre>
+                </div>
+                <div id="qs2-node" role="tabpanel" aria-labelledby="qs2-tab-node" data-lang-panel="node" hidden>
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Ping, node"><code data-highlight="node">import { Forge } from "@forgehq/node";
+
+const forge = new Forge(process.env.FORGE_KEY);
+console.log(await forge.ping()); // { ok: true, mode: "test" }</code></pre>
+                </div>
+                <div id="qs2-python" role="tabpanel" aria-labelledby="qs2-tab-python" data-lang-panel="python" hidden>
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Ping, python"><code data-highlight="python">import os
+from forge import Forge
+
+forge = Forge(os.environ["FORGE_KEY"])
+print(forge.ping())  # {"ok": True, "mode": "test"}</code></pre>
+                </div>
+                <div id="qs2-go" role="tabpanel" aria-labelledby="qs2-tab-go" data-lang-panel="go" hidden>
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Ping, go"><code data-highlight="go">client := forge.NewClient(os.Getenv("FORGE_KEY"))
+
+pong, err := client.Ping(ctx)
+if err != nil {
+	log.Fatal(err)
+}
+fmt.Println(pong.Mode) // test</code></pre>
+                </div>
+              </div>
+              <aside class="mt-6 border border-line border-l-2 border-l-down bg-ink-900 px-5 py-4" aria-label="Keep keys on the server">
+                <p class="font-mono text-xs font-medium tracking-wide text-fg uppercase">Keep keys on the server</p>
+                <p class="mt-1.5 text-[15px] leading-relaxed text-muted">API keys can send events as you. Never ship them in a browser or mobile app; read them from an environment variable or your secrets manager.</p>
+              </aside>
+            </section>
+            <section id="endpoint" class="scroll-mt-24 border-t border-line pt-10 pb-12 first:border-t-0 first:pt-0" aria-labelledby="endpoint-title">
+              <p class="font-mono text-xs text-brand-400">Step 03</p>
+              <h2 id="endpoint-title" class="mt-2 text-2xl font-semibold tracking-[-0.025em] sm:text-[1.75rem]">Create an endpoint</h2>
+              <div class="prose-doc mt-4"><p>An endpoint is a URL that receives events, usually owned by one of your customers. Subscribe it to event types with wildcards. Each endpoint gets its own signing secret, returned once.</p></div>
+              <div class="term mt-6 min-w-0" data-code-group>
+                <div class="term-bar justify-between pr-2 pl-0">
+                  <div role="tablist" aria-label="Code language" class="flex" data-lang-tabs><button type="button" role="tab" id="qs3-tab-curl" class="tab" data-lang="curl" aria-selected="true" aria-controls="qs3-curl">curl</button><button type="button" role="tab" id="qs3-tab-node" class="tab" data-lang="node" aria-selected="false" aria-controls="qs3-node" tabindex="-1">node</button><button type="button" role="tab" id="qs3-tab-python" class="tab" data-lang="python" aria-selected="false" aria-controls="qs3-python" tabindex="-1">python</button><button type="button" role="tab" id="qs3-tab-go" class="tab" data-lang="go" aria-selected="false" aria-controls="qs3-go" tabindex="-1">go</button></div>
+                  <button type="button" class="btn-ghost btn-sm" data-copy="">Copy</button>
+                </div>
+                <div id="qs3-curl" role="tabpanel" aria-labelledby="qs3-tab-curl" data-lang-panel="curl">
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Create endpoint, curl"><code data-highlight="curl">curl https://api.forge.example/v1/endpoints \
+  -H "Authorization: Bearer $FORGE_KEY" \
+  -d '{
+    "tenant": "acme-co",
+    "url": "https://hooks.acme.example/forge",
+    "filter_types": ["invoice.*"]
+  }'</code></pre>
+                </div>
+                <div id="qs3-node" role="tabpanel" aria-labelledby="qs3-tab-node" data-lang-panel="node" hidden>
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Create endpoint, node"><code data-highlight="node">const endpoint = await forge.endpoints.create({
+  tenant: "acme-co",
+  url: "https://hooks.acme.example/forge",
+  filterTypes: ["invoice.*"],
+});
+console.log(endpoint.secret); // whsec_...</code></pre>
+                </div>
+                <div id="qs3-python" role="tabpanel" aria-labelledby="qs3-tab-python" data-lang-panel="python" hidden>
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Create endpoint, python"><code data-highlight="python">endpoint = forge.endpoints.create(
+    tenant="acme-co",
+    url="https://hooks.acme.example/forge",
+    filter_types=["invoice.*"],
+)
+print(endpoint.secret)  # whsec_...</code></pre>
+                </div>
+                <div id="qs3-go" role="tabpanel" aria-labelledby="qs3-tab-go" data-lang-panel="go" hidden>
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Create endpoint, go"><code data-highlight="go">endpoint, err := client.Endpoints.Create(ctx, &amp;forge.EndpointParams{
+	Tenant:      "acme-co",
+	URL:         "https://hooks.acme.example/forge",
+	FilterTypes: []string{"invoice.*"},
+})</code></pre>
+                </div>
+              </div>
+              <div class="term mt-6 min-w-0" data-copy-scope>
+                <div class="term-bar h-10 justify-between pr-2 font-mono text-xs text-subtle"><span>Response · 201 Created</span></div>
+                <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Response · 201 Created"><code data-highlight="json">{
+  "id": "ep_7Hc2Qm",
+  "object": "endpoint",
+  "tenant": "acme-co",
+  "url": "https://hooks.acme.example/forge",
+  "filter_types": ["invoice.*"],
+  "secret": "whsec_example",
+  "status": "enabled"
+}</code></pre>
+              </div>
+            </section>
+            <section id="send" class="scroll-mt-24 border-t border-line pt-10 pb-12 first:border-t-0 first:pt-0" aria-labelledby="send-title">
+              <p class="font-mono text-xs text-brand-400">Step 04</p>
+              <h2 id="send-title" class="mt-2 text-2xl font-semibold tracking-[-0.025em] sm:text-[1.75rem]">Send an event</h2>
+              <div class="prose-doc mt-4"><p>Send each event once, with the tenant it belongs to. Forge answers <code>202</code> as soon as the event is stored in three zones, then delivers it to every matching endpoint. Pass an idempotency key so a retry on your side can never send it twice.</p></div>
+              <div class="term mt-6 min-w-0" data-code-group>
+                <div class="term-bar justify-between pr-2 pl-0">
+                  <div role="tablist" aria-label="Code language" class="flex" data-lang-tabs><button type="button" role="tab" id="qs4-tab-curl" class="tab" data-lang="curl" aria-selected="true" aria-controls="qs4-curl">curl</button><button type="button" role="tab" id="qs4-tab-node" class="tab" data-lang="node" aria-selected="false" aria-controls="qs4-node" tabindex="-1">node</button><button type="button" role="tab" id="qs4-tab-python" class="tab" data-lang="python" aria-selected="false" aria-controls="qs4-python" tabindex="-1">python</button><button type="button" role="tab" id="qs4-tab-go" class="tab" data-lang="go" aria-selected="false" aria-controls="qs4-go" tabindex="-1">go</button></div>
+                  <button type="button" class="btn-ghost btn-sm" data-copy="">Copy</button>
+                </div>
+                <div id="qs4-curl" role="tabpanel" aria-labelledby="qs4-tab-curl" data-lang-panel="curl">
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Send event, curl"><code data-highlight="curl">curl https://api.forge.example/v1/events \
+  -H "Authorization: Bearer $FORGE_KEY" \
+  -H "Idempotency-Key: ord_8812-paid" \
+  -d '{
+    "type": "invoice.paid",
+    "tenant": "acme-co",
+    "data": { "invoice_id": "in_8812", "amount": 4900 }
+  }'</code></pre>
+                </div>
+                <div id="qs4-node" role="tabpanel" aria-labelledby="qs4-tab-node" data-lang-panel="node" hidden>
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Send event, node"><code data-highlight="node">await forge.events.send({
+  type: "invoice.paid",
+  tenant: "acme-co",
+  data: { invoice_id: "in_8812", amount: 4900 },
+}, { idempotencyKey: "ord_8812-paid" });</code></pre>
+                </div>
+                <div id="qs4-python" role="tabpanel" aria-labelledby="qs4-tab-python" data-lang-panel="python" hidden>
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Send event, python"><code data-highlight="python">forge.events.send(
+    type="invoice.paid",
+    tenant="acme-co",
+    data={"invoice_id": "in_8812", "amount": 4900},
+    idempotency_key="ord_8812-paid",
+)</code></pre>
+                </div>
+                <div id="qs4-go" role="tabpanel" aria-labelledby="qs4-tab-go" data-lang-panel="go" hidden>
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Send event, go"><code data-highlight="go">_, err = client.Events.Send(ctx, &amp;forge.EventParams{
+	Type:           "invoice.paid",
+	Tenant:         "acme-co",
+	Data:           map[string]any{"invoice_id": "in_8812", "amount": 4900},
+	IdempotencyKey: "ord_8812-paid",
+})</code></pre>
+                </div>
+              </div>
+              <aside class="mt-6 border border-line border-l-2 border-l-brand-400 bg-ink-900 px-5 py-4" aria-label="Try it without code">
+                <p class="font-mono text-xs font-medium tracking-wide text-fg uppercase">Try it without code</p>
+                <p class="mt-1.5 text-[15px] leading-relaxed text-muted">The <a href="index.html#inspector" class="link">API explorer</a> on the home page builds these requests for you and shows realistic responses.</p>
+              </aside>
+            </section>
+            <section id="verify" class="scroll-mt-24 border-t border-line pt-10 pb-12 first:border-t-0 first:pt-0" aria-labelledby="verify-title">
+              <p class="font-mono text-xs text-brand-400">Step 05</p>
+              <h2 id="verify-title" class="mt-2 text-2xl font-semibold tracking-[-0.025em] sm:text-[1.75rem]">Verify signatures</h2>
+              <div class="prose-doc mt-4"><p>On the receiving side, check every request before trusting it. The signature covers the message id, timestamp and the <em>raw</em> body, so verify before your framework parses JSON. Requests older than five minutes are rejected to stop replays.</p></div>
+              <div class="term mt-6 min-w-0" data-code-group>
+                <div class="term-bar justify-between pr-2 pl-0">
+                  <div role="tablist" aria-label="Code language" class="flex" data-lang-tabs><button type="button" role="tab" id="qs5-tab-curl" class="tab" data-lang="curl" aria-selected="true" aria-controls="qs5-curl">curl</button><button type="button" role="tab" id="qs5-tab-node" class="tab" data-lang="node" aria-selected="false" aria-controls="qs5-node" tabindex="-1">node</button><button type="button" role="tab" id="qs5-tab-python" class="tab" data-lang="python" aria-selected="false" aria-controls="qs5-python" tabindex="-1">python</button><button type="button" role="tab" id="qs5-tab-go" class="tab" data-lang="go" aria-selected="false" aria-controls="qs5-go" tabindex="-1">go</button></div>
+                  <button type="button" class="btn-ghost btn-sm" data-copy="">Copy</button>
+                </div>
+                <div id="qs5-curl" role="tabpanel" aria-labelledby="qs5-tab-curl" data-lang-panel="curl">
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Verify signature, curl"><code data-highlight="curl"># Manual check with openssl: sign "{id}.{timestamp}.{body}" with the endpoint secret
+signed="$FORGE_ID.$FORGE_TIMESTAMP.$BODY"
+echo -n "$signed" | openssl dgst -sha256 -hmac "$SECRET" -binary | base64
+# Compare with the value after "v1," in the forge-signature header</code></pre>
+                </div>
+                <div id="qs5-node" role="tabpanel" aria-labelledby="qs5-tab-node" data-lang-panel="node" hidden>
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Verify signature, node"><code data-highlight="node">import express from "express";
+import { verifyWebhook } from "@forgehq/node";
+
+const app = express();
+
+app.post("/webhooks", express.raw({ type: "application/json" }), (req, res) =&gt; {
+  try {
+    const event = verifyWebhook(req.body, req.headers, process.env.FORGE_SECRET);
+    console.log("received", event.type);
+    res.sendStatus(204);
+  } catch (err) {
+    res.sendStatus(400); // bad or stale signature
+  }
+});</code></pre>
+                </div>
+                <div id="qs5-python" role="tabpanel" aria-labelledby="qs5-tab-python" data-lang-panel="python" hidden>
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Verify signature, python"><code data-highlight="python">from flask import Flask, request
+from forge import verify_webhook, InvalidSignature
+
+app = Flask(__name__)
+
+@app.post("/webhooks")
+def webhooks():
+    try:
+        event = verify_webhook(request.get_data(), request.headers, FORGE_SECRET)
+    except InvalidSignature:
+        return "", 400
+    print("received", event.type)
+    return "", 204</code></pre>
+                </div>
+                <div id="qs5-go" role="tabpanel" aria-labelledby="qs5-tab-go" data-lang-panel="go" hidden>
+                  <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Verify signature, go"><code data-highlight="go">http.HandleFunc("/webhooks", func(w http.ResponseWriter, r *http.Request) {
+	body, _ := io.ReadAll(r.Body)
+	event, err := forge.VerifyWebhook(body, r.Header, os.Getenv("FORGE_SECRET"))
+	if err != nil {
+		http.Error(w, "bad signature", http.StatusBadRequest)
+		return
+	}
+	log.Println("received", event.Type)
+	w.WriteHeader(http.StatusNoContent)
+})</code></pre>
+                </div>
+              </div>
+              <aside class="mt-6 border border-line border-l-2 border-l-down bg-ink-900 px-5 py-4" aria-label="Respond fast, work later">
+                <p class="font-mono text-xs font-medium tracking-wide text-fg uppercase">Respond fast, work later</p>
+                <p class="mt-1.5 text-[15px] leading-relaxed text-muted">Return a 2xx within 15 seconds or Forge counts the attempt as failed and retries. Put slow work on a queue and acknowledge first.</p>
+              </aside>
+            </section>
+            <section id="test" class="scroll-mt-24 border-t border-line pt-10 pb-12 first:border-t-0 first:pt-0" aria-labelledby="test-title">
+              <p class="font-mono text-xs text-brand-400">Step 06</p>
+              <h2 id="test-title" class="mt-2 text-2xl font-semibold tracking-[-0.025em] sm:text-[1.75rem]">Test locally</h2>
+              <div class="prose-doc mt-4"><p>The Forge CLI opens a tunnel to your machine and forwards test events to a local port, so you can develop without deploying. Trigger sample events from a second terminal.</p></div>
+              <div class="term mt-6 min-w-0" data-copy-scope>
+                <div class="term-bar h-10 justify-between pr-2 font-mono text-xs text-subtle"><span>Terminal 1</span><button type="button" class="btn-ghost btn-sm" data-copy="">Copy</button></div>
+                <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Terminal 1"><code data-highlight="curl">brew install forgehq/tap/forge
+forge login
+forge listen --forward localhost:3000/webhooks</code></pre>
+              </div>
+              <div class="term mt-6 min-w-0" data-copy-scope>
+                <div class="term-bar h-10 justify-between pr-2 font-mono text-xs text-subtle"><span>Terminal 2</span><button type="button" class="btn-ghost btn-sm" data-copy="">Copy</button></div>
+                <pre class="code text-[12px] sm:text-[13px]" tabindex="0" aria-label="Terminal 2"><code data-highlight="curl">forge trigger invoice.paid --tenant acme-co</code></pre>
+              </div>
+            </section>
+            <section id="next" class="scroll-mt-24 border-t border-line pt-10" aria-labelledby="next-title">
+              <h2 id="next-title" class="text-2xl font-semibold tracking-[-0.025em] sm:text-[1.75rem]">Next steps</h2>
+              <ul class="cells mt-6 grid-cols-1 border border-line sm:grid-cols-2">
+                <li><a href="sdks.html" class="group block h-full p-5 transition hover:bg-ink-900"><p class="font-mono text-xs text-brand-400">SDKs</p><p class="mt-2 font-medium">Libraries for eight languages <span class="inline-block transition group-hover:translate-x-1" aria-hidden="true">→</span></p><p class="mt-1 text-sm text-muted">Plus the CLI, Terraform provider and framework helpers.</p></a></li>
+                <li><a href="index.html#inspector" class="group block h-full p-5 transition hover:bg-ink-900"><p class="font-mono text-xs text-brand-400">Explorer</p><p class="mt-2 font-medium">Try every endpoint <span class="inline-block transition group-hover:translate-x-1" aria-hidden="true">→</span></p><p class="mt-1 text-sm text-muted">Edit parameters and read realistic responses.</p></a></li>
+                <li><a href="changelog.html?type=breaking" class="group block h-full p-5 transition hover:bg-ink-900"><p class="font-mono text-xs text-brand-400">Versions</p><p class="mt-2 font-medium">Breaking changes <span class="inline-block transition group-hover:translate-x-1" aria-hidden="true">→</span></p><p class="mt-1 text-sm text-muted">Dated API versions and how to migrate.</p></a></li>
+                <li><a href="pricing.html#calculator" class="group block h-full p-5 transition hover:bg-ink-900"><p class="font-mono text-xs text-brand-400">Pricing</p><p class="mt-2 font-medium">Estimate your bill <span class="inline-block transition group-hover:translate-x-1" aria-hidden="true">→</span></p><p class="mt-1 text-sm text-muted">Usage-based, with a calculator.</p></a></li>
+              </ul>
+            </section>
+          </div>
+        </article>
+
+        <aside class="hidden xl:block" aria-label="Help">
+          <div class="sticky top-24 space-y-6">
+            <div class="border border-line bg-ink-900 p-4">
+              <p class="font-mono text-xs text-subtle">Base URL</p>
+              <p class="mt-1.5 font-mono text-[13px] break-all text-fg">api.forge.example/v1</p>
+            </div>
+            <div class="border border-line bg-ink-900 p-4">
+              <p class="font-mono text-xs text-subtle">Stuck?</p>
+              <p class="mt-1.5 text-sm text-muted">Engineers answer in the community forum and, on paid plans, by email.</p>
+              <a href="contact.html" class="link mt-3 inline-block text-sm">Contact us</a>
+            </div>
+            <a href="status.html" class="flex items-center gap-2 font-mono text-xs text-muted hover:text-fg"><span class="dot s-ok" aria-hidden="true"></span>API operational</a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+  <footer class="mt-auto border-t border-line bg-ink-950">
+    <div class="container-x grid gap-12 py-14 lg:grid-cols-12">
+      <div class="lg:col-span-3">
+        <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Forge home">
+          <svg viewBox="0 0 28 28" class="h-7 w-7 shrink-0" aria-hidden="true"><rect width="28" height="28" rx="3" fill="#ffbe3d"/><path d="M7.5 6.5h13v3.6h-8.9v3.2h7.4v3.6h-7.4v4.6H7.5z" fill="#09090a"/><path d="M17 18h3.5v3.5H17z" fill="#09090a"/></svg>
+          <span class="font-mono text-[15px] font-semibold tracking-tight">forge<span class="logo-cursor text-brand-400">_</span></span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-muted">Webhooks infrastructure for teams that ship. Built in Erie and Bellingham.</p>
+        <a href="status.html" class="mt-6 inline-flex items-center gap-2.5 rounded-[3px] border border-line-strong bg-ink-900 px-3 py-1.5 font-mono text-xs text-muted transition hover:border-ink-600 hover:text-fg"><span class="dot s-ok pulse" aria-hidden="true"></span>All systems operational</a>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-5">
+        <nav aria-label="Product">
+          <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">Product</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="index.html#features" class="text-muted transition hover:text-fg">Features</a></li>
+            <li><a href="pricing.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Pricing</a></li>
+            <li><a href="changelog.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Changelog</a></li>
+            <li><a href="status.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Status</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Developers">
+          <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">Developers</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="docs.html" aria-current="page" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Quickstart</a></li>
+            <li><a href="docs.html#verify" class="text-muted transition hover:text-fg">Verify signatures</a></li>
+            <li><a href="sdks.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">SDKs and tools</a></li>
+            <li><a href="index.html#inspector" class="text-muted transition hover:text-fg">API explorer</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">Company</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="company.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">About</a></li>
+            <li><a href="company.html#careers" class="text-muted transition hover:text-fg">Careers</a></li>
+            <li><a href="contact.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Talk to sales</a></li>
+            <li><a href="pricing.html#faq" class="text-muted transition hover:text-fg">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="lg:col-span-4">
+        <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">API changes by email</h2>
+        <p class="mt-4 text-sm text-muted">Breaking changes, new versions and deprecations. About one email a month.</p>
+        <form data-form="newsletter" class="mt-4" novalidate>
+          <label for="footer-email" class="sr-only">Email address</label>
+          <div class="flex gap-2">
+            <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@company.example" class="input py-2 text-sm">
+            <button type="submit" class="btn-ghost shrink-0">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="border-t border-line">
+      <div class="container-x flex flex-col gap-2 py-5 font-mono text-xs text-subtle sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Forge Systems, Inc. Forge is a fictional company.</p>
+        <p>API version <span class="text-muted">2026-09-01</span> · Template by Freeframe</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

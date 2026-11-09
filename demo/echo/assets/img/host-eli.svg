@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-label="Illustrated portrait of Eli Brandt">
+  <rect width="400" height="480" fill="#86d2ff"/>
+  <g fill="none" stroke="#0e0c13" stroke-opacity=".14" stroke-width="3"><path d="M0 120h400M0 170h400M0 220h400M0 270h400M0 320h400"/></g>
+  <!-- shoulders: jacket with collar -->
+  <path d="M48 480c6-88 66-130 152-130s146 42 152 130z" fill="#f6d45a"/>
+  <path d="M160 352l40 58 40-58" fill="#f4efe6"/>
+  <path d="M160 352l40 58-26 70h-30l-20-110zM240 352l-40 58 26 70h30l20-110z" fill="#e2bd3a"/>
+  <!-- neck + face -->
+  <rect x="172" y="290" width="56" height="70" rx="20" fill="#d9a07c"/>
+  <path d="M126 232c0-58 32-100 74-100s74 42 74 100c0 52-30 98-74 98s-74-46-74-98z" fill="#ebb894"/>
+  <!-- beard -->
+  <path d="M128 250c4 50 34 82 72 82s68-32 72-82c-14 26-36 34-72 34s-58-8-72-34z" fill="#6b3a22"/>
+  <path d="M176 288c14 8 34 8 48 0" fill="none" stroke="#3d1f12" stroke-width="5" stroke-linecap="round"/>
+  <!-- hair -->
+  <path d="M120 222c-10-74 30-118 86-118 60 0 92 44 78 112-10-34-30-52-66-56-34-4-64 10-82 40-6 10-12 16-16 22z" fill="#6b3a22"/>
+  <path d="M170 128c20-12 56-14 82 6" fill="none" stroke="#8a4d2e" stroke-width="7" stroke-linecap="round"/>
+  <!-- eyes and brows -->
+  <g fill="#0e0c13"><circle cx="170" cy="234" r="6"/><circle cx="230" cy="234" r="6"/></g>
+  <path d="M154 214c10-6 24-6 32-1M214 213c8-5 22-5 32 1" fill="none" stroke="#4a2615" stroke-width="6" stroke-linecap="round"/>
+  <path d="M200 240c-4 14-6 20 2 22" fill="none" stroke="#b77d5a" stroke-width="4" stroke-linecap="round"/>
+  <!-- headphones -->
+  <path d="M108 238c-8-114 192-114 184 0" fill="none" stroke="#0e0c13" stroke-width="16" stroke-linecap="round"/>
+  <rect x="90" y="214" width="40" height="66" rx="18" fill="#0e0c13"/><rect x="270" y="214" width="40" height="66" rx="18" fill="#0e0c13"/>
+  <rect x="100" y="224" width="20" height="46" rx="10" fill="#ff6b4a"/><rect x="280" y="224" width="20" height="46" rx="10" fill="#ff6b4a"/>
+</svg>

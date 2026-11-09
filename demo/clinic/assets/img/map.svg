@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-label="Map showing Brightside Dental at 210 Linden Avenue, next to Linden Park and the Harbor Street bus stop">
+<rect width="800" height="520" fill="#eef4f2"/>
+<path d="M0 0h260v190H0Z" fill="#d6ecd9"/><path d="M560 330h240v190H560Z" fill="#d6ecd9"/>
+<g fill="#c4e2c9"><circle cx="70" cy="60" r="18"/><circle cx="130" cy="110" r="22"/><circle cx="200" cy="50" r="16"/><circle cx="620" cy="400" r="20"/><circle cx="720" cy="460" r="24"/></g>
+<path d="M600 0c-20 60 20 120 0 190s40 130 200 150V0Z" fill="#cfe6f5"/>
+<g fill="#fff">
+  <rect x="0" y="200" width="800" height="44"/><rect x="0" y="420" width="560" height="30"/>
+  <rect x="290" y="0" width="44" height="520"/><rect x="480" y="244" width="30" height="276"/>
+  <rect x="80" y="244" width="24" height="276"/>
+</g>
+<path d="M0 222h800M312 0v520" stroke="#e3ecea" stroke-width="3" stroke-dasharray="14 12"/>
+<g fill="#e2e9ec">
+  <rect x="120" y="270" width="140" height="120" rx="10"/><rect x="350" y="270" width="110" height="60" rx="10"/>
+  <rect x="350" y="345" width="110" height="60" rx="10"/><rect x="530" y="260" width="20" height="60" rx="6"/>
+  <rect x="350" y="40" width="90" height="140" rx="10"/><rect x="460" y="40" width="110" height="70" rx="10"/>
+  <rect x="460" y="122" width="110" height="60" rx="10"/><rect x="120" y="460" width="140" height="60" rx="10"/>
+</g>
+<g font-family="Figtree, Arial, sans-serif" font-weight="700" fill="#566a7d" font-size="15">
+  <text x="20" y="236">Linden Avenue</text><text x="604" y="236">Linden Avenue</text>
+  <text x="318" y="160" transform="rotate(90 318 160)">Harbor Street</text>
+  <text x="60" y="110" fill="#3f7a4d">Linden Park</text>
+  <text x="650" y="90" fill="#3b78a8">Mill Pond</text>
+</g>
+<g transform="translate(395 300)">
+  <ellipse cx="0" cy="34" rx="22" ry="7" fill="#13293d" opacity=".18"/>
+  <path d="M0 34C-24 6-30-6-30-20a30 30 0 0 1 60 0c0 14-6 26-30 54Z" fill="#1b625b"/>
+  <circle cx="0" cy="-20" r="13" fill="#fff"/>
+</g>
+<g transform="translate(395 228)"><rect x="-86" y="-34" width="172" height="40" rx="20" fill="#13293d"/>
+<text x="0" y="-8" text-anchor="middle" font-family="Figtree, Arial, sans-serif" font-weight="700" font-size="15" fill="#fff">Brightside Dental</text></g>
+<g transform="translate(270 248)"><rect width="26" height="26" rx="7" fill="#3b82c4"/><text x="13" y="18" text-anchor="middle" font-family="Arial" font-weight="700" font-size="14" fill="#fff">B</text></g>
+<g transform="translate(470 470)"><rect width="26" height="26" rx="7" fill="#1f7a71"/><text x="13" y="18" text-anchor="middle" font-family="Arial" font-weight="700" font-size="14" fill="#fff">P</text></g>
+</svg>

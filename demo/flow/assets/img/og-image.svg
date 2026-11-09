@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#f4ede2"/>
+  <path d="M-80 120c0-140 180-220 360-190s260 140 200 260-260 160-380 120S-80 260-80 120Z" fill="#ebe0cd"/>
+  <g transform="translate(720 40)">
+    <path d="M0 590V230a210 210 0 0 1 420 0v360Z" fill="#f5e3d7"/>
+    <circle cx="270" cy="250" r="70" fill="#dfa585"/>
+    <path d="M0 300c46-24 96-28 138-13 30 10 56 15 92 13l10 20H0Z" fill="#aebb9e"/>
+    <path d="M0 312h420v278H0Z" fill="#b5d0ca"/>
+    <path d="M0 400c64-20 128-20 200 0s146 20 220 0v190H0Z" fill="#8ab4ac"/>
+    <path d="M0 470c100-30 300-30 420 0v120H0Z" fill="#ebe0cd"/>
+    <path d="M140 472h140" stroke="#ba6b47" stroke-width="3" stroke-linecap="round"/>
+    <g transform="translate(18 132) scale(1.6)" fill="none" stroke="#1a3431" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="120" cy="54" r="11" fill="#fbf8f2"/>
+      <path d="M120 65v7M105 77q15-6 30 0"/>
+      <path d="M105 77c-9-14-5-36 12-50M135 77c9-14 5-36-12-50M117 27q3-5 6 0"/>
+      <path d="M107 79c2 22 1 38 4 54M133 79c-2 22-1 38-3 54M111 133q9 6 18 0"/>
+      <path d="M114 135c-1 26 2 46 1 72q-2 4-10 5M124 137c-1 26-2 46-3 70"/>
+      <path d="M129 134c20 6 36 22 32 34-10 8-24 8-37 4"/>
+    </g>
+  </g>
+  <g transform="translate(80 120)">
+    <circle cx="28" cy="28" r="28" fill="#2c524d"/>
+    <path d="M17 31a11 11 0 0 1 22 0Z" fill="#dfa585"/>
+    <path d="M9 33c6.3-4.3 12.7-4.3 19 0s12.7 4.3 19 0" fill="none" stroke="#f4ede2" stroke-width="2.8" stroke-linecap="round"/>
+    <path d="M15 41c4.3-3 8.7-3 13 0s8.7 3 13 0" fill="none" stroke="#8ab4ac" stroke-width="2.8" stroke-linecap="round"/>
+    <text x="76" y="40" font-family="EB Garamond, Georgia, serif" font-size="34" fill="#23302d">Salt &amp; Sage Yoga</text>
+  </g>
+  <text x="80" y="300" font-family="EB Garamond, Georgia, serif" font-size="76" fill="#23302d">Breathe in the salt air.</text>
+  <text x="80" y="384" font-family="EB Garamond, Georgia, serif" font-style="italic" font-size="76" fill="#9c5535">Move at your own pace.</text>
+  <text x="82" y="470" font-family="Mulish, Arial, sans-serif" font-size="26" font-weight="600" fill="#3d4642">Small yoga classes above the harbor in Santa Cruz</text>
+  <text x="82" y="530" font-family="Mulish, Arial, sans-serif" font-size="20" font-weight="800" letter-spacing="4" fill="#2c524d">SCHEDULE · BOOK A MAT · THREE WEEKS FOR $59</text>
+</svg>

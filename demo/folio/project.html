@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tidal Banking — Case study — Mira Okafor</title>
+  <meta name="description" content="How Mira Okafor redesigned the Tidal banking app: research, process, design system and results (+38% weekly active users).">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mira Okafor — Product Designer">
+  <meta property="og:title" content="Tidal Banking — Case study — Mira Okafor">
+  <meta property="og:description" content="How Mira Okafor redesigned the Tidal banking app: research, process, design system and results (+38% weekly active users).">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@300..800&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="min-h-screen bg-bg text-ink antialiased">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header fixed inset-x-0 top-0 z-50">
+    <div class="container-x flex h-20 items-center justify-between gap-6">
+      <a href="index.html" class="group flex items-center gap-2 text-lg font-semibold tracking-tight">
+        <span class="grid size-8 place-items-center rounded-full bg-ink font-serif text-xl italic text-bg transition-colors group-hover:bg-accent" aria-hidden="true">m</span>
+        <span>Mira Okafor</span>
+      </a>
+      <nav aria-label="Main" class="hidden md:block">
+        <ul class="flex items-center gap-10 text-[0.95rem]"><li><a href="work.html" class="nav-link">Work</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+      </nav>
+      <a href="contact.html" class="btn btn-primary hidden md:inline-flex">Start a project <svg class="arrow" width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 7h12M8 2l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <button type="button" class="menu-toggle -mr-2 flex size-11 flex-col items-center justify-center gap-[6px] md:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed inset-x-0 top-20 bottom-0 overflow-y-auto bg-bg md:hidden" hidden>
+      <nav aria-label="Mobile" class="container-x pt-6 pb-10">
+        <ul><li><a href="index.html" class="flex items-baseline justify-between border-b border-line py-5 text-4xl font-medium tracking-tight sm:text-5xl">Home<span class="text-sm text-muted">01</span></a></li><li><a href="work.html" class="flex items-baseline justify-between border-b border-line py-5 text-4xl font-medium tracking-tight sm:text-5xl">Work<span class="text-sm text-muted">02</span></a></li><li><a href="about.html" class="flex items-baseline justify-between border-b border-line py-5 text-4xl font-medium tracking-tight sm:text-5xl">About<span class="text-sm text-muted">03</span></a></li><li><a href="contact.html" class="flex items-baseline justify-between border-b border-line py-5 text-4xl font-medium tracking-tight sm:text-5xl">Contact<span class="text-sm text-muted">04</span></a></li></ul>
+        <div class="mt-10 space-y-2 text-muted">
+          <p>Available for new projects</p>
+          <a href="mailto:hello@example.com" class="text-xl text-ink">hello@example.com</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <article>
+      <header class="container-x pt-40 md:pt-48">
+        <a href="work.html" class="link-underline text-muted hover:text-ink reveal">&larr; All work</a>
+        <p class="eyebrow mt-10 reveal">Case study &middot; Mobile app &middot; 2026</p>
+        <h1 class="mt-6 max-w-6xl text-[clamp(2.8rem,8vw,8rem)] font-semibold leading-[0.92] tracking-[-0.05em]">
+          <span class="reveal-line"><span>Tidal: banking that</span></span>
+          <span class="reveal-line"><span style="--d:120ms">feels like <span class="serif-accent text-accent">calm water.</span></span></span>
+        </h1>
+      </header>
+
+      <figure class="container-x mt-16 reveal">
+        <div class="project-media aspect-[16/10]"><img src="assets/img/project-tidal.svg" alt="Three Tidal app screens: account balance, savings goals and card settings" width="1600" height="1000"></div>
+      </figure>
+
+      <section class="container-x grid gap-12 py-20 md:grid-cols-12 md:py-28" aria-labelledby="overview">
+        <dl class="grid grid-cols-2 gap-6 md:col-span-4 md:grid-cols-1"><div class="border-t border-line pt-4"><dt class="eyebrow">Client</dt><dd class="mt-2 text-lg">Tidal Banking, Wilmington, DE</dd></div><div class="border-t border-line pt-4"><dt class="eyebrow">Role</dt><dd class="mt-2 text-lg">Lead product designer</dd></div><div class="border-t border-line pt-4"><dt class="eyebrow">Timeline</dt><dd class="mt-2 text-lg">9 months, 2025 &ndash; 2026</dd></div><div class="border-t border-line pt-4"><dt class="eyebrow">Team</dt><dd class="mt-2 text-lg">2 designers, 8 engineers, 1 PM</dd></div><div class="border-t border-line pt-4"><dt class="eyebrow">Deliverables</dt><dd class="mt-2 text-lg">iOS &amp; Android app, design system</dd></div></dl>
+        <div class="md:col-span-7 md:col-start-6">
+          <h2 id="overview" class="eyebrow">Overview</h2>
+          <p class="mt-6 text-2xl leading-snug md:text-3xl reveal">Tidal had the features of a modern bank but the feel of a spreadsheet. Customers trusted it with their paycheck, then opened it with a knot in their stomach.</p>
+          <p class="mt-6 text-lg leading-relaxed text-muted reveal">I joined as lead designer to rethink the app from the home screen out, with one goal: make checking your money feel like checking the weather &mdash; quick, clear and never alarming.</p>
+        </div>
+      </section>
+
+      <section class="border-y border-line bg-surface py-20 md:py-28" aria-labelledby="challenge">
+        <div class="container-x grid gap-12 md:grid-cols-12">
+          <h2 id="challenge" class="text-4xl font-semibold tracking-tight md:col-span-4 md:text-5xl reveal">The <span class="serif-accent text-accent">challenge</span></h2>
+          <div class="space-y-6 text-lg leading-relaxed text-muted md:col-span-7 md:col-start-6">
+            <p class="reveal">The old home screen showed 14 numbers before you could find your balance. Notifications fired for every card payment, including the ones you were standing at the register for. Savings lived three taps deep.</p>
+            <p class="reveal">Meanwhile the business needed to launch savings goals and shared accounts within the year &mdash; without adding more noise.</p>
+            <blockquote class="border-l-2 border-accent pl-6 font-serif text-2xl italic text-ink reveal">&ldquo;I know my money is fine. The app just makes me feel like it isn&rsquo;t.&rdquo;<span class="mt-2 block font-sans text-sm not-italic text-muted">&mdash; Customer interview, March 2025</span></blockquote>
+          </div>
+        </div>
+      </section>
+
+      <section class="container-x py-20 md:py-28" aria-labelledby="process">
+        <h2 id="process" class="text-4xl font-semibold tracking-tight md:text-5xl reveal">Process</h2>
+        <ol class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <li class="rounded-2xl border border-line bg-surface p-7 reveal" style="--d:0ms">
+            <span class="font-serif text-4xl italic text-accent">01</span>
+            <h3 class="mt-6 text-xl font-semibold">Listen</h3>
+            <p class="mt-3 text-muted">Twenty-two interviews with customers and the support team, plus a month of app-store reviews, tagged by theme.</p>
+          </li>
+          <li class="rounded-2xl border border-line bg-surface p-7 reveal" style="--d:90ms">
+            <span class="font-serif text-4xl italic text-accent">02</span>
+            <h3 class="mt-6 text-xl font-semibold">Map</h3>
+            <p class="mt-3 text-muted">We mapped every money moment &mdash; payday, rent day, the night before a trip &mdash; and found where the app added stress.</p>
+          </li>
+          <li class="rounded-2xl border border-line bg-surface p-7 reveal" style="--d:180ms">
+            <span class="font-serif text-4xl italic text-accent">03</span>
+            <h3 class="mt-6 text-xl font-semibold">Prototype</h3>
+            <p class="mt-3 text-muted">Three directions tested weekly with real customers. The calmest one won every round.</p>
+          </li>
+          <li class="rounded-2xl border border-line bg-surface p-7 reveal" style="--d:270ms">
+            <span class="font-serif text-4xl italic text-accent">04</span>
+            <h3 class="mt-6 text-xl font-semibold">Ship</h3>
+            <p class="mt-3 text-muted">A phased rollout behind feature flags, with the design system built alongside so nothing drifted.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="container-x space-y-8 pb-20 md:pb-28" aria-labelledby="screens">
+        <h2 id="screens" class="sr-only">Screens</h2>
+        <figure class="reveal">
+          <div class="project-media aspect-[16/9]"><img src="assets/img/tidal-screens.svg" alt="Home, savings goals and card settings screens side by side" width="1600" height="900" loading="lazy"></div>
+          <figcaption class="mt-4 text-sm text-muted">Home, goals and card &mdash; one balance, one action, one place for everything else.</figcaption>
+        </figure>
+        <figure class="reveal">
+          <div class="project-media aspect-[16/9]"><img src="assets/img/tidal-system.svg" alt="Tidal design system: color palette, type scale, buttons and list components" width="1600" height="900" loading="lazy"></div>
+          <figcaption class="mt-4 text-sm text-muted">The Tidal design system: 5 colors, 3 type sizes and 40 components shared by web and mobile.</figcaption>
+        </figure>
+      </section>
+
+      <section class="border-t border-line py-20 md:py-28" aria-labelledby="results">
+        <div class="container-x">
+          <h2 id="results" class="text-4xl font-semibold tracking-tight md:text-5xl reveal">Results</h2>
+          <div class="mt-12 grid gap-10 md:grid-cols-3">
+          <div class="border-t border-line pt-6 reveal" style="--d:0ms">
+            <p class="text-[clamp(3.5rem,8vw,7rem)] font-semibold leading-none tracking-[-0.05em]">+38%</p>
+            <p class="mt-4 max-w-xs text-muted">weekly active users within three months of launch</p>
+          </div>
+          <div class="border-t border-line pt-6 reveal" style="--d:100ms">
+            <p class="text-[clamp(3.5rem,8vw,7rem)] font-semibold leading-none tracking-[-0.05em]">4.8</p>
+            <p class="mt-4 max-w-xs text-muted">App Store rating, up from 3.1</p>
+          </div>
+          <div class="border-t border-line pt-6 reveal" style="--d:200ms">
+            <p class="text-[clamp(3.5rem,8vw,7rem)] font-semibold leading-none tracking-[-0.05em]">&minus;52%</p>
+            <p class="mt-4 max-w-xs text-muted">support tickets about &ldquo;where did my money go&rdquo;</p>
+          </div>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <nav class="container-x pb-8" aria-label="Next project">
+      <a href="project.html" class="group grid items-center gap-8 rounded-3xl border border-line p-6 transition-colors hover:border-muted md:grid-cols-2 md:p-10" data-cursor="Next">
+        <div>
+          <p class="eyebrow">Next project</p>
+          <p class="mt-4 text-5xl font-semibold tracking-tight md:text-7xl">Verde <span class="serif-accent text-accent">Grocery</span></p>
+          <p class="mt-4 text-muted">E-commerce &middot; 2025</p>
+        </div>
+        <div class="project-media aspect-[16/10]"><img src="assets/img/project-verde.svg" alt="" width="1600" height="1000" loading="lazy"></div>
+      </a>
+    </nav>
+  </main>
+
+  <footer class="mt-auto">
+    <div class="container-x border-b border-line pt-28 pb-20 md:pt-40">
+      <p class="eyebrow reveal">Have a project in mind?</p>
+      <a href="contact.html" class="group mt-6 block reveal" data-cursor="Say hi">
+        <span class="block text-[clamp(3rem,11vw,10.5rem)] font-semibold leading-[0.9] tracking-[-0.045em]">
+          Let&rsquo;s make it <span class="serif-accent text-accent transition-colors group-hover:text-ink">real.</span>
+        </span>
+      </a>
+    </div>
+    <div class="container-x grid gap-10 py-14 text-sm sm:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <p class="eyebrow mb-4">Contact</p>
+        <a href="mailto:hello@example.com" class="link-underline text-base">hello@example.com</a>
+        <p class="mt-2 text-muted">(717) 555-0142</p>
+      </div>
+      <div>
+        <p class="eyebrow mb-4">Studio</p>
+        <p class="text-base">28 Red Rose Alley<br>Lancaster, PA 17603</p>
+      </div>
+      <div>
+        <p class="eyebrow mb-4">Elsewhere</p>
+        <ul class="space-y-1.5 text-base">
+          <li><a href="#" class="link-underline">Dribbble</a></li>
+          <li><a href="#" class="link-underline">LinkedIn</a></li>
+          <li><a href="#" class="link-underline">Read.cv</a></li>
+          <li><a href="#" class="link-underline">Instagram</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="eyebrow mb-4">Local time</p>
+        <p class="text-base"><span data-local-time>12:00 PM</span> in Lancaster, PA</p>
+        <p class="mt-2 flex items-center gap-2 text-muted"><span class="status-dot"></span> Booking from November</p>
+      </div>
+    </div>
+    <div class="container-x flex flex-wrap items-center justify-between gap-4 border-t border-line py-6 text-sm text-muted">
+      <p>&copy; <span data-year>2026</span> Mira Okafor. All rights reserved.</p>
+      <a href="#main" class="link-underline">Back to top &uarr;</a>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

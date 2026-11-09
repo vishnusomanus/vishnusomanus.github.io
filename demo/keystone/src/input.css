@@ -1,0 +1,227 @@
+/* Keystone (Corbel Design-Build) — Tailwind CSS v4 source.
+   Edit the brand tokens below, then rebuild with `npm run build`. */
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+@theme {
+  --font-sans: "Barlow", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Barlow Condensed", "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Charcoal: dark sections, body text and the header */
+  --color-char-950: #121314;
+  --color-char-900: #1a1b1d;
+  --color-char-800: #242629;
+  --color-char-700: #34373b;
+  --color-char-600: #4a4e53;
+  --color-char-500: #6b7076;
+
+  /* Concrete: page backgrounds, borders and drawing grids */
+  --color-concrete-50: #f6f5f2;
+  --color-concrete-100: #ecebe6;
+  --color-concrete-200: #dcdad3;
+  --color-concrete-300: #c4c1b8;
+  --color-concrete-400: #a19e95;
+
+  /* Signal orange: buttons, highlights and drawings.
+     500 is for fills (with char-950 text) and text on charcoal; use 700 for orange text on light backgrounds. */
+  --color-signal-300: #ffa366;
+  --color-signal-400: #ff7a2e;
+  --color-signal-500: #f15a0f;
+  --color-signal-600: #d24c0a;
+  --color-signal-700: #a83b06;
+}
+
+@layer base {
+  /* Smooth scrolling for in-page links only, so scripted scrolling stays instant. */
+  @media (prefers-reduced-motion: no-preference) {
+    html:focus-within { scroll-behavior: smooth; }
+  }
+  html { -webkit-tap-highlight-color: transparent; }
+  ::selection { background: var(--color-signal-500); color: var(--color-char-950); }
+  :focus-visible { outline: 3px solid var(--color-signal-500); outline-offset: 2px; }
+  [id] { scroll-margin-top: 6.5rem; }
+  #main:focus { outline: none; }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+
+  /* Drawing-paper grid backgrounds */
+  .grid-paper {
+    background-color: var(--color-concrete-100);
+    background-image:
+      linear-gradient(to right, rgb(26 27 29 / .07) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(26 27 29 / .07) 1px, transparent 1px),
+      linear-gradient(to right, rgb(26 27 29 / .035) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(26 27 29 / .035) 1px, transparent 1px);
+    background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  }
+  .grid-blueprint {
+    background-color: var(--color-char-950);
+    background-image:
+      linear-gradient(to right, rgb(255 255 255 / .06) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / .06) 1px, transparent 1px),
+      linear-gradient(to right, rgb(255 255 255 / .025) 1px, transparent 1px),
+      linear-gradient(to bottom, rgb(255 255 255 / .025) 1px, transparent 1px);
+    background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 border-2 px-5 py-3 font-display text-base font-semibold tracking-[0.08em] whitespace-nowrap uppercase transition duration-200 active:translate-y-px;
+  }
+  .btn-lg { @apply px-7 py-4 text-lg; }
+  .btn-signal { @apply border-signal-500 bg-signal-500 text-char-950 hover:border-signal-400 hover:bg-signal-400; }
+  .btn-dark { @apply border-char-900 bg-char-900 text-white hover:border-char-700 hover:bg-char-700; }
+  .btn-ghost { @apply border-char-900 bg-transparent text-char-900 hover:bg-char-900 hover:text-white; }
+  .btn-ghost-light { @apply border-white/60 bg-transparent text-white hover:border-white hover:bg-white hover:text-char-950; }
+  .btn svg { @apply size-5 shrink-0; }
+
+  .nav-link {
+    @apply relative block px-3 py-2 font-display text-[1.05rem] font-semibold tracking-[0.08em] text-char-700 uppercase transition hover:text-char-950
+      after:absolute after:inset-x-3 after:bottom-0 after:h-[3px] after:origin-left after:scale-x-0 after:bg-signal-500 after:transition
+      hover:after:scale-x-100 aria-[current=page]:text-char-950 aria-[current=page]:after:scale-x-100;
+  }
+  .mobile-link {
+    @apply flex items-center justify-between border-b border-concrete-200 px-1 py-4 font-display text-2xl font-semibold tracking-wide text-char-900 uppercase
+      aria-[current=page]:text-signal-700;
+  }
+
+  /* "01 / Section" label in the technical mono face */
+  .eyebrow {
+    @apply inline-flex items-center gap-3 font-mono text-xs font-medium tracking-[0.18em] text-char-600 uppercase
+      before:block before:size-2.5 before:bg-signal-500;
+  }
+  .eyebrow-light { @apply text-concrete-300; }
+  .h-display { @apply font-display font-bold tracking-[-0.01em] uppercase; }
+  .spec { @apply font-mono text-xs tracking-[0.12em] uppercase; }
+
+  /* Crop marks on the corners of a card */
+  .crop { position: relative; }
+  .crop::before, .crop::after {
+    content: ""; position: absolute; width: 14px; height: 14px; pointer-events: none;
+    border-color: var(--color-signal-500); border-style: solid;
+  }
+  .crop::before { top: -1px; left: -1px; border-width: 3px 0 0 3px; }
+  .crop::after { right: -1px; bottom: -1px; border-width: 0 3px 3px 0; }
+
+  /* Decorative dimension line: |<—— label ——>| */
+  .dim {
+    @apply relative flex items-center gap-3 font-mono text-[0.7rem] tracking-[0.14em] text-char-600 uppercase;
+  }
+  .dim::before, .dim::after { content: ""; flex: 1; height: 1px; background: currentColor; opacity: .55; }
+  .dim-light { @apply text-concrete-300; }
+  .dim-wrap { @apply relative border-x border-current px-0 pt-0; }
+
+  .chip {
+    @apply inline-flex items-center gap-2 border-2 border-concrete-300 bg-white px-4 py-2 font-display text-sm font-semibold tracking-[0.1em] text-char-800 uppercase transition
+      hover:border-char-900 aria-pressed:border-char-900 aria-pressed:bg-char-900 aria-pressed:text-white;
+  }
+  .chip-count { @apply font-mono text-[0.7rem] tracking-normal opacity-70; }
+
+  .label { @apply mb-1.5 block font-display text-sm font-semibold tracking-[0.1em] text-char-900 uppercase; }
+  .hint { @apply font-sans text-sm font-normal tracking-normal text-char-600 normal-case; }
+  .input {
+    @apply block w-full border-2 border-concrete-300 bg-white px-3.5 py-3 text-base text-char-900 transition
+      placeholder:text-char-500 focus:border-char-900 focus:outline-none focus:ring-4 focus:ring-signal-500/25
+      aria-[invalid=true]:border-red-700 aria-[invalid=true]:focus:ring-red-200;
+  }
+  select.input {
+    appearance: none; padding-right: 2.75rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a1b1d' stroke-width='2'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right .9rem center; background-size: 1.1rem;
+  }
+  .field-error { @apply mt-1.5 flex items-center gap-1.5 text-sm font-medium text-red-700; }
+
+  /* Estimator choice cards (radio inside a label) */
+  .option-card {
+    @apply relative flex cursor-pointer flex-col gap-1 border-2 border-concrete-300 bg-white p-5 transition hover:border-char-600
+      has-[:checked]:border-char-900 has-[:checked]:bg-concrete-50 has-[:checked]:shadow-[inset_0_-4px_0_var(--color-signal-500)]
+      has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-signal-500;
+  }
+  .option-check {
+    @apply absolute top-4 right-4 grid size-6 place-items-center border-2 border-concrete-300 text-transparent transition;
+  }
+  .option-card:has(:checked) .option-check { @apply border-char-900 bg-char-900 text-signal-400; }
+
+  .range {
+    @apply h-2 w-full cursor-pointer appearance-none bg-concrete-200 accent-signal-500;
+  }
+  .range::-webkit-slider-thumb { -webkit-appearance: none; width: 26px; height: 26px; background: var(--color-signal-500); border: 3px solid var(--color-char-950); cursor: pointer; }
+  .range::-moz-range-thumb { width: 22px; height: 22px; background: var(--color-signal-500); border: 3px solid var(--color-char-950); border-radius: 0; cursor: pointer; }
+
+  /* Estimator stepper */
+  .step-tab {
+    @apply flex w-full items-center gap-3 border-b-4 border-concrete-200 py-3 text-left font-display text-sm font-semibold tracking-[0.1em] text-char-600 uppercase transition hover:text-char-900
+      aria-[current=step]:border-signal-500 aria-[current=step]:text-char-950;
+  }
+  .step-tab[data-done] { @apply border-char-900 text-char-900; }
+  .step-num { @apply grid size-7 shrink-0 place-items-center border-2 border-current font-mono text-xs; }
+
+  /* Accordion */
+  .acc-btn {
+    @apply flex w-full items-center justify-between gap-6 py-6 text-left font-display text-xl font-semibold tracking-wide text-char-900 uppercase sm:text-2xl;
+  }
+  .acc-icon { @apply relative grid size-9 shrink-0 place-items-center border-2 border-char-900 transition; }
+  .acc-icon::before, .acc-icon::after { content: ""; position: absolute; width: 14px; height: 2px; background: currentColor; transition: transform .25s ease; }
+  .acc-icon::after { transform: rotate(90deg); }
+  .acc-btn[aria-expanded="true"] .acc-icon { @apply border-signal-500 bg-signal-500 text-char-950; }
+  .acc-btn[aria-expanded="true"] .acc-icon::after { transform: rotate(0deg); }
+
+  /* Before/after slider: --pos is the share of the "before" image shown. */
+  .before-after-clip { clip-path: inset(0 calc(100% - var(--pos, 50%)) 0 0); }
+  .before-after-handle { left: var(--pos, 50%); }
+  .before-after:has(.before-after-range:focus-visible) { outline: 3px solid var(--color-signal-500); outline-offset: 4px; }
+
+  /* Lightbox */
+  .lightbox { @apply m-auto w-[min(64rem,calc(100%-2rem))] max-w-none bg-transparent p-0; }
+  .lightbox::backdrop { background: rgb(18 19 20 / .9); }
+
+  /* Line drawings that draw themselves in (paths use pathLength="1"). */
+  .js .draw path, .js .draw line, .js .draw polyline, .js .draw rect.stroke {
+    stroke-dasharray: 1; stroke-dashoffset: 1;
+    transition: stroke-dashoffset 1.8s cubic-bezier(.6,.1,.2,1);
+  }
+  .js .draw.is-visible path, .js .draw.is-visible line, .js .draw.is-visible polyline, .js .draw.is-visible rect.stroke { stroke-dashoffset: 0; }
+  .js .draw .fade { opacity: 0; transition: opacity .8s ease 1.2s; }
+  .js .draw.is-visible .fade { opacity: 1; }
+
+  /* Scroll reveal: only hidden once JS has loaded (html.js). */
+  .js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+  .js .reveal.is-visible { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .js .draw path, .js .draw line, .js .draw polyline, .js .draw rect.stroke { stroke-dashoffset: 0; transition: none; }
+  .js .draw .fade { opacity: 1; transition: none; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Back to top button (created by assets/js/main.js). Remove this block to drop it. */
+@layer components {
+  .back-to-top {
+    position: fixed; z-index: 45;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px) + var(--btt-lift, 0px));
+    display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; cursor: pointer;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, bottom .25s ease, visibility 0s linear .25s, background-color .2s;
+    @apply border-2 border-signal-500 bg-char-950 text-signal-500 hover:bg-signal-500 hover:text-char-950;
+  }
+  .back-to-top svg { width: 1.375rem; height: 1.375rem; transition: transform .2s ease; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top.is-visible:hover svg { transform: translateY(-2px); }
+  .back-to-top:focus-visible { outline: 3px solid var(--color-signal-500); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top, .back-to-top svg { transition: opacity .01s linear, visibility 0s linear; transform: none !important; }
+  }
+  @media print { .back-to-top { display: none !important; } }
+}
+
+@media print {
+  #site-header button, .back-to-top { display: none !important; }
+}

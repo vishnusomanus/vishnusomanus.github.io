@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forge — Webhooks infrastructure for teams that ship</title>
+  <meta name="description" content="Forge sends, signs, retries and replays your webhooks. One API call per event, delivery you can prove, SDKs for Node, Python, Go and more.">
+  <meta name="theme-color" content="#09090a">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Forge">
+  <meta property="og:title" content="Forge — Webhooks infrastructure for teams that ship">
+  <meta property="og:description" content="Forge sends, signs, retries and replays your webhooks. One API call per event, delivery you can prove, SDKs for Node, Python, Go and more.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400..700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="home" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[80] bg-brand-400 px-4 py-2.5 font-mono text-sm font-medium text-ink-950 focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 border-b border-line">
+    <div class="container-x flex h-[60px] items-center justify-between gap-6">
+      <div class="flex items-center gap-8">
+        <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Forge home">
+          <svg viewBox="0 0 28 28" class="h-7 w-7 shrink-0" aria-hidden="true"><rect width="28" height="28" rx="3" fill="#ffbe3d"/><path d="M7.5 6.5h13v3.6h-8.9v3.2h7.4v3.6h-7.4v4.6H7.5z" fill="#09090a"/><path d="M17 18h3.5v3.5H17z" fill="#09090a"/></svg>
+          <span class="font-mono text-[15px] font-semibold tracking-tight">forge<span class="logo-cursor text-brand-400">_</span></span>
+        </a>
+        <nav aria-label="Main" class="hidden lg:block">
+          <ul class="flex items-center">
+            <li><a href="docs.html" class="nav-link">Quickstart</a></li>
+            <li><a href="sdks.html" class="nav-link">SDKs</a></li>
+            <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li><a href="changelog.html" class="nav-link">Changelog</a></li>
+            <li><a href="status.html" class="nav-link">Status</a></li>
+            <li><a href="company.html" class="nav-link">Company</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="nav-link hidden sm:inline-flex">Talk to sales</a>
+        <a href="signup.html" class="btn-primary btn-sm hidden sm:inline-flex">Get API key</a>
+        <button id="menu-toggle" type="button" class="grid h-10 w-10 place-items-center rounded-[3px] border border-line-strong bg-ink-900 text-fg lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-line lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-8">
+        <ul class="font-mono">
+          <li><a href="index.html" aria-current="page" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>home</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="docs.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>quickstart</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="sdks.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>sdks</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="pricing.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>pricing</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="changelog.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>changelog</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="status.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>status</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="company.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>company</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="contact.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>talk-to-sales</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+        </ul>
+        <a href="signup.html" class="btn-primary btn-lg mt-6 w-full">Get an API key</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <div class="frame">
+      <!-- Hero: headline and a live code sample -->
+      <section class="relative overflow-hidden" aria-labelledby="hero-title">
+        <div class="bg-plus pointer-events-none absolute inset-0" aria-hidden="true"></div>
+        <div class="glow pointer-events-none absolute -top-40 right-[-10rem] h-[36rem] w-[52rem] max-w-none" aria-hidden="true"></div>
+        <div class="pad-x relative grid items-center gap-12 pt-12 pb-16 sm:pt-16 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:gap-12 lg:pt-20 lg:pb-20">
+          <div class="min-w-0">
+            <a href="changelog.html" class="reveal inline-flex max-w-full items-center gap-2.5 rounded-[3px] border border-line-strong bg-ink-900/80 py-1 pr-3 pl-1 font-mono text-xs text-muted transition hover:border-ink-600 hover:text-fg">
+              <span class="shrink-0 rounded-[2px] bg-brand-400 px-1.5 py-0.5 text-[11px] font-semibold text-ink-950">NEW</span>
+              <span class="truncate">Replay by filter is live in v4.2</span>
+              <span aria-hidden="true">→</span>
+            </a>
+            <h1 id="hero-title" class="h-display reveal reveal-d1 mt-7">Send the event. We make sure it <span class="text-brand-400">lands.</span></h1>
+            <p class="lead reveal reveal-d2 mt-6 max-w-xl">Forge is the webhooks API for SaaS teams. One call per event: we sign it, fan it out to every subscribed endpoint, retry for up to three days and keep a replayable log of every attempt.</p>
+            <div class="reveal reveal-d3 mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="signup.html" class="btn-primary btn-lg">Get an API key <span aria-hidden="true">→</span></a>
+              <a href="docs.html" class="btn-ghost btn-lg">Read the quickstart</a>
+            </div>
+            <div class="reveal reveal-d3 mt-8 flex max-w-md items-center justify-between gap-3 rounded-[3px] border border-line bg-ink-900/70 py-1.5 pr-1.5 pl-3.5" data-copy-scope>
+              <code class="min-w-0 truncate font-mono text-[13px] text-muted"><span class="text-subtle select-none" aria-hidden="true">$ </span><span data-copy-source>npm install @forgehq/node</span></code>
+              <button type="button" class="btn-ghost btn-sm shrink-0" data-copy="npm install @forgehq/node" aria-label="Copy install command">Copy</button>
+            </div>
+          </div>
+
+          <!-- Typed code sample. Samples live in HERO_SAMPLES in assets/js/main.js. -->
+          <div id="hero-code" class="term reveal reveal-d2 min-w-0">
+            <div class="term-bar justify-between pr-2 pl-0">
+              <div role="tablist" aria-label="Code language" class="flex" data-lang-tabs>
+                <button type="button" role="tab" id="hero-tab-curl" class="tab" data-lang="curl" aria-selected="true" aria-controls="hero-panel">curl</button>
+                <button type="button" role="tab" id="hero-tab-node" class="tab" data-lang="node" aria-selected="false" aria-controls="hero-panel" tabindex="-1">node</button>
+                <button type="button" role="tab" id="hero-tab-python" class="tab" data-lang="python" aria-selected="false" aria-controls="hero-panel" tabindex="-1">python</button>
+                <button type="button" role="tab" id="hero-tab-go" class="tab" data-lang="go" aria-selected="false" aria-controls="hero-panel" tabindex="-1">go</button>
+              </div>
+              <span id="hero-file" class="hidden font-mono text-xs text-subtle sm:inline">send-event.sh</span>
+            </div>
+            <div id="hero-panel" role="tabpanel" aria-labelledby="hero-tab-curl" class="min-w-0">
+              <pre class="code h-[17.5rem] text-[12px] sm:h-[19rem] sm:text-[13px]" tabindex="0" aria-label="Code sample"><code id="hero-code-text"><span class="t-f">curl</span> https://api.forge.example/v1/events \
+  <span class="t-f">-H</span> <span class="t-s">"Authorization: Bearer $FORGE_KEY"</span> \
+  <span class="t-f">-H</span> <span class="t-s">"Idempotency-Key: ord_8812-paid"</span> \
+  <span class="t-f">-d</span> <span class="t-s">'{
+    "type": "invoice.paid",
+    "tenant": "acme-co",
+    "data": { "invoice_id": "in_8812", "amount": 4900, "currency": "usd" }
+  }'</span></code></pre>
+            </div>
+            <div class="flex items-center justify-between gap-3 border-y border-line bg-ink-850 px-4 py-2 font-mono text-xs">
+              <span class="text-subtle">Response</span>
+              <span id="hero-status" class="flex items-center gap-3 text-muted"><span class="inline-flex items-center gap-1.5"><span class="dot s-ok" aria-hidden="true"></span><span class="text-ok">202 Accepted</span></span><span>41 ms</span></span>
+            </div>
+            <div class="min-w-0" aria-live="polite" id="hero-response-wrap">
+              <pre class="code h-[15.5rem] text-[12px] sm:text-[13px]" tabindex="0" aria-label="Response"><code id="hero-response"><span class="t-d">{</span>
+  <span class="t-p">"id"</span><span class="t-d">:</span> <span class="t-s">"evt_2Lq8vX4mN7kR"</span><span class="t-d">,</span>
+  <span class="t-p">"type"</span><span class="t-d">:</span> <span class="t-s">"invoice.paid"</span><span class="t-d">,</span>
+  <span class="t-p">"status"</span><span class="t-d">:</span> <span class="t-s">"queued"</span><span class="t-d">,</span>
+  <span class="t-p">"endpoints"</span><span class="t-d">:</span> <span class="t-n">3</span>
+<span class="t-d">}</span>
+<span class="t-d">→</span> <span class="text-ok">200</span> hooks.acme.example/forge      <span class="t-d">84 ms</span>
+<span class="t-d">→</span> <span class="text-ok">200</span> erp.acme.example/inbound     <span class="t-d">131 ms</span>
+<span class="t-d">→</span> <span class="text-down">503</span> legacy.acme.example/hook     <span class="t-k">retry in 5s</span></code></pre>
+            </div>
+            <div class="flex items-center justify-between gap-3 border-t border-line px-4 py-2.5">
+              <p class="font-mono text-[11px] text-subtle">Simulated. Nothing is sent.</p>
+              <button id="hero-replay" type="button" class="btn-ghost btn-sm"><svg viewBox="0 0 20 20" class="h-3.5 w-3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 10a6 6 0 1 0 1.8-4.3M4 3.5V6h2.5"/></svg>Run again</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Headline numbers -->
+        <dl class="cells relative grid-cols-2 border-t border-line lg:grid-cols-4">
+          <div class="pad-x py-6 lg:py-7">
+            <dt class="font-mono text-xs text-subtle">API uptime, 90 days</dt>
+            <dd class="mt-2 font-mono text-2xl font-medium tracking-tight sm:text-3xl">99.995<span class="text-subtle">%</span></dd>
+          </div>
+          <div class="pad-x py-6 lg:py-7">
+            <dt class="font-mono text-xs text-subtle">Ingest latency, p50</dt>
+            <dd class="mt-2 font-mono text-2xl font-medium tracking-tight sm:text-3xl">38<span class="text-subtle"> ms</span></dd>
+          </div>
+          <div class="pad-x py-6 lg:py-7">
+            <dt class="font-mono text-xs text-subtle">Events delivered, September</dt>
+            <dd class="mt-2 font-mono text-2xl font-medium tracking-tight sm:text-3xl">4.1<span class="text-subtle">B</span></dd>
+          </div>
+          <div class="pad-x py-6 lg:py-7">
+            <dt class="font-mono text-xs text-subtle">Regions, data stays in region</dt>
+            <dd class="mt-2 font-mono text-2xl font-medium tracking-tight sm:text-3xl">3</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- Customer wordmarks -->
+      <section class="rule" aria-labelledby="logos-title">
+        <h2 id="logos-title" class="pad-x pt-8 pb-6 font-mono text-xs tracking-wide text-subtle">Delivering webhooks for 2,400+ engineering teams</h2>
+        <ul class="cells grid-cols-2 border-t border-line sm:grid-cols-3 lg:grid-cols-6">
+          <li class="grid h-24 place-items-center text-muted"><svg role="img" aria-label="Tillwave" viewBox="0 0 140 32" class="h-7 w-auto"><path d="M4 22c5-10 10-10 15 0s10 10 15 0" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><text x="42" y="22" fill="currentColor" font-family="Host Grotesk, sans-serif" font-size="17" font-weight="700" letter-spacing="-.5">tillwave</text></svg></li>
+          <li class="grid h-24 place-items-center text-muted"><svg role="img" aria-label="Parcelpoint" viewBox="0 0 150 32" class="h-7 w-auto"><rect x="3" y="7" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"/><circle cx="12" cy="16" r="3" fill="currentColor"/><text x="28" y="22" fill="currentColor" font-family="Host Grotesk, sans-serif" font-size="16" font-weight="600">Parcelpoint</text></svg></li>
+          <li class="grid h-24 place-items-center text-muted"><svg role="img" aria-label="Ledgerline" viewBox="0 0 140 32" class="h-7 w-auto"><path d="M4 8v16h14M9 8v11h14" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="30" y="22" fill="currentColor" font-family="IBM Plex Mono, monospace" font-size="15" font-weight="600">ledgerline</text></svg></li>
+          <li class="grid h-24 place-items-center text-muted"><svg role="img" aria-label="Kitebase" viewBox="0 0 130 32" class="h-7 w-auto"><path d="M12 3 21 16 12 29 3 16z" fill="currentColor"/><path d="M12 3v26M3 16h18" stroke="#09090a" stroke-width="1.5"/><text x="28" y="22" fill="currentColor" font-family="Host Grotesk, sans-serif" font-size="17" font-weight="500" letter-spacing="1">KITEBASE</text></svg></li>
+          <li class="grid h-24 place-items-center text-muted"><svg role="img" aria-label="Quayside" viewBox="0 0 130 32" class="h-7 w-auto"><path d="M3 24h20M6 24V12l7-5 7 5v12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/><text x="30" y="22" fill="currentColor" font-family="Host Grotesk, sans-serif" font-size="17" font-weight="600" font-style="italic">Quayside</text></svg></li>
+          <li class="grid h-24 place-items-center text-muted"><svg role="img" aria-label="Hexlane" viewBox="0 0 120 32" class="h-7 w-auto"><path d="M12 4l9 5v12l-9 5-9-5V9z" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="28" y="22" fill="currentColor" font-family="Host Grotesk, sans-serif" font-size="17" font-weight="700">hexlane</text></svg></li>
+        </ul>
+      </section>
+
+      <!-- 01 Features -->
+      <section id="features" class="rule" aria-labelledby="features-title">
+        <div class="pad-x grid gap-6 pt-16 pb-12 lg:grid-cols-12 lg:pt-24">
+          <div class="lg:col-span-7">
+            <p class="eyebrow reveal"><span class="eyebrow-num">01</span>/ Platform</p>
+            <h2 id="features-title" class="h-section reveal reveal-d1 mt-4">Everything between your app and their endpoint.</h2>
+          </div>
+          <p class="lead reveal reveal-d2 self-end lg:col-span-5">Webhooks look like one HTTP request. In production they’re queues, signatures, retries, rate limits, logs and a support inbox. Forge is all of that behind one endpoint.</p>
+        </div>
+        <ul class="cells grid-cols-1 border-t border-line md:grid-cols-2 lg:grid-cols-3">
+          <li class="reveal flex flex-col p-6 sm:p-8">
+            <div class="h-36 overflow-hidden border border-line bg-ink-900 p-4 font-mono text-[11px] leading-[1.75]" aria-hidden="true">
+              <div><span class="t-k">POST</span> <span class="text-fg">/forge</span> <span class="t-d">HTTP/1.1</span></div>
+              <div><span class="t-p">forge-id</span><span class="t-d">:</span> <span class="text-muted">msg_2Lq8vX4m</span></div>
+              <div><span class="t-p">forge-timestamp</span><span class="t-d">:</span> <span class="t-n">1760521267</span></div>
+              <div class="truncate"><span class="t-p">forge-signature</span><span class="t-d">:</span> <span class="t-s">v1,K5oZfzN95Z9UVu1Ex</span></div>
+              <div class="mt-1 inline-flex items-center gap-1.5 rounded-[2px] border border-ok/40 bg-ok/10 px-1.5 text-ok">✓ HMAC-SHA256 verified</div>
+            </div>
+            <h3 class="h-card mt-6">Signed by default</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-muted">Every request carries a timestamped HMAC signature. Our SDKs verify it in one line and reject replays older than five minutes.</p>
+          </li>
+          <li class="reveal reveal-d1 flex flex-col p-6 sm:p-8">
+            <div class="h-36 border border-line bg-ink-900 p-3" aria-hidden="true">
+              <svg viewBox="0 0 300 110" class="h-full w-full" fill="none">
+                <path d="M14 70H290" stroke="#333336"/>
+                <path d="M22 62C40 30 58 30 76 62M84 62C102 26 122 26 140 62M148 62C172 20 196 20 214 62M222 62C238 24 262 24 278 62" stroke="#ffbe3d" stroke-opacity=".55" stroke-dasharray="3 4"/>
+                <g font-family="IBM Plex Mono, monospace" font-size="10" text-anchor="middle">
+                  <rect x="15" y="63" width="14" height="14" fill="#09090a" stroke="#ff6b6b"/><path d="M19 67l6 6M25 67l-6 6" stroke="#ff6b6b"/><text x="22" y="96" fill="#8c8b85">0s</text><text x="22" y="54" fill="#ff6b6b">503</text>
+                  <rect x="73" y="63" width="14" height="14" fill="#09090a" stroke="#ff6b6b"/><path d="M77 67l6 6M83 67l-6 6" stroke="#ff6b6b"/><text x="80" y="96" fill="#8c8b85">5s</text><text x="80" y="54" fill="#ff6b6b">503</text>
+                  <rect x="137" y="63" width="14" height="14" fill="#09090a" stroke="#ff6b6b"/><path d="M141 67l6 6M147 67l-6 6" stroke="#ff6b6b"/><text x="144" y="96" fill="#8c8b85">30s</text><text x="144" y="54" fill="#ff6b6b">timeout</text>
+                  <rect x="207" y="63" width="14" height="14" fill="#09090a" stroke="#ff6b6b"/><path d="M211 67l6 6M217 67l-6 6" stroke="#ff6b6b"/><text x="214" y="96" fill="#8c8b85">2m</text><text x="214" y="54" fill="#ff6b6b">502</text>
+                  <rect x="271" y="63" width="14" height="14" fill="#3fd68b"/><path d="M274.5 70.5l3 3 5-6" stroke="#09090a" stroke-width="1.8"/><text x="278" y="96" fill="#8c8b85">15m</text><text x="278" y="54" fill="#3fd68b">200</text>
+                </g>
+              </svg>
+            </div>
+            <h3 class="h-card mt-6">Retries that back off</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-muted">Failed deliveries retry on an exponential schedule for up to 72 hours. Endpoints that keep failing are paused and their owners emailed, not hammered.</p>
+          </li>
+          <li class="reveal reveal-d2 flex flex-col p-6 sm:p-8">
+            <div class="h-36 overflow-hidden border border-line bg-ink-900 p-4 font-mono text-[11px] leading-[1.75]" aria-hidden="true">
+              <div><span class="t-d">$</span> <span class="t-f">forge</span> replay <span class="t-f">--status</span> 5xx <span class="t-f">--since</span> 2h</div>
+              <div class="text-subtle">  matched 1,284 events · 2 endpoints</div>
+              <div class="text-subtle">  ████████████████░░░░  81%</div>
+              <div><span class="text-ok">✓</span> requeued <span class="text-fg">1,284</span> events</div>
+              <div class="text-subtle">  oldest: evt_2Lp1… (1h 58m ago)</div>
+            </div>
+            <h3 class="h-card mt-6">Replay anything</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-muted">Every attempt is logged for 30 days with headers and body. Replay one event, or everything that failed while a customer’s server was down.</p>
+          </li>
+          <li class="reveal flex flex-col p-6 sm:p-8">
+            <div class="h-36 border border-line bg-ink-900 p-3" aria-hidden="true">
+              <svg viewBox="0 0 300 110" class="h-full w-full" fill="none">
+                <rect x="8" y="40" width="74" height="30" fill="#141415" stroke="#ffbe3d"/>
+                <text x="45" y="59" fill="#ffbe3d" font-family="IBM Plex Mono, monospace" font-size="10" text-anchor="middle">invoice.paid</text>
+                <path class="flow" d="M82 55C130 55 140 18 196 18M82 55H196M82 55C130 55 140 92 196 92" stroke="#ffbe3d" stroke-opacity=".8"/>
+                <g font-family="IBM Plex Mono, monospace" font-size="10">
+                  <rect x="196" y="6" width="96" height="24" fill="#141415" stroke="#333336"/><text x="206" y="22" fill="#ecebe7">billing</text><circle cx="280" cy="18" r="3" fill="#3fd68b"/>
+                  <rect x="196" y="43" width="96" height="24" fill="#141415" stroke="#333336"/><text x="206" y="59" fill="#ecebe7">crm-sync</text><circle cx="280" cy="55" r="3" fill="#3fd68b"/>
+                  <rect x="196" y="80" width="96" height="24" fill="#141415" stroke="#333336"/><text x="206" y="96" fill="#ecebe7">slack-alerts</text><circle cx="280" cy="92" r="3" fill="#3fd68b"/>
+                  <text x="118" y="30" fill="#8c8b85">invoice.*</text>
+                  <text x="118" y="104" fill="#8c8b85">*.paid</text>
+                </g>
+              </svg>
+            </div>
+            <h3 class="h-card mt-6">Fan-out with filters</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-muted">Endpoints subscribe to event types with wildcards and payload filters. You send each event once; Forge works out who gets it.</p>
+          </li>
+          <li class="reveal reveal-d1 flex flex-col p-6 sm:p-8">
+            <div class="h-36 border border-line bg-ink-900 p-3" aria-hidden="true">
+              <svg viewBox="0 0 300 110" class="h-full w-full" fill="none">
+                <g fill="#313134">
+                  <rect x="10" y="62" width="14" height="38"/><rect x="30" y="50" width="14" height="50"/><rect x="50" y="70" width="14" height="30"/><rect x="70" y="42" width="14" height="58"/>
+                </g>
+                <g fill="#ffbe3d">
+                  <rect x="90" y="34" width="14" height="66"/><rect x="110" y="34" width="14" height="66"/><rect x="130" y="34" width="14" height="66"/><rect x="150" y="34" width="14" height="66"/>
+                </g>
+                <g fill="#ffbe3d" fill-opacity=".22"><rect x="90" y="12" width="14" height="22"/><rect x="110" y="4" width="14" height="30"/><rect x="130" y="16" width="14" height="18"/><rect x="150" y="24" width="14" height="10"/></g>
+                <g fill="#313134"><rect x="170" y="44" width="14" height="56"/><rect x="190" y="58" width="14" height="42"/><rect x="210" y="66" width="14" height="34"/><rect x="230" y="72" width="14" height="28"/></g>
+                <path d="M6 34H262" stroke="#ecebe7" stroke-dasharray="4 4" stroke-opacity=".7"/>
+                <text x="266" y="38" fill="#ecebe7" font-family="IBM Plex Mono, monospace" font-size="10">50/s</text>
+              </svg>
+            </div>
+            <h3 class="h-card mt-6">Per-endpoint rate limits</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-muted">Set a ceiling per endpoint and Forge smooths bursts into a steady stream, so a billing run never takes down a customer’s small server.</p>
+          </li>
+          <li class="reveal reveal-d2 flex flex-col p-6 sm:p-8">
+            <div class="h-36 overflow-hidden border border-line bg-ink-900" aria-hidden="true">
+              <div class="flex items-center justify-between border-b border-line px-3 py-2 font-mono text-[10px] text-subtle"><span>acme-co · Webhooks</span><span class="rounded-[2px] bg-brand-400 px-1.5 text-ink-950">+ Add endpoint</span></div>
+              <div class="divide-y divide-line font-mono text-[11px]">
+                <div class="flex items-center justify-between px-3 py-2"><span class="truncate text-fg">hooks.acme.example/forge</span><span class="flex items-center gap-2 text-subtle"><span class="dot s-ok"></span>99.9%</span></div>
+                <div class="flex items-center justify-between px-3 py-2"><span class="truncate text-fg">erp.acme.example/inbound</span><span class="flex items-center gap-2 text-subtle"><span class="dot s-ok"></span>100%</span></div>
+                <div class="flex items-center justify-between px-3 py-2"><span class="truncate text-fg">legacy.acme.example/hook</span><span class="flex items-center gap-2 text-subtle"><span class="dot s-warn"></span>paused</span></div>
+              </div>
+            </div>
+            <h3 class="h-card mt-6">A portal for your customers</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-muted">Drop in the embeddable portal and your customers add endpoints, pick events, rotate secrets and read their own delivery logs. Fewer tickets for you.</p>
+          </li>
+        </ul>
+      </section>
+
+      <!-- 02 How it works -->
+      <section class="rule" aria-labelledby="how-title">
+        <div class="pad-x pt-16 pb-12 lg:pt-24">
+          <p class="eyebrow reveal"><span class="eyebrow-num">02</span>/ How it works</p>
+          <h2 id="how-title" class="h-section reveal reveal-d1 mt-4 max-w-3xl">One request in. Every endpoint served.</h2>
+        </div>
+        <div class="reveal pad-x pb-4" aria-hidden="true">
+          <svg viewBox="0 0 1100 260" class="hidden h-auto w-full md:block" fill="none" font-family="IBM Plex Mono, monospace">
+            <rect x="1" y="80" width="190" height="100" fill="#0f0f10" stroke="#333336"/>
+            <text x="20" y="108" fill="#8c8b85" font-size="12">YOUR APP</text>
+            <text x="20" y="138" fill="#ecebe7" font-size="14">forge.events.send()</text>
+            <text x="20" y="162" fill="#8c8b85" font-size="12">1 call per event</text>
+            <path class="flow" d="M191 130H330" stroke="#ffbe3d"/>
+            <text x="206" y="120" fill="#8c8b85" font-size="11">POST /v1/events</text>
+            <rect x="330" y="30" width="400" height="200" fill="#0f0f10" stroke="#ffbe3d"/>
+            <text x="350" y="58" fill="#ffbe3d" font-size="12">FORGE</text>
+            <g font-size="12">
+              <rect x="350" y="76" width="168" height="62" fill="#141415" stroke="#333336"/><text x="364" y="100" fill="#ecebe7">01 Persist</text><text x="364" y="122" fill="#8c8b85">3 zones, then 202</text>
+              <rect x="542" y="76" width="168" height="62" fill="#141415" stroke="#333336"/><text x="556" y="100" fill="#ecebe7">02 Route</text><text x="556" y="122" fill="#8c8b85">filters, fan-out</text>
+              <rect x="350" y="150" width="168" height="62" fill="#141415" stroke="#333336"/><text x="364" y="174" fill="#ecebe7">03 Sign</text><text x="364" y="196" fill="#8c8b85">HMAC per endpoint</text>
+              <rect x="542" y="150" width="168" height="62" fill="#141415" stroke="#333336"/><text x="556" y="174" fill="#ecebe7">04 Deliver</text><text x="556" y="196" fill="#8c8b85">retry, throttle, log</text>
+            </g>
+            <path d="M518 107H542M434 138V150M626 138V150M518 181H542" stroke="#333336"/>
+            <path class="flow" d="M730 130C800 130 810 46 880 46M730 130H880M730 130C800 130 810 214 880 214" stroke="#ffbe3d"/>
+            <g font-size="12">
+              <rect x="880" y="22" width="218" height="48" fill="#0f0f10" stroke="#333336"/><circle cx="900" cy="46" r="4" fill="#3fd68b"/><text x="914" y="50" fill="#ecebe7">billing.acme</text><text x="1060" y="50" fill="#3fd68b" text-anchor="end">200</text>
+              <rect x="880" y="106" width="218" height="48" fill="#0f0f10" stroke="#333336"/><circle cx="900" cy="130" r="4" fill="#3fd68b"/><text x="914" y="134" fill="#ecebe7">crm.tillwave</text><text x="1060" y="134" fill="#3fd68b" text-anchor="end">200</text>
+              <rect x="880" y="190" width="218" height="48" fill="#0f0f10" stroke="#333336"/><circle cx="900" cy="214" r="4" fill="#f2d14b"/><text x="914" y="218" fill="#ecebe7">ops.quayside</text><text x="1060" y="218" fill="#f2d14b" text-anchor="end">retry 2/8</text>
+            </g>
+          </svg>
+        </div>
+        <ol class="cells grid-cols-1 border-t border-line sm:grid-cols-2 lg:grid-cols-4">
+          <li class="reveal p-6 sm:p-8"><p class="font-mono text-xs text-brand-400">01 · Persist</p><p class="mt-3 text-[15px] leading-relaxed text-muted">Your event is written to three availability zones before we answer <code class="font-mono text-[13px] text-fg">202</code>. If we said yes, it will be delivered.</p></li>
+          <li class="reveal reveal-d1 p-6 sm:p-8"><p class="font-mono text-xs text-brand-400">02 · Route</p><p class="mt-3 text-[15px] leading-relaxed text-muted">Subscriptions and payload filters decide which endpoints get it. Idempotency keys stop duplicates at the door.</p></li>
+          <li class="reveal reveal-d2 p-6 sm:p-8"><p class="font-mono text-xs text-brand-400">03 · Sign</p><p class="mt-3 text-[15px] leading-relaxed text-muted">Each endpoint has its own secret. Rotate it with a 24-hour overlap and no dropped requests.</p></li>
+          <li class="reveal reveal-d3 p-6 sm:p-8"><p class="font-mono text-xs text-brand-400">04 · Deliver</p><p class="mt-3 text-[15px] leading-relaxed text-muted">Delivered with retries, throttling and a full log of every attempt, from the region your data lives in.</p></li>
+        </ol>
+      </section>
+
+      <!-- 03 Request inspector -->
+      <section id="inspector" class="rule" aria-labelledby="inspector-title">
+        <div class="pad-x grid gap-6 pt-16 pb-12 lg:grid-cols-12 lg:pt-24">
+          <div class="lg:col-span-7">
+            <p class="eyebrow reveal"><span class="eyebrow-num">03</span>/ API explorer</p>
+            <h2 id="inspector-title" class="h-section reveal reveal-d1 mt-4">Poke the API before you sign up.</h2>
+          </div>
+          <p class="lead reveal reveal-d2 self-end lg:col-span-5">Pick an endpoint, change the parameters and send. Responses are realistic sample data generated in your browser, so break things freely.</p>
+        </div>
+        <div class="reveal border-t border-line">
+          <div class="grid lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
+            <!-- Endpoint picker and parameters. Endpoints live in INSPECTOR in assets/js/main.js. -->
+            <form id="insp-form" class="min-w-0 border-b border-line lg:border-r lg:border-b-0" novalidate>
+              <fieldset class="pad-x py-6 lg:py-8">
+                <legend class="sr-only">Endpoint</legend>
+                <p class="label" aria-hidden="true">Endpoint</p>
+                <div id="insp-endpoints" class="mt-1 divide-y divide-line border border-line">
+                  <!-- Filled by main.js from INSPECTOR. This fallback shows without JavaScript. -->
+                  <p class="px-3 py-2.5 font-mono text-[13px]"><span class="method m-post">POST</span>/v1/events</p>
+                </div>
+              </fieldset>
+              <div class="border-t border-line">
+                <div class="pad-x py-6 lg:py-8">
+                  <div class="flex items-baseline justify-between gap-3"><p class="label">Parameters</p><p id="insp-desc" class="truncate text-xs text-subtle">Send an event to every subscribed endpoint.</p></div>
+                  <div id="insp-params" class="mt-3 grid gap-4"></div>
+                  <button id="insp-send" type="submit" class="btn-primary mt-6 w-full sm:w-auto">Send request <kbd class="hidden rounded-[2px] bg-ink-950/15 px-1 text-[11px] sm:inline">⌘↵</kbd></button>
+                </div>
+              </div>
+            </form>
+            <!-- Request preview and response -->
+            <div class="min-w-0 bg-ink-900">
+              <div class="flex items-center gap-3 border-b border-line px-5 py-3 font-mono text-[13px]">
+                <span id="insp-method" class="method m-post">POST</span>
+                <span id="insp-url" class="min-w-0 truncate text-fg">https://api.forge.example/v1/events</span>
+              </div>
+              <div class="border-b border-line">
+                <p class="px-5 pt-3 font-mono text-[11px] tracking-wide text-subtle uppercase">Request</p>
+                <pre class="code max-h-48 pt-2 pb-4 text-[12px]" tabindex="0" aria-label="Request preview"><code id="insp-curl">curl -X POST https://api.forge.example/v1/events</code></pre>
+              </div>
+              <div class="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-2.5">
+                <div role="tablist" aria-label="Response view" class="-my-2.5 flex">
+                  <button type="button" role="tab" id="insp-tab-body" class="tab" aria-selected="true" aria-controls="insp-body-panel">Body</button>
+                  <button type="button" role="tab" id="insp-tab-headers" class="tab" aria-selected="false" aria-controls="insp-headers-panel" tabindex="-1">Headers</button>
+                </div>
+                <p id="insp-meta" class="flex items-center gap-4 font-mono text-xs text-subtle" aria-live="polite"><span>Press Send to run the request</span></p>
+              </div>
+              <div id="insp-body-panel" role="tabpanel" aria-labelledby="insp-tab-body">
+                <pre class="code h-[22rem] text-[12px] sm:text-[13px]" tabindex="0" aria-label="Response body"><code id="insp-body"><span class="t-c">// The response appears here.</span></code></pre>
+              </div>
+              <div id="insp-headers-panel" role="tabpanel" aria-labelledby="insp-tab-headers" hidden>
+                <pre class="code h-[22rem] text-[12px] sm:text-[13px]" tabindex="0" aria-label="Response headers"><code id="insp-headers"><span class="t-c">// Send a request to see headers.</span></code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 Reliability -->
+      <section id="reliability" class="rule" aria-labelledby="reliability-title">
+        <div class="pad-x grid gap-12 py-16 lg:grid-cols-12 lg:py-24">
+          <div class="lg:col-span-5">
+            <p class="eyebrow reveal"><span class="eyebrow-num">04</span>/ Reliability</p>
+            <h2 id="reliability-title" class="h-section reveal reveal-d1 mt-4">Boring infrastructure, on purpose.</h2>
+            <p class="lead reveal reveal-d2 mt-5">We publish our numbers because webhooks are a promise you make to your customers. Ingest runs active-active in every region, and delivery workers fail over in under a minute.</p>
+            <dl class="reveal reveal-d2 mt-8 divide-y divide-line border-y border-line font-mono text-sm">
+              <div class="flex items-center justify-between py-3"><dt class="text-muted">Delivery success after retries</dt><dd class="text-fg">99.98%</dd></div>
+              <div class="flex items-center justify-between py-3"><dt class="text-muted">Median time to first attempt</dt><dd class="text-fg">212 ms</dd></div>
+              <div class="flex items-center justify-between py-3"><dt class="text-muted">Incidents in the last 90 days</dt><dd class="text-fg">4</dd></div>
+              <div class="flex items-center justify-between py-3"><dt class="text-muted">SLA on Scale and Enterprise</dt><dd class="text-fg">99.99%</dd></div>
+            </dl>
+            <a href="status.html" class="link reveal reveal-d3 mt-6 inline-flex font-mono text-sm">Live status and incident history →</a>
+          </div>
+          <!-- Latency chart drawn from LATENCY in assets/js/main.js -->
+          <figure class="reveal min-w-0 lg:col-span-7">
+            <div class="panel">
+              <div class="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-3">
+                <figcaption class="font-mono text-xs text-muted">Ingest latency · last 24 hours · all regions</figcaption>
+                <div id="lat-legend" class="flex gap-4 font-mono text-xs text-subtle">
+                  <span class="inline-flex items-center gap-1.5"><span class="h-0.5 w-4 bg-brand-400" aria-hidden="true"></span>p50</span>
+                  <span class="inline-flex items-center gap-1.5"><span class="h-0.5 w-4 border-t border-dashed border-muted" aria-hidden="true"></span>p99</span>
+                </div>
+              </div>
+              <div id="lat-chart" class="h-64 px-2 pt-4 pb-2 sm:h-72 sm:px-4"></div>
+              <div class="cells grid-cols-3 border-t border-line">
+                <div class="bg-ink-900! px-4 py-4 sm:px-5"><p class="font-mono text-[11px] text-muted">us-east</p><p class="font-mono text-[11px] text-subtle">Virginia</p><p class="mt-1.5 font-mono text-lg">36 ms</p></div>
+                <div class="bg-ink-900! px-4 py-4 sm:px-5"><p class="font-mono text-[11px] text-muted">eu-central</p><p class="font-mono text-[11px] text-subtle">Frankfurt</p><p class="mt-1.5 font-mono text-lg">34 ms</p></div>
+                <div class="bg-ink-900! px-4 py-4 sm:px-5"><p class="font-mono text-[11px] text-muted">ap-southeast</p><p class="font-mono text-[11px] text-subtle">Singapore</p><p class="mt-1.5 font-mono text-lg">41 ms</p></div>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 05 Testimonials -->
+      <section class="rule" aria-labelledby="quotes-title">
+        <div class="pad-x pt-16 pb-12 lg:pt-24">
+          <p class="eyebrow reveal"><span class="eyebrow-num">05</span>/ Customers</p>
+          <h2 id="quotes-title" class="h-section reveal reveal-d1 mt-4 max-w-3xl">Teams that stopped building webhooks in-house.</h2>
+        </div>
+        <ul class="cells grid-cols-1 border-t border-line lg:grid-cols-3">
+          <li class="reveal flex flex-col p-6 sm:p-8">
+            <p class="font-mono text-xs text-brand-400">−3 engineer-months / year</p>
+            <blockquote class="mt-4 flex-1 text-[17px] leading-relaxed text-fg">“We deleted 4,000 lines of retry and signing code in a week. The portal alone cut our webhook support tickets by two thirds.”</blockquote>
+            <div class="mt-8 flex items-center gap-3">
+              <svg viewBox="0 0 40 40" class="h-10 w-10 shrink-0" aria-hidden="true"><rect width="40" height="40" fill="#1a1a1c"/><path d="M0 40V28l10-10 8 8 10-14 12 14v14z" fill="#313134"/><text x="20" y="25" fill="#ffbe3d" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600" text-anchor="middle">PV</text></svg>
+              <div><p class="text-sm font-medium">Priya Venkatesan</p><p class="font-mono text-xs text-subtle">Staff engineer, Tillwave</p></div>
+            </div>
+          </li>
+          <li class="reveal reveal-d1 flex flex-col p-6 sm:p-8">
+            <p class="font-mono text-xs text-brand-400">40M events / day</p>
+            <blockquote class="mt-4 flex-1 text-[17px] leading-relaxed text-fg">“Peak season used to mean watching queue depth all night. Now our carriers get a steady, rate-limited stream and I sleep.”</blockquote>
+            <div class="mt-8 flex items-center gap-3">
+              <svg viewBox="0 0 40 40" class="h-10 w-10 shrink-0" aria-hidden="true"><rect width="40" height="40" fill="#1a1a1c"/><circle cx="34" cy="6" r="14" fill="#313134"/><text x="20" y="25" fill="#ffbe3d" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600" text-anchor="middle">JP</text></svg>
+              <div><p class="text-sm font-medium">Jonah Pembridge</p><p class="font-mono text-xs text-subtle">CTO, Parcelpoint</p></div>
+            </div>
+          </li>
+          <li class="reveal reveal-d2 flex flex-col p-6 sm:p-8">
+            <p class="font-mono text-xs text-brand-400">SOC 2 review in 2 days</p>
+            <blockquote class="mt-4 flex-1 text-[17px] leading-relaxed text-fg">“Signed payloads, EU data residency and per-tenant logs were exactly what our banking customers asked about. Forge had the answers documented.”</blockquote>
+            <div class="mt-8 flex items-center gap-3">
+              <svg viewBox="0 0 40 40" class="h-10 w-10 shrink-0" aria-hidden="true"><rect width="40" height="40" fill="#1a1a1c"/><path d="M0 0h16L0 16z" fill="#313134"/><text x="20" y="25" fill="#ffbe3d" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600" text-anchor="middle">ZS</text></svg>
+              <div><p class="text-sm font-medium">Zsófia Szabó</p><p class="font-mono text-xs text-subtle">Platform lead, Ledgerline</p></div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Call to action -->
+      <section class="rule relative overflow-hidden" aria-labelledby="cta-title">
+        <div class="bg-plus pointer-events-none absolute inset-0" aria-hidden="true"></div>
+        <div class="pad-x relative grid items-center gap-10 py-16 lg:grid-cols-2 lg:py-24">
+          <div>
+            <h2 id="cta-title" class="h-section reveal">Your first webhook is one request away.</h2>
+            <p class="lead reveal reveal-d1 mt-5 max-w-lg">100,000 events a month free, forever. No credit card, no sales call, and a test key in under a minute.</p>
+            <div class="reveal reveal-d2 mt-8 flex flex-col gap-3 sm:flex-row">
+              <a href="signup.html" class="btn-primary btn-lg">Get an API key <span aria-hidden="true">→</span></a>
+              <a href="pricing.html" class="btn-ghost btn-lg">See pricing</a>
+            </div>
+          </div>
+          <div class="term reveal reveal-d1 min-w-0" aria-hidden="true">
+            <div class="term-bar h-9 font-mono text-xs text-subtle">~/acme-api</div>
+            <pre class="code text-[12px] sm:text-[13px]"><code><span class="t-d">$</span> <span class="t-f">forge</span> login
+<span class="text-ok">✓</span> Logged in as dev@acme.example
+<span class="t-d">$</span> <span class="t-f">forge</span> listen <span class="t-f">--forward</span> localhost:3000/webhooks
+<span class="text-subtle">  Ready. Forwarding events for project acme-api (test)</span>
+<span class="t-d">  09:41:07</span>  <span class="t-k">invoice.paid</span>       <span class="text-ok">200</span>  <span class="t-d">12 ms</span>
+<span class="t-d">  09:41:09</span>  <span class="t-k">customer.created</span>   <span class="text-ok">200</span>  <span class="t-d">9 ms</span>
+<span class="t-d">  09:41:12</span>  <span class="t-k">invoice.paid</span>       <span class="text-down">500</span>  <span class="t-d">31 ms</span>
+<span class="t-d">$</span> <span class="caret"></span></code></pre>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <footer class="mt-auto border-t border-line bg-ink-950">
+    <div class="container-x grid gap-12 py-14 lg:grid-cols-12">
+      <div class="lg:col-span-3">
+        <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Forge home">
+          <svg viewBox="0 0 28 28" class="h-7 w-7 shrink-0" aria-hidden="true"><rect width="28" height="28" rx="3" fill="#ffbe3d"/><path d="M7.5 6.5h13v3.6h-8.9v3.2h7.4v3.6h-7.4v4.6H7.5z" fill="#09090a"/><path d="M17 18h3.5v3.5H17z" fill="#09090a"/></svg>
+          <span class="font-mono text-[15px] font-semibold tracking-tight">forge<span class="logo-cursor text-brand-400">_</span></span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-muted">Webhooks infrastructure for teams that ship. Built in Erie and Bellingham.</p>
+        <a href="status.html" class="mt-6 inline-flex items-center gap-2.5 rounded-[3px] border border-line-strong bg-ink-900 px-3 py-1.5 font-mono text-xs text-muted transition hover:border-ink-600 hover:text-fg"><span class="dot s-ok pulse" aria-hidden="true"></span>All systems operational</a>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-5">
+        <nav aria-label="Product">
+          <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">Product</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="index.html#features" class="text-muted transition hover:text-fg">Features</a></li>
+            <li><a href="pricing.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Pricing</a></li>
+            <li><a href="changelog.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Changelog</a></li>
+            <li><a href="status.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Status</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Developers">
+          <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">Developers</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="docs.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Quickstart</a></li>
+            <li><a href="docs.html#verify" class="text-muted transition hover:text-fg">Verify signatures</a></li>
+            <li><a href="sdks.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">SDKs and tools</a></li>
+            <li><a href="index.html#inspector" class="text-muted transition hover:text-fg">API explorer</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">Company</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="company.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">About</a></li>
+            <li><a href="company.html#careers" class="text-muted transition hover:text-fg">Careers</a></li>
+            <li><a href="contact.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Talk to sales</a></li>
+            <li><a href="pricing.html#faq" class="text-muted transition hover:text-fg">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="lg:col-span-4">
+        <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">API changes by email</h2>
+        <p class="mt-4 text-sm text-muted">Breaking changes, new versions and deprecations. About one email a month.</p>
+        <form data-form="newsletter" class="mt-4" novalidate>
+          <label for="footer-email" class="sr-only">Email address</label>
+          <div class="flex gap-2">
+            <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@company.example" class="input py-2 text-sm">
+            <button type="submit" class="btn-ghost shrink-0">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="border-t border-line">
+      <div class="container-x flex flex-col gap-2 py-5 font-mono text-xs text-subtle sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Forge Systems, Inc. Forge is a fictional company.</p>
+        <p>API version <span class="text-muted">2026-09-01</span> · Template by Freeframe</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

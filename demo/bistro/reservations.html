@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reservations — Olive & Ember</title>
+  <meta name="description" content="Book a table at Olive & Ember. Choose a date, time and seat by the fire, in the dining room or on the terrace.">
+  <meta name="theme-color" content="#17110d">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Olive &amp; Ember">
+  <meta property="og:title" content="Reservations — Olive & Ember">
+  <meta property="og:description" content="Book a table at Olive & Ember. Choose a date, time and seat by the fire, in the dining room or on the terrace.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&amp;family=Manrope:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="min-h-screen">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header fixed inset-x-0 top-0 z-50" data-header>
+    <div class="container-x flex h-20 items-center justify-between gap-6">
+      <a href="index.html" class="flex items-center gap-3 text-cream">
+        <img src="assets/img/favicon.svg" alt="" class="h-9 w-9" width="36" height="36">
+        <span class="font-display text-2xl font-semibold tracking-wide">Olive &amp; Ember</span>
+      </a>
+      <nav aria-label="Main" class="hidden items-center gap-9 lg:flex">
+        <a class="nav-link" href="menu.html">Menu</a>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="events.html">Events</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+      </nav>
+      <a href="reservations.html" class="btn btn-primary hidden lg:inline-flex" aria-current="page">Reserve a table</a>
+      <button type="button" class="group inline-flex h-11 w-11 items-center justify-center rounded-full border border-cream/25 text-cream transition hover:border-cream lg:hidden" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+        <svg class="h-5 w-5 group-aria-expanded:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="hidden h-5 w-5 group-aria-expanded:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div id="mobile-nav" class="h-[calc(100dvh-5rem)] overflow-y-auto border-t border-cream/10 bg-char lg:hidden" hidden>
+      <nav aria-label="Mobile" class="container-x flex flex-col gap-4 py-10">
+        <a class="font-display text-4xl text-cream/85 transition hover:text-gold aria-[current=page]:text-gold" href="index.html">Home</a>
+        <a class="font-display text-4xl text-cream/85 transition hover:text-gold aria-[current=page]:text-gold" href="menu.html">Menu</a>
+        <a class="font-display text-4xl text-cream/85 transition hover:text-gold aria-[current=page]:text-gold" href="about.html">About</a>
+        <a class="font-display text-4xl text-cream/85 transition hover:text-gold aria-[current=page]:text-gold" href="events.html">Events</a>
+        <a class="font-display text-4xl text-cream/85 transition hover:text-gold aria-[current=page]:text-gold" href="contact.html">Contact</a>
+        <a href="reservations.html" class="btn btn-primary mt-6 self-start" aria-current="page">Reserve a table</a>
+        <p class="mt-6 flex items-center gap-3 text-sm text-cream/70" data-open-status><span class="status-dot"></span><span data-open-text>Opening hours</span></p>
+        <a href="tel:+14105550120" class="text-sm text-cream/70 hover:text-cream">(410) 555-0120</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="relative isolate overflow-hidden bg-char pb-20 pt-40 text-cream sm:pb-28 sm:pt-48">
+      <div class="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_80%_110%,#8a3216_0%,transparent_55%),radial-gradient(ellipse_at_10%_-10%,#33261d_0%,transparent_50%)]" aria-hidden="true"></div>
+      <div class="absolute -bottom-24 right-[8%] -z-10 h-72 w-72 rounded-full bg-ember/30 blur-3xl motion-safe:animate-flicker" aria-hidden="true"></div>
+      <div class="container-x">
+        <p class="eyebrow-light" data-reveal>Reservations</p>
+        <h1 class="mt-3 max-w-4xl font-display text-5xl font-semibold leading-[1.02] sm:text-7xl" data-reveal style="--d:80ms">Save your seat by the fire.</h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-cream/75" data-reveal style="--d:160ms">Book up to two months ahead. We keep a few tables for walk-ins every evening, so if we're full online, come and say hello.</p>
+
+      </div>
+    </section>
+
+    <section class="py-16 sm:py-24">
+      <div class="container-x grid gap-10 lg:grid-cols-[1.6fr_1fr]">
+        <div data-reveal>
+        <form id="reservation-form" class="rounded-[2rem] border border-sand bg-cream p-6 shadow-sm sm:p-10" data-validate="reservation" data-success="reservation-success" novalidate>
+          <h2 class="font-display text-3xl font-semibold sm:text-4xl">Book a table</h2>
+          <p class="mt-2 text-sm text-muted">Fields marked <span class="text-ember">*</span> are required.</p>
+          <fieldset class="mt-8 grid gap-6 sm:grid-cols-3">
+            <legend class="label mb-4 text-char">1 · When</legend>
+            <div class="field">
+              <label for="res-date" class="field-label">Date <span class="text-ember" aria-hidden="true">*</span></label>
+              <input id="res-date" name="date" type="date" class="input" required data-min-today data-max-months="2" aria-describedby="res-date-error" data-msg-required="Please choose a date." data-msg-min="Please choose today or a later date." data-msg-max="We take bookings up to two months ahead. Please choose an earlier date.">
+              <p class="field-error" id="res-date-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="res-time" class="field-label">Time <span class="text-ember" aria-hidden="true">*</span></label>
+              <select id="res-time" name="time" class="input" required aria-describedby="res-time-hint res-time-error" data-msg-required="Please choose a time."><option value="">Choose a date first</option></select>
+              <p class="text-xs text-muted" id="res-time-hint" data-slot-note>Times appear once you pick a date.</p>
+              <p class="field-error" id="res-time-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="res-guests" class="field-label">Guests <span class="text-ember" aria-hidden="true">*</span></label>
+              <select id="res-guests" name="guests" class="input" required aria-describedby="res-guests-error" data-msg-required="Please choose the number of guests."><option value="">How many?</option><option value="1">1 guest</option><option value="2">2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option><option value="5">5 guests</option><option value="6">6 guests</option><option value="7">7 guests</option><option value="8">8 guests</option><option value="9+">9 or more</option></select>
+              <p class="field-error" id="res-guests-error" hidden></p>
+            </div>
+            <p class="rounded-2xl bg-gold/15 p-4 text-sm text-char sm:col-span-3" data-party-note hidden>For nine or more guests we offer set menus in the Cellar Room or at the long table. You can still send this request, or <a class="font-semibold text-ember underline" href="events.html#enquire">make a private dining inquiry</a>.</p>
+          </fieldset>
+          <fieldset class="mt-10">
+            <legend class="label mb-4 text-char">2 · Where would you like to sit?</legend>
+            <div class="grid gap-3 sm:grid-cols-3">
+                <label class="relative flex cursor-pointer flex-col gap-1 rounded-2xl border border-sand bg-white p-4 transition hover:border-char/40 has-[:checked]:border-ember has-[:checked]:bg-ember/5 has-[:checked]:ring-4 has-[:checked]:ring-ember/10 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-gold">
+                  <input type="radio" name="seating" value="Dining room" class="sr-only" checked>
+                  <span class="font-semibold">Dining room</span><span class="text-xs text-muted">Our main room and the long table</span>
+                </label>
+                <label class="relative flex cursor-pointer flex-col gap-1 rounded-2xl border border-sand bg-white p-4 transition hover:border-char/40 has-[:checked]:border-ember has-[:checked]:bg-ember/5 has-[:checked]:ring-4 has-[:checked]:ring-ember/10 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-gold">
+                  <input type="radio" name="seating" value="Counter" class="sr-only">
+                  <span class="font-semibold">Counter by the fire</span><span class="text-xs text-muted">Front-row seats, up to 4 guests</span>
+                </label>
+                <label class="relative flex cursor-pointer flex-col gap-1 rounded-2xl border border-sand bg-white p-4 transition hover:border-char/40 has-[:checked]:border-ember has-[:checked]:bg-ember/5 has-[:checked]:ring-4 has-[:checked]:ring-ember/10 has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-gold">
+                  <input type="radio" name="seating" value="Terrace" class="sr-only">
+                  <span class="font-semibold">Terrace</span><span class="text-xs text-muted">Heated and covered, weather allowing</span>
+                </label>
+            </div>
+          </fieldset>
+          <fieldset class="mt-10 grid gap-6 sm:grid-cols-2">
+            <legend class="label mb-4 text-char">3 · Your details</legend>
+            <div class="field">
+              <label for="res-name" class="field-label">Full name <span class="text-ember" aria-hidden="true">*</span></label>
+              <input id="res-name" name="name" type="text" class="input" required autocomplete="name" aria-describedby="res-name-error" data-msg-required="Please tell us your name.">
+              <p class="field-error" id="res-name-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="res-email" class="field-label">Email <span class="text-ember" aria-hidden="true">*</span></label>
+              <input id="res-email" name="email" type="email" class="input" required autocomplete="email" aria-describedby="res-email-error" data-msg-required="Please enter your email address.">
+              <p class="field-error" id="res-email-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="res-phone" class="field-label">Phone <span class="text-ember" aria-hidden="true">*</span></label>
+              <input id="res-phone" name="phone" type="tel" class="input" required autocomplete="tel" pattern="[0-9+\(\)\-\s]{7,}" aria-describedby="res-phone-error" data-msg-required="Please enter a phone number in case we need to reach you." data-msg-pattern="Please enter a valid phone number (digits, spaces and + only).">
+              <p class="field-error" id="res-phone-error" hidden></p>
+            </div>
+            <div class="field">
+              <label for="res-occasion" class="field-label">Occasion <span class="normal-case tracking-normal text-muted">(optional)</span></label>
+              <select id="res-occasion" name="occasion" class="input" aria-describedby="res-occasion-error"><option value="">No special occasion</option><option>Birthday</option><option>Anniversary</option><option>Date night</option><option>Business</option><option>Celebration</option></select>
+              <p class="field-error" id="res-occasion-error" hidden></p>
+            </div>
+            <div class="sm:col-span-2">
+            <div class="field">
+              <label for="res-notes" class="field-label">Allergies or special requests <span class="normal-case tracking-normal text-muted">(optional)</span></label>
+              <textarea id="res-notes" name="notes" rows="4" maxlength="300" class="input resize-y" data-count aria-describedby="res-notes-count res-notes-error" placeholder="E.g. one guest has celiac disease, we&#39;re bringing a stroller, celebrating a birthday"></textarea>
+              <p class="text-right text-xs text-muted" id="res-notes-count" aria-live="polite">0 / 300</p>
+              <p class="field-error" id="res-notes-error" hidden></p>
+            </div>
+            </div>
+            <label class="flex items-start gap-3 text-sm text-muted sm:col-span-2">
+              <input type="checkbox" name="newsletter" class="mt-0.5 h-5 w-5 rounded accent-ember">
+              <span>Send me the monthly Ember Letter with new menus and events.</span>
+            </label>
+          </fieldset>
+          <div class="mt-10 flex flex-col-reverse items-start justify-between gap-4 border-t border-sand pt-8 sm:flex-row sm:items-center">
+            <p class="text-xs text-muted">Tables are held for 15 minutes. Please give 24 hours' notice to cancel.</p>
+            <button type="submit" class="btn btn-primary px-8 py-3.5">Request table</button>
+          </div>
+        </form>
+        <div id="reservation-success" class="rounded-[2rem] border border-sand bg-white p-8 text-center shadow-sm sm:p-12" hidden>
+          <span class="mx-auto grid h-16 w-16 place-items-center rounded-full bg-olive text-cream"><svg class="h-8 w-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7"/></svg></span>
+          <h2 class="mt-6 font-display text-4xl font-semibold outline-none" tabindex="-1">Thank you, <span data-fill="name"></span>.</h2>
+          <p class="mx-auto mt-4 max-w-md text-lg text-muted">We&rsquo;ve received your request for <strong class="text-char"><span data-fill="guests"></span> <span data-count-of="guests" data-one="guest" data-other="guests">guests</span></strong> on <strong class="text-char"><span data-fill="date"></span></strong> at <strong class="text-char"><span data-fill="time"></span></strong>, seated in the <span data-fill="seating"></span>.</p>
+          <p class="mx-auto mt-6 max-w-md rounded-2xl bg-parchment p-4 text-sm text-muted">Your reference is <strong class="font-mono text-char" data-fill="ref"></strong>. We&rsquo;ll email to confirm your table shortly. Quote the reference if you need to change or cancel, and please give us 24 hours&rsquo; notice.</p>
+          <button type="button" class="btn btn-outline mt-8" data-reset>Make another booking</button>
+        </div>
+        </div>
+        <aside class="space-y-6 lg:sticky lg:top-28 lg:self-start" data-reveal style="--d:120ms">
+          <div class="rounded-[2rem] bg-char p-8 text-cream">
+            <h2 class="font-display text-3xl font-semibold">Opening hours</h2>
+            <p class="mt-3 flex items-center gap-3 text-sm text-cream/75" data-open-status><span class="status-dot"></span><span data-open-text>See opening hours</span></p>
+            <div class="mt-6">
+        <dl class="text-sm sm:text-base">
+          <div class="hours-row border-cream/15" data-day="2,3,4"><dt>Tuesday – Thursday <span class="today-tag ml-2 rounded-full bg-gold/20 px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wider text-gold">Today</span></dt><dd class="text-cream/60">5pm – 10pm</dd></div>
+          <div class="hours-row border-cream/15" data-day="5,6"><dt>Friday – Saturday <span class="today-tag ml-2 rounded-full bg-gold/20 px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wider text-gold">Today</span></dt><dd class="text-cream/60">12pm – 11pm</dd></div>
+          <div class="hours-row border-cream/15" data-day="0"><dt>Sunday <span class="today-tag ml-2 rounded-full bg-gold/20 px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wider text-gold">Today</span></dt><dd class="text-cream/60">12pm – 4pm</dd></div>
+          <div class="hours-row border-cream/15" data-day="1"><dt>Monday <span class="today-tag ml-2 rounded-full bg-gold/20 px-2 py-0.5 text-[0.65rem] font-bold uppercase tracking-wider text-gold">Today</span></dt><dd class="text-cream/60">Closed</dd></div>
+        </dl>
+            </div>
+            <p class="mt-6 text-sm text-cream/60">Last seating 90 minutes before closing.</p>
+          </div>
+          <div class="rounded-[2rem] border border-sand bg-white p-8">
+            <h2 class="font-display text-2xl font-semibold">Good to know</h2>
+            <ul class="mt-4 space-y-3 text-sm text-muted">
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ember"></span>Tables are held for 15 minutes after your booking time.</li>
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ember"></span>The counter seats up to four and is first come, first served on Fridays.</li>
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ember"></span>Children are very welcome; we have high chairs and a small kids' menu.</li>
+              <li class="flex gap-3"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-ember"></span><span>Groups of nine or more: see <a href="events.html" class="font-semibold text-ember underline">private dining</a>.</span></li>
+            </ul>
+            <p class="mt-6 text-sm">Prefer to call? <a href="tel:+14105550120" class="font-semibold text-ember underline">(410) 555-0120</a></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-char text-cream/70">
+    <div class="container-x grid gap-12 py-20 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.2fr_1.4fr]">
+      <div>
+        <a href="index.html" class="flex items-center gap-3 text-cream">
+          <img src="assets/img/favicon.svg" alt="" class="h-9 w-9" width="36" height="36">
+          <span class="font-display text-2xl font-semibold">Olive &amp; Ember</span>
+        </a>
+        <p class="mt-5 max-w-xs text-sm leading-relaxed">A wood-fired neighborhood kitchen in downtown Annapolis. Seasonal plates, natural wine and a long table for friends.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#" class="grid h-10 w-10 place-items-center rounded-full border border-cream/15 transition hover:border-gold hover:text-gold" aria-label="Instagram"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" class="grid h-10 w-10 place-items-center rounded-full border border-cream/15 transition hover:border-gold hover:text-gold" aria-label="Facebook"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8h3V4h-3c-2.8 0-4.5 1.8-4.5 4.6V11H7v4h2.5v7h4v-7h3l.5-4h-3.5V8.8c0-.5.3-.8.5-.8z"/></svg></a>
+          <a href="#" class="grid h-10 w-10 place-items-center rounded-full border border-cream/15 transition hover:border-gold hover:text-gold" aria-label="TikTok"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.4 2.2 1.8 3.7 4 4v3.2c-1.5 0-2.9-.4-4-1.1V15a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v3.3a2.8 2.8 0 1 0 1.8 2.6V3z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h2 class="label text-gold">Visit</h2>
+        <address class="mt-5 space-y-2 text-sm not-italic leading-relaxed">
+          <p>12 Harbor Street<br>Annapolis, MD 21401</p>
+          <p><a href="tel:+14105550120" class="hover:text-cream">(410) 555-0120</a></p>
+          <p><a href="mailto:hello@oliveandember.example" class="break-all hover:text-cream">hello@oliveandember.example</a></p>
+        </address>
+        <p class="mt-5 flex items-center gap-3 text-sm" data-open-status><span class="status-dot"></span><span data-open-text>See opening hours</span></p>
+      </div>
+      <div>
+        <h2 class="label text-gold">Explore</h2>
+        <ul class="mt-5 grid grid-cols-2 gap-x-6 gap-y-3 text-sm sm:grid-cols-1">
+          <li><a class="hover:text-cream" href="menu.html">Menu</a></li>
+          <li><a class="hover:text-cream" href="reservations.html">Reservations</a></li>
+          <li><a class="hover:text-cream" href="events.html">Private dining</a></li>
+          <li><a class="hover:text-cream" href="about.html">Our story</a></li>
+          <li><a class="hover:text-cream" href="contact.html">Contact &amp; directions</a></li>
+          <li><a class="hover:text-cream" href="menu.html#allergens">Allergen information</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="label text-gold">The Ember Letter</h2>
+        <p class="mt-5 text-sm leading-relaxed">Seasonal menus, wine dinners and first dibs on events. One email a month.</p>
+        <form class="mt-5" data-validate="newsletter" data-success="newsletter-success" novalidate>
+          <div class="flex flex-col gap-2 sm:flex-row lg:flex-col xl:flex-row">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input id="newsletter-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com" aria-describedby="newsletter-email-error" data-msg-required="Please enter your email address." class="min-w-0 flex-1 rounded-full border border-cream/15 bg-char-2 px-5 py-3 text-sm text-cream placeholder:text-cream/40 focus:border-gold focus:outline-none">
+            <button type="submit" class="btn btn-light">Subscribe</button>
+          </div>
+          <p id="newsletter-email-error" class="field-error mt-2 !text-ember-light" hidden></p>
+        </form>
+        <p id="newsletter-success" class="mt-5 rounded-2xl border border-gold/30 bg-gold/10 p-4 text-sm text-cream" hidden><span tabindex="-1" class="font-semibold outline-none">Thanks for signing up!</span> Look out for a confirmation email from us; once you click the link, the next Ember Letter is yours.</p>
+      </div>
+    </div>
+    <div class="border-t border-cream/10">
+      <div class="container-x flex flex-col gap-3 py-6 text-xs sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Olive &amp; Ember. All rights reserved.</p>
+        <p>Gratuity is up to you and is shared with the whole team.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

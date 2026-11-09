@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+/* Casa Marea brand tokens. Change these to re-skin the whole site. */
+@theme {
+  --font-sans: "Jost", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Bodoni Moda", "Didot", ui-serif, Georgia, "Times New Roman", serif;
+
+  --color-linen: #f6f1e8;  /* page background */
+  --color-shell: #ece4d6;  /* panels */
+  --color-sand: #e3d7c3;   /* deeper panels */
+  --color-line: #d8ccb9;   /* borders */
+  --color-ink: #13232b;    /* text, dark sections */
+  --color-sea: #1d4b57;    /* secondary dark */
+  --color-mist: #56646a;   /* muted text */
+  --color-coral: #a8482a;  /* accent */
+  --color-coral-dark: #8a3a20;
+  --color-olive: #5a6340;
+  --color-sun: #e9b25c;    /* decorative only */
+  --color-foam: #fbf8f2;   /* light text on dark */
+
+  --ease-soft: cubic-bezier(.2, .7, .2, 1);
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: no-preference) {
+    html:focus-within { scroll-behavior: smooth; }
+  }
+  body { @apply bg-linen text-ink font-sans antialiased; }
+  ::selection { background: var(--color-sea); color: var(--color-foam); }
+  :focus-visible { outline: 2px solid var(--color-coral); outline-offset: 3px; border-radius: 2px; }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-[0.06em] transition duration-300 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+
+  .btn-primary { @apply btn bg-ink text-foam hover:bg-sea; }
+  .btn-accent { @apply btn bg-coral text-white hover:bg-coral-dark; }
+  .btn-outline { @apply btn border border-ink/70 text-ink hover:bg-ink hover:text-foam; }
+  .btn-light { @apply btn bg-foam text-ink hover:bg-white; }
+  .btn-ghost-light { @apply btn border border-foam/70 text-foam hover:bg-foam hover:text-ink; }
+
+  .eyebrow { @apply text-xs font-medium uppercase tracking-[0.24em] text-coral; }
+  .on-dark .eyebrow, .eyebrow-light { color: var(--color-sun); }
+  .display { @apply font-display font-normal leading-[1.02] tracking-[-0.01em]; }
+  .link-underline {
+    @apply bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-left-bottom bg-no-repeat pb-0.5 transition-[background-size] duration-300 hover:bg-[length:100%_1px];
+  }
+
+  .field-label { @apply mb-1.5 block text-sm font-medium text-ink; }
+  .field {
+    @apply w-full rounded-xl border border-line bg-foam px-4 py-3 text-[15px] text-ink placeholder:text-mist/80 transition focus:border-sea focus:outline-none focus:ring-2 focus:ring-sea/15;
+  }
+  .field[aria-invalid="true"] { @apply border-coral ring-2 ring-coral/15; }
+  .field-error { @apply mt-1.5 text-sm text-coral; }
+  .field-error:empty { display: none; }
+  .on-dark .field { @apply border-foam/25 bg-white/10 text-foam placeholder:text-foam/60 focus:border-foam; }
+  .on-dark .field-label { color: var(--color-foam); }
+  .on-dark .field-error { color: #ffc9ad; }
+
+  .chip { @apply inline-flex items-center gap-1.5 rounded-full border border-line px-3 py-1 text-xs font-medium text-mist; }
+  .pill-toggle { @apply rounded-full border border-line bg-foam px-4 py-2 text-sm text-ink transition hover:border-ink; }
+  .pill-toggle[aria-pressed="true"] { @apply border-ink bg-ink text-foam; }
+
+  .art { @apply block overflow-hidden bg-shell; }
+  .art img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+  /* Booking calendar */
+  .cal-day { @apply relative grid aspect-square place-items-center rounded-lg text-sm transition; }
+  .cal-day:not(:disabled):hover { @apply bg-shell; }
+  .cal-day:disabled { @apply cursor-not-allowed text-mist/70; }
+  .cal-day[data-blocked] { @apply text-mist line-through decoration-coral/60; }
+  .cal-day[data-in-range] { @apply rounded-none bg-sea/12; }
+  .cal-day[data-blocked][data-in-range]:not([data-edge]) { @apply text-ink; }
+  .cal-day[data-edge] { @apply rounded-lg bg-ink text-foam; }
+  .cal-day[data-today]::after { content: ""; @apply absolute bottom-1 h-1 w-1 rounded-full bg-coral; }
+
+  .step-dot { @apply grid h-8 w-8 shrink-0 place-items-center rounded-full border border-line text-sm font-medium text-mist; }
+  [data-step-state="current"] .step-dot { @apply border-ink bg-ink text-foam; }
+  [data-step-state="done"] .step-dot { @apply border-sea bg-sea text-foam; }
+  [data-step-state="current"] .step-label { @apply text-ink; }
+}
+
+/* Scroll reveal: only hidden when JS is running and motion is allowed. */
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .9s var(--ease-soft), transform .9s var(--ease-soft); }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Hero slow zoom */
+@keyframes slow-zoom { from { transform: scale(1.08); } to { transform: scale(1); } }
+.hero-art { animation: slow-zoom 9s var(--ease-soft) both; }
+
+/* Lightbox */
+.lightbox::backdrop { background: rgb(19 35 43 / .88); }
+.lightbox { @apply m-auto max-h-[92vh] w-[min(1100px,94vw)] border-0 bg-transparent p-0 text-foam; }
+.menu-open { overflow: hidden; }
+
+/* Toast */
+.toast { @apply pointer-events-none fixed bottom-6 left-1/2 z-50 -translate-x-1/2 translate-y-4 rounded-full bg-ink px-5 py-3 text-sm text-foam opacity-0 shadow-lg transition duration-300; }
+.toast.is-visible { @apply translate-y-0 opacity-100; }
+
+/* Back to top button (created by assets/js/main.js). Remove this block to drop it. */
+@layer components {
+  .back-to-top {
+    position: fixed; z-index: 40;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px) + var(--btt-lift, 0px));
+    display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; cursor: pointer;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, bottom .25s ease, visibility 0s linear .25s,
+      background-color .2s, color .2s, border-color .2s, box-shadow .2s;
+    border-radius: 999px; border: 1px solid rgb(251 248 242 / .25);
+    background: var(--color-sea); color: var(--color-foam);
+    box-shadow: 0 14px 30px -14px rgb(19 35 43 / .6);
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; transition: transform .2s ease; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top.is-visible:hover svg { transform: translateY(-2px); }
+  .back-to-top:active { transform: translateY(1px); }
+  .back-to-top:hover { background: var(--color-ink); }
+  .back-to-top:focus-visible { outline: 2px solid var(--color-coral); outline-offset: 3px; }
+  .back-to-top-target:focus { outline: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top, .back-to-top svg { transition: opacity .01s linear, visibility 0s linear; transform: none !important; }
+  }
+  @media print { .back-to-top { display: none !important; } }
+}

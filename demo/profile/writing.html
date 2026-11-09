@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Writing — Sam Lindqvist</title>
+  <meta name="description" content="Essays on accessibility, web performance, CSS and frontend engineering by Sam Lindqvist.">
+  <meta name="author" content="Sam Lindqvist">
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#09090b" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Writing — Sam Lindqvist">
+  <meta property="og:description" content="Essays on accessibility, web performance, CSS and frontend engineering by Sam Lindqvist.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:site_name" content="Sam Lindqvist">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <!-- Set the theme before first paint to avoid a flash of the wrong colors. -->
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      var t = localStorage.getItem('theme');
+      // "dark" or "light" is a saved choice; anything else (nothing, or a stray value) follows the system.
+      if (t === 'dark' || (t !== 'light' && window.matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark');
+    } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="flex min-h-screen flex-col">
+  <a href="#main" class="skip-link sr-only z-50 rounded-full bg-zinc-900 px-4 py-2 text-sm font-semibold text-white focus:not-sr-only focus:fixed focus:top-3 focus:left-3 dark:bg-white dark:text-zinc-900">Skip to content</a>
+
+  <header role="banner" class="sticky top-0 z-40 border-b border-zinc-200/70 bg-white/80 backdrop-blur-md dark:border-zinc-800/70 dark:bg-zinc-950/80">
+    <div class="wrap flex h-16 items-center gap-3">
+      <a href="index.html" class="group mr-auto flex items-center gap-2.5 font-semibold tracking-tight text-zinc-900 md:mr-0 dark:text-white">
+        <img src="assets/img/favicon.svg" alt="" class="size-8 rounded-lg transition group-hover:rotate-6" width="32" height="32">
+        <span>Sam Lindqvist</span>
+      </a>
+      <nav aria-label="Main" class="mx-auto hidden md:block">
+        <ul class="flex items-center gap-0.5">
+          <li><a class="nav-link" href="index.html">About</a></li><li><a class="nav-link" href="resume.html">Résumé</a></li><li><a class="nav-link" href="projects.html">Projects</a></li><li><a class="nav-link" href="writing.html" aria-current="page">Writing</a></li><li><a class="nav-link" href="uses.html">Uses</a></li><li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button type="button" class="icon-btn w-auto gap-2 px-3 text-xs" data-palette-open aria-label="Search pages, Ctrl K">
+          <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="kbd hidden sm:inline" data-kbd>Ctrl K</span>
+        </button>
+        <button type="button" class="icon-btn" data-theme-toggle aria-label="Toggle dark mode" aria-pressed="false">
+          <svg class="size-4 dark:hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="size-4 hidden dark:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <button type="button" class="icon-btn group md:hidden" data-menu-toggle aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu">
+          <span class="group-aria-expanded:hidden"><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></span>
+          <svg class="hidden size-4 group-aria-expanded:block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <nav id="mobile-menu" aria-label="Mobile" class="border-t border-zinc-200 md:hidden dark:border-zinc-800" hidden>
+      <ul class="wrap grid gap-1 py-3">
+        <li><a class="nav-link block !rounded-xl !px-4 !py-3 !text-base" href="index.html">About</a></li><li><a class="nav-link block !rounded-xl !px-4 !py-3 !text-base" href="resume.html">Résumé</a></li><li><a class="nav-link block !rounded-xl !px-4 !py-3 !text-base" href="projects.html">Projects</a></li><li><a class="nav-link block !rounded-xl !px-4 !py-3 !text-base" href="writing.html" aria-current="page">Writing</a></li><li><a class="nav-link block !rounded-xl !px-4 !py-3 !text-base" href="uses.html">Uses</a></li><li><a class="nav-link block !rounded-xl !px-4 !py-3 !text-base" href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap py-14 sm:py-20">
+    <header class="reveal max-w-2xl">
+      <p class="eyebrow">Writing</p>
+      <h1 class="mt-2 text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl dark:text-white">Notes on building for the web</h1>
+      <p class="muted mt-4 text-lg leading-relaxed">Essays on accessibility, performance, CSS and the craft of frontend engineering. 9 posts so far.</p>
+    </header>
+    <div class="reveal mt-10 max-w-md">
+      <label for="post-search" class="sr-only">Search posts</label>
+      <div class="relative">
+        <span class="muted pointer-events-none absolute top-1/2 left-4 -translate-y-1/2"><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></span>
+        <input id="post-search" type="search" class="field !mt-0 !pl-11" placeholder="Search posts…" data-post-search>
+      </div>
+      <p class="muted mt-3 hidden text-sm" data-post-empty>No posts match that search.</p>
+    </div>
+    <div class="mt-12 space-y-10">
+        <section class="grid gap-2 border-t border-zinc-200 pt-8 md:grid-cols-[120px_1fr] dark:border-zinc-800" data-year-group aria-labelledby="y2026">
+          <h2 id="y2026" class="font-mono text-sm font-medium text-zinc-500 dark:text-zinc-400">2026</h2>
+          <ul class="divide-y divide-zinc-100 dark:divide-zinc-900">
+            <li class="reveal" data-post data-search="the quiet power of the &lt;dialog&gt; element html">
+              <a href="post.html" class="group -mx-4 flex flex-col gap-1 rounded-xl px-4 py-4 transition hover:bg-zinc-50 sm:flex-row sm:items-baseline sm:gap-6 dark:hover:bg-zinc-900">
+                <time datetime="2026-09-02" class="muted w-24 shrink-0 font-mono text-xs">Sep 2</time>
+                <span class="flex-1 font-medium text-zinc-900 group-hover:text-accent-700 dark:text-zinc-100 dark:group-hover:text-accent-300">The quiet power of the <code>&lt;dialog&gt;</code> element</span>
+                <span class="muted shrink-0 text-xs">HTML · 6 min</span>
+              </a>
+            </li>
+            <li class="reveal" data-post data-search="design tokens that survive a rebrand design systems">
+              <a href="post.html" class="group -mx-4 flex flex-col gap-1 rounded-xl px-4 py-4 transition hover:bg-zinc-50 sm:flex-row sm:items-baseline sm:gap-6 dark:hover:bg-zinc-900">
+                <time datetime="2026-06-18" class="muted w-24 shrink-0 font-mono text-xs">Jun 18</time>
+                <span class="flex-1 font-medium text-zinc-900 group-hover:text-accent-700 dark:text-zinc-100 dark:group-hover:text-accent-300">Design tokens that survive a rebrand</span>
+                <span class="muted shrink-0 text-xs">Design systems · 9 min</span>
+              </a>
+            </li>
+            <li class="reveal" data-post data-search="measuring what users actually feel: inp in practice performance">
+              <a href="post.html" class="group -mx-4 flex flex-col gap-1 rounded-xl px-4 py-4 transition hover:bg-zinc-50 sm:flex-row sm:items-baseline sm:gap-6 dark:hover:bg-zinc-900">
+                <time datetime="2026-03-11" class="muted w-24 shrink-0 font-mono text-xs">Mar 11</time>
+                <span class="flex-1 font-medium text-zinc-900 group-hover:text-accent-700 dark:text-zinc-100 dark:group-hover:text-accent-300">Measuring what users actually feel: INP in practice</span>
+                <span class="muted shrink-0 text-xs">Performance · 11 min</span>
+              </a>
+            </li></ul>
+        </section>
+        <section class="grid gap-2 border-t border-zinc-200 pt-8 md:grid-cols-[120px_1fr] dark:border-zinc-800" data-year-group aria-labelledby="y2025">
+          <h2 id="y2025" class="font-mono text-sm font-medium text-zinc-500 dark:text-zinc-400">2025</h2>
+          <ul class="divide-y divide-zinc-100 dark:divide-zinc-900">
+            <li class="reveal" data-post data-search="container queries changed how i build components css">
+              <a href="post.html" class="group -mx-4 flex flex-col gap-1 rounded-xl px-4 py-4 transition hover:bg-zinc-50 sm:flex-row sm:items-baseline sm:gap-6 dark:hover:bg-zinc-900">
+                <time datetime="2025-11-24" class="muted w-24 shrink-0 font-mono text-xs">Nov 24</time>
+                <span class="flex-1 font-medium text-zinc-900 group-hover:text-accent-700 dark:text-zinc-100 dark:group-hover:text-accent-300">Container queries changed how I build components</span>
+                <span class="muted shrink-0 text-xs">CSS · 7 min</span>
+              </a>
+            </li>
+            <li class="reveal" data-post data-search="notes from mentoring five engineers to senior career">
+              <a href="post.html" class="group -mx-4 flex flex-col gap-1 rounded-xl px-4 py-4 transition hover:bg-zinc-50 sm:flex-row sm:items-baseline sm:gap-6 dark:hover:bg-zinc-900">
+                <time datetime="2025-08-05" class="muted w-24 shrink-0 font-mono text-xs">Aug 5</time>
+                <span class="flex-1 font-medium text-zinc-900 group-hover:text-accent-700 dark:text-zinc-100 dark:group-hover:text-accent-300">Notes from mentoring five engineers to senior</span>
+                <span class="muted shrink-0 text-xs">Career · 8 min</span>
+              </a>
+            </li>
+            <li class="reveal" data-post data-search="writing accessible tables without a library accessibility">
+              <a href="post.html" class="group -mx-4 flex flex-col gap-1 rounded-xl px-4 py-4 transition hover:bg-zinc-50 sm:flex-row sm:items-baseline sm:gap-6 dark:hover:bg-zinc-900">
+                <time datetime="2025-02-19" class="muted w-24 shrink-0 font-mono text-xs">Feb 19</time>
+                <span class="flex-1 font-medium text-zinc-900 group-hover:text-accent-700 dark:text-zinc-100 dark:group-hover:text-accent-300">Writing accessible tables without a library</span>
+                <span class="muted shrink-0 text-xs">Accessibility · 10 min</span>
+              </a>
+            </li></ul>
+        </section>
+        <section class="grid gap-2 border-t border-zinc-200 pt-8 md:grid-cols-[120px_1fr] dark:border-zinc-800" data-year-group aria-labelledby="y2024">
+          <h2 id="y2024" class="font-mono text-sm font-medium text-zinc-500 dark:text-zinc-400">2024</h2>
+          <ul class="divide-y divide-zinc-100 dark:divide-zinc-900">
+            <li class="reveal" data-post data-search="server-render first, hydrate later performance">
+              <a href="post.html" class="group -mx-4 flex flex-col gap-1 rounded-xl px-4 py-4 transition hover:bg-zinc-50 sm:flex-row sm:items-baseline sm:gap-6 dark:hover:bg-zinc-900">
+                <time datetime="2024-10-07" class="muted w-24 shrink-0 font-mono text-xs">Oct 7</time>
+                <span class="flex-1 font-medium text-zinc-900 group-hover:text-accent-700 dark:text-zinc-100 dark:group-hover:text-accent-300">Server-render first, hydrate later</span>
+                <span class="muted shrink-0 text-xs">Performance · 6 min</span>
+              </a>
+            </li>
+            <li class="reveal" data-post data-search="a frontend engineer's guide to reading flame charts performance">
+              <a href="post.html" class="group -mx-4 flex flex-col gap-1 rounded-xl px-4 py-4 transition hover:bg-zinc-50 sm:flex-row sm:items-baseline sm:gap-6 dark:hover:bg-zinc-900">
+                <time datetime="2024-05-14" class="muted w-24 shrink-0 font-mono text-xs">May 14</time>
+                <span class="flex-1 font-medium text-zinc-900 group-hover:text-accent-700 dark:text-zinc-100 dark:group-hover:text-accent-300">A frontend engineer's guide to reading flame charts</span>
+                <span class="muted shrink-0 text-xs">Performance · 12 min</span>
+              </a>
+            </li>
+            <li class="reveal" data-post data-search="what i learned shipping an open-source component open source">
+              <a href="post.html" class="group -mx-4 flex flex-col gap-1 rounded-xl px-4 py-4 transition hover:bg-zinc-50 sm:flex-row sm:items-baseline sm:gap-6 dark:hover:bg-zinc-900">
+                <time datetime="2024-01-30" class="muted w-24 shrink-0 font-mono text-xs">Jan 30</time>
+                <span class="flex-1 font-medium text-zinc-900 group-hover:text-accent-700 dark:text-zinc-100 dark:group-hover:text-accent-300">What I learned shipping an open-source component</span>
+                <span class="muted shrink-0 text-xs">Open source · 5 min</span>
+              </a>
+            </li></ul>
+        </section>
+    </div>
+    <aside class="card reveal mt-16 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <h2 class="font-semibold text-zinc-900 dark:text-white">Subscribe via RSS</h2>
+        <p class="muted mt-1 text-sm">New posts every month or so. No tracking, no newsletter popups.</p>
+      </div>
+      <a href="https://example.com/rss.xml" class="btn btn-secondary">RSS feed</a>
+    </aside>
+  </main>
+
+  <footer role="contentinfo" class="mt-auto border-t border-zinc-200 dark:border-zinc-800">
+    <div class="wrap flex flex-col gap-6 py-10 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <p class="text-sm font-medium text-zinc-900 dark:text-white">Sam Lindqvist</p>
+        <p class="muted mt-1 text-sm">Senior Frontend Engineer · Berkeley, CA</p>
+        <p class="muted mt-3 text-xs">Press <span class="kbd" data-kbd>Ctrl K</span> to jump to any page.</p>
+      </div>
+      <div class="flex flex-col gap-4 sm:items-end">
+        <ul class="flex gap-2" aria-label="Social links">
+          <li><a class="icon-btn" href="https://github.com/" aria-label="GitHub"><svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.7 1a9.4 9.4 0 0 1 5 0c1.9-1.3 2.7-1 2.7-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg></a></li>
+          <li><a class="icon-btn" href="https://www.linkedin.com/" aria-label="LinkedIn"><svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg></a></li>
+          <li><a class="icon-btn" href="https://mastodon.social/" aria-label="Mastodon"><svg class="size-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.3 13.7c-.3 1.5-2.6 3.1-5.3 3.4-1.4.2-2.8.3-4.2.3-2.4-.1-4.3-.6-4.3-.6v.7c.3 2.3 2.3 2.4 4.1 2.5 1.9.1 3.6-.5 3.6-.5l.1 1.7s-1.3.7-3.7.8c-1.3.1-2.9 0-4.8-.5-4.1-1.1-4.8-5.5-4.9-10v-3.6c0-4.5 3-5.9 3-5.9C6.4 1.3 9 1 11.6 1h.1c2.7 0 5.2.3 6.7 1 0 0 3 1.4 3 5.9 0 0 0 3.4-.1 5.8zM18.1 8.3c0-1.1-.3-2-.9-2.6-.6-.7-1.4-1-2.3-1-1.1 0-2 .4-2.5 1.3L12 7l-.5-.9c-.5-.9-1.4-1.3-2.5-1.3-1 0-1.7.3-2.3 1-.6.7-.9 1.5-.9 2.6v5.3h2.1V8.5c0-1.1.5-1.6 1.4-1.6 1 0 1.5.6 1.5 1.9v2.8h2.1V8.8c0-1.3.5-1.9 1.5-1.9.9 0 1.4.6 1.4 1.6v5.2H18z"/></svg></a></li>
+          <li><a class="icon-btn" href="contact.html" aria-label="Email"><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a></li>
+        </ul>
+        <p class="muted text-xs">© <span data-year>2026</span> Sam Lindqvist. Set in Inter &amp; JetBrains Mono.</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

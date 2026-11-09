@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="Illustration of the Fade Bros. storefront on Milwaukee Avenue: a brick front, a striped awning, a barber pole by the door and gold lettering on the window">
+<defs>
+<pattern id="brick" width="48" height="24" patternUnits="userSpaceOnUse"><rect width="48" height="24" fill="#8f3a25"/><path d="M0 0h48M0 12h48M0 24h48M24 0v12M0 12v12M48 12v12" stroke="#6e2a1a" stroke-width="2.5"/></pattern>
+<pattern id="awn" width="64" height="10" patternUnits="userSpaceOnUse"><rect width="32" height="10" fill="#b5281c"/><rect x="32" width="32" height="10" fill="#f2ead9"/></pattern>
+<clipPath id="pole"><rect x="666" y="250" width="34" height="150" rx="6"/></clipPath>
+</defs>
+<rect width="800" height="560" fill="#e8dcc4"/>
+<rect x="40" y="40" width="720" height="460" fill="url(#brick)"/>
+<rect x="40" y="40" width="720" height="70" fill="#151515"/>
+<text x="400" y="88" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="42" letter-spacing="6" fill="#f2ead9">FADE BROS. BARBER CO.</text>
+<path d="M40 110h720v20H40Z" fill="#e0a83a"/>
+<path d="M70 150h660l-30 70H100Z" fill="url(#awn)" stroke="#151515" stroke-width="4"/>
+<path d="M100 220q22 18 44 0t44 0t44 0t44 0t44 0t44 0t44 0t44 0t44 0t44 0t44 0t44 0t44 0" fill="none" stroke="#151515" stroke-width="4"/>
+<rect x="90" y="236" width="380" height="234" fill="#151515" stroke="#151515" stroke-width="8"/>
+<rect x="98" y="244" width="364" height="218" fill="#22313f"/>
+<path d="M98 244 260 462H170L98 360Z" fill="#fff" opacity=".07"/>
+<text x="280" y="322" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="46" fill="#e0a83a" letter-spacing="3">FADE BROS.</text>
+<text x="280" y="354" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="15" fill="#e0a83a" letter-spacing="6">CUTS · SHAVES · BEARDS</text>
+<text x="280" y="386" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-weight="700" font-size="13" fill="#f2ead9" letter-spacing="4" opacity=".85">WALK-INS WELCOME</text>
+<path d="M150 462v-40h50v40M330 462v-56h90v56" fill="#1a2632"/>
+<rect x="500" y="236" width="140" height="234" fill="#151515"/>
+<rect x="510" y="246" width="120" height="224" fill="#1d3557"/>
+<rect x="524" y="262" width="92" height="100" fill="#22313f" stroke="#e0a83a" stroke-width="3"/>
+<text x="570" y="300" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="13" fill="#f2ead9" letter-spacing="2">OPEN</text>
+<text x="570" y="322" text-anchor="middle" font-family="Archivo, Arial, sans-serif" font-size="10" fill="#f2ead9" letter-spacing="1.5">COME ON IN</text>
+<circle cx="616" cy="400" r="6" fill="#e0a83a"/>
+<rect x="676" y="236" width="14" height="14" rx="7" fill="#e0a83a"/>
+<rect x="666" y="250" width="34" height="150" rx="6" fill="#f2ead9"/>
+<g clip-path="url(#pole)"><path d="M640 270 730 220v14L640 284ZM640 310 730 260v14L640 324ZM640 350 730 300v14L640 364ZM640 390 730 340v14L640 404ZM640 430 730 380v14L640 444Z" fill="#b5281c"/><path d="M640 288 730 238v7L640 295ZM640 328 730 278v7L640 335ZM640 368 730 318v7L640 375Z" fill="#1d3557"/></g>
+<rect x="666" y="250" width="34" height="150" rx="6" fill="none" stroke="#151515" stroke-width="4"/>
+<rect x="672" y="400" width="22" height="14" rx="3" fill="#e0a83a"/>
+<rect x="40" y="470" width="720" height="30" fill="#b9ab90"/>
+<rect x="0" y="500" width="800" height="60" fill="#a39679"/>
+<path d="M0 500h800" stroke="#151515" stroke-width="4"/>
+<g transform="translate(470 420)"><rect x="0" y="0" width="22" height="50" fill="#151515"/><path d="M-6 0h34l-6 -60H0Z" fill="#3b6b3e"/></g>
+<g transform="translate(118 430)" fill="#f2ead9" opacity=".9"><rect width="64" height="40" rx="4" fill="#b5281c"/><text x="32" y="26" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="14" fill="#f2ead9">EST. 2012</text></g>
+</svg>

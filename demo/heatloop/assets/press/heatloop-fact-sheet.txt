@@ -1,0 +1,40 @@
+HEATLOOP FACT SHEET
+===================
+
+Company      Heatloop, Inc., Exchange Street, Bangor, ME 04401
+Workshop     Coldbrook Road, Hermon, ME 04401
+Web          https://heatloop.example
+Press        press@heatloop.example / (207) 555-0187
+
+WHAT WE MAKE
+Heatloop is a thermal battery for homes. It charges from cheap off-peak
+electricity, stores the energy as heat in sealed phase-change cells that
+melt at 136 F, and delivers it to hot-water radiators or baseboard and to
+hot faucets on demand. No combustion, no flue, no fuel tank.
+
+MODELS (indicative prices, installed, not counting any rebate or tax credit)
+  Heatloop 18   18 kWh heat   5 kW element   24 x 24 x 45 in   from $8,900
+  Heatloop 28   28 kWh heat   7 kW element   24 x 24 x 65 in   from $11,500
+  Heatloop 40   40 kWh heat   9 kW element   30 x 24 x 73 in   from $14,500
+
+IN NUMBERS
+  People                 34
+  Raised to date         $10.5M (pre-seed $2M, seed $8.5M)
+  Pilot homes            50, logging every half hour
+  Pilot heat bought off-peak    84% on average over a winter
+  Store heat loss        under 3% a day in lab tests
+  Cell cycling           10,000 melt-freeze cycles tested
+
+LEADERSHIP
+  Margot Thibodeau       Co-founder, Chief Executive
+  Dr. Rasmus Bergqvist   Co-founder, Chief Technology Officer
+  Magnus Sangster        Independent chair
+
+BACKERS
+  Tidehead Ventures (seed lead), Ledgewood Capital,
+  Brackwater Climate Fund, Sea Smoke Angels
+
+Savings and carbon figures published by Heatloop are estimates that use sample
+prices, and they depend on each home, rate plan and the weather. They are not
+financial advice. Federal, state and utility incentives change, and Heatloop
+does not promise any.

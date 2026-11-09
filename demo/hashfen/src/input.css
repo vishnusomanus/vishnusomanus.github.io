@@ -1,0 +1,127 @@
+@import "tailwindcss" source("../");
+@theme {
+  --font-display: "Michroma", sans-serif;
+  --font-sans: "Lato", sans-serif;
+  --color-ink: #111119;
+  --color-panel: #1c1b27;
+  --color-raised: #252332;
+  --color-paper: #f4f0fc;
+  --color-muted: #c4bdcf;
+  --color-line: #595362;
+  --color-lime: #c9f76b;
+  --color-violet: #bda5f1;
+}
+@layer base {
+  body {
+    @apply bg-ink font-sans text-paper antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-lime);
+    outline-offset: 4px;
+  }
+  input,
+  select,
+  textarea {
+    min-width: 0;
+  }
+  button,
+  summary {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+  ::selection {
+    background: var(--color-lime);
+    color: var(--color-ink);
+  }
+}
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-[1400px] px-5 sm:px-9 lg:px-12;
+  }
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[.18em] text-violet;
+  }
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-3 border border-lime bg-lime px-5 py-3 text-sm font-bold text-ink transition hover:bg-paper hover:border-paper;
+  }
+  .btn-outline {
+    @apply inline-flex min-h-12 items-center justify-center gap-3 border border-line px-5 py-3 text-sm font-bold text-paper transition hover:border-violet hover:bg-raised;
+  }
+  .field {
+    @apply mt-2 block w-full border border-line bg-ink px-4 py-3 text-base text-paper;
+  }
+  .label {
+    @apply block text-sm font-bold;
+  }
+  .text-link {
+    @apply font-bold underline decoration-violet underline-offset-4 hover:text-lime;
+  }
+  .tag {
+    @apply inline-block border border-line px-3 py-1 text-xs text-muted;
+  }
+  .metric {
+    @apply border-t border-line py-4;
+  }
+  .metric dt {
+    @apply text-xs uppercase tracking-wide text-muted;
+  }
+  .metric dd {
+    @apply mt-2 text-lg text-paper;
+  }
+  .error {
+    @apply mt-2 text-sm text-[#ffc2b8];
+  }
+  .nav-link {
+    @apply block px-3 py-3 text-sm text-muted hover:text-lime;
+  }
+  .nav-link[aria-current] {
+    @apply text-lime underline underline-offset-8;
+  }
+  .reveal {
+    opacity: 1;
+  }
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 0.5s,
+      transform 0.5s;
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@layer components {
+  [data-contact-success],
+  [data-scenario],
+  [data-scenario-status] {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}

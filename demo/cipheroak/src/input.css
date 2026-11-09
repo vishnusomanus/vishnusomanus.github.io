@@ -1,0 +1,242 @@
+@import "tailwindcss" source("../");
+
+/* Cipheroak design tokens. Earth from the high desert: caliche paper, adobe walls, oak bark ink,
+   weathered turquoise and juniper for trust, ochre and chile for warmth. */
+@theme {
+  --font-display: "Besley", ui-serif, Georgia, "Times New Roman", serif;
+  --font-sans: "Radio Canada", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Sometype Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --color-caliche: #f4ece0; /* page background */
+  --color-parchment: #fbf7f0; /* cards, inputs */
+  --color-adobe: #e8d8c2; /* alternate bands, art grounds */
+  --color-adobe-deep: #d9c2a3; /* tracks, art shading */
+  --color-line: #cfbca1; /* hairlines and card borders */
+  --color-bark: #2b211b; /* headings, body, dark bands */
+  --color-bark-soft: #5b4b3f; /* secondary text (AA on caliche, parchment and adobe) */
+  --color-juniper: #1f5a52; /* links, primary accent (AA on every light surface) */
+  --color-turquoise: #4f9a90; /* art, rings, bars */
+  --color-sky: #d3e6df; /* turquoise tint */
+  --color-ochre: #c98d2e; /* art, highlights on dark */
+  --color-ochre-soft: #f1dcae; /* ochre tint */
+  --color-chile: #9b3f1f; /* warnings and the "act" level (AA on light surfaces) */
+  --color-chile-soft: #f2d3c3;
+  --color-error: #a3241c;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-caliche);
+    color: var(--color-bark);
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-juniper);
+    outline-offset: 3px;
+  }
+  .bg-bark :focus-visible,
+  .bg-juniper :focus-visible {
+    outline-color: var(--color-ochre);
+  }
+  ::selection {
+    background: var(--color-juniper);
+    color: var(--color-parchment);
+  }
+  button,
+  summary,
+  label[for],
+  select {
+    cursor: pointer;
+  }
+  input,
+  select,
+  textarea {
+    min-width: 0;
+  }
+}
+
+@layer components {
+  .wrap {
+    width: min(1240px, calc(100% - 2rem));
+    margin-inline: auto;
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+  .btn {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1.4rem;
+    border-radius: 999px;
+    border: 1.5px solid var(--color-bark);
+    background: var(--color-bark);
+    color: var(--color-parchment);
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s,
+      color 0.2s;
+  }
+  .btn:hover:not(:disabled) {
+    background: var(--color-juniper);
+    border-color: var(--color-juniper);
+  }
+  .btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  .btn-ghost {
+    background: transparent;
+    color: var(--color-bark);
+  }
+  .btn-ghost:hover:not(:disabled) {
+    background: var(--color-adobe);
+    border-color: var(--color-bark);
+  }
+  .btn-sm {
+    min-height: 2.6rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+  }
+  .nav-link {
+    display: block;
+    border-radius: 999px;
+    padding: 0.55rem 0.85rem;
+    font-size: 0.925rem;
+  }
+  .nav-link:hover {
+    background: var(--color-adobe);
+  }
+  .nav-link[aria-current="page"] {
+    background: var(--color-sky);
+    color: var(--color-juniper);
+    font-weight: 600;
+  }
+  .text-link {
+    color: var(--color-juniper);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.3em;
+  }
+  .text-link:hover {
+    text-decoration-thickness: 2px;
+  }
+  .label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .field {
+    display: block;
+    width: 100%;
+    min-height: 3rem;
+    margin-top: 0.45rem;
+    padding: 0.7rem 0.9rem;
+    border: 1.5px solid var(--color-line);
+    border-radius: 0.75rem;
+    background: var(--color-parchment);
+    color: var(--color-bark);
+  }
+  .field:hover {
+    border-color: var(--color-bark-soft);
+  }
+  .field[aria-invalid="true"] {
+    border-color: var(--color-error);
+  }
+  .error {
+    display: block;
+    margin-top: 0.4rem;
+    color: var(--color-error);
+    font-size: 0.85rem;
+  }
+  /* Toggle buttons: filters, answers, slots. State is aria-pressed or aria-checked. */
+  .chip {
+    display: inline-flex;
+    min-height: 2.5rem;
+    align-items: center;
+    gap: 0.4rem;
+    border-radius: 999px;
+    border: 1.5px solid var(--color-line);
+    background: var(--color-parchment);
+    padding: 0.4rem 0.95rem;
+    font-size: 0.875rem;
+    transition:
+      background-color 0.2s,
+      border-color 0.2s;
+  }
+  .chip:hover:not(:disabled) {
+    border-color: var(--color-bark-soft);
+  }
+  .chip[aria-pressed="true"],
+  .chip[aria-checked="true"] {
+    border-color: var(--color-juniper);
+    background: var(--color-juniper);
+    color: var(--color-parchment);
+  }
+  .chip:disabled {
+    cursor: not-allowed;
+    border-style: dashed;
+    color: var(--color-bark-soft);
+    background: transparent;
+    text-decoration: line-through;
+  }
+  /* The arched window that frames page art, after the adobe doorways of old Santa Fe. */
+  .arch {
+    overflow: hidden;
+    border-radius: 999px 999px 1.25rem 1.25rem;
+  }
+  .reveal {
+    opacity: 1;
+  }
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 0.6s ease,
+      transform 0.6s ease;
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

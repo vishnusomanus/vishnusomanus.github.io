@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Your next green companion — Frond</title>
+    <meta
+      name="description"
+      content="Meet your next houseplant. Choose its size and a properly fitted pot, learn how to care for it, and add it to your cart."
+    />
+    <meta name="theme-color" content="#104b46" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Your next green companion — Frond" />
+    <meta
+      property="og:description"
+      content="Meet your next houseplant. Choose its size and a properly fitted pot, learn how to care for it, and add it to your cart."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bree+Serif&amp;family=Cabin:wght@400..700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script defer src="assets/js/data.js"></script>
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body data-page="product">
+    <a href="#main" class="sr-only fixed top-3 left-3 z-50 rounded-full bg-acid px-5 py-3 text-teal focus:not-sr-only"
+      >Skip to content</a
+    >
+    <div class="bg-teal px-5 py-2 text-center text-xs tracking-wide text-white">
+      A good place to start growing.
+      <span class="hidden sm:inline">Independent plants &amp; real advice, Eugene.</span> Free local delivery over $75.
+    </div>
+    <header class="relative z-30 border-b border-line bg-white">
+      <div class="wrap flex min-h-24 items-center justify-between gap-5">
+        <a href="index.html" aria-label="Frond home" class="flex items-center gap-2 text-teal"
+          ><svg width="29" height="29" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+            <path d="M8 31C4 15 18 4 34 7c2 16-9 28-26 24Z" fill="currentColor" />
+            <path d="M7 34 27 14" stroke="white" stroke-width="2.5" /></svg
+          ><span class="font-display text-[43px] tracking-[-.06em]">frond.</span></a
+        >
+        <nav class="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
+          <a class="nav-link" href="shop.html">Plants</a><a class="nav-link" href="finder.html">Find your plant</a
+          ><a class="nav-link" href="care.html">Plant care</a><a class="nav-link" href="about.html">Our story</a
+          ><a class="nav-link" href="visit.html">Visit us</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a href="basket.html" class="flex min-h-11 items-center gap-2 text-sm font-bold"
+            ><svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path d="m4 8 1 13h14l1-13H4Zm4 0V6a4 4 0 0 1 8 0v2" /></svg
+            >Cart <span data-basket-count class="flex size-6 items-center justify-center rounded-full bg-acid text-xs"
+              >0</span
+            ></a
+          ><button
+            type="button"
+            class="flex size-11 items-center justify-center rounded-full border border-line lg:hidden"
+            data-menu-toggle
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Open menu"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav
+        id="mobile-menu"
+        hidden
+        aria-label="Mobile navigation"
+        class="absolute inset-x-0 top-full border-b border-line bg-white px-6 pb-6 shadow-xl lg:hidden"
+      >
+        <a class="nav-link" href="shop.html">Plants</a><a class="nav-link" href="finder.html">Find your plant</a
+        ><a class="nav-link" href="care.html">Plant care</a><a class="nav-link" href="about.html">Our story</a
+        ><a class="nav-link" href="visit.html">Visit us</a>
+      </nav>
+    </header>
+    <main id="main">
+      <div class="wrap pt-7">
+        <a href="shop.html" class="link text-sm">All plants</a><span aria-hidden="true" class="mx-3">/</span
+        ><span id="product-crumb" class="text-sm">Your next plant</span>
+      </div>
+      <section id="product-detail" class="wrap py-8"></section>
+      <section class="wrap mt-8 border-t border-line pt-12">
+        <div role="tablist" aria-label="Plant information" class="flex flex-wrap gap-3">
+          <button
+            class="tab"
+            role="tab"
+            id="tab-care"
+            aria-controls="panel-care"
+            aria-selected="true"
+            tabindex="0"
+            data-tab="care"
+          >
+            Keeping it happy</button
+          ><button
+            class="tab"
+            role="tab"
+            id="tab-size"
+            aria-controls="panel-size"
+            aria-selected="false"
+            tabindex="-1"
+            data-tab="size"
+          >
+            Size &amp; pot</button
+          ><button
+            class="tab"
+            role="tab"
+            id="tab-delivery"
+            aria-controls="panel-delivery"
+            aria-selected="false"
+            tabindex="-1"
+            data-tab="delivery"
+          >
+            Delivery &amp; pickup
+          </button>
+        </div>
+        <div
+          id="panel-care"
+          role="tabpanel"
+          aria-labelledby="tab-care"
+          tabindex="0"
+          class="mt-7 grid gap-6 md:grid-cols-3"
+        ></div>
+        <div
+          id="panel-size"
+          role="tabpanel"
+          aria-labelledby="tab-size"
+          tabindex="0"
+          hidden
+          class="mt-7 rounded-2xl bg-cloud p-7"
+        ></div>
+        <div
+          id="panel-delivery"
+          role="tabpanel"
+          aria-labelledby="tab-delivery"
+          tabindex="0"
+          hidden
+          class="mt-7 max-w-3xl space-y-4 leading-relaxed text-muted"
+        >
+          <p>
+            We pack every plant snugly in recyclable cardboard, with a care card. We ship Monday through Thursday, so no plant waits in a warehouse over a weekend: order by 12 noon Pacific on a shipping day and it leaves the same afternoon. Tracked delivery then takes 1–2 business days. Local delivery is $8.95, or free when your plant subtotal after any discount reaches $75.
+          </p>
+          <p>
+            Pickup at 18 East 5th Avenue is free, ready the next day we’re open. Our courier covers ZIP codes around Eugene only: Eugene, Springfield, Coburg, Pleasant Hill, Creswell, Cottage Grove, Junction City, Veneta and Harrisburg. We can’t send plants to PO boxes.
+          </p>
+          <p>
+            If your plant arrives damaged, email a photo to hello@frond.example within 48 hours. We’ll take a look and help make it right.
+          </p>
+          <a href="visit.html" class="link">Where to find us</a>
+        </div>
+      </section>
+      <section class="wrap pt-16">
+        <div class="mb-7">
+          <p class="eyebrow">There’s always a little more room</p>
+          <h2 class="display mt-3 text-4xl">Good together.</h2>
+        </div>
+        <div id="related-plants" class="grid grid-cols-2 gap-5 lg:grid-cols-4"></div>
+      </section>
+    </main>
+    <footer class="mt-20 bg-teal pt-14 pb-6 text-white">
+      <div class="wrap">
+        <div class="grid gap-10 border-b border-white/20 pb-12 md:grid-cols-[1.3fr_1fr_1fr]">
+          <div>
+            <a href="index.html" class="font-display text-6xl tracking-tight text-acid">frond.</a>
+            <p class="mt-4 max-w-xs text-white/80">Room for one more leaf.<br />Good plants. A helping hand. Always.</p>
+          </div>
+          <div>
+            <h2 class="eyebrow mb-5 text-acid">Put down roots</h2>
+            <div class="grid gap-3 text-sm">
+              <a href="shop.html">Shop all plants</a><a href="finder.html">Find your plant</a
+              ><a href="care.html">The care cupboard</a><a href="about.html">Meet the people</a>
+            </div>
+          </div>
+          <div>
+            <h2 class="eyebrow mb-5 text-acid">Come and say hello</h2>
+            <p class="text-sm leading-7">
+              18 East 5th Avenue, Eugene, OR 97401<br />Tuesday–Saturday, 10am–5pm<br />Sunday, 11am–3pm · Monday, closed
+            </p>
+            <a class="mt-3 inline-block text-sm underline underline-offset-4" href="mailto:hello@frond.example"
+              >hello@frond.example</a
+            >
+            <p class="mt-2 text-sm"><a href="tel:+15415550137">(541) 555-0137</a></p>
+          </div>
+        </div>
+        <div class="flex flex-wrap justify-between gap-3 pt-6 text-xs text-white/70">
+          <p>© <span data-year></span> Frond. A little green goes a long way.</p>
+          <p>Frond is a fictional plant shop.</p>
+        </div>
+      </div>
+    </footer>
+    <div
+      id="site-status"
+      role="status"
+      aria-live="polite"
+      class="pointer-events-none fixed right-4 bottom-4 left-4 z-50 mx-auto hidden max-w-md rounded-2xl bg-deep px-6 py-4 text-center text-white shadow-xl"
+    ></div>
+  </body>
+</html>

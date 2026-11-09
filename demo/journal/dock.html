@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The hour the dock belongs to no one — Field Issue</title>
+<meta name="description" content="Between two shifts, the jetty is a place where work is visible and unpaid." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; } </style>
+</head>
+<body class="bg-[#f6f3ec] text-[#1a1a1a] font-sans antialiased">
+<header class="border-b-4 border-[#1a1a1a] bg-[#f6f3ec]">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-3xl leading-none">Field Issue</a>
+    <button id="menuBtn" class="border border-[#1a1a1a] px-3 py-1 text-xs uppercase tracking-wider md:hidden" aria-expanded="false">Menu</button>
+    <nav id="nav" class="hidden basis-full flex-col gap-2 border-t border-[#1a1a1a]/20 pt-3 text-sm md:flex md:basis-auto md:flex-row md:gap-6 md:border-0 md:pt-0 flex"><a href="index.html">Issue 19</a><a href="spices.html">Spices</a><a href="boat.html">Boat</a><a href="violin.html">Violin</a><a href="masthead.html">Masthead</a></nav>
+  </div>
+</header><main class="mx-auto max-w-3xl px-5 py-12 sm:px-8">
+  <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#b42318]">Labor</p>
+  <h1 class="mt-3 font-display text-5xl leading-[0.95] sm:text-6xl">The hour the dock belongs to no one</h1>
+  <p class="mt-4 text-sm uppercase tracking-[0.14em]">Jonah Ellison · 6 min</p>
+  <img src="images/net.jpg" alt="A wooden dock running into the water" class="mt-8 aspect-[16/10] w-full object-cover" />
+  <div class="mt-8 space-y-4 text-lg leading-relaxed"><p>There is a gap between the boat that has come in and the boat that has not left. In that gap the dock is full of people who are not, strictly, working. Nets are looked at. A rope is recoiled because leaving it was bothering someone. None of this is on a clock.</p><p>The paid work is the crossing and the catch. The unpaid work is everything that makes the next paid hour possible. We counted twelve minutes in which both crews were on the dock and nobody was on the books. A knot was retied twice.</p></div>
+  <img src="images/jetty.jpg" alt="Open water in hard sunlight" class="mt-8 aspect-[16/10] w-full object-cover" />
+  <div class="mt-8 space-y-4 text-lg leading-relaxed"><p>It is easy to photograph a dock and call it leisure. The people in the frames are not at leisure. They are in the part of the job that does not get a line on the wage slip, which is why it is worth a page.</p></div>
+  <p class="mt-12 border-t border-[#1a1a1a]/15 pt-6"><a class="underline underline-offset-4" href="spices.html">Next: The drawers behind the counter</a></p>
+</main><footer class="border-t border-[#1a1a1a]/20"><div class="mx-auto flex max-w-6xl flex-wrap justify-between gap-4 px-5 py-8 text-sm sm:px-8"><p>Field Issue, No. 19 · November. Edited in Kochi.</p><p><span class="underline underline-offset-4" >desk@fieldissue.com</span></p></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

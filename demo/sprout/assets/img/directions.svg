@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 360" width="480" height="360">
+<rect width="480" height="360" fill="#ecedda"/>
+<g stroke="#1f3a2e" stroke-opacity=".06"><path d="M0 40h480M0 80h480M0 120h480M0 160h480M0 200h480M0 240h480M0 280h480M0 320h480M40 0v360M80 0v360M120 0v360M160 0v360M200 0v360M240 0v360M280 0v360M320 0v360M360 0v360M400 0v360M440 0v360"/></g>
+<path d="M-10 150C50 125 110 170 170 150S300 120 436 118" fill="none" stroke="#b9d3d6" stroke-width="16" stroke-linecap="round"/>
+<path d="M436 -10C420 40 455 80 436 130S450 270 430 370" fill="none" stroke="#b9d3d6" stroke-width="22" stroke-linecap="round"/>
+<g fill="none" stroke="#1f3a2e" stroke-width="1" stroke-opacity=".4"><path d="M-10 150C50 125 110 170 170 150S300 120 425 118"/><path d="M436 -10C420 40 455 80 436 130S450 270 430 370"/></g>
+<g fill="none" stroke-linecap="round"><path d="M0 62h480" stroke="#fffdf6" stroke-width="10"/><path d="M180 0C176 90 200 180 196 360" stroke="#fffdf6" stroke-width="10"/><path d="M194 262C250 268 320 262 408 266" stroke="#fffdf6" stroke-width="8"/></g>
+<g fill="none" stroke="#1f3a2e" stroke-width="1" stroke-opacity=".5"><path d="M0 62h480"/><path d="M180 0C176 90 200 180 196 360"/><path d="M194 262C250 268 320 262 408 266"/></g>
+<rect x="206" y="72" width="60" height="32" fill="#c8ccb2" stroke="#1f3a2e" stroke-opacity=".5"/>
+<g transform="translate(262 186)"><circle cy="-10" r="12" fill="#9fb26f" stroke="#1f3a2e" stroke-width="1.5"/><path d="M0 2v10" stroke="#1f3a2e" stroke-width="2"/></g>
+<rect x="335" y="218" width="54" height="34" fill="#9fb26f" stroke="#a84325" stroke-width="3"/>
+<g transform="translate(362 216)"><path d="M0 0c-10-12-14-18-14-24a14 14 0 0 1 28 0c0 6-4 12-14 24Z" fill="#a84325" stroke="#1f3a2e" stroke-width="1.5"/><circle cy="-24" r="5" fill="#fffdf6"/></g>
+<path d="M176 136l26 0" stroke="#1f3a2e" stroke-width="3"/>
+<g font-family="Commissioner, 'Segoe UI', sans-serif" fill="#1f3a2e" font-size="13" font-weight="600">
+<text x="10" y="52">To Philomath</text>
+<text x="396" y="52" text-anchor="end">To Albany (12 miles)</text>
+<text x="272" y="94">Downtown</text>
+<text x="262" y="216" text-anchor="middle">Willamette Park</text>
+<text x="204" y="330">SE 3rd St</text>
+<text x="300" y="288" text-anchor="middle">SE Alder Bend Rd</text>
+<text x="362" y="170" text-anchor="middle">Loamstead</text>
+<text x="20" y="178" font-style="italic" font-weight="500">Marys River</text>
+<text x="412" y="340" text-anchor="end" font-style="italic" font-weight="500">Willamette River</text>
+<text x="108" y="128">Bridge</text>
+</g>
+<g transform="translate(448 40)"><path d="M0-18l7 18H-7Z" fill="#a84325" stroke="#1f3a2e"/><text y="16" text-anchor="middle" font-family="Commissioner, sans-serif" font-size="12" font-weight="700" fill="#1f3a2e">N</text></g>
+</svg>

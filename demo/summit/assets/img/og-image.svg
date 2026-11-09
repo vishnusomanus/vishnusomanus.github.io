@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8b5cf6"/><stop offset=".5" stop-color="#ec4899"/><stop offset="1" stop-color="#fb7a3c"/></linearGradient>
+    <radialGradient id="r" cx=".8" cy=".1" r=".8"><stop offset="0" stop-color="#ec4899" stop-opacity=".55"/><stop offset="1" stop-color="#0a0814" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0a0814"/><rect width="1200" height="630" fill="url(#r)"/>
+  <path d="M80 520 300 160l120 200 70-110 190 270Z" fill="url(#g)" opacity=".95"/>
+  <circle cx="610" cy="150" r="34" fill="#c8f560"/>
+  <text x="700" y="300" font-family="Space Grotesk, Arial, sans-serif" font-size="120" font-weight="700" fill="#f6f3ff" letter-spacing="-6">Summit</text>
+  <text x="700" y="380" font-family="Space Grotesk, Arial, sans-serif" font-size="56" font-weight="700" fill="url(#g)">2027</text>
+  <text x="700" y="450" font-family="Inter, Arial, sans-serif" font-size="34" fill="#a9a2c7">April 14–16 · Bellevue, WA</text>
+</svg>

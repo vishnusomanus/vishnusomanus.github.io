@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 420" role="img" aria-label="Illustrated portrait of Euan, with a beard and a knitted beanie, holding a small watering can">
+<rect width="400" height="420" fill="#dcebe7"/><circle cx="306" cy="110" r="66" fill="#fff" opacity=".45"/>
+<path d="M70 420c0-92 58-140 130-140s130 48 130 140Z" fill="#f58243"/>
+<path d="M200 284v136" stroke="#e06d30" stroke-width="6"/>
+<path d="M178 292h44v-36h-44Z" fill="#e8b48e"/>
+<ellipse cx="200" cy="198" rx="60" ry="70" fill="#f0c19c"/>
+<path d="M140 204c4 54 30 80 60 80s56-26 60-80c-10 20-22 30-34 30h-52c-12 0-24-10-34-30Z" fill="#6b4a2f"/>
+<path d="M182 240q18 8 36 0" fill="none" stroke="#f0c19c" stroke-width="6" stroke-linecap="round"/>
+<path d="M136 166c0-50 28-74 64-74s64 24 64 74Z" fill="#104b46"/><rect x="132" y="156" width="136" height="24" rx="10" fill="#0a3633"/>
+<path d="M150 158v20M166 158v20M182 158v20M198 158v20M214 158v20M230 158v20M246 158v20" stroke="#104b46" stroke-width="3"/>
+<circle cx="200" cy="86" r="12" fill="#d8ed75"/>
+<path d="M172 200q6-6 12 0M216 200q6-6 12 0" fill="none" stroke="#173d38" stroke-width="5" stroke-linecap="round"/>
+<g transform="translate(70 318)"><path d="M10 6h80l-6 70H16Z" fill="#9fb3ad"/><path d="M90 20l44-30" stroke="#9fb3ad" stroke-width="10" stroke-linecap="round"/><path d="M128-22l16 18" stroke="#9fb3ad" stroke-width="10" stroke-linecap="round"/><path d="M24 6c0-26 52-26 52 0" fill="none" stroke="#7b918b" stroke-width="7"/><path d="M146-14l6 8m4-14 6 8m-18-18 6 8" stroke="#7fc4e0" stroke-width="4" stroke-linecap="round"/></g>
+<ellipse cx="96" cy="356" rx="18" ry="14" fill="#f0c19c"/>
+</svg>

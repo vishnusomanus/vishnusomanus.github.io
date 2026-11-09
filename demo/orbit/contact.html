@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Talk to sales — Book an Orbit demo</title>
+  <meta name="description" content="Book a 20-minute Orbit demo with someone who has run a busy floor. Tell us about your team and we will match you with the right person.">
+  <meta name="theme-color" content="#fdfaf5">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Orbit">
+  <meta property="og:title" content="Talk to sales — Book an Orbit demo">
+  <meta property="og:description" content="Book a 20-minute Orbit demo with someone who has run a busy floor. Tell us about your team and we will match you with the right person.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500..800&amp;family=Rethink+Sans:ital,wght@0,400..700;1,400&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="contact" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[95] rounded-full bg-ink px-5 py-3 text-sm font-semibold text-white focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 px-3 pt-3 sm:px-5">
+    <div class="bar mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 rounded-full border border-transparent pr-2.5 pl-4 sm:pl-5">
+      <a href="index.html" class="group inline-flex items-center gap-2" aria-label="Orbit home">
+        <svg viewBox="0 0 40 40" class="h-9 w-9 transition-transform duration-500 group-hover:rotate-[20deg] shrink-0" aria-hidden="true"><g transform="rotate(-22 20 20)"><ellipse cx="20" cy="20" rx="17.5" ry="7" fill="none" stroke="#1f1d3d" stroke-width="2.6"/></g><circle cx="20" cy="20" r="9.5" fill="#ff6b4a"/><circle cx="16.6" cy="16.4" r="2.6" fill="#fff" opacity=".45"/><g transform="rotate(-22 20 20)"><path d="M2.5 20a17.5 7 0 0 0 35 0" fill="none" stroke="#1f1d3d" stroke-width="2.6" stroke-linecap="round"/><circle cx="37.5" cy="20" r="3.4" fill="#ffd84d" stroke="#1f1d3d" stroke-width="2"/></g></svg>
+        <span class="font-display text-[22px] font-bold tracking-[-0.03em]">orbit</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-0.5">
+          <li><a href="features.html" class="nav-link">Product</a></li>
+          <li><a href="integrations.html" class="nav-link">Integrations</a></li>
+          <li><a href="customers.html" class="nav-link">Customers</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="about.html" class="nav-link">Company</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="nav-link hidden sm:inline-flex" aria-current="page">Talk to sales</a>
+        <a href="signup.html" class="btn-primary btn-sm hidden sm:inline-flex">Start free trial</a>
+        <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-full border border-line bg-white text-ink lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="mx-auto mt-2 max-w-7xl rounded-4xl border border-line bg-white p-3 shadow-[0_24px_48px_-24px_rgba(31,29,61,.4)] lg:hidden">
+      <nav aria-label="Mobile">
+        <ul class="grid gap-0.5">
+          <li><a href="features.html" class="m-link">Product<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="integrations.html" class="m-link">Integrations<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="customers.html" class="m-link">Customers<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="pricing.html" class="m-link">Pricing<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="about.html" class="m-link">Company<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="changelog.html" class="m-link">Changelog<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="contact.html" class="m-link" aria-current="page">Talk to sales<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+        </ul>
+        <a href="signup.html" class="btn-primary btn-lg mt-3 w-full">Start free trial</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="relative -mt-[5.75rem] overflow-hidden pt-[5.75rem]">
+      <div class="bg-mesh pointer-events-none absolute inset-0 opacity-70" aria-hidden="true"></div>
+      <div class="container-x relative grid gap-12 pt-14 pb-20 sm:pt-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.25fr)] lg:gap-16 lg:pb-28">
+        <div>
+          <p class="eyebrow reveal"><span class="eyebrow-dot"></span>Talk to sales</p>
+          <h1 class="h-display reveal reveal-d1 mt-6">Book a <span class="marker marker-mint whitespace-nowrap">20‑minute</span> demo.</h1>
+          <p class="lead reveal reveal-d2 mt-6">We’ll show you Orbit with a schedule that looks like yours, answer the awkward questions and leave you with a rollout plan. No pressure, no 40-slide deck.</p>
+
+          <div id="route" class="reveal reveal-d3 mt-10 rounded-4xl border border-line bg-white p-6 shadow-[0_20px_40px_-30px_rgba(31,29,61,.5)]" aria-live="polite">
+            <p class="text-xs font-bold tracking-wide text-ink-faint uppercase">Who you’ll talk to</p>
+            <div class="mt-4 flex items-center gap-4">
+              <span class="shrink-0"><span data-route-avatar="amara"><svg viewBox="0 0 80 80" class="h-14 w-14 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#e6e0ff"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#ff6b4a"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#e8b48f"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#e8b48f"/><circle cx="40" cy="12" r="6" fill="#2b2140"/><path d="M25 27c0-9 6-14 15-14s15 5 15 14c-3-4-8-6-15-6s-12 2-15 6z" fill="#2b2140"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg></span><span data-route-avatar="fergus" hidden><svg viewBox="0 0 80 80" class="h-14 w-14 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#fff0b0"/><path d="M24 31c-2-12 4-19 16-19s18 7 16 19c-1 6-1 13 2 18H22c3-5 3-12 2-18z" fill="#1c1a1a"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#1f1d3d"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#f1c7a5"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#f1c7a5"/><path d="M25 26c0-8 6-12 15-12s15 4 15 12c-4-3-9-5-15-5s-11 2-15 5z" fill="#1c1a1a"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg></span><span data-route-avatar="siobhan" hidden><svg viewBox="0 0 80 80" class="h-14 w-14 shrink-0 rounded-full" aria-hidden="true"><rect width="80" height="80" fill="#ffdcea"/><path d="M24 31c-2-12 4-19 16-19s18 7 16 19c-1 6-1 13 2 18H22c3-5 3-12 2-18z" fill="#8a6a4f"/><path d="M14 80c2-15 12-22 26-22s24 7 26 22z" fill="#4c35b0"/><rect x="34" y="44" width="12" height="14" rx="5" fill="#c98d63"/><ellipse cx="40" cy="32" rx="14" ry="16" fill="#c98d63"/><path d="M25 26c0-8 6-12 15-12s15 4 15 12c-4-3-9-5-15-5s-11 2-15 5z" fill="#8a6a4f"/><circle cx="35" cy="34" r="1.6" fill="#1f1d3d"/><circle cx="45" cy="34" r="1.6" fill="#1f1d3d"/><path d="M36 40.5c2.4 1.8 5.6 1.8 8 0" fill="none" stroke="#1f1d3d" stroke-width="1.6" stroke-linecap="round"/></svg></span></span>
+              <div>
+                <p class="font-display text-lg font-semibold" data-route-name>Amara, Sales</p>
+                <p class="text-sm text-ink-soft" data-route-role>Twelve years running hotel and restaurant floors</p>
+              </div>
+            </div>
+            <p class="mt-5 text-[15px] leading-relaxed text-ink-soft" data-route-text>Choose your team size in the form and we’ll match you with the right person.</p>
+            <p class="mt-4 inline-flex items-center gap-2 rounded-full bg-mint px-3 py-1.5 text-sm font-semibold text-mint-ink" data-route-time><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10" cy="10" r="7"/><path d="M10 6v4l2.5 2"/></svg><span>Replies within 1 business day</span></p>
+            <p class="mt-4 hidden" data-route-trial><a href="signup.html" class="link">Or start a free trial now</a></p>
+          </div>
+
+          <ul class="reveal mt-8 grid gap-4 sm:grid-cols-2">
+            <li class="flex gap-3"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-butter text-butter-ink"><svg viewBox="0 0 20 20" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="15" height="11" rx="2.5"/><path d="m3.5 6 6.5 5 6.5-5"/></svg></span><div><p class="text-sm font-semibold">Email</p><p class="text-sm text-ink-soft">sales@orbit.example</p></div></li>
+            <li class="flex gap-3"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-2xl bg-sky text-sky-ink"><svg viewBox="0 0 20 20" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5.5" y="2.5" width="9" height="15" rx="2.5"/><path d="M9 14.5h2"/></svg></span><div><p class="text-sm font-semibold">Phone</p><p class="text-sm text-ink-soft">(913) 555-0142</p></div></li>
+          </ul>
+        </div>
+
+        <div class="reveal reveal-d1 min-w-0">
+          <form data-form="contact" class="card grid gap-6 p-6 sm:p-9" novalidate>
+            <h2 class="font-display text-2xl font-bold tracking-[-0.02em]">Tell us about your team</h2>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div><label for="c-first" class="label">First name</label><input id="c-first" name="first_name" required data-label="First name" autocomplete="given-name" class="input"></div>
+              <div><label for="c-last" class="label">Last name</label><input id="c-last" name="last_name" required data-label="Last name" autocomplete="family-name" class="input"></div>
+              <div><label for="c-email" class="label">Work email</label><input id="c-email" name="email" type="email" required data-validate="work-email" data-label="Work email" autocomplete="email" placeholder="you@yourbusiness.example" class="input"></div>
+              <div><label for="c-phone" class="label">Phone <span class="font-normal text-ink-faint">(optional)</span></label><input id="c-phone" name="phone" type="tel" data-validate="phone" data-label="Phone" autocomplete="tel" class="input"></div>
+              <div><label for="c-company" class="label">Business name</label><input id="c-company" name="company" required data-label="Business name" autocomplete="organization" class="input"></div>
+              <div><label for="c-industry" class="label">Industry</label>
+                <select id="c-industry" name="industry" required data-label="Industry" class="input">
+                  <option value="">Choose one</option>
+                  <option value="restaurant">Restaurant or bar</option>
+                  <option value="cafe">Café or bakery</option>
+                  <option value="hotel">Hotel</option>
+                  <option value="retail">Retail</option>
+                  <option value="leisure">Leisure or venue</option>
+                  <option value="other">Something else</option>
+                </select>
+              </div>
+            </div>
+            <fieldset id="c-size" data-group data-msg="Choose your team size." data-error-after>
+              <legend class="label">How many people do you schedule?</legend>
+              <div class="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                <label class="option flex-col items-start gap-0.5 p-4"><input type="radio" name="size" value="small" class="sr-only"><span class="font-display text-xl font-bold">1–24</span><span class="text-sm text-ink-faint">people</span></label>
+                <label class="option flex-col items-start gap-0.5 p-4"><input type="radio" name="size" value="mid" class="sr-only"><span class="font-display text-xl font-bold">25–99</span><span class="text-sm text-ink-faint">people</span></label>
+                <label class="option flex-col items-start gap-0.5 p-4"><input type="radio" name="size" value="large" class="sr-only"><span class="font-display text-xl font-bold">100–499</span><span class="text-sm text-ink-faint">people</span></label>
+                <label class="option flex-col items-start gap-0.5 p-4"><input type="radio" name="size" value="enterprise" class="sr-only"><span class="font-display text-xl font-bold">500+</span><span class="text-sm text-ink-faint">people</span></label>
+              </div>
+            </fieldset>
+            <div class="grid gap-5 sm:grid-cols-2">
+              <div><label for="c-locations" class="label">Number of locations</label><input id="c-locations" name="locations" type="number" inputmode="numeric" min="1" max="999" required data-validate="count" data-label="Number of locations" class="input" placeholder="e.g. 3"></div>
+              <div><label for="c-topic" class="label">Topic</label>
+                <select id="c-topic" name="topic" class="input">
+                  <option value="demo">Book a demo</option>
+                  <option value="pricing">Pricing question</option>
+                  <option value="integration">Integration or API</option>
+                  <option value="partnership">Partnership</option>
+                  <option value="careers">Careers</option>
+                </select>
+              </div>
+            </div>
+            <div data-route-extra hidden>
+              <label for="c-timeline" class="label">When would you like to roll out?</label>
+              <select id="c-timeline" name="timeline" required data-label="Rollout timing" class="input">
+                <option value="">Choose one</option>
+                <option value="month">Within a month</option>
+                <option value="quarter">This quarter</option>
+                <option value="later">Later this year</option>
+                <option value="exploring">Just exploring</option>
+              </select>
+              <p class="hint">For larger teams we prepare a rollout plan before the call.</p>
+            </div>
+            <fieldset id="c-interests" data-group data-min-checked="1" data-msg="Pick at least one thing to see." data-error-after>
+              <legend class="label">What would you like to see?</legend>
+              <div class="flex flex-wrap gap-2">
+                <label class="pill cursor-pointer has-[:checked]:border-ink has-[:checked]:bg-ink has-[:checked]:text-white has-[:focus-visible]:outline-[2.5px] has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-coral-600 has-[:focus-visible]:outline-solid"><input type="checkbox" name="interests" value="Schedule builder" class="sr-only">Schedule builder</label>
+                <label class="pill cursor-pointer has-[:checked]:border-ink has-[:checked]:bg-ink has-[:checked]:text-white has-[:focus-visible]:outline-[2.5px] has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-coral-600 has-[:focus-visible]:outline-solid"><input type="checkbox" name="interests" value="Swaps and time off" class="sr-only">Swaps and time off</label>
+                <label class="pill cursor-pointer has-[:checked]:border-ink has-[:checked]:bg-ink has-[:checked]:text-white has-[:focus-visible]:outline-[2.5px] has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-coral-600 has-[:focus-visible]:outline-solid"><input type="checkbox" name="interests" value="Time clock and payroll" class="sr-only">Time clock and payroll</label>
+                <label class="pill cursor-pointer has-[:checked]:border-ink has-[:checked]:bg-ink has-[:checked]:text-white has-[:focus-visible]:outline-[2.5px] has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-coral-600 has-[:focus-visible]:outline-solid"><input type="checkbox" name="interests" value="Labor forecasting" class="sr-only">Labor forecasting</label>
+                <label class="pill cursor-pointer has-[:checked]:border-ink has-[:checked]:bg-ink has-[:checked]:text-white has-[:focus-visible]:outline-[2.5px] has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-coral-600 has-[:focus-visible]:outline-solid"><input type="checkbox" name="interests" value="Integrations" class="sr-only">Integrations</label>
+                <label class="pill cursor-pointer has-[:checked]:border-ink has-[:checked]:bg-ink has-[:checked]:text-white has-[:focus-visible]:outline-[2.5px] has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-coral-600 has-[:focus-visible]:outline-solid"><input type="checkbox" name="interests" value="Multi-location setup" class="sr-only">Multi-location setup</label>
+              </div>
+            </fieldset>
+            <div><label for="c-message" class="label">Anything else? <span class="font-normal text-ink-faint">(optional)</span></label><textarea id="c-message" name="message" rows="4" minlength="10" data-label="Message" class="input" placeholder="How do you schedule today? What’s the most annoying part?"></textarea></div>
+            <label class="flex items-start gap-3 text-sm text-ink-soft"><input id="c-consent" name="consent" type="checkbox" required class="check mt-0.5" data-msg="Please agree so we can contact you."><span>I agree to Orbit contacting me about this request. We never share your details.</span></label>
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <p data-form-status class="text-sm font-semibold text-[#b01f35]" role="alert"></p>
+              <button type="submit" class="btn-primary btn-lg">Request my demo</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="mt-auto px-3 pb-3 sm:px-5 sm:pb-5">
+    <div class="relative mx-auto max-w-7xl overflow-hidden rounded-5xl bg-cream">
+      <div class="grid gap-12 px-6 pt-14 pb-10 sm:px-10 lg:grid-cols-12 lg:px-14">
+        <div class="lg:col-span-4">
+          <a href="index.html" class="inline-flex items-center gap-2" aria-label="Orbit home">
+            <svg viewBox="0 0 40 40" class="h-9 w-9 shrink-0" aria-hidden="true"><g transform="rotate(-22 20 20)"><ellipse cx="20" cy="20" rx="17.5" ry="7" fill="none" stroke="#1f1d3d" stroke-width="2.6"/></g><circle cx="20" cy="20" r="9.5" fill="#ff6b4a"/><circle cx="16.6" cy="16.4" r="2.6" fill="#fff" opacity=".45"/><g transform="rotate(-22 20 20)"><path d="M2.5 20a17.5 7 0 0 0 35 0" fill="none" stroke="#1f1d3d" stroke-width="2.6" stroke-linecap="round"/><circle cx="37.5" cy="20" r="3.4" fill="#ffd84d" stroke="#1f1d3d" stroke-width="2"/></g></svg>
+            <span class="font-display text-[22px] font-bold tracking-[-0.03em]">orbit</span>
+          </a>
+          <p class="mt-4 max-w-xs text-[15px] leading-relaxed text-ink-soft">Shift scheduling for restaurants, cafés, hotels and shops. Made by Orbit Works in Overland Park, Kansas.</p>
+          <form data-form="newsletter" class="mt-7 max-w-sm" novalidate>
+            <label for="footer-email" class="text-sm font-bold">Product updates, once a month</label>
+            <div class="mt-2.5 flex gap-2">
+              <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@yourbusiness.example" class="input py-2.5">
+              <button type="submit" class="btn-primary shrink-0 px-4">Subscribe</button>
+            </div>
+          </form>
+        </div>
+        <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-7 lg:col-start-6">
+        <nav aria-label="Product">
+          <h2 class="text-sm font-bold text-ink">Product</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="features.html" class="text-ink-soft transition hover:text-ink">Features</a></li>
+            <li><a href="integrations.html" class="text-ink-soft transition hover:text-ink">Integrations</a></li>
+            <li><a href="pricing.html" class="text-ink-soft transition hover:text-ink">Pricing</a></li>
+            <li><a href="changelog.html" class="text-ink-soft transition hover:text-ink">Changelog</a></li>
+            <li><a href="signup.html" class="text-ink-soft transition hover:text-ink">Start free trial</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2 class="text-sm font-bold text-ink">Company</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="about.html" class="text-ink-soft transition hover:text-ink">About us</a></li>
+            <li><a href="about.html#careers" class="text-ink-soft transition hover:text-ink">Careers</a></li>
+            <li><a href="customers.html" class="text-ink-soft transition hover:text-ink">Customers</a></li>
+            <li><a href="contact.html" class="text-ink-soft transition hover:text-ink" aria-current="page">Talk to sales</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Resources">
+          <h2 class="text-sm font-bold text-ink">Resources</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="features.html#compare" class="text-ink-soft transition hover:text-ink">Orbit vs spreadsheets</a></li>
+            <li><a href="pricing.html#calculator" class="text-ink-soft transition hover:text-ink">Price calculator</a></li>
+            <li><a href="pricing.html#faq" class="text-ink-soft transition hover:text-ink">FAQ</a></li>
+            <li><a href="integrations.html?category=payroll" class="text-ink-soft transition hover:text-ink">Payroll integrations</a></li>
+          </ul>
+        </nav>
+        </div>
+      </div>
+      <div class="mx-6 flex flex-col gap-3 border-t border-line py-6 text-sm text-ink-faint sm:mx-10 sm:flex-row sm:items-center sm:justify-between lg:mx-14">
+        <p>© <span data-year>2026</span> Orbit Works, Inc. Orbit is a fictional product.</p>
+        <p class="inline-flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-[#1fa16a]" aria-hidden="true"></span>All systems running · Website template by Freeframe</p>
+      </div>
+      <svg viewBox="0 40 1000 210" class="pointer-events-none mx-auto -mb-1 block w-full max-w-5xl px-4 text-ink/[.05] select-none" aria-hidden="true"><text x="500" y="276" text-anchor="middle" font-family="Gabarito, sans-serif" font-size="330" font-weight="800" letter-spacing="-16" fill="currentColor">orbit</text></svg>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

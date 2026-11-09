@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#f5f1e6"/>
+  <rect x="760" width="440" height="630" fill="#1f2316"/>
+  <g transform="translate(80 84)">
+    <rect width="64" height="64" rx="18" fill="#4f5b1c"/>
+    <path d="M17 46v-9M28 46V28M39 46V19" stroke="#f5f1e6" stroke-width="6.5" stroke-linecap="round"/>
+    <circle cx="49.5" cy="17" r="5.6" fill="#e8b13a"/>
+    <text x="86" y="30" font-family="Hahmlet, Georgia, serif" font-size="30" font-weight="600" fill="#1f2316">Fernley Whitcomb</text>
+    <text x="86" y="58" font-family="Geologica, Arial, sans-serif" font-size="17" font-weight="500" letter-spacing="3" fill="#575a48">CPAs · CHATTANOOGA, TENNESSEE</text>
+  </g>
+  <text font-family="Hahmlet, Georgia, serif" font-size="74" font-weight="600" fill="#1f2316" letter-spacing="-1">
+    <tspan x="80" y="300">Clear books.</tspan>
+    <tspan x="80" y="384">Returns on time.</tspan>
+  </text>
+  <rect x="80" y="404" width="440" height="22" fill="#e8b13a"/>
+  <text x="80" y="500" font-family="Geologica, Arial, sans-serif" font-size="26" fill="#575a48">Tax, bookkeeping, payroll and advisory for</text>
+  <text x="80" y="536" font-family="Geologica, Arial, sans-serif" font-size="26" fill="#575a48">families and businesses on both sides of the state line.</text>
+  <g transform="translate(820 110)">
+    <path d="M0 26a14 14 0 0 1 14-14h96l14-12h182a14 14 0 0 1 14 14v376a14 14 0 0 1-14 14H14A14 14 0 0 1 0 390Z" fill="#fffcf4"/>
+    <text x="30" y="70" font-family="Geologica, Arial, sans-serif" font-size="16" font-weight="600" letter-spacing="2.5" fill="#575a48">TAX DEADLINES</text>
+    <g font-family="Geologica, Arial, sans-serif" font-size="20" fill="#1f2316">
+      <rect x="30" y="96" width="260" height="62" rx="10" fill="#f8e7bb"/>
+      <text x="48" y="134" font-weight="600">Jan 15</text><text x="140" y="134">Q4 estimate</text>
+      <text x="48" y="204" font-weight="600">Mar 15</text><text x="140" y="204">S corps</text>
+      <text x="48" y="262" font-weight="600">Apr 15</text><text x="140" y="262">Individuals</text>
+      <text x="48" y="320" font-weight="600">Apr 15</text><text x="140" y="320">TN F&amp;E</text>
+      <text x="48" y="378" font-weight="600">Oct 15</text><text x="140" y="378">Extensions</text>
+    </g>
+    <g stroke="#d9d2bd" stroke-width="2"><path d="M30 230h260M30 288h260M30 346h260"/></g>
+  </g>
+</svg>

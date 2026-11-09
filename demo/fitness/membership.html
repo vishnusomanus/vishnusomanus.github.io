@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Membership &amp; pricing — Keel Athletic Club</title>
+  <meta name="description" content="Keel membership plans from $39 a month. No joining fee, both clubs included, and two months free when you pay yearly.">
+  <meta name="theme-color" content="#0a0b0c">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Keel Athletic Club">
+  <meta property="og:title" content="Membership &amp; pricing — Keel Athletic Club">
+  <meta property="og:description" content="Keel membership plans from $39 a month. No joining fee, both clubs included, and two months free when you pay yearly.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Inter:wght@400..800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="min-h-screen font-sans antialiased" data-page="membership">
+  <a href="#main" class="skip-link">Skip to content</a>
+  <header class="site-header fixed inset-x-0 top-0 z-50">
+    <div class="container-x flex h-[4.5rem] items-center gap-8">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Keel Athletic Club, home">
+        <svg class="size-8 shrink-0" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#c8ff2e"/><path d="M9 7h5v6.5L19.5 7h6L18 15.5 26 25h-6l-6-7.2V25H9Z" fill="#0a0b0c"/></svg><span class="display text-2xl tracking-wide">Keel</span>
+      </a>
+      <nav aria-label="Main" class="ml-auto hidden lg:block">
+        <ul class="flex items-center gap-9"><li><a href="classes.html" class="nav-link">Classes</a></li><li><a href="trainers.html" class="nav-link">Trainers</a></li><li><a href="membership.html" class="nav-link" aria-current="page">Membership</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+      </nav>
+      <div class="ml-auto flex items-center gap-3 lg:ml-0">
+        <a href="trial.html" class="btn btn-primary btn-sm hidden sm:inline-flex">Free trial</a>
+        <button type="button" class="grid size-11 place-items-center rounded-md border border-line lg:hidden" data-menu-toggle aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path data-icon-open d="M4 7h16M4 12h16M4 17h16"/><path data-icon-close hidden d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="fixed inset-x-0 top-[4.5rem] bottom-0 overflow-y-auto bg-bg lg:hidden" hidden>
+      <nav aria-label="Mobile" class="container-x pt-4 pb-10">
+        <ul><li><a href="classes.html" class="display flex items-center justify-between border-b border-line py-4 text-4xl">Classes<span class="font-sans text-sm text-muted">01</span></a></li><li><a href="trainers.html" class="display flex items-center justify-between border-b border-line py-4 text-4xl">Trainers<span class="font-sans text-sm text-muted">02</span></a></li><li><a href="membership.html" class="display flex items-center justify-between border-b border-line py-4 text-4xl text-volt" aria-current="page">Membership<span class="font-sans text-sm text-muted">03</span></a></li><li><a href="contact.html" class="display flex items-center justify-between border-b border-line py-4 text-4xl">Contact<span class="font-sans text-sm text-muted">04</span></a></li></ul>
+        <a href="trial.html" class="btn btn-primary btn-lg mt-8 w-full">Claim your free week</a>
+        <p class="mt-6 text-sm text-muted">Harbor &amp; Northgate · Open from 5:30am</p>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section class="relative overflow-hidden border-b border-line pt-36 pb-16 md:pt-44 md:pb-20">
+      <div class="grid-lines pointer-events-none absolute inset-0 [mask-image:radial-gradient(ellipse_70%_80%_at_70%_0%,#000,transparent)]" aria-hidden="true"></div>
+      <div class="pointer-events-none absolute -top-40 right-0 h-[30rem] w-[30rem] rounded-full bg-volt/10 blur-3xl" aria-hidden="true"></div>
+      <div class="container-x relative">
+        <p class="eyebrow">Membership</p>
+        <h1 class="display mt-5 max-w-4xl text-[clamp(3rem,8vw,6.5rem)]">Train more. <span class="text-volt">Pay less.</span></h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">Every plan includes both clubs and the Keel app. No joining fee, no contracts on monthly plans.</p>
+        <div class="mt-10 inline-flex items-center gap-4 rounded-full border border-line bg-surface px-5 py-3">
+          <span class="text-sm font-semibold" id="bill-monthly">Monthly</span>
+          <button type="button" class="switch" role="switch" aria-checked="false" aria-labelledby="bill-label" data-billing-toggle><span class="sr-only" id="bill-label">Bill yearly</span></button>
+          <span class="text-sm font-semibold">Yearly <span class="badge ml-1 bg-volt/15 text-volt">2 months free</span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-x pt-14" aria-labelledby="plans-title">
+      <h2 id="plans-title" class="sr-only">Plans</h2>
+      <div class="grid gap-6 lg:grid-cols-3">
+        <article class="reveal card relative flex flex-col p-7 ">
+          
+          <h3 class="display text-3xl">Off-Peak</h3>
+          <p class="mt-2 text-sm text-muted">For flexible schedules and quiet gym floors.</p>
+          <p class="mt-6 flex items-baseline gap-1"><span class="text-2xl font-bold">$</span><span class="display text-6xl"><span data-price data-monthly="39" data-annual="32">39</span></span><span class="text-sm text-muted">/month</span></p>
+          <p class="mt-1 text-xs text-muted" data-billing-note data-monthly-note="Billed monthly · cancel anytime" data-annual-note="Billed $390 yearly · 2 months free">Billed monthly · cancel anytime</p>
+          <ul class="mt-6 grid flex-1 gap-3 text-sm"><li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span>Open gym 10am–4pm and after 8pm</span></li><li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span>4 classes a month</span></li><li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span>Both locations</span></li><li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span>Keel app &amp; workout tracking</span></li></ul>
+          <a href="trial.html?plan=offpeak" class="btn btn-outline mt-8 w-full">Start with Off-Peak</a>
+        </article>
+        <article class="reveal card relative flex flex-col p-7 border-volt bg-raised">
+          <p class="badge absolute -top-3 left-6 bg-volt text-bg">Most popular</p>
+          <h3 class="display text-3xl">Unlimited</h3>
+          <p class="mt-2 text-sm text-muted">Everything most members need, any time.</p>
+          <p class="mt-6 flex items-baseline gap-1"><span class="text-2xl font-bold">$</span><span class="display text-6xl"><span data-price data-monthly="79" data-annual="66">79</span></span><span class="text-sm text-muted">/month</span></p>
+          <p class="mt-1 text-xs text-muted" data-billing-note data-monthly-note="Billed monthly · cancel anytime" data-annual-note="Billed $790 yearly · 2 months free">Billed monthly · cancel anytime</p>
+          <ul class="mt-6 grid flex-1 gap-3 text-sm"><li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span>Open gym all hours</span></li><li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span>Unlimited classes</span></li><li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span>Both locations</span></li><li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span>Recovery suite: sauna &amp; cold plunge</span></li><li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span>1 guest pass a month</span></li></ul>
+          <a href="trial.html?plan=unlimited" class="btn btn-primary mt-8 w-full">Start with Unlimited</a>
+        </article>
+        <article class="reveal card relative flex flex-col p-7 ">
+          
+          <h3 class="display text-3xl">Elite</h3>
+          <p class="mt-2 text-sm text-muted">Unlimited plus personal coaching every month.</p>
+          <p class="mt-6 flex items-baseline gap-1"><span class="text-2xl font-bold">$</span><span class="display text-6xl"><span data-price data-monthly="129" data-annual="108">129</span></span><span class="text-sm text-muted">/month</span></p>
+          <p class="mt-1 text-xs text-muted" data-billing-note data-monthly-note="Billed monthly · cancel anytime" data-annual-note="Billed $1,290 yearly · 2 months free">Billed monthly · cancel anytime</p>
+          <ul class="mt-6 grid flex-1 gap-3 text-sm"><li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span>Everything in Unlimited</span></li><li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span>2 personal training sessions a month</span></li><li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span>Quarterly body-composition scan</span></li><li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span>Towel service &amp; private locker</span></li><li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span>4 guest passes a month</span></li></ul>
+          <a href="trial.html?plan=elite" class="btn btn-outline mt-8 w-full">Start with Elite</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="container-x pt-24" aria-labelledby="compare-title">
+      <h2 id="compare-title" class="display text-[clamp(2.4rem,5vw,3.6rem)]">Compare plans</h2>
+      <div class="reveal relative mt-8 overflow-x-auto rounded-2xl border border-line">
+        <table class="w-full min-w-[640px] border-collapse">
+          <thead class="bg-surface">
+            <tr><th scope="col" class="px-5 py-4 text-left text-xs tracking-widest text-muted uppercase">Feature</th>
+                <th scope="col" class="px-5 py-4 text-center font-bold">Off-Peak</th>
+                <th scope="col" class="px-5 py-4 text-center font-bold text-volt">Unlimited</th>
+                <th scope="col" class="px-5 py-4 text-center font-bold">Elite</th></tr>
+          </thead>
+          <tbody><tr class="border-t border-line"><th scope="row" class="px-5 py-4 text-left font-medium">Open gym</th><td class="px-5 py-4 text-center text-sm">10am–4pm, after 8pm</td><td class="px-5 py-4 text-center text-sm">All hours</td><td class="px-5 py-4 text-center text-sm">All hours</td></tr><tr class="border-t border-line"><th scope="row" class="px-5 py-4 text-left font-medium">Group classes</th><td class="px-5 py-4 text-center text-sm">4 / month</td><td class="px-5 py-4 text-center text-sm">Unlimited</td><td class="px-5 py-4 text-center text-sm">Unlimited</td></tr><tr class="border-t border-line"><th scope="row" class="px-5 py-4 text-left font-medium">Both locations</th><td class="px-5 py-4 text-center text-sm"><svg class="mx-auto size-5 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span class="sr-only">Included</span></td><td class="px-5 py-4 text-center text-sm"><svg class="mx-auto size-5 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span class="sr-only">Included</span></td><td class="px-5 py-4 text-center text-sm"><svg class="mx-auto size-5 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span class="sr-only">Included</span></td></tr><tr class="border-t border-line"><th scope="row" class="px-5 py-4 text-left font-medium">Keel app &amp; tracking</th><td class="px-5 py-4 text-center text-sm"><svg class="mx-auto size-5 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span class="sr-only">Included</span></td><td class="px-5 py-4 text-center text-sm"><svg class="mx-auto size-5 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span class="sr-only">Included</span></td><td class="px-5 py-4 text-center text-sm"><svg class="mx-auto size-5 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span class="sr-only">Included</span></td></tr><tr class="border-t border-line"><th scope="row" class="px-5 py-4 text-left font-medium">Recovery suite</th><td class="px-5 py-4 text-center text-sm"><span class="text-muted" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="px-5 py-4 text-center text-sm"><svg class="mx-auto size-5 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span class="sr-only">Included</span></td><td class="px-5 py-4 text-center text-sm"><svg class="mx-auto size-5 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span class="sr-only">Included</span></td></tr><tr class="border-t border-line"><th scope="row" class="px-5 py-4 text-left font-medium">Guest passes</th><td class="px-5 py-4 text-center text-sm">—</td><td class="px-5 py-4 text-center text-sm">1 / month</td><td class="px-5 py-4 text-center text-sm">4 / month</td></tr><tr class="border-t border-line"><th scope="row" class="px-5 py-4 text-left font-medium">Personal training</th><td class="px-5 py-4 text-center text-sm">—</td><td class="px-5 py-4 text-center text-sm">—</td><td class="px-5 py-4 text-center text-sm">2 sessions / month</td></tr><tr class="border-t border-line"><th scope="row" class="px-5 py-4 text-left font-medium">Body-composition scan</th><td class="px-5 py-4 text-center text-sm"><span class="text-muted" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="px-5 py-4 text-center text-sm"><span class="text-muted" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="px-5 py-4 text-center text-sm">Quarterly</td></tr><tr class="border-t border-line"><th scope="row" class="px-5 py-4 text-left font-medium">Towel service &amp; locker</th><td class="px-5 py-4 text-center text-sm"><span class="text-muted" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="px-5 py-4 text-center text-sm"><span class="text-muted" aria-hidden="true">—</span><span class="sr-only">Not included</span></td><td class="px-5 py-4 text-center text-sm"><svg class="mx-auto size-5 text-volt" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="m4 10 4 4 8-8"/></svg><span class="sr-only">Included</span></td></tr></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="container-x pt-24" aria-labelledby="addons-title">
+      <h2 id="addons-title" class="display text-[clamp(2.4rem,5vw,3.6rem)]">Add-ons</h2>
+      <div class="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4"><div class="reveal card flex flex-col p-6"><h3 class="font-bold">Personal training pack</h3><p class="mt-2 flex-1 text-sm text-muted">4 one-to-one sessions with the coach of your choice.</p><p class="display mt-5 text-3xl text-volt">$240</p></div><div class="reveal card flex flex-col p-6"><h3 class="font-bold">Nutrition coaching</h3><p class="mt-2 flex-1 text-sm text-muted">Monthly check-ins with Chloe, our registered dietitian.</p><p class="display mt-5 text-3xl text-volt">$59/mo</p></div><div class="reveal card flex flex-col p-6"><h3 class="font-bold">Transform 12</h3><p class="mt-2 flex-1 text-sm text-muted">12-week coached program with scans and a meal plan.</p><p class="display mt-5 text-3xl text-volt">$349</p></div><div class="reveal card flex flex-col p-6"><h3 class="font-bold">Towel & locker</h3><p class="mt-2 flex-1 text-sm text-muted">Fresh towels and a private locker at your home club.</p><p class="display mt-5 text-3xl text-volt">$15/mo</p></div></div>
+    </section>
+
+    <section id="calculator" class="container-x pt-24" aria-labelledby="calc-title">
+      <div class="card overflow-hidden">
+        <div class="grid lg:grid-cols-[1.1fr_1fr]">
+          <form class="p-6 sm:p-10" novalidate data-calc>
+            <p class="eyebrow">Free tool</p>
+            <h2 id="calc-title" class="display mt-4 text-[clamp(2.2rem,4.5vw,3.4rem)]">BMI &amp; calorie calculator</h2>
+            <p class="mt-3 text-sm text-muted">Get a quick estimate of your body-mass index and daily energy needs (Mifflin-St Jeor equation).</p>
+            <fieldset class="mt-8">
+              <legend class="label">Units</legend>
+              <div class="flex gap-2">
+                <label class="option-card flex-1 py-2.5! text-center text-sm font-semibold"><input class="sr-only" type="radio" name="units" value="metric"> Metric (cm, kg)</label>
+                <label class="option-card flex-1 py-2.5! text-center text-sm font-semibold"><input class="sr-only" type="radio" name="units" value="imperial" checked> Imperial (in, lb)</label>
+              </div>
+            </fieldset>
+            <div class="mt-6 grid gap-5 sm:grid-cols-2">
+              <div><label class="label" for="c-height"><span data-unit-label="height">Height (in)</span></label><input class="field" id="c-height" name="height" type="number" inputmode="decimal" min="20" max="100" step="any" required placeholder="69"></div>
+              <div><label class="label" for="c-weight"><span data-unit-label="weight">Weight (lb)</span></label><input class="field" id="c-weight" name="weight" type="number" inputmode="decimal" min="44" max="880" step="any" required placeholder="160"></div>
+              <div><label class="label" for="c-age">Age</label><input class="field" id="c-age" name="age" type="number" inputmode="numeric" min="14" max="100" required placeholder="32"></div>
+              <div><label class="label" for="c-sex">Sex</label><select class="field" id="c-sex" name="sex"><option value="female">Female</option><option value="male">Male</option></select></div>
+              <div class="sm:col-span-2"><label class="label" for="c-activity">Activity level</label><select class="field" id="c-activity" name="activity"><option value="1.2">Mostly sitting (desk job, little exercise)</option><option value="1.375">Lightly active (1–3 workouts a week)</option><option value="1.55" selected>Active (3–5 workouts a week)</option><option value="1.725">Very active (6–7 hard workouts a week)</option></select></div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg mt-8 w-full sm:w-auto">Calculate</button>
+          </form>
+          <div class="border-t border-line bg-raised p-6 sm:p-10 lg:border-t-0 lg:border-l" aria-live="polite" data-calc-result>
+            <p class="text-xs font-bold tracking-widest text-muted uppercase">Your results</p>
+            <div data-calc-empty>
+              <p class="mt-4 text-muted">Fill in the form to see your BMI, resting metabolic rate and daily calorie needs.</p>
+              <svg class="mx-auto mt-10 w-full max-w-xs opacity-60" viewBox="0 0 240 140" aria-hidden="true">
+                <path d="M20 120a100 100 0 0 1 200 0" fill="none" stroke="#2a2e33" stroke-width="18" stroke-linecap="round"/>
+                <path d="M20 120a100 100 0 0 1 58-91" fill="none" stroke="#3ad6ff" stroke-width="18" stroke-linecap="round"/>
+                <path d="M86 25a100 100 0 0 1 70 2" fill="none" stroke="#c8ff2e" stroke-width="18"/>
+                <path d="M164 31a100 100 0 0 1 56 89" fill="none" stroke="#ff5a36" stroke-width="18" stroke-linecap="round"/>
+                <path d="M120 120 150 52" stroke="#f3f4f1" stroke-width="5" stroke-linecap="round"/><circle cx="120" cy="120" r="10" fill="#f3f4f1"/>
+              </svg>
+            </div>
+            <div class="mt-6" hidden data-calc-output>
+              <dl class="grid gap-6">
+                <div><dt class="text-sm text-muted">Body-mass index</dt><dd class="mt-1 flex flex-wrap items-baseline gap-3"><span class="display text-6xl" data-out="bmi">0</span><span class="badge bg-volt/15 text-volt" data-out="category"></span></dd></div>
+                <div>
+                  <div class="relative h-3 overflow-hidden rounded-full bg-[linear-gradient(90deg,#3ad6ff_0_18%,#c8ff2e_18%_50%,#ffd23e_50%_70%,#ff5a36_70%)]" aria-hidden="true">
+                    <span class="absolute top-1/2 size-5 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-bg bg-ink" data-out="marker" style="left:0"></span>
+                  </div>
+                  <p class="mt-2 flex justify-between text-[11px] text-muted" aria-hidden="true"><span>15</span><span>18.5</span><span>25</span><span>30</span><span>40</span></p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="rounded-xl border border-line p-4"><dt class="text-sm text-muted">Resting (BMR)</dt><dd class="display mt-1 text-3xl"><span data-out="bmr">0</span> <span class="font-sans text-sm text-muted">kcal</span></dd></div>
+                  <div class="rounded-xl border border-line p-4"><dt class="text-sm text-muted">Maintenance</dt><dd class="display mt-1 text-3xl text-volt"><span data-out="tdee">0</span> <span class="font-sans text-sm text-muted">kcal</span></dd></div>
+                  <div class="rounded-xl border border-line p-4"><dt class="text-sm text-muted">Fat loss</dt><dd class="display mt-1 text-3xl"><span data-out="cut">0</span> <span class="font-sans text-sm text-muted">kcal</span></dd></div>
+                  <div class="rounded-xl border border-line p-4"><dt class="text-sm text-muted">Muscle gain</dt><dd class="display mt-1 text-3xl"><span data-out="bulk">0</span> <span class="font-sans text-sm text-muted">kcal</span></dd></div>
+                </div>
+              </dl>
+              <p class="mt-6 text-xs leading-relaxed text-muted">Estimates only, not medical advice. BMI doesn't account for muscle mass, so strong athletes often score "overweight". Book a body-composition scan for a better picture.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-x pt-24" aria-labelledby="faq-title">
+      <div class="grid gap-10 lg:grid-cols-[1fr_1.6fr]">
+        <div>
+          <h2 id="faq-title" class="display text-[clamp(2.4rem,5vw,3.6rem)]">Membership FAQ</h2>
+          <p class="mt-4 text-muted">Something else? <a class="text-volt underline" href="contact.html">Get in touch</a> and we'll reply within a day.</p>
+        </div>
+        <div class="border-t border-line"><details class="faq border-b border-line py-5"><summary class="flex items-center justify-between gap-4 text-lg font-semibold">Is there a joining fee?<span class="plus text-3xl font-light text-volt" aria-hidden="true">+</span></summary><p class="mt-3 text-muted">No. You pay your first month (or year) and that's it.</p></details><details class="faq border-b border-line py-5"><summary class="flex items-center justify-between gap-4 text-lg font-semibold">Can I freeze my membership?<span class="plus text-3xl font-light text-volt" aria-hidden="true">+</span></summary><p class="mt-3 text-muted">Yes. Freeze for up to three months a year for injury, travel or life in general, free of charge.</p></details><details class="faq border-b border-line py-5"><summary class="flex items-center justify-between gap-4 text-lg font-semibold">How do I cancel?<span class="plus text-3xl font-light text-volt" aria-hidden="true">+</span></summary><p class="mt-3 text-muted">Monthly plans can be canceled any time from the Keel app with 30 days' notice. Annual plans can be refunded pro rata in the first 30 days.</p></details><details class="faq border-b border-line py-5"><summary class="flex items-center justify-between gap-4 text-lg font-semibold">Can I switch plans later?<span class="plus text-3xl font-light text-volt" aria-hidden="true">+</span></summary><p class="mt-3 text-muted">Any time. Upgrades apply immediately; downgrades start at your next billing date.</p></details><details class="faq border-b border-line py-5"><summary class="flex items-center justify-between gap-4 text-lg font-semibold">Do you offer student or corporate rates?<span class="plus text-3xl font-light text-volt" aria-hidden="true">+</span></summary><p class="mt-3 text-muted">Students and healthcare workers get 15% off any plan. We also have corporate packages for teams of five or more. Ask at the front desk.</p></details></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="mt-28 border-t border-line">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.4fr]">
+      <div>
+        <a href="index.html" class="flex items-center gap-2.5"><svg class="size-8 shrink-0" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#c8ff2e"/><path d="M9 7h5v6.5L19.5 7h6L18 15.5 26 25h-6l-6-7.2V25H9Z" fill="#0a0b0c"/></svg><span class="display text-2xl">Keel</span></a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-muted">Coached strength, conditioning and recovery for people who want to train with purpose. Two clubs, one community.</p>
+        <ul class="mt-6 grid gap-3 text-sm"><li><span class="block font-semibold">Keel Harbor</span><span class="text-muted" data-open-status="harbor">Mon–Fri 5:30am–10pm</span></li><li><span class="block font-semibold">Keel Northgate</span><span class="text-muted" data-open-status="northgate">Mon–Fri 6am–9pm</span></li></ul>
+      </div>
+      <div>
+        <h2 class="text-xs font-bold tracking-[.2em] text-muted uppercase">Train</h2>
+        <ul class="mt-4 grid gap-2.5 text-sm">
+          <li><a class="hover:text-volt" href="classes.html">Schedule</a></li>
+          <li><a class="hover:text-volt" href="class.html?type=strength">Strength Lab</a></li>
+          <li><a class="hover:text-volt" href="class.html?type=ignite">Ignite HIIT</a></li>
+          <li><a class="hover:text-volt" href="class.html?type=box">Box &amp; Burn</a></li>
+          <li><a class="hover:text-volt" href="membership.html#calculator">BMI &amp; calorie calculator</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-xs font-bold tracking-[.2em] text-muted uppercase">Club</h2>
+        <ul class="mt-4 grid gap-2.5 text-sm">
+          <li><a class="hover:text-volt" href="trainers.html">Coaches</a></li>
+          <li><a class="hover:text-volt" href="membership.html">Membership</a></li>
+          <li><a class="hover:text-volt" href="trial.html">Free trial</a></li>
+          <li><a class="hover:text-volt" href="contact.html">Locations &amp; contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-xs font-bold tracking-[.2em] text-muted uppercase">Weekly programming, in your inbox</h2>
+        <form class="mt-4" novalidate data-validate>
+          <!-- Demo form: connect it to your email provider in assets/js/main.js (see onValid). -->
+          <div class="flex gap-2">
+            <div class="min-w-0 flex-1">
+              <label for="news-email" class="sr-only">Email address</label>
+              <input id="news-email" name="email" type="email" class="field" placeholder="you@example.com" autocomplete="email" required>
+            </div>
+            <button class="btn btn-primary" type="submit">Join</button>
+          </div>
+          <p class="mt-3 hidden text-sm text-volt" data-success role="status">You're on the list. Look out for a confirmation email; once you click the link, our weekly programming lands in your inbox.</p>
+        </form>
+        <ul class="mt-6 flex gap-3" aria-label="Social media">
+          <li><a href="#" class="grid size-10 place-items-center rounded-md border border-line hover:border-volt hover:text-volt" aria-label="Instagram"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a></li>
+          <li><a href="#" class="grid size-10 place-items-center rounded-md border border-line hover:border-volt hover:text-volt" aria-label="YouTube"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z" fill="currentColor"/></svg></a></li>
+          <li><a href="#" class="grid size-10 place-items-center rounded-md border border-line hover:border-volt hover:text-volt" aria-label="Strava"><svg class="size-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 2 4 14h4l2-4 2 4h4Zm5 12-2 4-2-4H9l4 8 4-8Z"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-x flex flex-wrap justify-between gap-3 border-t border-line py-6 text-xs text-muted">
+      <p>© <span data-year>2026</span> Keel Athletic Club. All rights reserved.</p>
+      <p><a class="hover:text-ink" href="#">Privacy</a> · <a class="hover:text-ink" href="#">Terms</a> · <a class="hover:text-ink" href="#">Accessibility</a></p>
+    </div>
+  </footer>
+
+  <div class="toast" role="status" aria-live="polite" data-toast></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

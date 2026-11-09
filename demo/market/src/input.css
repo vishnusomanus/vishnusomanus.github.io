@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+/* Kiln & Co. brand tokens. Change these to re-skin the whole store. */
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, "Times New Roman", serif;
+
+  --color-paper: #f6f1ea;   /* page background */
+  --color-sand: #ebe3d6;    /* panels */
+  --color-oat: #e2d7c6;     /* deeper panels */
+  --color-line: #d9cebd;    /* borders */
+  --color-ink: #1f1c19;     /* text */
+  --color-stone: #645d54;   /* muted text */
+  --color-clay: #a1441d;    /* accent */
+  --color-clay-dark: #7f3414;
+  --color-moss: #56653f;    /* secondary accent */
+  --color-cream: #fbf8f3;
+
+  --ease-soft: cubic-bezier(.2, .7, .2, 1);
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  body { @apply bg-paper text-ink font-sans antialiased; }
+  ::selection { background: var(--color-clay); color: #fff; }
+  :focus-visible { outline: 2px solid var(--color-clay); outline-offset: 3px; border-radius: 2px; }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; }
+  input[type="number"] { -moz-appearance: textfield; }
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-medium tracking-wide transition duration-300 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+
+  .btn-primary { @apply btn bg-ink text-cream hover:bg-clay; }
+  .btn-accent { @apply btn bg-clay text-white hover:bg-clay-dark; }
+  .btn-outline { @apply btn border border-ink/80 text-ink hover:bg-ink hover:text-cream; }
+  .btn-light { @apply btn bg-cream text-ink hover:bg-white; }
+
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.2em] text-clay; }
+  .link-underline {
+    @apply bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_1px] bg-left-bottom bg-no-repeat pb-0.5 transition-[background-size] duration-300 hover:bg-[length:100%_1px];
+  }
+
+  .field-label { @apply mb-1.5 block text-sm font-medium text-ink; }
+  .field {
+    @apply w-full rounded-lg border border-line bg-cream px-4 py-3 text-[15px] text-ink placeholder:text-stone/70 transition focus:border-ink focus:outline-none focus:ring-2 focus:ring-ink/10;
+  }
+  .field[aria-invalid="true"] { @apply border-clay ring-2 ring-clay/15; }
+  .field-error { @apply mt-1.5 text-sm text-clay; }
+  .field-error:empty { display: none; }
+  .on-dark .field-error { color: #ffc9ad; }
+
+  .chip { @apply inline-flex items-center rounded-full border border-line px-3 py-1 text-xs font-medium text-stone; }
+
+  .art svg { display: block; width: 100%; height: 100%; }
+}
+
+/* Scroll reveal — only hidden when JS is running and motion is allowed. */
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .8s var(--ease-soft), transform .8s var(--ease-soft); }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Cart drawer & toast states, toggled by main.js */
+.drawer-open { overflow: hidden; }
+@keyframes badge-pop { 0% { transform: scale(1); } 40% { transform: scale(1.35); } 100% { transform: scale(1); } }
+.badge-pop { animation: badge-pop .45s var(--ease-soft); }
+
+/* Back to top button (created by assets/js/main.js). Remove this block to drop it. */
+@layer components {
+  .back-to-top {
+    position: fixed; z-index: 40;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px) + var(--btt-lift, 0px));
+    display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; cursor: pointer;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, bottom .25s ease, visibility 0s linear .25s,
+      background-color .2s, color .2s, border-color .2s, box-shadow .2s;
+    border-radius: 999px; border: 0;
+    background: var(--color-ink); color: var(--color-cream);
+    box-shadow: 0 12px 28px -14px rgb(31 28 25 / .55);
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; transition: transform .2s ease; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top.is-visible:hover svg { transform: translateY(-2px); }
+  .back-to-top:active { transform: translateY(1px); }
+  .back-to-top:hover { background: var(--color-clay); }
+  .back-to-top:focus-visible { outline: 2px solid var(--color-clay); outline-offset: 3px; }
+  .back-to-top-target:focus { outline: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top, .back-to-top svg { transition: opacity .01s linear, visibility 0s linear; transform: none !important; }
+  }
+  @media print { .back-to-top { display: none !important; } }
+}

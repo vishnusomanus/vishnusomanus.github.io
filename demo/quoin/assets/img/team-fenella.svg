@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" fill="none">
+  <rect width="400" height="300" fill="#e9e4d8"/>
+  <!-- pegboard with tools, workbench and a door panel -->
+  <rect x="0" y="0" width="400" height="190" fill="#ddd3bd"/>
+  <g fill="#c7bba0"><circle cx="30" cy="30" r="2"/><circle cx="60" cy="30" r="2"/><circle cx="90" cy="30" r="2"/><circle cx="310" cy="30" r="2"/><circle cx="340" cy="30" r="2"/><circle cx="370" cy="30" r="2"/><circle cx="30" cy="60" r="2"/><circle cx="60" cy="60" r="2"/><circle cx="90" cy="60" r="2"/><circle cx="310" cy="60" r="2"/><circle cx="340" cy="60" r="2"/><circle cx="370" cy="60" r="2"/></g>
+  <g stroke="#514f3f" stroke-width="2" stroke-linejoin="round">
+    <path d="M30 40h44v12H30z" fill="#9c7650"/><path d="M38 52v34" /><path d="M64 52l8 30h-16z" fill="#737d78"/>
+    <path d="M322 34h10v60h-10z" fill="#b7976d"/><path d="M318 94h18v12h-18z" fill="#3d3a30"/>
+    <path d="M350 40h30l-4 50h-22z" fill="#c4a463"/>
+  </g>
+  <path d="M0 190h400v12H0z" fill="#9c7650"/>
+  <path d="M286 60h96v130h-96z" fill="#b7976d" stroke="#514f3f" stroke-width="2"/><path d="M298 72h32v50h-32zm40 0h32v50h-32zm-40 60h32v46h-32zm40 0h32v46h-32z" fill="#c9ab80" stroke="#7a5b3c"/>
+  <!-- body: rust shirt and canvas apron -->
+  <path d="M96 300q4-102 104-110 100 8 104 110z" fill="#7e4035"/>
+  <path d="M150 300l6-96q44 12 88 0l6 96z" fill="#c9b48a"/>
+  <path d="M156 204l-4-14m92 14 4-14" stroke="#a8936a" stroke-width="4"/>
+  <path d="M176 242h48v28h-48z" fill="#b9a479" stroke="#a8936a"/>
+  <!-- arms folded -->
+  <path d="M108 252q50-18 112 2 18 8 10 22-56-18-118 2z" fill="#6c372e"/>
+  <path d="M292 252q-50-18-112 2-14 8-6 22 56-18 116-2z" fill="#7e4035"/>
+  <ellipse cx="226" cy="266" rx="16" ry="10" fill="#e0b494"/><ellipse cx="174" cy="268" rx="14" ry="10" fill="#e0b494"/>
+  <!-- soft brush in the hand -->
+  <path d="M232 262l46-24" stroke="#9c7650" stroke-width="6" stroke-linecap="round"/><path d="M276 230l16-8 6 12-16 8z" fill="#efe5cf" stroke="#7a705c"/>
+  <!-- neck and head, facing forward -->
+  <path d="M184 168h32v30q-16 10-32 0z" fill="#d6a586"/>
+  <ellipse cx="200" cy="120" rx="44" ry="52" fill="#e0b494"/>
+  <ellipse cx="156" cy="124" rx="7" ry="11" fill="#d6a586"/><ellipse cx="244" cy="124" rx="7" ry="11" fill="#d6a586"/>
+  <!-- short gray curls -->
+  <g fill="#a3a49a">
+    <circle cx="162" cy="92" r="16"/><circle cx="178" cy="74" r="17"/><circle cx="200" cy="68" r="18"/><circle cx="222" cy="74" r="17"/><circle cx="238" cy="92" r="16"/><circle cx="152" cy="110" r="10"/><circle cx="248" cy="110" r="10"/><circle cx="190" cy="84" r="10"/><circle cx="212" cy="86" r="10"/>
+  </g>
+  <g stroke="#8a8b80" stroke-width="1.5"><path d="M170 80q6-6 12 0m10-10q6-6 12 0m10 4q6-6 12 0m-56 22q6-6 12 0m50-2q6-6 12 0"/></g>
+  <!-- open eyes, brows, smile with laugh lines -->
+  <path d="M172 112q10-6 20-1m16-1q10-5 20 1" stroke="#7d7a70" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="182" cy="124" rx="5" ry="5.5" fill="#fff"/><ellipse cx="218" cy="124" rx="5" ry="5.5" fill="#fff"/>
+  <circle cx="183" cy="125" r="3.2" fill="#3f5a4a"/><circle cx="219" cy="125" r="3.2" fill="#3f5a4a"/>
+  <circle cx="184" cy="124" r="1" fill="#fff"/><circle cx="220" cy="124" r="1" fill="#fff"/>
+  <path d="M170 128l-6 4m66-4 6 4" stroke="#c48d6d" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M200 128v16q-4 3-8 1" stroke="#c48d6d" stroke-width="2" stroke-linecap="round"/>
+  <path d="M184 152q16 12 32 0q-16 4-32 0z" fill="#9c4a3c"/>
+  <circle cx="172" cy="144" r="7" fill="#e8a08a" opacity=".45"/><circle cx="228" cy="144" r="7" fill="#e8a08a" opacity=".45"/>
+</svg>

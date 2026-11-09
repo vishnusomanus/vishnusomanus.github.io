@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Quietest Room on Earth (S4 E62) — Overtone</title>
+  <meta name="description" content="Sven builds rooms that swallow 99.99% of sound. We spend twenty minutes inside one, then ask him what silence actually does to a person.">
+  <meta name="theme-color" content="#0e0c13">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Overtone">
+  <meta property="og:title" content="The Quietest Room on Earth (S4 E62) — Overtone">
+  <meta property="og:description" content="Sven builds rooms that swallow 99.99% of sound. We spend twenty minutes inside one, then ask him what silence actually does to a person.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Schibsted+Grotesk:ital,wght@0,400..800;1,400..600&amp;family=Syne:wght@600..800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="episode" class="grain flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[80] rounded-full bg-paper px-5 py-3 text-sm font-semibold text-night focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 border-b border-transparent transition-colors duration-300">
+    <div class="container-x flex h-[4.5rem] items-center justify-between gap-6">
+      <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Overtone home">
+        <svg viewBox="0 0 32 32" class="h-8 w-8 shrink-0" aria-hidden="true"><circle cx="10" cy="16" r="6" fill="#b9a4ff"/><path d="M18.5 9.5a9 9 0 0 1 0 13" fill="none" stroke="#f4efe6" stroke-width="2.6" stroke-linecap="round"/><path d="M23.5 5.5a15 15 0 0 1 0 21" fill="none" stroke="#ff6b4a" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <span class="font-display text-[1.45rem] font-extrabold tracking-[-0.04em]">overtone</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1">
+          <li><a href="episodes.html" class="nav-link" aria-current="page">Episodes</a></li>
+          <li><a href="hosts.html" class="nav-link">Hosts</a></li>
+          <li><a href="sponsor.html" class="nav-link">Advertise</a></li>
+          <li><a href="guest.html" class="nav-link">Be a guest</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="episode.html?id=62" data-latest-link class="nav-link hidden items-center gap-2 sm:inline-flex"><span class="h-2 w-2 rounded-full bg-tomato" aria-hidden="true"></span>New episode</a>
+        <a href="subscribe.html" class="btn-primary hidden sm:inline-flex">Subscribe</a>
+        <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-full border border-line bg-ink-800 text-paper lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 9h16M4 15h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-line bg-night lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-10">
+        <ul>
+          <li><a href="index.html" class="mobile-link">Home<svg viewBox="0 0 20 20" class="h-5 w-5 text-subtle" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="episodes.html" class="mobile-link" aria-current="page">Episodes<svg viewBox="0 0 20 20" class="h-5 w-5 text-subtle" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="hosts.html" class="mobile-link">Hosts<svg viewBox="0 0 20 20" class="h-5 w-5 text-subtle" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="sponsor.html" class="mobile-link">Advertise<svg viewBox="0 0 20 20" class="h-5 w-5 text-subtle" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="guest.html" class="mobile-link">Be a guest<svg viewBox="0 0 20 20" class="h-5 w-5 text-subtle" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="subscribe.html" class="mobile-link">Subscribe<svg viewBox="0 0 20 20" class="h-5 w-5 text-subtle" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+        </ul>
+        <a href="episode.html?id=62" data-latest-link class="btn-primary btn-lg mt-8 w-full"><span class="h-2 w-2 rounded-full bg-tomato" aria-hidden="true"></span>Play the new episode</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <div data-episode-page>
+      <!-- Episode header and player -->
+      <section class="relative overflow-hidden border-b border-line">
+        <div class="pointer-events-none absolute inset-0" data-ep-glow aria-hidden="true"></div>
+        <div class="container-x relative pt-8 pb-12 sm:pt-12 sm:pb-16">
+          <nav aria-label="Breadcrumb">
+            <ol class="meta flex flex-wrap items-center gap-2">
+              <li><a href="episodes.html" class="transition hover:text-paper">Episodes</a></li>
+              <li aria-hidden="true">/</li>
+              <li><span aria-current="page" class="text-muted" data-ep-crumb>S4 · E62</span></li>
+            </ol>
+          </nav>
+          <div class="mt-8 grid items-end gap-8 md:grid-cols-[15rem_minmax(0,1fr)] lg:grid-cols-[19rem_minmax(0,1fr)] lg:gap-12">
+            <div class="cover w-full max-w-[15rem] rounded-[1.75rem] md:max-w-[19rem] shadow-[0_40px_80px_-30px_rgba(0,0,0,.9)]" data-ep-cover></div>
+            <div class="min-w-0">
+              <p class="meta flex flex-wrap items-center gap-x-4 gap-y-1" data-ep-kicker>Season 4 · Episode 62 · Sound</p>
+              <h1 class="h-page mt-4" data-ep-title>The Quietest Room on Earth</h1>
+              <p class="lead mt-4" data-ep-guestline>with Sven Aaltonen, anechoic chamber engineer</p>
+              <p class="meta mt-3" data-ep-meta>Oct 7, 2026 · 58 min</p>
+            </div>
+          </div>
+
+          <div id="episode-player" class="panel mt-10 p-4 sm:p-7" role="region" aria-label="Episode player" data-player-ui="62" data-chapter-marks>
+            <p id="start-note" class="mb-5 inline-flex items-center gap-2 rounded-full bg-sun/15 px-3.5 py-1.5 text-sm font-semibold text-sun" role="status" hidden></p>
+            <div class="flex items-center justify-between gap-4">
+              <p class="min-w-0 truncate text-sm text-muted"><span class="meta mr-2 text-lilac">Now</span><span data-now-chapter>Cold open</span></p>
+              <p class="shrink-0 font-mono text-sm text-subtle tabular-nums"><span class="text-paper" data-cur>0:00</span> / <span data-dur>57:56</span></p>
+            </div>
+            <div class="wave wave-lg mt-4" data-wave></div>
+            <div class="mt-8 flex flex-wrap items-center justify-between gap-4">
+              <div class="order-2 flex items-center gap-1 sm:order-1">
+                <button type="button" class="btn-icon w-auto px-3 font-mono text-sm" data-act="rate" aria-label="Playback speed: 1×">1×</button>
+                <button type="button" class="btn-icon" data-act="mute" aria-label="Mute" aria-pressed="false" aria-keyshortcuts="M"><svg data-icon-vol viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg><svg data-icon-muted viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="m16 9.5 5 5M21 9.5l-5 5"/></svg></button>
+                <input type="range" class="range hidden w-24 sm:block" min="0" max="100" step="5" value="90" data-vol aria-label="Volume">
+              </div>
+              <div class="order-1 flex w-full items-center justify-center gap-4 sm:order-2 sm:w-auto sm:gap-6">
+                <button type="button" class="btn-icon h-12 w-12" data-act="back" aria-label="Back 15 seconds" aria-keyshortcuts="ArrowLeft"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3"/><path d="M4 3.5v3.7h3.7"/><text x="12" y="15.2" text-anchor="middle" font-size="7" font-weight="600" fill="currentColor" stroke="none" font-family="DM Mono, monospace">15</text></svg></button>
+                <button type="button" class="btn-play h-[4.5rem] w-[4.5rem]" data-act="toggle" aria-label="Play" aria-keyshortcuts="Space"><svg data-icon-play viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.8v14.4a1 1 0 0 0 1.5.86l12-7.2a1 1 0 0 0 0-1.72l-12-7.2A1 1 0 0 0 7 4.8z"/></svg><svg data-icon-pause viewBox="0 0 24 24" fill="currentColor" class="hidden" aria-hidden="true"><rect x="5.5" y="4" width="4.5" height="16" rx="1.4"/><rect x="14" y="4" width="4.5" height="16" rx="1.4"/></svg></button>
+                <button type="button" class="btn-icon h-12 w-12" data-act="fwd" aria-label="Forward 15 seconds" aria-keyshortcuts="ArrowRight"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3"/><path d="M20 3.5v3.7h-3.7"/><text x="12" y="15.2" text-anchor="middle" font-size="7" font-weight="600" fill="currentColor" stroke="none" font-family="DM Mono, monospace">15</text></svg></button>
+              </div>
+              <div class="order-3 flex items-center gap-2">
+                <details class="group relative">
+                  <summary class="inline-flex h-10 items-center gap-2 rounded-full px-3 text-sm text-muted transition hover:bg-ink-700 hover:text-paper"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="6" width="19" height="12" rx="2.5"/><path d="M6 10h1M10 10h1M14 10h1M18 10h0M8 14h8" stroke-linecap="round"/></svg>Shortcuts</summary>
+                  <div class="absolute right-0 bottom-full z-20 mb-3 w-72 rounded-2xl border border-line bg-ink-800 p-4 text-sm shadow-2xl">
+                    <p class="font-semibold">Keyboard shortcuts</p>
+                    <dl class="mt-3 grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 text-muted">
+                      <dt><kbd class="kbd">Space</kbd> <kbd class="kbd">K</kbd></dt><dd>Play or pause</dd>
+                      <dt><kbd class="kbd">←</kbd> <kbd class="kbd">→</kbd></dt><dd>Back or forward 15 s</dd>
+                      <dt><kbd class="kbd">J</kbd> <kbd class="kbd">L</kbd></dt><dd>Back or forward 15 s</dd>
+                      <dt><kbd class="kbd">↑</kbd> <kbd class="kbd">↓</kbd></dt><dd>Volume</dd>
+                      <dt><kbd class="kbd">M</kbd></dt><dd>Mute</dd>
+                    </dl>
+                    <p class="mt-3 text-xs text-subtle">On the waveform, arrows move 5 s and Home/End jump to the ends. K, J, L and M work anywhere on this page.</p>
+                  </div>
+                </details>
+                <a href="#share" class="inline-flex h-10 items-center gap-2 rounded-full px-3 text-sm text-muted transition hover:bg-ink-700 hover:text-paper"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3.5M7.5 8 12 3.5 16.5 8"/><path d="M5 12.5V19a1.5 1.5 0 0 0 1.5 1.5h11A1.5 1.5 0 0 0 19 19v-6.5"/></svg>Share</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container-x mt-14 grid gap-14 lg:mt-20 lg:grid-cols-[minmax(0,1fr)_21rem] lg:gap-16">
+        <div class="min-w-0 space-y-20">
+          <section aria-labelledby="about-title" class="reveal">
+            <h2 id="about-title" class="meta">About this episode</h2>
+            <p class="mt-5 text-xl leading-relaxed text-paper sm:text-2xl" data-ep-summary>Sven builds rooms that swallow 99.99% of sound.</p>
+            <figure class="mt-10 border-l-4 border-lilac pl-6">
+              <blockquote class="font-display text-[1.65rem] leading-[1.15] font-bold tracking-[-0.02em] sm:text-4xl" data-ep-quote>“After ten minutes you hear your own blood.”</blockquote>
+              <figcaption class="meta mt-4" data-ep-quote-by>— Sven Aaltonen</figcaption>
+            </figure>
+          </section>
+
+          <section id="chapters" aria-labelledby="chapters-title" class="reveal">
+            <div class="flex items-end justify-between gap-4 border-b border-line pb-4">
+              <h2 id="chapters-title" class="font-display text-3xl font-bold tracking-[-0.02em]">Chapters</h2>
+              <p class="meta hidden sm:block">Select one to jump there</p>
+            </div>
+            <ol id="chapter-list" class="mt-3 space-y-1"></ol>
+          </section>
+
+          <section id="notes" aria-labelledby="notes-title" class="reveal">
+            <h2 id="notes-title" class="border-b border-line pb-4 font-display text-3xl font-bold tracking-[-0.02em]">Show notes</h2>
+            <div id="show-notes" class="prose-notes mt-6"></div>
+          </section>
+
+          <section id="transcript" aria-labelledby="transcript-title" class="reveal">
+            <div class="flex flex-wrap items-end justify-between gap-4 border-b border-line pb-4">
+              <h2 id="transcript-title" class="font-display text-3xl font-bold tracking-[-0.02em]">Transcript</h2>
+              <label class="flex cursor-pointer items-center gap-2.5 text-sm text-muted"><input id="transcript-follow" type="checkbox" class="check mt-0" checked>Follow along while playing</label>
+            </div>
+            <p id="transcript-note" class="mt-4 text-sm text-subtle">Select a line to play from there.</p>
+            <form id="transcript-form" class="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center" role="search" aria-label="Transcript">
+              <div class="relative w-full sm:max-w-sm">
+                <label for="transcript-search" class="sr-only">Search the transcript</label>
+                <svg viewBox="0 0 20 20" class="pointer-events-none absolute top-1/2 left-4 h-4 w-4 -translate-y-1/2 text-subtle" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="9" cy="9" r="5.5"/><path d="m13.5 13.5 3.5 3.5"/></svg>
+                <input id="transcript-search" type="search" class="field rounded-full py-2.5 pl-11" placeholder="Search the transcript" autocomplete="off">
+              </div>
+              <p id="transcript-count" class="meta" role="status" aria-live="polite"></p>
+            </form>
+            <div id="transcript-box" class="relative mt-5 max-h-[34rem] overflow-y-auto rounded-3xl border border-line bg-ink-900 p-2 sm:p-3" tabindex="0" aria-label="Transcript lines">
+              <ol id="transcript-list" class="space-y-0.5"></ol>
+              <p id="transcript-empty" class="p-6 text-center text-muted" hidden>No lines match. Try another word.</p>
+            </div>
+          </section>
+        </div>
+
+        <aside class="min-w-0 space-y-6 lg:sticky lg:top-24 lg:self-start" aria-label="Guest and sharing">
+          <section class="card p-6" aria-labelledby="guest-title">
+            <h2 id="guest-title" class="meta">Guest</h2>
+            <div class="mt-4 flex items-center gap-4">
+              <div class="h-16 w-16 shrink-0" data-guest-avatar></div>
+              <div class="min-w-0">
+                <p class="font-display text-xl leading-tight font-bold" data-guest-name>Sven Aaltonen</p>
+                <p class="text-sm text-muted" data-guest-role>Anechoic chamber engineer</p>
+              </div>
+            </div>
+            <p class="mt-4 text-[0.95rem] leading-relaxed text-muted" data-guest-bio></p>
+            <ul class="mt-4 space-y-1.5" data-guest-links></ul>
+            <a href="episodes.html" class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-paper hover:text-lilac" data-topic-link>More episodes</a>
+          </section>
+
+          <section id="share" class="card p-6" aria-labelledby="share-title">
+            <h2 id="share-title" class="meta">Share this episode</h2>
+            <label for="share-url" class="sr-only">Episode link</label>
+            <input id="share-url" type="text" readonly class="field mt-4 truncate py-2.5 font-mono text-sm" value="episode.html?id=62">
+            <label class="mt-3 flex cursor-pointer items-center gap-2.5 text-sm text-muted"><input id="share-at" type="checkbox" class="check mt-0">Start at <span class="font-mono text-paper" data-share-at>0:00</span></label>
+            <div class="mt-4 flex gap-2">
+              <button id="share-copy" type="button" class="btn-primary flex-1">
+                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8.5" y="8.5" width="11" height="11" rx="2.5"/><path d="M15.5 8.5V6a1.5 1.5 0 0 0-1.5-1.5H6A1.5 1.5 0 0 0 4.5 6v8A1.5 1.5 0 0 0 6 15.5h2.5"/></svg>Copy link</button>
+              <button type="button" class="btn-ghost" data-share-native hidden>More</button>
+            </div>
+          </section>
+
+          <section class="card p-6" aria-labelledby="listen-title">
+            <h2 id="listen-title" class="meta">Listen in your app</h2>
+            <ul class="mt-4 flex flex-wrap gap-2">
+<li><a href="subscribe.html#apple-podcasts" class="inline-flex items-center gap-2 rounded-full border border-line bg-ink-800/70 py-2 pr-4 pl-3 text-sm font-semibold text-paper transition hover:border-lilac hover:bg-ink-700"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="10" r="2.6"/><path d="M12 13.2v7.3"/><path d="M7.4 14.6a6 6 0 1 1 9.2 0"/><path d="M4.8 17.2a9.6 9.6 0 1 1 14.4 0"/></svg>Apple Podcasts</a></li>
+<li><a href="subscribe.html#spotify" class="inline-flex items-center gap-2 rounded-full border border-line bg-ink-800/70 py-2 pr-4 pl-3 text-sm font-semibold text-paper transition hover:border-lilac hover:bg-ink-700"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9.5"/><path d="M7 9.3c3.5-1 7.3-.7 10.2.9"/><path d="M7.6 12.4c2.9-.8 5.8-.5 8.3.8"/><path d="M8.3 15.4c2.2-.6 4.3-.4 6.2.6"/></svg>Spotify</a></li>
+<li><a href="subscribe.html#youtube" class="inline-flex items-center gap-2 rounded-full border border-line bg-ink-800/70 py-2 pr-4 pl-3 text-sm font-semibold text-paper transition hover:border-lilac hover:bg-ink-700"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="4"/><path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor"/></svg>YouTube</a></li>
+<li><a href="subscribe.html#rss" class="inline-flex items-center gap-2 rounded-full border border-line bg-ink-800/70 py-2 pr-4 pl-3 text-sm font-semibold text-paper transition hover:border-lilac hover:bg-ink-700"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><path d="M5 4.5a14.5 14.5 0 0 1 14.5 14.5"/><path d="M5 10.5a8.5 8.5 0 0 1 8.5 8.5"/><circle cx="6" cy="18" r="1.6" fill="currentColor" stroke="none"/></svg>RSS feed</a></li>
+            </ul>
+          </section>
+        </aside>
+      </div>
+
+      <section class="container-x mt-24" aria-labelledby="related-title">
+        <div class="flex flex-wrap items-end justify-between gap-4 border-b border-line pb-5">
+          <h2 id="related-title" class="h-section" data-related-title>More on sound</h2>
+          <a href="episodes.html" class="btn-ghost" data-topic-link>More episodes</a>
+        </div>
+        <ul id="related-list" class="mt-10 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3"></ul>
+      </section>
+    </div>
+
+    <template id="episode-missing">
+      <section class="container-x py-24 text-center sm:py-32">
+        <p class="eyebrow justify-center">Episode not found</p>
+        <h1 class="h-page mx-auto mt-6 max-w-3xl">That episode isn’t in the archive.</h1>
+        <p class="lead mx-auto mt-6 max-w-xl">The link may have a typo, or the episode number doesn’t exist yet. Every episode we’ve made is on the episodes page.</p>
+        <div class="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+          <a href="episodes.html" class="btn-primary btn-lg">Browse all episodes</a>
+          <a href="episode.html" class="btn-ghost btn-lg">Play the latest episode</a>
+        </div>
+      </section>
+    </template>
+  </main>
+  <footer class="relative mt-24 overflow-hidden border-t border-line bg-ink-900">
+    <div class="container-x pt-16 pb-10">
+      <div class="grid gap-12 lg:grid-cols-[1.3fr_2fr]">
+        <div>
+          <a href="index.html" class="inline-flex items-center gap-2.5" aria-label="Overtone home"><svg viewBox="0 0 32 32" class="h-8 w-8 shrink-0" aria-hidden="true"><circle cx="10" cy="16" r="6" fill="#b9a4ff"/><path d="M18.5 9.5a9 9 0 0 1 0 13" fill="none" stroke="#f4efe6" stroke-width="2.6" stroke-linecap="round"/><path d="M23.5 5.5a15 15 0 0 1 0 21" fill="none" stroke="#ff6b4a" stroke-width="2.6" stroke-linecap="round"/></svg><span class="font-display text-2xl font-extrabold tracking-[-0.04em]">overtone</span></a>
+          <p class="mt-4 max-w-sm text-muted">Long conversations with people who make things. A new episode every other Wednesday, recorded in a former piano workshop in Philadelphia.</p>
+          <p class="mt-6 inline-flex items-center gap-2 rounded-full border border-line px-3.5 py-1.5 text-sm text-muted"><span class="h-2 w-2 rounded-full bg-mint" aria-hidden="true"></span>Season 4 is out now</p>
+        </div>
+        <div class="grid grid-cols-2 gap-10 sm:grid-cols-3">
+        <div>
+          <h2 class="meta">The show</h2>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="episodes.html" class="text-muted transition hover:text-paper">All episodes</a></li>
+            <li><a href="episode.html?id=62" class="text-muted transition hover:text-paper">Latest episode</a></li>
+            <li><a href="hosts.html" class="text-muted transition hover:text-paper">Hosts &amp; story</a></li>
+            <li><a href="subscribe.html" class="text-muted transition hover:text-paper">Subscribe</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="meta">Work with us</h2>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="sponsor.html" class="text-muted transition hover:text-paper">Advertise</a></li>
+            <li><a href="guest.html" class="text-muted transition hover:text-paper">Be a guest</a></li>
+            <li><a href="hosts.html#press" class="text-muted transition hover:text-paper">Press</a></li>
+            <li><a href="mailto:hello@overtone.example" class="text-muted transition hover:text-paper">hello@overtone.example</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="meta">Listen on</h2>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="subscribe.html#apple-podcasts" class="text-muted transition hover:text-paper">Apple Podcasts</a></li>
+            <li><a href="subscribe.html#spotify" class="text-muted transition hover:text-paper">Spotify</a></li>
+            <li><a href="subscribe.html#youtube" class="text-muted transition hover:text-paper">YouTube</a></li>
+            <li><a href="subscribe.html#pocket-casts" class="text-muted transition hover:text-paper">Pocket Casts</a></li>
+            <li><a href="subscribe.html#overcast" class="text-muted transition hover:text-paper">Overcast</a></li>
+            <li><a href="subscribe.html#rss" class="text-muted transition hover:text-paper">RSS feed</a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+      <p class="display outline-text mt-16 text-[clamp(2.5rem,12.4vw,10rem)] leading-[0.8] whitespace-nowrap select-none" aria-hidden="true">overtone</p>
+      <div class="mt-10 flex flex-col gap-3 border-t border-line pt-6 text-sm text-subtle sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Overtone Media. An independent podcast.</p>
+        <p>Made with two microphones and a lot of tea.</p>
+      </div>
+    </div>
+  </footer>
+  <section id="mini-player" class="mini-player is-tucked fixed inset-x-0 bottom-0 z-[55] px-2.5 pb-2.5 sm:px-5 sm:pb-4" aria-label="Audio player" data-player-ui="mini" data-back-to-top-avoid hidden>
+    <div class="relative mx-auto max-w-6xl overflow-hidden rounded-[1.4rem] border border-line bg-ink-900/95 shadow-[0_20px_60px_-15px_rgba(0,0,0,.8)] backdrop-blur-xl">
+      <div class="flex items-center gap-2 p-2 sm:gap-3 sm:p-2.5 sm:pr-4">
+        <a href="episode.html?id=62" class="cover h-14 w-14 shrink-0 rounded-xl" data-ui-cover data-ui-link tabindex="-1" aria-hidden="true"></a>
+        <div class="min-w-0 flex-1 lg:w-56 lg:flex-none">
+          <p class="meta flex items-center gap-2 text-lilac" data-ui-kicker>S4 · E62</p>
+          <a href="episode.html?id=62" class="mt-0.5 block truncate text-[0.95rem] font-semibold hover:underline" data-ui-title data-ui-link>The Quietest Room on Earth</a>
+        </div>
+        <button type="button" class="btn-icon hidden sm:inline-grid" data-act="back" aria-label="Back 15 seconds" aria-keyshortcuts="ArrowLeft"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 12a7.5 7.5 0 1 0 2.2-5.3"/><path d="M4 3.5v3.7h3.7"/><text x="12" y="15.2" text-anchor="middle" font-size="7" font-weight="600" fill="currentColor" stroke="none" font-family="DM Mono, monospace">15</text></svg></button>
+        <button type="button" class="btn-play h-12 w-12" data-act="toggle" aria-label="Play" aria-keyshortcuts="Space"><svg data-icon-play viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.8v14.4a1 1 0 0 0 1.5.86l12-7.2a1 1 0 0 0 0-1.72l-12-7.2A1 1 0 0 0 7 4.8z"/></svg><svg data-icon-pause viewBox="0 0 24 24" fill="currentColor" class="hidden" aria-hidden="true"><rect x="5.5" y="4" width="4.5" height="16" rx="1.4"/><rect x="14" y="4" width="4.5" height="16" rx="1.4"/></svg></button>
+        <button type="button" class="btn-icon hidden sm:inline-grid" data-act="fwd" aria-label="Forward 15 seconds" aria-keyshortcuts="ArrowRight"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19.5 12a7.5 7.5 0 1 1-2.2-5.3"/><path d="M20 3.5v3.7h-3.7"/><text x="12" y="15.2" text-anchor="middle" font-size="7" font-weight="600" fill="currentColor" stroke="none" font-family="DM Mono, monospace">15</text></svg></button>
+        <div class="hidden min-w-0 flex-1 items-center gap-3 md:flex">
+          <span class="w-12 text-right font-mono text-xs text-muted tabular-nums" data-cur>0:00</span>
+          <div class="wave wave-sm min-w-0 flex-1" data-wave></div>
+          <span class="w-12 font-mono text-xs text-subtle tabular-nums" data-dur>0:00</span>
+        </div>
+        <button type="button" class="btn-icon hidden w-auto px-3 font-mono text-sm sm:inline-grid" data-act="rate" aria-label="Playback speed: 1×">1×</button>
+        <div class="hidden items-center gap-1 xl:flex">
+          <button type="button" class="btn-icon" data-act="mute" aria-label="Mute" aria-pressed="false" aria-keyshortcuts="M"><svg data-icon-vol viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg><svg data-icon-muted viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="m16 9.5 5 5M21 9.5l-5 5"/></svg></button>
+          <input type="range" class="range w-20" min="0" max="100" step="5" value="90" data-vol aria-label="Volume">
+        </div>
+        <button type="button" class="btn-icon text-subtle hover:text-paper" data-act="close" aria-label="Close player"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
+      </div>
+      <div class="bar absolute inset-x-0 bottom-0 h-[3px] rounded-none bg-transparent md:hidden" aria-hidden="true"><span data-bar style="width:0%"></span></div>
+    </div>
+  </section>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

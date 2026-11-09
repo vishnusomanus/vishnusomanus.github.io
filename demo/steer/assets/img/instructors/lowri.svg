@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Illustrated portrait of Lowri Pennick">
+  <rect width="200" height="200" fill="#dcf0f1"/>
+  <circle cx="160" cy="40" r="22" fill="#ffc531" opacity=".55"/>
+  <path d="M56 120C48 70 66 46 100 46s54 22 46 74c-6 10-16 12-24 10V90H78v40c-8 2-18 0-22-10Z" fill="#8a3b1e"/>
+  <path d="M28 200c4-40 34-60 72-60s68 20 72 60Z" fill="#0c6e78"/>
+  <path d="M84 142l16 14 16-14" fill="none" stroke="#dcf0f1" stroke-width="5" stroke-linejoin="round"/>
+  
+  <path d="M86 120h28v28c0 9-28 9-28 0Z" fill="#d9a58a"/>
+  <ellipse cx="66" cy="96" rx="6.5" ry="9.5" fill="#f6cfb4"/><ellipse cx="134" cy="96" rx="6.5" ry="9.5" fill="#f6cfb4"/>
+  <ellipse cx="100" cy="92" rx="34" ry="40" fill="#f6cfb4"/>
+  <circle cx="87" cy="95" r="3.6" fill="#0d2230"/><circle cx="113" cy="95" r="3.6" fill="#0d2230"/>
+  <path d="M80 85q7-4.5 14 0M106 85q7-4.5 14 0" fill="none" stroke="#6b2c15" stroke-width="3.2" stroke-linecap="round"/>
+  <path d="M100 98v10.5h-4.5" fill="none" stroke="#d9a58a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M88 115q12 9 24 0" fill="none" stroke="#7d2b22" stroke-width="3.2" stroke-linecap="round"/>
+  <ellipse cx="80" cy="108" rx="6" ry="3.6" fill="#e07a6a" opacity=".28"/><ellipse cx="120" cy="108" rx="6" ry="3.6" fill="#e07a6a" opacity=".28"/>
+  <path d="M66 84c6-28 26-38 44-36 18 2 28 16 26 30-14-2-30-8-40-20-6 12-16 20-30 26Z" fill="#9c4524"/>
+  <g fill="none" stroke="#062536" stroke-width="2.8"><circle cx="87" cy="95" r="10"/><circle cx="113" cy="95" r="10"/><path d="M97 95h6M77 94l-10-3M123 94l10-3"/></g>
+</svg>

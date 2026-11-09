@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shop — Lumen Goods</title>
+<meta name="description" content="Lumen Goods is a Hudson shop for lamps, linen, clay, and a few things to carry." />
+<style>:focus-visible { outline: 2px solid #5c1a3a; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }</style>
+</head>
+<body class="bg-[#fff7f2] text-[#2a1420] font-sans antialiased">
+<header class="sticky top-0 z-30 border-b border-[#ead9cf] bg-[#fff7f2]/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-2xl">Lumen Goods</a>
+    <div class="flex items-center gap-3">
+      <a href="bag.html" class="rounded-full bg-[#5c1a3a] px-4 py-2 text-sm text-[#fff6ef]">Bag <span data-bag-count class="ml-1 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-[#f0c9a0] px-1 text-xs text-[#5c1a3a]">0</span></a>
+      <button id="menuBtn" class="rounded-full border border-[#ead9cf] px-3 py-1 text-sm md:hidden" aria-expanded="false">Menu</button>
+    </div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t border-[#ead9cf] pt-3 text-sm md:flex md:basis-auto md:flex-row md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html" aria-current="page">Shop</a><a href="about.html">About</a><a href="shipping.html">Shipping</a><a href="bag.html">Bag</a></nav>
+  </div>
+</header>
+<main>
+  <section class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-12 sm:px-8 lg:grid-cols-2 lg:py-16">
+    <div>
+      <p class="text-xs font-medium uppercase tracking-[0.22em] text-[#a15b78]">Hudson shop</p>
+      <h1 class="mt-3 font-display text-5xl leading-[1.02] sm:text-6xl">Objects for rooms that are already lived in.</h1>
+      <p class="mt-4 max-w-md text-[#5c3b48]">Lamps, linen, clay, and a few things to carry. Made in short runs. Free shipping on orders over $80. You can see most of it in the shop on Calder Street from Thursday to Sunday.</p>
+    </div>
+    <img src="images/hero.jpg" alt="A quiet living room with linen and wood" class="aspect-[4/5] w-full rounded-3xl object-cover sm:aspect-[5/4]" />
+  </section>
+  <section class="mx-auto max-w-6xl px-5 pb-20 sm:px-8">
+    <div class="mb-6 flex items-end justify-between"><h2 class="font-display text-3xl">In the shop</h2><p class="text-sm text-[#7a5564]">8 pieces</p></div>
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"><article class="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-[#ead9cf]">
+      <a href="lamp.html" class="block aspect-square overflow-hidden bg-[#f6ebe3]"><img src="images/lamp.jpg" alt="Arc floor lamp" class="h-full w-full object-cover" /></a>
+      <div class="p-4">
+        <div class="flex items-start justify-between gap-3">
+          <h2 class="font-display text-2xl leading-none"><a href="lamp.html">Arc floor lamp</a></h2>
+          <p>$186</p>
+        </div>
+        <p class="mt-1 text-sm text-[#7a5564]">Steel, linen cord</p>
+        <button data-add="lamp" class="mt-4 w-full rounded-full border border-[#5c1a3a] py-2 text-sm text-[#5c1a3a] hover:bg-[#5c1a3a] hover:text-[#fff6ef]">Add to bag</button>
+      </div>
+    </article><article class="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-[#ead9cf]">
+      <a href="cups.html" class="block aspect-square overflow-hidden bg-[#f6ebe3]"><img src="images/bowl.jpg" alt="Speckled cup set" class="h-full w-full object-cover" /></a>
+      <div class="p-4">
+        <div class="flex items-start justify-between gap-3">
+          <h2 class="font-display text-2xl leading-none"><a href="cups.html">Speckled cup set</a></h2>
+          <p>$48</p>
+        </div>
+        <p class="mt-1 text-sm text-[#7a5564]">Stoneware, set of four</p>
+        <button data-add="cups" class="mt-4 w-full rounded-full border border-[#5c1a3a] py-2 text-sm text-[#5c1a3a] hover:bg-[#5c1a3a] hover:text-[#fff6ef]">Add to bag</button>
+      </div>
+    </article><article class="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-[#ead9cf]">
+      <a href="vases.html" class="block aspect-square overflow-hidden bg-[#f6ebe3]"><img src="images/bowl-2.jpg" alt="Speckled bottle vases" class="h-full w-full object-cover" /></a>
+      <div class="p-4">
+        <div class="flex items-start justify-between gap-3">
+          <h2 class="font-display text-2xl leading-none"><a href="vases.html">Speckled bottle vases</a></h2>
+          <p>$72</p>
+        </div>
+        <p class="mt-1 text-sm text-[#7a5564]">Three heights</p>
+        <button data-add="vases" class="mt-4 w-full rounded-full border border-[#5c1a3a] py-2 text-sm text-[#5c1a3a] hover:bg-[#5c1a3a] hover:text-[#fff6ef]">Add to bag</button>
+      </div>
+    </article><article class="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-[#ead9cf]">
+      <a href="linen.html" class="block aspect-square overflow-hidden bg-[#f6ebe3]"><img src="images/throw-2.jpg" alt="Washed linen duvet" class="h-full w-full object-cover" /></a>
+      <div class="p-4">
+        <div class="flex items-start justify-between gap-3">
+          <h2 class="font-display text-2xl leading-none"><a href="linen.html">Washed linen duvet</a></h2>
+          <p>$140</p>
+        </div>
+        <p class="mt-1 text-sm text-[#7a5564]">Stone-washed, queen</p>
+        <button data-add="linen" class="mt-4 w-full rounded-full border border-[#5c1a3a] py-2 text-sm text-[#5c1a3a] hover:bg-[#5c1a3a] hover:text-[#fff6ef]">Add to bag</button>
+      </div>
+    </article><article class="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-[#ead9cf]">
+      <a href="amber.html" class="block aspect-square overflow-hidden bg-[#f6ebe3]"><img src="images/vase.jpg" alt="Amber glass vase" class="h-full w-full object-cover" /></a>
+      <div class="p-4">
+        <div class="flex items-start justify-between gap-3">
+          <h2 class="font-display text-2xl leading-none"><a href="amber.html">Amber glass vase</a></h2>
+          <p>$58</p>
+        </div>
+        <p class="mt-1 text-sm text-[#7a5564]">Hand-finished glass</p>
+        <button data-add="amber" class="mt-4 w-full rounded-full border border-[#5c1a3a] py-2 text-sm text-[#5c1a3a] hover:bg-[#5c1a3a] hover:text-[#fff6ef]">Add to bag</button>
+      </div>
+    </article><article class="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-[#ead9cf]">
+      <a href="candle.html" class="block aspect-square overflow-hidden bg-[#f6ebe3]"><img src="images/candle.jpg" alt="Evening candle" class="h-full w-full object-cover" /></a>
+      <div class="p-4">
+        <div class="flex items-start justify-between gap-3">
+          <h2 class="font-display text-2xl leading-none"><a href="candle.html">Evening candle</a></h2>
+          <p>$32</p>
+        </div>
+        <p class="mt-1 text-sm text-[#7a5564]">Soy, cedar and smoke</p>
+        <button data-add="candle" class="mt-4 w-full rounded-full border border-[#5c1a3a] py-2 text-sm text-[#5c1a3a] hover:bg-[#5c1a3a] hover:text-[#fff6ef]">Add to bag</button>
+      </div>
+    </article><article class="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-[#ead9cf]">
+      <a href="bottle.html" class="block aspect-square overflow-hidden bg-[#f6ebe3]"><img src="images/vase-2.jpg" alt="Forest bottle" class="h-full w-full object-cover" /></a>
+      <div class="p-4">
+        <div class="flex items-start justify-between gap-3">
+          <h2 class="font-display text-2xl leading-none"><a href="bottle.html">Forest bottle</a></h2>
+          <p>$36</p>
+        </div>
+        <p class="mt-1 text-sm text-[#7a5564]">Matte steel, 600 ml</p>
+        <button data-add="bottle" class="mt-4 w-full rounded-full border border-[#5c1a3a] py-2 text-sm text-[#5c1a3a] hover:bg-[#5c1a3a] hover:text-[#fff6ef]">Add to bag</button>
+      </div>
+    </article><article class="overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-[#ead9cf]">
+      <a href="pendants.html" class="block aspect-square overflow-hidden bg-[#f6ebe3]"><img src="images/lamp-2.jpg" alt="Brass dome pendants" class="h-full w-full object-cover" /></a>
+      <div class="p-4">
+        <div class="flex items-start justify-between gap-3">
+          <h2 class="font-display text-2xl leading-none"><a href="pendants.html">Brass dome pendants</a></h2>
+          <p>$240</p>
+        </div>
+        <p class="mt-1 text-sm text-[#7a5564]">Set of five, brass</p>
+        <button data-add="pendants" class="mt-4 w-full rounded-full border border-[#5c1a3a] py-2 text-sm text-[#5c1a3a] hover:bg-[#5c1a3a] hover:text-[#fff6ef]">Add to bag</button>
+      </div>
+    </article></div>
+  </section>
+</main>
+<footer class="border-t border-[#ead9cf]">
+  <div class="mx-auto grid max-w-6xl gap-6 px-5 py-10 text-sm text-[#7a5564] sm:px-8 md:grid-cols-3">
+    <div><p class="font-display text-2xl text-[#2a1420]">Lumen Goods</p><p class="mt-2">18 Calder Street<br />Hudson, New York 12534</p></div>
+    <div><p>Open Thursday to Sunday, 11:00–17:00. The online desk ships Monday to Wednesday.</p><p class="mt-2"><span class="underline underline-offset-4" >hello@lumengoods.com</span></p></div>
+    <div class="space-y-1"><a href="shipping.html">Shipping and returns</a><br /><a href="about.html">The shop</a><br /><a href="bag.html">Your bag</a></div>
+  </div>
+</footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+<script src="shop.js"></script>
+
+</body>
+</html>

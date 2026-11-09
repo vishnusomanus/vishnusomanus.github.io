@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rent a space | Mosaic, Holyoke</title>
+  <meta name="description" content="Rent a room at Mosaic in Holyoke: the Print Room, the Yard Room, the Snug or the whole ground floor. Live price estimate, 30% off for community groups.">
+  <meta name="theme-color" content="#f8f1e4">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Mosaic">
+  <meta property="og:title" content="Rent a space | Mosaic, Holyoke">
+  <meta property="og:description" content="Rent a room at Mosaic in Holyoke: the Print Room, the Yard Room, the Snug or the whole ground floor. Live price estimate, 30% off for community groups.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&amp;family=Epilogue:ital,wght@0,400..800;1,400..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm font-bold text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <div class="bg-ink text-white">
+    <div class="container-x flex min-h-10 items-center justify-between gap-4 py-2 text-[13px]">
+      <p class="flex items-center gap-2 font-semibold"><span data-open-dot class="size-2 rounded-full bg-leaf" aria-hidden="true"></span><span data-open-status>Open Tuesday to Sunday</span></p>
+      <p class="hidden items-center gap-5 text-white/85 md:flex"><span>The Old Dyeworks, Race Street, Holyoke</span><a href="visit.html" class="font-bold text-ochre underline-offset-4 hover:underline">First time? Plan your visit</a></p>
+    </div>
+  </div>
+  <header id="site-header" class="sticky top-0 z-40 bg-paper/95 backdrop-blur transition-shadow duration-300">
+    <div class="container-x flex h-20 items-center justify-between gap-4">
+      <a href="index.html" class="group inline-flex items-center gap-3">
+        <svg viewBox="0 0 44 44" class="size-11 shrink-0 transition-transform duration-500 group-hover:rotate-[-6deg]" aria-hidden="true"><rect x="2" y="2" width="19" height="19" rx="3" fill="#5b34a8"/><circle cx="11.5" cy="11.5" r="5.5" fill="#f3b23a"/><path d="M23 2h19v19A19 19 0 0 1 23 2z" fill="#e0532f"/><path d="M2 23h19v19z" fill="#17685a"/><rect x="25" y="25" width="15" height="15" rx="2" transform="rotate(12 32.5 32.5)" fill="#f2a7bf"/></svg>
+        <span class="leading-none"><span class="block font-display text-[1.75rem] leading-none">mosaic</span><span class="mt-1 hidden whitespace-nowrap text-[10px] sm:block font-extrabold uppercase tracking-[0.2em] text-vermilion-dark">Arts center · Holyoke</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-0.5"><li><a href="whats-on.html" class="nav-link">What’s on</a></li><li><a href="workshops.html" class="nav-link">Workshops</a></li><li><a href="hire.html" class="nav-link" aria-current="page">Rent a space</a></li><li><a href="get-involved.html" class="nav-link">Get involved</a></li><li><a href="about.html" class="nav-link">Our story</a></li><li><a href="visit.html" class="nav-link">Visit</a></li></ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="whats-on.html?saved=1" class="inline-flex items-center gap-2 rounded-full border-2 border-ink/15 bg-card px-3 py-2 text-sm font-bold transition hover:border-violet" aria-label="Saved: 0 events"><svg viewBox="0 0 20 20" class="size-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h10v14l-5-3.5L5 17z"/></svg><span class="hidden sm:inline">Saved</span> <span data-saved-count class="grid min-w-6 place-items-center rounded-full bg-ochre px-1.5 text-xs font-extrabold text-ink">0</span></a>
+        <button id="menu-toggle" type="button" class="grid size-11 place-items-center rounded-xl bg-ink text-white lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="max-h-[calc(100dvh-5rem)] overflow-y-auto border-t-2 border-ink bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul><li><a href="whats-on.html" class="flex items-center justify-between border-b-2 border-dashed border-line py-4 font-display text-3xl aria-[current=page]:text-violet">What’s on<span aria-hidden="true" class="text-vermilion"><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></li><li><a href="workshops.html" class="flex items-center justify-between border-b-2 border-dashed border-line py-4 font-display text-3xl aria-[current=page]:text-violet">Workshops<span aria-hidden="true" class="text-vermilion"><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></li><li><a href="hire.html" class="flex items-center justify-between border-b-2 border-dashed border-line py-4 font-display text-3xl aria-[current=page]:text-violet" aria-current="page">Rent a space<span aria-hidden="true" class="text-vermilion"><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></li><li><a href="get-involved.html" class="flex items-center justify-between border-b-2 border-dashed border-line py-4 font-display text-3xl aria-[current=page]:text-violet">Get involved<span aria-hidden="true" class="text-vermilion"><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></li><li><a href="about.html" class="flex items-center justify-between border-b-2 border-dashed border-line py-4 font-display text-3xl aria-[current=page]:text-violet">Our story<span aria-hidden="true" class="text-vermilion"><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></li><li><a href="visit.html" class="flex items-center justify-between border-b-2 border-dashed border-line py-4 font-display text-3xl aria-[current=page]:text-violet">Visit<span aria-hidden="true" class="text-vermilion"><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></a></li></ul>
+        <p class="mt-6 text-sm text-muted">The Old Dyeworks, Race Street, Holyoke · <a href="tel:+14135550173" class="font-bold text-ink">(413) 555-0173</a></p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+
+    <section class="container-x grid items-center gap-12 pb-6 pt-10 lg:grid-cols-[1.05fr_1fr] lg:pt-14">
+      <div>
+        <p class="eyebrow reveal">Rent a space</p>
+        <h1 class="h-display reveal mt-5 text-[3rem] sm:text-7xl">Rooms for meetings, makers and parties</h1>
+        <p class="reveal mt-6 max-w-xl text-lg leading-relaxed text-ink/80">Four spaces in a historic dye works, from a ten-seat snug to the whole ground floor. Fair prices, real mugs and a team who’ll help you settle in.</p>
+        <ul class="reveal mt-8 flex flex-wrap gap-2 text-sm font-bold">
+          <li class="tag bg-teal-light px-4 py-2 text-teal">30% off for community groups</li>
+          <li class="tag bg-lilac px-4 py-2 text-violet">Step-free throughout</li>
+          <li class="tag bg-ochre-light px-4 py-2 text-ochre-dark">8:00 AM to 10:00 PM</li>
+        </ul>
+        <a href="#estimate" class="btn-primary reveal mt-8">Get an estimate <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </div>
+      <div class="reveal tilt-r mx-auto w-full max-w-xl overflow-hidden rounded-[1.75rem] bg-card p-3 shadow-lift">
+        <div class="aspect-[34/25] overflow-hidden rounded-[1.2rem]"><svg viewBox="0 0 340 250" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="340" height="250" fill="#fde8bd"/><path d="M40 36h260l6 182H34z" fill="#1f1d36" opacity=".9" transform="rotate(-2 170 127)"/><path d="M48 44h244l4 166H44z" fill="#fde8bd" transform="rotate(-2 170 127)"/><rect x="56" y="56" width="110" height="94" rx="4" fill="#fffaf1"/><rect x="176" y="56" width="110" height="148" rx="4" fill="#fffaf1"/><rect x="56" y="160" width="110" height="44" rx="4" fill="#f2a7bf"/><path d="M111 150v10M176 120h-10" stroke="#1f1d36" stroke-width="6"/><circle cx="231" cy="130" r="22" fill="#f3b23a"/><rect x="72" y="74" width="40" height="22" rx="3" fill="#5b34a8"/></svg></div>
+        <p class="px-2 pb-1 pt-3 text-sm font-semibold text-muted">The ground floor: Print Room, Yard Room, foyer and kitchen.</p>
+      </div>
+    </section>
+
+    <section class="container-x mt-20" aria-labelledby="rooms-title">
+      <h2 id="rooms-title" class="h-section">Our rooms</h2>
+      <div class="mt-8 grid gap-6 md:grid-cols-2">
+        <article class="reveal card grid overflow-hidden sm:grid-cols-[13rem_1fr]">
+          <div class="aspect-[34/25] sm:aspect-auto"><svg viewBox="0 0 340 250" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="340" height="250" fill="#fbe0d5"/><path d="M40 36h260l6 182H34z" fill="#1f1d36" opacity=".9" transform="rotate(-2 170 127)"/><path d="M48 44h244l4 166H44z" fill="#fbe0d5" transform="rotate(-2 170 127)"/><rect x="70" y="70" width="110" height="34" rx="4" fill="#fffaf1"/><rect x="70" y="128" width="110" height="34" rx="4" fill="#fffaf1"/><rect x="214" y="70" width="60" height="92" rx="4" fill="#1f1d36"/><circle cx="244" cy="116" r="16" fill="#f3b23a"/><rect x="70" y="186" width="204" height="18" rx="4" fill="#17685a"/></svg></div>
+          <div class="flex flex-col p-6">
+            <h3 class="font-display text-2xl">The Print Room</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Big tables, two deep sinks, north light and a proofing press. Made for hands-on workshops and making days.</p>
+            <dl class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+              <div><dt class="font-bold text-muted">Capacity</dt><dd class="font-semibold">14 seated · 20 standing</dd></div>
+              <div><dt class="font-bold text-muted">Size</dt><dd class="font-semibold">520 sq ft</dd></div>
+              <div><dt class="font-bold text-muted">From</dt><dd class="font-semibold">$45 an hour</dd></div>
+              <div><dt class="font-bold text-muted">Good for</dt><dd class="font-semibold">Workshops, craft groups, training</dd></div>
+            </dl>
+            <a href="hire.html?room=print-room#estimate" class="link mt-5 self-start text-sm">Estimate for the Print Room</a>
+          </div>
+        </article>
+        <article class="reveal card grid overflow-hidden sm:grid-cols-[13rem_1fr]">
+          <div class="aspect-[34/25] sm:aspect-auto"><svg viewBox="0 0 340 250" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="340" height="250" fill="#e9e0fa"/><path d="M40 36h260l6 182H34z" fill="#1f1d36" opacity=".9" transform="rotate(-2 170 127)"/><path d="M48 44h244l4 166H44z" fill="#e9e0fa" transform="rotate(-2 170 127)"/><rect x="64" y="96" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="94" y="96" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="124" y="96" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="154" y="96" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="184" y="96" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="214" y="96" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="244" y="96" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="64" y="118" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="94" y="118" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="124" y="118" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="154" y="118" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="184" y="118" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="214" y="118" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="244" y="118" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="64" y="140" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="94" y="140" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="124" y="140" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="154" y="140" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="184" y="140" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="214" y="140" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="244" y="140" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="64" y="162" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="94" y="162" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="124" y="162" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="154" y="162" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="184" y="162" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="214" y="162" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="244" y="162" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="64" y="184" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="94" y="184" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="124" y="184" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="154" y="184" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="184" y="184" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="214" y="184" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="244" y="184" width="18" height="12" rx="3" fill="#fffaf1"/><rect x="96" y="52" width="140" height="22" rx="4" fill="#1f1d36"/></svg></div>
+          <div class="flex flex-col p-6">
+            <h3 class="font-display text-2xl">The Yard Room</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">Our biggest room, with a sprung floor, blackout blinds, a screen and doors onto the cobbled yard.</p>
+            <dl class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+              <div><dt class="font-bold text-muted">Capacity</dt><dd class="font-semibold">60 seated · 90 standing</dd></div>
+              <div><dt class="font-bold text-muted">Size</dt><dd class="font-semibold">1,030 sq ft</dd></div>
+              <div><dt class="font-bold text-muted">From</dt><dd class="font-semibold">$65 an hour</dd></div>
+              <div><dt class="font-bold text-muted">Good for</dt><dd class="font-semibold">Talks, gigs, dance, screenings, parties</dd></div>
+            </dl>
+            <a href="hire.html?room=yard-room#estimate" class="link mt-5 self-start text-sm">Estimate for the Yard Room</a>
+          </div>
+        </article>
+        <article class="reveal card grid overflow-hidden sm:grid-cols-[13rem_1fr]">
+          <div class="aspect-[34/25] sm:aspect-auto"><svg viewBox="0 0 340 250" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="340" height="250" fill="#ddeef8"/><path d="M40 36h260l6 182H34z" fill="#1f1d36" opacity=".9" transform="rotate(-2 170 127)"/><path d="M48 44h244l4 166H44z" fill="#ddeef8" transform="rotate(-2 170 127)"/><rect x="96" y="96" width="136" height="72" rx="36" fill="#fffaf1"/><circle cx="108" cy="84" r="9" fill="#5b34a8"/><circle cx="108" cy="182" r="9" fill="#5b34a8"/><circle cx="136" cy="84" r="9" fill="#5b34a8"/><circle cx="136" cy="182" r="9" fill="#5b34a8"/><circle cx="164" cy="84" r="9" fill="#5b34a8"/><circle cx="164" cy="182" r="9" fill="#5b34a8"/><circle cx="192" cy="84" r="9" fill="#5b34a8"/><circle cx="192" cy="182" r="9" fill="#5b34a8"/><circle cx="220" cy="84" r="9" fill="#5b34a8"/><circle cx="220" cy="182" r="9" fill="#5b34a8"/><rect x="250" y="70" width="34" height="120" rx="6" fill="#e0532f"/></svg></div>
+          <div class="flex flex-col p-6">
+            <h3 class="font-display text-2xl">The Snug</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">A small, quiet room with one big table, a sofa and a wall of books. Good for meetings and one-to-ones.</p>
+            <dl class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+              <div><dt class="font-bold text-muted">Capacity</dt><dd class="font-semibold">10 seated · 12 standing</dd></div>
+              <div><dt class="font-bold text-muted">Size</dt><dd class="font-semibold">240 sq ft</dd></div>
+              <div><dt class="font-bold text-muted">From</dt><dd class="font-semibold">$30 an hour</dd></div>
+              <div><dt class="font-bold text-muted">Good for</dt><dd class="font-semibold">Meetings, interviews, small groups</dd></div>
+            </dl>
+            <a href="hire.html?room=snug#estimate" class="link mt-5 self-start text-sm">Estimate for the Snug</a>
+          </div>
+        </article>
+        <article class="reveal card grid overflow-hidden sm:grid-cols-[13rem_1fr]">
+          <div class="aspect-[34/25] sm:aspect-auto"><svg viewBox="0 0 340 250" class="h-full w-full" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><rect width="340" height="250" fill="#fde8bd"/><path d="M40 36h260l6 182H34z" fill="#1f1d36" opacity=".9" transform="rotate(-2 170 127)"/><path d="M48 44h244l4 166H44z" fill="#fde8bd" transform="rotate(-2 170 127)"/><rect x="56" y="56" width="110" height="94" rx="4" fill="#fffaf1"/><rect x="176" y="56" width="110" height="148" rx="4" fill="#fffaf1"/><rect x="56" y="160" width="110" height="44" rx="4" fill="#f2a7bf"/><path d="M111 150v10M176 120h-10" stroke="#1f1d36" stroke-width="6"/><circle cx="231" cy="130" r="22" fill="#f3b23a"/><rect x="72" y="74" width="40" height="22" rx="3" fill="#5b34a8"/></svg></div>
+          <div class="flex flex-col p-6">
+            <h3 class="font-display text-2xl">The whole ground floor</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted">The Yard Room, Print Room, foyer and kitchen together, for fairs, celebrations and community days.</p>
+            <dl class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm">
+              <div><dt class="font-bold text-muted">Capacity</dt><dd class="font-semibold">90 seated · 140 standing</dd></div>
+              <div><dt class="font-bold text-muted">Size</dt><dd class="font-semibold">2,260 sq ft</dd></div>
+              <div><dt class="font-bold text-muted">From</dt><dd class="font-semibold">$125 an hour</dd></div>
+              <div><dt class="font-bold text-muted">Good for</dt><dd class="font-semibold">Fairs, weddings, festivals, open days</dd></div>
+            </dl>
+            <a href="hire.html?room=ground#estimate" class="link mt-5 self-start text-sm">Estimate for the whole ground floor</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="estimate" class="container-x mt-24 scroll-mt-28" aria-labelledby="estimate-title">
+      <p class="eyebrow">Estimate and inquire</p>
+      <h2 id="estimate-title" class="h-section mt-4 max-w-2xl">Tell us what you’re planning</h2>
+      <p class="mt-3 max-w-2xl text-muted">The estimate updates as you go. Send it with your inquiry and we’ll confirm availability within two business days.</p>
+      <form id="hire-form" class="mt-10 grid gap-10 lg:grid-cols-[1fr_22rem] lg:items-start" novalidate>
+        <div class="space-y-8">
+          <fieldset data-radio id="h-room-group" aria-describedby="h-room-error">
+            <legend class="text-lg font-extrabold">1. Which room?</legend>
+            <div class="mt-4 grid gap-3 sm:grid-cols-2">
+              <label class="flex cursor-pointer gap-3 rounded-2xl border-2 border-ink/15 bg-card p-4 transition hover:border-violet has-[:checked]:border-ink has-[:checked]:bg-lilac has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-violet"><input type="radio" name="room" value="print-room" class="mt-1 size-5 shrink-0 accent-violet" required data-error-for="h-room" data-msg-required="Choose a room to see an estimate."><span><span class="block font-extrabold">The Print Room</span><span class="block text-sm text-muted">14 seated · 20 standing · $45 an hour</span></span></label>
+              <label class="flex cursor-pointer gap-3 rounded-2xl border-2 border-ink/15 bg-card p-4 transition hover:border-violet has-[:checked]:border-ink has-[:checked]:bg-lilac has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-violet"><input type="radio" name="room" value="yard-room" class="mt-1 size-5 shrink-0 accent-violet" required data-error-for="h-room" data-msg-required="Choose a room to see an estimate." checked><span><span class="block font-extrabold">The Yard Room</span><span class="block text-sm text-muted">60 seated · 90 standing · $65 an hour</span></span></label>
+              <label class="flex cursor-pointer gap-3 rounded-2xl border-2 border-ink/15 bg-card p-4 transition hover:border-violet has-[:checked]:border-ink has-[:checked]:bg-lilac has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-violet"><input type="radio" name="room" value="snug" class="mt-1 size-5 shrink-0 accent-violet" required data-error-for="h-room" data-msg-required="Choose a room to see an estimate."><span><span class="block font-extrabold">The Snug</span><span class="block text-sm text-muted">10 seated · 12 standing · $30 an hour</span></span></label>
+              <label class="flex cursor-pointer gap-3 rounded-2xl border-2 border-ink/15 bg-card p-4 transition hover:border-violet has-[:checked]:border-ink has-[:checked]:bg-lilac has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-violet"><input type="radio" name="room" value="ground" class="mt-1 size-5 shrink-0 accent-violet" required data-error-for="h-room" data-msg-required="Choose a room to see an estimate."><span><span class="block font-extrabold">The whole ground floor</span><span class="block text-sm text-muted">90 seated · 140 standing · $125 an hour</span></span></label>
+            </div>
+            <p id="h-room-error" data-error="h-room" class="field-error"></p>
+          </fieldset>
+
+          <fieldset>
+            <legend class="text-lg font-extrabold">2. When?</legend>
+            <div class="mt-4 grid gap-4 sm:grid-cols-3">
+              <div>
+                <label for="h-date" class="field-label">Preferred date</label>
+                <input type="date" id="h-date" name="date" class="field" required data-msg-required="Choose the date you’d like." data-msg-range="Choose a date from tomorrow, up to a year ahead." aria-describedby="h-date-error">
+                <p id="h-date-error" data-error="h-date" class="field-error"></p>
+              </div>
+              <div>
+                <label for="h-start" class="field-label">Start time</label>
+                <select id="h-start" name="start" class="field" required></select>
+              </div>
+              <div>
+                <label for="h-hours" class="field-label">How long?</label>
+                <select id="h-hours" name="hours" class="field" required aria-describedby="h-hours-error"></select>
+                <p id="h-hours-error" data-error="h-hours" class="field-error"></p>
+              </div>
+            </div>
+            <p id="h-late-note" class="mt-2 text-sm font-semibold text-vermilion-dark" role="status"></p>
+          </fieldset>
+
+          <fieldset>
+            <legend class="text-lg font-extrabold">3. How many people, and how?</legend>
+            <div class="mt-4 grid gap-4 sm:grid-cols-2">
+              <div>
+                <label for="h-people" class="field-label">Number of people</label>
+                <input type="number" id="h-people" name="people" class="field" inputmode="numeric" min="1" max="500" step="1" required data-msg-required="How many people are you expecting?" data-msg-range="Enter a number between 1 and 500." aria-describedby="h-people-error h-cap-note">
+                <p id="h-people-error" data-error="h-people" class="field-error"></p>
+              </div>
+              <div>
+                <label for="h-layout" class="field-label">Layout</label>
+                <select id="h-layout" name="layout" class="field">
+                  <option value="rows">Rows of chairs</option>
+                  <option value="cabaret">Round tables</option>
+                  <option value="workshop">Workshop tables</option>
+                  <option value="standing">Standing</option>
+                </select>
+              </div>
+            </div>
+            <p id="h-cap-note" class="mt-2 text-sm font-semibold text-vermilion-dark" role="status"></p>
+          </fieldset>
+
+          <fieldset>
+            <legend class="text-lg font-extrabold">4. Extras</legend>
+            <div class="mt-4 grid gap-3 sm:grid-cols-2">
+              <label class="check rounded-2xl bg-card p-4 ring-1 ring-line"><input type="checkbox" name="extras" value="projector"><span>Projector and screen <span class="block text-sm text-muted">+$25</span></span></label>
+              <label class="check rounded-2xl bg-card p-4 ring-1 ring-line"><input type="checkbox" name="extras" value="pa"><span>PA system and two microphones <span class="block text-sm text-muted">+$40</span></span></label>
+              <label class="check rounded-2xl bg-card p-4 ring-1 ring-line"><input type="checkbox" name="extras" value="kitchen"><span>Kitchen use (tea, coffee and urns) <span class="block text-sm text-muted">+$20</span></span></label>
+              <label class="check rounded-2xl bg-card p-4 ring-1 ring-line"><input type="checkbox" name="extras" value="clear"><span>We set up and clear away for you <span class="block text-sm text-muted">+$50</span></span></label>
+            </div>
+            <label class="check mt-4 rounded-2xl bg-teal-light p-4"><input type="checkbox" id="h-community" name="community"><span><strong>We’re a community group or nonprofit</strong><span class="block text-sm">30% off the whole booking</span></span></label>
+          </fieldset>
+
+          <fieldset>
+            <legend class="text-lg font-extrabold">5. About you</legend>
+            <div class="mt-4 grid gap-4 sm:grid-cols-2">
+              <div>
+                <label for="h-name" class="field-label">Your name</label>
+                <input id="h-name" name="name" class="field" autocomplete="name" required maxlength="80" aria-describedby="h-name-error">
+                <p id="h-name-error" data-error="h-name" class="field-error"></p>
+              </div>
+              <div>
+                <label for="h-email" class="field-label">Email</label>
+                <input id="h-email" name="email" type="email" class="field" autocomplete="email" required maxlength="120" aria-describedby="h-email-error">
+                <p id="h-email-error" data-error="h-email" class="field-error"></p>
+              </div>
+              <div>
+                <label for="h-phone" class="field-label">Phone (optional)</label>
+                <input id="h-phone" name="phone" type="tel" class="field" autocomplete="tel" maxlength="20" pattern="[0-9 +\(\)\.\-]{7,20}" data-msg-pattern="Use digits, like (413) 555-0173." aria-describedby="h-phone-error">
+                <p id="h-phone-error" data-error="h-phone" class="field-error"></p>
+              </div>
+              <div>
+                <label for="h-org" class="field-label">Group or organization (optional)</label>
+                <input id="h-org" name="organisation" class="field" autocomplete="organization" maxlength="100">
+              </div>
+              <div class="sm:col-span-2">
+                <label for="h-message" class="field-label">What are you planning?</label>
+                <textarea id="h-message" name="message" rows="4" class="field" required minlength="20" maxlength="2000" placeholder="A monthly meeting, a birthday contra dance, a training day…" aria-describedby="h-message-error"></textarea>
+                <p id="h-message-error" data-error="h-message" class="field-error"></p>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <aside class="lg:sticky lg:top-28" aria-labelledby="quote-title">
+          <div class="rounded-[1.75rem] bg-ink p-6 text-white shadow-lift">
+            <h3 id="quote-title" class="text-xs font-extrabold uppercase tracking-[0.16em] text-ochre">Your estimate</h3>
+            <p id="h-when" class="mt-2 text-sm text-white/80"></p>
+            <ul id="h-lines" class="mt-4 space-y-2 border-b border-dashed border-white/25 pb-4 text-sm"></ul>
+            <p class="mt-4 flex items-baseline justify-between"><span class="font-bold">Total</span><output id="h-total" for="h-date h-hours h-start h-community" class="font-display text-4xl" aria-live="polite">$0</output></p>
+            <p class="mt-2 text-xs text-white/75">An estimate, not a booking. We confirm the final price when we confirm your date.</p>
+          </div>
+          <p data-form-summary class="field-error mt-4" role="alert" hidden></p>
+          <button type="submit" class="btn-primary mt-4 w-full">Send inquiry <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button>
+        </aside>
+      </form>
+    </section>
+
+    <section class="container-x mt-24 grid gap-12 lg:grid-cols-[1fr_1.5fr]" aria-labelledby="hire-faq">
+      <div>
+        <h2 id="hire-faq" class="h-section">Good to know</h2>
+        <ul class="mt-6 space-y-3 text-[15px]">
+          <li class="flex gap-3"><span class="mt-1.5 size-2.5 shrink-0 rotate-12 rounded-sm bg-vermilion" aria-hidden="true"></span>Wi-Fi, tables, chairs and a flip chart in every room</li>
+          <li class="flex gap-3"><span class="mt-1.5 size-2.5 shrink-0 rotate-12 rounded-sm bg-ochre" aria-hidden="true"></span>Step-free entrance, elevator and accessible restroom</li>
+          <li class="flex gap-3"><span class="mt-1.5 size-2.5 shrink-0 rotate-12 rounded-sm bg-teal" aria-hidden="true"></span>Hearing loop in the Yard Room</li>
+          <li class="flex gap-3"><span class="mt-1.5 size-2.5 shrink-0 rotate-12 rounded-sm bg-violet" aria-hidden="true"></span>A building manager on site for every booking</li>
+        </ul>
+      </div>
+      <div class="border-t-2 border-dashed border-line">
+        <details class="faq"><summary>When can we rent a room?</summary><div>Between 8:00 AM and 10:00 PM, any day we’re open, with a two-hour minimum. Evening hours (after 6:00 PM) cost 15% more because they need a building manager.</div></details>
+        <details class="faq"><summary>Who gets the community rate?</summary><div>Registered nonprofits, community groups, neighborhood associations and anyone running something free or pay-what-you-can for local people. Check the box in the estimate and tell us a little about your group.</div></details>
+        <details class="faq"><summary>Can we bring food and drink?</summary><div>Yes. You can use the kitchen for tea, coffee and cold food, or bring a caterer. A bar is possible through a licensed caterer; ask us early.</div></details>
+        <details class="faq"><summary>Can we see the rooms first?</summary><div>Of course. Book a ten-minute tour with the welcome desk, Tuesday to Saturday.</div></details>
+        <details class="faq"><summary>What about cancellations?</summary><div>Cancel up to 14 days before for a full refund. After that we refund half, or move your booking to another date for free.</div></details>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="torn-top mt-28 bg-ink text-white">
+    <div class="container-x grid gap-12 pb-12 pt-16 lg:grid-cols-12">
+      <div class="lg:col-span-5">
+        <a href="index.html" class="group inline-flex items-center gap-3">
+          <svg viewBox="0 0 44 44" class="size-11 shrink-0 transition-transform duration-500 group-hover:rotate-[-6deg]" aria-hidden="true"><rect x="2" y="2" width="19" height="19" rx="3" fill="#5b34a8"/><circle cx="11.5" cy="11.5" r="5.5" fill="#f3b23a"/><path d="M23 2h19v19A19 19 0 0 1 23 2z" fill="#e0532f"/><path d="M2 23h19v19z" fill="#17685a"/><rect x="25" y="25" width="15" height="15" rx="2" transform="rotate(12 32.5 32.5)" fill="#f2a7bf"/></svg>
+          <span class="font-display text-[1.75rem] leading-none text-white">mosaic</span>
+        </a>
+        <p class="mt-5 max-w-sm leading-relaxed text-white/80">A community arts center in an old dye works on Race Street. Classes, gigs, films, exhibitions and a coffee pot that is always on.</p>
+        <form data-simple-form class="mt-7 max-w-md" novalidate>
+          <label for="nl-email" class="text-sm font-bold text-white">Get the Mosaic monthly in your inbox</label>
+          <div class="mt-2 flex flex-col gap-2 sm:flex-row">
+            <input id="nl-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com" class="field border-white/30 bg-white/10 text-white placeholder:text-white/60 focus:border-ochre" aria-describedby="nl-email-error">
+            <button type="submit" class="btn-warm shrink-0">Sign up</button>
+          </div>
+          <p id="nl-email-error" data-error="nl-email" class="mt-1.5 text-sm font-semibold text-[#ffc2b0]"></p>
+        </form>
+      </div>
+      <nav aria-label="Explore" class="lg:col-span-2">
+        <h2 class="text-xs font-extrabold uppercase tracking-[0.18em] text-ochre">Explore</h2>
+        <ul class="mt-4 space-y-2.5 text-[15px] text-white/90">
+          <li><a href="whats-on.html" class="underline-offset-4 hover:underline">What’s on</a></li>
+          <li><a href="workshops.html" class="underline-offset-4 hover:underline">Workshops</a></li>
+          <li><a href="whats-on.html?cat=exhibition" class="underline-offset-4 hover:underline">Exhibitions</a></li>
+          <li><a href="whats-on.html?cat=family" class="underline-offset-4 hover:underline">For families</a></li>
+          <li><a href="about.html" class="underline-offset-4 hover:underline">Our story</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Join in" class="lg:col-span-2">
+        <h2 class="text-xs font-extrabold uppercase tracking-[0.18em] text-ochre">Join in</h2>
+        <ul class="mt-4 space-y-2.5 text-[15px] text-white/90">
+          <li><a href="get-involved.html#volunteer" class="underline-offset-4 hover:underline">Volunteer</a></li>
+          <li><a href="get-involved.html#friends" class="underline-offset-4 hover:underline">Become a Friend</a></li>
+          <li><a href="get-involved.html#propose" class="underline-offset-4 hover:underline">Teach or exhibit</a></li>
+          <li><a href="hire.html" class="underline-offset-4 hover:underline">Rent a space</a></li>
+          <li><a href="visit.html#access" class="underline-offset-4 hover:underline">Access</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-3">
+        <h2 class="text-xs font-extrabold uppercase tracking-[0.18em] text-ochre">Find us</h2>
+        <address class="mt-4 not-italic leading-relaxed text-white/90">The Old Dyeworks<br>Race Street<br>Holyoke, MA 01040</address>
+        <p class="mt-3 text-[15px] leading-relaxed text-white/90"><a href="tel:+14135550173" class="underline-offset-4 hover:underline">(413) 555-0173</a><br><a href="mailto:hello@mosaic.example" class="underline-offset-4 hover:underline">hello@mosaic.example</a></p>
+        <a href="visit.html" class="btn-light btn-sm mt-6">Opening hours <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+      </div>
+    </div>
+    <div class="border-t border-white/15">
+      <div class="container-x flex flex-col gap-2 py-6 text-[13px] text-white/75 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Mosaic Community Arts Center. A fictional arts center.</p>
+        <p>Template by Freeframe</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

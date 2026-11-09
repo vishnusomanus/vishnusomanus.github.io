@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find your next read — Larchmere Books</title>
+  <meta name="description" content="Four quick questions and our booksellers’ shelf picks three books for you, or for the reader you’re buying for, with a reason for each.">
+  <meta name="theme-color" content="#17463a">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Larchmere Books">
+  <meta property="og:title" content="Find your next read — Larchmere Books">
+  <meta property="og:description" content="Four quick questions and our booksellers’ shelf picks three books for you, or for the reader you’re buying for, with a reason for each.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..600&amp;family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</head>
+<body data-page="finder" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[80] rounded-md bg-ink px-5 py-3 text-sm font-bold text-paper focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <header id="site-header" class="sticky -top-10 z-40 border-b border-line bg-paper/95 backdrop-blur transition-shadow duration-300">
+    <div class="on-dark bg-pine-deep text-paper">
+      <div class="container-x flex min-h-10 items-center justify-center gap-x-6 py-2 text-[13.5px] sm:justify-between">
+        <p class="inline-flex items-center gap-2"><span data-shop-dot data-on-dark class="dot text-[#7fd09a]"></span><span data-shop-status>Open today 9am–8pm</span></p>
+        <p class="hidden text-paper/85 sm:block">112 Maple Street, Burlington · <a href="bag.html" class="underline decoration-paper/35 underline-offset-4 hover:decoration-paper">Free shipping over $45</a></p>
+      </div>
+    </div>
+    <div class="container-x flex h-[4.5rem] items-center justify-between gap-4">
+      <a href="index.html" class="group inline-flex min-w-0 items-center gap-3">
+        <svg viewBox="0 0 40 40" class="size-10 shrink-0 transition-transform duration-500 group-hover:-rotate-3" aria-hidden="true"><rect x="3" y="3" width="34" height="34" rx="5" fill="#17463a"/><path d="M11 9h7v22h-7zM19.5 9h5v22h-5zM26 11.5l4.6-1.2 4 19.6-4.6 1.1z" fill="#f7f1e3"/><path d="M12.5 13h4M12.5 27h4M21 13h2M21 27h2" stroke="#17463a" stroke-width="1.4"/><path d="M14.5 9v13l-2-2-2 2V9" fill="#c8401f" transform="translate(1 -3)"/></svg>
+        <span class="flex flex-col"><span class="font-display text-[1.6rem] font-semibold leading-none tracking-[-0.01em] text-pine">Larchmere</span><span class="mt-1 text-[10.5px] font-bold uppercase tracking-[0.28em] text-muted">Books &amp; café<span class="hidden sm:inline"> · Burlington</span></span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1">
+          <li><a href="shop.html" class="inline-flex h-[4.5rem] items-center border-b-[3px] border-transparent px-3 pt-[3px] text-[15px] font-bold text-ink/80 transition hover:text-ink aria-[current=page]:border-vermilion aria-[current=page]:text-ink">Shop</a></li>
+          <li><a href="events.html" class="inline-flex h-[4.5rem] items-center border-b-[3px] border-transparent px-3 pt-[3px] text-[15px] font-bold text-ink/80 transition hover:text-ink aria-[current=page]:border-vermilion aria-[current=page]:text-ink">Events</a></li>
+          <li><a href="clubs.html" class="inline-flex h-[4.5rem] items-center border-b-[3px] border-transparent px-3 pt-[3px] text-[15px] font-bold text-ink/80 transition hover:text-ink aria-[current=page]:border-vermilion aria-[current=page]:text-ink">Book clubs</a></li>
+          <li><a href="finder.html" aria-current="page" class="inline-flex h-[4.5rem] items-center border-b-[3px] border-transparent px-3 pt-[3px] text-[15px] font-bold text-ink/80 transition hover:text-ink aria-[current=page]:border-vermilion aria-[current=page]:text-ink">Find a read</a></li>
+          <li><a href="visit.html" class="inline-flex h-[4.5rem] items-center border-b-[3px] border-transparent px-3 pt-[3px] text-[15px] font-bold text-ink/80 transition hover:text-ink aria-[current=page]:border-vermilion aria-[current=page]:text-ink">Visit us</a></li>
+        </ul>
+      </nav>
+      <div class="flex shrink-0 items-center gap-2">
+        <a href="bag.html" data-bag-link aria-label="Bag, 0 books" class="relative inline-flex h-11 items-center gap-2 rounded-md bg-pine px-4 font-bold text-white transition hover:bg-pine-deep">
+          <svg viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+          <span class="hidden text-[15px] sm:inline">Bag</span>
+          <span data-bag-count hidden class="absolute -right-2 -top-2 grid h-6 min-w-6 place-items-center rounded-full bg-vermilion px-1 text-xs font-bold text-white ring-2 ring-paper">0</span>
+        </a>
+        <button id="menu-toggle" type="button" class="grid size-11 place-items-center rounded-md ring-[1.5px] ring-ink/20 ring-inset transition hover:bg-vellum lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-line bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="index.html" class="flex items-center justify-between border-b border-line py-4 font-display text-[1.6rem] font-medium aria-[current=page]:italic aria-[current=page]:text-vermilion-ink">Home<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="shop.html" class="flex items-center justify-between border-b border-line py-4 font-display text-[1.6rem] font-medium aria-[current=page]:italic aria-[current=page]:text-vermilion-ink">Shop<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="events.html" class="flex items-center justify-between border-b border-line py-4 font-display text-[1.6rem] font-medium aria-[current=page]:italic aria-[current=page]:text-vermilion-ink">Events<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="clubs.html" class="flex items-center justify-between border-b border-line py-4 font-display text-[1.6rem] font-medium aria-[current=page]:italic aria-[current=page]:text-vermilion-ink">Book clubs<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="finder.html" aria-current="page" class="flex items-center justify-between border-b border-line py-4 font-display text-[1.6rem] font-medium aria-[current=page]:italic aria-[current=page]:text-vermilion-ink">Find a read<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="visit.html" class="flex items-center justify-between border-b border-line py-4 font-display text-[1.6rem] font-medium aria-[current=page]:italic aria-[current=page]:text-vermilion-ink">Visit us<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+          <li><a href="bag.html" class="flex items-center justify-between border-b border-line py-4 font-display text-[1.6rem] font-medium aria-[current=page]:italic aria-[current=page]:text-vermilion-ink">Your bag<span aria-hidden="true" class="font-sans text-xl text-muted">→</span></a></li>
+        </ul>
+        <p class="mt-5 flex items-center gap-2 text-sm text-muted"><span data-shop-dot class="dot text-[#2f8a4e]"></span><span data-shop-status>Open today 9am–8pm</span></p>
+        <p class="mt-1 text-sm text-muted">112 Maple Street, Burlington · <a href="tel:+18025550154" class="font-bold text-ink underline underline-offset-4">(802) 555-0154</a></p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="border-b border-line">
+      <div class="container-x grid items-center gap-10 pb-12 pt-12 sm:pt-16 lg:grid-cols-12">
+        <div class="lg:col-span-7">
+          <p class="kicker">The reading finder</p>
+          <h1 class="display mt-3 text-[3rem] sm:text-[4.2rem]">Find your <span class="italic text-vermilion-ink">next read.</span></h1>
+          <p class="mt-4 max-w-xl text-lg leading-relaxed text-muted">It’s what we do at the counter all day: a few questions, then three books pulled off the shelf, each with a reason. Buying for someone else? Answer for them.</p>
+        </div>
+        <div class="lg:col-span-5">
+          <svg viewBox="0 0 400 240" class="h-auto w-full" role="img" aria-label="A signpost pointing three ways above a stack of books">
+            <path d="M40 228h320" stroke="#17463a" stroke-width="8"/>
+            <rect x="90" y="196" width="150" height="26" fill="#17463a"/><rect x="100" y="170" width="132" height="26" fill="#c8401f"/><rect x="84" y="144" width="156" height="26" fill="#e3b25a"/><rect x="110" y="118" width="120" height="26" fill="#1f3b57"/>
+            <path d="M100 200h6M110 174h6M94 148h6M120 122h6" stroke="#f7f1e3" stroke-width="3"/>
+            <path d="M300 228V36" stroke="#6b4a2b" stroke-width="8"/>
+            <path d="M300 50h70l14 14-14 14h-70z" fill="#c8401f"/><path d="M300 94h-74l-14 14 14 14h74z" fill="#17463a"/><path d="M300 136h56l12 12-12 12h-56z" fill="#e3b25a"/>
+            <g fill="#f7f1e3"><rect x="312" y="61" width="44" height="5" rx="2"/><rect x="236" y="105" width="52" height="5" rx="2"/></g><rect x="312" y="145" width="30" height="5" rx="2" fill="#0f3229"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="container-x py-12 sm:py-16">
+      <div class="mx-auto max-w-3xl">
+        <form id="finder-form" class="rounded-md bg-leaf p-6 ring-1 ring-line sm:p-10" aria-describedby="finder-progress">
+          <div class="flex items-center justify-between gap-4">
+            <p id="finder-progress" class="text-[13px] font-bold uppercase tracking-[0.18em] text-vermilion-ink" aria-live="polite">Question 1 of 4</p>
+          </div>
+          <div class="mt-3 h-2 overflow-hidden rounded-full bg-vellum" aria-hidden="true"><div id="finder-bar" class="h-full rounded-full bg-pine transition-[width] duration-500" style="width:25%"></div></div>
+          <div class="mt-8">
+            <fieldset data-step="0">
+              <legend tabindex="-1" class="font-display text-[1.9rem] font-semibold leading-tight focus:outline-none sm:text-[2.3rem]">Who is it for?</legend>
+              <div data-options class="mt-6 grid gap-3 sm:grid-cols-2"></div>
+            </fieldset>
+            <fieldset data-step="1" hidden>
+              <legend tabindex="-1" class="font-display text-[1.9rem] font-semibold leading-tight focus:outline-none sm:text-[2.3rem]">What are you in the mood for?</legend>
+              <div data-options class="mt-6 grid gap-3 sm:grid-cols-2"></div>
+            </fieldset>
+            <fieldset data-step="2" hidden>
+              <legend tabindex="-1" class="font-display text-[1.9rem] font-semibold leading-tight focus:outline-none sm:text-[2.3rem]">How much reading time do you have?</legend>
+              <div data-options class="mt-6 grid gap-3 sm:grid-cols-2"></div>
+            </fieldset>
+            <fieldset data-step="3" hidden>
+              <legend tabindex="-1" class="font-display text-[1.9rem] font-semibold leading-tight focus:outline-none sm:text-[2.3rem]">Hardcover or paperback?</legend>
+              <div data-options class="mt-6 grid gap-3 sm:grid-cols-2"></div>
+            </fieldset>
+          </div>
+          <p id="finder-error" class="field-error mt-4" aria-live="polite"></p>
+          <div class="mt-8 flex flex-wrap items-center justify-between gap-3">
+            <button id="finder-back" type="button" hidden class="btn-ghost">Back</button>
+            <button type="submit" class="btn-primary ml-auto"><span id="finder-next-label">Next question</span> <span aria-hidden="true">→</span></button>
+          </div>
+        </form>
+
+        <div id="finder-results" hidden>
+          <p class="kicker">Pulled off the shelf for you</p>
+          <h2 id="finder-results-heading" tabindex="-1" class="display mt-3 text-[2.4rem] focus:outline-none sm:text-[3rem]">Your three books</h2>
+          <p id="finder-summary" class="mt-2 text-[15.5px] font-bold text-muted"></p>
+          <ol id="finder-list" class="mt-8 space-y-6"></ol>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <button id="finder-restart" type="button" class="btn-ghost">Start again</button>
+            <a href="shop.html" class="btn-pine">Browse every book</a>
+          </div>
+          <p class="mt-6 text-[15px] text-muted">Still not sure? Come in and ask. Talking about books is the best part of the job.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="on-dark mt-auto bg-pine-deep text-paper">
+    <div class="h-3 bg-pine shadow-[0_6px_10px_-4px_rgb(0_0_0/.35)]" aria-hidden="true"></div>
+    <div class="container-x grid grid-cols-2 gap-x-6 gap-y-12 py-16 sm:py-20 lg:grid-cols-12">
+      <div class="col-span-2 lg:col-span-4">
+        <p class="font-display text-[2.2rem] font-medium leading-[1.05] tracking-[-0.015em] sm:text-[2.6rem]">Come for a book.<br><span class="italic text-ember">Stay for a chapter.</span></p>
+        <p class="mt-5 max-w-sm text-[15px] leading-relaxed text-paper/80">An independent bookstore with a café corner on Maple Street, Burlington, since 1998.</p>
+        <form data-form="newsletter" class="mt-7 max-w-md">
+          <label for="nl-email" class="text-[15px] font-bold">The Larchmere Letter: new books and events, once a month</label>
+          <div class="mt-2.5 flex flex-col gap-2 sm:flex-row">
+            <input id="nl-email" name="email" type="email" required autocomplete="email" data-label="Your email" class="h-12 w-full min-w-0 rounded-md border-[1.5px] border-paper/30 bg-paper/10 px-4 text-paper placeholder:text-paper/60 focus:border-paper focus:outline-none sm:flex-1" placeholder="you@example.com">
+            <button type="submit" class="btn-cream shrink-0">Sign up</button>
+          </div>
+        </form>
+      </div>
+      <nav aria-label="Shop" class="lg:col-span-2 lg:col-start-6">
+        <h2 class="text-[12.5px] font-bold uppercase tracking-[0.22em] text-brass">Shop</h2>
+        <ul class="mt-4 space-y-2.5 text-[15px]">
+          <li><a href="shop.html" class="text-paper/85 underline-offset-4 hover:text-paper hover:underline">All books</a></li>
+          <li><a href="shop.html?picks=1" class="text-paper/85 underline-offset-4 hover:text-paper hover:underline">Staff picks</a></li>
+          <li><a href="shop.html?new=1&amp;sort=newest" class="text-paper/85 underline-offset-4 hover:text-paper hover:underline">New &amp; upcoming</a></li>
+          <li><a href="shop.html?genre=kids" class="text-paper/85 underline-offset-4 hover:text-paper hover:underline">Kids’ books</a></li>
+          <li><a href="finder.html" class="text-paper/85 underline-offset-4 hover:text-paper hover:underline">Find your next read</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="The shop" class="lg:col-span-2">
+        <h2 class="text-[12.5px] font-bold uppercase tracking-[0.22em] text-brass">The shop</h2>
+        <ul class="mt-4 space-y-2.5 text-[15px]">
+          <li><a href="events.html" class="text-paper/85 underline-offset-4 hover:text-paper hover:underline">Events</a></li>
+          <li><a href="clubs.html" class="text-paper/85 underline-offset-4 hover:text-paper hover:underline">Book clubs</a></li>
+          <li><a href="visit.html" class="text-paper/85 underline-offset-4 hover:text-paper hover:underline">Visit &amp; hours</a></li>
+          <li><a href="visit.html#contact" class="text-paper/85 underline-offset-4 hover:text-paper hover:underline">Special orders</a></li>
+          <li><a href="bag.html" class="text-paper/85 underline-offset-4 hover:text-paper hover:underline">Your bag</a></li>
+        </ul>
+      </nav>
+      <div class="col-span-2 lg:col-span-3">
+        <h2 class="text-[12.5px] font-bold uppercase tracking-[0.22em] text-brass">Find us</h2>
+        <address class="mt-4 space-y-2.5 text-[15px] not-italic text-paper/85">
+          <p>112 Maple Street<br>Burlington, VT 05401</p>
+          <p>Mon–Thu 9am–8pm · Fri–Sat 9am–9pm<br>Sunday 10am–6pm</p>
+          <p><a href="tel:+18025550154" class="underline-offset-4 hover:text-paper hover:underline">(802) 555-0154</a></p>
+          <p><a href="mailto:hello@larchmerebooks.example" class="[overflow-wrap:anywhere] underline-offset-4 hover:text-paper hover:underline">hello@larchmerebooks.example</a></p>
+        </address>
+      </div>
+    </div>
+    <div class="border-t border-paper/15">
+      <div class="container-x flex flex-col gap-2 py-6 text-[13.5px] text-paper/70 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Larchmere Books. Bookselling in Burlington, Vermont.</p>
+        <p>Larchmere Books is a fictional bookstore, made up for this website template.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

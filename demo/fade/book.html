@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book a Chair Online — Fade Bros. Barber Co.</title>
+  <meta name="description" content="Book a haircut, beard trim or hot towel shave at Fade Bros. in Logan Square or Pilsen. Choose your services and barber and see open times for the day you want.">
+  <meta name="theme-color" content="#151515">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Fade Bros. Barber Co.">
+  <meta property="og:title" content="Book a Chair Online — Fade Bros. Barber Co.">
+  <meta property="og:description" content="Book a haircut, beard trim or hot towel shave at Fade Bros. in Logan Square or Pilsen. Choose your services and barber and see open times for the day you want.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo:wdth,wght@62..125,400..900&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="book" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-md bg-ink px-5 py-3 text-sm font-bold text-paper focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <header id="site-header" class="site-header">
+    <div class="pole-band" aria-hidden="true"></div>
+    <div class="container-x flex h-[4.25rem] items-center justify-between gap-4">
+      <a href="index.html" class="flex items-center gap-2.5">
+        <svg viewBox="0 0 40 40" class="h-10 w-10 shrink-0" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="19" fill="#151515"/><circle cx="20" cy="20" r="15.5" fill="none" stroke="#f2ead9" stroke-width="1.2" stroke-dasharray="1.5 2.6"/><clipPath id="lm-151515"><rect x="14.5" y="8" width="11" height="24" rx="2"/></clipPath><rect x="14.5" y="8" width="11" height="24" rx="2" fill="#f2ead9"/><g clip-path="url(#lm-151515)"><path d="M8 14 32 4v5L8 19ZM8 24 32 14v5L8 29ZM8 34 32 24v5L8 39Z" fill="#b5281c"/><path d="M8 19 32 9v2.5L8 21.5ZM8 29 32 19v2.5L8 31.5Z" fill="#1d3557"/></g><rect x="13" y="6" width="14" height="3" rx="1.5" fill="#e0a83a"/><rect x="13" y="31" width="14" height="3" rx="1.5" fill="#e0a83a"/></svg>
+        <span class="flex flex-col leading-none"><span class="font-display text-[1.65rem] uppercase tracking-[0.02em]">Fade Bros.</span><span class="condensed mt-0.5 text-[10px] font-extrabold uppercase tracking-[0.3em] text-red">Barber Co. · Chicago</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-6 xl:gap-8">
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="barbers.html" class="nav-link">Barbers</a></li>
+          <li><a href="shop.html" class="nav-link">Shop</a></li>
+          <li><a href="locations.html" class="nav-link">Locations</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2.5">
+        <a href="shop.html#bag" class="bag-link" data-bag-link aria-label="Your bag, 0 items"><span class="sr-only" data-bag-label>Your bag</span><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 12H6.2Z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="bag-count" data-bag-count hidden>0</span></a>
+        <a href="book.html" class="btn-red btn-sm hidden sm:inline-flex" aria-current="page">Book a chair</a>
+        <button id="menu-toggle" type="button" class="menu-toggle lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <svg data-icon-open viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg data-icon-close viewBox="0 0 24 24" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="mobile-menu lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-10 pt-2">
+        <ul>
+          <li><a href="services.html" class="mobile-link">Services<span aria-hidden="true" class="text-2xl">→</span></a></li>
+          <li><a href="barbers.html" class="mobile-link">Barbers<span aria-hidden="true" class="text-2xl">→</span></a></li>
+          <li><a href="shop.html" class="mobile-link">Shop<span aria-hidden="true" class="text-2xl">→</span></a></li>
+          <li><a href="locations.html" class="mobile-link">Locations<span aria-hidden="true" class="text-2xl">→</span></a></li>
+          <li><a href="about.html" class="mobile-link">About<span aria-hidden="true" class="text-2xl">→</span></a></li>
+          <li><a href="contact.html" class="mobile-link">Contact<span aria-hidden="true" class="text-2xl">→</span></a></li>
+        </ul>
+        <a href="book.html" class="btn-red mt-8 w-full">Book a chair</a>
+        <p class="mt-6 text-sm text-mute">Logan Square <a class="text-link" href="tel:+17735550142">(773) 555-0142</a><br>Pilsen <a class="text-link" href="tel:+13125550187">(312) 555-0187</a></p>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="flex-1">
+<section class="border-b-2 border-ink bg-sand pb-10 pt-12 lg:pt-16" aria-labelledby="page-title">
+      <div class="container-x flex flex-wrap items-end justify-between gap-6">
+        <div>
+          <p class="eyebrow">Online booking</p>
+          <h1 id="page-title" class="mt-4 font-display text-[clamp(3rem,7vw,5.5rem)] leading-[0.9]">Book a chair</h1>
+          <p class="mt-4 max-w-xl text-mute">Five quick steps. Times are live from each barber’s schedule and the length of your services. You pay in the shop.</p>
+        </div>
+        <p class="condensed max-w-xs rounded-md border-2 border-dashed border-ink/50 px-4 py-3 text-xs font-bold uppercase tracking-[0.12em] text-mute">Free to move or cancel up to 4 hours before your appointment.</p>
+      </div>
+    </section>
+
+    <section class="py-12 lg:py-16" data-booking aria-label="Booking">
+      <div class="container-x">
+        <ol class="steps" aria-label="Booking steps">
+          <li class="step" data-step-indicator="1" aria-current="step"><span class="step-bar" aria-hidden="true"></span><span><span class="sr-only">Step 1: </span><span class="step-label">Shop</span></span></li>
+          <li class="step" data-step-indicator="2"><span class="step-bar" aria-hidden="true"></span><span><span class="sr-only">Step 2: </span><span class="step-label">Services</span></span></li>
+          <li class="step" data-step-indicator="3"><span class="step-bar" aria-hidden="true"></span><span><span class="sr-only">Step 3: </span><span class="step-label">Barber</span></span></li>
+          <li class="step" data-step-indicator="4"><span class="step-bar" aria-hidden="true"></span><span><span class="sr-only">Step 4: </span><span class="step-label">Time</span></span></li>
+          <li class="step" data-step-indicator="5"><span class="step-bar" aria-hidden="true"></span><span><span class="sr-only">Step 5: </span><span class="step-label">Details</span></span></li>
+        </ol>
+
+        <div class="mt-10 grid gap-10 lg:grid-cols-[1fr_22rem] lg:gap-12" data-booking-main>
+          <!-- Demo only. To take real bookings, replace this flow with your booking provider's
+               widget or API (Square Appointments, Fresha, Booksy or Cal.com) or post the final
+               request to your own backend. See confirm() in assets/js/main.js and DOCS.md. -->
+          <form id="booking-form" class="min-w-0" novalidate>
+            <fieldset data-step="1">
+              <legend class="sr-only">Step 1 of 5: shop</legend>
+              <h2 id="step-1-title" class="step-title" tabindex="-1">Pick a shop</h2>
+              <p class="mt-2 text-mute">Same prices at both. Barbers work set days at each shop.</p>
+              <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                <label class="option">
+                  <input type="radio" name="location" value="logan" class="option-input" checked>
+                  <span class="option-body gap-3 p-5">
+                    <span class="flex items-start justify-between gap-3"><span class="font-display text-3xl uppercase leading-none">Logan Square</span><span class="option-check"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span></span>
+                    <span class="text-sm text-mute">2741 N Milwaukee Ave, Chicago, IL 60647</span>
+                    <span class="mt-1"><span class="status" data-open-now="logan"><span class="status-dot" aria-hidden="true"></span><span data-open-text>See opening hours</span></span></span>
+                    <span class="text-sm" data-loc-barbers="logan"></span>
+                  </span>
+                </label>
+                <label class="option">
+                  <input type="radio" name="location" value="pilsen" class="option-input">
+                  <span class="option-body gap-3 p-5">
+                    <span class="flex items-start justify-between gap-3"><span class="font-display text-3xl uppercase leading-none">Pilsen</span><span class="option-check"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span></span>
+                    <span class="text-sm text-mute">1532 W 18th St, Chicago, IL 60608</span>
+                    <span class="mt-1"><span class="status" data-open-now="pilsen"><span class="status-dot" aria-hidden="true"></span><span data-open-text>See opening hours</span></span></span>
+                    <span class="text-sm" data-loc-barbers="pilsen"></span>
+                  </span>
+                </label>
+              </div>
+            </fieldset>
+
+            <fieldset data-step="2" hidden>
+              <legend class="sr-only">Step 2 of 5: services</legend>
+              <h2 id="step-2-title" class="step-title" tabindex="-1">What are we doing?</h2>
+              <p class="mt-2 text-mute">Choose one or more. The time and price add up as you go.</p>
+              <p id="services-error" class="field-error mt-4" data-error="services" role="alert"></p>
+              <div class="mt-6 space-y-8">
+                <div>
+                  <h3 class="condensed border-b-2 border-ink pb-2 text-sm font-extrabold uppercase tracking-[0.18em]">Cuts</h3>
+                  <ul class="mt-3 grid gap-3 sm:grid-cols-2">
+                    <li><label class="option"><input type="checkbox" name="services" value="fade" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">The Fade</span><span class="font-display text-xl">$45</span></span><span class="block text-sm text-mute">45 min</span></span></span></label></li>
+                    <li><label class="option"><input type="checkbox" name="services" value="classic" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">Classic cut</span><span class="font-display text-xl">$40</span></span><span class="block text-sm text-mute">40 min</span></span></span></label></li>
+                    <li><label class="option"><input type="checkbox" name="services" value="scissor" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">Scissor cut</span><span class="font-display text-xl">$52</span></span><span class="block text-sm text-mute">1 hr</span></span></span></label></li>
+                    <li><label class="option"><input type="checkbox" name="services" value="curly" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">Curly &amp; textured cut</span><span class="font-display text-xl">$52</span></span><span class="block text-sm text-mute">1 hr</span></span></span></label></li>
+                    <li><label class="option"><input type="checkbox" name="services" value="buzz" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">Buzz cut</span><span class="font-display text-xl">$25</span></span><span class="block text-sm text-mute">20 min</span></span></span></label></li>
+                    <li><label class="option"><input type="checkbox" name="services" value="lineup" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">Line-up</span><span class="font-display text-xl">$20</span></span><span class="block text-sm text-mute">15 min</span></span></span></label></li>
+                    <li><label class="option"><input type="checkbox" name="services" value="design" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">Hair design add-on</span><span class="font-display text-xl">$15</span></span><span class="block text-sm text-mute">15 min</span></span></span></label></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="condensed border-b-2 border-ink pb-2 text-sm font-extrabold uppercase tracking-[0.18em]">Beard</h3>
+                  <ul class="mt-3 grid gap-3 sm:grid-cols-2">
+                    <li><label class="option"><input type="checkbox" name="services" value="beard-trim" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">Beard trim</span><span class="font-display text-xl">$22</span></span><span class="block text-sm text-mute">20 min</span></span></span></label></li>
+                    <li><label class="option"><input type="checkbox" name="services" value="beard-sculpt" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">Hot towel beard sculpt</span><span class="font-display text-xl">$34</span></span><span class="block text-sm text-mute">30 min</span></span></span></label></li>
+                    <li><label class="option"><input type="checkbox" name="services" value="beard-gray" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">Gray blending</span><span class="font-display text-xl">$35</span></span><span class="block text-sm text-mute">30 min</span></span></span></label></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="condensed border-b-2 border-ink pb-2 text-sm font-extrabold uppercase tracking-[0.18em]">Shaves</h3>
+                  <ul class="mt-3 grid gap-3 sm:grid-cols-2">
+                    <li><label class="option"><input type="checkbox" name="services" value="hot-shave" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">Hot towel shave</span><span class="font-display text-xl">$48</span></span><span class="block text-sm text-mute">45 min</span></span></span></label></li>
+                    <li><label class="option"><input type="checkbox" name="services" value="head-shave" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">Head shave</span><span class="font-display text-xl">$38</span></span><span class="block text-sm text-mute">30 min</span></span></span></label></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="condensed border-b-2 border-ink pb-2 text-sm font-extrabold uppercase tracking-[0.18em]">Kids</h3>
+                  <ul class="mt-3 grid gap-3 sm:grid-cols-2">
+                    <li><label class="option"><input type="checkbox" name="services" value="kids" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">Kids cut</span><span class="font-display text-xl">$28</span></span><span class="block text-sm text-mute">30 min</span></span></span></label></li>
+                    <li><label class="option"><input type="checkbox" name="services" value="first-cut" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">First haircut</span><span class="font-display text-xl">$32</span></span><span class="block text-sm text-mute">30 min</span></span></span></label></li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 class="condensed border-b-2 border-ink pb-2 text-sm font-extrabold uppercase tracking-[0.18em]">Packages</h3>
+                  <ul class="mt-3 grid gap-3 sm:grid-cols-2">
+                    <li><label class="option"><input type="checkbox" name="services" value="cut-beard" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">Cut &amp; beard</span><span class="font-display text-xl">$60</span></span><span class="block text-sm text-mute">1 hr</span></span></span></label></li>
+                    <li><label class="option"><input type="checkbox" name="services" value="full-service" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">The Full Service</span><span class="font-display text-xl">$92</span></span><span class="block text-sm text-mute">1 hr 30 min</span></span></span></label></li>
+                    <li><label class="option"><input type="checkbox" name="services" value="dad-kid" class="option-input" aria-describedby="services-error"><span class="option-body flex-row items-start gap-3"><span class="option-check mt-0.5"><svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="min-w-0 flex-1"><span class="flex items-baseline justify-between gap-3"><span class="font-bold">Father &amp; kid</span><span class="font-display text-xl">$64</span></span><span class="block text-sm text-mute">1 hr</span></span></span></label></li>
+                  </ul>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset data-step="3" hidden>
+              <legend class="sr-only">Step 3 of 5: barber</legend>
+              <h2 id="step-3-title" class="step-title" tabindex="-1">Who’s cutting?</h2>
+              <p class="mt-2 text-mute" data-barber-help></p>
+              <ul class="mt-6 grid gap-3 sm:grid-cols-2" data-barber-list></ul>
+              <p class="mt-4 text-sm text-mute" data-barber-excluded></p>
+            </fieldset>
+
+            <fieldset data-step="4" hidden>
+              <legend class="sr-only">Step 4 of 5: date and time</legend>
+              <h2 id="step-4-title" class="step-title" tabindex="-1">Pick a time</h2>
+              <p class="mt-2 text-mute">All times are Chicago time (CT). Use the arrow keys to move between days.</p>
+              <div class="mt-6 grid gap-8 xl:grid-cols-[minmax(0,20rem)_1fr]">
+                <div class="card p-4">
+                  <div class="flex items-center justify-between gap-2">
+                    <button type="button" class="grid h-10 w-10 place-items-center rounded-md border-2 border-ink transition hover:bg-sand disabled:opacity-30 disabled:hover:bg-transparent" data-cal-prev aria-label="Previous month"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
+                    <p id="cal-month" class="font-display text-2xl" data-cal-month aria-live="polite">Month</p>
+                    <button type="button" class="grid h-10 w-10 place-items-center rounded-md border-2 border-ink transition hover:bg-sand disabled:opacity-30 disabled:hover:bg-transparent" data-cal-next aria-label="Next month"><svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
+                  </div>
+                  <table class="cal mt-3" aria-labelledby="cal-month">
+                    <thead><tr><th scope="col"><abbr title="Monday">Mo</abbr></th><th scope="col"><abbr title="Tuesday">Tu</abbr></th><th scope="col"><abbr title="Wednesday">We</abbr></th><th scope="col"><abbr title="Thursday">Th</abbr></th><th scope="col"><abbr title="Friday">Fr</abbr></th><th scope="col"><abbr title="Saturday">Sa</abbr></th><th scope="col"><abbr title="Sunday">Su</abbr></th></tr></thead>
+                    <tbody data-cal-grid></tbody>
+                  </table>
+                  <p class="mt-2 flex items-center gap-2 text-xs text-mute"><span class="inline-block h-3 w-3 rounded-sm border-2 border-ink/30 bg-card"></span>Has open times<span class="ml-3 line-through">12</span> Fully booked or closed</p>
+                </div>
+                <div class="min-w-0">
+                  <h3 class="condensed text-sm font-extrabold uppercase tracking-[0.18em]" data-slot-heading aria-live="polite">Choose a day</h3>
+                  <p id="slot-error" class="field-error mt-3" data-error="slot" role="alert"></p>
+                  <div class="mt-4 space-y-5" data-slot-list></div>
+                  <p class="mt-4 text-mute" data-slot-empty hidden>No open times on this day. Try another day or choose “First available”.</p>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset data-step="5" hidden>
+              <legend class="sr-only">Step 5 of 5: your details</legend>
+              <h2 id="step-5-title" class="step-title" tabindex="-1">Your details</h2>
+              <p class="mt-2 text-mute">So your barber knows who to expect. We never share your number.</p>
+              <div class="mt-6 grid gap-5 sm:grid-cols-2">
+                <div class="sm:col-span-2"><label for="b-name" class="field-label">Full name</label><input id="b-name" name="name" class="field" autocomplete="name" required aria-describedby="b-name-error"><p id="b-name-error" class="field-error" data-error="name"></p></div>
+                <div><label for="b-phone" class="field-label">Mobile number</label><input id="b-phone" name="phone" type="tel" class="field" autocomplete="tel" inputmode="tel" placeholder="(312) 555-0123" required aria-describedby="b-phone-error"><p id="b-phone-error" class="field-error" data-error="phone"></p></div>
+                <div><label for="b-email" class="field-label">Email</label><input id="b-email" name="email" type="email" class="field" autocomplete="email" placeholder="you@example.com" required aria-describedby="b-email-error"><p id="b-email-error" class="field-error" data-error="email"></p></div>
+                <div class="sm:col-span-2"><label for="b-notes" class="field-label">Anything we should know? <span class="font-normal text-mute">(optional)</span></label><textarea id="b-notes" name="notes" rows="3" maxlength="300" class="field" placeholder="E.g. keep the length on top, first time with a straight razor…"></textarea></div>
+                <label class="check sm:col-span-2"><input type="checkbox" name="reminder" class="check-input" checked><span>Text me a reminder the day before</span></label>
+                <div class="sm:col-span-2"><label class="check"><input type="checkbox" name="policy" class="check-input" aria-describedby="b-policy-error"><span>I understand bookings can be moved or canceled for free up to 4 hours before; later changes are charged 50%.</span></label><p id="b-policy-error" class="field-error" data-error="policy"></p></div>
+              </div>
+            </fieldset>
+
+            <p class="mt-8 text-sm font-bold lg:hidden" data-running-total aria-live="polite"></p>
+            <div class="mt-4 flex items-center justify-between gap-4 border-t-2 border-ink pt-6 lg:mt-10">
+              <button type="button" class="btn-outline" data-back hidden>Back</button>
+              <button type="submit" class="btn-red ml-auto" data-next>Continue</button>
+            </div>
+          </form>
+
+          <aside class="booking-summary h-max" aria-labelledby="summary-title">
+            <h2 id="summary-title" class="font-display text-3xl">Your chair</h2>
+            <dl class="mt-5 space-y-4 text-sm">
+              <div><dt class="condensed text-xs font-extrabold uppercase tracking-[0.18em] text-mute">Shop</dt><dd class="mt-1 font-bold" data-summary-location>—</dd></div>
+              <div><dt class="condensed text-xs font-extrabold uppercase tracking-[0.18em] text-mute">Services</dt><dd class="mt-1"><ul class="space-y-1" data-summary-items><li class="text-mute">Nothing chosen yet</li></ul></dd></div>
+              <div><dt class="condensed text-xs font-extrabold uppercase tracking-[0.18em] text-mute">Barber</dt><dd class="mt-1 font-bold" data-summary-barber>First available</dd></div>
+              <div><dt class="condensed text-xs font-extrabold uppercase tracking-[0.18em] text-mute">When</dt><dd class="mt-1 font-bold" data-summary-when>Not chosen</dd></div>
+            </dl>
+            <div class="mt-6 border-t-2 border-dashed border-ink/30 pt-4">
+              <p class="flex justify-between text-sm"><span>Time in the chair</span><span class="font-bold" data-summary-duration>0 min</span></p>
+              <p class="mt-2 flex items-baseline justify-between"><span class="font-bold uppercase tracking-[0.06em]">Total</span><span class="font-display text-4xl" data-summary-total>$0</span></p>
+              <p class="mt-3 text-xs text-mute">Pay in the shop after your service. Tips go 100% to your barber.</p>
+            </div>
+          </aside>
+        </div>
+
+        <div class="mx-auto max-w-3xl focus:outline-none" data-booking-done tabindex="-1" hidden>
+          <div class="ticket card-shadow p-7 sm:p-10">
+            <p class="condensed text-xs font-extrabold uppercase tracking-[0.2em] text-red">Booking received · <span data-done-ref>FB-0000</span></p>
+            <h2 class="mt-3 font-display text-5xl leading-none sm:text-6xl">See you soon, <span data-done-name>friend</span></h2>
+            <p class="mt-4 rounded-md border-2 border-dashed border-ink/40 bg-sand p-4 text-sm"><strong>Your chair is on hold.</strong> We’ll text the number you gave us to confirm within a few minutes. Quote your reference if you call; moving or canceling is free up to 4 hours before.</p>
+            <dl class="mt-8 grid gap-x-8 gap-y-5 border-t-2 border-dashed border-ink/30 pt-6 sm:grid-cols-2" data-done-list></dl>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <button type="button" class="btn-red" data-ics>Add to calendar (.ics)</button>
+              <button type="button" class="btn-outline" data-restart>Book another</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="on-dark mt-auto bg-ink">
+    <div class="pole-band" aria-hidden="true"></div>
+    <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_0.8fr_1.2fr_1.3fr]">
+      <div>
+        <a href="index.html" class="flex items-center gap-2.5">
+        <svg viewBox="0 0 40 40" class="h-10 w-10 shrink-0" aria-hidden="true" focusable="false"><circle cx="20" cy="20" r="19" fill="#f2ead9"/><circle cx="20" cy="20" r="15.5" fill="none" stroke="#151515" stroke-width="1.2" stroke-dasharray="1.5 2.6"/><clipPath id="lm-f2ead9"><rect x="14.5" y="8" width="11" height="24" rx="2"/></clipPath><rect x="14.5" y="8" width="11" height="24" rx="2" fill="#151515"/><g clip-path="url(#lm-f2ead9)"><path d="M8 14 32 4v5L8 19ZM8 24 32 14v5L8 29ZM8 34 32 24v5L8 39Z" fill="#b5281c"/><path d="M8 19 32 9v2.5L8 21.5ZM8 29 32 19v2.5L8 31.5Z" fill="#1d3557"/></g><rect x="13" y="6" width="14" height="3" rx="1.5" fill="#e0a83a"/><rect x="13" y="31" width="14" height="3" rx="1.5" fill="#e0a83a"/></svg>
+        <span class="flex flex-col leading-none"><span class="font-display text-[1.65rem] uppercase tracking-[0.02em]">Fade Bros.</span><span class="condensed mt-0.5 text-[10px] font-extrabold uppercase tracking-[0.3em] text-brass">Barber Co. · Chicago</span></span>
+      </a>
+        <p class="mt-5 max-w-xs text-sm leading-relaxed text-paper/75">An independent barbershop with two shops in Chicago. Fades, beards and straight-razor shaves since 2012.</p>
+        <ul class="mt-6 flex gap-5 text-sm">
+          <li><a href="#" class="footer-link">Instagram</a></li>
+          <li><a href="#" class="footer-link">TikTok</a></li>
+          <li><a href="#" class="footer-link">Yelp</a></li>
+        </ul>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer-heading">The shop</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="services.html" class="footer-link">Services &amp; prices</a></li>
+          <li><a href="barbers.html" class="footer-link">Our barbers</a></li>
+          <li><a href="book.html" class="footer-link">Book a chair</a></li>
+          <li><a href="shop.html" class="footer-link">Products</a></li>
+          <li><a href="shop.html#gift-cards" class="footer-link">Gift cards</a></li>
+          <li><a href="about.html#careers" class="footer-link">Careers &amp; chair rental</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer-heading">Two shops</h2>
+        <ul class="mt-4 space-y-5 text-sm">
+          <li>
+            <p class="font-bold text-paper">Logan Square</p>
+            <p class="mt-1 text-paper/75">2741 N Milwaukee Ave, Chicago</p>
+            <p class="mt-1"><a href="tel:+17735550142" class="footer-link">(773) 555-0142</a></p>
+            <p class="mt-2"><span class="status" data-open-now="logan"><span class="status-dot" aria-hidden="true"></span><span data-open-text>See opening hours</span></span></p>
+          </li>
+          <li>
+            <p class="font-bold text-paper">Pilsen</p>
+            <p class="mt-1 text-paper/75">1532 W 18th St, Chicago</p>
+            <p class="mt-1"><a href="tel:+13125550187" class="footer-link">(312) 555-0187</a></p>
+            <p class="mt-2"><span class="status" data-open-now="pilsen"><span class="status-dot" aria-hidden="true"></span><span data-open-text>See opening hours</span></span></p>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="footer-heading">The Line-Up</h2>
+        <p class="mt-4 text-sm text-paper/75">A short email when a barber has last-minute openings, plus new products. Twice a month at most.</p>
+        <form class="mt-5" data-newsletter novalidate>
+          <label for="n-email" class="sr-only">Email address</label>
+          <div class="flex gap-2"><input id="n-email" name="email" type="email" placeholder="you@example.com" class="field-dark min-w-0 flex-1" autocomplete="email" required aria-describedby="n-email-error"><button type="submit" class="btn-paper btn-sm shrink-0">Sign up</button></div>
+          <p id="n-email-error" class="field-error on-dark" data-error="email"></p>
+          <p class="mt-3 text-sm text-brass" data-newsletter-success hidden role="status">Thanks! Look out for a confirmation email; click the link and you’re on The Line-Up.</p>
+        </form>
+      </div>
+    </div>
+    <div class="border-t-2 border-paper/10">
+      <div class="container-x flex flex-col gap-3 py-6 text-xs text-paper/70 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Fade Bros. Barber Co. A fictional barbershop from a free Freeframe template.</p>
+        <p><a href="locations.html" class="footer-link">Hours &amp; directions</a> · <a href="contact.html" class="footer-link">Contact</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

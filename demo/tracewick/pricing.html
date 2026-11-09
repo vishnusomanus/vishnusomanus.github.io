@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Useful visibility. Predictable spend. — Tracewick</title>
+    <meta
+      name="description"
+      content="Estimate Tracewick costs from ingestion, retention and engineering seats. Every part of the calculation is visible."
+    />
+    <meta name="theme-color" content="#091721" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tracewick" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Useful visibility. Predictable spend. — Tracewick" />
+    <meta
+      property="og:description"
+      content="Estimate Tracewick costs from ingestion, retention and engineering seats. Every part of the calculation is visible."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&amp;family=Golos+Text:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="pricing" class="flex min-h-screen flex-col font-sans">
+    <a
+      class="sr-only z-50 bg-cyan px-5 py-3 text-ink focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      href="#main"
+      >Skip to content</a
+    >
+    <header class="border-b border-line bg-ink">
+      <div class="wrap flex min-h-20 items-center justify-between gap-4">
+        <a class="flex items-center gap-3" href="index.html"
+          ><svg class="size-9 shrink-0" viewBox="0 0 40 40" aria-hidden="true">
+            <path d="M3 8h34M20 8v26M7 18h26M10 29h20" fill="none" stroke="#6ce9e0" stroke-width="3" />
+            <circle cx="20" cy="18" r="5" fill="#091721" stroke="#e9f3f7" stroke-width="2" /></svg
+          ><span class="font-display text-3xl font-semibold tracking-[.035em]">TRACEWICK</span></a
+        >
+        <nav class="hidden lg:block" aria-label="Main">
+          <div class="flex items-center gap-1">
+            <a class="nav-link" href="platform.html">Platform</a><a class="nav-link" href="console.html">Console</a
+            ><a class="nav-link" href="pricing.html" aria-current="page">Pricing</a
+            ><a class="nav-link" href="docs.html">Docs</a><a class="nav-link" href="status.html">Reliability</a>
+          </div>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="contact.html" class="btn hidden sm:inline-flex"
+            >Talk to an engineer
+            <svg
+              viewBox="0 0 24 24"
+              class="size-4 shrink-0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              aria-hidden="true"
+            >
+              <path d="M4 12h15m-6-6 6 6-6 6" /></svg></a
+          ><button
+            class="grid size-11 place-items-center border border-line lg:hidden"
+            type="button"
+            data-menu-button
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="size-5" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" class="wrap grid gap-2 pb-6 lg:hidden" aria-label="Mobile" hidden>
+        <a class="nav-link" href="platform.html">Platform</a><a class="nav-link" href="console.html">Console</a
+        ><a class="nav-link" href="pricing.html" aria-current="page">Pricing</a
+        ><a class="nav-link" href="docs.html">Docs</a><a class="nav-link" href="status.html">Reliability</a
+        ><a class="btn mt-3" href="contact.html"
+          >Talk to an engineer
+          <svg
+            viewBox="0 0 24 24"
+            class="size-4 shrink-0"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.7"
+            aria-hidden="true"
+          >
+            <path d="M4 12h15m-6-6 6 6-6 6" /></svg
+        ></a>
+      </nav>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="border-b border-line py-12 sm:py-16">
+        <div class="wrap grid gap-8 lg:grid-cols-[1.2fr_.8fr]">
+          <div>
+            <p class="eyebrow text-cyan">03 / A CLEAR COST MODEL</p>
+            <h1 class="mt-5 max-w-3xl font-display text-5xl font-semibold leading-[1.02] tracking-tight sm:text-6xl">
+              Useful visibility. Predictable spend.
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted">
+              Estimate Tracewick costs from ingestion, retention and engineering seats. Every part of the calculation is
+              visible.
+            </p>
+          </div>
+          <aside class="border border-line bg-panel p-6">
+            <p class="eyebrow text-cyan">PAY FOR WHAT YOU KEEP</p>
+            <h2 class="mt-4 font-display text-3xl">Ingestion + retention + seats.</h2>
+            <p class="mt-5 leading-relaxed text-muted">
+              Start with a plan, then tune the workload. Every estimate shows its assumptions and the monthly equivalent
+              of annual billing.
+            </p>
+            <p class="mt-5 text-sm text-muted">Prices in US dollars, excluding sales tax.</p>
+          </aside>
+        </div>
+      </section>
+      <section class="wrap py-12"><div data-plan-grid class="grid gap-5 md:grid-cols-3"></div></section>
+      <section class="wrap grid gap-8 pb-16 lg:grid-cols-[1.1fr_.9fr]">
+        <div class="border border-line bg-panel p-6 sm:p-8">
+          <h2 class="font-display text-4xl font-semibold">Size your workload.</h2>
+          <form data-pricing-form class="mt-7 space-y-5">
+            <label class="label"
+              >Plan<select name="plan" class="field">
+                <option value="team">Team</option>
+                <option value="scale">Scale</option>
+                <option value="organisation">Organization</option>
+              </select></label
+            >
+            <div class="grid gap-5 sm:grid-cols-2">
+              <label class="label"
+                >Ingestion each month (GB)<input
+                  class="field"
+                  name="ingestion"
+                  type="number"
+                  min="1"
+                  max="5000"
+                  value="120" /></label
+              ><label class="label"
+                >Engineering seats<input class="field" name="seats" type="number" min="1" max="250" value="6"
+              /></label>
+            </div>
+            <label class="label"
+              >Retention<select class="field" name="retention">
+                <option value="7">7 days</option>
+                <option value="14" selected>14 days</option>
+                <option value="30">30 days</option>
+                <option value="90">90 days</option>
+              </select></label
+            >
+            <fieldset>
+              <legend class="label">Billing</legend>
+              <div class="flex flex-wrap gap-4">
+                <label class="flex items-center gap-2"
+                  ><input class="accent-cyan" name="billing" type="radio" value="monthly" checked />Monthly</label
+                ><label class="flex items-center gap-2"
+                  ><input class="accent-cyan" name="billing" type="radio" value="annual" />Annual — 10% lower</label
+                >
+              </div>
+            </fieldset>
+            <button type="button" data-save-pricing class="btn">Save this estimate</button
+            ><button type="button" data-reset-pricing class="text-link ml-3 text-sm">Reset estimate</button>
+            <p data-pricing-save-status class="text-sm text-muted" role="status"></p>
+          </form>
+        </div>
+        <aside class="border border-cyan bg-deep p-6 sm:p-8">
+          <p class="eyebrow text-cyan">YOUR MONTHLY EQUIVALENT</p>
+          <p data-price-total class="mt-5 font-display text-6xl font-semibold"></p>
+          <p data-price-period class="mt-2 text-muted"></p>
+          <dl data-price-lines class="mt-8 space-y-4 text-sm"></dl>
+          <p data-price-allowance class="mt-6 border-t border-line pt-5 text-sm text-muted"></p>
+          <p class="mt-4 text-sm text-muted">
+            Excludes sales tax. A planning estimate; contracted volume, support and regional requirements may change the final
+            price.
+          </p>
+          <a class="btn mt-7 w-full" href="contact.html?topic=pricing">Discuss the estimate</a>
+        </aside>
+      </section>
+      <section class="border-y border-line bg-panel py-14">
+        <div class="wrap grid gap-8 md:grid-cols-2">
+          <div>
+            <h2 class="font-display text-4xl font-semibold">A few useful boundaries.</h2>
+            <p class="mt-5 text-muted">
+              We help you control volume before it becomes a bill. Drop sensitive fields, decide what to sample and make
+              retention an explicit choice.
+            </p>
+            <a class="text-link mt-5 inline-block" href="docs.html?guide=sampling">Read the sampling guide</a>
+          </div>
+          <div class="space-y-1">
+            <details class="border-b border-line">
+              <summary class="py-5 font-semibold">What counts as ingestion?</summary>
+              <p class="pb-5 text-muted">
+                The compressed size of accepted trace, metric and log records, measured after your collection rules have
+                been applied.
+              </p>
+            </details>
+            <details class="border-b border-line">
+              <summary class="py-5 font-semibold">Can I change retention?</summary>
+              <p class="pb-5 text-muted">
+                Yes. Choose a supported retention window for new records; existing records follow the retention agreed
+                when they were accepted.
+              </p>
+            </details>
+            <details class="border-b border-line">
+              <summary class="py-5 font-semibold">Is there a separate support fee?</summary>
+              <p class="pb-5 text-muted">
+                Routine engineering support is included. Dedicated onboarding and response arrangements are agreed
+                separately.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-auto border-t border-line bg-deep py-12">
+      <div class="wrap grid gap-9 md:grid-cols-[1.3fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="font-display text-3xl font-semibold tracking-wider">TRACEWICK</a>
+          <p class="mt-4 max-w-sm text-sm leading-relaxed text-muted">
+            One connected view of the systems you build.<br />Less noise. More context. A better next step.
+          </p>
+        </div>
+        <div>
+          <h2 class="eyebrow text-cyan">Explore the signal</h2>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a class="text-link" href="console.html">Service console</a></li>
+            <li><a class="text-link" href="docs.html">Engineering guides</a></li>
+            <li><a class="text-link" href="status.html">Reliability & maintenance</a></li>
+            <li><a class="text-link" href="company.html">Our company</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="eyebrow text-cyan">The people behind it</h2>
+          <p class="mt-4 text-sm leading-relaxed text-muted">
+            The signal room, Academy Street<br />Cary, NC 27511<br />Monday–Friday, 9 a.m.–5:30 p.m.<br />hello@tracewick.example
+          </p>
+          <a class="mt-4 inline-block text-link text-sm" href="tel:+19195550182">(919) 555-0182</a>
+        </div>
+      </div>
+      <div class="wrap mt-10 flex flex-wrap justify-between gap-3 border-t border-line pt-5 text-xs text-muted">
+        <p>© <span data-year></span> Tracewick. Follow the whole request.</p>
+        <p>Tracewick is a fictional business.</p>
+      </div>
+    </footer>
+    <p
+      data-toast
+      class="fixed bottom-5 left-5 right-5 z-50 mx-auto max-w-xl border border-cyan bg-panel p-4 text-sm shadow-xl"
+      role="status"
+      aria-live="polite"
+      hidden
+    ></p>
+  </body>
+</html>

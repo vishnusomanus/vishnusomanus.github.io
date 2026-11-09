@@ -1,0 +1,163 @@
+@import "tailwindcss" source("../");
+@source not "../*.md";
+@source not "../*.json";
+@theme {
+  --font-sans: "Kumbh Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Prata", Georgia, serif;
+  --color-ink: #172b3a;
+  --color-paper: #f3efe5;
+  --color-white: #fffdf8;
+  --color-brass: #aa8752;
+  --color-gold: #d4b882;
+  --color-ochre: #72582d;
+  --color-muted: #56616a;
+  --color-line: #d1cbbc;
+  --color-denim: #587184;
+  --color-sage: #67776b;
+  --color-error: #9e342c;
+}
+@layer base {
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    font-size: 16px;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  button,
+  summary {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-ochre);
+    outline-offset: 4px;
+  }
+  .on-dark :focus-visible {
+    outline-color: var(--color-gold);
+  }
+  [hidden] {
+    display: none !important;
+  }
+  ::selection {
+    background: #d4b882;
+    color: #172b3a;
+  }
+  input,
+  select,
+  textarea {
+    min-width: 0;
+  }
+}
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-[1360px] px-5 sm:px-9 lg:px-14;
+  }
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-[.21em];
+  }
+  .display {
+    @apply font-display font-normal leading-[1.12] tracking-[-.04em];
+  }
+  .button {
+    @apply inline-flex min-h-12 items-center justify-center gap-3 border border-ink bg-ink px-5 py-3 text-sm font-semibold text-paper transition-colors hover:bg-denim disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .button-light {
+    @apply inline-flex min-h-12 items-center justify-center gap-3 border border-gold bg-gold px-5 py-3 text-sm font-semibold text-ink transition-colors hover:bg-paper;
+  }
+  .button-line {
+    @apply inline-flex min-h-12 items-center justify-center gap-3 border border-current bg-transparent px-5 py-3 text-sm font-semibold transition-colors hover:bg-ink hover:text-paper;
+  }
+  .text-link {
+    @apply font-semibold underline decoration-brass underline-offset-4 hover:decoration-ink;
+  }
+  .label {
+    @apply mb-2 block text-sm font-semibold;
+  }
+  .field {
+    @apply block min-h-12 w-full border border-muted bg-white px-3 py-3 text-base text-ink placeholder:text-muted focus:border-ochre;
+  }
+  .field[aria-invalid="true"] {
+    @apply border-error;
+  }
+  .error {
+    @apply mt-2 text-sm font-medium text-error;
+  }
+  .error:empty {
+    display: none;
+  }
+  .hint {
+    @apply mt-2 text-sm leading-relaxed text-muted;
+  }
+  .chip {
+    @apply inline-flex min-h-11 items-center justify-center border border-line px-4 py-2 text-sm font-medium transition-colors hover:border-ink;
+  }
+  .chip[aria-pressed="true"] {
+    @apply border-ink bg-ink text-paper;
+  }
+  .slot {
+    @apply min-h-12 border border-line bg-white px-3 py-3 text-sm font-medium transition hover:border-ink disabled:cursor-not-allowed disabled:bg-line/40 disabled:text-muted disabled:line-through;
+  }
+  .slot[aria-pressed="true"] {
+    @apply border-ink bg-ink text-paper;
+  }
+  .stitch {
+    border-top: 1px dashed var(--color-brass);
+  }
+  .art {
+    @apply w-full object-contain;
+  }
+  .reveal {
+    transition:
+      opacity 0.7s,
+      transform 0.7s;
+  }
+  .js .reveal:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  .nav-link {
+    @apply py-3 text-sm transition hover:text-ochre;
+  }
+  .nav-link[aria-current="page"] {
+    @apply underline decoration-brass underline-offset-8;
+  }
+  .measure-grid {
+    background-image:
+      linear-gradient(#d4b88215 1px, transparent 1px), linear-gradient(90deg, #d4b88215 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .js .reveal:not(.is-visible) {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media print {
+  header,
+  footer,
+  [data-no-print] {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: #172b3a;
+  }
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500" role="img" aria-label="Illustrated portrait of Isla Carrick">
+<defs>
+  <pattern id="dots-isla" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(28)"><circle cx="4.5" cy="4.5" r="2.1" fill="#15130f"/></pattern>
+  <pattern id="fine-isla" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(-20)"><circle cx="3" cy="3" r="1.15" fill="#15130f"/></pattern>
+  <filter id="grain-isla" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch" result="n"/><feColorMatrix in="n" values="0 0 0 0 .08 0 0 0 0 .07 0 0 0 0 .06 0 0 0 .55 -.18"/><feComposite in2="SourceGraphic" operator="in"/></filter>
+</defs>
+<rect width="400" height="500" fill="#ffcf33"/>
+<circle cx="268" cy="168" r="128" fill="#ff4d94" style="mix-blend-mode:multiply"/>
+<g fill="none" stroke="#15130f" stroke-width="2" opacity=".55"><path d="M0 410 H400"/><path d="M0 425 H400"/><path d="M0 440 H400"/><path d="M0 455 H400"/><path d="M0 470 H400"/><path d="M0 485 H400"/></g>
+<g transform="translate(196 238) scale(1)">
+    <g style="mix-blend-mode:multiply">
+      <path d="M-150 260 C-140 150 -80 112 0 112 C80 112 140 150 150 260 L150 700 L-150 700Z" fill="#15130f"/>
+      <path d="M-150 260 C-140 150 -80 112 0 112 C80 112 140 150 150 260 L150 700 L-150 700Z" fill="url(#dots-isla)" opacity=".22"/>
+      <rect x="-26" y="62" width="52" height="66" rx="20" fill="#ffc2da"/>
+      <ellipse cx="0" cy="0" rx="70" ry="86" fill="#ffc2da"/>
+      <ellipse cx="-22" cy="10" rx="44" ry="70" fill="url(#fine-isla)" opacity=".18"/>
+      <g fill="#2b3fd6"><path d="M-84 30 C-96 -60 -60 -112 0 -112 C62 -112 98 -62 86 30 C82 58 70 70 58 66 L58 -20 C30 -40 -20 -46 -58 -24 L-58 66 C-72 70 -82 58 -84 30Z"/></g>
+      
+      
+    </g>
+    <path d="M-150 260 C-140 150 -80 112 0 112 C80 112 140 150 150 260" fill="none" stroke="#15130f" stroke-width="5" transform="translate(7 6)" opacity=".9"/>
+    <ellipse cx="0" cy="0" rx="70" ry="86" fill="none" stroke="#15130f" stroke-width="5" transform="translate(8 6)" opacity=".9"/>
+  </g>
+<rect width="400" height="500" filter="url(#grain-isla)" opacity=".9"/>
+</svg>

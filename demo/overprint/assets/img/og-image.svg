@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="hy" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(75)"><circle cx="6" cy="6" r="4" fill="#ffe23a"/></pattern>
+    <pattern id="hb" width="10" height="10" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><circle cx="5" cy="5" r="2.6" fill="#3255a4"/></pattern>
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%"><feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="6" xChannelSelector="R" yChannelSelector="G"/></filter>
+  </defs>
+  <rect width="1200" height="630" fill="#f7f0e1"/>
+  <circle cx="120" cy="80" r="220" fill="url(#hy)"/>
+  <g filter="url(#rough)">
+    <g style="mix-blend-mode:multiply" transform="rotate(4 920 315)">
+      <rect x="770" y="70" width="320" height="400" fill="#fffaf0" stroke="#24202e" stroke-width="4"/>
+      <rect x="770" y="70" width="320" height="260" fill="url(#hb)"/>
+      <path d="M770 470V360l44-32 44 32v-14l52-42 52 42v10l44-34 44 34 40-28v110z" fill="#3255a4"/>
+      <path d="M846 160a68 68 0 0 0 136 0a68 45 0 0 1-136 0z" fill="#ffe23a" style="mix-blend-mode:multiply"/>
+      <ellipse cx="866" cy="216" rx="62" ry="16" fill="#ff48b0" style="mix-blend-mode:multiply"/>
+      <circle cx="1046" cy="306" r="12" fill="#ff48b0" style="mix-blend-mode:multiply"/>
+      <path d="M1034 320h24l6 34h-36z" fill="#ff48b0" style="mix-blend-mode:multiply"/>
+      <path d="M1000 352 952 222M1016 352 968 222M993 334h16M985 312h16M977 290h16M969 268h16M961 246h16" stroke="#ff48b0" stroke-width="5" stroke-linecap="round" style="mix-blend-mode:multiply"/>
+    </g>
+    <circle cx="640" cy="565" r="70" fill="#ffe23a"/>
+    <circle cx="634" cy="568" r="28" fill="#ff48b0" style="mix-blend-mode:multiply"/>
+    <circle cx="646" cy="562" r="28" fill="#3255a4" style="mix-blend-mode:multiply"/>
+  </g>
+  <g font-family="Rammetto One, Cooper Black, sans-serif">
+    <text x="80" y="250" font-size="96" fill="#ff48b0" transform="translate(5 4)" style="mix-blend-mode:multiply">Pomelo</text>
+    <text x="80" y="250" font-size="96" fill="#2b4a92" style="mix-blend-mode:multiply">Pomelo</text>
+    <text x="80" y="360" font-size="96" fill="#ff48b0" transform="translate(5 4)" style="mix-blend-mode:multiply">Press</text>
+    <text x="80" y="360" font-size="96" fill="#2b4a92" style="mix-blend-mode:multiply">Press</text>
+  </g>
+  <text x="84" y="430" font-family="Quicksand, sans-serif" font-weight="700" font-size="34" fill="#24202e">Illustration and riso prints by Pipa Valdespino</text>
+  <text x="84" y="476" font-family="Quicksand, sans-serif" font-weight="600" font-size="28" fill="#5b5468">Editorial · Picture books · Packaging · Posters</text>
+  <g transform="rotate(-4 200 555)"><rect x="80" y="528" width="300" height="52" rx="26" fill="#ffe23a" stroke="#24202e" stroke-width="3"/><text x="230" y="562" text-anchor="middle" font-family="Courier Prime, monospace" font-weight="700" font-size="22" fill="#24202e">LOUISVILLE, KY</text></g>
+</svg>

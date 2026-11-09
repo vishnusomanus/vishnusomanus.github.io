@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Note received — Harbor & Co</title>
+<meta name="description" content="Harbor & Co has your note." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }</style>
+</head>
+<body class="bg-[#f4f7f4] text-[#163028] font-sans antialiased">
+<header class="sticky top-0 z-30 bg-[#163028] text-[#f4f7f4]">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-2xl">Harbor &amp; Co</a>
+    <div class="flex items-center gap-3"><a href="contact.html" class="rounded-full bg-[#d7efe3] px-4 py-2 text-sm font-semibold text-[#163028]">Ask about a house</a><button id="menuBtn" class="rounded-full border border-white/30 px-3 py-1 text-sm md:hidden" aria-expanded="false">Menu</button></div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t border-white/15 pt-3 text-sm md:flex md:basis-auto md:flex-row md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html">Homes</a><a href="about.html">The desk</a><a href="contact.html">Ask</a></nav>
+  </div>
+</header><main class="mx-auto max-w-3xl px-5 py-20 sm:px-8">
+  <h1 class="font-display text-5xl">The desk has your note.</h1>
+  <p id="line" class="mt-4 text-[#3e554b]">Jonah replies the same day if the note arrives before three.</p>
+  <p class="mt-8"><a class="underline underline-offset-4" href="index.html">Back to the houses</a></p>
+</main>
+<script>
+const data = JSON.parse(sessionStorage.getItem("harbor-ask") || "null");
+if (data) document.getElementById("line").textContent = `Thank you, ${data.name}. Jonah will write to ${data.email} about ${data.house}.`;
+</script><footer class="bg-[#163028] text-[#d7efe3]"><div class="mx-auto grid max-w-6xl gap-6 px-5 py-10 text-sm sm:px-8 md:grid-cols-3"><div><p class="font-display text-2xl text-white">Harbor &amp; Co</p><p class="mt-2">21 Exchange Street<br />Portland, Maine 04101</p></div><div><p>The desk is Jonah Ellis. He answers the same day if you write before three.</p><p class="mt-2">desk@harborandco.com · (555) 018-4410</p></div><div class="space-y-1"><a href="index.html">Homes</a><br /><a href="about.html">The desk</a><br /><a href="contact.html">Ask</a></div></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

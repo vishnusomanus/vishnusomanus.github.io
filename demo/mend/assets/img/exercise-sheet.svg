@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480" fill="none" stroke="#18224a" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Resistance band -->
+  <path d="M120 300c-50 6-78 40-70 74 8 36 52 48 82 30 30-18 34-60 14-86" stroke="#dc6f62" stroke-width="7"/>
+  <path d="M120 300c-50 6-78 40-70 74 8 36 52 48 82 30 30-18 34-60 14-86" stroke="#18224a" stroke-width="1.2" stroke-dasharray="1 9"/>
+  <!-- Clipboard -->
+  <rect x="160" y="36" width="320" height="424" rx="10" fill="#d8b98f"/>
+  <path d="M176 52v392" stroke="#c4a173" stroke-width="2"/>
+  <rect x="180" y="70" width="280" height="374" rx="2" fill="#ffffff"/>
+  <path d="M180 100h280M180 196h280M180 292h280M180 388h280" stroke="#d5deeb" stroke-width="1.5"/>
+  <path d="M206 70v374" stroke="#dc6f62" stroke-width="1.6"/>
+  <rect x="272" y="24" width="96" height="30" rx="6" fill="#c0cbea"/>
+  <circle cx="320" cy="34" r="5" fill="#ffffff"/>
+  <path d="M222 86h120" stroke-width="4"/>
+  <path d="M360 86h46" stroke="#97a7d8" stroke-width="3"/>
+  <!-- Row 1: sit to stand -->
+  <rect x="222" y="110" width="84" height="76" rx="2" fill="#eff2fa" stroke-width="1.6"/>
+  <path d="M232 178h64" stroke-width="1.4"/>
+  <path d="M238 146h18v32M238 146v-20" stroke="#97a7d8" stroke-width="2.4"/>
+  <g stroke-width="4"><path d="M276 132l-12 18M264 150l14 4 0 24M276 136l14 6"/></g>
+  <circle cx="279" cy="126" r="5" fill="#ffffff" stroke-width="2"/>
+  <path d="M322 126h96M322 142h70M322 158h84" stroke="#586079" stroke-width="3"/>
+  <rect x="424" y="128" width="20" height="20" rx="2" fill="#ffffff" stroke-width="2"/>
+  <path d="M419 140h32" stroke="#f6e46b" stroke-width="14" opacity=".9"/>
+  <path d="M428 138l5 6 10-14" stroke-width="3"/>
+  <!-- Row 2: glute bridge -->
+  <rect x="222" y="206" width="84" height="76" rx="2" fill="#eff2fa" stroke-width="1.6"/>
+  <path d="M232 268h64" stroke-width="1.4"/>
+  <g stroke-width="4"><path d="M244 266l22-14 14-6 8 22M266 252l12 2"/></g>
+  <circle cx="238" cy="264" r="5" fill="#ffffff" stroke-width="2"/>
+  <path d="M270 240v-12m-3 3 3-3 3 3" stroke="#cf5446" stroke-width="1.8"/>
+  <path d="M322 222h88M322 238h64M322 254h92" stroke="#586079" stroke-width="3"/>
+  <rect x="424" y="224" width="20" height="20" rx="2" fill="#ffffff" stroke-width="2"/>
+  <path d="M419 236h32" stroke="#f6e46b" stroke-width="14" opacity=".9"/>
+  <path d="M428 234l5 6 10-14" stroke-width="3"/>
+  <!-- Row 3: calf raise -->
+  <rect x="222" y="302" width="84" height="76" rx="2" fill="#eff2fa" stroke-width="1.6"/>
+  <path d="M232 370h64" stroke-width="1.4"/>
+  <path d="M284 332h12M290 332v38" stroke="#97a7d8" stroke-width="2.4"/>
+  <g stroke-width="4"><path d="M262 324v24M262 348l1 16 6 4M262 330l20 4"/></g>
+  <circle cx="262" cy="316" r="5" fill="#ffffff" stroke-width="2"/>
+  <path d="M254 368v-10m-3 3 3-3 3 3" stroke="#cf5446" stroke-width="1.8"/>
+  <path d="M322 318h92M322 334h60M322 350h78" stroke="#586079" stroke-width="3"/>
+  <rect x="424" y="320" width="20" height="20" rx="2" fill="#ffffff" stroke-width="2"/>
+  <path d="M222 412h150M222 426h96" stroke="#97a7d8" stroke-width="3"/>
+  <!-- Stopwatch -->
+  <circle cx="548" cy="330" r="46" fill="#ffffff"/>
+  <circle cx="548" cy="330" r="36" stroke="#97a7d8" stroke-width="1.5"/>
+  <path d="M548 330V302M548 330l16 10" stroke-width="3"/>
+  <path d="M548 330 548 294A36 36 0 0 1 581 316Z" fill="#f6e46b" stroke="none" opacity=".9"/>
+  <path d="M548 330V302M548 330l16 10" stroke-width="3"/>
+  <rect x="538" y="268" width="20" height="16" rx="3" fill="#c0cbea"/>
+  <path d="M582 290l10-10" stroke-width="4"/>
+  <circle cx="548" cy="330" r="3.5" fill="#18224a"/>
+  <!-- Pencil -->
+  <path d="M470 440 590 380l10 18-120 60Z" fill="#f6e46b"/>
+  <path d="M470 440l-14 26 24-8" fill="#f1d6c2"/>
+  <path d="M456 466l6-4" stroke-width="3"/>
+  <path d="M590 380l10 18" fill="none"/>
+  <path d="M586 382l8 16 6-3-8-16Z" fill="#f8ddd9"/>
+</svg>

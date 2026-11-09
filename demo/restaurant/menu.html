@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Menu — Marrow</title>
+<meta name="description" content="Tonight at Marrow: leaf salad, pork chop with apple, and strawberry cream. €78." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; } input, select { color-scheme: dark; }</style>
+</head>
+<body class="bg-[#1a0e10] text-[#f6efe8] font-sans antialiased">
+<header class="sticky top-0 z-30 bg-[#1a0e10]/95 text-[#f6efe8] backdrop-blur">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-3xl">Marrow</a>
+    <div class="flex items-center gap-3"><a href="reserve.html" class="hidden border border-[#e7b7a0] px-4 py-2 text-xs uppercase tracking-[0.16em] text-[#e7b7a0] sm:inline">Reserve</a><button id="menuBtn" class="border border-[#e7b7a0]/40 px-3 py-1 text-xs uppercase tracking-[0.16em] md:hidden" aria-expanded="false">Menu</button></div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t pt-3 text-sm md:flex md:basis-auto md:flex-row md:items-center md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html">Tonight</a><a href="menu.html" aria-current="page">Menu</a><a href="visit.html">Visit</a><a href="reserve.html">Reserve</a></nav>
+  </div>
+</header><main class="mx-auto max-w-6xl px-5 py-14 sm:px-8">
+  <p class="text-xs uppercase tracking-[0.28em] text-[#e7b7a0]">The menu · €78</p>
+  <h1 class="mt-3 font-display text-6xl italic">What is on the pass tonight.</h1>
+  <p class="mt-4 max-w-xl text-[#e6d5cb]">Four courses, served to the table. Tell us when you reserve if someone does not eat meat. The chop can be replaced with grilled cabbage from the same fire.</p>
+  <div class="mt-12 space-y-16">
+    <article class="grid items-center gap-8 md:grid-cols-2"><img src="images/leek.jpg" alt="A leaf salad with walnut, olive, and orange" class="aspect-[4/3] w-full object-cover" /><div><p class="text-xs uppercase tracking-[0.2em] text-[#e7b7a0]">First</p><h2 class="mt-2 font-display text-4xl italic">Leaf salad, walnut, orange</h2><p class="mt-3 text-[#e6d5cb]">Bitter leaves, walnut, olive, and a little orange. It is dressed at the table so the leaves stay sharp.</p></div></article>
+    <article class="grid items-center gap-8 md:grid-cols-2"><div class="md:order-2"><img src="images/chicken.jpg" alt="Grilled chop with roasted apple and broccolini" class="aspect-[4/3] w-full object-cover" /></div><div><p class="text-xs uppercase tracking-[0.2em] text-[#e7b7a0]">Main</p><h2 class="mt-2 font-display text-4xl italic">Pork chop, apple, broccolini</h2><p class="mt-3 text-[#e6d5cb]">The chop is cooked over the coals and rested. Apple is roasted in the same pan. The greens come at the end, with the juices.</p></div></article>
+    <article class="grid items-center gap-8 md:grid-cols-2"><img src="images/dessert.jpg" alt="Glasses of cream topped with strawberries" class="aspect-[4/3] w-full object-cover" /><div><p class="text-xs uppercase tracking-[0.2em] text-[#e7b7a0]">Last</p><h2 class="mt-2 font-display text-4xl italic">Strawberry cream, rosemary</h2><p class="mt-3 text-[#e6d5cb]">A cool cream in a small glass, fruit cut the same afternoon, and a needle of rosemary. Coffee is included if you want it.</p></div></article>
+  </div>
+  <p class="mt-14"><a href="reserve.html" class="border border-[#e7b7a0] px-5 py-3 text-xs uppercase tracking-[0.18em] text-[#e7b7a0]">Reserve a seating</a></p>
+</main><footer class="border-t border-white/10 text-[#e6d5cb]"><div class="mx-auto grid max-w-6xl gap-6 px-5 py-10 text-sm sm:px-8 md:grid-cols-3"><div><p class="font-display text-3xl text-[#f6efe8]">Marrow</p><p class="mt-2">Largo da Estação 2<br />5085-037 Pinhão</p></div><div><p>Dinner Tuesday to Sunday. Closed Monday.</p><p class="mt-2">Seatings at 18:30 and 21:00.</p></div><div><span >table@marrow.pt</span><br />+351 21 394 1180</div></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

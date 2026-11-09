@@ -1,0 +1,296 @@
+/* Tempo (Marigold Static) — Tailwind CSS v4 source.
+   Edit the tokens in @theme below, then rebuild with `npm run build`. */
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+@theme {
+  --font-sans: "Familjen Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Big Shoulders Display", "Arial Narrow", "Roboto Condensed", Impact, sans-serif;
+  --font-mono: "Space Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Paper: the warm, slightly toothy stock everything is "printed" on. */
+  --color-paper: #f4efe6;     /* page background */
+  --color-paper-2: #ebe4d6;   /* alternate sections */
+  --color-card: #fbf8f2;      /* cards, inputs, drawer */
+  --color-line: #d9d0bf;      /* hairlines on paper */
+
+  /* Ink: text and the dark "night" sections. */
+  --color-ink: #15130f;       /* text, dark sections */
+  --color-ink-2: #24211b;     /* raised surfaces on ink */
+  --color-ink-line: #3a352c;  /* hairlines on ink */
+  --color-soft: #4b463d;      /* secondary text on paper */
+  --color-subtle: #686155;    /* captions and meta on paper (AA on paper, paper-2 and card) */
+  --color-fog: #bdb5a6;       /* secondary text on ink */
+  --color-haze: #9c9485;      /* meta on ink */
+
+  /* Riso inks. Pink is the brand color; cobalt and sun are supporting inks. */
+  --color-pink: #ff4d94;      /* fills, with ink text on top */
+  --color-pink-deep: #c4155f; /* pink text and links on paper */
+  --color-pink-soft: #ffc2da;
+  --color-cobalt: #2b3fd6;    /* fills, with paper text on top */
+  --color-cobalt-soft: #c9cff7;
+  --color-sun: #ffcf33;       /* highlights, with ink text on top */
+
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+}
+
+:root { color-scheme: light; }
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+  body { @apply bg-paper font-sans text-ink antialiased; overflow-x: clip; }
+  ::selection { background: var(--color-pink); color: var(--color-ink); }
+  :focus-visible { outline: 3px solid var(--color-cobalt); outline-offset: 3px; border-radius: 4px; }
+  .on-ink :focus-visible, .on-ink:focus-visible { outline-color: var(--color-sun); }
+  [id] { scroll-margin-top: 6rem; }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  [hidden] { display: none !important; }
+  h1, h2, h3 { text-wrap: balance; }
+}
+
+/* Smooth scrolling for in-page links only, so scripted scrolling stays instant. */
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within { scroll-behavior: smooth; }
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-ink px-5 py-2.5 text-[0.95rem] font-bold whitespace-nowrap transition duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+/* Condensed poster type: Big Shoulders Display, uppercase, tight. */
+@utility poster {
+  @apply font-display font-black uppercase leading-[0.84] tracking-[-0.01em];
+  overflow-wrap: break-word;
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-[84rem] px-4 sm:px-8; }
+
+  /* Type */
+  .h-hero { @apply poster text-[clamp(4.25rem,24vw,10.5rem)] lg:text-[clamp(7rem,13vw,10.5rem)]; }
+  .h-page { @apply poster text-[clamp(4rem,15vw,11rem)]; }
+  .h-section { @apply poster text-[clamp(2.75rem,6.4vw,5.25rem)]; }
+  .h-card { @apply font-display text-[1.85rem] leading-none font-extrabold uppercase; }
+  .eyebrow { @apply inline-flex items-center gap-2.5 font-mono text-[0.75rem] font-bold tracking-[0.14em] uppercase; }
+  .eyebrow::before { content: ""; @apply h-2.5 w-2.5 shrink-0 rounded-full bg-pink ring-2 ring-ink; }
+  .meta { @apply font-mono text-[0.75rem] tracking-[0.08em] text-subtle uppercase; }
+  .on-ink .meta { @apply text-haze; }
+  .lead { @apply text-lg leading-relaxed text-soft sm:text-xl; }
+  .on-ink .lead { @apply text-fog; }
+  .hl { @apply box-decoration-clone px-1; background: linear-gradient(transparent 52%, var(--color-sun) 52%, var(--color-sun) 92%, transparent 92%); }
+  .stroke-text { color: transparent; -webkit-text-stroke: 2px var(--color-ink); }
+
+  /* Buttons */
+  .btn-primary { @apply btn bg-pink text-ink shadow-[4px_4px_0_var(--color-ink)] hover:-translate-y-0.5 hover:shadow-[6px_6px_0_var(--color-ink)] active:translate-y-0 active:shadow-[2px_2px_0_var(--color-ink)]; }
+  .btn-dark { @apply btn bg-ink text-paper hover:bg-ink-2; }
+  .btn-ghost { @apply btn bg-transparent text-ink hover:bg-ink hover:text-paper; }
+  .on-ink .btn-ghost { @apply border-paper text-paper hover:bg-paper hover:text-ink; }
+  .btn-sun { @apply btn bg-sun text-ink shadow-[4px_4px_0_var(--color-ink)] hover:-translate-y-0.5 hover:shadow-[6px_6px_0_var(--color-ink)]; }
+  .btn-lg { @apply px-6 py-3.5 text-base; }
+  .btn-sm { @apply px-3.5 py-1.5 text-sm; }
+  .btn-primary[aria-pressed="true"] { @apply bg-sun; }
+  .icon-btn { @apply inline-grid h-11 w-11 shrink-0 place-items-center rounded-full border-2 border-ink bg-card text-ink transition hover:bg-ink hover:text-paper disabled:opacity-40; }
+  .text-link { @apply font-bold text-pink-deep underline decoration-2 underline-offset-4 transition hover:text-ink; }
+  .on-ink .text-link { @apply text-pink hover:text-paper; }
+
+  /* Header */
+  .nav-link { @apply relative px-3 py-2 text-[0.95rem] font-bold text-ink transition hover:text-pink-deep; }
+  .nav-link[aria-current="page"]::after { content: ""; @apply absolute inset-x-3 bottom-0.5 h-[3px] rounded-full bg-pink; }
+  .mobile-link { @apply flex items-center justify-between border-b-2 border-ink py-3 poster text-[2.75rem] text-ink; }
+  .mobile-link[aria-current="page"] { @apply text-pink-deep; }
+  #site-header.is-scrolled { @apply border-ink bg-paper/95 backdrop-blur-sm; }
+  .cart-count { @apply absolute -top-1.5 -right-1.5 grid h-5 min-w-5 place-items-center rounded-full border-2 border-paper bg-pink px-1 font-mono text-[0.68rem] leading-none font-bold text-ink; }
+
+  /* Surfaces */
+  .card { @apply rounded-2xl border-2 border-ink bg-card; }
+  .card-shadow { @apply shadow-[6px_6px_0_var(--color-ink)]; }
+  .chip { @apply inline-flex items-center gap-1.5 rounded-full border-2 border-ink px-2.5 py-0.5 font-mono text-[0.7rem] font-bold tracking-[0.06em] uppercase; }
+  .chip-pink { @apply bg-pink text-ink; }
+  .chip-sun { @apply bg-sun text-ink; }
+  .chip-ink { @apply bg-ink text-paper; }
+  .chip-cobalt { @apply bg-cobalt text-paper; }
+  .chip-paper { @apply bg-card text-ink; }
+  .rule { @apply border-t-2 border-ink; }
+  .sticker { @apply grid place-items-center rounded-full border-2 border-ink text-center font-display font-black uppercase leading-[0.9]; }
+
+  /* Segmented filters */
+  .seg { @apply inline-flex flex-wrap gap-1.5; }
+  .seg-btn { @apply inline-flex items-center gap-2 rounded-full border-2 border-ink bg-card px-4 py-2 text-sm font-bold transition hover:bg-paper-2; }
+  .seg-btn[aria-pressed="true"] { @apply bg-ink text-paper; }
+  .seg-btn .count { @apply font-mono text-xs opacity-70; }
+
+  /* Forms */
+  .field-label { @apply mb-1.5 block text-sm font-bold; }
+  .field {
+    @apply w-full rounded-xl border-2 border-ink bg-card px-4 py-3 text-base text-ink transition placeholder:text-subtle focus:border-cobalt focus:ring-4 focus:ring-cobalt/20 focus:outline-none;
+  }
+  select.field { @apply appearance-none bg-[url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%2315130f'%20stroke-width='2.4'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='m6%209%206%206%206-6'/%3E%3C/svg%3E")] bg-[length:1.1rem] bg-[right_1rem_center] bg-no-repeat pr-11; }
+  .field[aria-invalid="true"] { @apply border-pink-deep ring-4 ring-pink/25; }
+  .field-error { @apply mt-1.5 flex items-center gap-1.5 text-sm font-bold text-pink-deep; }
+  .field-error:empty { display: none; }
+  .on-ink .field-error { @apply text-pink; }
+  .field-hint { @apply mt-1.5 text-sm text-subtle; }
+  .on-ink .field { @apply border-ink-line bg-ink-2 text-paper placeholder:text-haze focus:border-sun focus:ring-sun/25; }
+  .on-ink .field-label { @apply text-paper; }
+  .on-ink .field-hint { @apply text-haze; }
+  .check { @apply mt-0.5 h-5 w-5 shrink-0 accent-pink-deep; }
+  .choice { @apply flex cursor-pointer items-start gap-3 rounded-xl border-2 border-ink bg-card px-4 py-3 transition hover:bg-paper-2; }
+  .choice:has(input:checked) { @apply bg-pink-soft shadow-[3px_3px_0_var(--color-ink)]; }
+  .choice:has(input:focus-visible) { outline: 3px solid var(--color-cobalt); outline-offset: 2px; }
+
+  /* Option pills (sizes) and swatches (colours) on merch cards */
+  .pill { @apply relative inline-grid min-w-11 cursor-pointer place-items-center rounded-lg border-2 border-ink bg-card px-2.5 py-1.5 font-mono text-xs font-bold transition hover:bg-paper-2; }
+  .pill:has(input:checked) { @apply bg-ink text-paper; }
+  .pill:has(input:disabled) { @apply cursor-not-allowed border-line text-subtle line-through hover:bg-card; }
+  .pill:has(input:focus-visible), .swatch:has(input:focus-visible) { outline: 3px solid var(--color-cobalt); outline-offset: 2px; }
+  .swatch { @apply relative inline-block h-8 w-8 cursor-pointer rounded-full border-2 border-ink transition; background: var(--sw); }
+  .swatch:has(input:checked) { box-shadow: 0 0 0 3px var(--color-card), 0 0 0 5px var(--color-ink); }
+
+  /* Covers and art */
+  .cover { @apply relative block aspect-square overflow-hidden rounded-md border-2 border-ink bg-paper-2; }
+  .cover svg { @apply block h-full w-full; }
+  .rel-card .cover svg { transition: transform .6s var(--ease-out); }
+  .rel-card:hover .cover svg { transform: scale(1.04); }
+  .vinyl { transform: translateX(16%) rotate(0deg); transition: transform .9s var(--ease-out); }
+  .hero-art:hover .vinyl, .hero-art.is-playing .vinyl { transform: translateX(30%); }
+  .is-playing .vinyl-disc { animation: spin 3.2s linear infinite; transform-origin: center; transform-box: fill-box; }
+
+  /* Track list */
+  .track { @apply grid grid-cols-[2.75rem_minmax(0,1fr)_auto] items-center gap-3 border-b-2 border-ink/15 py-2.5 sm:gap-4; }
+  .track:last-child { @apply border-b-0; }
+  .track[aria-current="true"] .track-title { @apply text-pink-deep; }
+  .on-ink .track { @apply border-paper/15; }
+  .on-ink .track[aria-current="true"] .track-title { @apply text-pink; }
+  .track-btn { @apply relative inline-grid h-10 w-10 place-items-center rounded-full border-2 border-current font-mono text-sm font-bold transition; }
+  .track-btn:hover:not(:disabled) { @apply bg-ink text-paper; }
+  .on-ink .track-btn:hover:not(:disabled) { @apply bg-paper text-ink; }
+  .track-btn:disabled { @apply cursor-not-allowed border-dashed opacity-60; }
+  .track-btn .num { @apply block; }
+  .track-btn svg { @apply hidden h-4 w-4; }
+  .track-btn:hover:not(:disabled) .num, .track-btn[aria-pressed="true"] .num, .track-btn.is-loaded .num { @apply hidden; }
+  .track-btn:hover:not(:disabled) .i-play, .track-btn.is-loaded:not([aria-pressed="true"]) .i-play { @apply block; }
+  .track-btn[aria-pressed="true"] { @apply bg-pink text-ink; border-color: var(--color-ink); }
+  .track-btn[aria-pressed="true"] .i-pause { @apply block; }
+  .track-btn[aria-pressed="true"] .i-play { @apply hidden; }
+
+  /* Equalizer bars on whatever is playing. Static when motion is reduced. */
+  .eq { @apply inline-flex h-3.5 items-end gap-[2px]; }
+  .eq i { @apply block w-[3px] rounded-sm bg-current; height: 40%; }
+  .is-playing .eq i, .eq.is-playing i { animation: eq .8s ease-in-out infinite alternate; }
+  .eq i:nth-child(2) { animation-delay: -.3s !important; }
+  .eq i:nth-child(3) { animation-delay: -.55s !important; }
+  .eq i:nth-child(4) { animation-delay: -.15s !important; }
+
+  /* Seek and volume sliders */
+  .range { @apply h-2 w-full cursor-pointer appearance-none rounded-full bg-ink/15; background-image: linear-gradient(var(--color-pink), var(--color-pink)); background-size: var(--v, 0%) 100%; background-repeat: no-repeat; }
+  .on-ink .range { @apply bg-paper/20; }
+  .range::-webkit-slider-thumb { @apply h-4 w-4 appearance-none rounded-full border-2 border-ink bg-paper; }
+  .range::-moz-range-thumb { @apply h-4 w-4 rounded-full border-2 border-ink bg-paper; }
+  .range:focus-visible { outline: 3px solid var(--color-sun); outline-offset: 4px; }
+
+  /* Tour rows */
+  .show-row { @apply grid grid-cols-[4.25rem_minmax(0,1fr)] gap-x-4 gap-y-3 border-b-2 border-ink py-5 sm:grid-cols-[5.5rem_minmax(0,1fr)_auto] sm:items-center sm:gap-x-6; }
+  .show-date { @apply grid place-items-center rounded-xl border-2 border-ink bg-card py-2 text-center leading-none; }
+  .show-actions { @apply col-span-2 flex flex-wrap items-center gap-2 sm:col-span-1 sm:justify-end; }
+  .show-row.is-sold .show-date { @apply bg-paper-2 text-subtle; }
+
+  /* Tabs (press bios) */
+  .tab { @apply rounded-full border-2 border-ink bg-card px-4 py-2 text-sm font-bold transition hover:bg-paper-2; }
+  .tab[aria-selected="true"] { @apply bg-ink text-paper; }
+
+  /* FAQ */
+  .faq { @apply border-b-2 border-ink; }
+  .faq summary { @apply flex items-center justify-between gap-4 py-5 text-left text-lg font-bold; }
+  .faq summary svg { transition: transform .25s var(--ease-out); }
+  .faq[open] summary svg { transform: rotate(45deg); }
+  .faq-body { @apply max-w-3xl pb-6 leading-relaxed text-soft; }
+
+  /* Prose */
+  .prose-bio { @apply text-[1.075rem] leading-relaxed text-soft; }
+  .prose-bio > * + * { @apply mt-5; }
+  .prose-bio strong { @apply text-ink; }
+  .dropcap::first-letter { @apply float-left mt-1 mr-3 font-display text-[5.2rem] leading-[0.75] font-black text-pink-deep; }
+
+  /* Ticker */
+  .ticker { display: flex; width: max-content; animation: ticker 48s linear infinite; }
+  .ticker-wrap:hover .ticker { animation-play-state: paused; }
+}
+
+@keyframes eq { from { height: 20%; } to { height: 100%; } }
+@keyframes ticker { to { transform: translateX(-50%); } }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Player bar, docked to the bottom of every page once a track is loaded. */
+.has-player body { padding-bottom: 6.5rem; }
+.player-bar { transform: translateY(0); transition: transform .35s var(--ease-out); }
+.player-bar.is-tucked { transform: translateY(calc(100% + 1.5rem)); }
+
+/* Cart drawer */
+.drawer-backdrop { opacity: 0; transition: opacity .3s ease; }
+.drawer-panel { transform: translateX(100%); transition: transform .35s var(--ease-out); }
+.drawer.is-open .drawer-backdrop { opacity: 1; }
+.drawer.is-open .drawer-panel { transform: none; }
+
+/* Scroll reveal: only hidden when JS is running and motion is allowed. */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s var(--ease-out), transform .7s var(--ease-out); }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .ticker, .eq i, .is-playing .vinyl-disc { animation: none !important; }
+  .is-playing .eq i, .eq.is-playing i { height: 70%; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+.menu-open, .drawer-open { overflow: hidden; }
+
+/* Paper grain over the whole page, very faint. */
+.grain::after {
+  content: ""; position: fixed; inset: 0; z-index: 90; pointer-events: none; opacity: .22; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .5 0 0 0 0 .45 0 0 0 0 .4 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Toast */
+.toast { @apply pointer-events-none fixed bottom-6 left-1/2 z-[95] max-w-[calc(100vw-2rem)] -translate-x-1/2 translate-y-4 rounded-full border-2 border-ink bg-sun px-5 py-3 text-center text-sm font-bold text-ink opacity-0 shadow-[4px_4px_0_var(--color-ink)] transition duration-300; }
+.toast.is-visible { @apply translate-y-0 opacity-100; }
+.has-player .toast { bottom: 7.5rem; }
+
+/* Back to top button (created by assets/js/main.js). Remove this block to drop it. */
+@layer components {
+  .back-to-top {
+    position: fixed; z-index: 40;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px) + var(--btt-lift, 0px));
+    display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; cursor: pointer;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, bottom .25s ease, visibility 0s linear .25s, background-color .2s;
+    border-radius: 999px; border: 2px solid var(--color-ink);
+    background: var(--color-card); color: var(--color-ink);
+    box-shadow: 3px 3px 0 var(--color-ink);
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; transition: transform .2s ease; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top.is-visible:hover svg { transform: translateY(-2px); }
+  .back-to-top:hover { background: var(--color-pink); }
+  .back-to-top:focus-visible { outline: 3px solid var(--color-cobalt); outline-offset: 3px; }
+  .back-to-top-target:focus { outline: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top, .back-to-top svg { transition: opacity .01s linear, visibility 0s linear; transform: none !important; }
+  }
+  @media print { .back-to-top { display: none !important; } }
+}
+
+/* Video poster: the bars dance while the demo "video" (the single's preview) plays. */
+.video-bars rect { transform-box: fill-box; transform-origin: bottom; }
+[data-video].is-playing .video-bars rect { animation: bars .55s ease-in-out infinite alternate; }
+[data-video].is-playing .video-bars rect:nth-child(2n) { animation-delay: -.3s; }
+[data-video].is-playing .video-bars rect:nth-child(3n) { animation-delay: -.15s; }
+[data-video].is-playing [data-video-play] > span { opacity: .0; }
+[data-video].is-playing [data-video-play]:focus-visible > span, [data-video].is-playing:hover [data-video-play] > span { opacity: 1; }
+@keyframes bars { from { transform: scaleY(.35); } to { transform: scaleY(1.25); } }
+@media (prefers-reduced-motion: reduce) { [data-video].is-playing .video-bars rect { animation: none; } }
+.v-pause, [data-video].is-playing .v-play { display: none; }
+[data-video].is-playing .v-pause { display: block; }

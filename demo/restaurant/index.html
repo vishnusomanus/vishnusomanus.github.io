@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tonight — Marrow</title>
+<meta name="description" content="Marrow is a 28-seat dining room in Pinhão, above the Douro. One menu, two seatings, closed Monday." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; } input, select { color-scheme: dark; }</style>
+</head>
+<body class="bg-[#1a0e10] text-[#f6efe8] font-sans antialiased">
+<header class="sticky top-0 z-30 bg-[#1a0e10]/95 text-[#f6efe8] backdrop-blur">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-3xl">Marrow</a>
+    <div class="flex items-center gap-3"><a href="reserve.html" class="hidden border border-[#e7b7a0] px-4 py-2 text-xs uppercase tracking-[0.16em] text-[#e7b7a0] sm:inline">Reserve</a><button id="menuBtn" class="border border-[#e7b7a0]/40 px-3 py-1 text-xs uppercase tracking-[0.16em] md:hidden" aria-expanded="false">Menu</button></div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t pt-3 text-sm md:flex md:basis-auto md:flex-row md:items-center md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html" aria-current="page">Tonight</a><a href="menu.html">Menu</a><a href="visit.html">Visit</a><a href="reserve.html">Reserve</a></nav>
+  </div>
+</header><main>
+  <section class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-12 sm:px-8 lg:grid-cols-2 lg:py-16">
+    <div>
+      <p class="text-xs uppercase tracking-[0.35em] text-[#e7b7a0]">Douro · Dinner only</p>
+      <h1 class="mt-4 font-display text-6xl italic leading-none sm:text-7xl">A room, a fire, and one menu.</h1>
+      <p class="mt-6 max-w-md text-[#e6d5cb]">Marrow is twenty-eight seats in Pinhão, above the river. The menu is written in the morning and served at two seatings. Wine by the glass is short and written on a card, not a book.</p>
+      <dl class="mt-8 grid max-w-md grid-cols-3 gap-4 border-y border-white/10 py-6 text-sm"><div><dt class="text-[#e7b7a0]">Seatings</dt><dd class="mt-1">18:30 · 21:00</dd></div><div><dt class="text-[#e7b7a0]">Menu</dt><dd class="mt-1">€78</dd></div><div><dt class="text-[#e7b7a0]">Closed</dt><dd class="mt-1">Monday</dd></div></dl>
+    </div>
+    <img src="images/room.jpg" alt="A plated dish set down on a candlelit table" class="aspect-[4/5] w-full object-cover sm:aspect-[5/4]" />
+  </section>
+  <section class="mx-auto grid max-w-6xl gap-8 px-5 pb-16 sm:px-8 md:grid-cols-3">
+    <a href="menu.html" class="block"><img src="images/chicken.jpg" alt="A grilled chop with apple and greens" class="aspect-[4/3] w-full object-cover" /><p class="mt-3 font-display text-2xl italic">Tonight’s menu</p></a>
+    <a href="visit.html" class="block"><img src="images/kitchen.jpg" alt="A cook chopping herbs on a board" class="aspect-[4/3] w-full object-cover" /><p class="mt-3 font-display text-2xl italic">The kitchen</p></a>
+    <a href="reserve.html" class="block"><img src="images/hearth.jpg" alt="The dining room set before service" class="aspect-[4/3] w-full object-cover" /><p class="mt-3 font-display text-2xl italic">Ask for a table</p></a>
+  </section>
+</main><footer class="border-t border-white/10 text-[#e6d5cb]"><div class="mx-auto grid max-w-6xl gap-6 px-5 py-10 text-sm sm:px-8 md:grid-cols-3"><div><p class="font-display text-3xl text-[#f6efe8]">Marrow</p><p class="mt-2">Largo da Estação 2<br />5085-037 Pinhão</p></div><div><p>Dinner Tuesday to Sunday. Closed Monday.</p><p class="mt-2">Seatings at 18:30 and 21:00.</p></div><div><span >table@marrow.pt</span><br />+351 21 394 1180</div></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

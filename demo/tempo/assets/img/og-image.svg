@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#f4efe6"/>
+  <g fill="none" stroke="#15130f" stroke-opacity=".1" stroke-width="2"><circle cx="930" cy="300" r="300"/><circle cx="930" cy="300" r="250"/><circle cx="930" cy="300" r="200"/></g>
+  <g transform="translate(64 64)">
+    <circle cx="22" cy="22" r="19" fill="none" stroke="#15130f" stroke-width="3" stroke-dasharray="3 4"/><circle cx="22" cy="22" r="12" fill="#ff4d94" stroke="#15130f" stroke-width="3"/><circle cx="22" cy="22" r="3" fill="#15130f"/>
+    <text x="56" y="36" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="900" font-size="40" fill="#15130f">MARIGOLD STATIC</text>
+  </g>
+  <text x="64" y="200" font-family="Space Mono, monospace" font-weight="700" font-size="20" letter-spacing="2.5" fill="#15130f">THE NEW ALBUM · OUT NOVEMBER 13</text>
+  <text x="58" y="350" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="900" font-size="170" fill="#15130f">WEATHER</text>
+  <text x="58" y="500" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="900" font-size="170" fill="none" stroke="#15130f" stroke-width="3">FOR</text>
+  <text x="318" y="500" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="900" font-size="170" fill="#15130f">TWO</text>
+  <rect x="64" y="540" width="250" height="52" rx="26" fill="#ff4d94" stroke="#15130f" stroke-width="3"/>
+  <text x="189" y="574" text-anchor="middle" font-family="Familjen Grotesk, sans-serif" font-weight="700" font-size="22" fill="#15130f">Pre-save the album</text>
+  <g transform="translate(1050 300)"><circle r="230" fill="#15130f"/><g fill="none" stroke="#f4efe6" stroke-opacity=".15"><circle r="200"/><circle r="170"/><circle r="140"/><circle r="110"/></g><circle r="70" fill="#ff4d94" stroke="#15130f" stroke-width="3"/><circle r="6" fill="#f4efe6"/></g>
+  <g transform="translate(690 120) rotate(-3)">
+    <rect x="12" y="12" width="380" height="380" fill="#15130f"/>
+    <rect width="380" height="380" fill="#2b3fd6" stroke="#15130f" stroke-width="4"/>
+    <circle cx="238" cy="150" r="98" fill="#ffcf33"/>
+    <g fill="none" stroke="#ff4d94" stroke-width="15" stroke-linecap="round"><path d="M38 210q38 -32 76 0t76 0t76 0t76 0"/><path d="M55 235q38 -32 76 0t76 0t76 0t76 0"/><path d="M72 260q38 -32 76 0t76 0t76 0t76 0"/></g>
+    <g stroke="#15130f" stroke-width="5" stroke-linecap="round"><path d="M40 40l-9 26M66 60l-9 26M92 40l-9 26M118 60l-9 26M144 40l-9 26M170 60l-9 26M196 40l-9 26"/></g>
+    <text x="22" y="356" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="900" font-size="46" fill="#15130f">WEATHER FOR TWO</text>
+  </g>
+  <g transform="translate(660 92) rotate(-12)"><circle r="52" fill="#ffcf33" stroke="#15130f" stroke-width="3"/><text y="-4" text-anchor="middle" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="900" font-size="28" fill="#15130f">OUT</text><text y="24" text-anchor="middle" font-family="Big Shoulders Display, Arial Narrow, sans-serif" font-weight="900" font-size="28" fill="#15130f">11/13</text></g>
+</svg>

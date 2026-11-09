@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <radialGradient id="table" cx="50%" cy="40%" r="80%"><stop offset="0" stop-color="#5a3a3f"/><stop offset="1" stop-color="#1c1214"/></radialGradient>
+    <radialGradient id="plate" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#fdfaf4"/><stop offset=".85" stop-color="#efe6d8"/><stop offset="1" stop-color="#d9ccb7"/></radialGradient>
+    <linearGradient id="cake" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e0a24a"/><stop offset=".25" stop-color="#f3d38c"/><stop offset="1" stop-color="#e7bd6a"/></linearGradient>
+    <radialGradient id="cream" cx="40%" cy="35%" r="65%"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f0e4cf"/></radialGradient>
+    <radialGradient id="berry" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#ff5d7a"/><stop offset=".7" stop-color="#b3123a"/><stop offset="1" stop-color="#6e0a22"/></radialGradient>
+    <radialGradient id="blue" cx="35%" cy="30%" r="70%"><stop offset="0" stop-color="#7a7fd8"/><stop offset=".7" stop-color="#2f2f7a"/><stop offset="1" stop-color="#1a1a45"/></radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+  <rect width="800" height="800" fill="url(#table)"/>
+  <circle cx="410" cy="420" r="320" fill="#000" opacity=".45" filter="url(#shadow)"/>
+  <circle cx="400" cy="400" r="320" fill="url(#plate)"/>
+  <circle cx="400" cy="400" r="250" fill="none" stroke="#d6c8b2" stroke-width="2" opacity=".6"/>
+  <!-- syrup swoosh -->
+  <path d="M200 520c80-60 200-40 300-20s140-10 160-40" fill="none" stroke="#9a2a3a" stroke-width="16" stroke-linecap="round" opacity=".75"/>
+  <!-- olive oil cake wedge -->
+  <path d="M230 300l300-70 40 220z" fill="#000" opacity=".25" filter="url(#shadow)"/>
+  <path d="M220 290l310-80 30 230z" fill="url(#cake)"/>
+  <path d="M220 290l310-80" stroke="#b9772c" stroke-width="12" stroke-linecap="round"/>
+  <g fill="#fff8e6" opacity=".6"><circle cx="400" cy="300" r="4"/><circle cx="460" cy="330" r="3"/><circle cx="480" cy="380" r="4"/><circle cx="350" cy="290" r="3"/></g>
+  <!-- icing sugar -->
+  <g fill="#fff" opacity=".85"><circle cx="300" cy="270" r="2"/><circle cx="360" cy="256" r="2"/><circle cx="420" cy="240" r="2"/><circle cx="470" cy="232" r="2"/><circle cx="330" cy="262" r="1.5"/><circle cx="440" cy="246" r="1.5"/></g>
+  <!-- cream quenelle -->
+  <ellipse cx="540" cy="500" rx="80" ry="44" fill="url(#cream)" transform="rotate(-20 540 500)"/>
+  <path d="M480 510c30-20 80-30 120-20" fill="none" stroke="#e6d6bb" stroke-width="4" stroke-linecap="round"/>
+  <!-- berries -->
+  <circle cx="300" cy="460" r="26" fill="url(#berry)"/><circle cx="340" cy="490" r="22" fill="url(#berry)"/>
+  <circle cx="270" cy="500" r="18" fill="url(#blue)"/><circle cx="380" cy="460" r="16" fill="url(#blue)"/>
+  <circle cx="620" cy="420" r="18" fill="url(#berry)"/><circle cx="460" cy="560" r="15" fill="url(#blue)"/>
+  <g fill="#fff" opacity=".6"><circle cx="292" cy="452" r="5"/><circle cx="334" cy="482" r="4"/><circle cx="614" cy="413" r="4"/></g>
+  <!-- mint -->
+  <g fill="#4e8a32">
+    <path d="M560 430c10-30 40-40 60-30-10 28-38 40-60 30z"/><path d="M548 440c-25-15-30-45-15-62 22 15 28 45 15 62z"/>
+  </g>
+  <path d="M560 430l30-20M548 440l-10-35" stroke="#2f5d1a" stroke-width="2"/>
+</svg>

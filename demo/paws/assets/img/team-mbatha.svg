@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <rect width="160" height="160" fill="#d9effa"/>
+  <path d="M24 30c20-22 92-30 116 0 22 26 18 92-8 116-28 26-92 22-116-6C-6 116 4 52 24 30Z" fill="#84c8ea"/>
+  
+  <path d="M26 162c2-30 24-48 54-48s52 18 54 48Z" fill="#2f7d32" stroke="#2d2219" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M68 116l12 14 12-14" fill="none" stroke="#2d2219" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="70" y="96" width="20" height="24" rx="9" fill="#6e4630" stroke="#2d2219" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="53" cy="78" r="6.5" fill="#6e4630" stroke="#2d2219" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="107" cy="78" r="6.5" fill="#6e4630" stroke="#2d2219" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <ellipse cx="80" cy="74" rx="27" ry="31" fill="#6e4630" stroke="#2d2219" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M54 66c0-18 12-28 26-28s26 10 26 28c-6-8-15-12-26-12s-20 4-26 12Z" fill="#1f1712" stroke="#2d2219" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M54 80c2 20 12 29 26 29s24-9 26-29c-6 7-15 9-26 9s-20-2-26-9Z" fill="#1f1712" stroke="#2d2219" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="69" cy="76" r="3.2" fill="#2d2219"/><circle cx="91" cy="76" r="3.2" fill="#2d2219"/>
+  <path d="M64 66c3-2 7-2 9 0M87 66c3-2 7-2 9 0" fill="none" stroke="#2d2219" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M71 90c5 5 13 5 18 0" fill="none" stroke="#2d2219" stroke-width="3" stroke-linecap="round"/>
+  <ellipse cx="62" cy="86" rx="4.5" ry="2.6" fill="#e2725b" opacity=".35"/><ellipse cx="98" cy="86" rx="4.5" ry="2.6" fill="#e2725b" opacity=".35"/>
+  
+  <path d="M62 118c-2 14 4 24 12 24M98 118c2 14-4 24-12 24" fill="none" stroke="#3d4655" stroke-width="3.5" stroke-linecap="round"/><circle cx="80" cy="142" r="6" fill="#c5ccd6" stroke="#2d2219" stroke-width="3"/>
+  
+</svg>

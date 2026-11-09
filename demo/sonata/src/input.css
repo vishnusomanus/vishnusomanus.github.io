@@ -1,0 +1,153 @@
+@import "tailwindcss";
+@source not "../*.md";
+@source not "../*.json";
+@theme {
+  --font-sans: "Asap", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Lora", Georgia, serif;
+  --color-paper: #fffdf7;
+  --color-ink: #30213f;
+  --color-muted: #6a5b6f;
+  --color-vermillion: #b73e26;
+  --color-celadon: #dce9ce;
+  --color-lilac: #e8def0;
+  --color-line: #d9d1d8;
+  --color-butter: #f5d77c;
+}
+@layer base {
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    font-size: 17px;
+  }
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  button,
+  summary {
+    cursor: pointer;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  :focus-visible {
+    outline: 3px solid #b73e26;
+    outline-offset: 4px;
+  }
+  ::selection {
+    background: #f5d77c;
+    color: #30213f;
+  }
+}
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-[1280px] px-5 sm:px-8 lg:px-12;
+  }
+  .section {
+    @apply py-14 sm:py-20;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[.18em];
+  }
+  .display {
+    @apply font-display leading-[1.06] tracking-[-.045em];
+  }
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-3 rounded-full border border-ink bg-ink px-6 py-3 text-base font-semibold text-paper transition hover:bg-vermillion hover:border-vermillion disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-line {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-ink bg-transparent px-5 py-3 text-base font-semibold text-ink transition hover:bg-celadon;
+  }
+  .link {
+    @apply font-semibold underline decoration-vermillion/50 underline-offset-4 hover:decoration-vermillion;
+  }
+  .field {
+    @apply mt-2 block min-h-12 w-full rounded-lg border border-ink/40 bg-white px-4 py-3 text-base text-ink;
+  }
+  .label {
+    @apply block text-sm font-semibold;
+  }
+  .error {
+    @apply mt-2 text-sm font-semibold text-vermillion;
+  }
+  .field[aria-invalid="true"] {
+    @apply border-vermillion ring-2 ring-vermillion/30;
+  }
+  .pill {
+    @apply inline-flex items-center rounded-full border border-ink/20 px-3 py-1 text-xs font-semibold;
+  }
+  .nav-link {
+    @apply rounded-full px-3 py-2 text-sm font-medium hover:bg-celadon aria-[current=page]:bg-celadon;
+  }
+  .card {
+    @apply overflow-hidden rounded-[1.3rem] border border-line bg-white;
+  }
+  .staff {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 25px,
+      #30213f18 25px,
+      #30213f18 26px,
+      transparent 26px,
+      transparent 40px
+    );
+  }
+  .course-art {
+    @apply aspect-[4/3] w-full object-cover;
+  }
+  .faq summary {
+    @apply flex min-h-14 items-center justify-between gap-4 py-4 font-semibold;
+  }
+  .faq summary::after {
+    content: "+";
+    font-size: 1.5rem;
+  }
+  .faq[open] summary::after {
+    content: "−";
+  }
+  .faq {
+    @apply border-b border-line;
+  }
+  .faq p {
+    @apply max-w-3xl pb-5 leading-relaxed text-muted;
+  }
+  .step-dot {
+    @apply flex size-8 items-center justify-center rounded-full border border-line text-sm;
+  }
+  .step-dot[aria-current="step"] {
+    @apply border-ink bg-ink text-white;
+  }
+  .reveal {
+    opacity: 1;
+  }
+  .js.motion .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition:
+      opacity 0.55s,
+      transform 0.55s;
+  }
+  .js.motion .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+@media print {
+  header,
+  footer,
+  [data-print-hide] {
+    display: none !important;
+  }
+  main {
+    color: #000;
+  }
+}

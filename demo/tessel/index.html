@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tessel: the form and survey builder people actually finish</title>
+    <meta name="description" content="Tessel is an online form and survey builder for teams who are tired of forms nobody finishes. Logic, payments, 40+ integrations and honest analytics. Made in Omaha, Nebraska." />
+    <meta name="theme-color" content="#fbf3e4" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tessel" />
+    <meta property="og:title" content="Tessel: the form and survey builder people actually finish" />
+    <meta property="og:description" content="Tessel is an online form and survey builder for teams who are tired of forms nobody finishes. Logic, payments, 40+ integrations and honest analytics. Made in Omaha, Nebraska." />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&amp;family=Ubuntu+Sans:ital,wght@0,400..800;1,400&amp;family=Ubuntu+Sans+Mono:wght@400;600&amp;display=swap" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      (function () {
+        var d = document.documentElement, t = null;
+        d.classList.add("js");
+        try { t = localStorage.getItem("tessel:theme"); } catch (e) {}
+        if (t === "dark" || (t !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches)) d.classList.add("dark");
+      })();
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="index" class="flex min-h-screen flex-col">
+    <a href="#main" class="sr-only z-[90] rounded-lg border-2 border-line bg-butter px-4 py-3 font-bold text-coal focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+    <header class="sticky top-0 z-40 border-b-[2.5px] border-line bg-bg">
+      <div class="wrap flex min-h-[4.5rem] items-center justify-between gap-3">
+        <a href="index.html" class="wiggle flex items-center gap-2.5" aria-label="Tessel home"><svg viewBox="0 0 40 40" class="size-10 shrink-0" aria-hidden="true"><rect x="5" y="5" width="33" height="33" rx="5" fill="var(--color-line)"/><rect x="2" y="2" width="33" height="33" rx="5" fill="var(--color-card)" stroke="var(--color-line)" stroke-width="2.5"/><path d="M2 18.5h33M18.5 2v33" stroke="var(--color-line)" stroke-width="2.5"/><path d="M4.6 4.6h12.6v12.6H4.6z" fill="#ff6b42"/><path d="M19.8 4.6h12.6v12.6H19.8z" fill="#ffd84a"/><path d="M4.6 19.8h12.6v12.6H4.6z" fill="#a9b2ff"/><path d="M19.8 19.8h12.6v12.6H19.8z" fill="#86e2b6"/><circle cx="26.1" cy="26.1" r="3.2" fill="#16130f"/></svg><span class="font-display text-2xl tracking-tight">tessel</span></a>
+        <nav class="hidden xl:block" aria-label="Main">
+          <ul class="flex items-center gap-1">
+            <li><a class="nav-link" href="features.html">Features</a></li>
+            <li><a class="nav-link" href="templates.html">Templates</a></li>
+            <li><a class="nav-link" href="integrations.html">Integrations</a></li>
+            <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+            <li><a class="nav-link" href="customers.html">Customers</a></li>
+            <li><a class="nav-link" href="changelog.html">Changelog</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Dark mode">
+            <svg data-icon-moon viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+            <svg data-icon-sun viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>
+          </button>
+          <a href="signup.html#signin" class="nav-link hidden sm:block">Sign in</a>
+          <a href="signup.html" class="btn btn-sm btn-tomato hidden sm:inline-flex">Start free</a>
+          <button id="menu-toggle" type="button" class="icon-btn xl:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+            <svg data-icon-open viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+            <svg data-icon-close viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" hidden class="border-t-[2.5px] border-line bg-bg-2 xl:hidden">
+        <nav class="wrap pt-2 pb-6" aria-label="Mobile">
+          <ul>
+          <li><a class="m-link" href="features.html">Features<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="templates.html">Templates<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="integrations.html">Integrations<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="pricing.html">Pricing<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="customers.html">Customers<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="changelog.html">Changelog<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="contact.html">Talk to sales<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          </ul>
+          <div class="mt-5 grid grid-cols-2 gap-3">
+            <a href="signup.html#signin" class="btn btn-plain">Sign in</a>
+            <a href="signup.html" class="btn btn-tomato">Start free</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+      <!-- Hero with the live form builder (main.js: initBuilder) -->
+      <section class="grid-paper relative overflow-hidden border-b-[2.5px] border-line">
+        <div class="wrap relative grid gap-12 py-12 sm:py-16 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] lg:items-center lg:gap-10 lg:py-20">
+          <div class="relative">
+            <a href="changelog.html" class="sticker reveal -rotate-2 bg-mint! hover:rotate-0">New &middot; Payments on every plan</a>
+            <h1 class="reveal mt-6 font-display text-[2.6rem] leading-[1.1] tracking-tight sm:text-6xl lg:text-[3.7rem]">Forms people <span class="relative inline-block">actually<svg viewBox="0 0 220 24" class="absolute -bottom-1.5 left-0 h-3 w-full text-tomato" preserveAspectRatio="none" aria-hidden="true"><path d="M3 15c30-9 50-9 70-2s45 7 70-2 50-8 74 1" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/></svg></span> finish.</h1>
+            <p class="reveal mt-7 max-w-xl text-lg leading-relaxed text-ink-soft sm:text-xl">Tessel is the form and survey builder with no fuss and no dead ends. Drag in fields, add logic and payments, and watch responses land where your team already works.</p>
+            <div class="reveal mt-8 flex flex-col gap-4 sm:flex-row">
+              <a href="signup.html" class="btn btn-lg btn-tomato">Start free, no card <svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></a>
+              <a href="templates.html" class="btn btn-lg btn-plain">Browse 18 templates</a>
+            </div>
+            <ul class="reveal mt-7 grid gap-2 font-semibold sm:grid-cols-2">
+              <li class="flex items-center gap-2"><span class="grid size-6 shrink-0 place-items-center rounded-md border-2 border-line bg-mint text-coal"><svg viewBox="0 0 20 20" class="size-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span>100 responses a month free</li>
+              <li class="flex items-center gap-2"><span class="grid size-6 shrink-0 place-items-center rounded-md border-2 border-line bg-mint text-coal"><svg viewBox="0 0 20 20" class="size-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span>Unlimited forms and fields</li>
+              <li class="flex items-center gap-2"><span class="grid size-6 shrink-0 place-items-center rounded-md border-2 border-line bg-mint text-coal"><svg viewBox="0 0 20 20" class="size-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span>Accessible by default</li>
+              <li class="flex items-center gap-2"><span class="grid size-6 shrink-0 place-items-center rounded-md border-2 border-line bg-mint text-coal"><svg viewBox="0 0 20 20" class="size-4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span>Data hosted in the US</li>
+            </ul>
+          </div>
+
+          <div class="reveal relative">
+            <p class="absolute -top-9 right-2 z-10 hidden rotate-3 items-center gap-1 font-mono text-sm font-semibold sm:flex" aria-hidden="true">try it, it's live<svg viewBox="0 0 60 40" class="h-8 w-12 text-ink" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6c18 0 34 8 40 26M36 28l8 6 4-10"/></svg></p>
+            <svg viewBox="0 0 60 60" class="absolute -bottom-8 -left-6 z-10 hidden size-16 text-butter lg:block" aria-hidden="true"><path d="M30 3l6 17 18-4-12 14 12 14-18-4-6 17-6-17-18 4 12-14L6 16l18 4z" fill="currentColor" stroke="var(--color-line)" stroke-width="2.5" stroke-linejoin="round"/></svg>
+            <div id="builder" class="card overflow-hidden shadow-brut-lg" data-builder>
+              <div class="flex flex-wrap items-center gap-3 border-b-[2.5px] border-line bg-bg-2 px-4 py-3">
+                <span class="flex gap-1.5" aria-hidden="true"><span class="size-3.5 rounded-sm border-2 border-line bg-tomato"></span><span class="size-3.5 rounded-sm border-2 border-line bg-butter"></span><span class="size-3.5 rounded-sm border-2 border-line bg-mint"></span></span>
+                <h2 class="font-mono text-sm font-semibold">tessel.example/f/<span data-builder-slug>fall-cleanup-volunteers</span></h2>
+                <span class="ml-auto rounded-full border-2 border-line bg-card px-2.5 py-0.5 font-mono text-xs font-semibold" data-field-count>3 fields</span>
+              </div>
+              <div class="grid md:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
+                <div class="border-b-[2.5px] border-line p-4 md:border-r-[2.5px] md:border-b-0">
+                  <div class="flex items-center justify-between gap-2">
+                    <p class="eyebrow text-ink-soft">Editor</p>
+                    <button type="button" class="font-mono text-xs font-semibold underline decoration-2 underline-offset-4" data-builder-reset>Reset</button>
+                  </div>
+                  <label class="mt-3 block">
+                    <span class="sr-only">Form title</span>
+                    <input class="field mt-0! font-bold" type="text" maxlength="48" value="Fall cleanup volunteers" data-builder-title>
+                  </label>
+                  <ol class="mt-3 grid gap-2.5" data-builder-list aria-label="Fields in this form"></ol>
+                  <p class="mt-4 text-sm font-bold">Add a field</p>
+                  <div class="mt-2 flex flex-wrap gap-1.5" data-builder-add></div>
+                </div>
+                <div class="bg-bg p-4">
+                  <p class="eyebrow text-ink-soft">Live preview</p>
+                  <div class="mt-3" data-builder-preview></div>
+                </div>
+              </div>
+              <p class="sr-only" aria-live="polite" data-builder-status></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer wordmarks -->
+      <section class="border-b-[2.5px] border-line bg-butter text-coal" aria-labelledby="logos-title">
+        <div class="wrap py-9">
+          <h2 id="logos-title" class="text-center font-mono text-sm font-semibold tracking-wide uppercase">9,400 teams collect answers with Tessel</h2>
+          <ul class="mt-6 grid grid-cols-2 gap-x-6 gap-y-5 sm:grid-cols-4 lg:grid-cols-8">
+            <li class="flex items-center justify-center gap-2 font-display text-[15px]"><svg viewBox="0 0 24 24" class="size-6 shrink-0" aria-hidden="true"><path d="M3 20 12 4l9 16z" fill="none" stroke="#16130f" stroke-width="2.5" stroke-linejoin="round"/><path d="M8 20l4-7 4 7" fill="#16130f"/></svg>Kettlerun</li>
+            <li class="flex items-center justify-center gap-2 text-[17px] font-extrabold tracking-tight"><svg viewBox="0 0 24 24" class="size-6 shrink-0" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="#16130f" stroke-width="2.5"/><path d="M12 3v18M3 12h18" stroke="#16130f" stroke-width="2.5"/></svg>Hobnail</li>
+            <li class="flex items-center justify-center gap-2 font-mono text-[15px] font-semibold"><svg viewBox="0 0 24 24" class="size-6 shrink-0" aria-hidden="true"><path d="M5 21c0-9 3-16 14-18-1 10-6 16-14 18z" fill="none" stroke="#16130f" stroke-width="2.5" stroke-linejoin="round"/><path d="M5 21 15 9" stroke="#16130f" stroke-width="2.5"/></svg>quillfern</li>
+            <li class="flex items-center justify-center gap-2 text-[16px] font-extrabold uppercase"><svg viewBox="0 0 24 24" class="size-6 shrink-0" aria-hidden="true"><rect x="3" y="3" width="18" height="18" fill="none" stroke="#16130f" stroke-width="2.5"/><path d="M3 9h18M9 9v12" stroke="#16130f" stroke-width="2.5"/></svg>Bramblecourt</li>
+            <li class="flex items-center justify-center gap-2 font-display text-[15px]"><svg viewBox="0 0 24 24" class="size-6 shrink-0" aria-hidden="true"><path d="M2 18c4-8 6-8 10 0s6 8 10 0" fill="none" stroke="#16130f" stroke-width="2.5" stroke-linecap="round"/><circle cx="12" cy="7" r="3" fill="#16130f"/></svg>Sandhill</li>
+            <li class="flex items-center justify-center gap-2 text-[17px] font-bold italic"><svg viewBox="0 0 24 24" class="size-6 shrink-0" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="#16130f" stroke-width="2.5"/><path d="M8 3v18M16 3v18" stroke="#16130f" stroke-width="1.5"/></svg>Wickerline</li>
+            <li class="flex items-center justify-center gap-2 font-mono text-[15px] font-semibold uppercase"><svg viewBox="0 0 24 24" class="size-6 shrink-0" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11z" fill="none" stroke="#16130f" stroke-width="2.5" stroke-linejoin="round"/><rect x="10" y="13" width="4" height="7" fill="#16130f"/></svg>Prairiefold</li>
+            <li class="flex items-center justify-center gap-2 text-[17px] font-extrabold"><svg viewBox="0 0 24 24" class="size-6 shrink-0" aria-hidden="true"><path d="M5 4h14l-2 16H7z" fill="none" stroke="#16130f" stroke-width="2.5" stroke-linejoin="round"/><path d="M9 4c0 3 6 3 6 0" fill="none" stroke="#16130f" stroke-width="2.5"/></svg>Cottonwick</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Feature blocks -->
+      <section class="py-16 sm:py-24" aria-labelledby="blocks-title">
+        <div class="wrap">
+          <div class="max-w-2xl">
+            <p class="eyebrow text-ink-soft">What's in the box</p>
+            <h2 id="blocks-title" class="mt-3 font-display text-4xl leading-[1.05] sm:text-5xl">Four building blocks. Zero dead ends.</h2>
+            <p class="mt-5 text-lg text-ink-soft">Every plan gets the whole kit. You only pay more when more people answer.</p>
+          </div>
+          <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-12">
+            <article class="reveal card flex flex-col overflow-hidden bg-tomato! text-coal lg:col-span-7">
+              <div class="p-6 sm:p-8">
+                <p class="sticker bg-cream! text-coal!">Logic</p>
+                <h3 class="mt-4 font-display text-2xl sm:text-3xl">Ask the next right question.</h3>
+                <p class="mt-3 max-w-md font-medium">Show, skip and jump with rules you can read out loud. Renters never see homeowner questions.</p>
+              </div>
+              <svg viewBox="0 0 520 190" class="mt-auto w-full" aria-hidden="true"><g stroke="#16130f" stroke-width="3" fill="#fffaf1"><rect x="24" y="70" width="140" height="52" rx="8"/><rect x="300" y="18" width="190" height="48" rx="8" fill="#ffd84a"/><rect x="300" y="126" width="190" height="48" rx="8" fill="#86e2b6"/><path d="M164 96h56c20 0 20-54 40-54h40M220 96c20 0 20 54 40 54h40" fill="none"/><circle cx="220" cy="96" r="9" fill="#16130f"/></g><g fill="#16130f" font-family="Ubuntu Sans Mono, monospace" font-size="15" font-weight="600"><text x="40" y="101">Do you rent?</text><text x="318" y="47">Yes → Landlord info</text><text x="318" y="155">No → Mortgage info</text></g></svg>
+            </article>
+            <article class="reveal card flex flex-col overflow-hidden bg-butter! text-coal lg:col-span-5">
+              <div class="p-6 sm:p-8">
+                <p class="sticker bg-cream! text-coal!">Payments</p>
+                <h3 class="mt-4 font-display text-2xl sm:text-3xl">Get paid in the same step.</h3>
+                <p class="mt-3 font-medium">Tickets, donations and deposits with totals that add up as people choose.</p>
+              </div>
+              <svg viewBox="0 0 360 190" class="mt-auto w-full" aria-hidden="true"><g stroke="#16130f" stroke-width="3"><rect x="40" y="30" width="220" height="140" rx="10" fill="#fffaf1"/><rect x="90" y="16" width="230" height="130" rx="10" fill="#a9b2ff"/><rect x="90" y="48" width="230" height="22" fill="#16130f"/><rect x="110" y="94" width="40" height="28" rx="4" fill="#ffd84a"/></g><g font-family="Ubuntu Sans Mono, monospace" font-weight="600" fill="#16130f"><text x="170" y="114" font-size="16">•••• 0139</text><text x="56" y="160" font-size="15">Total $58.00</text></g></svg>
+            </article>
+            <article class="reveal card flex flex-col overflow-hidden bg-mint! text-coal lg:col-span-5">
+              <div class="p-6 sm:p-8">
+                <p class="sticker bg-cream! text-coal!">Integrations</p>
+                <h3 class="mt-4 font-display text-2xl sm:text-3xl">Answers go where work happens.</h3>
+                <p class="mt-3 font-medium">Rows in your sheet, deals in your CRM, a ping in your team chat. 40+ connections, plus webhooks.</p>
+              </div>
+              <svg viewBox="0 0 360 170" class="mt-auto w-full" aria-hidden="true"><g stroke="#16130f" stroke-width="3"><path d="M180 85H70M180 85h110M180 85V25M180 85v60" fill="none" stroke-dasharray="7 6"/><rect x="146" y="51" width="68" height="68" rx="10" fill="#fffaf1"/><rect x="20" y="62" width="50" height="46" rx="8" fill="#ff6b42"/><rect x="290" y="62" width="50" height="46" rx="8" fill="#ffd84a"/><rect x="157" y="4" width="46" height="34" rx="8" fill="#a9b2ff"/><rect x="157" y="132" width="46" height="34" rx="8" fill="#ffb4d0"/><path d="M162 66h16v16h-16zM182 66h16v16h-16zM162 86h16v16h-16z" fill="#16130f" stroke-width="0"/></g></svg>
+            </article>
+            <article class="reveal card flex flex-col overflow-hidden bg-peri! text-coal lg:col-span-7">
+              <div class="p-6 sm:p-8">
+                <p class="sticker bg-cream! text-coal!">Analytics</p>
+                <h3 class="mt-4 font-display text-2xl sm:text-3xl">See exactly where people stop.</h3>
+                <p class="mt-3 max-w-md font-medium">Views, starts, finishes and drop-off by field. Fix the one question that loses half your audience.</p>
+              </div>
+              <svg viewBox="0 0 520 170" class="mt-auto w-full" aria-hidden="true"><g stroke="#16130f" stroke-width="3"><rect x="30" y="20" width="80" height="140" fill="#fffaf1"/><rect x="130" y="40" width="80" height="120" fill="#fffaf1"/><rect x="230" y="58" width="80" height="102" fill="#fffaf1"/><rect x="330" y="112" width="80" height="48" fill="#ff6b42"/><rect x="430" y="122" width="70" height="38" fill="#fffaf1"/><path d="M14 160h500" fill="none"/></g><g font-family="Ubuntu Sans Mono, monospace" font-weight="600" font-size="15" fill="#16130f"><text x="44" y="48">100%</text><text x="148" y="68">86%</text><text x="248" y="86">73%</text><text x="342" y="102">34% ↓</text></g></svg>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How it works -->
+      <section class="grid-paper border-y-[2.5px] border-line bg-bg-2 py-16 sm:py-24" aria-labelledby="how-title">
+        <div class="wrap">
+          <h2 id="how-title" class="font-display text-4xl leading-[1.05] sm:text-5xl">From blank page to <span class="marker">first response</span> in three moves.</h2>
+          <ol class="mt-12 grid gap-6 md:grid-cols-3">
+            <li class="reveal card p-6">
+              <span class="grid size-12 place-items-center rounded-full border-[2.5px] border-line bg-tomato font-display text-xl text-coal" aria-hidden="true">1</span>
+              <h3 class="mt-5 text-xl font-extrabold">Build</h3>
+              <p class="mt-2 text-ink-soft">Start from a template or a blank page. Add fields, set rules and preview on a phone as you go.</p>
+            </li>
+            <li class="reveal card p-6 md:translate-y-6">
+              <span class="grid size-12 place-items-center rounded-full border-[2.5px] border-line bg-butter font-display text-xl text-coal" aria-hidden="true">2</span>
+              <h3 class="mt-5 text-xl font-extrabold">Share</h3>
+              <p class="mt-2 text-ink-soft">Send a link, embed it on your site, print a QR code for the front desk or pop it up after checkout.</p>
+            </li>
+            <li class="reveal card p-6 md:translate-y-12">
+              <span class="grid size-12 place-items-center rounded-full border-[2.5px] border-line bg-mint font-display text-xl text-coal" aria-hidden="true">3</span>
+              <h3 class="mt-5 text-xl font-extrabold">Learn</h3>
+              <p class="mt-2 text-ink-soft">Watch responses arrive, filter them, chart them and send them on to the tools your team already uses.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Stats -->
+      <section class="bg-coal text-cream" aria-labelledby="stats-title">
+        <div class="wrap py-14">
+          <h2 id="stats-title" class="sr-only">Tessel in numbers</h2>
+          <dl class="grid grid-cols-2 gap-8 lg:grid-cols-4">
+            <div><dt class="font-mono text-sm text-cream/80">Responses collected</dt><dd class="mt-1 font-display text-4xl text-butter sm:text-5xl">41M</dd></div>
+            <div><dt class="font-mono text-sm text-cream/80">Average completion</dt><dd class="mt-1 font-display text-4xl text-mint sm:text-5xl">78%</dd></div>
+            <div><dt class="font-mono text-sm text-cream/80">Teams on Tessel</dt><dd class="mt-1 font-display text-4xl text-peri sm:text-5xl">9,400</dd></div>
+            <div><dt class="font-mono text-sm text-cream/80">Uptime, last 12 months</dt><dd class="mt-1 font-display text-4xl text-bubble sm:text-5xl">99.98%</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- Testimonial -->
+      <section class="py-16 sm:py-24" aria-labelledby="quote-title">
+        <div class="wrap grid items-center gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)]">
+          <div class="reveal relative mx-auto w-full max-w-sm">
+            <div class="card overflow-hidden bg-butter!">
+              <svg viewBox="0 0 320 320" class="w-full" role="img" aria-labelledby="lavinia-art"><title id="lavinia-art">Illustrated portrait of Lavinia Plaskett</title><rect width="320" height="320" fill="#ffd84a"/><path d="M0 250h320M0 200h320M0 150h320M0 100h320M0 50h320M50 0v320M100 0v320M150 0v320M200 0v320M250 0v320" stroke="#16130f" stroke-opacity=".12" stroke-width="2"/><path d="M60 320c6-62 46-94 100-94s94 32 100 94z" fill="#ff6b42" stroke="#16130f" stroke-width="4"/><path d="M134 196h52v42c0 10-52 10-52 0z" fill="#b97a52" stroke="#16130f" stroke-width="4"/><path d="M98 132c0-46 26-74 62-74s62 28 62 74c0 30-8 52-14 66H112c-6-14-14-36-14-66z" fill="#2d1d14" stroke="#16130f" stroke-width="4"/><ellipse cx="160" cy="142" rx="48" ry="56" fill="#c98a5e" stroke="#16130f" stroke-width="4"/><path d="M112 124c10-30 34-42 58-38 18 3 32 16 38 34-26-2-56-8-78-22-6 10-12 20-18 26z" fill="#2d1d14"/><circle cx="142" cy="146" r="5" fill="#16130f"/><circle cx="178" cy="146" r="5" fill="#16130f"/><path d="M146 172c9 7 19 7 28 0" fill="none" stroke="#16130f" stroke-width="4" stroke-linecap="round"/><rect x="124" y="134" width="34" height="24" rx="6" fill="none" stroke="#16130f" stroke-width="4"/><rect x="162" y="134" width="34" height="24" rx="6" fill="none" stroke="#16130f" stroke-width="4"/></svg>
+            </div>
+            <p class="sticker absolute -right-3 -bottom-4 rotate-3 bg-peri!">Customer since 2021</p>
+          </div>
+          <figure class="reveal">
+            <h2 id="quote-title" class="eyebrow text-ink-soft">From the bus stop to the office</h2>
+            <blockquote class="mt-4 font-display text-3xl leading-[1.15] sm:text-4xl">&ldquo;We replaced 140 paper permission slips a week. Parents fill them in at the bus stop, and we know who's coming before the bus does.&rdquo;</blockquote>
+            <figcaption class="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1"><span class="text-lg font-extrabold">Lavinia Plaskett</span><span class="text-ink-soft">Director of operations, Bramblecourt Schools</span></figcaption>
+            <a href="customers.html#bramblecourt" class="btn btn-plain mt-7">Read Bramblecourt's story</a>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Template teaser -->
+      <section class="border-t-[2.5px] border-line bg-bg-2 py-16 sm:py-20" aria-labelledby="tpl-title">
+        <div class="wrap">
+          <div class="flex flex-wrap items-end justify-between gap-4">
+            <h2 id="tpl-title" class="font-display text-4xl leading-[1.05] sm:text-5xl">Steal a head start.</h2>
+            <a href="templates.html" class="text-link">See all templates</a>
+          </div>
+          <ul class="mt-10 grid gap-6 md:grid-cols-3" data-featured-templates="event-rsvp nps-survey order-form"></ul>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="py-16 sm:py-24" aria-labelledby="cta-title">
+        <div class="wrap">
+          <div class="card relative overflow-hidden bg-tomato! p-8 text-coal shadow-brut-lg sm:p-14">
+            <svg viewBox="0 0 200 200" class="absolute -top-10 -right-10 size-56 opacity-90" aria-hidden="true"><g stroke="#16130f" stroke-width="4"><rect x="30" y="30" width="70" height="70" fill="#ffd84a"/><rect x="100" y="30" width="70" height="70" fill="#86e2b6"/><rect x="30" y="100" width="70" height="70" fill="#a9b2ff"/><rect x="100" y="100" width="70" height="70" fill="#fffaf1"/></g></svg>
+            <div class="relative max-w-2xl">
+              <h2 id="cta-title" class="font-display text-4xl leading-[1.05] sm:text-6xl">Your next form is three minutes away.</h2>
+              <p class="mt-5 max-w-lg text-lg font-semibold">Free for 100 responses a month, forever. Upgrade when the answers start piling up.</p>
+              <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+                <a href="signup.html" class="btn btn-lg">Start free</a>
+                <a href="contact.html" class="btn btn-lg btn-plain">Talk to sales</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-auto border-t-[2.5px] border-line bg-bg-2">
+      <div class="wrap grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div>
+          <a href="index.html" class="flex items-center gap-2.5" aria-label="Tessel home"><svg viewBox="0 0 40 40" class="size-10 shrink-0" aria-hidden="true"><rect x="5" y="5" width="33" height="33" rx="5" fill="var(--color-line)"/><rect x="2" y="2" width="33" height="33" rx="5" fill="var(--color-card)" stroke="var(--color-line)" stroke-width="2.5"/><path d="M2 18.5h33M18.5 2v33" stroke="var(--color-line)" stroke-width="2.5"/><path d="M4.6 4.6h12.6v12.6H4.6z" fill="#ff6b42"/><path d="M19.8 4.6h12.6v12.6H19.8z" fill="#ffd84a"/><path d="M4.6 19.8h12.6v12.6H4.6z" fill="#a9b2ff"/><path d="M19.8 19.8h12.6v12.6H19.8z" fill="#86e2b6"/><circle cx="26.1" cy="26.1" r="3.2" fill="#16130f"/></svg><span class="font-display text-2xl tracking-tight">tessel</span></a>
+          <p class="mt-4 max-w-xs text-ink-soft">Online forms and surveys that people actually finish. Built in Omaha, Nebraska, since 2019.</p>
+          <p class="mt-5 inline-flex items-center gap-2 rounded-full border-2 border-line bg-card px-3 py-1 font-mono text-sm font-semibold"><span class="size-2.5 rounded-full border-2 border-line bg-mint" aria-hidden="true"></span>All systems normal</p>
+        </div>
+        <div>
+          <h2 class="eyebrow text-ink-soft">Product</h2>
+          <ul class="mt-4 grid gap-2.5 font-semibold">
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="features.html">Features</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="templates.html">Templates</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="integrations.html">Integrations</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="pricing.html">Pricing</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="changelog.html">Changelog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="eyebrow text-ink-soft">Company</h2>
+          <ul class="mt-4 grid gap-2.5 font-semibold">
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="customers.html">Customers</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="contact.html">Talk to sales</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="signup.html">Start free</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="signup.html#signin">Sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="eyebrow text-ink-soft">Say hello</h2>
+          <address class="mt-4 grid gap-2.5 not-italic">
+            <span>1110 Harney Street, Suite 400<br>Omaha, NE 68102</span>
+            <a class="font-semibold hover:underline" href="tel:+14025550134">(402) 555-0134</a>
+            <a class="font-semibold hover:underline" href="mailto:hello@tessel.example">hello@tessel.example</a>
+          </address>
+        </div>
+      </div>
+      <div class="border-t-2 border-line">
+        <div class="wrap flex flex-col gap-2 py-5 text-sm text-ink-soft sm:flex-row sm:items-center sm:justify-between">
+          <p>&copy; <span data-year>2026</span> Tessel Forms, Inc. Tessel is a fictional company.</p>
+          <p class="font-mono">Made on the prairie, one field at a time.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

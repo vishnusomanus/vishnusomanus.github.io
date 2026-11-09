@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Company — The team behind Forge | Forge</title>
+  <meta name="description" content="Forge is a small infrastructure company in Erie and Bellingham. Our principles, our team, our numbers and the roles we are hiring for.">
+  <meta name="theme-color" content="#09090a">
+  <meta name="color-scheme" content="dark">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Forge">
+  <meta property="og:title" content="Company — The team behind Forge | Forge">
+  <meta property="og:description" content="Forge is a small infrastructure company in Erie and Bellingham. Our principles, our team, our numbers and the roles we are hiring for.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400..700&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="company" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[80] bg-brand-400 px-4 py-2.5 font-mono text-sm font-medium text-ink-950 focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 border-b border-line">
+    <div class="container-x flex h-[60px] items-center justify-between gap-6">
+      <div class="flex items-center gap-8">
+        <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Forge home">
+          <svg viewBox="0 0 28 28" class="h-7 w-7 shrink-0" aria-hidden="true"><rect width="28" height="28" rx="3" fill="#ffbe3d"/><path d="M7.5 6.5h13v3.6h-8.9v3.2h7.4v3.6h-7.4v4.6H7.5z" fill="#09090a"/><path d="M17 18h3.5v3.5H17z" fill="#09090a"/></svg>
+          <span class="font-mono text-[15px] font-semibold tracking-tight">forge<span class="logo-cursor text-brand-400">_</span></span>
+        </a>
+        <nav aria-label="Main" class="hidden lg:block">
+          <ul class="flex items-center">
+            <li><a href="docs.html" class="nav-link">Quickstart</a></li>
+            <li><a href="sdks.html" class="nav-link">SDKs</a></li>
+            <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+            <li><a href="changelog.html" class="nav-link">Changelog</a></li>
+            <li><a href="status.html" class="nav-link">Status</a></li>
+            <li><a href="company.html" aria-current="page" class="nav-link">Company</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="contact.html" class="nav-link hidden sm:inline-flex">Talk to sales</a>
+        <a href="signup.html" class="btn-primary btn-sm hidden sm:inline-flex">Get API key</a>
+        <button id="menu-toggle" type="button" class="grid h-10 w-10 place-items-center rounded-[3px] border border-line-strong bg-ink-900 text-fg lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="square" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-line lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-8">
+        <ul class="font-mono">
+          <li><a href="index.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>home</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="docs.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>quickstart</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="sdks.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>sdks</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="pricing.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>pricing</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="changelog.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>changelog</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="status.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>status</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="company.html" aria-current="page" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>company</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+          <li><a href="contact.html" class="flex items-center justify-between border-b border-line py-3.5 text-[15px] text-fg aria-[current=page]:text-brand-300"><span><span class="text-subtle" aria-hidden="true">~/</span>talk-to-sales</span><span class="text-subtle" aria-hidden="true">→</span></a></li>
+        </ul>
+        <a href="signup.html" class="btn-primary btn-lg mt-6 w-full">Get an API key</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <div class="frame">
+      <section class="relative overflow-hidden" aria-labelledby="company-title">
+        <div class="bg-plus pointer-events-none absolute inset-0" aria-hidden="true"></div>
+        <div class="pad-x relative grid gap-10 pt-14 pb-14 sm:pt-20 lg:grid-cols-12">
+          <div class="lg:col-span-7">
+            <p class="eyebrow reveal"><span class="eyebrow-num">co</span>/ Company</p>
+            <h1 id="company-title" class="h-display reveal reveal-d1 mt-5">We build the plumbing so you don’t have&nbsp;to.</h1>
+          </div>
+          <div class="reveal reveal-d2 space-y-4 self-end text-[17px] leading-relaxed text-muted lg:col-span-5">
+            <p>Forge started in 2021 in an Erie co-working space, after our founders spent three years rebuilding the same webhook system at three different companies: a queue, a retry loop, a signing scheme, a log table nobody could search.</p>
+            <p>Today 34 people in Erie, Bellingham and remote across nine time zones run it for more than 2,400 engineering teams. We’re profitable, independent and plan to stay boring.</p>
+          </div>
+        </div>
+        <dl class="cells relative grid-cols-2 border-t border-line lg:grid-cols-4">
+          <div class="pad-x py-6"><dt class="font-mono text-xs text-subtle">Founded</dt><dd class="mt-2 font-mono text-3xl">2021</dd></div>
+          <div class="pad-x py-6"><dt class="font-mono text-xs text-subtle">People</dt><dd class="mt-2 font-mono text-3xl">34</dd></div>
+          <div class="pad-x py-6"><dt class="font-mono text-xs text-subtle">Customers</dt><dd class="mt-2 font-mono text-3xl">2,400<span class="text-subtle">+</span></dd></div>
+          <div class="pad-x py-6"><dt class="font-mono text-xs text-subtle">Events a month</dt><dd class="mt-2 font-mono text-3xl">4.1<span class="text-subtle">B</span></dd></div>
+        </dl>
+      </section>
+
+      <section class="rule" aria-labelledby="principles-title">
+        <div class="pad-x pt-16 pb-12 lg:pt-24">
+          <p class="eyebrow reveal"><span class="eyebrow-num">01</span>/ Principles</p>
+          <h2 id="principles-title" class="h-section reveal reveal-d1 mt-4 max-w-3xl">Four rules we argue with, then follow.</h2>
+        </div>
+        <ol class="cells grid-cols-1 border-t border-line md:grid-cols-2">
+          <li class="reveal p-6 sm:p-8 lg:p-12"><p class="font-mono text-4xl text-brand-400">01</p><h3 class="mt-6 text-xl font-semibold tracking-[-0.02em]">Never lose an event.</h3><p class="mt-2 leading-relaxed text-muted">If we answered 202, the event exists in three places. Every design review starts with “how could this drop a message?”</p></li>
+          <li class="reveal reveal-d1 p-6 sm:p-8 lg:p-12"><p class="font-mono text-4xl text-brand-400">02</p><h3 class="mt-6 text-xl font-semibold tracking-[-0.02em]">Boring beats clever.</h3><p class="mt-2 leading-relaxed text-muted">Postgres, a queue, well-understood failure modes. We spend our novelty budget on developer experience, not on the database.</p></li>
+          <li class="reveal p-6 sm:p-8 lg:p-12"><p class="font-mono text-4xl text-brand-400">03</p><h3 class="mt-6 text-xl font-semibold tracking-[-0.02em]">Publish the numbers.</h3><p class="mt-2 leading-relaxed text-muted">Uptime, latency, incidents and postmortems are public, including the embarrassing ones. You’re putting your name on our delivery.</p></li>
+          <li class="reveal reveal-d1 p-6 sm:p-8 lg:p-12"><p class="font-mono text-4xl text-brand-400">04</p><h3 class="mt-6 text-xl font-semibold tracking-[-0.02em]">Docs are the product.</h3><p class="mt-2 leading-relaxed text-muted">An API nobody can figure out is an outage with better uptime. Engineers write the docs for the features they ship.</p></li>
+        </ol>
+      </section>
+
+      <section class="rule" aria-labelledby="team-title">
+        <div class="pad-x pt-16 pb-12 lg:pt-24">
+          <p class="eyebrow reveal"><span class="eyebrow-num">02</span>/ Team</p>
+          <h2 id="team-title" class="h-section reveal reveal-d1 mt-4 max-w-3xl">Small team, long on-call memory.</h2>
+        </div>
+        <ul class="cells grid-cols-1 border-t border-line sm:grid-cols-2 lg:grid-cols-3">
+          <li class="reveal flex flex-col p-6 sm:p-8">
+            <svg viewBox="0 0 40 40" class="h-14 w-14" aria-hidden="true"><rect width="40" height="40" fill="#1a1a1c"/><path d="M0 40V24h14v16z" fill="#313134"/><text x="20" y="25" fill="#ffbe3d" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" text-anchor="middle">MH</text></svg>
+            <h3 class="mt-5 font-semibold tracking-[-0.01em]">Marit Halvorsen</h3>
+            <p class="font-mono text-xs text-brand-400">Co-founder, CEO</p>
+            <p class="mt-3 text-[15px] leading-relaxed text-muted">Ran payments infrastructure at a Midwest fintech. Answers sales emails herself on Fridays.</p>
+          </li>
+          <li class="reveal flex flex-col p-6 sm:p-8">
+            <svg viewBox="0 0 40 40" class="h-14 w-14" aria-hidden="true"><rect width="40" height="40" fill="#1a1a1c"/><path d="M26 0h14v14z" fill="#313134"/><text x="20" y="25" fill="#ffbe3d" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" text-anchor="middle">DR</text></svg>
+            <h3 class="mt-5 font-semibold tracking-[-0.01em]">Dev Raghunathan</h3>
+            <p class="font-mono text-xs text-brand-400">Co-founder, CTO</p>
+            <p class="mt-3 text-[15px] leading-relaxed text-muted">Wrote the first retry scheduler on a train to Buffalo. Still reviews every change to it.</p>
+          </li>
+          <li class="reveal flex flex-col p-6 sm:p-8">
+            <svg viewBox="0 0 40 40" class="h-14 w-14" aria-hidden="true"><rect width="40" height="40" fill="#1a1a1c"/><path d="M0 0h40v8H0z" fill="#313134"/><text x="20" y="25" fill="#ffbe3d" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" text-anchor="middle">LA</text></svg>
+            <h3 class="mt-5 font-semibold tracking-[-0.01em]">Lucía Arrieta</h3>
+            <p class="font-mono text-xs text-brand-400">Head of Infrastructure</p>
+            <p class="mt-3 text-[15px] leading-relaxed text-muted">Keeps three regions boring. Previously SRE lead at a large travel marketplace.</p>
+          </li>
+          <li class="reveal flex flex-col p-6 sm:p-8">
+            <svg viewBox="0 0 40 40" class="h-14 w-14" aria-hidden="true"><rect width="40" height="40" fill="#1a1a1c"/><path d="M20 40a20 20 0 0 1 20-20v20z" fill="#313134"/><text x="20" y="25" fill="#ffbe3d" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" text-anchor="middle">TR</text></svg>
+            <h3 class="mt-5 font-semibold tracking-[-0.01em]">Tobias Rehnberg</h3>
+            <p class="font-mono text-xs text-brand-400">Developer Experience</p>
+            <p class="mt-3 text-[15px] leading-relaxed text-muted">Owns the SDKs, the CLI and the docs. Measures success in support tickets that never happen.</p>
+          </li>
+          <li class="reveal flex flex-col p-6 sm:p-8">
+            <svg viewBox="0 0 40 40" class="h-14 w-14" aria-hidden="true"><rect width="40" height="40" fill="#1a1a1c"/><path d="M0 32h40v8H0z" fill="#313134"/><text x="20" y="25" fill="#ffbe3d" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" text-anchor="middle">AN</text></svg>
+            <h3 class="mt-5 font-semibold tracking-[-0.01em]">Amara Nwachukwu</h3>
+            <p class="font-mono text-xs text-brand-400">Customer Engineering</p>
+            <p class="mt-3 text-[15px] leading-relaxed text-muted">Leads the engineers who help customers migrate from home-grown webhooks.</p>
+          </li>
+          <li class="reveal flex flex-col p-6 sm:p-8">
+            <svg viewBox="0 0 40 40" class="h-14 w-14" aria-hidden="true"><rect width="40" height="40" fill="#1a1a1c"/><path d="M0 0l14 0L0 14z" fill="#313134"/><text x="20" y="25" fill="#ffbe3d" font-family="IBM Plex Mono, monospace" font-size="12" font-weight="600" text-anchor="middle">KN</text></svg>
+            <h3 class="mt-5 font-semibold tracking-[-0.01em]">Kenji Nakashima</h3>
+            <p class="font-mono text-xs text-brand-400">Security</p>
+            <p class="mt-3 text-[15px] leading-relaxed text-muted">Runs our SOC 2 program, pen tests and the bug bounty. Rotates his own keys monthly.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="rule" aria-labelledby="offices-title">
+        <div class="pad-x grid gap-10 py-16 lg:grid-cols-12 lg:py-24">
+          <div class="lg:col-span-5">
+            <p class="eyebrow reveal"><span class="eyebrow-num">03</span>/ Offices</p>
+            <h2 id="offices-title" class="h-section reveal reveal-d1 mt-4">Two harbors, nine time zones.</h2>
+            <p class="lead reveal reveal-d2 mt-5">Most of us work remotely. The offices are where we meet every quarter, and where the coffee is better than at home.</p>
+          </div>
+          <div class="reveal grid gap-px border border-line bg-line sm:grid-cols-2 lg:col-span-7">
+            <div class="bg-ink-950 p-6">
+              <svg viewBox="0 0 240 90" class="h-20 w-full" fill="none" aria-hidden="true"><path d="M0 70h240" stroke="#333336"/><path d="M20 70V40h18v30M44 70V24h14v46M64 70V48h26v22M100 70V30l10-12 10 12v40M130 70V44h30v26M168 70V36h16v34M190 70V52h30v18" stroke="#8c8b85"/><path d="M0 80c20-6 40 6 60 0s40-6 60 0 40 6 60 0 40-6 60 0" stroke="#ffbe3d" stroke-opacity=".6"/></svg>
+              <h3 class="mt-4 font-semibold">Erie <span class="font-mono text-xs font-normal text-brand-400">HQ</span></h3>
+              <p class="mt-1 font-mono text-xs text-subtle">Pennsylvania · ET</p>
+              <p class="mt-3 text-sm text-muted">Engineering, infrastructure and finance. 19 people.</p>
+            </div>
+            <div class="bg-ink-950 p-6">
+              <svg viewBox="0 0 240 90" class="h-20 w-full" fill="none" aria-hidden="true"><path d="M0 70h240" stroke="#333336"/><path d="M14 70V46h22v24M40 70V34h12v36M58 70V28h18v42M84 70V50h20v20M112 70V20h8v50M126 70V40h24v30M158 70V54h20v16M184 70V30h18v40M208 70V46h22v24" stroke="#8c8b85"/><path d="M60 16l18 8 18-8" stroke="#ffbe3d" stroke-opacity=".6"/></svg>
+              <h3 class="mt-4 font-semibold">Bellingham</h3>
+              <p class="mt-1 font-mono text-xs text-subtle">Washington · PT</p>
+              <p class="mt-3 text-sm text-muted">Developer experience, customer engineering and sales. 11 people.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="careers" class="rule" aria-labelledby="careers-title">
+        <div class="pad-x flex flex-col gap-4 pt-16 pb-10 md:flex-row md:items-end md:justify-between lg:pt-24">
+          <div>
+            <p class="eyebrow reveal"><span class="eyebrow-num">04</span>/ Careers</p>
+            <h2 id="careers-title" class="h-section reveal reveal-d1 mt-4">Open roles.</h2>
+          </div>
+          <p class="reveal reveal-d2 max-w-md text-muted">Salaries are published in every listing. Four-day on-call rotations, paid properly, with a day off after a page at night.</p>
+        </div>
+        <ul class="reveal divide-y divide-line border-t border-line">
+            <li><a href="mailto:jobs@forge.example?subject=Senior%20Distributed%20Systems%20Engineer" class="group grid gap-1 px-5 py-5 transition hover:bg-ink-900 sm:grid-cols-[minmax(0,1fr)_12rem_14rem_1.5rem] sm:items-center sm:gap-6 sm:px-8 lg:px-12"><span class="font-medium text-fg">Senior Distributed Systems Engineer</span><span class="font-mono text-xs text-subtle">Delivery</span><span class="font-mono text-xs text-muted">Remote, US time zones</span><span class="hidden text-brand-400 transition group-hover:translate-x-1 sm:block" aria-hidden="true">→</span></a></li>
+            <li><a href="mailto:jobs@forge.example?subject=Site%20Reliability%20Engineer" class="group grid gap-1 px-5 py-5 transition hover:bg-ink-900 sm:grid-cols-[minmax(0,1fr)_12rem_14rem_1.5rem] sm:items-center sm:gap-6 sm:px-8 lg:px-12"><span class="font-medium text-fg">Site Reliability Engineer</span><span class="font-mono text-xs text-subtle">Infrastructure</span><span class="font-mono text-xs text-muted">Erie or remote US</span><span class="hidden text-brand-400 transition group-hover:translate-x-1 sm:block" aria-hidden="true">→</span></a></li>
+            <li><a href="mailto:jobs@forge.example?subject=Developer%20Advocate" class="group grid gap-1 px-5 py-5 transition hover:bg-ink-900 sm:grid-cols-[minmax(0,1fr)_12rem_14rem_1.5rem] sm:items-center sm:gap-6 sm:px-8 lg:px-12"><span class="font-medium text-fg">Developer Advocate</span><span class="font-mono text-xs text-subtle">Developer Experience</span><span class="font-mono text-xs text-muted">Bellingham or remote US</span><span class="hidden text-brand-400 transition group-hover:translate-x-1 sm:block" aria-hidden="true">→</span></a></li>
+            <li><a href="mailto:jobs@forge.example?subject=Solutions%20Engineer" class="group grid gap-1 px-5 py-5 transition hover:bg-ink-900 sm:grid-cols-[minmax(0,1fr)_12rem_14rem_1.5rem] sm:items-center sm:gap-6 sm:px-8 lg:px-12"><span class="font-medium text-fg">Solutions Engineer</span><span class="font-mono text-xs text-subtle">Customer Engineering</span><span class="font-mono text-xs text-muted">Remote, US Eastern</span><span class="hidden text-brand-400 transition group-hover:translate-x-1 sm:block" aria-hidden="true">→</span></a></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer class="mt-auto border-t border-line bg-ink-950">
+    <div class="container-x grid gap-12 py-14 lg:grid-cols-12">
+      <div class="lg:col-span-3">
+        <a href="index.html" class="group inline-flex items-center gap-2.5" aria-label="Forge home">
+          <svg viewBox="0 0 28 28" class="h-7 w-7 shrink-0" aria-hidden="true"><rect width="28" height="28" rx="3" fill="#ffbe3d"/><path d="M7.5 6.5h13v3.6h-8.9v3.2h7.4v3.6h-7.4v4.6H7.5z" fill="#09090a"/><path d="M17 18h3.5v3.5H17z" fill="#09090a"/></svg>
+          <span class="font-mono text-[15px] font-semibold tracking-tight">forge<span class="logo-cursor text-brand-400">_</span></span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-muted">Webhooks infrastructure for teams that ship. Built in Erie and Bellingham.</p>
+        <a href="status.html" class="mt-6 inline-flex items-center gap-2.5 rounded-[3px] border border-line-strong bg-ink-900 px-3 py-1.5 font-mono text-xs text-muted transition hover:border-ink-600 hover:text-fg"><span class="dot s-ok pulse" aria-hidden="true"></span>All systems operational</a>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-5">
+        <nav aria-label="Product">
+          <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">Product</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="index.html#features" class="text-muted transition hover:text-fg">Features</a></li>
+            <li><a href="pricing.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Pricing</a></li>
+            <li><a href="changelog.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Changelog</a></li>
+            <li><a href="status.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Status</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Developers">
+          <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">Developers</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="docs.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Quickstart</a></li>
+            <li><a href="docs.html#verify" class="text-muted transition hover:text-fg">Verify signatures</a></li>
+            <li><a href="sdks.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">SDKs and tools</a></li>
+            <li><a href="index.html#inspector" class="text-muted transition hover:text-fg">API explorer</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">Company</h2>
+          <ul class="mt-4 space-y-2.5 text-sm">
+            <li><a href="company.html" aria-current="page" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">About</a></li>
+            <li><a href="company.html#careers" class="text-muted transition hover:text-fg">Careers</a></li>
+            <li><a href="contact.html" class="text-muted transition hover:text-fg aria-[current=page]:text-fg">Talk to sales</a></li>
+            <li><a href="pricing.html#faq" class="text-muted transition hover:text-fg">FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="lg:col-span-4">
+        <h2 class="font-mono text-xs font-medium tracking-[0.12em] text-subtle uppercase">API changes by email</h2>
+        <p class="mt-4 text-sm text-muted">Breaking changes, new versions and deprecations. About one email a month.</p>
+        <form data-form="newsletter" class="mt-4" novalidate>
+          <label for="footer-email" class="sr-only">Email address</label>
+          <div class="flex gap-2">
+            <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@company.example" class="input py-2 text-sm">
+            <button type="submit" class="btn-ghost shrink-0">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="border-t border-line">
+      <div class="container-x flex flex-col gap-2 py-5 font-mono text-xs text-subtle sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Forge Systems, Inc. Forge is a fictional company.</p>
+        <p>API version <span class="text-muted">2026-09-01</span> · Template by Freeframe</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

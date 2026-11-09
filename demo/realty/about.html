@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The desk — Harbor & Co</title>
+<meta name="description" content="Harbor & Co is Jonah Ellis, working from a room on Exchange Street in Portland." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }</style>
+</head>
+<body class="bg-[#f4f7f4] text-[#163028] font-sans antialiased">
+<header class="sticky top-0 z-30 bg-[#163028] text-[#f4f7f4]">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-2xl">Harbor &amp; Co</a>
+    <div class="flex items-center gap-3"><a href="contact.html" class="rounded-full bg-[#d7efe3] px-4 py-2 text-sm font-semibold text-[#163028]">Ask about a house</a><button id="menuBtn" class="rounded-full border border-white/30 px-3 py-1 text-sm md:hidden" aria-expanded="false">Menu</button></div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t border-white/15 pt-3 text-sm md:flex md:basis-auto md:flex-row md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html">Homes</a><a href="about.html" aria-current="page">The desk</a><a href="contact.html">Ask</a></nav>
+  </div>
+</header><main class="mx-auto grid max-w-6xl items-center gap-10 px-5 py-14 sm:px-8 lg:grid-cols-2">
+  <img src="images/agent.jpg" alt="Jonah Ellis, who runs the Harbor & Co desk" class="aspect-[4/5] w-full rounded-3xl object-cover" />
+  <div>
+    <p class="text-xs uppercase tracking-[0.18em] text-[#3d6b58]">The desk</p>
+    <h1 class="mt-2 font-display text-5xl">One person, a short list.</h1>
+    <div class="mt-4 space-y-4 text-[#3e554b]"><p>Harbor &amp; Co is Jonah Ellis. The office is a room on Exchange Street in Portland. The houses are not all in Maine. They are wherever a house is worth a trip and the owner will let the awkward facts onto the page.</p><p>Jonah does not take a listing he has not walked. The packet for each house — survey, taxes, insurance, the well or the septic or the plow agreement — is ready before the page goes up.</p><p>If you are selling, write first. The list stays short on purpose. If you are buying, use the form on the house. You will get the packet, not a newsletter.</p></div>
+  </div>
+</main><footer class="bg-[#163028] text-[#d7efe3]"><div class="mx-auto grid max-w-6xl gap-6 px-5 py-10 text-sm sm:px-8 md:grid-cols-3"><div><p class="font-display text-2xl text-white">Harbor &amp; Co</p><p class="mt-2">21 Exchange Street<br />Portland, Maine 04101</p></div><div><p>The desk is Jonah Ellis. He answers the same day if you write before three.</p><p class="mt-2">desk@harborandco.com · (555) 018-4410</p></div><div class="space-y-1"><a href="index.html">Homes</a><br /><a href="about.html">The desk</a><br /><a href="contact.html">Ask</a></div></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

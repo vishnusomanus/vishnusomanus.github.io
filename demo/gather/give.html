@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Give — Riverbend Church</title>
+  <meta name="description" content="Give to Riverbend Church once or regularly, to the general fund, the Riverbend Pantry, global partners or the River Room renovation. See where every dollar goes.">
+  <meta name="theme-color" content="#fbf6ee">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Riverbend Church">
+  <meta property="og:title" content="Give — Riverbend Church">
+  <meta property="og:description" content="Give to Riverbend Church once or regularly, to the general fund, the Riverbend Pantry, global partners or the River Room renovation. See where every dollar goes.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400..800;1,6..12,400..600&amp;family=Urbanist:wght@500..900&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="give" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm font-bold text-white focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <div class="bg-ink text-white">
+    <div class="container-x flex min-h-10 items-center justify-between gap-4 py-2 text-[13px]">
+      <p data-service-status class="flex items-center gap-2 font-semibold"><span class="chip-dot bg-apricot" aria-hidden="true"></span>Sundays at 9:00 &amp; 11:00 am</p>
+      <p class="hidden items-center gap-5 text-white/85 md:flex"><span>418 Riverside Avenue, Lawrence, KS</span><a href="visit.html" class="font-bold text-apricot underline-offset-4 hover:underline">New here? Start here</a></p>
+    </div>
+  </div>
+  <header id="site-header" class="sticky top-0 z-40 border-b border-transparent bg-paper/95 backdrop-blur transition-[box-shadow,border-color] duration-300">
+    <div class="container-x flex h-20 items-center justify-between gap-4">
+      <a href="index.html" class="group inline-flex items-center gap-3">
+          <svg viewBox="0 0 40 40" class="h-10 w-10 transition-transform duration-500 group-hover:rotate-[-8deg] shrink-0" aria-hidden="true"><defs><clipPath id="logo-h"><circle cx="20" cy="20" r="19"/></clipPath></defs><circle cx="20" cy="20" r="19" fill="#5b2a6e"/><g clip-path="url(#logo-h)"><circle cx="20" cy="19" r="8" fill="#f6a96b"/><path d="M0 25c7-4 13-4 20-1s13 3 20-1v18H0z" fill="#c9dcc0"/><path d="M4 41c4-6 14-7 16-12s8-5 13-4c-6 1-8 4-10 8s-9 5-12 9z" fill="#bcd9e8"/></g></svg>
+          <span class="leading-none"><span class="block font-display text-[1.35rem] font-extrabold tracking-tight">Riverbend</span><span class="mt-0.5 block text-[10px] font-extrabold uppercase tracking-[0.28em] text-apricot-dark">Church · Lawrence</span></span>
+        </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-0.5">
+          <li><a href="visit.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">Plan a visit</a></li>
+          <li><a href="sermons.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">Sermons</a></li>
+          <li><a href="events.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">Events</a></li>
+          <li><a href="groups.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">Groups</a></li>
+          <li><a href="about.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">About</a></li>
+          <li><a href="contact.html" class="rounded-full px-3.5 py-2 text-[15px] font-bold text-ink/85 transition hover:bg-sand hover:text-ink aria-[current=page]:bg-lilac aria-[current=page]:text-plum">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="give.html" aria-current="page" class="btn-warm btn-sm hidden aria-[current=page]:ring-2 aria-[current=page]:ring-plum sm:inline-flex">Give</a>
+        <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-full bg-shell ring-1 ring-ink/15 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 8h16M4 16h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-line bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="visit.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Plan a visit<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="sermons.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Sermons<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="events.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Events<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="groups.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Groups<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">About<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="contact.html" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Contact<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+          <li><a href="give.html" aria-current="page" class="flex items-center justify-between border-b border-line py-4 font-display text-2xl font-extrabold aria-[current=page]:text-plum">Give<span aria-hidden="true" class="text-apricot-dark">→</span></a></li>
+        </ul>
+        <p class="mt-6 text-sm text-muted">Sundays 9:00 &amp; 11:00 am · 418 Riverside Avenue, Lawrence, KS 66044</p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="container-x pb-6 pt-10 lg:pt-14">
+      <div class="max-w-3xl">
+        <p class="eyebrow">Give</p>
+        <h1 class="h-display mt-5 text-[2.6rem] leading-[1.04] sm:text-6xl">Generosity that <span class="text-plum">stays in Lawrence.</span></h1>
+        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink/80">Riverbend is funded entirely by the people who call it home. Every gift keeps the lights on, the pantry stocked and the kids’ rooms safe, and we publish where every dollar goes.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="give-h" class="container-x pt-10">
+      <h2 id="give-h" class="sr-only">Give online</h2>
+      <div class="grid gap-8 lg:grid-cols-[1.45fr_1fr] lg:items-start">
+        <!-- Demo form: nothing is charged. To take real gifts, connect a payment provider in initGive()
+             in assets/js/main.js (for example, create a Stripe Checkout Session on your server and
+             redirect to it). See DOCS.md, "Forms". -->
+        <form id="give-form" class="card space-y-8 p-6 sm:p-9" novalidate>
+          <fieldset>
+            <legend class="field-label">How often?</legend>
+            <div class="mt-1 grid grid-cols-3 gap-2 rounded-full bg-sand p-1.5">
+              <label class="relative cursor-pointer rounded-full px-3 py-2.5 text-center text-sm font-bold transition has-[:checked]:bg-plum has-[:checked]:text-white has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-plum"><input type="radio" name="frequency" value="once" class="sr-only" checked>One time</label>
+              <label class="relative cursor-pointer rounded-full px-3 py-2.5 text-center text-sm font-bold transition has-[:checked]:bg-plum has-[:checked]:text-white has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-plum"><input type="radio" name="frequency" value="weekly" class="sr-only">Weekly</label>
+              <label class="relative cursor-pointer rounded-full px-3 py-2.5 text-center text-sm font-bold transition has-[:checked]:bg-plum has-[:checked]:text-white has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-plum"><input type="radio" name="frequency" value="monthly" class="sr-only">Monthly</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend class="field-label">Amount</legend>
+            <div id="give-amounts" class="mt-1 grid grid-cols-3 gap-3 sm:grid-cols-5"></div>
+            <div class="mt-4" data-error-after>
+              <label for="g-custom" class="sr-only">Other amount in US dollars</label>
+              <div class="relative">
+                <span class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 font-display text-xl font-extrabold text-muted" aria-hidden="true">$</span>
+                <input id="g-custom" name="custom" type="text" inputmode="decimal" autocomplete="off" class="field py-3.5 pl-9 font-display text-xl font-extrabold" placeholder="Other amount">
+              </div>
+            </div>
+          </fieldset>
+          <div>
+            <label for="g-fund" class="field-label">Give to</label>
+            <select id="g-fund" name="fund" class="field" data-novalidate></select>
+          </div>
+          <label class="check rounded-2xl bg-sand p-4"><input id="g-cover" name="cover" type="checkbox" checked><span><span class="block font-bold">Cover the card fee (<span id="g-fee">$0.00</span>)</span><span class="mt-0.5 block text-muted">Card processors charge about <span id="g-fee-rate">2.2% + $0.30</span>. Adding it means all of your gift reaches Riverbend.</span></span></label>
+          <div class="grid gap-5 border-t border-line pt-8 sm:grid-cols-2">
+            <div>
+              <label for="g-name" class="field-label">Full name</label>
+              <input id="g-name" name="name" type="text" autocomplete="name" required data-label="Your name" class="field">
+            </div>
+            <div>
+              <label for="g-email" class="field-label">Email <span class="font-normal text-muted">(for your receipt)</span></label>
+              <input id="g-email" name="email" type="email" autocomplete="email" required data-label="Email" class="field">
+            </div>
+          </div>
+          <div class="rounded-2xl border border-dashed border-plum/40 bg-lilac/60 p-4 text-sm leading-relaxed">
+            <p class="font-bold text-plum">Your card details stay safe</p>
+            <p class="mt-1 text-ink/80">You enter them on our payment provider’s secure checkout page, never in this form. Every gift gets an email receipt.</p>
+          </div>
+          <div class="flex flex-wrap items-center gap-4">
+            <button type="submit" id="give-submit" class="btn-primary px-8 py-4 text-base">Give</button>
+            <p class="flex items-center gap-2 text-sm text-muted"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="9" width="12" height="8.5" rx="2"/><path d="M7 9V6.5a3 3 0 0 1 6 0V9"/></svg>Secure checkout on the next step</p>
+          </div>
+          <p data-form-status role="status" class="text-sm font-semibold text-rose"></p>
+        </form>
+        <aside aria-labelledby="sum-h" class="space-y-6 lg:sticky lg:top-28" data-back-to-top-hide>
+          <div class="rounded-[1.75rem] bg-ink p-7 text-white shadow-lift">
+            <h3 id="sum-h" class="text-xs font-extrabold uppercase tracking-[0.16em] text-apricot">Your gift</h3>
+            <p class="mt-3 font-display text-5xl font-extrabold tabular-nums" id="give-total" aria-live="polite">$51.48</p>
+            <p class="mt-1 text-white/80"><span id="give-per">one time</span> · <span id="give-fund-label">General fund</span></p>
+            <p id="give-total-note" class="mt-5 border-t border-white/10 pt-4 text-sm leading-relaxed text-white/80"></p>
+          </div>
+          <div class="card p-6">
+            <h3 class="font-display text-lg font-extrabold">Other ways to give</h3>
+            <ul class="mt-4 space-y-3 text-[15px] leading-relaxed">
+              <li><strong>By check:</strong> payable to Riverbend Church, 418 Riverside Avenue, Lawrence, KS 66044.</li>
+              <li><strong>On Sundays:</strong> giving stations by the main doors take cards and cash.</li>
+              <li><strong>Stock, IRA or estate gifts:</strong> <a href="mailto:priya@riverbend.example" class="link">email Priya Raman</a>.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section aria-labelledby="where-h" class="container-x mt-24">
+      <div class="grid gap-10 lg:grid-cols-[1fr_1.3fr] lg:items-center">
+        <div>
+          <p class="eyebrow">Where it goes</p>
+          <h2 id="where-h" class="h-section mt-4">Our 2025 budget, in one bar</h2>
+          <p class="mt-4 leading-relaxed text-muted">Total giving in 2025 was $1.42 million. Our books are reviewed every year by an independent accountant, and the full report is available to anyone who asks.</p>
+        </div>
+        <figure class="reveal card p-6 sm:p-8">
+          <div class="flex h-14 overflow-hidden rounded-2xl" role="img" aria-label="2025 spending: 46% people and ministry staff, 18% building and operations, 14% Riverbend Pantry and local care, 12% global partners, 10% kids and youth programs">
+            <span class="bg-plum" style="width:46%"></span><span class="bg-apricot" style="width:18%"></span><span class="bg-sage-dark" style="width:14%"></span><span class="bg-river-dark" style="width:12%"></span><span class="bg-[#c48ad6]" style="width:10%"></span>
+          </div>
+          <figcaption class="mt-6 grid gap-3 text-[15px] sm:grid-cols-2">
+            <span class="flex items-center gap-3"><span class="chip-dot size-3 bg-plum" aria-hidden="true"></span><span><strong>46%</strong> People and ministry staff</span></span>
+            <span class="flex items-center gap-3"><span class="chip-dot size-3 bg-apricot" aria-hidden="true"></span><span><strong>18%</strong> Building and operations</span></span>
+            <span class="flex items-center gap-3"><span class="chip-dot size-3 bg-sage-dark" aria-hidden="true"></span><span><strong>14%</strong> Pantry and local care</span></span>
+            <span class="flex items-center gap-3"><span class="chip-dot size-3 bg-river-dark" aria-hidden="true"></span><span><strong>12%</strong> Global partners</span></span>
+            <span class="flex items-center gap-3"><span class="chip-dot size-3 bg-[#c48ad6]" aria-hidden="true"></span><span><strong>10%</strong> Kids and youth programs</span></span>
+          </figcaption>
+        </figure>
+      </div>
+      <ul class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <li class="reveal rounded-[1.75rem] bg-lilac p-6"><p class="font-display text-lg font-extrabold">General fund</p><p class="mt-2 text-[15px] leading-relaxed text-ink/80">Staff, Sundays, kids’ and youth programs and the building. If you’re not sure, choose this.</p></li>
+        <li class="reveal rounded-[1.75rem] bg-sage-light p-6"><p class="font-display text-lg font-extrabold">Riverbend Pantry</p><p class="mt-2 text-[15px] leading-relaxed text-ink/80">Groceries for about 180 households a week. $25 stocks a family box.</p></li>
+        <li class="reveal rounded-[1.75rem] bg-river-light p-6"><p class="font-display text-lg font-extrabold">Global partners</p><p class="mt-2 text-[15px] leading-relaxed text-ink/80">Clean water in northern Uganda and a teacher-training college in Guatemala.</p></li>
+        <li class="reveal rounded-[1.75rem] bg-apricot-light p-6"><p class="font-display text-lg font-extrabold">River Room renovation</p><p class="mt-2 text-[15px] leading-relaxed text-ink/80">A new kitchen and accessible restrooms for the room we lend to the community. $212k of $340k raised.</p></li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="gfaq-h" class="container-x mt-24">
+      <div class="grid gap-10 lg:grid-cols-[1fr_1.6fr]">
+        <h2 id="gfaq-h" class="h-section">Giving questions</h2>
+        <div class="border-t border-line">
+          <details class="faq"><summary>Is my gift tax-deductible?</summary><div>Yes. Riverbend Church is a registered 501(c)(3) non-profit. You’ll get an email receipt for every gift and an annual statement each January.</div></details>
+          <details class="faq"><summary>How do I change or cancel a recurring gift?</summary><div>Every receipt has a link to manage your giving. You can change the amount, the date or the fund, or cancel at any time. Or email our operations team and we’ll do it for you.</div></details>
+          <details class="faq"><summary>Should I give if I’m new?</summary><div>Please don’t feel you need to. We’d much rather you come, listen and get to know us. Giving is a response for people who call Riverbend home.</div></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="relative mt-28 bg-ink text-white">
+    <svg viewBox="0 0 1440 48" preserveAspectRatio="none" class="absolute inset-x-0 -top-[47px] h-12 w-full text-ink" aria-hidden="true"><path d="M0 48V30c120-18 260-28 420-14s300 28 480 10 360-30 540-8v30z" fill="currentColor"/></svg>
+    <div class="container-x grid gap-12 pb-14 pt-16 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="group inline-flex items-center gap-3">
+          <svg viewBox="0 0 40 40" class="h-10 w-10 transition-transform duration-500 group-hover:rotate-[-8deg] shrink-0" aria-hidden="true"><defs><clipPath id="logo-f"><circle cx="20" cy="20" r="19"/></clipPath></defs><circle cx="20" cy="20" r="19" fill="#5b2a6e"/><g clip-path="url(#logo-f)"><circle cx="20" cy="19" r="8" fill="#f6a96b"/><path d="M0 25c7-4 13-4 20-1s13 3 20-1v18H0z" fill="#c9dcc0"/><path d="M4 41c4-6 14-7 16-12s8-5 13-4c-6 1-8 4-10 8s-9 5-12 9z" fill="#bcd9e8"/></g></svg>
+          <span class="leading-none"><span class="block font-display text-[1.35rem] font-extrabold tracking-tight text-white">Riverbend</span><span class="mt-0.5 block text-[10px] font-extrabold uppercase tracking-[0.28em] text-apricot">Church · Lawrence</span></span>
+        </a>
+        <p class="mt-5 max-w-sm leading-relaxed text-white/80">A non-denominational church by the Kansas River. Ordinary people, learning to follow Jesus together and to love our city well.</p>
+        <dl class="mt-7 grid grid-cols-2 gap-4 text-sm">
+          <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10"><dt class="text-white/70">Sunday gatherings</dt><dd class="mt-1 font-display text-lg font-bold">9:00 &amp; 11:00 am</dd></div>
+          <div class="rounded-2xl bg-white/5 p-4 ring-1 ring-white/10"><dt class="text-white/70">Youth night</dt><dd class="mt-1 font-display text-lg font-bold">Wed 6:30 pm</dd></div>
+        </dl>
+      </div>
+      <nav aria-label="Visit" class="lg:col-span-2 lg:col-start-6">
+        <h2 class="text-xs font-extrabold uppercase tracking-[0.18em] text-apricot">Visit</h2>
+        <ul class="mt-4 space-y-2.5 text-[15px] text-white/90">
+          <li><a href="visit.html" class="underline-offset-4 hover:underline">Plan a visit</a></li>
+          <li><a href="visit.html#kids" class="underline-offset-4 hover:underline">Kids’ check-in</a></li>
+          <li><a href="visit.html#parking" class="underline-offset-4 hover:underline">Parking &amp; map</a></li>
+          <li><a href="visit.html#faq" class="underline-offset-4 hover:underline">Questions</a></li>
+          <li><a href="about.html" class="underline-offset-4 hover:underline">About us</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Connect" class="lg:col-span-2">
+        <h2 class="text-xs font-extrabold uppercase tracking-[0.18em] text-apricot">Connect</h2>
+        <ul class="mt-4 space-y-2.5 text-[15px] text-white/90">
+          <li><a href="sermons.html" class="underline-offset-4 hover:underline">Sermons</a></li>
+          <li><a href="events.html" class="underline-offset-4 hover:underline">Events</a></li>
+          <li><a href="groups.html" class="underline-offset-4 hover:underline">Small groups</a></li>
+          <li><a href="groups.html#ministries" class="underline-offset-4 hover:underline">Ministries</a></li>
+          <li><a href="contact.html#prayer" class="underline-offset-4 hover:underline">Prayer requests</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-3">
+        <h2 class="text-xs font-extrabold uppercase tracking-[0.18em] text-apricot">Find us</h2>
+        <address class="mt-4 not-italic leading-relaxed text-white/90">418 Riverside Avenue<br>Lawrence, KS 66044</address>
+        <p class="mt-3 text-[15px] text-white/90"><a href="tel:+17855550142" class="underline-offset-4 hover:underline">(785) 555-0142</a><br><a href="mailto:hello@riverbend.example" class="underline-offset-4 hover:underline">hello@riverbend.example</a></p>
+        <a href="give.html" class="btn-warm btn-sm mt-6">Give online</a>
+      </div>
+    </div>
+    <div class="border-t border-white/10">
+      <div class="container-x flex flex-col gap-3 py-6 text-[13px] text-white/75 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> Riverbend Church, Lawrence, Kansas. A fictional church.</p>
+        <p>Template by Freeframe</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pricing and quote builder — Cipheroak</title>
+<meta name="description" content="Fixed prices for security reviews, household vaults and team vaults. Build a quote with devices, signers, a recovery plan and on-site key ceremony travel." />
+<meta name="theme-color" content="#f4ece0" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Cipheroak" />
+<meta property="og:title" content="Pricing and quote builder — Cipheroak" />
+<meta property="og:description" content="Fixed prices for security reviews, household vaults and team vaults. Build a quote with devices, signers, a recovery plan and on-site key ceremony travel." />
+<meta property="og:image" content="assets/img/og-image.png" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="assets/img/favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,500;0,600;0,700;1,500&amp;family=Radio+Canada:wght@400;500;600&amp;family=Sometype+Mono:wght@400;500&amp;display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/css/style.css" />
+<script>document.documentElement.classList.add("js");</script>
+<script src="assets/js/main.js" defer></script>
+</head>
+<body data-page="pricing" class="flex min-h-screen flex-col">
+
+<a href="#main" class="sr-only z-50 rounded-full bg-bark px-5 py-3 text-parchment focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+<div class="bg-bark text-caliche">
+  <div class="wrap flex min-h-10 items-center justify-between gap-4 py-2 text-xs">
+    <p class="flex items-center gap-2">
+      <svg viewBox="0 0 20 20" class="size-4 shrink-0 text-ochre" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="4" y="9" width="12" height="8" rx="2" /><path d="M7 9V6.5a3 3 0 0 1 6 0V9" /></svg>
+      <span>We will never ask for your recovery phrase. Not by email, phone or in person.</span>
+    </p>
+    <p class="hidden md:block" data-studio-status>Studio on Galisteo Street, Santa Fe</p>
+  </div>
+</div>
+<header id="site-header" class="sticky top-0 z-40 border-b border-line bg-caliche/95 backdrop-blur">
+  <div class="wrap flex min-h-20 items-center justify-between gap-4">
+    <a href="index.html" class="flex items-center gap-3" aria-label="Cipheroak home"><svg viewBox="0 0 40 40" class="size-9 shrink-0" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1f5a52" /><path d="M20 5.5c8 0 14.5 6.5 14.5 14.5" stroke="#f1dcae" stroke-width="1.6" stroke-linecap="round" /><circle cx="19" cy="21" r="11" stroke="#f4ece0" stroke-width="1.4" stroke-dasharray="40 6" /><circle cx="19.5" cy="20.5" r="6.5" stroke="#f4ece0" stroke-width="1.4" /><circle cx="20" cy="18.6" r="2.2" fill="#c98d2e" /><path d="M18.9 20.2h2.2l.7 4.6h-3.6z" fill="#c98d2e" /></svg><span class="font-display text-2xl font-semibold tracking-tight">Cipheroak</span></a>
+    <nav class="hidden xl:block" aria-label="Main">
+      <ul class="flex items-center gap-1">
+<li><a class="nav-link" href="assessment.html">Assessment</a></li>
+<li><a class="nav-link" href="guides.html">Guides</a></li>
+<li><a class="nav-link" href="teams.html">For teams</a></li>
+<li><a class="nav-link" href="pricing.html" aria-current="page">Pricing</a></li>
+<li><a class="nav-link" href="notes.html">Field notes</a></li>
+<li><a class="nav-link" href="company.html">Company</a></li>
+      </ul>
+    </nav>
+    <div class="flex items-center gap-2">
+      <a href="contact.html" class="btn btn-sm hidden sm:inline-flex">Book a review <svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></a>
+      <button id="menu-toggle" type="button" class="inline-flex size-11 items-center justify-center rounded-full border-[1.5px] border-bark xl:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg data-icon-open viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" /></svg>
+        <svg data-icon-close viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" /></svg>
+      </button>
+    </div>
+  </div>
+  <nav id="mobile-menu" class="wrap border-t border-line pt-3 pb-6 xl:hidden" aria-label="Mobile" hidden>
+    <ul class="grid gap-1 sm:grid-cols-2">
+<li><a class="nav-link text-base" href="assessment.html">Assessment</a></li>
+<li><a class="nav-link text-base" href="guides.html">Guides</a></li>
+<li><a class="nav-link text-base" href="teams.html">For teams</a></li>
+<li><a class="nav-link text-base" href="pricing.html" aria-current="page">Pricing</a></li>
+<li><a class="nav-link text-base" href="notes.html">Field notes</a></li>
+<li><a class="nav-link text-base" href="company.html">Company</a></li>
+    </ul>
+    <a href="contact.html" class="btn mt-4 w-full sm:w-auto">Book a security review <svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></a>
+  </nav>
+</header>
+<main id="main" class="flex-1">
+<section class="border-b border-line bg-adobe">
+  <div class="wrap grid items-end gap-10 pt-12 lg:grid-cols-[1fr_22rem]">
+    <div class="reveal pb-12">
+      <p class="eyebrow text-juniper">Pricing · fixed fees in US dollars</p>
+      <h1 class="mt-5 font-display text-[clamp(2.4rem,5vw,4.2rem)] leading-[1.05] font-semibold">Priced by the work, never by what you hold.</h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-bark-soft">We never ask how much your vault is worth, and our fees don’t change with it. You buy your devices new from the maker; we don’t sell hardware or take referral fees.</p>
+    </div>
+    <div class="reveal arch mx-auto hidden w-full max-w-[22rem] border border-b-0 border-line bg-caliche sm:block">
+      <img src="assets/img/hero-pricing.svg" width="352" height="300" class="block h-auto w-full" alt="A balance scale with a small key on one pan and a folded plan on the other, perfectly level." />
+    </div>
+  </div>
+</section>
+
+<section class="wrap py-14" aria-labelledby="plans-title">
+  <h2 id="plans-title" class="sr-only">Plans</h2>
+  <div class="grid gap-6 lg:grid-cols-3">
+    <article data-plan-card="review" class="reveal flex flex-col rounded-3xl border border-line bg-parchment p-7 ring-juniper">
+      <p class="eyebrow text-juniper">For any setup</p>
+      <h3 class="mt-3 font-display text-2xl font-semibold">Security review</h3>
+      <p class="mt-4"><span class="font-display text-4xl font-semibold" data-plan-price="review">$420</span> <span class="text-sm text-bark-soft">one time</span></p>
+      <ul class="mt-6 space-y-2.5 text-sm leading-relaxed">
+        <li class="flex gap-2"><span class="text-juniper" aria-hidden="true">✓</span>Two 60-minute video sessions</li>
+        <li class="flex gap-2"><span class="text-juniper" aria-hidden="true">✓</span>A map of every device, backup and person</li>
+        <li class="flex gap-2"><span class="text-juniper" aria-hidden="true">✓</span>A written report with fixes in order</li>
+        <li class="flex gap-2"><span class="text-juniper" aria-hidden="true">✓</span>Covers 2 devices and 1 signer</li>
+      </ul>
+      <div class="mt-auto pt-8"><a href="#quote" data-pick-plan="review" class="btn btn-ghost w-full">Price a review</a></div>
+    </article>
+    <article data-plan-card="household" class="reveal flex flex-col rounded-3xl border border-bark bg-bark p-7 text-caliche ring-ochre ring-offset-2 ring-offset-caliche">
+      <p class="eyebrow text-ochre">Most households choose this</p>
+      <h3 class="mt-3 font-display text-2xl font-semibold">Household vault</h3>
+      <p class="mt-4"><span class="font-display text-4xl font-semibold" data-plan-price="household">$1,650</span> <span class="text-sm text-caliche/80">one time</span></p>
+      <ul class="mt-6 space-y-2.5 text-sm leading-relaxed">
+        <li class="flex gap-2"><span class="text-ochre" aria-hidden="true">✓</span>A two-of-three vault, set up in person</li>
+        <li class="flex gap-2"><span class="text-ochre" aria-hidden="true">✓</span>Steel backup plates and a restore drill</li>
+        <li class="flex gap-2"><span class="text-ochre" aria-hidden="true">✓</span>A vault map for your records</li>
+        <li class="flex gap-2"><span class="text-ochre" aria-hidden="true">✓</span>Covers 3 devices and 3 signers</li>
+      </ul>
+      <div class="mt-auto pt-8"><a href="#quote" data-pick-plan="household" class="btn w-full border-ochre bg-ochre text-bark hover:text-parchment">Price a household vault</a></div>
+    </article>
+    <article data-plan-card="team" class="reveal flex flex-col rounded-3xl border border-line bg-parchment p-7 ring-juniper">
+      <p class="eyebrow text-juniper">Businesses and nonprofits</p>
+      <h3 class="mt-3 font-display text-2xl font-semibold">Team vault</h3>
+      <p class="mt-4"><span class="font-display text-4xl font-semibold" data-plan-price="team">$3,900</span> <span class="text-sm text-bark-soft">one time</span></p>
+      <ul class="mt-6 space-y-2.5 text-sm leading-relaxed">
+        <li class="flex gap-2"><span class="text-juniper" aria-hidden="true">✓</span>A policy workshop and written signing policy</li>
+        <li class="flex gap-2"><span class="text-juniper" aria-hidden="true">✓</span>An on-site key ceremony for every signer</li>
+        <li class="flex gap-2"><span class="text-juniper" aria-hidden="true">✓</span>Tabletop drills for the bad days</li>
+        <li class="flex gap-2"><span class="text-juniper" aria-hidden="true">✓</span>Covers 5 devices and 5 signers</li>
+      </ul>
+      <div class="mt-auto pt-8"><a href="#quote" data-pick-plan="team" class="btn btn-ghost w-full">Price a team vault</a></div>
+    </article>
+  </div>
+</section>
+
+<section id="quote" class="scroll-mt-24 border-y border-line bg-adobe/60" aria-labelledby="quote-title">
+  <div class="wrap grid gap-8 py-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+    <form data-quote class="min-w-0 rounded-3xl border border-line bg-parchment p-6 sm:p-8">
+      <p class="eyebrow text-juniper">Quote builder</p>
+      <h2 id="quote-title" class="mt-3 font-display text-3xl font-semibold">Build your quote</h2>
+
+      <p class="label mt-7" id="plan-choice-label">Plan</p>
+      <div class="mt-3 grid gap-2 sm:grid-cols-3" role="radiogroup" aria-labelledby="plan-choice-label">
+        <button type="button" role="radio" class="chip justify-center rounded-2xl py-3" data-plan-choice="review" aria-checked="false">Security review</button>
+        <button type="button" role="radio" class="chip justify-center rounded-2xl py-3" data-plan-choice="household" aria-checked="true">Household vault</button>
+        <button type="button" role="radio" class="chip justify-center rounded-2xl py-3" data-plan-choice="team" aria-checked="false">Team vault</button>
+      </div>
+
+      <div class="mt-7 grid gap-5 sm:grid-cols-2">
+        <div class="rounded-2xl bg-caliche p-4">
+          <p class="font-semibold" id="devices-label">Hardware devices</p>
+          <p class="text-xs text-bark-soft" data-devices-note>3 included</p>
+          <div class="mt-3 flex items-center gap-3" role="group" aria-labelledby="devices-label">
+            <button type="button" class="inline-flex size-10 items-center justify-center rounded-full border-[1.5px] border-bark disabled:opacity-40" data-step="devices:-" aria-label="One fewer device">−</button>
+            <output class="w-8 text-center font-display text-2xl font-semibold" data-devices aria-live="polite">3</output>
+            <button type="button" class="inline-flex size-10 items-center justify-center rounded-full border-[1.5px] border-bark disabled:opacity-40" data-step="devices:+" aria-label="One more device">+</button>
+          </div>
+        </div>
+        <div class="rounded-2xl bg-caliche p-4">
+          <p class="font-semibold" id="signers-label">Signers to train</p>
+          <p class="text-xs text-bark-soft" data-signers-note>3 included</p>
+          <div class="mt-3 flex items-center gap-3" role="group" aria-labelledby="signers-label">
+            <button type="button" class="inline-flex size-10 items-center justify-center rounded-full border-[1.5px] border-bark disabled:opacity-40" data-step="signers:-" aria-label="One fewer signer">−</button>
+            <output class="w-8 text-center font-display text-2xl font-semibold" data-signers aria-live="polite">3</output>
+            <button type="button" class="inline-flex size-10 items-center justify-center rounded-full border-[1.5px] border-bark disabled:opacity-40" data-step="signers:+" aria-label="One more signer">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-6">
+        <label for="quote-recovery" class="label">Recovery plan</label>
+        <select id="quote-recovery" class="field"></select>
+      </div>
+      <div class="mt-5">
+        <label for="quote-travel" class="label">Where should the key ceremony happen?</label>
+        <select id="quote-travel" class="field"></select>
+      </div>
+      <div class="mt-6 flex items-start gap-3 rounded-2xl bg-caliche p-4">
+        <input id="quote-care" type="checkbox" class="mt-1 size-4 accent-[#1f5a52]" aria-describedby="care-note" />
+        <div>
+          <label for="quote-care" class="font-semibold">Add a care plan</label>
+          <p id="care-note" class="mt-1 text-sm leading-relaxed text-bark-soft" data-care-note></p>
+        </div>
+      </div>
+    </form>
+
+    <aside class="rounded-3xl bg-bark p-6 text-caliche sm:p-8 lg:sticky lg:top-28" aria-labelledby="estimate-title" aria-live="polite">
+      <h2 id="estimate-title" class="font-display text-2xl font-semibold">Your estimate</h2>
+      <ul class="mt-5 text-sm" data-quote-lines></ul>
+      <div class="mt-5 flex items-end justify-between gap-4 border-t border-caliche/40 pt-5">
+        <p class="text-sm">One-time total</p>
+        <p class="font-display text-4xl font-semibold text-ochre" data-quote-once>$2,150</p>
+      </div>
+      <p class="mt-2 text-sm text-caliche/85" data-quote-yearly></p>
+      <p class="mt-2 text-sm text-caliche/85" data-quote-atcost hidden>Flights and lodging for out-of-state ceremonies are billed at cost, agreed with you first.</p>
+      <p class="mt-5 text-xs leading-relaxed text-caliche/75">Devices and steel plates are bought by you, new, from the maker, and are not included. New Mexico gross receipts tax is added to the invoice.</p>
+      <a href="contact.html" class="btn mt-6 w-full border-ochre bg-ochre text-bark hover:text-parchment">Book a call about this quote <svg viewBox="0 0 24 24" class="size-4 shrink-0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" /></svg></a>
+      <p class="mt-3 text-center text-xs text-caliche/75">Your quote is attached to the booking form for you.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="wrap py-16" aria-labelledby="faq-title">
+  <h2 id="faq-title" class="font-display text-3xl font-semibold">Questions about fees</h2>
+  <div class="mt-8 grid gap-4 md:grid-cols-2">
+    <details class="reveal rounded-2xl border border-line bg-parchment p-5"><summary class="font-semibold">Why don’t you charge a percentage?</summary><p class="mt-3 text-sm leading-relaxed text-bark-soft">Because knowing what you hold makes you a target, including to us. A fixed fee means we never need to ask.</p></details>
+    <details class="reveal rounded-2xl border border-line bg-parchment p-5"><summary class="font-semibold">Which devices should I buy?</summary><p class="mt-3 text-sm leading-relaxed text-bark-soft">We will send a short, maker-neutral list before your session, and we always suggest at least two different makers in a vault. We take no commissions.</p></details>
+    <details class="reveal rounded-2xl border border-line bg-parchment p-5"><summary class="font-semibold">Is the care plan required?</summary><p class="mt-3 text-sm leading-relaxed text-bark-soft">No. It is a yearly review and quarterly drill reminders. Many clients keep it for the first two years, then book reviews when life changes.</p></details>
+    <details class="reveal rounded-2xl border border-line bg-parchment p-5"><summary class="font-semibold">Can you help with taxes or what to invest in?</summary><p class="mt-3 text-sm leading-relaxed text-bark-soft">No. We work on security only. For tax and investment questions, speak to a licensed professional; we are glad to work alongside them.</p></details>
+  </div>
+</section>
+
+</main>
+
+<footer class="mt-auto bg-bark text-caliche">
+  <svg viewBox="0 0 1200 28" preserveAspectRatio="none" class="block h-5 w-full bg-caliche text-bark" fill="currentColor" aria-hidden="true"><path d="M0 28V16h90v-8h70V0h120v8h70v8h260V8h70V0h120v8h70v8h330v12z" /></svg>
+  <div class="wrap grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+    <div>
+      <a href="index.html" class="flex items-center gap-3"><svg viewBox="0 0 40 40" class="size-10 shrink-0" fill="none" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="#1f5a52" /><path d="M20 5.5c8 0 14.5 6.5 14.5 14.5" stroke="#f1dcae" stroke-width="1.6" stroke-linecap="round" /><circle cx="19" cy="21" r="11" stroke="#f4ece0" stroke-width="1.4" stroke-dasharray="40 6" /><circle cx="19.5" cy="20.5" r="6.5" stroke="#f4ece0" stroke-width="1.4" /><circle cx="20" cy="18.6" r="2.2" fill="#c98d2e" /><path d="M18.9 20.2h2.2l.7 4.6h-3.6z" fill="#c98d2e" /></svg><span class="font-display text-3xl font-semibold">Cipheroak</span></a>
+      <p class="mt-5 max-w-xs text-sm leading-relaxed text-caliche/80">Self-custody security for households and small teams. Reviews, setups, recovery plans and key ceremonies, from a small studio in Santa Fe.</p>
+      <p class="mt-5 max-w-xs rounded-2xl border border-caliche/25 p-4 text-sm leading-relaxed">We never hold your keys, never sell devices and never give investment advice.</p>
+    </div>
+    <div>
+      <h2 class="eyebrow text-ochre">Services</h2>
+      <ul class="mt-5 space-y-3 text-sm">
+        <li><a class="underline-offset-4 hover:underline" href="pricing.html">Security reviews</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="pricing.html?plan=household">Household vaults</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="teams.html">Team vaults</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="contact.html">Book a review</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="eyebrow text-ochre">Learn</h2>
+      <ul class="mt-5 space-y-3 text-sm">
+        <li><a class="underline-offset-4 hover:underline" href="assessment.html">Readiness assessment</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="guides.html">Security guides</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="notes.html">Field notes</a></li>
+        <li><a class="underline-offset-4 hover:underline" href="company.html">Our principles</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="eyebrow text-ochre">Visit the studio</h2>
+      <address class="mt-5 text-sm leading-relaxed not-italic">Studio 3, 418 Galisteo Street<br />Santa Fe, NM 87501</address>
+      <p class="mt-3 text-sm leading-relaxed text-caliche/80">Mon–Thu 9 AM–5 PM, Fri 9 AM–3 PM<br />Mountain Time. Key ceremonies on Saturdays by arrangement.</p>
+      <p class="mt-4 text-sm"><a class="underline underline-offset-4" href="tel:+15055550172">(505) 555-0172</a></p>
+      <p class="mt-2 text-sm"><a class="underline underline-offset-4" href="mailto:hello@cipheroak.example">hello@cipheroak.example</a></p>
+    </div>
+  </div>
+  <div class="wrap flex flex-wrap justify-between gap-3 border-t border-caliche/20 py-6 text-xs text-caliche/75">
+    <p>© <span data-year>2026</span> Cipheroak Security Studio. Security education, not financial, legal or tax advice.</p>
+    <p>Cipheroak is a fictional business.</p>
+  </div>
+</footer>
+<p id="notice" class="fixed right-4 bottom-4 left-4 z-50 mx-auto max-w-lg rounded-2xl border border-bark bg-ochre-soft px-5 py-4 text-sm shadow-lg" role="status" aria-live="polite" hidden></p>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schedule — Lingua</title>
+  <meta name="description" content="The weekly class schedule for the winter term: filter by language, format and time of day.">
+  <meta name="theme-color" content="#fbf8f1">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lingua">
+  <meta property="og:title" content="Schedule — Lingua">
+  <meta property="og:description" content="The weekly class schedule for the winter term: filter by language, format and time of day.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300..700&amp;family=Young+Serif&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="timetable" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm text-white focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+  <header id="site-header" class="site-header sticky top-0 z-40 border-b-2 border-transparent bg-paper/95 backdrop-blur-md transition-colors duration-300">
+    <div class="container-x flex h-18 items-center justify-between gap-4">
+      <a href="index.html" class="inline-flex items-center gap-3"><img src="assets/img/logo.svg" alt="" width="40" height="40" class="size-10 shrink-0"><span class="leading-none"><span class="block font-display text-[1.65rem]">Lingua</span><span class="mt-1 block text-[0.65rem] font-semibold tracking-[0.2em] text-muted uppercase">Language school</span></span></a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1"><li><a href="courses.html" class="nav-link">Courses</a></li><li><a href="timetable.html" class="nav-link" aria-current="page">Schedule</a></li><li><a href="placement.html" class="nav-link">Placement test</a></li><li><a href="teachers.html" class="nav-link">Teachers</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="enrol.html" class="btn-primary hidden px-5 py-2.5 sm:inline-flex">Enroll now</a>
+        <button id="menu-toggle" type="button" class="-mr-2 grid size-11 place-items-center rounded-full hover:bg-paper-2 lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <span data-icon-open><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></span>
+          <span data-icon-close class="hidden"><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t-2 border-ink bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-10">
+        <ul><li><a href="index.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Home</a></li><li><a href="courses.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Courses</a></li><li><a href="timetable.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink" aria-current="page">Schedule</a></li><li><a href="placement.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Placement test</a></li><li><a href="teachers.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Teachers</a></li><li><a href="about.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">About</a></li><li><a href="contact.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Contact</a></li><li><a href="enrol.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Fees & enrollment</a></li></ul>
+        <a href="enrol.html" class="btn-primary mt-8 w-full py-4">Enroll now</a>
+        <p class="mt-6 text-sm text-muted">Call us: <a href="tel:+12105550147" class="link">(210) 555-0147</a></p>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="border-b-2 border-ink bg-paper-2">
+      <div class="container-x py-14 sm:py-20">
+        <p class="reveal eyebrow">Winter term <span data-term="year">2027</span></p>
+        <h1 class="reveal display mt-4 text-5xl sm:text-6xl">Weekly schedule</h1>
+        <p class="reveal mt-5 max-w-2xl text-lg leading-relaxed text-muted">Every class in a normal week of term, from <span data-term="starts">January 11</span> to <span data-term="ends">March 26, 2027</span>. Choose a class to see the course, its teacher and the seats left.</p>
+      </div>
+    </section>
+
+    <section class="container-x py-12 sm:py-16" aria-label="Schedule">
+      <!-- Filters: see initTimetable() in assets/js/main.js. They're kept in the URL (?lang=&format=&time=). -->
+      <form class="card grid gap-4 p-5 sm:grid-cols-3 lg:grid-cols-[1fr_1fr_1fr_auto] lg:items-end" data-timetable-filters>
+        <div><label class="field-label" for="tt-lang">Language</label><select id="tt-lang" name="lang" class="field py-2.5" data-tt-filter="lang"><option value="all">All languages</option><option value="spanish">Spanish</option><option value="french">French</option><option value="italian">Italian</option><option value="german">German</option><option value="japanese">Japanese</option><option value="portuguese">Portuguese</option></select></div>
+        <div><label class="field-label" for="tt-format">Format</label><select id="tt-format" name="format" class="field py-2.5" data-tt-filter="format"><option value="all">In person or online</option><option value="in-person">In person</option><option value="online">Live online</option></select></div>
+        <div><label class="field-label" for="tt-time">Time of day</label><select id="tt-time" name="time" class="field py-2.5" data-tt-filter="time"><option value="all">Any time</option><option value="morning">Mornings</option><option value="lunchtime">Lunchtimes</option><option value="evening">Evenings</option><option value="saturday">Saturdays</option></select></div>
+        <button type="reset" class="btn-secondary h-[3.125rem]">Clear filters</button>
+      </form>
+      <p class="mt-8 text-sm font-medium text-muted" aria-live="polite" data-tt-count>Showing all 23 classes a week</p>
+      <div class="mt-6 grid gap-6 md:grid-cols-3 xl:grid-cols-6" data-timetable>
+        <section class="min-w-0" aria-labelledby="day-0" data-day="0">
+          <h2 id="day-0" class="rounded-xl border-2 border-ink bg-ink px-4 py-2 font-display text-xl text-white">Monday</h2>
+          <ul class="mt-3 space-y-3">
+            <li data-session data-lang="german" data-format="in-person" data-time="morning"><a href="course.html?id=de-a1-intensive" class="tone-de block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">9:30 AM–12:30 PM</span><span class="mt-1 block leading-snug font-medium text-ink">German Intensive Beginners</span><span class="mt-1 block text-xs">A1 · Room 1 · 2 weeks only</span></a></li>
+            <li data-session data-lang="french" data-format="in-person" data-time="evening"><a href="course.html?id=fr-a1-evening" class="tone-fr block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">6:30–8:00 PM</span><span class="mt-1 block leading-snug font-medium text-ink">French for Beginners</span><span class="mt-1 block text-xs">A1 · Room 3</span></a></li>
+            <li data-session data-lang="spanish" data-format="in-person" data-time="evening"><a href="course.html?id=es-a1-evening" class="tone-es block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">6:30–8:00 PM</span><span class="mt-1 block leading-snug font-medium text-ink">Spanish for Beginners</span><span class="mt-1 block text-xs">A1 · Room 2</span></a></li>
+            <li data-session data-lang="italian" data-format="online" data-time="evening"><a href="course.html?id=it-a1-online" class="tone-it block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">7:00–9:00 PM</span><span class="mt-1 block leading-snug font-medium text-ink">Italian for Beginners</span><span class="mt-1 block text-xs">A1 · Online</span></a></li>
+          </ul>
+          <p class="mt-3 hidden rounded-xl border-2 border-dashed border-ink/25 p-3 text-sm text-muted" data-day-empty>No classes</p>
+        </section>
+        <section class="min-w-0" aria-labelledby="day-1" data-day="1">
+          <h2 id="day-1" class="rounded-xl border-2 border-ink bg-ink px-4 py-2 font-display text-xl text-white">Tuesday</h2>
+          <ul class="mt-3 space-y-3">
+            <li data-session data-lang="german" data-format="online" data-time="morning"><a href="course.html?id=de-b2-online" class="tone-de block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">7:30–8:30 AM</span><span class="mt-1 block leading-snug font-medium text-ink">Upper-intermediate German</span><span class="mt-1 block text-xs">B2 · Online</span></a></li>
+            <li data-session data-lang="german" data-format="in-person" data-time="morning"><a href="course.html?id=de-a1-intensive" class="tone-de block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">9:30 AM–12:30 PM</span><span class="mt-1 block leading-snug font-medium text-ink">German Intensive Beginners</span><span class="mt-1 block text-xs">A1 · Room 1 · 2 weeks only</span></a></li>
+            <li data-session data-lang="french" data-format="online" data-time="lunchtime"><a href="course.html?id=fr-a2-lunchtime" class="tone-fr block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">12:30–1:30 PM</span><span class="mt-1 block leading-snug font-medium text-ink">Lunchtime French</span><span class="mt-1 block text-xs">A2 · Online</span></a></li>
+            <li data-session data-lang="spanish" data-format="in-person" data-time="evening"><a href="course.html?id=es-b1-evening" class="tone-es block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">6:30–8:00 PM</span><span class="mt-1 block leading-snug font-medium text-ink">Intermediate Spanish</span><span class="mt-1 block text-xs">B1 · Room 1</span></a></li>
+            <li data-session data-lang="spanish" data-format="online" data-time="evening"><a href="course.html?id=es-a2-online" class="tone-es block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">7:00–8:30 PM</span><span class="mt-1 block leading-snug font-medium text-ink">Spanish Elementary</span><span class="mt-1 block text-xs">A2 · Online</span></a></li>
+          </ul>
+          <p class="mt-3 hidden rounded-xl border-2 border-dashed border-ink/25 p-3 text-sm text-muted" data-day-empty>No classes</p>
+        </section>
+        <section class="min-w-0" aria-labelledby="day-2" data-day="2">
+          <h2 id="day-2" class="rounded-xl border-2 border-ink bg-ink px-4 py-2 font-display text-xl text-white">Wednesday</h2>
+          <ul class="mt-3 space-y-3">
+            <li data-session data-lang="german" data-format="in-person" data-time="morning"><a href="course.html?id=de-a1-intensive" class="tone-de block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">9:30 AM–12:30 PM</span><span class="mt-1 block leading-snug font-medium text-ink">German Intensive Beginners</span><span class="mt-1 block text-xs">A1 · Room 1 · 2 weeks only</span></a></li>
+            <li data-session data-lang="french" data-format="in-person" data-time="evening"><a href="course.html?id=fr-a1-evening" class="tone-fr block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">6:30–8:00 PM</span><span class="mt-1 block leading-snug font-medium text-ink">French for Beginners</span><span class="mt-1 block text-xs">A1 · Room 3</span></a></li>
+            <li data-session data-lang="japanese" data-format="in-person" data-time="evening"><a href="course.html?id=ja-a1-evening" class="tone-ja block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">6:30–8:30 PM</span><span class="mt-1 block leading-snug font-medium text-ink">Japanese for Beginners</span><span class="mt-1 block text-xs">A1 · Room 3</span></a></li>
+            <li data-session data-lang="spanish" data-format="in-person" data-time="evening"><a href="course.html?id=es-a1-evening" class="tone-es block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">6:30–8:00 PM</span><span class="mt-1 block leading-snug font-medium text-ink">Spanish for Beginners</span><span class="mt-1 block text-xs">A1 · Room 2</span></a></li>
+            <li data-session data-lang="portuguese" data-format="online" data-time="evening"><a href="course.html?id=pt-a2-online" class="tone-pt block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">7:00–8:30 PM</span><span class="mt-1 block leading-snug font-medium text-ink">Portuguese Elementary</span><span class="mt-1 block text-xs">A2 · Online</span></a></li>
+          </ul>
+          <p class="mt-3 hidden rounded-xl border-2 border-dashed border-ink/25 p-3 text-sm text-muted" data-day-empty>No classes</p>
+        </section>
+        <section class="min-w-0" aria-labelledby="day-3" data-day="3">
+          <h2 id="day-3" class="rounded-xl border-2 border-ink bg-ink px-4 py-2 font-display text-xl text-white">Thursday</h2>
+          <ul class="mt-3 space-y-3">
+            <li data-session data-lang="german" data-format="online" data-time="morning"><a href="course.html?id=de-b2-online" class="tone-de block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">7:30–8:30 AM</span><span class="mt-1 block leading-snug font-medium text-ink">Upper-intermediate German</span><span class="mt-1 block text-xs">B2 · Online</span></a></li>
+            <li data-session data-lang="german" data-format="in-person" data-time="morning"><a href="course.html?id=de-a1-intensive" class="tone-de block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">9:30 AM–12:30 PM</span><span class="mt-1 block leading-snug font-medium text-ink">German Intensive Beginners</span><span class="mt-1 block text-xs">A1 · Room 1 · 2 weeks only</span></a></li>
+            <li data-session data-lang="french" data-format="online" data-time="lunchtime"><a href="course.html?id=fr-a2-lunchtime" class="tone-fr block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">12:30–1:30 PM</span><span class="mt-1 block leading-snug font-medium text-ink">Lunchtime French</span><span class="mt-1 block text-xs">A2 · Online</span></a></li>
+            <li data-session data-lang="spanish" data-format="in-person" data-time="evening"><a href="course.html?id=es-b1-evening" class="tone-es block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">6:30–8:00 PM</span><span class="mt-1 block leading-snug font-medium text-ink">Intermediate Spanish</span><span class="mt-1 block text-xs">B1 · Room 1</span></a></li>
+            <li data-session data-lang="french" data-format="in-person" data-time="evening"><a href="course.html?id=fr-c1-culture" class="tone-fr block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">7:00–9:00 PM</span><span class="mt-1 block leading-snug font-medium text-ink">Advanced French: Culture and Debate</span><span class="mt-1 block text-xs">C1 · The Library</span></a></li>
+            <li data-session data-lang="spanish" data-format="online" data-time="evening"><a href="course.html?id=es-a2-online" class="tone-es block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">7:00–8:30 PM</span><span class="mt-1 block leading-snug font-medium text-ink">Spanish Elementary</span><span class="mt-1 block text-xs">A2 · Online</span></a></li>
+          </ul>
+          <p class="mt-3 hidden rounded-xl border-2 border-dashed border-ink/25 p-3 text-sm text-muted" data-day-empty>No classes</p>
+        </section>
+        <section class="min-w-0" aria-labelledby="day-4" data-day="4">
+          <h2 id="day-4" class="rounded-xl border-2 border-ink bg-ink px-4 py-2 font-display text-xl text-white">Friday</h2>
+          <ul class="mt-3 space-y-3">
+            <li data-session data-lang="german" data-format="in-person" data-time="morning"><a href="course.html?id=de-a1-intensive" class="tone-de block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">9:30 AM–12:30 PM</span><span class="mt-1 block leading-snug font-medium text-ink">German Intensive Beginners</span><span class="mt-1 block text-xs">A1 · Room 1 · 2 weeks only</span></a></li>
+          </ul>
+          <p class="mt-3 hidden rounded-xl border-2 border-dashed border-ink/25 p-3 text-sm text-muted" data-day-empty>No classes</p>
+        </section>
+        <section class="min-w-0" aria-labelledby="day-5" data-day="5">
+          <h2 id="day-5" class="rounded-xl border-2 border-ink bg-ink px-4 py-2 font-display text-xl text-white">Saturday</h2>
+          <ul class="mt-3 space-y-3">
+            <li data-session data-lang="italian" data-format="in-person" data-time="morning"><a href="course.html?id=it-b1-saturday" class="tone-it block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">10:00 AM–12:30 PM</span><span class="mt-1 block leading-snug font-medium text-ink">Italian Intermediate</span><span class="mt-1 block text-xs">B1 · Room 2</span></a></li>
+            <li data-session data-lang="spanish" data-format="in-person" data-time="morning"><a href="course.html?id=es-b2-conversation" class="tone-es block rounded-xl border-2 border-ink p-3 transition hover:-translate-y-0.5 hover:shadow-[3px_3px_0_var(--color-ink)]"><span class="block text-xs font-semibold">10:00 AM–12:00 PM</span><span class="mt-1 block leading-snug font-medium text-ink">Spanish Conversation Club</span><span class="mt-1 block text-xs">B2 · The Library · 8 weeks only</span></a></li>
+          </ul>
+          <p class="mt-3 hidden rounded-xl border-2 border-dashed border-ink/25 p-3 text-sm text-muted" data-day-empty>No classes</p>
+        </section>
+      </div>
+      <div class="mt-6 hidden rounded-2xl border-2 border-dashed border-ink/30 p-12 text-center" data-tt-empty>
+        <p class="font-display text-2xl">No classes match those filters</p>
+        <p class="mt-2 text-muted">Try another time of day, or ask us about <a href="enrol.html#private" class="link">private lessons</a> at a time that suits you.</p>
+      </div>
+      <ul class="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted" aria-label="Color key">
+        <li class="flex items-center gap-2"><span class="tone-es size-4 rounded border-2 border-ink" aria-hidden="true"></span>Spanish</li>
+        <li class="flex items-center gap-2"><span class="tone-fr size-4 rounded border-2 border-ink" aria-hidden="true"></span>French</li>
+        <li class="flex items-center gap-2"><span class="tone-it size-4 rounded border-2 border-ink" aria-hidden="true"></span>Italian</li>
+        <li class="flex items-center gap-2"><span class="tone-de size-4 rounded border-2 border-ink" aria-hidden="true"></span>German</li>
+        <li class="flex items-center gap-2"><span class="tone-ja size-4 rounded border-2 border-ink" aria-hidden="true"></span>Japanese</li>
+        <li class="flex items-center gap-2"><span class="tone-pt size-4 rounded border-2 border-ink" aria-hidden="true"></span>Portuguese</li>
+      </ul>
+    </section>
+  </main>
+  <footer class="on-dark mt-auto bg-ink text-white">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-[1.3fr_1fr_1fr] lg:grid-cols-[1.4fr_0.8fr_0.8fr_1.4fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-3"><img src="assets/img/logo.svg" alt="" width="40" height="40" class="size-10 shrink-0"><span class="font-display text-[1.65rem]">Lingua</span></a>
+        <address class="mt-5 leading-relaxed text-white/80 not-italic">14 Villita Lane<br>San Antonio, TX 78205</address>
+        <p class="mt-4 text-white/80"><a href="tel:+12105550147" class="hover:text-white hover:underline">(210) 555-0147</a><br><a href="mailto:hello@lingua.example" class="hover:text-white hover:underline">hello@lingua.example</a></p>
+      </div>
+      <div><h2 class="text-xs font-semibold tracking-[0.2em] text-sun uppercase">Learn</h2><ul class="mt-4 space-y-2.5"><li><a href="courses.html" class="text-white/85 hover:text-white hover:underline">Courses</a></li><li><a href="timetable.html" class="text-white/85 hover:text-white hover:underline">Schedule</a></li><li><a href="placement.html" class="text-white/85 hover:text-white hover:underline">Placement test</a></li><li><a href="enrol.html" class="text-white/85 hover:text-white hover:underline">Fees &amp; enrollment</a></li></ul></div>
+      <div><h2 class="text-xs font-semibold tracking-[0.2em] text-sun uppercase">School</h2><ul class="mt-4 space-y-2.5"><li><a href="teachers.html" class="text-white/85 hover:text-white hover:underline">Teachers</a></li><li><a href="about.html" class="text-white/85 hover:text-white hover:underline">About us</a></li><li><a href="contact.html" class="text-white/85 hover:text-white hover:underline">Contact</a></li></ul></div>
+      <div class="md:col-span-3 lg:col-span-1">
+        <h2 class="text-xs font-semibold tracking-[0.2em] text-sun uppercase">The Lingua letter</h2>
+        <p class="mt-4 text-white/80">New courses, free trial evenings and a word of the month, once a month.</p>
+        <!-- Demo form: connect it to your email provider in assets/js/main.js (initForms). -->
+        <form class="mt-5 flex flex-col gap-3 sm:flex-row" data-form="newsletter" novalidate>
+          <div class="flex-1">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input id="newsletter-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" class="field" aria-describedby="newsletter-email-error">
+            <p id="newsletter-email-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <button type="submit" class="btn-sun h-[3.25rem] shrink-0">Subscribe</button>
+        </form>
+        <p class="mt-3 hidden text-sm text-sun" data-form-success role="status">Thank you! Look out for a confirmation email from us; click the link inside and the next Lingua letter is yours.</p>
+      </div>
+    </div>
+    <div class="container-x flex flex-col gap-3 border-t border-white/15 py-6 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; <span data-year>2026</span> Lingua Language School, San Antonio. A fictional school.</p>
+      <ul class="flex gap-6"><li><a href="#" class="hover:text-white hover:underline">Instagram</a></li><li><a href="#" class="hover:text-white hover:underline">Privacy</a></li><li><a href="#" class="hover:text-white hover:underline">Terms</a></li></ul>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

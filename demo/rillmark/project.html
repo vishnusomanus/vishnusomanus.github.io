@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Season of Tides for Bracken Hall — Rillmark</title>
+  <meta name="description" content="A motion identity for a concert hall’s new season, built from the swell of a held note.">
+  <meta name="theme-color" content="#efecf4">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Rillmark">
+  <meta property="og:title" content="Season of Tides for Bracken Hall — Rillmark">
+  <meta property="og:description" content="A motion identity for a concert hall’s new season, built from the swell of a held note.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:ital,wdth,wght@0,50..150,500..900;1,50..150,700..900&amp;family=Gelasio:ital,wght@0,400..700;1,400..700&amp;family=Red+Hat+Mono:wght@400..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body class="flex min-h-screen flex-col font-serif text-[1.125rem] leading-relaxed text-ink antialiased" data-page="work">
+  <a href="#main" class="slate sr-only z-[70] bg-ink px-4 py-3 text-card focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+
+  <div class="on-dark bg-plum text-card">
+    <div class="wrap flex min-h-9 items-center justify-between gap-4 py-1.5">
+      <p class="slate flex items-center gap-2"><span class="rec-dot size-2 rounded-full bg-coral" aria-hidden="true"></span>Booking from <a href="contact.html" class="text-mint underline decoration-mint/40 underline-offset-4 hover:decoration-mint" data-booking-month>December</a></p>
+      <p class="slate hidden items-center gap-5 text-haze sm:flex"><span>Hartford <span class="text-card" data-local-clock>9:00 AM EST</span></span><a href="mailto:studio@rillmark.example" class="hover:text-mint">studio@rillmark.example</a></p>
+    </div>
+  </div>
+
+  <header id="site-header" class="sticky top-0 z-50 border-b-2 border-ink bg-paper/95 backdrop-blur-sm">
+    <div class="wrap flex h-16 items-center justify-between gap-4 lg:h-[4.5rem]">
+      <a href="index.html" class="flex items-center gap-3">
+        <svg class="h-7 w-7 shrink-0" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" fill="#24152f"/><rect x="6" y="7" width="20" height="4" fill="#8ff0c8"/><rect x="6" y="14" width="14" height="4" fill="#efecf4"/><rect x="6" y="21" width="8" height="4" fill="#ff6f5e"/></svg>
+        <span class="font-display text-[1.65rem] leading-none font-extrabold tracking-tight uppercase font-stretch-72%">Rillmark</span>
+        <span class="slate hidden border-l border-line pl-3 text-muted xl:inline">Motion · Hartford</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center">
+          <li><a href="work.html" class="nav-link" aria-current="page">Work</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="journal.html" class="nav-link">Journal</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="work.html?shortlist=1" class="slate hidden min-h-11 items-center gap-2 border-2 border-ink/25 px-3 hover:border-ink sm:inline-flex">
+          <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4Z"/></svg>
+          Shortlist <span class="bg-ink px-1.5 text-card" data-shortlist-count>0</span>
+        </a>
+        <a href="contact.html" class="btn btn-solid btn-sm hidden lg:inline-flex">Start a project</a>
+        <button type="button" id="menu-button" class="grid size-11 place-items-center border-2 border-ink lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <span data-icon-open><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 6h18M3 12h12M3 18h6"/></svg></span>
+          <span data-icon-close class="hidden"><svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M6 18 18 6M6 6l12 12"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="h-[calc(100dvh-4rem)] overflow-y-auto border-t border-line bg-paper lg:hidden" hidden>
+      <nav aria-label="Mobile" class="wrap pt-4 pb-12">
+        <ul>
+          <li><a href="index.html" class="mnav-link">Home</a></li>
+          <li><a href="work.html" class="mnav-link" aria-current="page">Work</a></li>
+          <li><a href="services.html" class="mnav-link">Services</a></li>
+          <li><a href="journal.html" class="mnav-link">Journal</a></li>
+          <li><a href="about.html" class="mnav-link">About</a></li>
+          <li><a href="contact.html" class="mnav-link">Contact</a></li>
+          <li><a href="work.html?shortlist=1" class="mnav-link">Shortlist <span class="slate" data-shortlist-count>0</span></a></li>
+        </ul>
+        <a href="contact.html" class="btn btn-solid mt-8 w-full">Start a project</a>
+        <p class="slate mt-6 text-muted">Hartford <span data-local-clock>9:00 AM EST</span></p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <article data-case>
+      <div class="wrap pt-6" data-cs-missing hidden>
+        <p class="border-2 border-coral bg-card px-4 py-3 text-lg">That project isn’t in the index any more, so here is the latest brand film instead. <a href="work.html" class="link">See all the work</a>.</p>
+      </div>
+
+      <header class="wrap pt-10 pb-10 sm:pt-14">
+        <div class="slate flex flex-wrap items-center justify-between gap-3 border-b-2 border-ink pb-3 text-muted">
+          <a href="work.html" class="inline-flex items-center gap-2 hover:text-violet"><svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>All work</a>
+          <span data-cs-index>Project 01 of 15</span>
+        </div>
+        <p class="slate mt-8 text-violet"><span data-cs-client>Bracken Hall</span> · <a href="work.html?discipline=brand" class="underline underline-offset-4 hover:text-violet-deep" data-cs-discipline>Brand motion</a> · <span data-cs-year>2026</span></p>
+        <h1 class="h-page kinetic mt-4"><span data-cs-title>Season of Tides</span></h1>
+        <div class="mt-8 grid gap-8 lg:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] lg:items-end">
+          <p class="lead max-w-2xl" data-cs-summary>A motion identity for a concert hall’s new season, built from the swell of a held note.</p>
+          <div class="flex flex-wrap gap-3 lg:justify-end">
+            <button type="button" class="btn btn-line" data-save="season-of-tides" data-cs-save aria-pressed="false" aria-label="Save Season of Tides to your shortlist">
+              <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4Z"/></svg><span data-save-label>Save</span>
+            </button>
+            <a href="contact.html" class="btn btn-solid">Something like this</a>
+          </div>
+        </div>
+      </header>
+
+      <section class="on-dark bg-plum py-12 text-card sm:py-16" aria-labelledby="scrub-title">
+        <div class="wrap grid gap-10 lg:grid-cols-[minmax(0,1fr)_17rem] lg:gap-12">
+          <div class="min-w-0">
+            <h2 id="scrub-title" class="sr-only">Scrub through the film</h2>
+            <div class="frame border-2 border-card/80 shadow-[8px_8px_0_var(--color-violet)]" data-cs-hero>
+              <svg viewBox="0 0 320 180" aria-hidden="true" focusable="false"><rect width="320" height="180" fill="#14233f"/></svg>
+            </div>
+            <div class="mt-5 flex items-center gap-4 text-card">
+              <label for="cs-scrub" class="slate shrink-0 text-haze">Scrub</label>
+              <input id="cs-scrub" type="range" min="0" max="1000" step="1" value="340" class="scrub flex-1">
+              <output for="cs-scrub" class="slate w-24 shrink-0 text-right text-mint tabular-nums" data-cs-tc>00:15:08</output>
+            </div>
+            <p class="mt-2 text-base text-haze">Drag, or use the arrow keys, to move through the film one moment at a time.</p>
+          </div>
+          <dl class="grid grid-cols-2 content-start gap-x-6 gap-y-5 lg:grid-cols-1">
+            <div class="border-t border-plum-line pt-3">
+              <dt class="slate text-haze">Client</dt>
+              <dd class="mt-1 text-lg" data-cs-client>Bracken Hall</dd>
+            </div>
+            <div class="border-t border-plum-line pt-3">
+              <dt class="slate text-haze">Year</dt>
+              <dd class="mt-1 text-lg" data-cs-year>2026</dd>
+            </div>
+            <div class="border-t border-plum-line pt-3">
+              <dt class="slate text-haze">Runtime</dt>
+              <dd class="mt-1 text-lg" data-cs-runtime>45 s</dd>
+            </div>
+            <div class="border-t border-plum-line pt-3">
+              <dt class="slate text-haze">Rillmark’s role</dt>
+              <dd class="mt-1 text-lg" data-cs-role>Direction, design and animation</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="wrap grid gap-8 py-16 sm:py-20 lg:grid-cols-[16rem_minmax(0,1fr)] lg:gap-16" aria-labelledby="brief-title">
+        <div class="reveal">
+          <p class="slate text-violet">01</p>
+          <h2 id="brief-title" class="h-section mt-2">The brief</h2>
+        </div>
+        <div class="reveal max-w-3xl" data-cs-brief></div>
+      </section>
+
+      <section class="border-y-2 border-ink bg-paper-2 py-16 sm:py-20" aria-labelledby="frames-title">
+        <div class="wrap">
+          <div class="reveal">
+            <p class="slate text-violet">02</p>
+            <h2 id="frames-title" class="h-section mt-2">Styleframes</h2>
+            <p class="mt-3 max-w-2xl text-xl text-muted">Four moments from the finished film, with their timecodes.</p>
+          </div>
+          <div class="mt-10 grid gap-x-8 gap-y-10 sm:grid-cols-2" data-cs-frames></div>
+        </div>
+      </section>
+
+      <section class="wrap py-16 sm:py-20" aria-labelledby="process-title">
+        <div class="reveal">
+          <p class="slate text-violet">03</p>
+          <h2 id="process-title" class="h-section mt-2">How it was made</h2>
+        </div>
+        <ol class="mt-10 grid gap-8 md:grid-cols-3" data-cs-process></ol>
+      </section>
+
+      <section class="on-dark bg-plum py-16 text-card sm:py-20" aria-labelledby="results-title">
+        <div class="wrap">
+          <p class="slate text-mint">04</p>
+          <h2 id="results-title" class="h-section mt-2">What it did</h2>
+          <dl class="mt-10 grid gap-8 sm:grid-cols-3" data-cs-results></dl>
+        </div>
+      </section>
+
+      <section class="wrap grid gap-12 py-16 sm:py-20 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.2fr)] lg:gap-16" aria-labelledby="credits-title">
+        <div class="reveal">
+          <p class="slate text-violet">05</p>
+          <h2 id="credits-title" class="h-section mt-2">Credits</h2>
+          <dl class="mt-6 border-b border-line" data-cs-credits></dl>
+        </div>
+        <figure class="reveal self-center border-l-4 border-violet pl-6" data-cs-quote hidden>
+          <blockquote class="font-serif text-[clamp(1.5rem,3vw,2.2rem)] leading-snug italic" data-cs-quote-text>“It moves like us: precise when it needs to be, generous everywhere else.”</blockquote>
+          <figcaption class="slate mt-5 text-muted"><span data-cs-quote-name>Stuart Kinney</span> · <span data-cs-quote-role>Program director, Bracken Hall</span></figcaption>
+        </figure>
+      </section>
+
+      <nav class="border-t-2 border-ink" aria-label="More projects">
+        <div class="wrap grid sm:grid-cols-2">
+          <a href="project.html?project=hollowtide" class="group flex items-center gap-4 border-b-2 border-ink py-6 sm:border-r-2 sm:border-b-0 sm:pr-6" data-cs-prev rel="prev">
+            <span class="frame w-28 shrink-0 border-2 border-ink sm:w-36" data-art="hollowtide" data-art-t="0.5"></span>
+            <span class="min-w-0"><span class="slate block text-muted">Previous project</span><span class="mt-1 block font-display text-2xl leading-tight font-extrabold uppercase stretch-hover group-hover:text-violet font-stretch-75%" data-cs-nav-title>Hollowtide</span></span>
+          </a>
+          <a href="project.html?project=paper-lanterns" class="group flex items-center justify-end gap-4 py-6 text-right sm:pl-6" data-cs-next rel="next">
+            <span class="min-w-0"><span class="slate block text-muted">Next project</span><span class="mt-1 block font-display text-2xl leading-tight font-extrabold uppercase stretch-hover group-hover:text-violet font-stretch-75%" data-cs-nav-title>Paper Lanterns</span></span>
+            <span class="frame w-28 shrink-0 border-2 border-ink sm:w-36" data-art="paper-lanterns" data-art-t="0.5"></span>
+          </a>
+        </div>
+      </nav>
+    </article>
+  </main>
+
+  <footer class="on-dark mt-auto bg-plum text-card">
+    <div class="wrap pt-16 pb-10 sm:pt-20">
+      <a href="contact.html" class="group block border-b border-plum-line pb-8">
+        <span class="slate text-mint">Got something that needs to move?</span>
+        <span class="mt-3 block font-display text-[clamp(3.5rem,15vw,13rem)] leading-[0.82] font-extrabold tracking-[-0.02em] uppercase stretch-hover group-hover:text-mint font-stretch-60%">Rillmark</span>
+      </a>
+      <div class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div>
+          <p class="font-display text-2xl leading-tight font-bold font-stretch-85%">Title sequences, brand motion, explainers and music videos.</p>
+          <p class="mt-3 text-lg text-haze">Designed and directed by Marika Drever in Hartford, for clients across the US and further.</p>
+        </div>
+        <div>
+          <h2 class="slate text-haze">Pages</h2>
+          <ul class="mt-4 space-y-2 text-lg">
+            <li><a href="work.html" class="hover:text-mint">Work</a></li>
+            <li><a href="services.html" class="hover:text-mint">Services and fees</a></li>
+            <li><a href="journal.html" class="hover:text-mint">Journal</a></li>
+            <li><a href="about.html" class="hover:text-mint">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="slate text-haze">The work</h2>
+          <ul class="mt-4 space-y-2 text-lg">
+            <li><a href="work.html?discipline=titles" class="hover:text-mint">Title sequences</a></li>
+            <li><a href="work.html?discipline=brand" class="hover:text-mint">Brand motion</a></li>
+            <li><a href="work.html?discipline=explainer" class="hover:text-mint">Explainer animation</a></li>
+            <li><a href="work.html?discipline=music" class="hover:text-mint">Music videos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="slate text-haze">Studio</h2>
+          <address class="mt-4 text-lg not-italic">Studio 3, 61 Arch Street<br>Hartford, CT 06103</address>
+          <p class="mt-3 text-lg"><a href="mailto:studio@rillmark.example" class="link">studio@rillmark.example</a><br><a href="tel:+18605550152" class="link">(860) 555-0152</a></p>
+        </div>
+      </div>
+      <div class="slate mt-14 flex flex-col gap-2 border-t border-plum-line pt-6 text-haze sm:flex-row sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Rillmark. Made frame by frame in Hartford.</p>
+        <p>Rillmark, its clients and projects are fictional.</p>
+      </div>
+    </div>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

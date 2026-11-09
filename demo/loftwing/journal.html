@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Build journal: a founder's log of building in public | Loftwing</title>
+    <meta
+      name="description"
+      content="The Loftwing build journal: what we shipped, what broke and what we learned about deliverability, migration, pricing and running without investors."
+    />
+    <meta name="theme-color" content="#170c2c" />
+    <meta name="color-scheme" content="dark" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Loftwing" />
+    <meta property="og:title" content="Build journal: a founder's log of building in public | Loftwing" />
+    <meta
+      property="og:description"
+      content="The Loftwing build journal: what we shipped, what broke and what we learned about deliverability, migration, pricing and running without investors."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;800;900&amp;family=Sen:wght@400;500;600;700&amp;family=Overpass+Mono:wght@400;600;700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="journal" class="flex min-h-screen flex-col">
+    <a
+      href="#main"
+      class="sr-only z-50 rounded-lg bg-apricot px-4 py-3 font-bold text-night focus:not-sr-only focus:fixed focus:top-3 focus:left-3"
+      >Skip to content</a
+    >
+    <div class="sky" aria-hidden="true"></div>
+    <header class="sticky top-0 z-40 pt-3">
+      <div class="wrap">
+        <div
+          class="relative flex min-h-16 items-center justify-between gap-3 rounded-2xl border border-white/15 bg-[#190e2e]/75 px-3 shadow-[0_18px_40px_-24px_rgba(4,0,18,0.9)] backdrop-blur-xl sm:px-4"
+        >
+          <a href="index.html" class="flex items-center gap-2.5 rounded-lg" aria-label="Loftwing home"
+            ><svg viewBox="0 0 40 40" class="size-9 shrink-0" aria-hidden="true">
+              <defs>
+                <linearGradient id="logo-sky" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#ffcb9e" />
+                  <stop offset="1" stop-color="#ff8f70" />
+                </linearGradient>
+              </defs>
+              <rect width="40" height="40" rx="11" fill="url(#logo-sky)" />
+              <path
+                d="M6 28 20 10l14 18"
+                fill="none"
+                stroke="#241238"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path d="M13.5 28c1-6 4-9.5 8-11 .5 4.5 2.5 7 7 8-3.5 3-10 4.5-15 3Z" fill="#241238" />
+              <circle cx="20" cy="9" r="2" fill="#241238" /></svg
+            ><span class="font-display text-[1.4rem] font-extrabold tracking-tight">Loftwing</span></a
+          >
+          <nav class="hidden lg:block" aria-label="Main">
+            <ul class="flex items-center gap-0.5">
+              <li><a class="nav-link" href="product.html">Product</a></li>
+              <li><a class="nav-link" href="pricing.html">Pricing</a></li>
+              <li><a class="nav-link" href="migrate.html">Switch</a></li>
+              <li><a class="nav-link" href="roadmap.html">Roadmap</a></li>
+              <li><a class="nav-link" href="journal.html" aria-current="page">Journal</a></li>
+              <li><a class="nav-link" href="about.html">About</a></li>
+            </ul>
+          </nav>
+          <div class="flex items-center gap-2">
+            <a class="btn btn-sm hidden whitespace-nowrap sm:inline-flex" href="waitlist.html" data-spot-cta
+              >Join the waitlist</a
+            >
+            <button
+              type="button"
+              class="inline-flex size-11 items-center justify-center rounded-xl border border-white/25 lg:hidden"
+              data-menu-button
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+              aria-label="Open menu"
+            >
+              <svg viewBox="0 0 24 24" class="size-6" aria-hidden="true" data-menu-open>
+                <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+              <svg viewBox="0 0 24 24" class="size-6" aria-hidden="true" data-menu-close hidden>
+                <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+              </svg>
+            </button>
+          </div>
+          <nav
+            id="mobile-menu"
+            class="absolute inset-x-0 top-[calc(100%+0.5rem)] rounded-2xl border border-white/15 bg-plum p-3 lg:hidden"
+            aria-label="Mobile"
+            hidden
+          >
+            <ul class="grid gap-1">
+              <li><a class="nav-link !py-3 text-lg" href="product.html">Product</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="pricing.html">Pricing</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="migrate.html">Switch</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="roadmap.html">Roadmap</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="journal.html" aria-current="page">Journal</a></li>
+              <li><a class="nav-link !py-3 text-lg" href="about.html">About</a></li>
+              <li class="pt-2"><a class="btn w-full" href="waitlist.html" data-spot-cta>Join the waitlist</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="pt-10 lg:pt-14">
+        <div class="wrap grid items-center gap-6 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,0.7fr)]">
+          <div>
+            <p class="eyebrow">Building in public since October 2025</p>
+            <h1 class="mt-4 text-[clamp(2.5rem,5vw,4rem)] leading-[1.05] font-black">The loft log</h1>
+            <p class="mt-4 max-w-2xl text-lg text-haze">
+              Pigeon fanciers keep a logbook of every flight: when each bird left, when it came home, and the weather in
+              between. This is ours, mistakes included.
+            </p>
+          </div>
+          <svg
+            viewBox="0 0 300 190"
+            class="mx-auto w-full max-w-xs"
+            role="img"
+            aria-label="An open logbook with handwritten lines and a single feather lying across it."
+          >
+            <path
+              d="M18 34c44-10 88-8 132 8 44-16 88-18 132-8v130c-44-10-88-8-132 8-44-16-88-18-132-8Z"
+              fill="#3a1d52"
+              stroke="#ffcb9e"
+              stroke-width="2"
+              stroke-linejoin="round"
+            />
+            <path d="M150 42v130" stroke="#ffcb9e" stroke-width="2" />
+            <path
+              d="M36 60c30-5 60-3 96 6M36 82c30-5 60-3 96 6M36 104c30-5 60-3 96 6M36 126c20-3 40-3 60 0"
+              fill="none"
+              stroke="#d6cbe3"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-opacity=".7"
+            />
+            <path
+              d="M168 66c36-9 58-9 96-6M168 88c36-9 58-9 96-6"
+              fill="none"
+              stroke="#d6cbe3"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-opacity=".7"
+            />
+            <path
+              d="M284 86c-34 2-66 20-88 60l-14 28 22-16c14-4 26-12 36-24-8 1-14 1-18-1 14-3 26-11 36-23-6 1-11 1-16 0 18-4 32-11 42-24Z"
+              fill="#ff8f70"
+            />
+            <path d="M182 174 268 96" stroke="#150c2a" stroke-width="1.5" />
+          </svg>
+        </div>
+      </section>
+
+      <section class="wrap mt-8" aria-label="Journal entries">
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div class="flex flex-wrap gap-2" role="group" aria-label="Filter by topic">
+            <button type="button" class="chip" data-journal-filter="all" aria-pressed="true">
+              All <span class="font-mono text-sm" data-count>9</span>
+            </button>
+            <button type="button" class="chip" data-journal-filter="product" aria-pressed="false">
+              Product <span class="font-mono text-sm" data-count>3</span>
+            </button>
+            <button type="button" class="chip" data-journal-filter="deliverability" aria-pressed="false">
+              Deliverability <span class="font-mono text-sm" data-count>2</span>
+            </button>
+            <button type="button" class="chip" data-journal-filter="business" aria-pressed="false">
+              Business <span class="font-mono text-sm" data-count>2</span>
+            </button>
+            <button type="button" class="chip" data-journal-filter="migration" aria-pressed="false">
+              Migration <span class="font-mono text-sm" data-count>1</span>
+            </button>
+            <button type="button" class="chip" data-journal-filter="story" aria-pressed="false">
+              Story <span class="font-mono text-sm" data-count>1</span>
+            </button>
+          </div>
+          <p class="font-semibold text-haze" data-journal-count role="status">9 entries</p>
+        </div>
+        <ul class="mt-5 space-y-4" data-journal-list></ul>
+      </section>
+
+      <section class="reveal wrap mt-16 text-center" aria-labelledby="journal-cta">
+        <h2 id="journal-cta" class="text-[clamp(1.9rem,3.8vw,2.8rem)] font-extrabold">Follow along from the inside</h2>
+        <p class="mt-2 text-lg text-haze">Waitlist members get each new entry the day we post it.</p>
+        <a class="btn mt-5" href="waitlist.html">Join the waitlist</a>
+      </section>
+    </main>
+    <footer class="mt-auto pt-16">
+      <div class="wrap pb-8">
+        <div class="glass grid gap-8 p-6 sm:grid-cols-2 sm:p-8 lg:grid-cols-[1.6fr_1fr_1fr_1.2fr]">
+          <div>
+            <a href="index.html" class="inline-flex items-center gap-2.5 rounded-lg" aria-label="Loftwing home"
+              ><svg viewBox="0 0 40 40" class="size-9 shrink-0" aria-hidden="true">
+                <defs>
+                  <linearGradient id="logo-sky-footer" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#ffcb9e" />
+                    <stop offset="1" stop-color="#ff8f70" />
+                  </linearGradient>
+                </defs>
+                <rect width="40" height="40" rx="11" fill="url(#logo-sky-footer)" />
+                <path
+                  d="M6 28 20 10l14 18"
+                  fill="none"
+                  stroke="#241238"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path d="M13.5 28c1-6 4-9.5 8-11 .5 4.5 2.5 7 7 8-3.5 3-10 4.5-15 3Z" fill="#241238" />
+                <circle cx="20" cy="9" r="2" fill="#241238" /></svg
+              ><span class="font-display text-xl font-extrabold">Loftwing</span></a
+            >
+            <p class="mt-3 max-w-xs text-[0.95rem] text-haze">
+              Email marketing for independent newsletters and small online shops, built in Spokane, Washington.
+            </p>
+            <p class="mt-3 text-[0.95rem] text-haze">
+              Public launch <time data-date="launch" data-format="medium" datetime="2027-03-09">Mar 9, 2027</time>
+            </p>
+          </div>
+          <div>
+            <h2 class="mono-label !text-apricot">Product</h2>
+            <ul class="mt-3 space-y-1.5 text-[0.95rem] text-haze">
+              <li><a class="hover:text-mist hover:underline" href="product.html">Tour the tools</a></li>
+              <li><a class="hover:text-mist hover:underline" href="pricing.html">Founding pricing</a></li>
+              <li><a class="hover:text-mist hover:underline" href="migrate.html">Switch to Loftwing</a></li>
+              <li><a class="hover:text-mist hover:underline" href="roadmap.html">Roadmap</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mono-label !text-apricot">Company</h2>
+            <ul class="mt-3 space-y-1.5 text-[0.95rem] text-haze">
+              <li><a class="hover:text-mist hover:underline" href="about.html">About us</a></li>
+              <li><a class="hover:text-mist hover:underline" href="journal.html">Build journal</a></li>
+              <li><a class="hover:text-mist hover:underline" href="waitlist.html">Waitlist</a></li>
+              <li><a class="hover:text-mist hover:underline" href="about.html#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mono-label !text-apricot">Find us</h2>
+            <address class="mt-3 text-[0.95rem] text-haze not-italic">
+              218 W Sprague Ave, Suite 4<br />Spokane, WA 99201
+            </address>
+            <p class="mt-2 text-[0.95rem] text-haze">
+              <a class="hover:text-mist hover:underline" href="mailto:hello@loftwing.example">hello@loftwing.example</a
+              ><br /><a class="hover:text-mist hover:underline" href="tel:+15095550147">(509) 555-0147</a>
+            </p>
+          </div>
+        </div>
+        <p class="mt-5 flex flex-wrap justify-between gap-x-6 gap-y-1 px-1 text-sm text-fog">
+          <span>&copy; <span data-year>2026</span> Loftwing, Inc.</span><span>Loftwing is a fictional company.</span>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

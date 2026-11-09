@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+/* Dark mode is class-based so the toggle can override the system setting. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Brand accent: change these to re-color the whole site. */
+  --color-accent-50: #f0fdfa;
+  --color-accent-100: #ccfbf1;
+  --color-accent-300: #5eead4;
+  --color-accent-400: #2dd4bf;
+  --color-accent-500: #14b8a6;
+  --color-accent-600: #0d9488;
+  --color-accent-700: #0f766e;
+  --color-accent-800: #115e59;
+  --color-accent-900: #134e4a;
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  html:focus-within { scroll-behavior: smooth; }
+  body { @apply bg-white font-sans text-zinc-800 antialiased dark:bg-zinc-950 dark:text-zinc-200; }
+  ::selection { @apply bg-accent-100 text-accent-900 dark:bg-accent-800 dark:text-accent-50; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-accent-600 dark:outline-accent-400; }
+  @media (prefers-reduced-motion: reduce) {
+    html:focus-within { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-5xl px-5 sm:px-8; }
+  .eyebrow { @apply font-mono text-xs font-medium tracking-widest text-accent-700 uppercase dark:text-accent-400; }
+  .h-section { @apply text-2xl font-semibold tracking-tight text-zinc-900 sm:text-3xl dark:text-white; }
+  .muted { @apply text-zinc-600 dark:text-zinc-400; }
+  .card { @apply rounded-2xl border border-zinc-200 bg-white p-6 transition dark:border-zinc-800 dark:bg-zinc-900/60; }
+  .card-link { @apply hover:-translate-y-0.5 hover:border-zinc-300 hover:shadow-lg hover:shadow-zinc-900/5 dark:hover:border-zinc-700; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition; }
+  .btn-primary { @apply bg-zinc-900 text-white hover:bg-accent-700 dark:bg-white dark:text-zinc-900 dark:hover:bg-accent-300; }
+  .btn-secondary { @apply border border-zinc-300 text-zinc-800 hover:border-zinc-900 dark:border-zinc-700 dark:text-zinc-100 dark:hover:border-zinc-300; }
+  .chip { @apply inline-flex items-center rounded-full border border-zinc-200 px-2.5 py-0.5 font-mono text-xs text-zinc-600 dark:border-zinc-800 dark:text-zinc-400; }
+  .link { @apply font-medium text-zinc-900 underline decoration-accent-500/50 decoration-2 underline-offset-4 transition hover:decoration-accent-500 dark:text-white; }
+  .nav-link { @apply rounded-full px-3 py-1.5 text-sm text-zinc-600 transition hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800/70 dark:hover:text-white; }
+  .nav-link[aria-current="page"] { @apply bg-zinc-100 font-medium text-zinc-900 dark:bg-zinc-800 dark:text-white; }
+  .icon-btn { @apply inline-flex size-9 items-center justify-center rounded-full border border-zinc-200 text-zinc-600 transition hover:border-zinc-400 hover:text-zinc-900 dark:border-zinc-800 dark:text-zinc-400 dark:hover:border-zinc-600 dark:hover:text-white; }
+  .kbd { @apply rounded border border-zinc-300 bg-zinc-50 px-1.5 py-0.5 font-mono text-[0.7rem] text-zinc-600 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-300; }
+  .field { @apply mt-1.5 block w-full rounded-xl border border-zinc-300 bg-white px-4 py-2.5 text-zinc-900 placeholder:text-zinc-400 transition focus:border-accent-600 focus:ring-4 focus:ring-accent-500/15 focus:outline-none dark:border-zinc-700 dark:bg-zinc-900 dark:text-white dark:focus:border-accent-400; }
+  .field[aria-invalid="true"] { @apply border-red-500 focus:ring-red-500/15 dark:border-red-400; }
+  .prose-body p { @apply mt-5 leading-relaxed text-zinc-700 dark:text-zinc-300; }
+  .prose-body h2 { @apply mt-12 text-xl font-semibold tracking-tight text-zinc-900 sm:text-2xl dark:text-white; }
+  .prose-body ul { @apply mt-5 list-disc space-y-2 pl-5 text-zinc-700 marker:text-accent-600 dark:text-zinc-300; }
+  .prose-body blockquote { @apply mt-8 border-l-2 border-accent-500 pl-5 text-lg text-zinc-900 italic dark:text-white; }
+  .prose-body code:not(pre code) { @apply rounded bg-zinc-100 px-1.5 py-0.5 font-mono text-[0.85em] text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200; }
+  .prose-body pre { @apply mt-6 overflow-x-auto rounded-2xl border border-zinc-800 bg-zinc-950 p-5 font-mono text-sm leading-relaxed text-zinc-200; }
+
+  /* Scroll reveal: only hidden when JS is running (html.js). */
+  .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+  .js .reveal.is-visible { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .js .reveal { opacity: 1; transform: none; } }
+
+  /* Project filter */
+  .filter-btn[aria-pressed="true"] { @apply border-zinc-900 bg-zinc-900 text-white dark:border-white dark:bg-white dark:text-zinc-900; }
+
+  /* Command palette */
+  .palette::backdrop { background: rgb(9 9 11 / .55); backdrop-filter: blur(4px); }
+  .palette-item[aria-selected="true"] { @apply bg-zinc-100 text-zinc-900 dark:bg-zinc-800 dark:text-white; }
+
+  /* Contribution graph cells */
+  .cg-0 { @apply bg-zinc-100 dark:bg-zinc-800/80; }
+  .cg-1 { @apply bg-accent-100 dark:bg-accent-900; }
+  .cg-2 { @apply bg-accent-300 dark:bg-accent-700; }
+  .cg-3 { @apply bg-accent-500 dark:bg-accent-500; }
+  .cg-4 { @apply bg-accent-700 dark:bg-accent-300; }
+}
+
+/* Print: a clean résumé with no site chrome. */
+@media print {
+  @page { margin: 14mm 14mm; }
+  html, body { background: #fff !important; color: #18181b !important; font-size: 10.5pt; }
+  .no-print, header[role="banner"], footer[role="contentinfo"], .skip-link, dialog { display: none !important; }
+  .js .reveal { opacity: 1 !important; transform: none !important; }
+  a { color: inherit !important; text-decoration: none !important; }
+  .print-break-avoid { break-inside: avoid; }
+  .card { border-color: #e4e4e7 !important; background: #fff !important; padding: 0 !important; border: 0 !important; }
+  main { padding-block: 0 !important; padding-inline: 8px !important; }
+}
+
+/* Back to top button (created by assets/js/main.js). Remove this block to drop it. */
+@layer components {
+  .back-to-top {
+    position: fixed; z-index: 40;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px) + var(--btt-lift, 0px));
+    display: grid; place-items: center; width: 2.75rem; height: 2.75rem; padding: 0; cursor: pointer;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, bottom .25s ease, visibility 0s linear .25s,
+      background-color .2s, color .2s, border-color .2s, box-shadow .2s;
+    @apply rounded-full bg-zinc-900 text-white shadow-lg shadow-zinc-900/20 hover:bg-accent-700
+      dark:bg-white dark:text-zinc-900 dark:shadow-black/40 dark:hover:bg-accent-300;
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; transition: transform .2s ease; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top.is-visible:hover svg { transform: translateY(-2px); }
+  .back-to-top:active { transform: translateY(1px); }
+  .back-to-top:focus-visible { @apply outline-2 outline-offset-2 outline-accent-500; }
+  .back-to-top-target:focus { outline: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top, .back-to-top svg { transition: opacity .01s linear, visibility 0s linear; transform: none !important; }
+  }
+  @media print { .back-to-top { display: none !important; } }
+}

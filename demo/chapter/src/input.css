@@ -1,0 +1,176 @@
+/* Chapter — Tailwind CSS v4 source.
+   Edit the brand tokens below, then rebuild with `npm run build`. */
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+@theme {
+  --font-display: "Libre Baskerville", Baskerville, "Baskerville Old Face", Georgia, serif;
+  --font-serif: "Crimson Pro", "Iowan Old Style", Palatino, "Palatino Linotype", Georgia, serif;
+  --font-caps: "Josefin Sans", "Gill Sans", "Gill Sans MT", "Century Gothic", ui-sans-serif, sans-serif;
+
+  /* Paper and ink. */
+  --color-paper: #f5efe3;       /* page background: cream book paper (with a grain on body) */
+  --color-paper-2: #ece3d1;     /* deeper paper for panels */
+  --color-card: #fbf8f1;        /* lighter leaf for cards and forms */
+  --color-ink: #221c18;         /* text */
+  --color-muted: #5b5047;       /* secondary text (AA on every paper tone) */
+  --color-rule: #cbbca2;        /* hairlines and borders */
+
+  /* Accents. */
+  --color-oxblood: #7b2230;     /* links, buttons, drop caps */
+  --color-oxblood-deep: #5c1622; /* hover */
+  --color-gilt: #b08a3e;        /* ornaments and rules only (not for text on paper) */
+  --color-gilt-ink: #7a5a1c;    /* gilt as text on paper (AA) */
+  --color-marsh: #1d3b2e;       /* dark green bands (the new book's color) */
+  --color-marsh-2: #284c3c;
+  --color-glass: #cfe3d4;       /* pale glass green on marsh */
+}
+
+@layer base {
+  html { -webkit-tap-highlight-color: transparent; }
+  @media (prefers-reduced-motion: no-preference) {
+    html:focus-within { scroll-behavior: smooth; }
+  }
+  body {
+    /* Cream paper with a faint grain, like an uncoated book page. */
+    background-color: var(--color-paper);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .32 0 0 0 0 .24 0 0 0 0 .14 0 0 0 .1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    font-feature-settings: "kern", "liga", "onum";
+  }
+  ::selection { background: var(--color-oxblood); color: var(--color-paper); }
+  :focus-visible { outline: 2px solid var(--color-oxblood); outline-offset: 3px; }
+  .on-dark :focus-visible { outline-color: var(--color-glass); }
+  [id] { scroll-margin-top: 6rem; }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  [hidden] { display: none !important; }
+}
+
+@layer components {
+  .wrap { @apply mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-10; }
+  .measure { max-width: 36rem; }
+
+  .font-display { font-family: var(--font-display); }
+  .muted { color: var(--color-muted); }
+
+  /* Spaced capitals: running heads, labels, buttons. */
+  .caps { font-family: var(--font-caps); @apply text-[0.74rem] font-semibold tracking-[0.2em] uppercase; }
+  .caps-sm { font-family: var(--font-caps); @apply text-[0.68rem] font-semibold tracking-[0.18em] uppercase; }
+
+  .h-title { @apply font-display text-[clamp(2.4rem,5.6vw,4.4rem)] leading-[1.08] tracking-[-0.01em]; }
+  .h-section { @apply font-display text-[clamp(1.85rem,3.6vw,2.7rem)] leading-[1.15]; }
+  .lead { @apply text-[1.3rem] leading-[1.55] sm:text-[1.4rem]; }
+
+  /* A centred fleuron between two hairlines. */
+  .ornament { @apply flex items-center justify-center gap-4 text-gilt; }
+  .ornament::before, .ornament::after { content: ""; @apply h-px max-w-28 flex-1 bg-rule; }
+  .ornament svg { @apply h-4 w-12 shrink-0; }
+  .on-dark .ornament::before, .on-dark .ornament::after { background: rgb(255 255 255 / .22); }
+
+  /* Double rule, like a title page. */
+  .rule-double { border-top: 1px solid var(--color-ink); border-bottom: 1px solid var(--color-ink); height: 4px; }
+
+  /* Drop cap on the first paragraph of a passage. */
+  .dropcap::first-letter {
+    float: left; font-family: var(--font-display); color: var(--color-oxblood);
+    font-size: 3.6em; line-height: .82; padding: .08em .1em 0 0;
+  }
+
+  /* Links in running text. */
+  .link { @apply text-oxblood underline decoration-oxblood/40 decoration-1 underline-offset-[0.2em] transition hover:decoration-oxblood; }
+  .on-dark .link { @apply text-glass decoration-glass/50 hover:decoration-glass; }
+
+  /* Buttons: set in spaced capitals, square corners like a printed label. */
+  .btn {
+    font-family: var(--font-caps);
+    @apply inline-flex min-h-11 items-center justify-center gap-2 border px-5 pt-[0.7rem] pb-[0.6rem] text-[0.78rem] leading-none font-semibold text-center tracking-[0.18em] uppercase transition duration-200 select-none;
+  }
+  .btn:disabled { @apply cursor-not-allowed opacity-50; }
+  .btn-solid { @apply border-oxblood bg-oxblood text-paper hover:border-oxblood-deep hover:bg-oxblood-deep; }
+  .btn-line { @apply border-ink text-ink hover:bg-ink hover:text-paper; }
+  .btn-glass { @apply border-glass bg-glass text-marsh hover:bg-paper hover:border-paper; }
+  .btn-ghost-light { @apply border-paper/60 text-paper hover:bg-paper hover:text-ink; }
+  .btn-sm { @apply min-h-9 px-3.5 text-[0.7rem]; }
+
+  /* Navigation. */
+  .nav-link { font-family: var(--font-caps); @apply relative inline-block px-2.5 py-2 text-[0.74rem] font-semibold tracking-[0.18em] text-ink uppercase transition hover:text-oxblood xl:px-3; }
+  .nav-link[aria-current="page"] { @apply text-oxblood; }
+  .nav-link[aria-current="page"]::after {
+    content: ""; position: absolute; left: 50%; bottom: .1rem; width: .38rem; height: .38rem;
+    transform: translateX(-50%) rotate(45deg); background: var(--color-gilt);
+  }
+  .mnav-link { @apply flex items-baseline justify-between border-b border-rule py-3.5 font-display text-2xl text-ink; }
+  .mnav-link[aria-current="page"] { @apply text-oxblood italic; }
+
+  /* Book jackets: the SVG gets a spine shadow and a soft drop shadow. */
+  .jacket { @apply relative block; aspect-ratio: 300 / 460; box-shadow: 0 1px 1px rgb(34 28 24 / .18), 0 18px 32px -14px rgb(34 28 24 / .55); }
+  .jacket > svg { @apply block h-full w-full; }
+  .jacket::after {
+    content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(90deg, rgb(0 0 0 / .22) 0, rgb(255 255 255 / .16) 1.2%, rgb(0 0 0 / .1) 3%, transparent 6%);
+  }
+  .jacket-lift { transition: transform .35s cubic-bezier(.2, .7, .2, 1); }
+  .group:hover .jacket-lift, .group:focus-within .jacket-lift { transform: translateY(-6px) rotate(-.6deg); }
+
+  /* Filter chips. */
+  .chip { font-family: var(--font-caps); @apply inline-flex min-h-10 items-center gap-2 border border-rule bg-card px-3.5 pt-[0.55rem] pb-[0.45rem] text-[0.72rem] font-semibold tracking-[0.16em] text-ink uppercase transition hover:border-ink; }
+  .chip[aria-pressed="true"] { @apply border-ink bg-ink text-paper; }
+  .chip .count { @apply font-serif text-sm tracking-normal normal-case opacity-80; }
+
+  /* Pull quotes. */
+  .quote-mark { @apply font-display text-6xl leading-none text-gilt; }
+
+  /* Forms. */
+  .label { font-family: var(--font-caps); @apply mb-2 block text-[0.72rem] font-semibold tracking-[0.16em] text-ink uppercase; }
+  .input {
+    @apply block w-full border border-rule bg-card px-3.5 py-2.5 font-serif text-lg text-ink placeholder:text-muted/70 transition focus:border-ink focus:outline-none;
+  }
+  .input:focus-visible { outline: 2px solid var(--color-oxblood); outline-offset: 1px; }
+  .input[aria-invalid="true"] { @apply border-oxblood; }
+  textarea.input { @apply min-h-36; }
+  select.input { @apply cursor-pointer appearance-none pr-10; background: var(--color-card) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='m5 8 5 5 5-5' fill='none' stroke='%23221c18' stroke-width='1.6'/%3E%3C/svg%3E") no-repeat right .8rem center / 1rem; }
+  .check { @apply mt-1 size-[1.15rem] shrink-0 cursor-pointer accent-oxblood; }
+  .field-error { @apply mt-1.5 text-base text-oxblood italic; }
+  .on-dark .field-error { @apply text-paper; }
+  .on-dark .field-error::before { content: "! "; font-style: normal; font-weight: 700; }
+  .on-dark .muted { color: rgb(245 239 227 / .8); }
+
+  /* Reader: the first-chapter pages. */
+  .reader-page { @apply font-serif text-ink; }
+  .reader-page p + p { text-indent: 1.6em; }
+  .reader-page p.break { text-indent: 0; @apply mt-6 text-center tracking-[0.6em] text-gilt; }
+  .reader-page p.break + p { text-indent: 0; }
+  .reader-size-sm .reader-page { font-size: 1.12rem; line-height: 1.7; }
+  .reader-size-md .reader-page { font-size: 1.28rem; line-height: 1.72; }
+  .reader-size-lg .reader-page { font-size: 1.5rem; line-height: 1.7; }
+
+  /* Toast. */
+  .toast {
+    font-family: var(--font-caps);
+    @apply pointer-events-none fixed bottom-5 left-1/2 z-[90] max-w-[calc(100%-2rem)] -translate-x-1/2 translate-y-4 bg-ink px-5 pt-3 pb-2.5 text-center text-[0.74rem] font-semibold tracking-[0.14em] text-paper uppercase opacity-0 shadow-lg transition duration-300;
+  }
+  .toast.is-visible { @apply translate-y-0 opacity-100; }
+
+  /* Back to top. */
+  .back-to-top {
+    @apply fixed right-4 bottom-4 z-40 grid size-11 translate-y-3 place-items-center border border-ink bg-card text-ink opacity-0 transition duration-300 hover:bg-ink hover:text-paper sm:right-6 sm:bottom-6;
+    pointer-events: none;
+  }
+  .back-to-top.is-visible { @apply translate-y-0 opacity-100; pointer-events: auto; }
+}
+
+@layer utilities {
+  /* Scroll reveal: only when JavaScript runs and motion is allowed. */
+  @media (prefers-reduced-motion: no-preference) {
+    .js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1); }
+    .js .reveal.is-visible { opacity: 1; transform: none; }
+    .page-turn { animation: page-turn .45s ease; }
+  }
+  @keyframes page-turn {
+    from { opacity: 0; transform: translateX(10px); }
+    to { opacity: 1; transform: none; }
+  }
+}

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Events, film series and private hire | The Garnet Theater, Missoula</title>
+  <meta name="description" content="Cinema Club, Organ Loft Silents with live organ, Saturday kids’ matinees, the Late Show Society and Montana Made. Hire the whole 1931 auditorium for your own event.">
+  <meta name="theme-color" content="#3d0a17">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="The Garnet Theater">
+  <meta property="og:title" content="Events, film series and private hire | The Garnet Theater, Missoula">
+  <meta property="og:description" content="Cinema Club, Organ Loft Silents with live organ, Saturday kids’ matinees, the Late Show Society and Montana Made. Hire the whole 1931 auditorium for your own event.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400..800;1,400&amp;family=Limelight&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="events" class="flex min-h-screen flex-col bg-cream font-sans text-ink antialiased">
+  <a href="#main" class="sr-only z-[60] rounded-sm bg-gold px-5 py-3 text-sm font-bold text-velvet focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <div class="on-dark bg-velvet-deep text-cream">
+    <div class="container-x flex min-h-9 items-center justify-between gap-4 py-1.5 text-[13px]">
+      <p data-boxoffice class="flex items-center gap-2 font-semibold"><span class="inline-block size-2 rounded-full bg-gold" aria-hidden="true"></span>Box office: (406) 555-0120</p>
+      <p class="hidden items-center gap-5 text-cream/80 md:flex"><span>318 North Higgins Avenue, Missoula</span><a href="tel:+14065550120" class="font-bold text-gold underline-offset-4 hover:underline">(406) 555-0120</a></p>
+    </div>
+  </div>
+  <header id="site-header" class="on-dark sticky top-0 z-40 bg-velvet text-cream transition-shadow duration-300">
+    <div class="container-x flex h-20 items-center justify-between gap-4">
+      <a href="index.html" class="group inline-flex items-center gap-3">
+        <svg viewBox="0 0 48 48" class="h-11 w-11 shrink-0" aria-hidden="true"><defs><clipPath id="logo-h"><path d="M2 30a22 22 0 0 1 44 0z"/></clipPath></defs><g clip-path="url(#logo-h)"><path d="M2 30a22 22 0 0 1 44 0z" fill="#5e1124"/><g stroke="#c8a046" stroke-width="1.6"><path d="M24 30 4 18M24 30 10 10M24 30 18 6M24 30 30 6M24 30 38 10M24 30 44 18"/></g></g><path d="M2 30h44" stroke="#c8a046" stroke-width="1.5"/><path d="M15 30l4-8h10l4 8-9 13z" fill="#c22a45"/><path d="M19 22l5 8 5-8M15 30h18M24 30v13" fill="none" stroke="#f4b7c2" stroke-width="1" opacity=".8"/><path d="M15 30l4-8h10l4 8-9 13z" fill="none" stroke="#e8c874" stroke-width="1.4" stroke-linejoin="round"/></svg>
+        <span class="leading-none"><span class="block font-display text-[1.6rem] text-gold">The Garnet</span><span class="mt-1 block whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.2em] text-cream/80 sm:tracking-[0.32em]">Missoula · Since 1931</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-7">
+          <li><a href="whats-on.html" class="nav-link">What’s on</a></li>
+          <li><a href="events.html" class="nav-link" aria-current="page">Events</a></li>
+          <li><a href="membership.html" class="nav-link">Membership</a></li>
+          <li><a href="visit.html" class="nav-link">Visit</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2.5">
+        <a href="whats-on.html#watchlist" data-watch-link class="relative grid h-11 w-11 place-items-center rounded-full text-gold ring-1 ring-brass/60 transition hover:bg-wine" aria-label="Watchlist, 0 films">
+          <svg viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1-4.4-4.3 6.1-.9z"/></svg>
+          <span data-watch-count class="count-badge absolute -right-1 -top-1" hidden>0</span>
+        </a>
+        <a href="tickets.html" class="btn btn-brass btn-sm hidden sm:inline-flex">Tickets</a>
+        <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-full ring-1 ring-brass/60 lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="h-1.5 bg-[repeating-linear-gradient(90deg,var(--color-brass)_0_14px,transparent_14px_20px)] opacity-80" aria-hidden="true"></div>
+    <div id="mobile-menu" hidden class="border-t border-brass/30 bg-velvet lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="index.html" class="flex items-center justify-between border-b border-brass/30 py-4 font-display text-2xl text-cream aria-[current=page]:text-gold">Home<span aria-hidden="true" class="text-gold">→</span></a></li>
+          <li><a href="whats-on.html" class="flex items-center justify-between border-b border-brass/30 py-4 font-display text-2xl text-cream aria-[current=page]:text-gold">What’s on<span aria-hidden="true" class="text-gold">→</span></a></li>
+          <li><a href="events.html" class="flex items-center justify-between border-b border-brass/30 py-4 font-display text-2xl text-cream aria-[current=page]:text-gold" aria-current="page">Events<span aria-hidden="true" class="text-gold">→</span></a></li>
+          <li><a href="membership.html" class="flex items-center justify-between border-b border-brass/30 py-4 font-display text-2xl text-cream aria-[current=page]:text-gold">Membership<span aria-hidden="true" class="text-gold">→</span></a></li>
+          <li><a href="visit.html" class="flex items-center justify-between border-b border-brass/30 py-4 font-display text-2xl text-cream aria-[current=page]:text-gold">Visit<span aria-hidden="true" class="text-gold">→</span></a></li>
+          <li><a href="about.html" class="flex items-center justify-between border-b border-brass/30 py-4 font-display text-2xl text-cream aria-[current=page]:text-gold">About<span aria-hidden="true" class="text-gold">→</span></a></li>
+          <li><a href="tickets.html" class="flex items-center justify-between border-b border-brass/30 py-4 font-display text-2xl text-cream aria-[current=page]:text-gold">Tickets<span aria-hidden="true" class="text-gold">→</span></a></li>
+        </ul>
+        <p class="mt-6 text-sm text-cream/80">318 North Higgins Avenue, Missoula, MT · (406) 555-0120</p>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="on-dark relative overflow-hidden bg-velvet text-cream">
+      <div class="sunburst pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="container-x relative grid gap-10 py-14 lg:grid-cols-[1.3fr_1fr] lg:items-center lg:py-20">
+        <div>
+          <p class="eyebrow">Series &amp; events</p>
+          <h1 class="deco-title mt-5 text-5xl sm:text-6xl">Nights you can’t stream</h1>
+          <p class="mt-6 max-w-2xl text-lg leading-relaxed text-cream/85">Silent films with the organ roaring, a members’ film club with pie, Saturday morning cartoons, midnight horror and Montana filmmakers in the room. And when you want the whole auditorium to yourself, it’s yours to hire.</p>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#calendar" class="btn btn-brass">Upcoming events</a>
+            <a href="#hire" class="btn btn-outline">Private hire</a>
+          </div>
+        </div>
+        <svg viewBox="0 0 400 260" class="w-full" role="img" aria-labelledby="organ-title">
+          <title id="organ-title">The 1929 theater organ console rising on its lift in front of the screen curtain</title>
+          <defs><linearGradient id="curtain" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9b1c34"/><stop offset=".5" stop-color="#c22a45"/><stop offset="1" stop-color="#9b1c34"/></linearGradient></defs>
+          <rect x="20" y="10" width="360" height="180" rx="4" fill="#2a0610"/>
+          <g fill="url(#curtain)"><path d="M20 10h60c-6 60-6 120 0 180H20z"/><path d="M380 10h-60c6 60 6 120 0 180h60z"/></g>
+          <g stroke="#5e1124" stroke-width="3" opacity=".7"><path d="M36 14v172M52 14v172M68 14v172M332 14v172M348 14v172M364 14v172"/></g>
+          <path d="M20 10h360v20c-20 10-40 10-60 0-20 10-40 10-60 0-20 10-40 10-60 0-20 10-40 10-60 0-20 10-40 10-60 0-20 10-40 10-60 0z" fill="#c8a046"/>
+          <rect x="96" y="44" width="208" height="110" fill="#f7eedb" opacity=".1"/>
+          <g fill="#c8a046">
+            <rect x="120" y="70" width="10" height="70" rx="5"/><rect x="136" y="60" width="10" height="80" rx="5"/><rect x="152" y="52" width="10" height="88" rx="5"/><rect x="168" y="46" width="10" height="94" rx="5"/>
+            <rect x="222" y="46" width="10" height="94" rx="5"/><rect x="238" y="52" width="10" height="88" rx="5"/><rect x="254" y="60" width="10" height="80" rx="5"/><rect x="270" y="70" width="10" height="70" rx="5"/>
+          </g>
+          <path d="M120 150c0-30 36-44 80-44s80 14 80 44v40H120z" fill="#5e1124" stroke="#e8c874" stroke-width="2"/>
+          <path d="M140 160h120" stroke="#e8c874" stroke-width="2"/>
+          <g fill="#f7eedb"><rect x="140" y="164" width="120" height="8"/><rect x="146" y="176" width="108" height="8"/></g>
+          <g fill="#2a0610"><rect x="150" y="164" width="3" height="5"/><rect x="160" y="164" width="3" height="5"/><rect x="176" y="164" width="3" height="5"/><rect x="186" y="164" width="3" height="5"/><rect x="196" y="164" width="3" height="5"/><rect x="212" y="164" width="3" height="5"/><rect x="222" y="164" width="3" height="5"/><rect x="238" y="164" width="3" height="5"/><rect x="248" y="164" width="3" height="5"/></g>
+          <g fill="#c22a45"><circle cx="150" cy="140" r="4"/><circle cx="164" cy="136" r="4"/><circle cx="236" cy="136" r="4"/><circle cx="250" cy="140" r="4"/></g>
+          <rect x="0" y="190" width="400" height="70" fill="#2a0610"/>
+          <rect x="110" y="190" width="180" height="16" fill="#c8a046"/>
+          <g fill="#3d0a17"><path d="M0 222c40-10 80-10 120 0v38H0z"/><path d="M120 226c40-10 80-10 120 0v34H120z"/><path d="M240 222c40-10 80-10 160 0v38H240z"/></g>
+          <g fill="#5e1124"><circle cx="30" cy="236" r="12"/><circle cx="62" cy="234" r="12"/><circle cx="94" cy="236" r="12"/><circle cx="150" cy="240" r="12"/><circle cx="182" cy="238" r="12"/><circle cx="214" cy="240" r="12"/><circle cx="270" cy="236" r="12"/><circle cx="302" cy="234" r="12"/><circle cx="334" cy="236" r="12"/><circle cx="366" cy="238" r="12"/></g>
+        </svg>
+      </div>
+    </section>
+
+    <section aria-labelledby="series-h" class="container-x py-20">
+      <p class="eyebrow">Regular series</p>
+      <h2 id="series-h" class="deco-title mt-4 text-4xl text-garnet sm:text-5xl">Six ways in</h2>
+      <ul data-series-list class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3"></ul>
+    </section>
+
+    <section id="calendar" aria-labelledby="cal-h" class="bg-sand/60 py-20">
+      <div class="container-x">
+        <div class="flex flex-wrap items-end justify-between gap-6">
+          <div>
+            <p class="eyebrow">Calendar</p>
+            <h2 id="cal-h" class="deco-title mt-4 text-4xl text-garnet sm:text-5xl">Coming up</h2>
+          </div>
+          <p data-event-count class="font-semibold text-muted" role="status" aria-live="polite"></p>
+        </div>
+        <div data-event-filters class="mt-8 flex flex-wrap gap-2" role="group" aria-label="Filter by series"></div>
+        <ul data-event-list class="mt-8 grid gap-4"></ul>
+      </div>
+    </section>
+
+    <section id="hire" aria-labelledby="hire-h" class="container-x py-24">
+      <div class="grid gap-6 lg:grid-cols-[1fr_1.4fr] lg:gap-14">
+        <div class="lg:sticky lg:top-28 lg:self-start">
+          <p class="eyebrow">Private hire</p>
+          <h2 id="hire-h" class="deco-title mt-4 text-4xl text-garnet sm:text-5xl">The whole palace, just for you</h2>
+          <p class="mt-5 text-lg leading-relaxed text-muted">Birthday screenings, company nights, film premieres, proposals under the marquee. You get the auditorium (<span data-hire-seats>202</span> seats), a projectionist, front-of-house staff and as much popcorn as you dare.</p>
+          <ul class="mt-6 space-y-2 text-[15px]">
+            <li class="flex gap-2"><span class="text-garnet" aria-hidden="true">◆</span>Weekday mornings and afternoons are easiest to book.</li>
+            <li class="flex gap-2"><span class="text-garnet" aria-hidden="true">◆</span>Bring your own film file, or we license a title for you.</li>
+            <li class="flex gap-2"><span class="text-garnet" aria-hidden="true">◆</span>Nonprofit and school rates on request.</li>
+          </ul>
+          <div class="mt-10">
+            <p class="text-sm font-bold uppercase tracking-[.2em] text-brass-deep">Your marquee</p>
+            <div class="marquee-sign mt-3">
+              <div class="bulbs" aria-hidden="true"></div>
+              <div class="letterboard" data-hire-board role="img" aria-label="Marquee preview"></div>
+            </div>
+            <p class="mt-3 text-sm text-muted" data-board-note>Add “Your message on the marquee” to include it.</p>
+          </div>
+        </div>
+
+        <form data-hire class="card p-6 sm:p-8" novalidate>
+          <h3 class="text-xl font-bold">Get a quote</h3>
+          <div class="mt-6 grid gap-5 sm:grid-cols-2">
+            <div class="sm:col-span-2">
+              <label for="hr-type" class="label">What’s the occasion?</label>
+              <select id="hr-type" name="type" class="field"></select>
+            </div>
+            <div>
+              <label for="hr-guests" class="label">Guests</label>
+              <input id="hr-guests" name="guests" type="number" inputmode="numeric" min="1" max="202" value="40" class="field">
+            </div>
+            <div>
+              <p class="label" id="hr-hours-label">How long?</p>
+              <div class="flex items-center gap-3">
+                <div class="stepper" role="group" aria-labelledby="hr-hours-label">
+                  <button type="button" data-hours-step="-1" aria-label="One hour less">−</button>
+                  <output data-hours-out aria-live="polite">3 hours</output>
+                  <button type="button" data-hours-step="1" aria-label="One hour more">+</button>
+                </div>
+                <input id="hr-hours" name="hours" type="hidden" value="3">
+              </div>
+            </div>
+            <fieldset class="sm:col-span-2">
+              <legend class="label">Extras</legend>
+              <div data-hire-addons class="grid gap-3 sm:grid-cols-2"></div>
+            </fieldset>
+            <div class="sm:col-span-2">
+              <p class="label">Marquee message <span class="font-normal text-muted">(up to three lines)</span></p>
+              <div class="grid gap-2 sm:grid-cols-3">
+                <label class="sr-only" for="hr-line1">Marquee line 1</label><input id="hr-line1" data-board-input maxlength="18" class="field" placeholder="Happy birthday">
+                <label class="sr-only" for="hr-line2">Marquee line 2</label><input id="hr-line2" data-board-input maxlength="18" class="field" placeholder="Ruthie">
+                <label class="sr-only" for="hr-line3">Marquee line 3</label><input id="hr-line3" data-board-input maxlength="18" class="field" placeholder="Love, the crew">
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-7 rounded-md bg-velvet p-5 text-cream">
+            <p class="text-xs font-bold uppercase tracking-[.2em] text-gold">Estimate</p>
+            <ul data-quote-lines class="mt-3 space-y-1.5 text-[15px]"></ul>
+            <div class="mt-3 flex items-baseline justify-between border-t border-brass/40 pt-3"><p class="font-bold">Total</p><p class="font-display text-3xl text-gold" data-quote-total aria-live="polite">$0</p></div>
+            <p class="mt-1 text-sm text-cream/80" data-quote-per></p>
+          </div>
+
+          <div class="mt-7 grid gap-5 sm:grid-cols-2">
+            <div>
+              <label for="hr-date" class="label">Preferred date</label>
+              <input id="hr-date" name="date" type="date" class="field">
+              <p class="hint">At least two weeks ahead.</p>
+            </div>
+            <div>
+              <label for="hr-name" class="label">Your name</label>
+              <input id="hr-name" name="name" type="text" autocomplete="name" class="field">
+            </div>
+            <div class="sm:col-span-2">
+              <label for="hr-email" class="label">Email</label>
+              <input id="hr-email" name="email" type="email" autocomplete="email" class="field" placeholder="you@example.com">
+            </div>
+            <div class="sm:col-span-2">
+              <label for="hr-message" class="label">Tell us about it <span class="font-normal text-muted">(optional)</span></label>
+              <textarea id="hr-message" name="message" rows="3" class="field" placeholder="The film you’d like, the time of day, anything special."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-garnet mt-7 w-full sm:w-auto">Send my request</button>
+          <p data-form-status role="status" class="mt-3 text-sm font-semibold text-garnet"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="on-dark relative mt-auto overflow-hidden bg-velvet-deep text-cream">
+    <div class="sunburst pointer-events-none absolute inset-x-0 top-0 h-64 opacity-60" aria-hidden="true"></div>
+    <div class="relative h-1.5 bg-[repeating-linear-gradient(90deg,var(--color-brass)_0_14px,transparent_14px_20px)] opacity-80" aria-hidden="true"></div>
+    <div class="container-x relative grid gap-12 pb-12 pt-16 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="inline-flex items-center gap-3">
+          <svg viewBox="0 0 48 48" class="h-11 w-11 shrink-0" aria-hidden="true"><defs><clipPath id="logo-f"><path d="M2 30a22 22 0 0 1 44 0z"/></clipPath></defs><g clip-path="url(#logo-f)"><path d="M2 30a22 22 0 0 1 44 0z" fill="#5e1124"/><g stroke="#c8a046" stroke-width="1.6"><path d="M24 30 4 18M24 30 10 10M24 30 18 6M24 30 30 6M24 30 38 10M24 30 44 18"/></g></g><path d="M2 30h44" stroke="#c8a046" stroke-width="1.5"/><path d="M15 30l4-8h10l4 8-9 13z" fill="#c22a45"/><path d="M19 22l5 8 5-8M15 30h18M24 30v13" fill="none" stroke="#f4b7c2" stroke-width="1" opacity=".8"/><path d="M15 30l4-8h10l4 8-9 13z" fill="none" stroke="#e8c874" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          <span class="leading-none"><span class="block font-display text-[1.6rem] text-gold">The Garnet</span><span class="mt-1 block whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.2em] text-cream/80 sm:tracking-[0.32em]">Missoula · Since 1931</span></span>
+        </a>
+        <p class="mt-5 max-w-sm leading-relaxed text-cream/80">A nonprofit, single-screen movie palace on Higgins Avenue. New films, old films, foreign films and the occasional very strange one, every day of the year.</p>
+        <address class="mt-6 not-italic leading-relaxed text-cream/90">318 North Higgins Avenue<br>Missoula, MT 59802</address>
+        <p class="mt-3 text-[15px]"><a href="tel:+14065550120" class="underline-offset-4 hover:text-gold hover:underline">(406) 555-0120</a> · <a href="mailto:boxoffice@garnettheater.example" class="underline-offset-4 hover:text-gold hover:underline">boxoffice@garnettheater.example</a></p>
+      </div>
+      <nav aria-label="The program" class="lg:col-span-2 lg:col-start-6">
+        <h2 class="text-xs font-bold uppercase tracking-[0.22em] text-gold">The program</h2>
+        <ul class="mt-4 space-y-2.5 text-[15px] text-cream/90">
+          <li><a href="whats-on.html" class="underline-offset-4 hover:underline">What’s on</a></li>
+          <li><a href="whats-on.html?view=week" class="underline-offset-4 hover:underline">Week at a glance</a></li>
+          <li><a href="whats-on.html?access=cc" class="underline-offset-4 hover:underline">Captioned screenings</a></li>
+          <li><a href="events.html" class="underline-offset-4 hover:underline">Series &amp; events</a></li>
+          <li><a href="tickets.html" class="underline-offset-4 hover:underline">Book tickets</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="The theater" class="lg:col-span-2">
+        <h2 class="text-xs font-bold uppercase tracking-[0.22em] text-gold">The theater</h2>
+        <ul class="mt-4 space-y-2.5 text-[15px] text-cream/90">
+          <li><a href="visit.html" class="underline-offset-4 hover:underline">Plan your visit</a></li>
+          <li><a href="visit.html#access" class="underline-offset-4 hover:underline">Accessibility</a></li>
+          <li><a href="membership.html" class="underline-offset-4 hover:underline">Membership</a></li>
+          <li><a href="events.html#hire" class="underline-offset-4 hover:underline">Private hire</a></li>
+          <li><a href="about.html" class="underline-offset-4 hover:underline">Our story</a></li>
+        </ul>
+      </nav>
+      <div class="lg:col-span-3">
+        <h2 class="text-xs font-bold uppercase tracking-[0.22em] text-gold">The Garnet Gazette</h2>
+        <p class="mt-4 text-[15px] leading-relaxed text-cream/80">Next week’s program in your inbox every Tuesday.</p>
+        <form data-form="newsletter" class="mt-4" novalidate>
+          <label for="nl-email" class="sr-only">Email address</label>
+          <div class="flex gap-2">
+            <input id="nl-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@example.com" class="field min-w-0 flex-1">
+            <button type="submit" class="btn btn-brass shrink-0">Sign up</button>
+          </div>
+          <p data-form-status role="status" class="mt-2 text-sm font-semibold text-gold"></p>
+        </form>
+      </div>
+    </div>
+    <div class="relative border-t border-brass/25">
+      <div class="container-x flex flex-col gap-2 py-6 text-[13px] text-cream/75 sm:flex-row sm:items-center sm:justify-between">
+        <p>© <span data-year>2026</span> The Garnet Theater, Missoula, Montana. A fictional theater: films, people and bookings are made up.</p>
+        <p>Template by Freeframe</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/data.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

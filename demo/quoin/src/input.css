@@ -1,0 +1,133 @@
+@import "tailwindcss" source("../");
+@theme {
+  --font-display: "Antic Didone", Georgia, serif;
+  --font-sans: "Sarabun", Arial, sans-serif;
+  --color-paper: #f3efe5;
+  --color-ink: #2f4335;
+  --color-muted: #596450;
+  --color-line: #c7c9b9;
+  --color-moss: #354d3c;
+  --color-rust: #7e4035;
+  --color-wash: #e6e5d7;
+}
+@layer base {
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display font-normal;
+  }
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button {
+    cursor: pointer;
+  }
+  button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+  }
+  :focus-visible {
+    outline: 3px solid #7e4035;
+    outline-offset: 4px;
+  }
+  [hidden] {
+    display: none !important;
+  }
+  input,
+  select,
+  textarea {
+    min-width: 0;
+  }
+  ::selection {
+    background: #354d3c;
+    color: #fff;
+  }
+}
+@layer components {
+  .wrap {
+    @apply mx-auto w-full max-w-[1380px] px-5 sm:px-9 lg:px-14;
+  }
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[.2em] text-muted;
+  }
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-3 border border-moss bg-moss px-6 py-3 text-sm font-semibold text-white transition hover:bg-ink;
+  }
+  .btn-outline {
+    @apply inline-flex min-h-12 items-center justify-center gap-3 border border-line px-6 py-3 text-sm font-semibold transition hover:border-moss hover:bg-wash;
+  }
+  .field {
+    @apply mt-2 block w-full border border-line bg-white/50 px-4 py-3 text-base text-ink;
+  }
+  .label {
+    @apply block text-sm font-semibold;
+  }
+  .text-link {
+    @apply font-semibold underline decoration-line underline-offset-4 hover:decoration-rust;
+  }
+  .section-heading {
+    @apply text-4xl leading-tight sm:text-5xl;
+  }
+  .measure {
+    @apply border-y border-line py-3 text-xs uppercase tracking-[.12em];
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 0.5s,
+      transform 0.5s;
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+dialog::backdrop {
+  background: rgb(20 32 23 / 0.55);
+}
+dialog {
+  max-height: 90dvh;
+}
+
+@media print {
+  header,
+  footer,
+  body > div,
+  button,
+  .btn,
+  .btn-outline,
+  nav {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: #14251a;
+  }
+  [data-project-grid] {
+    display: block;
+  }
+  [data-board-item] {
+    break-inside: avoid;
+    margin-bottom: 24px;
+  }
+  [data-board-item] img {
+    max-width: 180px;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

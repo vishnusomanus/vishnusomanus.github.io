@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Experiences — Casa Marea</title>
+  <meta name="description" content="Spa rituals, private boat trips, coastal walks, cooking classes and weddings at Casa Marea in Newport.">
+  <meta name="theme-color" content="#f6f1e8">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Casa Marea">
+  <meta property="og:title" content="Experiences — Casa Marea">
+  <meta property="og:description" content="Spa rituals, private boat trips, coastal walks, cooking classes and weddings at Casa Marea in Newport.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..600;1,6..96,400..500&amp;family=Jost:wght@300..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="experiences" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm text-foam focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-40 border-b border-transparent bg-linen/90 backdrop-blur-md transition-[border-color,box-shadow] duration-300">
+    <div class="container-x flex h-18 items-center justify-between gap-6">
+      <a href="index.html" class="group inline-flex items-center gap-3">
+        <svg viewBox="0 0 64 64" class="h-9 w-9 shrink-0" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#13232b"/><circle cx="32" cy="27" r="11" fill="#e9b25c"/><path d="M10 40q5.5-5 11 0t11 0 11 0 11 0" stroke="#fbf8f2" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M10 48q5.5-5 11 0t11 0 11 0 11 0" stroke="#7fb6bd" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg>
+        <span class="leading-none"><span class="block font-display text-[1.4rem] tracking-tight">Casa Marea</span><span class="mt-1 block text-[0.68rem] uppercase tracking-[0.28em] text-mist">Newport · Rhode Island</span></span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-8"><li><a href="rooms.html" class="link-underline text-[0.95rem] aria-[current=page]:bg-[length:100%_1px]">Rooms</a></li><li><a href="dining.html" class="link-underline text-[0.95rem] aria-[current=page]:bg-[length:100%_1px]">Dining</a></li><li><a href="experiences.html" aria-current="page" class="link-underline text-[0.95rem] aria-[current=page]:bg-[length:100%_1px]">Experiences</a></li><li><a href="offers.html" class="link-underline text-[0.95rem] aria-[current=page]:bg-[length:100%_1px]">Offers</a></li><li><a href="contact.html" class="link-underline text-[0.95rem] aria-[current=page]:bg-[length:100%_1px]">Location</a></li></ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="booking.html" class="btn-primary hidden px-5 py-2.5 sm:inline-flex">Book a stay</a>
+        <button id="menu-toggle" type="button" class="-mr-2 grid h-11 w-11 place-items-center rounded-full hover:bg-shell lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <span data-icon-open><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></span>
+          <span data-icon-close class="hidden"><svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t border-line bg-linen lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-10 pt-2">
+        <ul><li><a href="index.html" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Home</a></li><li><a href="rooms.html" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Rooms</a></li><li><a href="dining.html" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Dining</a></li><li><a href="experiences.html" aria-current="page" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Experiences</a></li><li><a href="offers.html" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Offers</a></li><li><a href="contact.html" class="flex items-center justify-between border-b border-line py-4 font-display text-3xl aria-[current=page]:text-coral">Location</a></li></ul>
+        <a href="booking.html" class="btn-primary mt-8 w-full py-4">Book a stay</a>
+        <p class="mt-6 text-sm text-mist">Reservations: <a href="tel:+14015550186" class="underline underline-offset-4">(401) 555-0186</a></p>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="container-x pb-12 pt-16 lg:pt-24">
+      <p class="eyebrow">Experiences</p>
+      <h1 class="display mt-4 max-w-3xl text-5xl sm:text-7xl">Spend the day however the sea suggests</h1>
+      <p class="mt-6 max-w-2xl text-lg text-mist">Our concierge, Davide, has lived in Newport all his life. Tell him what you'd like and he'll arrange the rest.</p>
+    </section>
+    <section class="container-x pb-24" aria-label="Experiences">
+      <div class="flex flex-wrap gap-2" role="group" aria-label="Filter experiences"><button type="button" class="pill-toggle" data-exp-filter="All" aria-pressed="true">All</button><button type="button" class="pill-toggle" data-exp-filter="Spa" aria-pressed="false">Spa</button><button type="button" class="pill-toggle" data-exp-filter="Sea" aria-pressed="false">Sea</button><button type="button" class="pill-toggle" data-exp-filter="Land" aria-pressed="false">Land</button><button type="button" class="pill-toggle" data-exp-filter="Events" aria-pressed="false">Events</button></div>
+      <p class="mt-5 text-sm text-mist" aria-live="polite" data-exp-count>Showing all 8 experiences</p>
+      <div class="mt-8 grid gap-8 md:grid-cols-2 xl:grid-cols-3"><article class="reveal flex flex-col overflow-hidden rounded-2xl border border-line bg-foam" data-exp-card data-type="Spa">
+          <div class="art aspect-[16/10]"><img src="assets/img/spa.svg" alt="Hot stone ritual" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <div class="flex flex-1 flex-col p-6">
+            <p class="text-xs font-medium uppercase tracking-[0.2em] text-coral">Spa</p>
+            <h2 class="mt-2 font-display text-2xl">Hot stone ritual</h2>
+            <p class="mt-3 flex-1 text-mist">Warm basalt stones and olive oil, followed by tea on the spa terrace.</p>
+            <dl class="mt-5 flex flex-wrap gap-x-6 gap-y-1 text-sm"><div class="flex gap-1.5"><dt class="text-mist">Duration</dt><dd class="font-medium">90 min</dd></div><div class="flex gap-1.5"><dt class="text-mist">Price</dt><dd class="font-medium">$195</dd></div></dl>
+            <a href="contact.html?topic=experiences&amp;about=stone#contact-form" class="btn-outline mt-6 self-start">Ask the concierge</a>
+          </div>
+        </article><article class="reveal flex flex-col overflow-hidden rounded-2xl border border-line bg-foam" data-exp-card data-type="Spa">
+          <div class="art aspect-[16/10]"><img src="assets/img/spa.svg" alt="Sea salt scrub" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <div class="flex flex-1 flex-col p-6">
+            <p class="text-xs font-medium uppercase tracking-[0.2em] text-coral">Spa</p>
+            <h2 class="mt-2 font-display text-2xl">Sea salt scrub</h2>
+            <p class="mt-3 flex-1 text-mist">Mineral-rich salt from the New England coast, rosemary and a long rinse in the rain shower.</p>
+            <dl class="mt-5 flex flex-wrap gap-x-6 gap-y-1 text-sm"><div class="flex gap-1.5"><dt class="text-mist">Duration</dt><dd class="font-medium">50 min</dd></div><div class="flex gap-1.5"><dt class="text-mist">Price</dt><dd class="font-medium">$125</dd></div></dl>
+            <a href="contact.html?topic=experiences&amp;about=scrub#contact-form" class="btn-outline mt-6 self-start">Ask the concierge</a>
+          </div>
+        </article><article class="reveal flex flex-col overflow-hidden rounded-2xl border border-line bg-foam" data-exp-card data-type="Sea">
+          <div class="art aspect-[16/10]"><img src="assets/img/boat.svg" alt="Private boat to Jamestown" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <div class="flex flex-1 flex-col p-6">
+            <p class="text-xs font-medium uppercase tracking-[0.2em] text-coral">Sea</p>
+            <h2 class="mt-2 font-display text-2xl">Private boat to Jamestown</h2>
+            <p class="mt-3 flex-1 text-mist">A wooden sloop with skipper, swim stops in quiet coves and lunch on the Jamestown waterfront.</p>
+            <dl class="mt-5 flex flex-wrap gap-x-6 gap-y-1 text-sm"><div class="flex gap-1.5"><dt class="text-mist">Duration</dt><dd class="font-medium">Half day</dd></div><div class="flex gap-1.5"><dt class="text-mist">Price</dt><dd class="font-medium">$850 per boat</dd></div></dl>
+            <a href="contact.html?topic=experiences&amp;about=boat#contact-form" class="btn-outline mt-6 self-start">Ask the concierge</a>
+          </div>
+        </article><article class="reveal flex flex-col overflow-hidden rounded-2xl border border-line bg-foam" data-exp-card data-type="Sea">
+          <div class="art aspect-[16/10]"><img src="assets/img/boat.svg" alt="Sea kayak to Fort Adams" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <div class="flex flex-1 flex-col p-6">
+            <p class="text-xs font-medium uppercase tracking-[0.2em] text-coral">Sea</p>
+            <h2 class="mt-2 font-display text-2xl">Sea kayak to Fort Adams</h2>
+            <p class="mt-3 flex-1 text-mist">Paddle along the harbor to the old fort with a local guide. Suitable for beginners.</p>
+            <dl class="mt-5 flex flex-wrap gap-x-6 gap-y-1 text-sm"><div class="flex gap-1.5"><dt class="text-mist">Duration</dt><dd class="font-medium">3 hours</dd></div><div class="flex gap-1.5"><dt class="text-mist">Price</dt><dd class="font-medium">$75 per guest</dd></div></dl>
+            <a href="contact.html?topic=experiences&amp;about=kayak#contact-form" class="btn-outline mt-6 self-start">Ask the concierge</a>
+          </div>
+        </article><article class="reveal flex flex-col overflow-hidden rounded-2xl border border-line bg-foam" data-exp-card data-type="Land">
+          <div class="art aspect-[16/10]"><img src="assets/img/pool.svg" alt="Cliff Walk past the mansions" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <div class="flex flex-1 flex-col p-6">
+            <p class="text-xs font-medium uppercase tracking-[0.2em] text-coral">Land</p>
+            <h2 class="mt-2 font-display text-2xl">Cliff Walk past the mansions</h2>
+            <p class="mt-3 flex-1 text-mist">A guided walk along the ocean past Gilded Age mansions, with a ride back to the harbor.</p>
+            <dl class="mt-5 flex flex-wrap gap-x-6 gap-y-1 text-sm"><div class="flex gap-1.5"><dt class="text-mist">Duration</dt><dd class="font-medium">4 hours</dd></div><div class="flex gap-1.5"><dt class="text-mist">Price</dt><dd class="font-medium">Free, Thursdays</dd></div></dl>
+            <a href="contact.html?topic=experiences&amp;about=walk#contact-form" class="btn-outline mt-6 self-start">Ask the concierge</a>
+          </div>
+        </article><article class="reveal flex flex-col overflow-hidden rounded-2xl border border-line bg-foam" data-exp-card data-type="Land">
+          <div class="art aspect-[16/10]"><img src="assets/img/breakfast.svg" alt="Pesto class with our chef" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <div class="flex flex-1 flex-col p-6">
+            <p class="text-xs font-medium uppercase tracking-[0.2em] text-coral">Land</p>
+            <h2 class="mt-2 font-display text-2xl">Pesto class with our chef</h2>
+            <p class="mt-3 flex-1 text-mist">Basil from the garden, a marble mortar and a long lunch to taste the results.</p>
+            <dl class="mt-5 flex flex-wrap gap-x-6 gap-y-1 text-sm"><div class="flex gap-1.5"><dt class="text-mist">Duration</dt><dd class="font-medium">2 hours</dd></div><div class="flex gap-1.5"><dt class="text-mist">Price</dt><dd class="font-medium">$95 per guest</dd></div></dl>
+            <a href="contact.html?topic=experiences&amp;about=pesto#contact-form" class="btn-outline mt-6 self-start">Ask the concierge</a>
+          </div>
+        </article><article class="reveal flex flex-col overflow-hidden rounded-2xl border border-line bg-foam" data-exp-card data-type="Events">
+          <div class="art aspect-[16/10]"><img src="assets/img/dining.svg" alt="Private dinner on the terrace" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <div class="flex flex-1 flex-col p-6">
+            <p class="text-xs font-medium uppercase tracking-[0.2em] text-coral">Events</p>
+            <h2 class="mt-2 font-display text-2xl">Private dinner on the terrace</h2>
+            <p class="mt-3 flex-1 text-mist">A table of your own at the edge of the terrace, with a menu planned around you.</p>
+            <dl class="mt-5 flex flex-wrap gap-x-6 gap-y-1 text-sm"><div class="flex gap-1.5"><dt class="text-mist">Duration</dt><dd class="font-medium">Evening</dd></div><div class="flex gap-1.5"><dt class="text-mist">Price</dt><dd class="font-medium">From $175 per guest</dd></div></dl>
+            <a href="contact.html?topic=experiences&amp;about=dinner#contact-form" class="btn-outline mt-6 self-start">Ask the concierge</a>
+          </div>
+        </article><article class="reveal flex flex-col overflow-hidden rounded-2xl border border-line bg-foam" data-exp-card data-type="Events">
+          <div class="art aspect-[16/10]"><img src="assets/img/events.svg" alt="Weddings and celebrations" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <div class="flex flex-1 flex-col p-6">
+            <p class="text-xs font-medium uppercase tracking-[0.2em] text-coral">Events</p>
+            <h2 class="mt-2 font-display text-2xl">Weddings and celebrations</h2>
+            <p class="mt-3 flex-1 text-mist">Exclusive use of the house for up to 60 guests, with the long table under the pergola.</p>
+            <dl class="mt-5 flex flex-wrap gap-x-6 gap-y-1 text-sm"><div class="flex gap-1.5"><dt class="text-mist">Duration</dt><dd class="font-medium">By request</dd></div><div class="flex gap-1.5"><dt class="text-mist">Price</dt><dd class="font-medium">From $24,000</dd></div></dl>
+            <a href="contact.html?topic=experiences&amp;about=weddings#contact-form" class="btn-outline mt-6 self-start">Ask the concierge</a>
+          </div>
+        </article></div>
+    </section>
+    <section class="on-dark bg-ink text-foam" aria-labelledby="events-title">
+      <div class="grid lg:grid-cols-2">
+        <div class="px-5 py-20 sm:px-12 lg:px-16 lg:py-28">
+          <p class="eyebrow">Weddings & celebrations</p>
+          <h2 id="events-title" class="display mt-4 text-4xl sm:text-5xl">The whole house, for the people you love</h2>
+          <p class="mt-6 max-w-lg text-lg leading-relaxed text-foam/85">Exclusive use of all 22 rooms, a long table under the pergola for up to 60 guests and a team that has run more than a hundred weddings on this terrace.</p>
+          <a href="contact.html?topic=events#contact-form" class="btn-light mt-10">Plan an event</a>
+        </div>
+        <div class="art aspect-[16/11] lg:aspect-auto lg:h-full"><img src="assets/img/events.svg" alt="Long table under the pergola set for a celebration" width="1600" height="1000" loading="lazy" decoding="async"></div>
+      </div>
+    </section>
+  </main>
+  <footer class="on-dark mt-auto bg-ink text-foam">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-[1.3fr_1fr_1fr] lg:grid-cols-[1.4fr_0.8fr_0.8fr_1.4fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-3"><svg viewBox="0 0 64 64" class="h-9 w-9 shrink-0" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#13232b"/><circle cx="32" cy="27" r="11" fill="#e9b25c"/><path d="M10 40q5.5-5 11 0t11 0 11 0 11 0" stroke="#fbf8f2" stroke-width="3.5" fill="none" stroke-linecap="round"/><path d="M10 48q5.5-5 11 0t11 0 11 0 11 0" stroke="#7fb6bd" stroke-width="3.5" fill="none" stroke-linecap="round"/></svg><span class="font-display text-2xl">Casa Marea</span></a>
+        <address class="mt-5 not-italic leading-relaxed text-foam/80">12 Lighthouse Lane<br>Newport, RI 02840</address>
+        <p class="mt-4 space-y-1 text-foam/80"><a href="tel:+14015550186" class="link-underline">(401) 555-0186</a><br><a href="mailto:stay@casamarea.example" class="link-underline">stay@casamarea.example</a></p>
+      </div>
+      <div><h2 class="text-xs font-medium uppercase tracking-[0.24em] text-sun">Stay</h2><ul class="mt-4 space-y-2.5"><li><a href="rooms.html" class="link-underline text-foam/85 hover:text-foam">Rooms & suites</a></li><li><a href="offers.html" class="link-underline text-foam/85 hover:text-foam">Offers</a></li><li><a href="booking.html" class="link-underline text-foam/85 hover:text-foam">Book a stay</a></li></ul></div><div><h2 class="text-xs font-medium uppercase tracking-[0.24em] text-sun">Discover</h2><ul class="mt-4 space-y-2.5"><li><a href="dining.html" class="link-underline text-foam/85 hover:text-foam">Dining</a></li><li><a href="experiences.html" class="link-underline text-foam/85 hover:text-foam">Experiences</a></li><li><a href="contact.html" class="link-underline text-foam/85 hover:text-foam">Location & contact</a></li></ul></div>
+      <div class="md:col-span-3 lg:col-span-1">
+        <h2 class="text-xs font-medium uppercase tracking-[0.24em] text-sun">Letters from the coast</h2>
+        <p class="mt-4 text-foam/80">Four emails a year: new rooms, the season's menu and quiet weeks worth knowing about.</p>
+        <!-- Demo form: connect it to your email provider in assets/js/main.js (initForms). -->
+        <form class="mt-5 flex flex-col gap-3 sm:flex-row" data-form="newsletter" novalidate>
+          <div class="flex-1">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input id="newsletter-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" class="field" aria-describedby="newsletter-email-error">
+            <p id="newsletter-email-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <button type="submit" class="btn-light h-[3.125rem] shrink-0">Subscribe</button>
+        </form>
+        <p class="mt-3 hidden text-sm text-sun" data-form-success role="status">Thank you. Look out for a confirmation email from us; once you click the link, the next letter from the coast is yours.</p>
+      </div>
+    </div>
+    <div class="container-x flex flex-col gap-3 border-t border-foam/15 py-6 text-sm text-foam/70 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; <span data-year>2026</span> Casa Marea, Newport. A fictional hotel.</p>
+      <ul class="flex gap-6"><li><a href="#" class="link-underline">Instagram</a></li><li><a href="#" class="link-underline">Privacy</a></li><li><a href="#" class="link-underline">Terms</a></li></ul>
+    </div>
+  </footer>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

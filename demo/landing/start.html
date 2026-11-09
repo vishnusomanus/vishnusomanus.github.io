@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Start — Nimbus</title>
+<meta name="description" content="Create a Nimbus board for your studio." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }</style>
+</head>
+<body class="bg-[#f4f8fb] text-[#102433] font-sans font-sans antialiased">
+<header class="sticky top-0 z-30 border-b border-[#d5e4ee] bg-[#f4f8fb]/95 backdrop-blur">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-xl font-bold">Nimbus</a>
+    <div class="flex items-center gap-3"><button id="menuBtn" class="rounded-lg border border-[#c5d7e4] px-3 py-1 text-sm md:hidden" aria-expanded="false">Menu</button></div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t pt-3 text-sm md:flex md:basis-auto md:flex-row md:items-center md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html">Home</a><a href="product.html">Product</a><a href="pricing.html">Pricing</a><a href="customers.html">Customers</a><a href="start.html" aria-current="page">Start</a></nav>
+  </div>
+</header><main class="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:px-8 lg:grid-cols-2">
+  <div><h1 class="font-display text-5xl font-bold">Open a board this afternoon.</h1><p class="mt-4 text-[#3d5566]">Solo is free. Studio can be added when a second person needs to move cards. You can invite them later.</p><img src="images/office.jpg" alt="" class="mt-8 hidden aspect-[16/9] rounded-3xl object-cover lg:block" /></div>
+  <form id="signup" class="rounded-3xl bg-white p-6 ring-1 ring-[#d5e4ee] sm:p-8">
+    <label class="block text-sm font-semibold">Your name<input required name="name" class="mt-1 w-full rounded-xl border border-[#c5d7e4] px-3 py-3 font-normal" /></label>
+    <label class="mt-4 block text-sm font-semibold">Work email<input required type="email" name="email" class="mt-1 w-full rounded-xl border border-[#c5d7e4] px-3 py-3 font-normal" /></label>
+    <label class="mt-4 block text-sm font-semibold">Studio name<input required name="studio" class="mt-1 w-full rounded-xl border border-[#c5d7e4] px-3 py-3 font-normal" /></label>
+    <label class="mt-4 block text-sm font-semibold">Plan<select name="plan" class="mt-1 w-full rounded-xl border border-[#c5d7e4] px-3 py-3 font-normal"><option>Solo, free</option><option>Studio, $12 / person</option><option>Floor, $29 / person</option></select></label>
+    <button class="mt-6 w-full rounded-full bg-[#0b6e8a] py-3 text-sm font-semibold text-white">Create the board</button>
+  </form>
+</main>
+<script>
+document.getElementById("signup").addEventListener("submit", (event) => {
+  event.preventDefault();
+  sessionStorage.setItem("nimbus-signup", JSON.stringify(Object.fromEntries(new FormData(event.currentTarget))));
+  location.href = "welcome.html";
+});
+</script><footer class="border-t border-[#d5e4ee]"><div class="mx-auto grid max-w-6xl gap-6 px-5 py-10 text-sm text-[#3d5566] sm:px-8 md:grid-cols-3"><div><p class="font-display text-xl font-bold text-[#102433]">Nimbus</p><p class="mt-2">440 Brannan Street<br />San Francisco, CA 94107</p></div><div><p>Weekday support, 9:00–17:00 Pacific.</p><p class="mt-2"><span class="underline underline-offset-4" >hello@nimbusboard.com</span></p></div><div class="space-y-1"><a href="product.html">Product</a><br /><a href="pricing.html">Pricing</a><br /><a href="customers.html">Customers</a></div></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

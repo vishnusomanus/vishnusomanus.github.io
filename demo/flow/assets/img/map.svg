@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 440" width="640" height="440">
+  <rect width="640" height="440" fill="#d9e7e3"/>
+  <g fill="none" stroke="#b5d0ca" stroke-width="2" stroke-linecap="round">
+    <path d="M470 60c14-8 28-8 42 0s28 8 42 0"/><path d="M520 120c14-8 28-8 42 0"/><path d="M500 300c14-8 28-8 42 0s28 8 42 0"/><path d="M420 400c14-8 28-8 42 0"/><path d="M560 210c14-8 28-8 42 0"/>
+  </g>
+  <path d="M0 0h430c-14 40-40 62-50 96-10 34 20 52 16 84-4 30-44 40-56 70-10 26 14 50 34 66 22 18 40 36 34 62-4 20-26 40-44 62H0Z" fill="#f4ede2"/>
+  <path d="M430 0c-14 40-40 62-50 96-10 34 20 52 16 84-4 30-44 40-56 70-10 26 14 50 34 66 22 18 40 36 34 62-4 20-26 40-44 62" fill="none" stroke="#8ab4ac" stroke-width="3"/>
+  <path d="M60 40c40 30 30 80 80 110s90 10 120 50" fill="none" stroke="#cbd4bf" stroke-width="40" stroke-linecap="round" opacity=".7"/>
+  <g fill="none" stroke="#fbf8f2" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M40 300c80-10 150-30 220-70s90-90 120-120"/>
+    <path d="M150 0c10 60 30 110 70 150s70 60 110 70"/>
+    <path d="M0 200c70 0 120 20 170 60s60 110 80 180"/>
+    <path d="M260 230c20 50 40 90 90 120"/>
+  </g>
+  <g fill="none" stroke="#ddd0bb" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 7">
+    <path d="M40 300c80-10 150-30 220-70s90-90 120-120"/>
+  </g>
+  <path d="M330 382c18-6 40-6 58 4" fill="none" stroke="#dfa585" stroke-width="10" stroke-linecap="round"/>
+  <g font-family="Mulish, Arial, sans-serif" font-size="13" font-weight="700" fill="#5d625a">
+    <text x="58" y="330">Seabright bus stop</text>
+    <text x="300" y="414">Seabright Beach</text>
+    <text x="196" y="96">Seabright Avenue</text>
+    <text x="40" y="186">Frederick Street Park</text>
+  </g>
+  <g font-family="Mulish, Arial, sans-serif" font-size="13" font-weight="700" fill="#2c524d" letter-spacing="2">
+    <text x="476" y="166">HARBOR</text>
+    <text x="452" y="330">MONTEREY BAY</text>
+  </g>
+  <rect x="64" y="292" width="14" height="14" rx="3" fill="#2c524d"/>
+  <g transform="translate(300 210)">
+    <circle r="34" fill="#ba6b47" opacity=".18"/>
+    <path d="M0 18c-14-16-22-26-22-38a22 22 0 0 1 44 0c0 12-8 22-22 38Z" fill="#9c5535"/>
+    <circle cy="-20" r="8" fill="#fbf8f2"/>
+  </g>
+  <g transform="translate(332 186)">
+    <rect width="132" height="34" rx="17" fill="#23302d"/>
+    <text x="66" y="22" text-anchor="middle" font-family="EB Garamond, Georgia, serif" font-size="17" fill="#f4ede2">Salt &amp; Sage</text>
+  </g>
+  <g transform="translate(596 60)" fill="none" stroke="#2c524d" stroke-width="2" stroke-linecap="round">
+    <circle r="18" fill="#fbf8f2"/><path d="M0-11v22M-4-6l4-5 4 5"/>
+  </g>
+  <text x="596" y="100" text-anchor="middle" font-family="Mulish, Arial, sans-serif" font-size="11" font-weight="800" fill="#2c524d">N</text>
+</svg>

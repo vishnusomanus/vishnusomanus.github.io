@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffeaa6"/><stop offset=".45" stop-color="#ffcf4f"/><stop offset="1" stop-color="#ff9a3c"/></linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff7da"/><stop offset=".5" stop-color="#ffd84f"/><stop offset="1" stop-color="#ff7a2b"/></linearGradient>
+    <mask id="cut"><rect width="1200" height="630" fill="#fff"/><g fill="#000"><rect y="330" width="1200" height="8"/><rect y="362" width="1200" height="11"/><rect y="396" width="1200" height="14"/><rect y="432" width="1200" height="17"/></g></mask>
+  </defs>
+  <rect width="1200" height="630" fill="url(#sky)"/>
+  <circle cx="900" cy="300" r="210" fill="url(#sun)" mask="url(#cut)"/>
+  <circle cx="900" cy="300" r="232" fill="none" stroke="#24122e" stroke-width="3" stroke-dasharray="2 12" stroke-linecap="round" opacity=".45"/>
+  <path d="M0 470c150-52 300-60 450-22s270 36 400 0 250-40 350-20V630H0Z" fill="#e8673a" stroke="#24122e" stroke-width="3"/>
+  <path d="M0 520c160-40 330-46 500-10s320 34 470 2 180-30 230-20V630H0Z" fill="#0b6e66" stroke="#24122e" stroke-width="3"/>
+  <path d="M0 575c220-34 470-36 720-6s380 20 480 0V630H0Z" fill="#2f7d4a" stroke="#24122e" stroke-width="3"/>
+  <text x="72" y="250" font-family="Shrikhand, Georgia, serif" font-size="170" fill="#fff4de">Solstice</text>
+  <text x="66" y="244" font-family="Shrikhand, Georgia, serif" font-size="170" fill="#24122e">Solstice</text>
+  <text x="72" y="320" font-family="Bricolage Grotesque, Arial Narrow, sans-serif" font-weight="800" font-stretch="75%" font-size="54" fill="#24122e">A MIDSUMMER FOOD &amp; MUSIC FESTIVAL</text>
+  <rect x="72" y="352" width="500" height="58" rx="29" fill="#c73a1e" stroke="#24122e" stroke-width="3"/>
+  <text x="322" y="391" text-anchor="middle" font-family="DM Sans, Arial, sans-serif" font-weight="800" font-size="27" fill="#fff">June 25–27, 2027 · Traverse City</text>
+</svg>

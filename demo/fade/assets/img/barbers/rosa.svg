@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" role="img" aria-label="Illustrated portrait of Rosa Delgado">
+<rect width="400" height="480" fill="#e0a83a"/>
+<path d="M200 230L620.0 230.0L618.4 266.6ZM200 230L594.7 373.6L580.6 407.5ZM200 230L521.7 500.0L497.0 527.0ZM200 230L410.0 593.7L377.5 610.6ZM200 230L272.9 643.6L236.6 648.4ZM200 230L127.1 643.6L91.3 635.7ZM200 230L-10.0 593.7L-40.9 574.0ZM200 230L-121.7 500.0L-144.0 470.9ZM200 230L-194.7 373.6L-205.7 338.7ZM200 230L-220.0 230.0L-218.4 193.4ZM200 230L-194.7 86.4L-180.6 52.5ZM200 230L-121.7 -40.0L-97.0 -67.0ZM200 230L-10.0 -133.7L22.5 -150.6ZM200 230L127.1 -183.6L163.4 -188.4ZM200 230L272.9 -183.6L308.7 -175.7ZM200 230L410.0 -133.7L440.9 -114.0ZM200 230L521.7 -40.0L544.0 -10.9ZM200 230L594.7 86.4L605.7 121.3Z" fill="#d49c30"/>
+<circle cx="200" cy="230" r="150" fill="#f2ead9" opacity=".9"/>
+<circle cx="200" cy="230" r="150" fill="none" stroke="#151515" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round" opacity=".5"/>
+<path d="M30 480C46 392 120 362 200 362C280 362 354 392 370 480Z" fill="#1d3557"/>
+<path d="M164 362L200 420L236 362Z" fill="#f2ead9"/>
+<path d="M172 300h56v62c0 18-56 18-56 0Z" fill="#a17151"/>
+<path d="M164 362L200 420L182 440L150 372Z M236 362L200 420L218 440L250 372Z" fill="#172a46"/>
+<rect x="284" y="414" width="34" height="8" rx="2" fill="#f2ead9" transform="rotate(-8 300 418)"/>
+<path d="M286 412v-26M292 412v-26M298 412v-26M304 412v-26M310 412v-26" stroke="#f2ead9" stroke-width="3" transform="rotate(-8 300 418)"/>
+<ellipse cx="129" cy="228" rx="13" ry="20" fill="#a17151"/>
+<ellipse cx="271" cy="228" rx="13" ry="20" fill="#a17151"/>
+<ellipse cx="200" cy="216" rx="71" ry="92" fill="#c48a63"/>
+<path d="M131 204C130 186 132 172 138 162L140 236C136 226 132 216 131 204ZM269 204C270 186 268 172 262 162L260 236C264 226 268 216 269 204Z" fill="#2a1712" opacity=".45"/>
+
+<circle cx="140" cy="170" r="20" fill="#2a1712"/><circle cx="150" cy="145" r="22" fill="#2a1712"/><circle cx="170" cy="126" r="24" fill="#2a1712"/><circle cx="196" cy="116" r="25" fill="#2a1712"/><circle cx="224" cy="120" r="24" fill="#2a1712"/><circle cx="248" cy="134" r="23" fill="#2a1712"/><circle cx="262" cy="158" r="21" fill="#2a1712"/><circle cx="266" cy="182" r="17" fill="#2a1712"/><circle cx="134" cy="192" r="15" fill="#2a1712"/><circle cx="178" cy="150" r="20" fill="#2a1712"/><circle cx="210" cy="146" r="20" fill="#2a1712"/><circle cx="238" cy="156" r="18" fill="#2a1712"/><circle cx="160" cy="168" r="16" fill="#2a1712"/><circle cx="196" cy="136" r="18" fill="#2a1712"/><path d="M130 166a10 10 0 0 1 16 -2" stroke="#6a5d59" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M139 140.6a11 11 0 0 1 17.6 -2.2" stroke="#6a5d59" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M158 121.2a12 12 0 0 1 19.200000000000003 -2.4000000000000004" stroke="#6a5d59" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M183.5 111a12.5 12.5 0 0 1 20 -2.5" stroke="#6a5d59" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M212 115.2a12 12 0 0 1 19.200000000000003 -2.4000000000000004" stroke="#6a5d59" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M236.5 129.4a11.5 11.5 0 0 1 18.400000000000002 -2.3000000000000003" stroke="#6a5d59" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M251.5 153.8a10.5 10.5 0 0 1 16.8 -2.1" stroke="#6a5d59" stroke-width="3" fill="none" stroke-linecap="round"/><path d="M257.5 178.6a8.5 8.5 0 0 1 13.600000000000001 -1.7000000000000002" stroke="#6a5d59" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M160 196q12-8 26-2M214 194q14-6 26 2" stroke="#2a1712" stroke-width="6" fill="none" stroke-linecap="round"/>
+<ellipse cx="173" cy="222" rx="5.5" ry="6.5" fill="#151515"/>
+<ellipse cx="227" cy="222" rx="5.5" ry="6.5" fill="#151515"/>
+<path d="M200 232c-4 14-8 22-12 26q10 6 22 0" stroke="#7f5a40" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M182 284q18 12 36 0" stroke="#6c4c36" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+
+<circle cx="132" cy="252" r="7" fill="none" stroke="#e0a83a" stroke-width="3.5"/><circle cx="268" cy="252" r="7" fill="none" stroke="#e0a83a" stroke-width="3.5"/>
+</svg>

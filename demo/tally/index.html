@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tally — Invoicing and bookkeeping for freelancers and small studios</title>
+  <meta name="description" content="Tally sends your invoices, chases late payers, snaps receipts and keeps simple books, so freelancers and small studios get paid on time. Built in Grand Rapids.">
+  <meta name="theme-color" content="#f7f6f1">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tally">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Tally — Invoicing and bookkeeping for freelancers and small studios">
+  <meta property="og:description" content="Tally sends your invoices, chases late payers, snaps receipts and keeps simple books, so freelancers and small studios get paid on time. Built in Grand Rapids.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400..600&amp;family=Mona+Sans:wdth,wght@75..125,300..800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="home" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[95] rounded-lg bg-ink px-5 py-3 text-sm font-semibold text-white focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 border-b border-line bg-paper">
+    <div class="container-x flex h-16 items-center gap-6">
+      <a href="index.html" class="inline-flex items-center gap-2.5" aria-label="Tally home">
+        <svg viewBox="0 0 32 32" class="h-8 w-8 shrink-0" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#0d1f1b"/><path d="M9.5 9v14M13.5 9v14M17.5 9v14M21.5 9v14" stroke="#f7f6f1" stroke-width="2.2" stroke-linecap="round"/><path d="M6.5 20.5 25.5 11.5" stroke="#45d99b" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <span class="text-[21px] font-semibold tracking-[-0.03em] [font-stretch:120%]">tally</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center">
+          <li><a href="features.html" class="nav-link">Features</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+          <li><a href="integrations.html" class="nav-link">Integrations</a></li>
+          <li><a href="customers.html" class="nav-link">Customers</a></li>
+          <li><a href="security.html" class="nav-link">Security</a></li>
+        </ul>
+      </nav>
+      <div class="ml-auto flex items-center gap-2">
+        <a href="pricing.html#plans" class="btn-ghost btn-sm hidden sm:inline-flex">See plans</a>
+        <a href="contact.html" class="btn-primary btn-sm hidden sm:inline-flex">Book a demo</a>
+        <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-lg border border-line-strong bg-white text-ink lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-line bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-6">
+        <ul>
+          <li><a href="features.html" class="m-link">Features<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="pricing.html" class="m-link">Pricing<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="calculator.html" class="m-link">Calculator<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="integrations.html" class="m-link">Integrations<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="customers.html" class="m-link">Customers<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="security.html" class="m-link">Security<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="changelog.html" class="m-link">Changelog<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+        </ul>
+        <div class="mt-5 grid gap-2 sm:grid-cols-2">
+          <a href="contact.html" class="btn-primary btn-lg">Book a demo</a>
+          <a href="pricing.html#plans" class="btn-ghost btn-lg">See plans</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <!-- Hero -->
+    <section class="relative overflow-hidden border-b border-line">
+      <div class="ledger-lines pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="container-x relative grid items-center gap-12 pt-12 pb-16 sm:pt-16 lg:grid-cols-12 lg:gap-10 lg:pt-14 lg:pb-20">
+        <div class="lg:col-span-6">
+          <p class="eyebrow">Invoicing · Expenses · Books</p>
+          <h1 class="h-display mt-5">Get paid on time. Keep the books tidy.</h1>
+          <p class="lead mt-6 max-w-xl">Tally sends your invoices, chases late payers politely and matches every payment to your bank, so a freelancer or a studio of twelve can close the month in minutes, not weekends.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="contact.html" class="btn-primary btn-lg">Book a 20-minute demo <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></a>
+            <a href="pricing.html" class="btn-ghost btn-lg">Plans from $10 a month</a>
+          </div>
+          <dl class="mt-10 grid max-w-lg grid-cols-3 border-t border-line pt-6">
+            <div><dt class="text-sm text-ink-faint">Paid faster</dt><dd class="mt-1 text-2xl font-semibold tracking-tight [font-stretch:110%]">11 days</dd></div>
+            <div class="border-l border-line pl-5"><dt class="text-sm text-ink-faint">Admin saved</dt><dd class="mt-1 text-2xl font-semibold tracking-tight [font-stretch:110%]">5 h/mo</dd></div>
+            <div class="border-l border-line pl-5"><dt class="text-sm text-ink-faint">Customers</dt><dd class="mt-1 text-2xl font-semibold tracking-tight [font-stretch:110%]"><span data-count="4200">4,200</span>+</dd></div>
+          </dl>
+          <p class="mt-3 text-xs text-ink-faint">Medians from a 2026 survey of Tally customers. Your results will vary.</p>
+        </div>
+
+        <!-- Live invoice mock-up: quantities and the payment button are interactive (main.js, section 4). -->
+        <div class="relative lg:col-span-6">
+          <div id="invoice-demo" class="card card-lift relative z-10 mx-auto max-w-xl overflow-hidden" data-stage="2">
+            <div class="flex items-center justify-between gap-3 border-b border-line bg-paper-2/60 px-5 py-3">
+              <div class="flex items-center gap-2.5">
+                <span class="font-mono text-xs font-medium text-ink-soft">INV-0142</span>
+                <span class="chip chip-sent" data-status-chip><span class="chip-dot"></span><span data-status-text>Viewed</span></span>
+              </div>
+              <p class="text-xs text-ink-faint">Due <time datetime="2026-10-30" data-invoice-due>Oct 30, 2026</time></p>
+            </div>
+            <div class="px-5 pt-5 sm:px-6">
+              <div class="flex flex-wrap items-start justify-between gap-4">
+                <div>
+                  <p class="font-mono text-[11px] tracking-[0.08em] text-ink-faint uppercase">From</p>
+                  <p class="mt-1 font-semibold">Sable Motion</p>
+                  <p class="text-sm text-ink-faint">Ludington, MI</p>
+                </div>
+                <div class="text-right">
+                  <p class="font-mono text-[11px] tracking-[0.08em] text-ink-faint uppercase">Bill to</p>
+                  <p class="mt-1 font-semibold">Platte Outdoor Co.</p>
+                  <p class="text-sm text-ink-faint">Traverse City, MI</p>
+                </div>
+              </div>
+              <table class="mt-5 w-full text-sm">
+                <caption class="sr-only">Invoice lines. Change a quantity to update the totals.</caption>
+                <thead>
+                  <tr class="border-b border-line text-left font-mono text-[11px] tracking-[0.06em] text-ink-faint uppercase">
+                    <th scope="col" class="py-2 font-medium">Item</th>
+                    <th scope="col" class="py-2 text-center font-medium">Qty</th>
+                    <th scope="col" class="py-2 text-right font-medium">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="border-b border-line" data-line data-price="2400">
+                    <th scope="row" class="py-3 pr-2 text-left font-medium"><span data-line-name>Brand film, 90-second cut</span><span class="block text-xs font-normal text-ink-faint">$2,400.00 each</span></th>
+                    <td class="py-3"><div class="flex items-center justify-center gap-1.5"><button type="button" class="qty-btn" data-qty-dec aria-label="Fewer: Brand film, 90-second cut">−</button><output class="w-5 text-center font-semibold" data-qty aria-live="off">1</output><button type="button" class="qty-btn" data-qty-inc aria-label="More: Brand film, 90-second cut">+</button></div></td>
+                    <td class="py-3 text-right font-semibold" data-line-total>$2,400.00</td>
+                  </tr>
+                  <tr class="border-b border-line" data-line data-price="1200">
+                    <th scope="row" class="py-3 pr-2 text-left font-medium"><span data-line-name>Shoot day, crew of two</span><span class="block text-xs font-normal text-ink-faint">$1,200.00 each</span></th>
+                    <td class="py-3"><div class="flex items-center justify-center gap-1.5"><button type="button" class="qty-btn" data-qty-dec aria-label="Fewer: Shoot day, crew of two">−</button><output class="w-5 text-center font-semibold" data-qty aria-live="off">2</output><button type="button" class="qty-btn" data-qty-inc aria-label="More: Shoot day, crew of two">+</button></div></td>
+                    <td class="py-3 text-right font-semibold" data-line-total>$2,400.00</td>
+                  </tr>
+                  <tr data-line data-price="640">
+                    <th scope="row" class="py-3 pr-2 text-left font-medium"><span data-line-name>Color grade and sound mix</span><span class="block text-xs font-normal text-ink-faint">$640.00 each</span></th>
+                    <td class="py-3"><div class="flex items-center justify-center gap-1.5"><button type="button" class="qty-btn" data-qty-dec aria-label="Fewer: Color grade and sound mix">−</button><output class="w-5 text-center font-semibold" data-qty aria-live="off">1</output><button type="button" class="qty-btn" data-qty-inc aria-label="More: Color grade and sound mix">+</button></div></td>
+                    <td class="py-3 text-right font-semibold" data-line-total>$640.00</td>
+                  </tr>
+                </tbody>
+              </table>
+              <dl class="ml-auto mt-2 w-full max-w-60 space-y-1.5 border-t border-line pt-3 text-sm">
+                <div class="flex justify-between"><dt class="text-ink-faint">Subtotal</dt><dd data-subtotal>$5,440.00</dd></div>
+                <div class="flex justify-between"><dt class="text-ink-faint">Sales tax 6%</dt><dd data-vat>$326.40</dd></div>
+                <div class="flex justify-between border-t border-ink pt-2 text-base font-semibold"><dt>Total due</dt><dd data-total>$5,766.40</dd></div>
+              </dl>
+            </div>
+            <div class="mt-5 border-t border-line px-5 py-4 sm:px-6">
+              <ol class="flex items-center gap-2" aria-label="Invoice progress">
+                <li class="stage" data-stage-step="0" data-state="done"><span class="stage-dot"><svg viewBox="0 0 20 20" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span>Draft</li>
+                <li class="stage-line" data-stage-line="1" data-state="done" aria-hidden="true"></li>
+                <li class="stage" data-stage-step="1" data-state="done"><span class="stage-dot"><svg viewBox="0 0 20 20" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span>Sent</li>
+                <li class="stage-line" data-stage-line="2" data-state="done" aria-hidden="true"></li>
+                <li class="stage" data-stage-step="2" data-state="current" aria-current="step"><span class="stage-dot"><svg viewBox="0 0 20 20" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span>Viewed</li>
+                <li class="stage-line" data-stage-line="3" aria-hidden="true"></li>
+                <li class="stage" data-stage-step="3"><span class="stage-dot"><svg viewBox="0 0 20 20" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span>Paid</li>
+              </ol>
+              <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+                <p class="text-sm text-ink-soft" data-stage-note>Opened by Platte Outdoor Co. this morning. Reminder set for 3 days after the due date.</p>
+                <button type="button" class="btn-accent btn-sm" data-pay-button>Simulate payment</button>
+              </div>
+            </div>
+          </div>
+          <!-- Shown by main.js when the demo invoice is paid. -->
+          <div data-paid-toast hidden class="card card-lift absolute right-2 -bottom-7 z-20 flex w-64 items-center gap-3 p-3.5 sm:-right-4">
+            <span class="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-mint-400 text-ink"><svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 10.5 3.2 3.2L15 7"/></svg></span>
+            <div class="min-w-0"><p class="text-sm font-semibold">Payment received</p><p class="text-xs text-ink-faint"><span data-paid-amount>$5,766.40</span> · matched to INV-0142</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Customer wordmarks -->
+    <section aria-labelledby="logos-title" class="border-b border-line">
+      <div class="container-x flex flex-col gap-6 py-9 lg:flex-row lg:items-center lg:gap-12">
+        <h2 id="logos-title" class="shrink-0 text-sm font-medium text-ink-faint lg:max-w-52">Trusted by 4,200 freelancers and studios across the US</h2>
+        <ul class="grid flex-1 grid-cols-2 items-center gap-x-8 gap-y-5 text-ink-soft sm:grid-cols-3 lg:grid-cols-5">
+          <li><svg viewBox="0 0 150 32" class="h-7 w-auto" role="img" aria-label="Harborline Architects"><path d="M4 26h22M7 26V12l8-6 8 6v14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><text x="32" y="22" font-family="Mona Sans, sans-serif" font-size="14" font-weight="700" fill="currentColor" letter-spacing="-.3">harborline</text></svg></li>
+          <li><svg viewBox="0 0 150 32" class="h-7 w-auto" role="img" aria-label="Sable Motion"><circle cx="14" cy="16" r="10" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="m11 11 8 5-8 5z" fill="currentColor"/><text x="31" y="21" font-family="Mona Sans, sans-serif" font-size="14" font-weight="600" fill="currentColor" font-stretch="125%">SABLE</text></svg></li>
+          <li><svg viewBox="0 0 150 32" class="h-7 w-auto" role="img" aria-label="Oyster Lane Copywriting"><text x="2" y="22" font-family="Georgia, serif" font-size="17" font-style="italic" fill="currentColor">Oyster Lane</text><circle cx="104" cy="17" r="2.5" fill="currentColor"/></svg></li>
+          <li><svg viewBox="0 0 150 32" class="h-7 w-auto" role="img" aria-label="Arruda Dev"><rect x="2" y="6" width="20" height="20" rx="4" fill="currentColor"/><path d="m8 13-3 3 3 3M16 13l3 3-3 3" fill="none" stroke="#f7f6f1" stroke-width="2" stroke-linecap="round"/><text x="30" y="21" font-family="Azeret Mono, monospace" font-size="13" font-weight="500" fill="currentColor">arruda.dev</text></svg></li>
+          <li><svg viewBox="0 0 150 32" class="h-7 w-auto" role="img" aria-label="Manitou Print Studio"><path d="M4 24 14 6l10 18z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><text x="31" y="21" font-family="Mona Sans, sans-serif" font-size="13" font-weight="800" fill="currentColor" letter-spacing="1.5">MANITOU</text></svg></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Three jobs -->
+    <section aria-labelledby="jobs-title" class="py-20 sm:py-24">
+      <div class="container-x">
+        <div class="grid gap-6 lg:grid-cols-12">
+          <div class="reveal lg:col-span-5">
+            <p class="eyebrow">01 / What Tally does</p>
+            <h2 id="jobs-title" class="h-section mt-4">Three jobs you’d rather not do on a Sunday night.</h2>
+          </div>
+          <p class="lead reveal reveal-d1 lg:col-span-6 lg:col-start-7 lg:pt-10">Invoices, receipts and the books behind them, in one calm place. No accounting degree, no spreadsheet with seventeen tabs, and your accountant can log in whenever they like.</p>
+        </div>
+        <div class="mt-14 grid gap-px overflow-hidden rounded-[var(--radius-card)] border border-line bg-line md:grid-cols-3">
+          <article class="reveal flex flex-col bg-white p-6 sm:p-7">
+            <p class="font-mono text-xs text-ink-faint">A.</p>
+            <h3 class="h-card mt-2">Invoices that chase themselves</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink-soft">Turn a quote into an invoice, take card or ACH payments, and let polite reminders go out on a schedule you choose.</p>
+            <ul class="mt-6 space-y-2 rounded-lg bg-paper p-3 text-sm" aria-label="Example reminder schedule">
+              <li class="flex items-center justify-between gap-2"><span>3 days before due</span><span class="chip chip-paid">Friendly nudge</span></li>
+              <li class="flex items-center justify-between gap-2"><span>On the due date</span><span class="chip chip-sent">Payment link</span></li>
+              <li class="flex items-center justify-between gap-2"><span>7 days late</span><span class="chip chip-due">Firmer note</span></li>
+              <li class="flex items-center justify-between gap-2"><span>30 days late</span><span class="chip chip-late">Late fee notice</span></li>
+            </ul>
+            <a href="features.html#invoicing" class="link mt-auto pt-6 text-sm">More on invoicing</a>
+          </article>
+          <article class="reveal reveal-d1 flex flex-col bg-white p-6 sm:p-7">
+            <p class="font-mono text-xs text-ink-faint">B.</p>
+            <h3 class="h-card mt-2">Receipts in, tax time easier</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink-soft">Snap a receipt or forward the email. Tally reads the vendor, the total and the sales tax, and suggests a category.</p>
+            <div class="mt-6 rounded-lg bg-paper p-3 text-sm">
+              <div class="flex items-center gap-3">
+                <svg viewBox="0 0 36 44" class="h-11 w-9 shrink-0" aria-hidden="true"><path d="M2 2h32v40l-4-3-4 3-4-3-4 3-4-3-4 3-4-3-4 3z" fill="#fff" stroke="#c4c0b2" stroke-width="1.5"/><path d="M8 10h20M8 15h14M8 20h18M8 28h20" stroke="#c4c0b2" stroke-width="2" stroke-linecap="round"/></svg>
+                <div class="min-w-0 flex-1"><p class="font-semibold">Grand River Fuel</p><p class="text-xs text-ink-faint">Oct 14 · Travel</p></div>
+                <p class="font-semibold">$62.40</p>
+              </div>
+              <div class="mt-3 flex items-center justify-between border-t border-line pt-2.5 text-xs"><span class="text-ink-faint">Sales tax paid (6%)</span><span class="font-semibold">$3.53</span></div>
+            </div>
+            <a href="features.html#expenses" class="link mt-auto pt-6 text-sm">More on expenses</a>
+          </article>
+          <article class="reveal reveal-d2 flex flex-col bg-white p-6 sm:p-7">
+            <p class="font-mono text-xs text-ink-faint">C.</p>
+            <h3 class="h-card mt-2">Books your accountant will like</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink-soft">Bank feeds match payments to invoices and receipts. Profit and loss, sales tax summaries and exports are always up to date.</p>
+            <div class="mt-6 space-y-2.5 rounded-lg bg-paper p-3 text-sm">
+              <p class="flex justify-between text-xs text-ink-faint"><span>Matched this month</span><span>148 of 152</span></p>
+              <span class="block h-2 overflow-hidden rounded bg-line"><span class="block h-full w-[97%] rounded bg-mint-500"></span></span>
+              <p class="flex justify-between"><span>Income</span><span class="font-semibold">$21,480</span></p>
+              <p class="flex justify-between"><span>Expenses</span><span class="font-semibold">−$6,215</span></p>
+              <p class="flex justify-between border-t border-line pt-2 font-semibold"><span>Profit</span><span class="text-mint-800">$15,265</span></p>
+            </div>
+            <a href="features.html#books" class="link mt-auto pt-6 text-sm">More on bookkeeping</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dashboard band -->
+    <section aria-labelledby="dash-title" class="on-ink bg-ink py-20 text-white sm:py-24">
+      <div class="container-x grid items-center gap-12 lg:grid-cols-12">
+        <div class="reveal lg:col-span-4">
+          <p class="eyebrow">02 / The dashboard</p>
+          <h2 id="dash-title" class="h-section mt-4">Know who owes you, at a glance.</h2>
+          <p class="mt-5 text-lg leading-relaxed text-fog">One screen with what’s outstanding, what’s late and what’s left after expenses. Tally flags the invoices worth a phone call before they turn into a problem.</p>
+          <ul class="mt-8 space-y-3 text-[15px]">
+            <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 shrink-0 rounded-[2px] bg-mint-400" aria-hidden="true"></span>Cash flow for the last six months, in and out</li>
+            <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 shrink-0 rounded-[2px] bg-mint-400" aria-hidden="true"></span>Aging report: current, 1–30, 31–60 and 60+ days</li>
+            <li class="flex gap-3"><span class="mt-1.5 h-2 w-2 shrink-0 rounded-[2px] bg-mint-400" aria-hidden="true"></span>A quarterly tax estimate so nothing surprises you</li>
+          </ul>
+        </div>
+        <div class="reveal reveal-d1 min-w-0 lg:col-span-8">
+          <div class="rounded-[var(--radius-card)] border border-white/12 bg-ink-2 p-4 sm:p-6">
+            <div class="grid grid-cols-2 gap-3 lg:grid-cols-4">
+              <div class="rounded-lg bg-ink p-4"><p class="text-xs text-fog">Outstanding</p><p class="mt-1 text-xl font-semibold sm:text-2xl">$12,480</p><p class="mt-1 text-xs text-fog">9 invoices</p></div>
+              <div class="rounded-lg bg-ink p-4"><p class="text-xs text-fog">Overdue</p><p class="mt-1 text-xl font-semibold text-[#ffc9a8] sm:text-2xl">$2,150</p><p class="mt-1 text-xs text-fog">3 invoices</p></div>
+              <div class="rounded-lg bg-ink p-4"><p class="text-xs text-fog">Paid in October</p><p class="mt-1 text-xl font-semibold text-mint-300 sm:text-2xl">$18,240</p><p class="mt-1 text-xs text-fog">22 invoices</p></div>
+              <div class="rounded-lg bg-ink p-4"><p class="text-xs text-fog">Tax estimate</p><p class="mt-1 text-xl font-semibold sm:text-2xl">$3,104</p><p class="mt-1 text-xs text-fog">This quarter</p></div>
+            </div>
+            <div class="mt-3 grid gap-3 md:grid-cols-5">
+              <figure class="rounded-lg bg-ink p-4 md:col-span-3">
+                <figcaption class="flex items-center justify-between text-sm"><span class="font-semibold">Cash flow, May–Oct</span><span class="flex items-center gap-3 text-xs text-fog"><span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-[2px] bg-mint-400"></span>In</span><span class="inline-flex items-center gap-1.5"><span class="h-2 w-2 rounded-[2px] bg-fog/60"></span>Out</span></span></figcaption>
+                <svg viewBox="0 0 320 150" class="mt-3 h-auto w-full" role="img" aria-label="Bar chart. Money in and out per month, May to October: May $14.2k in, $5.1k out; June $15.8k in, $6.4k out; July $12.1k in, $5.6k out; August $13.4k in, $4.9k out; September $16.3k in, $6.0k out; October $18.2k in, $6.2k out.">
+                  <g stroke="#ffffff" stroke-opacity=".08"><path d="M0 20h320M0 60h320M0 100h320"/></g>
+                  <path d="M0 130h320" stroke="#ffffff" stroke-opacity=".25"/>
+                  <g fill="#45d99b">
+                    <rect class="grow-y" x="14" y="44" width="16" height="86" rx="2"/><rect class="grow-y" x="66" y="35" width="16" height="95" rx="2"/><rect class="grow-y" x="118" y="57" width="16" height="73" rx="2"/><rect class="grow-y" x="170" y="49" width="16" height="81" rx="2"/><rect class="grow-y" x="222" y="32" width="16" height="98" rx="2"/><rect class="grow-y" x="274" y="20" width="16" height="110" rx="2"/>
+                  </g>
+                  <g fill="#a9bab3" fill-opacity=".6">
+                    <rect class="grow-y" x="32" y="99" width="16" height="31" rx="2"/><rect class="grow-y" x="84" y="91" width="16" height="39" rx="2"/><rect class="grow-y" x="136" y="96" width="16" height="34" rx="2"/><rect class="grow-y" x="188" y="100" width="16" height="30" rx="2"/><rect class="grow-y" x="240" y="94" width="16" height="36" rx="2"/><rect class="grow-y" x="292" y="93" width="16" height="37" rx="2"/>
+                  </g>
+                  <g fill="#a9bab3" font-size="10" font-family="Azeret Mono, monospace" text-anchor="middle"><text x="31" y="146">May</text><text x="83" y="146">Jun</text><text x="135" y="146">Jul</text><text x="187" y="146">Aug</text><text x="239" y="146">Sep</text><text x="291" y="146">Oct</text></g>
+                </svg>
+              </figure>
+              <div class="rounded-lg bg-ink p-4 md:col-span-2">
+                <p class="text-sm font-semibold">Worth a call</p>
+                <ul class="mt-3 divide-y divide-white/10 text-sm">
+                  <li class="flex items-center justify-between gap-2 py-2.5"><span class="min-w-0"><span class="block truncate">Pentwater Harbor Hotel</span><span class="text-xs text-fog">INV-0127 · 34 days late</span></span><span class="font-semibold">$1,240</span></li>
+                  <li class="flex items-center justify-between gap-2 py-2.5"><span class="min-w-0"><span class="block truncate">Reeds Lake Coffee Roasters</span><span class="text-xs text-fog">INV-0131 · 12 days late</span></span><span class="font-semibold">$560</span></li>
+                  <li class="flex items-center justify-between gap-2 py-2.5"><span class="min-w-0"><span class="block truncate">Ada Pottery</span><span class="text-xs text-fog">INV-0135 · 5 days late</span></span><span class="font-semibold">$350</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section aria-labelledby="how-title" class="py-20 sm:py-24">
+      <div class="container-x">
+        <p class="eyebrow reveal">03 / Getting started</p>
+        <h2 id="how-title" class="h-section reveal mt-4 max-w-2xl">Set up before your coffee goes cold.</h2>
+        <ol class="mt-12 grid gap-8 md:grid-cols-3">
+          <li class="rule reveal pt-6">
+            <p class="font-mono text-sm text-mint-800">Step 1 · 4 min</p>
+            <h3 class="h-card mt-2">Connect your business account</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink-soft">Read-only bank feeds from US banks and credit unions. Tally can see transactions; it can never move money.</p>
+          </li>
+          <li class="rule reveal reveal-d1 pt-6">
+            <p class="font-mono text-sm text-mint-800">Step 2 · 3 min</p>
+            <h3 class="h-card mt-2">Add your logo and payment details</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink-soft">Your EIN, bank details and terms go on every invoice. Import clients from a spreadsheet if you have one.</p>
+          </li>
+          <li class="rule reveal reveal-d2 pt-6">
+            <p class="font-mono text-sm text-mint-800">Step 3 · 1 min</p>
+            <h3 class="h-card mt-2">Send your first invoice</h3>
+            <p class="mt-2 text-[15px] leading-relaxed text-ink-soft">Choose a reminder schedule, add a card payment link and press send. Tally takes it from there.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section aria-labelledby="quotes-title" class="border-y border-line bg-paper-2/60 py-20 sm:py-24">
+      <div class="container-x">
+        <div class="flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
+          <div class="reveal">
+            <p class="eyebrow">04 / Customers</p>
+            <h2 id="quotes-title" class="h-section mt-4">Fewer awkward emails.</h2>
+          </div>
+          <a href="customers.html" class="link reveal">Read the customer stories</a>
+        </div>
+        <div class="mt-12 grid gap-5 lg:grid-cols-3">
+          <figure class="card reveal flex flex-col p-6 sm:p-7">
+            <p class="text-4xl font-semibold tracking-tight text-mint-800 [font-stretch:115%]">−19 days</p>
+            <p class="text-sm text-ink-faint">average time to get paid</p>
+            <blockquote class="mt-5 text-[17px] leading-relaxed">“Clients pay the day the reminder lands. I used to send those emails myself and hate every one of them.”</blockquote>
+            <figcaption class="mt-auto flex items-center gap-3 pt-6">
+              <svg viewBox="0 0 40 40" class="h-10 w-10 shrink-0 rounded-full" aria-hidden="true"><rect width="40" height="40" fill="#d4f6e5"/><circle cx="20" cy="16" r="7" fill="#0a6e4c"/><path d="M6 40c2-9 8-13 14-13s12 4 14 13z" fill="#0a6e4c"/></svg>
+              <span><span class="block font-semibold">Evan Tuinstra</span><span class="text-sm text-ink-faint">Sable Motion, Ludington</span></span>
+            </figcaption>
+          </figure>
+          <figure class="card reveal reveal-d1 flex flex-col p-6 sm:p-7">
+            <p class="text-4xl font-semibold tracking-tight text-mint-800 [font-stretch:115%]">2 hours</p>
+            <p class="text-sm text-ink-faint">to prepare the quarterly numbers, down from two days</p>
+            <blockquote class="mt-5 text-[17px] leading-relaxed">“Our accountant logs in, checks the tax summary and we’re done. The shoebox of receipts is gone.”</blockquote>
+            <figcaption class="mt-auto flex items-center gap-3 pt-6">
+              <svg viewBox="0 0 40 40" class="h-10 w-10 shrink-0 rounded-full" aria-hidden="true"><rect width="40" height="40" fill="#dde9f7"/><circle cx="20" cy="16" r="7" fill="#1f4f86"/><path d="M6 40c2-9 8-13 14-13s12 4 14 13z" fill="#1f4f86"/><path d="M12 15c0-6 4-9 8-9s8 3 8 9c-2-3-5-4-8-4s-6 1-8 4z" fill="#0d1f1b"/></svg>
+              <span><span class="block font-semibold">Gretchen Kuiper</span><span class="text-sm text-ink-faint">Harborline Architects, Holland</span></span>
+            </figcaption>
+          </figure>
+          <figure class="card reveal reveal-d2 flex flex-col p-6 sm:p-7">
+            <p class="text-4xl font-semibold tracking-tight text-mint-800 [font-stretch:115%]">$0</p>
+            <p class="text-sm text-ink-faint">written off this year</p>
+            <blockquote class="mt-5 text-[17px] leading-relaxed">“I work alone, so every unpaid invoice is my problem. Tally tells me who to call before it gets messy.”</blockquote>
+            <figcaption class="mt-auto flex items-center gap-3 pt-6">
+              <svg viewBox="0 0 40 40" class="h-10 w-10 shrink-0 rounded-full" aria-hidden="true"><rect width="40" height="40" fill="#fbeccb"/><circle cx="20" cy="16" r="7" fill="#7a4300"/><path d="M6 40c2-9 8-13 14-13s12 4 14 13z" fill="#7a4300"/></svg>
+              <span><span class="block font-semibold">Felipe Arruda</span><span class="text-sm text-ink-faint">Freelance developer, Grand Rapids</span></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tools and pricing teaser -->
+    <section aria-labelledby="tools-title" class="py-20 sm:py-24">
+      <div class="container-x">
+        <h2 id="tools-title" class="sr-only">Calculator and pricing</h2>
+        <div class="grid gap-5 lg:grid-cols-2">
+          <a href="calculator.html" class="card card-hover reveal group flex flex-col p-7 sm:p-9">
+            <p class="eyebrow">Free tool</p>
+            <p class="mt-4 text-2xl font-semibold tracking-[-0.02em] [font-stretch:112%] sm:text-3xl">What is a late invoice costing you?</p>
+            <p class="mt-3 max-w-md text-ink-soft">Work out the interest and flat late fee your terms could add to an overdue business invoice, and how many hours chasing takes each month.</p>
+            <span class="mt-8 inline-flex items-center gap-2 font-semibold text-mint-800">Open the calculator <svg viewBox="0 0 20 20" class="h-4 w-4 transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></span>
+          </a>
+          <a href="pricing.html" class="card card-hover reveal reveal-d1 group flex flex-col p-7 sm:p-9">
+            <p class="eyebrow">Pricing</p>
+            <p class="mt-4 text-2xl font-semibold tracking-[-0.02em] [font-stretch:112%] sm:text-3xl">From $10 a month, billed yearly.</p>
+            <p class="mt-3 max-w-md text-ink-soft">Three plans, no setup fees and a 30-day trial on every one. Prices exclude sales tax; switch or cancel whenever you like.</p>
+            <span class="mt-8 inline-flex items-center gap-2 font-semibold text-mint-800">Compare plans <svg viewBox="0 0 20 20" class="h-4 w-4 transition group-hover:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 10h12m-5-5 5 5-5 5"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section aria-labelledby="cta-title" class="px-5 pb-20 sm:px-8 sm:pb-24">
+      <div class="reveal relative mx-auto max-w-[74rem] overflow-hidden rounded-[var(--radius-card)] bg-mint-400 px-6 py-14 sm:px-12 sm:py-16">
+        <svg viewBox="0 0 200 120" class="pointer-events-none absolute -right-6 -bottom-6 h-48 w-auto text-ink/10 sm:h-64" aria-hidden="true"><path d="M30 10v100M60 10v100M90 10v100M120 10v100" stroke="currentColor" stroke-width="12" stroke-linecap="round"/><path d="M10 92 150 28" stroke="currentColor" stroke-width="14" stroke-linecap="round"/></svg>
+        <div class="relative max-w-2xl">
+          <h2 id="cta-title" class="h-section">Spend Friday afternoons on something other than invoices.</h2>
+          <p class="mt-4 text-lg text-ink/80">See Tally with your own numbers in a 20-minute call with our Grand Rapids team.</p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="contact.html" class="btn-primary btn-lg">Book a demo</a>
+            <a href="features.html" class="btn btn-lg border border-ink/30 text-ink hover:border-ink">Tour the features</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="on-ink mt-auto bg-ink text-white">
+    <div class="container-x grid gap-12 pt-16 pb-12 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="inline-flex items-center gap-2.5" aria-label="Tally home">
+          <svg viewBox="0 0 32 32" class="h-8 w-8 shrink-0" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#45d99b"/><path d="M9.5 9v14M13.5 9v14M17.5 9v14M21.5 9v14" stroke="#0d1f1b" stroke-width="2.2" stroke-linecap="round"/><path d="M6.5 20.5 25.5 11.5" stroke="#f7f6f1" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <span class="text-[21px] font-semibold tracking-[-0.03em] [font-stretch:120%]">tally</span>
+        </a>
+        <p class="mt-4 max-w-xs text-[15px] leading-relaxed text-fog">Invoicing, expenses and simple bookkeeping for freelancers and small studios. Built by Tally Software in Grand Rapids, Michigan.</p>
+        <form data-form="newsletter" class="mt-7 max-w-sm" novalidate>
+          <label for="footer-email" class="text-sm font-semibold">Getting-paid notes, once a month</label>
+          <div class="mt-2.5 flex gap-2">
+            <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@studio.example" class="input border-white/20 bg-ink-2 py-2.5 text-white placeholder:text-fog focus:border-mint-400">
+            <button type="submit" class="btn-accent shrink-0">Subscribe</button>
+          </div>
+        </form>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-7 lg:col-start-6">
+        <nav aria-label="Product">
+          <h2 class="font-mono text-xs font-medium tracking-[0.08em] text-fog uppercase">Product</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="features.html" class="text-white/85 transition hover:text-mint-300">Features</a></li>
+            <li><a href="pricing.html" class="text-white/85 transition hover:text-mint-300">Pricing</a></li>
+            <li><a href="integrations.html" class="text-white/85 transition hover:text-mint-300">Integrations</a></li>
+            <li><a href="changelog.html" class="text-white/85 transition hover:text-mint-300">Changelog</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2 class="font-mono text-xs font-medium tracking-[0.08em] text-fog uppercase">Company</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="customers.html" class="text-white/85 transition hover:text-mint-300">Customers</a></li>
+            <li><a href="security.html" class="text-white/85 transition hover:text-mint-300">Security &amp; trust</a></li>
+            <li><a href="contact.html" class="text-white/85 transition hover:text-mint-300">Book a demo</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Tools">
+          <h2 class="font-mono text-xs font-medium tracking-[0.08em] text-fog uppercase">Tools</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="calculator.html" class="text-white/85 transition hover:text-mint-300">Late-payment calculator</a></li>
+            <li><a href="calculator.html#time-saved" class="text-white/85 transition hover:text-mint-300">Time-saved estimate</a></li>
+            <li><a href="pricing.html#faq" class="text-white/85 transition hover:text-mint-300">Sales tax and billing FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="container-x">
+      <div class="flex flex-col gap-3 border-t border-white/15 py-6 text-sm text-fog md:flex-row md:items-center md:justify-between">
+        <p>© <span data-year>2026</span> Tally Software, Inc., Ionia Avenue, Grand Rapids. Tally is a fictional product.</p>
+        <p>Nothing on this site is tax, legal or financial advice. · Website template by Freeframe</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

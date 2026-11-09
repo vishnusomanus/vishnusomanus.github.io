@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fees and enrollment — Lingua</title>
+  <meta name="description" content="Group course fees, private lessons and classes for companies, plus a four-step online enrollment form.">
+  <meta name="theme-color" content="#fbf8f1">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lingua">
+  <meta property="og:title" content="Fees and enrollment — Lingua">
+  <meta property="og:description" content="Group course fees, private lessons and classes for companies, plus a four-step online enrollment form.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend:wght@300..700&amp;family=Young+Serif&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="enrol" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm text-white focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+  <header id="site-header" class="site-header sticky top-0 z-40 border-b-2 border-transparent bg-paper/95 backdrop-blur-md transition-colors duration-300">
+    <div class="container-x flex h-18 items-center justify-between gap-4">
+      <a href="index.html" class="inline-flex items-center gap-3"><img src="assets/img/logo.svg" alt="" width="40" height="40" class="size-10 shrink-0"><span class="leading-none"><span class="block font-display text-[1.65rem]">Lingua</span><span class="mt-1 block text-[0.65rem] font-semibold tracking-[0.2em] text-muted uppercase">Language school</span></span></a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-1"><li><a href="courses.html" class="nav-link">Courses</a></li><li><a href="timetable.html" class="nav-link">Schedule</a></li><li><a href="placement.html" class="nav-link">Placement test</a></li><li><a href="teachers.html" class="nav-link">Teachers</a></li><li><a href="about.html" class="nav-link">About</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="enrol.html" class="btn-primary hidden px-5 py-2.5 sm:inline-flex">Enroll now</a>
+        <button id="menu-toggle" type="button" class="-mr-2 grid size-11 place-items-center rounded-full hover:bg-paper-2 lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <span data-icon-open><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg></span>
+          <span data-icon-close class="hidden"><svg viewBox="0 0 24 24" class="size-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="h-[calc(100dvh-4.5rem)] overflow-y-auto border-t-2 border-ink bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-10">
+        <ul><li><a href="index.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Home</a></li><li><a href="courses.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Courses</a></li><li><a href="timetable.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Schedule</a></li><li><a href="placement.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Placement test</a></li><li><a href="teachers.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Teachers</a></li><li><a href="about.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">About</a></li><li><a href="contact.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink">Contact</a></li><li><a href="enrol.html" class="flex items-center justify-between border-b-2 border-ink/10 py-4 font-display text-3xl aria-[current=page]:text-tomato-ink" aria-current="page">Fees & enrollment</a></li></ul>
+        <a href="enrol.html" class="btn-primary mt-8 w-full py-4">Enroll now</a>
+        <p class="mt-6 text-sm text-muted">Call us: <a href="tel:+12105550147" class="link">(210) 555-0147</a></p>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="border-b-2 border-ink bg-paper-2">
+      <div class="container-x py-14 sm:py-20">
+        <p class="reveal eyebrow">Fees &amp; enrollment</p>
+        <h1 class="reveal display mt-4 max-w-3xl text-5xl sm:text-6xl">Clear prices, simple enrollment</h1>
+        <p class="reveal mt-5 max-w-2xl text-lg leading-relaxed text-muted">Group courses, private lessons and classes for your team. No registration fee, and 15% off for students, anyone under 26 and seniors 65 and over.</p>
+      </div>
+    </section>
+
+    <section class="container-x py-16" aria-labelledby="prices-title">
+      <h2 id="prices-title" class="sr-only">Prices</h2>
+      <div role="tablist" aria-label="Prices" class="flex flex-wrap gap-1 border-b-2 border-ink">
+        <button type="button" role="tab" id="tab-group" aria-controls="panel-group" aria-selected="true" class="tab">Group courses</button>
+        <button type="button" role="tab" id="tab-private" aria-controls="panel-private" aria-selected="false" tabindex="-1" class="tab">Private lessons</button>
+        <button type="button" role="tab" id="tab-companies" aria-controls="panel-companies" aria-selected="false" tabindex="-1" class="tab">For companies</button>
+      </div>
+      <div role="tabpanel" id="panel-group" aria-labelledby="tab-group" tabindex="0" class="pt-10">
+        <div class="grid gap-8 md:grid-cols-3">
+          <article class="card flex flex-col p-7">
+            <h3 class="font-display text-2xl">Evening and lunchtime</h3>
+            <p class="mt-4"><span class="font-display text-4xl">from $265</span> <span class="text-muted">a term</span></p>
+            <p class="mt-3 text-muted">Ten weeks, one or two classes a week, in person or online.</p>
+            <ul class="mt-6 space-y-2.5"><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Groups of ten or fewer</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Class notes after every lesson</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Free level change in weeks 1 and 2</span></li></ul>
+            <div class="mt-auto pt-8"><a href="courses.html" class="btn-secondary w-full">See the courses</a></div>
+          </article>
+          <article class="card flex flex-col p-7 bg-brand-soft">
+            <h3 class="font-display text-2xl">Saturday mornings</h3>
+            <p class="mt-4"><span class="font-display text-4xl">from $280</span> <span class="text-muted">a term</span></p>
+            <p class="mt-3 text-muted">Longer weekend classes and our conversation club, with coffee.</p>
+            <ul class="mt-6 space-y-2.5"><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Two to two and a half hours</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Themed conversation every week</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>End-of-term lunch out</span></li></ul>
+            <div class="mt-auto pt-8"><a href="timetable.html?time=saturday" class="btn-secondary w-full">Saturday classes</a></div>
+          </article>
+          <article class="card flex flex-col p-7">
+            <h3 class="font-display text-2xl">Intensive</h3>
+            <p class="mt-4"><span class="font-display text-4xl">$525</span> <span class="text-muted">two weeks</span></p>
+            <p class="mt-3 text-muted">Thirty hours over ten weekday mornings: a whole level, fast.</p>
+            <ul class="mt-6 space-y-2.5"><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Daily homework and feedback</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Ideal before a move or new job</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Course book included</span></li></ul>
+            <div class="mt-auto pt-8"><a href="course.html?id=de-a1-intensive" class="btn-secondary w-full">German intensive</a></div>
+          </article>
+        </div>
+      </div>
+      <div role="tabpanel" id="panel-private" aria-labelledby="tab-private" tabindex="0" class="pt-10" hidden>
+        <div class="grid gap-8 md:grid-cols-3">
+          <article class="card flex flex-col p-7">
+            <h3 class="font-display text-2xl">Single lesson</h3>
+            <p class="mt-4"><span class="font-display text-4xl">$65</span> <span class="text-muted">an hour</span></p>
+            <p class="mt-3 text-muted">One-on-one with the teacher of your choice, in person or online.</p>
+            <ul class="mt-6 space-y-2.5"><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Any language we teach</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Any level, any goal</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Book a week ahead</span></li></ul>
+            <div class="mt-auto pt-8"><a href="contact.html?topic=private" class="btn-secondary w-full">Ask about a lesson</a></div>
+          </article>
+          <article class="card flex flex-col p-7 bg-brand-soft">
+            <h3 class="font-display text-2xl">Five lessons</h3>
+            <p class="mt-4"><span class="font-display text-4xl">$300</span> <span class="text-muted">$60 an hour</span></p>
+            <p class="mt-3 text-muted">A short plan for a trip, an interview or an exam.</p>
+            <ul class="mt-6 space-y-2.5"><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>A plan built around your goal</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Use within three months</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Free level check first</span></li></ul>
+            <div class="mt-auto pt-8"><a href="contact.html?topic=private" class="btn-secondary w-full">Ask about five lessons</a></div>
+          </article>
+          <article class="card flex flex-col p-7">
+            <h3 class="font-display text-2xl">Ten lessons</h3>
+            <p class="mt-4"><span class="font-display text-4xl">$550</span> <span class="text-muted">$55 an hour</span></p>
+            <p class="mt-3 text-muted">Our best value for steady progress, on your schedule.</p>
+            <ul class="mt-6 space-y-2.5"><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Flexible times, 8 AM to 9 PM</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Notes and homework every week</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Use within six months</span></li></ul>
+            <div class="mt-auto pt-8"><a href="contact.html?topic=private" class="btn-secondary w-full">Ask about ten lessons</a></div>
+          </article>
+        </div>
+      </div>
+      <div role="tabpanel" id="panel-companies" aria-labelledby="tab-companies" tabindex="0" class="pt-10" hidden>
+        <div class="grid gap-8 md:grid-cols-3">
+          <article class="card flex flex-col p-7">
+            <h3 class="font-display text-2xl">Team course</h3>
+            <p class="mt-4"><span class="font-display text-4xl">from $1,950</span> <span class="text-muted">a term</span></p>
+            <p class="mt-3 text-muted">A weekly class for up to eight colleagues, at your office or online.</p>
+            <ul class="mt-6 space-y-2.5"><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Content built around your work</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Progress reports for managers</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Invoice in one payment</span></li></ul>
+            <div class="mt-auto pt-8"><a href="contact.html?topic=companies" class="btn-secondary w-full">Plan a team course</a></div>
+          </article>
+          <article class="card flex flex-col p-7 bg-brand-soft">
+            <h3 class="font-display text-2xl">Language check</h3>
+            <p class="mt-4"><span class="font-display text-4xl">Free</span> <span class="text-muted">for up to 20 people</span></p>
+            <p class="mt-3 text-muted">A short level check for your team, so everyone joins the right group.</p>
+            <ul class="mt-6 space-y-2.5"><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Online test plus a short chat</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Results in a week</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>No obligation</span></li></ul>
+            <div class="mt-auto pt-8"><a href="contact.html?topic=companies" class="btn-secondary w-full">Request a check</a></div>
+          </article>
+          <article class="card flex flex-col p-7">
+            <h3 class="font-display text-2xl">Relocation intensive</h3>
+            <p class="mt-4"><span class="font-display text-4xl">Quote</span> <span class="text-muted">per person</span></p>
+            <p class="mt-3 text-muted">One-on-one or small-group intensives for staff moving abroad.</p>
+            <ul class="mt-6 space-y-2.5"><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Everyday and workplace language</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Culture briefing included</span></li><li class="flex gap-3"><svg viewBox="0 0 24 24" class="size-5 shrink-0 text-brand" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg><span>Start within two weeks</span></li></ul>
+            <div class="mt-auto pt-8"><a href="contact.html?topic=companies" class="btn-secondary w-full">Ask for a quote</a></div>
+          </article>
+        </div>
+      </div>
+      <dl class="mt-14 grid gap-6 rounded-2xl border-2 border-ink/10 bg-paper-2 p-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div><dt class="font-semibold">Discounts</dt><dd class="mt-1 text-sm text-muted">15% off course fees for students, anyone under 26 and seniors 65 and over.</dd></div>
+        <div><dt class="font-semibold">Course book</dt><dd class="mt-1 text-sm text-muted">$28, optional. Bring your own copy if you have one.</dd></div>
+        <div><dt class="font-semibold">Installments</dt><dd class="mt-1 text-sm text-muted">Pay in three monthly installments at no extra cost.</dd></div>
+        <div><dt class="font-semibold">Changed your mind?</dt><dd class="mt-1 text-sm text-muted">Full refund up to seven days before the course starts.</dd></div>
+      </dl>
+    </section>
+
+    <section id="enrol" class="border-t-2 border-ink bg-paper-2 py-16 sm:py-20" aria-labelledby="enrol-title">
+      <div class="container-x">
+        <p class="eyebrow">Enroll online</p>
+        <h2 id="enrol-title" class="display mt-4 text-4xl sm:text-5xl">Enroll in a group course</h2>
+        <!-- Four-step enrollment: see initEnrol() in assets/js/main.js. The draft is kept in localStorage ("lingua:enrol:v1"). -->
+        <div class="mt-10 grid gap-10 lg:grid-cols-[1fr_22rem]" data-enrol>
+          <div class="min-w-0">
+            <ol class="flex flex-wrap gap-x-6 gap-y-3" aria-label="Enrollment steps">
+              <li class="flex items-center gap-2.5" data-step-indicator="1" data-step-state="current" aria-current="step"><span class="step-dot">1</span><span class="step-label text-sm font-medium text-muted">Course</span></li>
+              <li class="flex items-center gap-2.5" data-step-indicator="2" data-step-state="todo"><span class="step-dot">2</span><span class="step-label text-sm font-medium text-muted">Your details</span></li>
+              <li class="flex items-center gap-2.5" data-step-indicator="3" data-step-state="todo"><span class="step-dot">3</span><span class="step-label text-sm font-medium text-muted">Options</span></li>
+              <li class="flex items-center gap-2.5" data-step-indicator="4" data-step-state="todo"><span class="step-dot">4</span><span class="step-label text-sm font-medium text-muted">Review</span></li>
+            </ol>
+
+            <form id="enrol-form" class="card mt-8 p-6 sm:p-8" novalidate data-enrol-form>
+              <div data-step="1">
+                <h3 class="font-display text-2xl" tabindex="-1" data-step-title>Choose your course</h3>
+                <div class="mt-6">
+                  <label class="field-label" for="e-course">Course</label>
+                  <select id="e-course" name="course" class="field" required aria-describedby="e-course-error">
+                    <option value="">Choose a course…</option>
+                    <optgroup label="Spanish"><option value="es-a1-evening">Spanish for Beginners (A1, in person)</option><option value="es-a2-online">Spanish Elementary (A2, online)</option><option value="es-b1-evening">Intermediate Spanish (B1, in person)</option><option value="es-b2-conversation">Spanish Conversation Club (B2, in person)</option></optgroup>
+                    <optgroup label="French"><option value="fr-a1-evening">French for Beginners (A1, in person)</option><option value="fr-a2-lunchtime">Lunchtime French (A2, online)</option><option value="fr-c1-culture">Advanced French: Culture and Debate (C1, in person)</option></optgroup>
+                    <optgroup label="Italian"><option value="it-a1-online">Italian for Beginners (A1, online)</option><option value="it-b1-saturday">Italian Intermediate (B1, in person)</option></optgroup>
+                    <optgroup label="German"><option value="de-a1-intensive">German Intensive Beginners (A1, in person)</option><option value="de-b2-online">Upper-intermediate German (B2, online)</option></optgroup>
+                    <optgroup label="Japanese"><option value="ja-a1-evening">Japanese for Beginners (A1, in person)</option></optgroup>
+                    <optgroup label="Portuguese"><option value="pt-a2-online">Portuguese Elementary (A2, online)</option></optgroup>
+                  </select>
+                  <p id="e-course-error" class="field-error" aria-live="polite"></p>
+                </div>
+                <div class="mt-5 rounded-xl bg-paper-2 p-4 text-sm" data-course-info aria-live="polite"><p class="text-muted">Choose a course to see when and where it runs.</p></div>
+                <p class="mt-5 text-sm">Not sure which level? <a href="placement.html" class="link">Take the placement test</a> first.</p>
+              </div>
+
+              <div data-step="2" hidden>
+                <h3 class="font-display text-2xl" tabindex="-1" data-step-title>About you</h3>
+                <div class="mt-6 grid gap-5 sm:grid-cols-2">
+                  <div><label class="field-label" for="e-first">First name</label><input id="e-first" name="first" class="field" autocomplete="given-name" required maxlength="60" aria-describedby="e-first-error"><p id="e-first-error" class="field-error" aria-live="polite"></p></div>
+                  <div><label class="field-label" for="e-last">Last name</label><input id="e-last" name="last" class="field" autocomplete="family-name" required maxlength="60" aria-describedby="e-last-error"><p id="e-last-error" class="field-error" aria-live="polite"></p></div>
+                  <div><label class="field-label" for="e-email">Email</label><input id="e-email" name="email" type="email" class="field" autocomplete="email" required maxlength="120" aria-describedby="e-email-error"><p id="e-email-error" class="field-error" aria-live="polite"></p></div>
+                  <div><label class="field-label" for="e-phone">Phone <span class="font-normal text-muted">(optional)</span></label><input id="e-phone" name="phone" type="tel" class="field" autocomplete="tel" maxlength="30" aria-describedby="e-phone-error"><p id="e-phone-error" class="field-error" aria-live="polite"></p></div>
+                </div>
+                <fieldset class="mt-6">
+                  <legend class="field-label">Have you studied this language before?</legend>
+                  <div class="grid gap-3 sm:grid-cols-3">
+                    <label class="choice"><input type="radio" name="experience" value="none" aria-describedby="e-experience-error"><span>Never</span></label>
+                    <label class="choice"><input type="radio" name="experience" value="some" aria-describedby="e-experience-error"><span>A little</span></label>
+                    <label class="choice"><input type="radio" name="experience" value="lots" aria-describedby="e-experience-error"><span>For a year or more</span></label>
+                  </div>
+                  <p id="e-experience-error" class="field-error" aria-live="polite"></p>
+                </fieldset>
+              </div>
+
+              <div data-step="3" hidden>
+                <h3 class="font-display text-2xl" tabindex="-1" data-step-title>Options</h3>
+                <fieldset class="mt-6">
+                  <legend class="field-label">How would you like to pay?</legend>
+                  <div class="grid gap-3 sm:grid-cols-2">
+                    <label class="choice"><input type="radio" name="plan" value="full" checked><span><span class="block font-medium">Pay in full</span><span class="block text-sm text-muted">One payment before the course starts</span></span></label>
+                    <label class="choice"><input type="radio" name="plan" value="instalments"><span><span class="block font-medium">Three installments</span><span class="block text-sm text-muted">Monthly, at no extra cost</span></span></label>
+                  </div>
+                </fieldset>
+                <div class="mt-6 grid gap-3">
+                  <label class="choice"><input type="checkbox" name="concession"><span><span class="block font-medium">I qualify for the discount rate</span><span class="block text-sm text-muted">15% off the course fee for students, anyone under 26 and seniors 65 and over. Bring proof to your first class.</span></span></label>
+                  <label class="choice"><input type="checkbox" name="book"><span><span class="block font-medium">Add the course book ($28)</span><span class="block text-sm text-muted">Waiting for you at your first class, or mailed for online courses.</span></span></label>
+                </div>
+                <div class="mt-6 max-w-sm">
+                  <label class="field-label" for="e-heard">How did you hear about us? <span class="font-normal text-muted">(optional)</span></label>
+                  <select id="e-heard" name="heard" class="field"><option value="">Choose…</option><option value="friend">A friend</option><option value="search">A web search</option><option value="social">Social media</option><option value="poster">A poster or flyer</option><option value="work">My employer</option></select>
+                </div>
+              </div>
+
+              <div data-step="4" hidden>
+                <h3 class="font-display text-2xl" tabindex="-1" data-step-title>Check and confirm</h3>
+                <dl class="mt-6 divide-y-2 divide-dashed divide-ink/10 rounded-xl border-2 border-ink/15 bg-white px-5" data-review></dl>
+                <label class="mt-6 flex items-start gap-3"><input id="e-terms" type="checkbox" name="terms" class="mt-1 size-5 shrink-0 accent-brand" required aria-describedby="e-terms-error"><span>I agree to the <a href="#" class="link">terms of enrollment</a>, including the refund policy.</span></label>
+                <p id="e-terms-error" class="field-error" aria-live="polite"></p>
+                <p class="mt-5 text-sm text-muted">No payment is taken now. Once your spot is confirmed, we email you how to pay.</p>
+              </div>
+
+              <div class="mt-8 flex items-center justify-between gap-3 border-t-2 border-dashed border-ink/15 pt-6">
+                <button type="button" class="btn-secondary" data-step-back hidden><svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Back</button>
+                <button type="submit" class="btn-primary ml-auto" data-step-next>Continue <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+              </div>
+            </form>
+
+            <div class="card mt-8 hidden p-8 sm:p-10" tabindex="-1" data-enrol-done>
+              <span class="grid size-14 place-items-center rounded-full border-2 border-ink bg-mint"><svg viewBox="0 0 24 24" class="size-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5"/></svg></span>
+              <h3 class="mt-6 font-display text-3xl" data-done-title>Thank you!</h3>
+              <p class="mt-3 text-lg" data-done-text></p>
+              <p class="mt-3 text-muted">Your reference is <strong class="text-ink" data-ref></strong>. Quote it if you call or email us about your spot.</p>
+              <button type="button" class="btn-secondary mt-8" data-enrol-restart>Start a new enrollment</button>
+            </div>
+          </div>
+
+          <aside class="lg:sticky lg:top-24 lg:self-start" aria-labelledby="summary-title" data-back-to-top-hide>
+            <div class="card p-6" data-summary>
+              <h3 id="summary-title" class="font-display text-2xl">Your enrollment</h3>
+              <div class="mt-4" data-summary-body aria-live="polite"><p class="text-muted">Choose a course to see the fees.</p></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="on-dark mt-auto bg-ink text-white">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-[1.3fr_1fr_1fr] lg:grid-cols-[1.4fr_0.8fr_0.8fr_1.4fr]">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-3"><img src="assets/img/logo.svg" alt="" width="40" height="40" class="size-10 shrink-0"><span class="font-display text-[1.65rem]">Lingua</span></a>
+        <address class="mt-5 leading-relaxed text-white/80 not-italic">14 Villita Lane<br>San Antonio, TX 78205</address>
+        <p class="mt-4 text-white/80"><a href="tel:+12105550147" class="hover:text-white hover:underline">(210) 555-0147</a><br><a href="mailto:hello@lingua.example" class="hover:text-white hover:underline">hello@lingua.example</a></p>
+      </div>
+      <div><h2 class="text-xs font-semibold tracking-[0.2em] text-sun uppercase">Learn</h2><ul class="mt-4 space-y-2.5"><li><a href="courses.html" class="text-white/85 hover:text-white hover:underline">Courses</a></li><li><a href="timetable.html" class="text-white/85 hover:text-white hover:underline">Schedule</a></li><li><a href="placement.html" class="text-white/85 hover:text-white hover:underline">Placement test</a></li><li><a href="enrol.html" class="text-white/85 hover:text-white hover:underline">Fees &amp; enrollment</a></li></ul></div>
+      <div><h2 class="text-xs font-semibold tracking-[0.2em] text-sun uppercase">School</h2><ul class="mt-4 space-y-2.5"><li><a href="teachers.html" class="text-white/85 hover:text-white hover:underline">Teachers</a></li><li><a href="about.html" class="text-white/85 hover:text-white hover:underline">About us</a></li><li><a href="contact.html" class="text-white/85 hover:text-white hover:underline">Contact</a></li></ul></div>
+      <div class="md:col-span-3 lg:col-span-1">
+        <h2 class="text-xs font-semibold tracking-[0.2em] text-sun uppercase">The Lingua letter</h2>
+        <p class="mt-4 text-white/80">New courses, free trial evenings and a word of the month, once a month.</p>
+        <!-- Demo form: connect it to your email provider in assets/js/main.js (initForms). -->
+        <form class="mt-5 flex flex-col gap-3 sm:flex-row" data-form="newsletter" novalidate>
+          <div class="flex-1">
+            <label for="newsletter-email" class="sr-only">Email address</label>
+            <input id="newsletter-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" class="field" aria-describedby="newsletter-email-error">
+            <p id="newsletter-email-error" class="field-error" aria-live="polite"></p>
+          </div>
+          <button type="submit" class="btn-sun h-[3.25rem] shrink-0">Subscribe</button>
+        </form>
+        <p class="mt-3 hidden text-sm text-sun" data-form-success role="status">Thank you! Look out for a confirmation email from us; click the link inside and the next Lingua letter is yours.</p>
+      </div>
+    </div>
+    <div class="container-x flex flex-col gap-3 border-t border-white/15 py-6 text-sm text-white/70 sm:flex-row sm:items-center sm:justify-between">
+      <p>&copy; <span data-year>2026</span> Lingua Language School, San Antonio. A fictional school.</p>
+      <ul class="flex gap-6"><li><a href="#" class="hover:text-white hover:underline">Instagram</a></li><li><a href="#" class="hover:text-white hover:underline">Privacy</a></li><li><a href="#" class="hover:text-white hover:underline">Terms</a></li></ul>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

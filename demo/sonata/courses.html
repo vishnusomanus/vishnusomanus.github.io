@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Courses | Sonata Music Rooms</title>
+    <meta
+      name="description"
+      content="Explore twelve small-group and individual music courses in Bloomington, from first notes to confident ensemble playing."
+    />
+    <meta name="theme-color" content="#30213f" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Sonata Music Rooms" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="Courses | Sonata Music Rooms" />
+    <meta
+      property="og:description"
+      content="Explore twelve small-group and individual music courses in Bloomington, from first notes to confident ensemble playing."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Asap:wght@400..700&amp;family=Lora:ital,wght@0,400..700;1,400..700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body data-page="courses" class="flex min-h-screen flex-col">
+    <a
+      class="sr-only z-50 bg-butter px-6 py-3 text-ink focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+      href="#main"
+      >Skip to content</a
+    >
+    <header class="border-b border-line bg-paper">
+      <div class="wrap flex min-h-24 items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center gap-3"
+          ><img src="assets/img/favicon.svg" alt="" width="42" height="42" /><span
+            ><span class="block font-display text-3xl tracking-tight">Sonata</span
+            ><span class="block text-[10px] font-semibold uppercase tracking-[.2em]">Music Rooms · Bloomington</span></span
+          ></a
+        >
+        <nav aria-label="Main" class="hidden items-center gap-1 xl:flex">
+          <a class="nav-link" href="courses.html" aria-current="page">Courses</a
+          ><a class="nav-link" href="tutors.html">Our teachers</a><a class="nav-link" href="timetable.html">Schedule</a
+          ><a class="nav-link" href="fees.html">Fees</a><a class="nav-link" href="approach.html">Our approach</a
+          ><a class="nav-link" href="contact.html">Visit us</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="enrol.html" class="btn hidden sm:inline-flex">Find your lesson</a
+          ><button
+            type="button"
+            id="menu-toggle"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            class="flex size-12 items-center justify-center rounded-full border border-ink xl:hidden"
+          >
+            <span class="sr-only">Menu</span
+            ><svg
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              class="size-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" aria-label="Mobile" hidden class="wrap border-t border-line py-6 xl:hidden">
+        <div class="grid gap-2">
+          <a class="nav-link" href="courses.html" aria-current="page">Courses</a
+          ><a class="nav-link" href="tutors.html">Our teachers</a><a class="nav-link" href="timetable.html">Schedule</a
+          ><a class="nav-link" href="fees.html">Fees</a><a class="nav-link" href="approach.html">Our approach</a
+          ><a class="nav-link" href="contact.html">Visit us</a
+          ><a href="enrol.html" class="btn mt-3">Find your lesson</a>
+        </div>
+      </nav>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="bg-lilac border-b border-ink/15">
+        <div class="wrap grid gap-8 py-12 sm:py-16 lg:grid-cols-[1.5fr_1fr] lg:items-end">
+          <div>
+            <p class="eyebrow">A way in for every kind of musician</p>
+            <h1 class="display mt-6 max-w-3xl text-5xl sm:text-6xl lg:text-7xl">Start with a little curiosity.</h1>
+            <p class="mt-6 max-w-2xl text-lg leading-relaxed">
+              Choose an instrument, a starting point and a pace that suits your week. We help with the rest.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-ink/25 bg-paper/60 p-6">
+            <p class="eyebrow">Not sure where to begin?</p>
+            <p class="font-display mt-4 text-2xl">You don’t need an instrument or an audition to try us.</p>
+            <a href="enrol.html" class="link mt-4 inline-flex">Arrange a $15 introduction</a>
+          </div>
+        </div>
+      </section>
+      <section class="section reveal">
+        <div class="wrap">
+          <form id="course-filters" class="grid gap-4 rounded-2xl border border-line bg-white p-5 md:grid-cols-4">
+            <label class="label"
+              >Find a course<input
+                id="course-search"
+                class="field"
+                type="search"
+                placeholder="Instrument or course name" /></label
+            ><label class="label"
+              >Instrument<select id="course-family" class="field">
+                <option value="all">All instruments</option>
+                <option value="piano">Piano</option>
+                <option value="guitar">Guitar</option>
+                <option value="voice">Singing</option>
+                <option value="violin">Strings</option>
+                <option value="drums">Drums</option>
+                <option value="ensemble">Playing together</option>
+              </select></label
+            ><label class="label"
+              >Age group<select id="course-age" class="field">
+                <option value="all">All ages</option>
+                <option value="child">Children</option>
+                <option value="teen">Teenagers</option>
+                <option value="adult">Adults</option>
+              </select></label
+            ><label class="label"
+              >Starting point<select id="course-level" class="field">
+                <option value="all">All levels</option>
+                <option value="beginner">Beginner</option>
+                <option value="developing">Developing</option>
+                <option value="confident">Confident</option>
+              </select></label
+            >
+          </form>
+          <div class="my-6 flex flex-wrap justify-between gap-4">
+            <p id="course-count" role="status" aria-live="polite"></p>
+            <button id="course-reset" type="button" class="link">Clear filters</button>
+          </div>
+          <div id="course-grid" class="grid gap-6 md:grid-cols-2 lg:grid-cols-3"></div>
+          <div id="course-empty" hidden class="rounded-2xl bg-celadon p-9">
+            <h2 class="font-display text-3xl">Let’s find a different way in.</h2>
+            <p class="mt-3">Try clearing a filter, or talk to us about an individual lesson.</p>
+          </div>
+          <section class="mt-16 rounded-2xl bg-lilac p-6 sm:p-9" aria-labelledby="shortlist-title">
+            <div class="flex flex-wrap justify-between gap-4">
+              <h2 id="shortlist-title" class="display text-3xl">Your little shortlist</h2>
+              <p><span data-saved-count>0</span> saved</p>
+            </div>
+            <div id="shortlist" class="mt-6 grid gap-4 sm:grid-cols-2"></div>
+          </section>
+        </div>
+      </section>
+      <section class="section reveal border-t border-line">
+        <div class="wrap grid gap-8 lg:grid-cols-[1fr_2fr]">
+          <h2 class="display text-4xl">Before your first note</h2>
+          <div>
+            <details class="faq">
+              <summary>Do I need to read music?</summary>
+              <p>
+                No. Reading grows alongside listening and playing. Beginner courses start from the beginning, including
+                how to hold and care for an instrument.
+              </p>
+            </details>
+            <details class="faq">
+              <summary>Can I borrow an instrument?</summary>
+              <p>
+                Pianos, keyboards and drum sets are here for lessons. We have a small pool of child-sized guitars and
+                violins to try in the room. For home practice, ask about local rental options before buying.
+              </p>
+            </details>
+            <details class="faq">
+              <summary>What if a group is the wrong fit?</summary>
+              <p>
+                Tell your teacher after the first lesson. We can suggest another group or individual teaching and carry
+              the unused lesson credit over.
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-auto bg-ink text-paper">
+      <div class="wrap grid gap-10 py-14 md:grid-cols-[1.3fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="font-display text-4xl">Sonata Music Rooms</a>
+          <p class="mt-4 max-w-sm text-paper/80">
+            A place for the first note, the hard part, and the joy of playing together.
+          </p>
+          <p class="mt-5 text-sm text-paper/80">The Courtyard, North Walnut Street<br />Bloomington, IN 47404</p>
+        </div>
+        <div>
+          <p class="eyebrow text-butter">Make a little time for music</p>
+          <ul class="mt-5 space-y-3">
+            <li><a href="courses.html" class="underline underline-offset-4">Explore our courses</a></li>
+            <li><a href="timetable.html" class="underline underline-offset-4">Plan your week</a></li>
+            <li><a href="approach.html#practice" class="underline underline-offset-4">Your practice planner</a></li>
+            <li><a href="fees.html" class="underline underline-offset-4">Fees &amp; scholarships</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow text-butter">Come and say hello</p>
+          <p class="mt-5">
+            <a href="mailto:hello@sonata.example" class="underline underline-offset-4">hello@sonata.example</a>
+          </p>
+          <p class="mt-3"><a href="tel:+18125550172" class="underline underline-offset-4">(812) 555-0172</a></p>
+          <p class="mt-5 text-sm text-paper/80">Mon–Fri 10am–8pm<br />Saturday 9am–4pm · Sunday closed</p>
+        </div>
+      </div>
+      <div class="wrap flex flex-wrap justify-between gap-4 border-t border-paper/20 py-6 text-xs text-paper/70">
+        <p>© <span data-year></span> Sonata Music Rooms.</p>
+        <p>Sonata Music Rooms is a fictional business.</p>
+      </div>
+    </footer>
+    <div
+      id="toast"
+      role="status"
+      aria-live="polite"
+      class="fixed bottom-5 left-5 right-5 z-50 mx-auto max-w-md rounded-xl bg-ink px-5 py-4 text-center text-paper shadow-lg"
+      hidden
+    ></div>
+  </body>
+</html>

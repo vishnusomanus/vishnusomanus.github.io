@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" width="640" height="480">
+  <!-- The studio window on Arch Street, looking across the Connecticut River to the hills. -->
+  <rect width="640" height="480" fill="#e4dfec"/>
+  <!-- Window and the view -->
+  <rect x="60" y="36" width="520" height="270" fill="#f3d9c4"/>
+  <rect x="60" y="36" width="520" height="140" fill="#cfd8ee"/>
+  <circle cx="452" cy="104" r="26" fill="#ffb07a"/>
+  <path d="M60 196c60-28 120-34 180-20s110 4 170-14 120-10 170 10v40H60Z" fill="#7a6c94"/>
+  <path d="M60 214c70-14 150-12 230-2s170 0 290-10v94H60Z" fill="#7fb7c9"/>
+  <!-- The Founders Bridge: a long run of piers -->
+  <rect x="60" y="226" width="520" height="5" fill="#342146"/>
+  <g fill="#342146">
+    <rect x="76" y="231" width="4" height="22"/><rect x="112" y="231" width="4" height="22"/><rect x="148" y="231" width="4" height="22"/><rect x="184" y="231" width="4" height="22"/><rect x="220" y="231" width="4" height="22"/><rect x="256" y="231" width="4" height="22"/><rect x="292" y="231" width="4" height="22"/><rect x="328" y="231" width="4" height="22"/><rect x="364" y="231" width="4" height="22"/><rect x="400" y="231" width="4" height="22"/><rect x="436" y="231" width="4" height="22"/><rect x="472" y="231" width="4" height="22"/><rect x="508" y="231" width="4" height="22"/><rect x="544" y="231" width="4" height="22"/>
+  </g>
+  <rect x="300" y="219" width="44" height="7" fill="#ff6f5e"/>
+  <path d="M60 268c40-6 80 6 120 0s80 6 120 0 80 6 120 0 80 6 120 0 40 4 40 4" fill="none" stroke="#f9f8fc" stroke-width="2" opacity=".7"/>
+  <!-- Window frame and glazing bars -->
+  <rect x="60" y="36" width="520" height="270" fill="none" stroke="#24152f" stroke-width="14"/>
+  <rect x="314" y="36" width="12" height="270" fill="#24152f"/>
+  <rect x="60" y="164" width="520" height="10" fill="#24152f"/>
+  <!-- Sill and desk -->
+  <rect x="40" y="306" width="560" height="16" fill="#342146"/>
+  <rect x="0" y="380" width="640" height="100" fill="#cdc5d9"/>
+  <rect x="0" y="372" width="640" height="12" fill="#24152f"/>
+  <!-- Monitor with a frame on screen -->
+  <rect x="360" y="226" width="200" height="124" fill="#24152f"/>
+  <rect x="370" y="236" width="180" height="102" fill="#14233f"/>
+  <path d="M370 300c20-8 40 8 60 0s40 8 60 0 40 8 60 0v38H370Z" fill="#7fb7c9" opacity=".7"/>
+  <path d="M370 312c20-8 40 8 60 0s40 8 60 0 40 8 60 0" fill="none" stroke="#f4ead3" stroke-width="2"/>
+  <circle cx="420" cy="270" r="10" fill="#d9a441"/>
+  <rect x="448" y="350" width="24" height="22" fill="#24152f"/><rect x="420" y="366" width="80" height="8" fill="#24152f"/>
+  <!-- Lightbox with a drawing -->
+  <path d="M90 372l30-62h170l-20 62Z" fill="#f9f8fc"/>
+  <path d="M90 372l30-62h170l-20 62Z" fill="none" stroke="#24152f" stroke-width="4"/>
+  <path d="M138 352c20-26 40-26 56-6s36 12 52-16" fill="none" stroke="#5a2fd0" stroke-width="3" stroke-linecap="round"/>
+  <!-- Plant and mug -->
+  <rect x="588" y="270" width="30" height="36" fill="#ff6f5e"/>
+  <path d="M603 270c-14-20-22-40-10-52 4 18 8 30 10 52Zm0 0c10-22 24-34 34-30-10 10-20 20-34 30Zm0 0c-6-14-22-24-34-20 12 8 22 14 34 20Z" fill="#3aa58b"/>
+  <rect x="320" y="346" width="22" height="26" fill="#8ff0c8"/><path d="M342 352h6a6 6 0 0 1 0 12h-6" fill="none" stroke="#8ff0c8" stroke-width="4"/>
+  <!-- Index cards on the desk -->
+  <rect x="40" y="398" width="70" height="46" fill="#f9f8fc" transform="rotate(-6 75 421)"/>
+  <rect x="120" y="402" width="70" height="46" fill="#f9f8fc" transform="rotate(4 155 425)"/>
+  <path d="M52 420l12-14 10 10 12-8 10 12" fill="none" stroke="#5a2fd0" stroke-width="2.5" transform="rotate(-6 75 421)"/>
+  <circle cx="155" cy="424" r="10" fill="none" stroke="#5a2fd0" stroke-width="2.5"/>
+</svg>

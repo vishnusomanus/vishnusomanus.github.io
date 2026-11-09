@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Changelog — What’s new in Tally</title>
+  <meta name="description" content="New features, improvements and fixes in Tally, month by month: deposits on quotes, a better sales tax summary, faster bank matching and more.">
+  <meta name="theme-color" content="#f7f6f1">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tally">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Changelog — What’s new in Tally">
+  <meta property="og:description" content="New features, improvements and fixes in Tally, month by month: deposits on quotes, a better sales tax summary, faster bank matching and more.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400..600&amp;family=Mona+Sans:wdth,wght@75..125,300..800&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="changelog" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[95] rounded-lg bg-ink px-5 py-3 text-sm font-semibold text-white focus:not-sr-only focus:fixed focus:top-4 focus:left-4">Skip to content</a>
+  <header id="site-header" class="sticky top-0 z-50 border-b border-line bg-paper">
+    <div class="container-x flex h-16 items-center gap-6">
+      <a href="index.html" class="inline-flex items-center gap-2.5" aria-label="Tally home">
+        <svg viewBox="0 0 32 32" class="h-8 w-8 shrink-0" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#0d1f1b"/><path d="M9.5 9v14M13.5 9v14M17.5 9v14M21.5 9v14" stroke="#f7f6f1" stroke-width="2.2" stroke-linecap="round"/><path d="M6.5 20.5 25.5 11.5" stroke="#45d99b" stroke-width="2.6" stroke-linecap="round"/></svg>
+        <span class="text-[21px] font-semibold tracking-[-0.03em] [font-stretch:120%]">tally</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center">
+          <li><a href="features.html" class="nav-link">Features</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="calculator.html" class="nav-link">Calculator</a></li>
+          <li><a href="integrations.html" class="nav-link">Integrations</a></li>
+          <li><a href="customers.html" class="nav-link">Customers</a></li>
+          <li><a href="security.html" class="nav-link">Security</a></li>
+        </ul>
+      </nav>
+      <div class="ml-auto flex items-center gap-2">
+        <a href="pricing.html#plans" class="btn-ghost btn-sm hidden sm:inline-flex">See plans</a>
+        <a href="contact.html" class="btn-primary btn-sm hidden sm:inline-flex">Book a demo</a>
+        <button id="menu-toggle" type="button" class="grid h-11 w-11 place-items-center rounded-lg border border-line-strong bg-white text-ink lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+          <svg data-icon-open viewBox="0 0 24 24" class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-5 w-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="border-t border-line bg-paper lg:hidden">
+      <nav aria-label="Mobile" class="container-x pt-2 pb-6">
+        <ul>
+          <li><a href="features.html" class="m-link">Features<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="pricing.html" class="m-link">Pricing<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="calculator.html" class="m-link">Calculator<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="integrations.html" class="m-link">Integrations<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="customers.html" class="m-link">Customers<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="security.html" class="m-link">Security<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+          <li><a href="changelog.html" class="m-link" aria-current="page">Changelog<svg viewBox="0 0 20 20" class="h-4 w-4 text-ink-faint" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 4l6 6-6 6"/></svg></a></li>
+        </ul>
+        <div class="mt-5 grid gap-2 sm:grid-cols-2">
+          <a href="contact.html" class="btn-primary btn-lg">Book a demo</a>
+          <a href="pricing.html#plans" class="btn-ghost btn-lg">See plans</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+    <section class="relative overflow-hidden border-b border-line">
+      <div class="ledger-lines pointer-events-none absolute inset-0" aria-hidden="true"></div>
+      <div class="container-x relative py-16 sm:py-20">
+        <p class="eyebrow">Changelog</p>
+        <h1 class="h-display mt-5 max-w-3xl">What’s new in Tally.</h1>
+        <p class="lead mt-6 max-w-2xl">We ship small improvements every week and write them up here. Big ones get a note in the monthly email.</p>
+      </div>
+    </section>
+
+    <!-- Filterable entries (main.js, section 9). -->
+    <section aria-labelledby="log-title" class="py-14 sm:py-16" data-directory>
+      <div class="container-x grid gap-10 lg:grid-cols-12">
+        <div class="lg:col-span-3">
+          <h2 id="log-title" class="sr-only">Updates</h2>
+          <div class="lg:sticky lg:top-24">
+            <ul class="flex flex-wrap gap-2 lg:flex-col lg:items-start" aria-label="Filter by type">
+              <li><button type="button" class="pill" data-filter="all" aria-pressed="true">All <span class="pill-count">9</span></button></li>
+              <li><button type="button" class="pill" data-filter="new" aria-pressed="false">New <span class="pill-count">4</span></button></li>
+              <li><button type="button" class="pill" data-filter="improved" aria-pressed="false">Improved <span class="pill-count">3</span></button></li>
+              <li><button type="button" class="pill" data-filter="fixed" aria-pressed="false">Fixed <span class="pill-count">2</span></button></li>
+            </ul>
+            <p class="mt-5 font-mono text-sm text-ink-soft" aria-live="polite" data-result-count data-noun="update" data-nouns="updates">9 updates</p>
+          </div>
+        </div>
+        <ol class="lg:col-span-9" data-results>
+          <li data-integration data-category="new" class="grid gap-3 border-t border-line py-8 sm:grid-cols-[9rem_1fr]">
+            <p><time datetime="2026-10-14" class="font-mono text-sm text-ink-faint">Oct 14, 2026</time></p>
+            <div><span class="chip chip-paid">New</span><h3 class="mt-3 text-xl font-semibold tracking-[-0.01em]">Deposits and part payments on quotes</h3><p class="mt-2 leading-relaxed text-ink-soft">Ask for a percentage or a fixed deposit when a quote is accepted. The balance invoice is created for you with the deposit already deducted.</p></div>
+          </li>
+          <li data-integration data-category="improved" class="grid gap-3 border-t border-line py-8 sm:grid-cols-[9rem_1fr]">
+            <p><time datetime="2026-10-02" class="font-mono text-sm text-ink-faint">Oct 2, 2026</time></p>
+            <div><span class="chip chip-sent">Improved</span><h3 class="mt-3 text-xl font-semibold tracking-[-0.01em]">A clearer sales tax summary</h3><p class="mt-2 leading-relaxed text-ink-soft">The sales tax summary now shows sales and purchases side by side, explains every figure and links each number to the invoices behind it.</p></div>
+          </li>
+          <li data-integration data-category="fixed" class="grid gap-3 border-t border-line py-8 sm:grid-cols-[9rem_1fr]">
+            <p><time datetime="2026-09-24" class="font-mono text-sm text-ink-faint">Sep 24, 2026</time></p>
+            <div><span class="chip chip-due">Fixed</span><h3 class="mt-3 text-xl font-semibold tracking-[-0.01em]">Reminders and federal holidays</h3><p class="mt-2 leading-relaxed text-ink-soft">Reminders due on a federal holiday now go out the next business day instead of on the holiday itself.</p></div>
+          </li>
+          <li data-integration data-category="new" class="grid gap-3 border-t border-line py-8 sm:grid-cols-[9rem_1fr]">
+            <p><time datetime="2026-09-10" class="font-mono text-sm text-ink-faint">Sep 10, 2026</time></p>
+            <div><span class="chip chip-paid">New</span><h3 class="mt-3 text-xl font-semibold tracking-[-0.01em]">Passkeys</h3><p class="mt-2 leading-relaxed text-ink-soft">Sign in with your phone’s fingerprint or face unlock. Owners can make passkeys or an authenticator app compulsory for the team.</p></div>
+          </li>
+          <li data-integration data-category="improved" class="grid gap-3 border-t border-line py-8 sm:grid-cols-[9rem_1fr]">
+            <p><time datetime="2026-08-27" class="font-mono text-sm text-ink-faint">Aug 27, 2026</time></p>
+            <div><span class="chip chip-sent">Improved</span><h3 class="mt-3 text-xl font-semibold tracking-[-0.01em]">Faster bank matching</h3><p class="mt-2 leading-relaxed text-ink-soft">Payments that cover several invoices are now matched in one go, and part payments are suggested when the amount doesn’t match exactly.</p></div>
+          </li>
+          <li data-integration data-category="new" class="grid gap-3 border-t border-line py-8 sm:grid-cols-[9rem_1fr]">
+            <p><time datetime="2026-08-06" class="font-mono text-sm text-ink-faint">Aug 6, 2026</time></p>
+            <div><span class="chip chip-paid">New</span><h3 class="mt-3 text-xl font-semibold tracking-[-0.01em]">Late-payment fees in reminders</h3><p class="mt-2 leading-relaxed text-ink-soft">Optionally add interest and a flat late fee from your terms to a late reminder. Tally works out the figures; you decide whether to charge them.</p></div>
+          </li>
+          <li data-integration data-category="fixed" class="grid gap-3 border-t border-line py-8 sm:grid-cols-[9rem_1fr]">
+            <p><time datetime="2026-07-22" class="font-mono text-sm text-ink-faint">Jul 22, 2026</time></p>
+            <div><span class="chip chip-due">Fixed</span><h3 class="mt-3 text-xl font-semibold tracking-[-0.01em]">Rounding on multi-line sales tax</h3><p class="mt-2 leading-relaxed text-ink-soft">Invoices with many lines at different tax rates could be a cent off. Totals are now rounded once, per rate, as most accountants expect.</p></div>
+          </li>
+          <li data-integration data-category="improved" class="grid gap-3 border-t border-line py-8 sm:grid-cols-[9rem_1fr]">
+            <p><time datetime="2026-07-08" class="font-mono text-sm text-ink-faint">Jul 8, 2026</time></p>
+            <div><span class="chip chip-sent">Improved</span><h3 class="mt-3 text-xl font-semibold tracking-[-0.01em]">Receipt reading in the mobile app</h3><p class="mt-2 leading-relaxed text-ink-soft">Crumpled and faded receipts are read more reliably, and you can snap several in a row without leaving the camera.</p></div>
+          </li>
+          <li data-integration data-category="new" class="grid gap-3 border-t border-line py-8 sm:grid-cols-[9rem_1fr]">
+            <p><time datetime="2026-06-25" class="font-mono text-sm text-ink-faint">Jun 25, 2026</time></p>
+            <div><span class="chip chip-paid">New</span><h3 class="mt-3 text-xl font-semibold tracking-[-0.01em]">Canadian dollar and euro invoices</h3><p class="mt-2 leading-relaxed text-ink-soft">Invoice in Canadian dollars on Studio, and in Canadian dollars or euros on Practice. Payments are converted at the rate on the day and the difference is recorded for you.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+  <footer class="on-ink mt-auto bg-ink text-white">
+    <div class="container-x grid gap-12 pt-16 pb-12 lg:grid-cols-12">
+      <div class="lg:col-span-4">
+        <a href="index.html" class="inline-flex items-center gap-2.5" aria-label="Tally home">
+          <svg viewBox="0 0 32 32" class="h-8 w-8 shrink-0" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#45d99b"/><path d="M9.5 9v14M13.5 9v14M17.5 9v14M21.5 9v14" stroke="#0d1f1b" stroke-width="2.2" stroke-linecap="round"/><path d="M6.5 20.5 25.5 11.5" stroke="#f7f6f1" stroke-width="2.6" stroke-linecap="round"/></svg>
+          <span class="text-[21px] font-semibold tracking-[-0.03em] [font-stretch:120%]">tally</span>
+        </a>
+        <p class="mt-4 max-w-xs text-[15px] leading-relaxed text-fog">Invoicing, expenses and simple bookkeeping for freelancers and small studios. Built by Tally Software in Grand Rapids, Michigan.</p>
+        <form data-form="newsletter" class="mt-7 max-w-sm" novalidate>
+          <label for="footer-email" class="text-sm font-semibold">Getting-paid notes, once a month</label>
+          <div class="mt-2.5 flex gap-2">
+            <input id="footer-email" name="email" type="email" required data-label="Email" autocomplete="email" placeholder="you@studio.example" class="input border-white/20 bg-ink-2 py-2.5 text-white placeholder:text-fog focus:border-mint-400">
+            <button type="submit" class="btn-accent shrink-0">Subscribe</button>
+          </div>
+        </form>
+      </div>
+      <div class="grid grid-cols-2 gap-10 sm:grid-cols-3 lg:col-span-7 lg:col-start-6">
+        <nav aria-label="Product">
+          <h2 class="font-mono text-xs font-medium tracking-[0.08em] text-fog uppercase">Product</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="features.html" class="text-white/85 transition hover:text-mint-300">Features</a></li>
+            <li><a href="pricing.html" class="text-white/85 transition hover:text-mint-300">Pricing</a></li>
+            <li><a href="integrations.html" class="text-white/85 transition hover:text-mint-300">Integrations</a></li>
+            <li><a href="changelog.html" class="text-white/85 transition hover:text-mint-300">Changelog</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Company">
+          <h2 class="font-mono text-xs font-medium tracking-[0.08em] text-fog uppercase">Company</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="customers.html" class="text-white/85 transition hover:text-mint-300">Customers</a></li>
+            <li><a href="security.html" class="text-white/85 transition hover:text-mint-300">Security &amp; trust</a></li>
+            <li><a href="contact.html" class="text-white/85 transition hover:text-mint-300">Book a demo</a></li>
+          </ul>
+        </nav>
+        <nav aria-label="Tools">
+          <h2 class="font-mono text-xs font-medium tracking-[0.08em] text-fog uppercase">Tools</h2>
+          <ul class="mt-4 space-y-3 text-[15px]">
+            <li><a href="calculator.html" class="text-white/85 transition hover:text-mint-300">Late-payment calculator</a></li>
+            <li><a href="calculator.html#time-saved" class="text-white/85 transition hover:text-mint-300">Time-saved estimate</a></li>
+            <li><a href="pricing.html#faq" class="text-white/85 transition hover:text-mint-300">Sales tax and billing FAQ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="container-x">
+      <div class="flex flex-col gap-3 border-t border-white/15 py-6 text-sm text-fog md:flex-row md:items-center md:justify-between">
+        <p>© <span data-year>2026</span> Tally Software, Inc., Ionia Avenue, Grand Rapids. Tally is a fictional product.</p>
+        <p>Nothing on this site is tax, legal or financial advice. · Website template by Freeframe</p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

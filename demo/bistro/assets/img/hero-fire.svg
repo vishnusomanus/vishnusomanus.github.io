@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <radialGradient id="glow" cx="62%" cy="72%" r="65%">
+      <stop offset="0" stop-color="#ff9a3c"/>
+      <stop offset=".18" stop-color="#d4501f"/>
+      <stop offset=".45" stop-color="#5a1e0e"/>
+      <stop offset="1" stop-color="#140c08"/>
+    </radialGradient>
+    <linearGradient id="brick" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3a231a"/>
+      <stop offset="1" stop-color="#1c110c"/>
+    </linearGradient>
+    <radialGradient id="mouth" cx="50%" cy="100%" r="90%">
+      <stop offset="0" stop-color="#ffd27a"/>
+      <stop offset=".25" stop-color="#ff8a2a"/>
+      <stop offset=".6" stop-color="#b8361a"/>
+      <stop offset="1" stop-color="#2a0f07"/>
+    </radialGradient>
+    <linearGradient id="flameA" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#fff1b8"/>
+      <stop offset=".35" stop-color="#ffb347"/>
+      <stop offset=".75" stop-color="#f05a24"/>
+      <stop offset="1" stop-color="#f05a24" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="log" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5b3420"/>
+      <stop offset="1" stop-color="#26150d"/>
+    </linearGradient>
+    <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="18"/></filter>
+    <filter id="soft"><feGaussianBlur stdDeviation="3"/></filter>
+    <pattern id="bricks" width="120" height="56" patternUnits="userSpaceOnUse">
+      <rect width="120" height="56" fill="url(#brick)"/>
+      <path d="M0 27.5h120M0 55.5h120M60 0v27.5M0 28v28M120 28v28" stroke="#120a06" stroke-width="3" opacity=".7"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+  <!-- oven body -->
+  <path d="M560 1000V560c0-210 170-380 430-380s430 170 430 380v440z" fill="url(#bricks)" opacity=".95"/>
+  <path d="M560 1000V560c0-210 170-380 430-380s430 170 430 380v440" fill="none" stroke="#ff9a3c" stroke-opacity=".18" stroke-width="6"/>
+  <!-- oven mouth -->
+  <path d="M740 1000V720c0-110 110-200 250-200s250 90 250 200v280z" fill="url(#mouth)"/>
+  <ellipse cx="990" cy="900" rx="300" ry="120" fill="#ffb347" opacity=".45" filter="url(#blur)"/>
+  <!-- flames -->
+  <g filter="url(#soft)">
+    <path d="M860 930c-30-80 10-130 40-190 10 60 50 70 40 130 30-40 30-90 20-150 70 60 110 140 80 210z" fill="url(#flameA)"/>
+    <path d="M950 930c-40-110 30-170 50-260 30 70 80 110 60 200 30-20 40-60 40-100 50 60 60 120 30 160z" fill="url(#flameA)"/>
+    <path d="M1040 930c-20-70 20-100 40-150 20 50 50 60 40 110 20-30 30-60 20-100 50 50 60 100 40 140z" fill="url(#flameA)" opacity=".9"/>
+  </g>
+  <!-- logs -->
+  <g>
+    <rect x="800" y="915" width="380" height="44" rx="22" fill="url(#log)" transform="rotate(-6 990 937)"/>
+    <rect x="820" y="935" width="360" height="40" rx="20" fill="url(#log)" transform="rotate(5 1000 955)"/>
+    <circle cx="1170" cy="917" r="20" fill="#7a4428"/><circle cx="1170" cy="917" r="11" fill="#e0662a" opacity=".8"/>
+  </g>
+  <!-- embers -->
+  <g fill="#ffb347">
+    <circle cx="930" cy="640" r="3"/><circle cx="1010" cy="590" r="2.5"/><circle cx="1080" cy="660" r="2"/>
+    <circle cx="880" cy="560" r="2"/><circle cx="1120" cy="520" r="3"/><circle cx="1000" cy="470" r="2"/>
+    <circle cx="1210" cy="430" r="2.5" opacity=".7"/><circle cx="820" cy="420" r="2" opacity=".6"/>
+    <circle cx="1300" cy="300" r="2" opacity=".5"/><circle cx="700" cy="330" r="2.5" opacity=".5"/>
+    <circle cx="1060" cy="380" r="1.8" opacity=".7"/><circle cx="950" cy="300" r="1.8" opacity=".5"/>
+  </g>
+  <!-- hanging copper pans & herbs silhouettes -->
+  <g fill="#0f0905" opacity=".85">
+    <rect x="0" y="0" width="1600" height="26"/>
+    <path d="M200 26v120"/><rect x="198" y="26" width="4" height="120"/><circle cx="200" cy="200" r="58"/><rect x="196" y="140" width="8" height="40"/>
+    <rect x="368" y="26" width="4" height="80"/><circle cx="370" cy="150" r="44"/>
+    <rect x="1458" y="26" width="4" height="140"/><path d="M1430 170h60l-8 60h-44z"/>
+    <path d="M1300 26c10 60-20 90 0 140 20-50-10-80 0-140z"/><path d="M1330 26c5 50-15 80 5 120 15-45-10-70-5-120z"/>
+  </g>
+  <rect width="1600" height="1000" fill="#000" opacity=".08"/>
+</svg>

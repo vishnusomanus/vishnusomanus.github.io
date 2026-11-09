@@ -1,0 +1,294 @@
+/* Compass (Bearing Leadership Coaching) — Tailwind CSS v4 source.
+   Edit the brand tokens below, then rebuild with `npm run build`. */
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+@theme {
+  --font-sans: "Instrument Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Georgia, ui-serif, serif;
+
+  /* Ivory and linen: page backgrounds, cards and borders */
+  --color-ivory: #fbf8f3;
+  --color-linen-50: #f6f1e8;
+  --color-linen-100: #efe7da;
+  --color-linen-200: #e4d8c5;
+  --color-linen-300: #cfbfa6;
+
+  /* Stone: body copy and muted text (600+ passes AA on ivory and linen) */
+  --color-stone-500: #857a6b;
+  --color-stone-600: #685e51;
+  --color-stone-700: #4d4539;
+  --color-stone-800: #342e26;
+
+  /* Dusk: the brand indigo. 700 for buttons and links, 900/950 for dark sections. */
+  --color-dusk-50: #eef0f7;
+  --color-dusk-100: #dde1ef;
+  --color-dusk-200: #bcc3df;
+  --color-dusk-300: #959fc8;
+  --color-dusk-400: #6f7bab;
+  --color-dusk-500: #535f92;
+  --color-dusk-600: #434e7e;
+  --color-dusk-700: #364070;
+  --color-dusk-800: #2a3259;
+  --color-dusk-900: #1f2544;
+  --color-dusk-950: #151a31;
+
+  /* Marigold: the warm accent. 300/400 for fills and text on dusk, 700 for text on light backgrounds. */
+  --color-marigold-100: #fbecc9;
+  --color-marigold-200: #f6d88f;
+  --color-marigold-300: #f0c464;
+  --color-marigold-400: #e6ab3d;
+  --color-marigold-500: #d39226;
+  --color-marigold-600: #a8701a;
+  --color-marigold-700: #855712;
+
+  /* Clay: a soft secondary used in illustrations and tags */
+  --color-clay-100: #f5e3da;
+  --color-clay-200: #ebc8b8;
+  --color-clay-400: #c98a70;
+  --color-clay-700: #8a4a33;
+
+  --ease-soft: cubic-bezier(.2, .7, .2, 1);
+}
+
+@layer base {
+  /* Smooth scrolling for in-page links only, so scripted scrolling stays instant. */
+  @media (prefers-reduced-motion: no-preference) {
+    html:focus-within { scroll-behavior: smooth; }
+  }
+  html { -webkit-tap-highlight-color: transparent; }
+  body { font-feature-settings: "ss01", "kern"; }
+  ::selection { background: var(--color-marigold-200); color: var(--color-dusk-950); }
+  :focus-visible { outline: 3px solid var(--color-dusk-600); outline-offset: 3px; border-radius: 4px; }
+  .on-dark :focus-visible, .on-dark:focus-visible { outline-color: var(--color-marigold-300); }
+  [id] { scroll-margin-top: 6.5rem; }
+  #main:focus { outline: none; }
+  h1, h2, h3 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+
+  /* Display type: the serif at large optical sizes, with italic accents */
+  .display { @apply font-serif font-normal tracking-[-0.02em] [font-optical-sizing:auto]; }
+  .display em, .display i { @apply font-serif italic; }
+  .accent-em { @apply text-dusk-600 italic; }
+  .on-dark .accent-em { @apply text-marigold-300; }
+
+  /* Small label above a heading, with a compass-point star */
+  .eyebrow {
+    @apply inline-flex items-center gap-2.5 text-[0.78rem] font-semibold tracking-[0.16em] text-stone-600 uppercase;
+  }
+  .eyebrow::before {
+    content: ""; width: .8rem; height: .8rem; flex: none; background: var(--color-marigold-500);
+    clip-path: polygon(50% 0, 62% 38%, 100% 50%, 62% 62%, 50% 100%, 38% 62%, 0 50%, 38% 38%);
+  }
+  .on-dark .eyebrow { @apply text-dusk-200; }
+  .on-dark .eyebrow::before { background: var(--color-marigold-300); }
+
+  .lede { @apply text-lg leading-relaxed text-stone-700 sm:text-xl; }
+  .on-dark .lede { @apply text-dusk-100; }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex min-h-12 items-center justify-center gap-2 rounded-full px-6 py-3 text-[0.97rem] font-semibold whitespace-nowrap transition duration-200 ease-soft
+      active:translate-y-px disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn svg { @apply size-[1.1rem] shrink-0; }
+  .btn-lg { @apply min-h-14 px-7 text-base; }
+  .btn-sm { @apply min-h-10 px-4 py-2 text-sm; }
+  .btn-primary { @apply bg-dusk-800 text-white shadow-[0_10px_24px_-14px_rgb(21_26_49/0.8)] hover:bg-dusk-950; }
+  .btn-accent { @apply bg-marigold-300 text-dusk-950 shadow-[0_10px_24px_-14px_rgb(133_87_18/0.8)] hover:bg-marigold-200; }
+  .btn-outline { @apply border border-dusk-800/25 bg-transparent text-dusk-900 hover:border-dusk-800 hover:bg-white; }
+  .btn-outline-light { @apply border border-white/35 bg-transparent text-white hover:border-white hover:bg-white/10; }
+
+  .link-arrow {
+    @apply inline-flex items-center gap-1.5 font-semibold text-dusk-700 underline decoration-dusk-200 decoration-2 underline-offset-[6px] transition hover:decoration-dusk-700;
+  }
+  .link-arrow svg { @apply size-4 transition group-hover:translate-x-0.5; }
+  .on-dark .link-arrow { @apply text-marigold-200 decoration-marigold-200/40 hover:decoration-marigold-200; }
+
+  /* Header navigation */
+  .nav-link {
+    @apply relative rounded-full px-3 py-2 text-[0.95rem] font-medium text-stone-700 transition hover:bg-linen-100 hover:text-dusk-950
+      aria-[current=page]:text-dusk-950 aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-3 aria-[current=page]:after:-bottom-0.5
+      aria-[current=page]:after:h-0.5 aria-[current=page]:after:rounded-full aria-[current=page]:after:bg-marigold-500;
+  }
+  .mobile-link {
+    @apply flex items-center justify-between border-b border-linen-200 py-4 font-serif text-2xl text-dusk-950 aria-[current=page]:text-dusk-600 aria-[current=page]:italic;
+  }
+
+  /* Cards and surfaces */
+  .card { @apply rounded-[1.75rem] border border-linen-200 bg-white/80 shadow-[0_1px_0_rgb(255_255_255/.8)_inset,0_20px_40px_-32px_rgb(52_46_38/.45)]; }
+  .card-linen { @apply rounded-[1.75rem] bg-linen-100; }
+  .arch { border-radius: 999px 999px 1.75rem 1.75rem; }
+  .paper-grain {
+    background-image: radial-gradient(rgb(52 46 38 / .045) 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+  .dusk-glow {
+    background:
+      radial-gradient(60rem 30rem at 85% -10%, rgb(230 171 61 / .16), transparent 60%),
+      radial-gradient(50rem 30rem at -10% 110%, rgb(111 123 171 / .28), transparent 60%),
+      var(--color-dusk-900);
+  }
+  .rule-star { @apply flex items-center gap-4 text-linen-300; }
+  .rule-star::before, .rule-star::after { content: ""; height: 1px; flex: 1; background: currentColor; }
+
+  .stat-num { @apply font-serif text-5xl leading-none tracking-[-0.03em] text-dusk-900 sm:text-6xl; }
+
+  /* Chips (filters) */
+  .chip {
+    @apply inline-flex min-h-11 items-center gap-2 rounded-full border border-linen-300 bg-white px-4 py-2 text-sm font-semibold text-stone-700 transition
+      hover:border-dusk-400 hover:text-dusk-900 aria-pressed:border-dusk-800 aria-pressed:bg-dusk-800 aria-pressed:text-white;
+  }
+  .chip-count { @apply rounded-full bg-linen-100 px-2 py-0.5 text-xs font-semibold text-stone-700; }
+  .chip[aria-pressed="true"] .chip-count { @apply bg-white/15 text-white; }
+  .tag { @apply inline-flex items-center rounded-full bg-linen-100 px-3 py-1 text-xs font-semibold tracking-wide text-stone-700; }
+  .tag-dusk { @apply bg-dusk-50 text-dusk-700; }
+  .tag-marigold { @apply bg-marigold-100 text-marigold-700; }
+  .tag-clay { @apply bg-clay-100 text-clay-700; }
+
+  /* Forms */
+  .label { @apply mb-1.5 block text-sm font-semibold text-stone-800; }
+  .hint { @apply text-sm font-normal text-stone-600; }
+  .input {
+    @apply block w-full rounded-2xl border border-linen-300 bg-white px-4 py-3 text-base text-stone-800 transition
+      placeholder:text-stone-500 focus:border-dusk-600 focus:ring-4 focus:ring-dusk-200/70 focus:outline-none
+      aria-[invalid=true]:border-red-700 aria-[invalid=true]:focus:ring-red-100;
+  }
+  select.input {
+    appearance: none; padding-right: 2.75rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23364070' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 1rem center; background-size: 1.1rem;
+  }
+  textarea.input { @apply min-h-32 resize-y; }
+  .checkbox { @apply mt-0.5 size-5 shrink-0 cursor-pointer rounded accent-dusk-700; }
+  .field-error { @apply mt-1.5 flex items-center gap-1.5 text-sm font-medium text-red-700; }
+  .on-dark .field-error { @apply text-red-200; }
+  .on-dark .input { @apply border-white/20 bg-white/10 text-white placeholder:text-dusk-200 focus:border-marigold-300 focus:ring-marigold-300/25 aria-[invalid=true]:border-red-300; }
+  .on-dark .label { @apply text-white; }
+
+  /* Option cards: a radio inside a label */
+  .option-card {
+    @apply relative flex cursor-pointer flex-col gap-1 rounded-3xl border border-linen-300 bg-white p-5 transition hover:border-dusk-400
+      has-[:checked]:border-dusk-700 has-[:checked]:bg-dusk-50 has-[:checked]:shadow-[0_0_0_1px_var(--color-dusk-700)]
+      has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-dusk-600;
+  }
+  .option-dot { @apply absolute top-5 right-5 grid size-6 place-items-center rounded-full border-2 border-linen-300 bg-white transition; }
+  .option-card:has(:checked) .option-dot { @apply border-dusk-700 bg-dusk-700; }
+  .option-card:has(:checked) .option-dot::after { content: ""; @apply size-2 rounded-full bg-white; }
+
+  /* Booking calendar */
+  .cal-day {
+    @apply relative grid aspect-square w-full place-items-center rounded-full text-[0.95rem] font-semibold text-dusk-900 transition
+      hover:bg-dusk-50;
+  }
+  .cal-day[aria-disabled="true"] { @apply cursor-default font-normal text-stone-600 hover:bg-transparent; }
+  .cal-day[aria-disabled="true"][data-out] { @apply text-stone-500/70; }
+  .cal-day[data-available]::after { content: ""; @apply absolute bottom-[14%] size-1 rounded-full bg-marigold-500; }
+  .cal-day[aria-pressed="true"] { @apply bg-dusk-800 text-white hover:bg-dusk-800; }
+  .cal-day[aria-pressed="true"]::after { @apply bg-marigold-300; }
+  .cal-day[data-today] { @apply ring-1 ring-linen-300 ring-inset; }
+  .slot {
+    @apply flex min-h-12 cursor-pointer flex-col items-center justify-center rounded-2xl border border-linen-300 bg-white px-3 py-2 text-center text-[0.95rem] font-semibold text-dusk-900 transition
+      hover:border-dusk-500 has-[:checked]:border-dusk-800 has-[:checked]:bg-dusk-800 has-[:checked]:text-white
+      has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-dusk-600;
+  }
+  .slot-sub { @apply text-xs font-medium text-stone-600; }
+  .slot:has(:checked) .slot-sub { @apply text-dusk-100; }
+
+  /* Booking steps */
+  .step-pill {
+    @apply flex items-center gap-2.5 text-sm font-semibold text-stone-600 aria-[current=step]:text-dusk-900;
+  }
+  .step-num { @apply grid size-8 shrink-0 place-items-center rounded-full border border-linen-300 bg-white text-xs font-bold transition; }
+  .step-pill[aria-current="step"] .step-num { @apply border-dusk-800 bg-dusk-800 text-white; }
+  .step-pill[data-done] .step-num { @apply border-marigold-400 bg-marigold-300 text-dusk-950; }
+
+  /* Accordion */
+  .acc-btn { @apply flex w-full items-center justify-between gap-6 py-6 text-left font-serif text-xl text-dusk-950 sm:text-[1.4rem]; }
+  .acc-icon { @apply relative grid size-10 shrink-0 place-items-center rounded-full border border-linen-300 text-dusk-800 transition; }
+  .acc-icon::before, .acc-icon::after { content: ""; position: absolute; width: 14px; height: 1.5px; background: currentColor; transition: transform .25s ease; }
+  .acc-icon::after { transform: rotate(90deg); }
+  .acc-btn[aria-expanded="true"] .acc-icon { @apply border-dusk-800 bg-dusk-800 text-white; }
+  .acc-btn[aria-expanded="true"] .acc-icon::after { transform: rotate(0deg); }
+
+  /* Testimonial carousel: a scroll-snap track driven by prev/next buttons */
+  .carousel-track { scrollbar-width: none; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; }
+  .carousel-track::-webkit-scrollbar { display: none; }
+  .carousel-track > * { scroll-snap-align: start; }
+
+  /* Quiz answers */
+  .quiz-option {
+    @apply flex w-full cursor-pointer items-start gap-4 rounded-2xl border border-linen-300 bg-white p-4 text-left text-stone-800 transition hover:border-dusk-400
+      has-[:checked]:border-dusk-700 has-[:checked]:bg-dusk-50 has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-dusk-600;
+  }
+  .quiz-letter { @apply grid size-8 shrink-0 place-items-center rounded-full border border-linen-300 text-sm font-bold text-dusk-700 transition; }
+  .quiz-option:has(:checked) .quiz-letter { @apply border-dusk-700 bg-dusk-700 text-white; }
+
+  /* Compass diagram (method page): the needle turns to the active point */
+  .needle { transform-origin: 300px 300px; transition: transform .8s var(--ease-soft); }
+  .compass-point { cursor: pointer; }
+  .compass-point .point-bg { fill: var(--color-ivory); stroke: var(--color-linen-300); stroke-width: 1.5; transition: fill .3s ease, stroke .3s ease; }
+  .compass-point .point-letter { fill: var(--color-dusk-900); transform: translateY(2px); }
+  .compass-point .point-word { fill: var(--color-stone-600); }
+  .compass-point:hover .point-bg { stroke: var(--color-dusk-500); }
+  .compass-point.is-active .point-bg { fill: var(--color-dusk-800); stroke: var(--color-dusk-800); }
+  .compass-point.is-active .point-letter { fill: #fff; }
+  .compass-point.is-active .point-word { fill: var(--color-marigold-200); }
+  .method-tab {
+    @apply min-h-11 rounded-full px-2 py-2 text-[0.82rem] font-semibold text-stone-700 transition hover:text-dusk-950 sm:text-sm
+      aria-selected:bg-dusk-800 aria-selected:text-white;
+  }
+
+  /* Scroll reveal: only hidden once JS has loaded (html.js). */
+  .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .8s ease, transform .8s var(--ease-soft); }
+  .js .reveal.is-visible { opacity: 1; transform: none; }
+  .js .reveal-delay-1 { transition-delay: .08s; }
+  .js .reveal-delay-2 { transition-delay: .16s; }
+  .js .reveal-delay-3 { transition-delay: .24s; }
+
+  /* Hero drawing: the compass rose ring rotates in once */
+  .js .spin-in { transform: rotate(-30deg); opacity: 0; transform-origin: center; transform-box: fill-box; transition: transform 1.6s var(--ease-soft), opacity 1s ease; }
+  .js .is-visible .spin-in, .js .spin-in.is-visible { transform: none; opacity: 1; }
+
+  /* 404 needle */
+  @keyframes wander { 0%, 100% { transform: rotate(-38deg); } 30% { transform: rotate(52deg); } 55% { transform: rotate(-12deg); } 80% { transform: rotate(24deg); } }
+  .wander { transform-origin: center; transform-box: fill-box; animation: wander 6s ease-in-out infinite; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal, .js .spin-in { opacity: 1; transform: none; transition: none; }
+  .wander { animation: none; }
+  .needle { transition: none; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+/* Back to top button (created by assets/js/main.js). Remove this block to drop it. */
+@layer components {
+  .back-to-top {
+    position: fixed; z-index: 45;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px) + var(--btt-lift, 0px));
+    display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; cursor: pointer; border-radius: 999px;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, bottom .25s ease, visibility 0s linear .25s, background-color .2s;
+    @apply bg-dusk-800 text-white shadow-[0_12px_28px_-12px_rgb(21_26_49/.7)] hover:bg-dusk-950;
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; transition: transform .2s ease; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top.is-visible:hover svg { transform: translateY(-2px); }
+  .back-to-top:focus-visible { outline: 3px solid var(--color-marigold-400); outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top, .back-to-top svg { transition: opacity .01s linear, visibility 0s linear; transform: none !important; }
+  }
+}
+
+@media print {
+  #site-header button, .back-to-top { display: none !important; }
+}

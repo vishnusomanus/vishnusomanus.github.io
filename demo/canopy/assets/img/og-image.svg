@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+<rect width="1200" height="630" fill="#f6f4ec"/>
+<g fill="none" stroke="#c8d1c0" stroke-width="2"><path d="M0 90C160 60 260 110 420 80S700 50 860 84 1100 110 1200 90"/><path d="M0 140C160 110 260 160 420 130S700 100 860 134 1100 160 1200 140"/><ellipse cx="1000" cy="250" rx="140" ry="60"/><ellipse cx="1000" cy="250" rx="90" ry="34"/><ellipse cx="1000" cy="250" rx="40" ry="14"/></g>
+<path d="M0 430H1200V630H0Z" fill="#1b5c86"/>
+<path d="M0 470C200 450 360 470 520 462S820 440 1000 460 1150 470 1200 466V630H0Z" fill="#eadfbf"/>
+<path d="M0 500C200 480 360 500 520 492S820 470 1000 490 1150 500 1200 496V630H0Z" fill="#2c6249"/>
+<path d="M0 560C200 536 380 556 560 548S860 530 1040 552 1160 560 1200 556V630H0Z" fill="#1f4b37"/>
+<g stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity=".55"><path d="M80 446h60M300 452h80M700 444h70M980 448h90"/></g>
+<g fill="#12301f"><path d="M960 520 990 440 1020 520Z"/><path d="M1010 520 1046 420 1082 520Z"/><path d="M1070 524 1100 450 1130 524Z"/><path d="M60 530 86 460 112 530Z"/></g>
+<g transform="translate(860 560)"><path d="M-60 30 0 -50 60 30Z" fill="#f26a21" stroke="#1c2420" stroke-width="4" stroke-linejoin="round"/><path d="M-20 30 0 -4 20 30Z" fill="#1c2420"/></g>
+<path d="M0 600C200 580 400 590 620 586S900 570 1200 590" fill="none" stroke="#f6f4ec" stroke-width="4" stroke-dasharray="4 12" stroke-linecap="round"/>
+<g transform="translate(170 230)"><circle r="104" fill="#1f4b37"/><circle r="88" fill="none" stroke="#f26a21" stroke-width="6" stroke-dasharray="12 9"/><g transform="translate(-104 -104) scale(4.333)"><path d="M24 8.5 30.5 19H27.4L32.6 27.5H28.2L33.8 35.5H14.2L19.8 27.5H15.4L20.6 19H17.5Z" fill="#f6f4ec"/><rect x="22.7" y="35" width="2.6" height="4.5" fill="#f6f4ec"/></g></g>
+<rect x="316" y="146" width="16" height="30" rx="3" fill="#f26a21"/>
+<text x="346" y="172" font-family="Overpass, Arial, sans-serif" font-size="28" font-weight="800" letter-spacing="6" fill="#1f4b37">TENT · RV · CABINS · LAKE SUPERIOR</text>
+<text x="312" y="268" font-family="Arvo, Rockwell, Georgia, serif" font-size="92" font-weight="700" fill="#1c2420">Tamarack Pines</text>
+<text x="316" y="330" font-family="Overpass, Arial, sans-serif" font-size="36" font-weight="600" fill="#4c5850">Campground &amp; cabins near Marquette, Michigan</text>
+<rect x="8" y="8" width="1184" height="614" fill="none" stroke="#1c2420" stroke-width="16"/>
+</svg>

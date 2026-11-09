@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gift cards — Bloom Hair &amp; Spa</title>
+  <meta name="description" content="Give an afternoon of calm. Bloom gift cards from $25 to $500, in three designs, delivered by email with your own message.">
+  <meta name="theme-color" content="#faf6f2">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Bloom Hair &amp; Spa">
+  <meta property="og:title" content="Gift cards — Bloom Hair &amp; Spa">
+  <meta property="og:description" content="Give an afternoon of calm. Bloom gift cards from $25 to $500, in three designs, delivered by email with your own message.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&amp;family=Jost:wght@300..600&amp;display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body data-page="gift-cards" class="flex min-h-screen flex-col">
+  <a href="#main" class="sr-only z-[60] rounded-full bg-ink px-5 py-3 text-sm text-shell focus:not-sr-only focus:fixed focus:left-4 focus:top-4">Skip to content</a>
+  <header id="site-header" class="site-header">
+    <div class="container-x flex h-18 items-center justify-between gap-6">
+      <a href="index.html" class="flex items-center gap-2.5" aria-label="Bloom Hair &amp; Spa, home">
+        <svg viewBox="0 0 32 32" class="h-9 w-9 text-plum" aria-hidden="true"><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(0 16 16)" opacity="0.55"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(72 16 16)" opacity="0.64"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(144 16 16)" opacity="0.73"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(216 16 16)" opacity="0.82"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(288 16 16)" opacity="0.91"/><circle cx="16" cy="16" r="3.4" fill="#faf6f2"/></svg>
+        <span class="font-display text-2xl tracking-tight">Bloom</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-8">
+            <li><a href="services.html" class="nav-link">Services</a></li>
+            <li><a href="team.html" class="nav-link">Team</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="gift-cards.html" class="nav-link" aria-current="page">Gift cards</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="flex items-center gap-2">
+        <a href="book.html" class="btn-primary hidden sm:inline-flex">Book now</a>
+        <button id="menu-toggle" type="button" class="menu-toggle lg:hidden" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="sr-only">Menu</span>
+          <svg data-icon-open viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 8h16M4 16h16"/></svg>
+          <svg data-icon-close viewBox="0 0 24 24" class="hidden h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" hidden class="mobile-menu lg:hidden">
+      <nav aria-label="Mobile" class="container-x pb-8 pt-2">
+        <ul>
+          <li><a href="services.html" class="mobile-link">Services</a></li>
+          <li><a href="team.html" class="mobile-link">Team</a></li>
+          <li><a href="gallery.html" class="mobile-link">Gallery</a></li>
+          <li><a href="gift-cards.html" class="mobile-link" aria-current="page">Gift cards</a></li>
+          <li><a href="about.html" class="mobile-link">About</a></li>
+          <li><a href="contact.html" class="mobile-link">Contact</a></li>
+        </ul>
+        <a href="book.html" class="btn-primary mt-8 w-full">Book an appointment</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="flex-1">
+    <section class="page-hero">
+      <div class="container-x reveal max-w-3xl text-center">
+        <p class="eyebrow">Gift cards</p>
+        <h1 class="mt-4 font-display text-[clamp(2.5rem,5vw,4.25rem)] leading-[1.05] tracking-tight">Give an afternoon of calm</h1>
+        <p class="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-mute">Choose an amount and a design, add a message and we'll email it on the day you pick. Gift cards work for every treatment and never expire.</p>
+      </div>
+    </section>
+
+    <section class="container-x pb-20">
+      <div class="grid items-start gap-12 lg:grid-cols-[1fr_26rem]" data-gift>
+        <form id="gift-form" class="min-w-0" novalidate>
+          <fieldset><legend class="step-title">1. Choose an amount</legend>
+            <div class="mt-5 flex flex-wrap gap-3" data-amounts><label class="amount"><input type="radio" name="amount" value="50" class="sr-only peer"><span class="amount-body">$50</span></label><label class="amount"><input type="radio" name="amount" value="75" class="sr-only peer"><span class="amount-body">$75</span></label><label class="amount"><input type="radio" name="amount" value="100" class="sr-only peer" checked><span class="amount-body">$100</span></label><label class="amount"><input type="radio" name="amount" value="150" class="sr-only peer"><span class="amount-body">$150</span></label><label class="amount"><input type="radio" name="amount" value="250" class="sr-only peer"><span class="amount-body">$250</span></label><label class="amount"><input type="radio" name="amount" value="custom" class="sr-only peer"><span class="amount-body">Other</span></label></div>
+            <div class="mt-4 max-w-xs" data-custom-wrap hidden><label for="g-custom" class="field-label">Amount in dollars (25 to 500)</label><input id="g-custom" name="custom" type="number" min="25" max="500" step="1" inputmode="numeric" class="field" aria-describedby="g-custom-error"><p id="g-custom-error" class="field-error" data-error="custom"></p></div>
+          </fieldset>
+          <fieldset class="mt-10"><legend class="step-title">2. Pick a design</legend>
+            <div class="mt-5 grid grid-cols-3 gap-3 sm:gap-4"><label class="design"><input type="radio" name="design" value="petal" class="sr-only peer" checked><span class="design-body"><span class="gift-card gift-petal gift-card-mini" aria-hidden="true"><span class="gift-card-brand">Bloom</span></span><span class="mt-2 block text-sm font-medium">Petal</span></span></label><label class="design"><input type="radio" name="design" value="sage" class="sr-only peer"><span class="design-body"><span class="gift-card gift-sage gift-card-mini" aria-hidden="true"><span class="gift-card-brand">Bloom</span></span><span class="mt-2 block text-sm font-medium">Sage</span></span></label><label class="design"><input type="radio" name="design" value="noir" class="sr-only peer"><span class="design-body"><span class="gift-card gift-noir gift-card-mini" aria-hidden="true"><span class="gift-card-brand">Bloom</span></span><span class="mt-2 block text-sm font-medium">Noir</span></span></label></div>
+          </fieldset>
+          <fieldset class="mt-10"><legend class="step-title">3. Add a message</legend>
+            <div class="mt-5 grid gap-5 sm:grid-cols-2">
+              <div><label for="g-to" class="field-label">Recipient's name</label><input id="g-to" name="to" class="field" maxlength="40" required aria-describedby="g-to-error"><p id="g-to-error" class="field-error" data-error="to"></p></div>
+              <div><label for="g-to-email" class="field-label">Recipient's email</label><input id="g-to-email" name="toEmail" type="email" class="field" required aria-describedby="g-to-email-error"><p id="g-to-email-error" class="field-error" data-error="toEmail"></p></div>
+              <div><label for="g-from" class="field-label">Your name</label><input id="g-from" name="from" class="field" maxlength="40" autocomplete="name" required aria-describedby="g-from-error"><p id="g-from-error" class="field-error" data-error="from"></p></div>
+              <div><label for="g-email" class="field-label">Your email</label><input id="g-email" name="email" type="email" class="field" autocomplete="email" required aria-describedby="g-email-error"><p id="g-email-error" class="field-error" data-error="email"></p></div>
+              <div class="sm:col-span-2"><label for="g-message" class="field-label">Message <span class="font-normal text-mute">(optional)</span></label><textarea id="g-message" name="message" rows="3" maxlength="160" class="field" aria-describedby="g-message-count"></textarea><p id="g-message-count" class="mt-1.5 text-right text-xs text-mute" data-message-count>160 characters left</p></div>
+            </div>
+          </fieldset>
+          <fieldset class="mt-10"><legend class="step-title">4. Delivery</legend>
+            <div class="mt-5 flex flex-wrap gap-6">
+              <label class="check"><input type="radio" name="delivery" value="now" class="check-input" checked><span>Email it now</span></label>
+              <label class="check"><input type="radio" name="delivery" value="later" class="check-input"><span>Choose a date</span></label>
+            </div>
+            <div class="mt-4 max-w-xs" data-date-wrap hidden><label for="g-date" class="field-label">Delivery date</label><input id="g-date" name="date" type="date" class="field" aria-describedby="g-date-error"><p id="g-date-error" class="field-error" data-error="date"></p></div>
+          </fieldset>
+          <div class="mt-10 flex flex-wrap items-center gap-4 border-t border-line pt-6">
+            <button type="submit" class="btn-primary">Buy gift card · <span data-gift-total>$100</span></button>
+            <p class="text-sm text-mute">Gift cards work for every treatment and never expire.</p>
+          </div>
+        </form>
+        <div class="lg:sticky lg:top-28">
+          <p class="mb-3 text-sm font-medium" id="preview-label">Live preview</p>
+          <div class="gift-card gift-petal gift-card-lg" data-gift-preview role="img" aria-labelledby="preview-label" aria-describedby="preview-desc">
+            <span class="gift-card-brand">Bloom</span>
+            <span class="gift-card-amount" data-preview-amount>$100</span>
+            <span class="gift-card-to" data-preview-to>For someone special</span>
+            <span class="gift-card-message" data-preview-message>Your message will appear here.</span>
+            <span class="gift-card-from" data-preview-from>From you</span>
+          </div>
+          <p id="preview-desc" class="sr-only" data-preview-desc>Petal design, $100 gift card.</p>
+          <div class="card mt-6 p-6" data-gift-done hidden tabindex="-1">
+            <p class="eyebrow">Order confirmed</p>
+            <p class="mt-2 font-display text-2xl">Code <span data-gift-code>BLOOM-0000-0000</span></p>
+            <p class="mt-2 text-sm text-mute" data-gift-done-text></p>
+            <p class="mt-4 rounded-xl bg-blush/70 p-3 text-sm">Order reference <span class="font-medium text-ink" data-gift-ref>BL-0000</span>. Mention it if you need to get in touch about this order.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-cream py-20" aria-labelledby="gift-faq-title">
+      <div class="container-x max-w-3xl">
+        <h2 id="gift-faq-title" class="section-title reveal text-center">Gift card questions</h2>
+        <div class="mt-10 divide-y divide-line border-y border-line">
+          <details class="faq reveal py-5"><summary class="faq-summary">How do I redeem a gift card?<span class="faq-icon" aria-hidden="true"></span></summary><p class="mt-3 text-mute">Give the code when you book online or by phone, or show the email at your appointment. You can use it over several visits.</p></details>
+          <details class="faq reveal py-5"><summary class="faq-summary">Can I buy a printed card instead?<span class="faq-icon" aria-hidden="true"></span></summary><p class="mt-3 text-mute">Yes. Stop by the salon and we'll wrap one in our letterpress envelope while you wait.</p></details>
+          <details class="faq reveal py-5"><summary class="faq-summary">Do gift cards expire?<span class="faq-icon" aria-hidden="true"></span></summary><p class="mt-3 text-mute">No. Bloom gift cards have no expiration date and no fees, so you can use yours whenever you're ready.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="mt-auto bg-ink text-shell">
+    <div class="container-x grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.4fr]">
+      <div>
+        <a href="index.html" class="flex items-center gap-2.5" aria-label="Bloom Hair &amp; Spa, home">
+          <svg viewBox="0 0 32 32" class="h-9 w-9 text-blush" aria-hidden="true"><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(0 16 16)" opacity="0.55"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(72 16 16)" opacity="0.64"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(144 16 16)" opacity="0.73"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(216 16 16)" opacity="0.82"/><ellipse cx="16" cy="8.6" rx="4.6" ry="7.2" fill="currentColor" transform="rotate(288 16 16)" opacity="0.91"/><circle cx="16" cy="16" r="3.4" fill="#2a2127"/></svg>
+          <span class="font-display text-2xl">Bloom</span>
+        </a>
+        <p class="mt-4 max-w-xs text-sm leading-relaxed text-shell/75">An independent hair, nail and skin salon on Burns Court, Sarasota. Unhurried appointments since 2016.</p>
+        <p class="mt-5 text-sm"><span class="open-badge" data-open-now><span class="open-dot" aria-hidden="true"></span><span data-open-text>Tue–Sun · see hours</span></span></p>
+      </div>
+      <nav aria-label="Footer">
+        <h2 class="footer-heading">Explore</h2>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          <li><a href="services.html" class="footer-link">Services &amp; prices</a></li>
+          <li><a href="team.html" class="footer-link">Our team</a></li>
+          <li><a href="gallery.html" class="footer-link">Gallery</a></li>
+          <li><a href="gift-cards.html" class="footer-link">Gift cards</a></li>
+          <li><a href="about.html" class="footer-link">About Bloom</a></li>
+          <li><a href="book.html" class="footer-link">Book online</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2 class="footer-heading">Visit</h2>
+        <address class="mt-4 space-y-2.5 text-sm not-italic text-shell/80">
+          <p>48 Burns Court<br>Sarasota, FL 34236</p>
+          <p><a href="tel:+19415550173" class="footer-link">(941) 555-0173</a></p>
+          <p><a href="mailto:hello@bloomhairspa.example" class="footer-link">hello@bloomhairspa.example</a></p>
+          <p><a href="contact.html" class="footer-link">Hours &amp; directions</a></p>
+        </address>
+      </div>
+      <div>
+        <h2 class="footer-heading">Notes from the salon</h2>
+        <p class="mt-4 text-sm text-shell/75">Seasonal offers and new-season color, about once a month. No spam, ever.</p>
+        <form class="mt-5" data-newsletter novalidate>
+          <label for="n-email" class="sr-only">Email address</label>
+          <div class="flex gap-2"><input id="n-email" name="email" type="email" placeholder="you@example.com" class="field-dark min-w-0 flex-1" autocomplete="email" required aria-describedby="n-email-error"><button type="submit" class="btn-light shrink-0">Sign up</button></div>
+          <p id="n-email-error" class="field-error on-dark" data-error="email"></p>
+          <p class="mt-2 text-sm text-blush" data-newsletter-success hidden>Thank you! Look out for a confirmation email; once you click the link, you're on the list for Notes from the salon.</p>
+        </form>
+      </div>
+    </div>
+    <div class="border-t border-shell/15">
+      <div class="container-x flex flex-col gap-3 py-6 text-xs text-shell/70 sm:flex-row sm:items-center sm:justify-between">
+        <p>&copy; <span data-year>2026</span> Bloom Hair &amp; Spa. A fictional salon from a free Freeframe template.</p>
+        <ul class="flex gap-5">
+          <li><a href="#" class="footer-link">Instagram</a></li>
+          <li><a href="#" class="footer-link">Pinterest</a></li>
+          <li><a href="#" class="footer-link">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

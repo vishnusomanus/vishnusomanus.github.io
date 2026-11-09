@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Reserve — Marrow</title>
+<meta name="description" content="Request a table at Marrow for 18:30 or 21:00." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; } input, select { color-scheme: dark; }</style>
+</head>
+<body class="bg-[#1a0e10] text-[#f6efe8] font-sans antialiased">
+<header class="sticky top-0 z-30 bg-[#1a0e10]/95 text-[#f6efe8] backdrop-blur">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-3xl">Marrow</a>
+    <div class="flex items-center gap-3"><a href="reserve.html" class="hidden border border-[#e7b7a0] px-4 py-2 text-xs uppercase tracking-[0.16em] text-[#e7b7a0] sm:inline">Reserve</a><button id="menuBtn" class="border border-[#e7b7a0]/40 px-3 py-1 text-xs uppercase tracking-[0.16em] md:hidden" aria-expanded="false">Menu</button></div>
+    <nav id="nav" class="hidden basis-full flex-col gap-3 border-t pt-3 text-sm md:flex md:basis-auto md:flex-row md:items-center md:gap-7 md:border-0 md:pt-0 flex"><a href="index.html">Tonight</a><a href="menu.html">Menu</a><a href="visit.html">Visit</a><a href="reserve.html" aria-current="page">Reserve</a></nav>
+  </div>
+</header><main class="mx-auto grid max-w-6xl gap-12 px-5 py-14 sm:px-8 lg:grid-cols-2">
+  <div><h1 class="font-display text-6xl italic">Reserve a table.</h1><p class="mt-4 text-[#e6d5cb]">We confirm by email the same day. A table is held for fifteen minutes past the seating. Parties larger than six should write rather than use this form.</p><p class="mt-6 text-sm">Tuesday to Sunday · 18:30 or 21:00<br />table@marrow.pt</p></div>
+  <form id="reserve" class="space-y-4">
+    <label class="block text-sm">Name<input required name="name" class="mt-1 w-full border border-white/20 bg-transparent px-3 py-3" /></label>
+    <label class="block text-sm">Email<input required type="email" name="email" class="mt-1 w-full border border-white/20 bg-transparent px-3 py-3" /></label>
+    <div class="grid grid-cols-2 gap-3">
+      <label class="block text-sm">Party<select name="size" class="mt-1 w-full border border-white/20 bg-[#1a0e10] px-3 py-3"><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option></select></label>
+      <label class="block text-sm">Seating<select name="time" class="mt-1 w-full border border-white/20 bg-[#1a0e10] px-3 py-3"><option>18:30</option><option>21:00</option></select></label>
+    </div>
+    <label class="block text-sm">Date<input required type="date" name="date" class="mt-1 w-full border border-white/20 bg-transparent px-3 py-3" /></label>
+    <label class="block text-sm">Notes<textarea name="notes" rows="3" class="mt-1 w-full border border-white/20 bg-transparent px-3 py-3" placeholder="Allergies, a wish for the kitchen seats"></textarea></label>
+    <button class="bg-[#e7b7a0] px-6 py-3 text-sm uppercase tracking-[0.16em] text-[#1a0e10]">Request the table</button>
+  </form>
+</main>
+<script>
+document.getElementById("reserve").addEventListener("submit", (event) => {
+  event.preventDefault();
+  sessionStorage.setItem("marrow-reserve", JSON.stringify(Object.fromEntries(new FormData(event.currentTarget))));
+  location.href = "reserved.html";
+});
+</script><footer class="border-t border-white/10 text-[#e6d5cb]"><div class="mx-auto grid max-w-6xl gap-6 px-5 py-10 text-sm sm:px-8 md:grid-cols-3"><div><p class="font-display text-3xl text-[#f6efe8]">Marrow</p><p class="mt-2">Largo da Estação 2<br />5085-037 Pinhão</p></div><div><p>Dinner Tuesday to Sunday. Closed Monday.</p><p class="mt-2">Seatings at 18:30 and 21:00.</p></div><div><span >table@marrow.pt</span><br />+351 21 394 1180</div></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-labelledby="t">
+  <title id="t">Illustrated map: Grin Lane Dental on W Juniper Lane, by Hyde Park and the Route 9 bus stop</title>
+  <rect width="640" height="640" fill="#f3f2ff"/>
+  <rect x="300" y="36" width="250" height="118" rx="28" fill="#d0f5e7"/>
+  <g fill="#6fd9b8"><circle cx="336" cy="70" r="15"/><circle cx="376" cy="118" r="18"/><circle cx="512" cy="72" r="14"/><circle cx="520" cy="122" r="12"/></g>
+  <text x="446" y="104" text-anchor="middle" font-family="Nunito, 'Arial Rounded MT Bold', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="800" fill="#136b53">Hyde Park</text>
+  <g fill="#fff">
+    <rect x="70" y="36" width="194" height="118" rx="24"/>
+    <rect x="70" y="190" width="194" height="102" rx="24"/>
+    <rect x="300" y="190" width="250" height="102" rx="24"/>
+    <rect x="70" y="340" width="194" height="150" rx="24"/>
+    <rect x="300" y="340" width="250" height="150" rx="24"/>
+  </g>
+  <g stroke="#fff" stroke-width="26" stroke-linecap="round" fill="none"><path d="M-20 316h680"/><path d="M282 -20v540"/><path d="M-20 172h680"/></g>
+  <g stroke="#e6e4ff" stroke-width="3" stroke-dasharray="10 12" fill="none"><path d="M0 316h640"/><path d="M282 0v520"/><path d="M0 172h640"/></g>
+  <g font-family="Nunito, 'Arial Rounded MT Bold', 'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="800" fill="#5e5b85" letter-spacing="1">
+    <text x="110" y="321">W JUNIPER LANE</text>
+    <text x="318" y="321">W JUNIPER LANE</text>
+    <text x="287" y="470" transform="rotate(-90 287 470)">N 13TH ST</text>
+  </g>
+  <rect x="336" y="206" width="120" height="70" rx="16" fill="#e6e4ff"/>
+  <rect x="320" y="360" width="140" height="112" rx="20" fill="#fff" stroke="#cfcbff" stroke-width="3" stroke-dasharray="7 7"/>
+  <rect x="371" y="397" width="38" height="38" rx="10" fill="#5146d4"/>
+  <path d="M384 427v-22h8a6.5 6.5 0 0 1 0 13h-8" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="526" cy="316" r="18" fill="#ffdc4f" stroke="#1d1a4d" stroke-width="3.5"/>
+  <text x="526" y="322" text-anchor="middle" font-family="Nunito, 'Arial Rounded MT Bold', 'Helvetica Neue', Arial, sans-serif" font-size="17" font-weight="900" fill="#1d1a4d">9</text>
+  <ellipse cx="396" cy="290" rx="26" ry="7" fill="#1d1a4d" opacity=".15"/>
+  <path d="M396 290s-40-36-40-70a40 40 0 0 1 80 0c0 34-40 70-40 70Z" fill="#d42e63" stroke="#1d1a4d" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="396" cy="220" r="23" fill="#fff"/>
+  <path d="M396 210c-3-2.5-10-3-12 3-1 5 1 8 2 12s1 11 4 11 2.6-7.5 6-7.5 3 7.5 6 7.5 3-7 4-11 3-7 2-12c-2-6-9-5.5-12-3Z" fill="#5146d4"/>
+  <path d="M0 560c90-24 160 12 240-6s140-52 230-40 120 30 170 22v104H0Z" fill="#cfeee3"/>
+  <path d="M0 596c90-18 160 14 240-4s140-52 230-40 120 28 170 20" fill="none" stroke="#9fd6f2" stroke-width="24" stroke-linecap="round"/>
+  <rect x="198" y="500" width="244" height="52" rx="26" fill="#1d1a4d"/>
+  <text x="320" y="533" text-anchor="middle" font-family="Fredoka, Nunito, 'Arial Rounded MT Bold', 'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="700" fill="#fff">Grin Lane Dental</text>
+</svg>

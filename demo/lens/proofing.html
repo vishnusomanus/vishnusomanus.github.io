@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Client proofing — Ines Morrow Photography</title>
+  <meta name="description" content="A client proofing gallery: choose favorite photographs for the album.">
+  <meta name="theme-color" content="#f5f2ec">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ines Morrow Photography">
+  <meta property="og:title" content="Client proofing — Ines Morrow Photography">
+  <meta property="og:description" content="A client proofing gallery: choose favorite photographs for the album.">
+  <meta property="og:image" content="assets/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..700&amp;family=Hanken+Grotesk:wght@400..700&amp;display=swap">
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="antialiased" data-page="proofing">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container-x flex h-20 items-center justify-between gap-6">
+      <a href="index.html" class="leading-none">
+        <span class="block font-display text-2xl tracking-tight">Ines Morrow</span>
+        <span class="kicker mt-1 block text-[.62rem] opacity-80">Photography</span>
+      </a>
+      <nav aria-label="Main" class="hidden lg:block">
+        <ul class="flex items-center gap-9"><li><a href="portfolio.html" class="nav-link">Portfolio</a></li><li><a href="stories.html" class="nav-link">Stories</a></li><li><a href="packages.html" class="nav-link">Packages</a></li><li><a href="proofing.html" class="nav-link" aria-current="page">Client proofing</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul>
+      </nav>
+      <button type="button" class="-mr-2 grid size-11 place-items-center lg:hidden" data-menu-button aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true"><path d="M3 9h20M3 17h20" stroke="currentColor" stroke-width="1.5"/></svg></button>
+    </div>
+    <div id="mobile-menu" class="fixed inset-x-0 top-20 bottom-0 overflow-y-auto bg-paper text-ink lg:hidden" hidden>
+      <nav aria-label="Mobile" class="container-x pt-4 pb-12">
+        <ul><li><a href="portfolio.html" class="flex items-baseline justify-between border-b border-line py-5 font-display text-4xl">Portfolio<span class="kicker text-muted">01</span></a></li><li><a href="stories.html" class="flex items-baseline justify-between border-b border-line py-5 font-display text-4xl">Stories<span class="kicker text-muted">02</span></a></li><li><a href="packages.html" class="flex items-baseline justify-between border-b border-line py-5 font-display text-4xl">Packages<span class="kicker text-muted">03</span></a></li><li><a href="proofing.html" class="flex items-baseline justify-between border-b border-line py-5 font-display text-4xl" aria-current="page">Client proofing<span class="kicker text-muted">04</span></a></li><li><a href="contact.html" class="flex items-baseline justify-between border-b border-line py-5 font-display text-4xl">Contact<span class="kicker text-muted">05</span></a></li></ul>
+        <p class="mt-10 text-muted">Now booking <span data-year-ahead="1">2027</span> weddings.</p>
+        <a href="mailto:studio@inesmorrow.example" class="mt-2 inline-block text-lg">studio@inesmorrow.example</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="container-x pt-16 pb-10 sm:pt-24">
+      <p class="kicker text-rust reveal">Client proofing</p>
+      <h1 class="mt-5 text-5xl leading-[1.04] tracking-tight sm:text-7xl reveal">Choose your album photos</h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-muted reveal">Giulia &amp; Theo, here are your favorites from the shortlist. Tap the heart on up to <strong class="text-ink">15</strong> photographs for the linen album. Your choices are saved in this browser until you send them.</p>
+      <p class="mt-4 text-sm text-muted reveal">Take your time: you can change your choices and send the selection again until I start laying out the album.</p>
+    </section>
+    <div class="sticky top-20 z-30 border-y border-line bg-paper/95 backdrop-blur">
+      <div class="container-x flex flex-wrap items-center justify-between gap-4 py-4">
+        <div class="min-w-48 flex-1">
+          <p class="text-sm" aria-live="polite"><strong data-proof-count>0</strong> of 15 selected <span class="text-muted" data-proof-hint></span></p>
+          <div class="mt-2 h-1 bg-line" aria-hidden="true"><div class="h-1 bg-rust transition-all" style="width:0%" data-proof-bar></div></div>
+        </div>
+        <div class="flex flex-wrap gap-2" role="group" aria-label="Show">
+          <button type="button" class="chip" data-proof-view="all" aria-pressed="true">All 24</button>
+          <button type="button" class="chip" data-proof-view="selected" aria-pressed="false">Selected</button>
+        </div>
+        <div class="flex gap-2">
+          <button type="button" class="btn btn-ghost px-4 py-2.5" data-proof-clear>Clear</button>
+          <button type="button" class="btn btn-solid px-4 py-2.5" data-proof-submit>Send selection</button>
+        </div>
+      </div>
+    </div>
+    <section class="container-x py-10" aria-label="Proofing photographs">
+      <p class="mb-6 hidden border border-rust p-4 text-sm" role="status" data-proof-message></p>
+      <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4" data-proof-grid>
+        <figure class="proof-card reveal" data-proof="catalina-vows-01" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/catalina-vows-01.svg" alt="Pastel houses stacked on a hillside above a calm blue bay at sunrise" width="1200" height="800" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 1"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2400</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="catalina-vows-02" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/catalina-vows-02.svg" alt="Two gold wedding rings resting on cream linen" width="960" height="1200" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 2"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2407</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="catalina-vows-03" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/catalina-vows-03.svg" alt="A couple standing at a white terrace railing above the sea" width="800" height="1200" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 3"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2414</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="catalina-vows-04" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/catalina-vows-04.svg" alt="Bright lemons with leaves scattered on a white tablecloth" width="1000" height="1000" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 4"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2421</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="catalina-vows-05" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/catalina-vows-05.svg" alt="Warm evening light over the bay and a hillside of houses" width="1200" height="800" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 5"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2428</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="catalina-vows-06" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/catalina-vows-06.svg" alt="A bouquet of blush and white roses with green stems" width="800" height="1200" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 6"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2435</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="catalina-vows-07" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/catalina-vows-07.svg" alt="The couple leaning on a railing with the sea behind them" width="960" height="1200" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 7"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2442</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="catalina-vows-08" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/catalina-vows-08.svg" alt="A ferry crossing the bay at dusk, with lights reflecting on the water" width="1200" height="800" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 8"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2449</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="catalina-vows-09" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/catalina-vows-09.svg" alt="The hillside town glowing above the bay at dusk" width="800" height="1200" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 9"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2456</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="rainier-elopement-01" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/rainier-elopement-01.svg" alt="A snow-capped volcano above misty ridges, with a couple small in the foreground" width="1200" height="800" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 10"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2463</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="rainier-elopement-02" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/rainier-elopement-02.svg" alt="A couple walking across an alpine meadow under gray cloud" width="800" height="1200" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 11"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2470</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="rainier-elopement-03" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/rainier-elopement-03.svg" alt="A couple beside a still mountain lake in soft fog" width="960" height="1200" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 12"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2477</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="rainier-elopement-04" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/rainier-elopement-04.svg" alt="Pale light breaking through cloud over mountain ridges" width="1200" height="800" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 13"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2484</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="rainier-elopement-05" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/rainier-elopement-05.svg" alt="A bride&#x27;s veil lifting in the wind against mountains" width="1000" height="1000" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 14"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2491</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="rainier-elopement-06" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/rainier-elopement-06.svg" alt="Two figures descending a slope with mountains behind" width="800" height="1200" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 15"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2498</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="rainier-elopement-07" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/rainier-elopement-07.svg" alt="Dark mountain layers fading into evening mist" width="1200" height="800" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 16"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2505</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="rainier-elopement-08" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/rainier-elopement-08.svg" alt="The couple sheltering together on a mountainside" width="960" height="1200" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 17"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2512</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="fieldwork-01" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/fieldwork-01.svg" alt="A figure standing in a wheat field backlit by a low sun" width="1200" height="800" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 18"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2519</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="fieldwork-02" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/fieldwork-02.svg" alt="A woman in a summer dress in a golden field" width="800" height="1200" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 19"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2526</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="fieldwork-03" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/fieldwork-03.svg" alt="A sun flare over a wheat field at sunset" width="960" height="1200" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 20"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2533</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="fieldwork-04" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/fieldwork-04.svg" alt="A silhouette walking through tall grass at golden hour" width="1200" height="800" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 21"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2540</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="fieldwork-05" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/fieldwork-05.svg" alt="A man standing in a field with the sun behind him" width="800" height="1200" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 22"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2547</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="fieldwork-06" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/fieldwork-06.svg" alt="An empty golden field under a hazy orange sky" width="1000" height="1000" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 23"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2554</span><span data-proof-state></span></figcaption>
+        </figure>
+        <figure class="proof-card reveal" data-proof="fieldwork-07" data-selected="false">
+          <div class="frame relative"><img src="assets/img/photos/fieldwork-07.svg" alt="Close view of wheat stalks glowing in sunset light" width="960" height="1200" loading="lazy" decoding="async" class="">
+            <button type="button" class="proof-toggle" data-proof-toggle aria-pressed="false" aria-label="Select photo 24"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path class="heart-fill" d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="currentColor"/><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.6 1.1 5 3 1.4-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg></button>
+          </div>
+          <figcaption class="mt-2 flex justify-between text-xs text-muted"><span>IMG_2561</span><span data-proof-state></span></figcaption>
+        </figure></div>
+      <p class="py-16 text-center text-muted" data-proof-empty hidden>You haven't selected any photographs yet.</p>
+    </section>
+    <section class="container-x pb-24" hidden data-proof-done tabindex="-1" aria-labelledby="proof-done-title">
+      <div class="border border-ink bg-[#fffdf9] p-8 sm:p-12">
+        <p class="kicker text-rust">Thank you</p>
+        <h2 id="proof-done-title" class="mt-3 font-display text-4xl">Selection received</h2>
+        <p class="mt-3 max-w-xl text-muted" data-proof-done-text></p>
+        <p class="mt-2 text-sm text-muted">Your reference is <span class="text-ink" data-proof-ref></span>. I&rsquo;ll send you a first layout of the album to approve within three weeks.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="on-dark bg-ink text-paper">
+    <div class="container-x grid gap-12 py-20 lg:grid-cols-12">
+      <div class="lg:col-span-7">
+        <p class="kicker text-sand">Now booking <span data-year-ahead="1">2027</span></p>
+        <p class="mt-5 max-w-xl font-display text-4xl leading-tight sm:text-5xl">Tell me about the day you want to remember.</p>
+        <a href="contact.html" class="btn btn-ghost mt-9">Start an inquiry <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg></a>
+      </div>
+      <div class="grid gap-8 text-sm sm:grid-cols-2 lg:col-span-5 lg:pl-10">
+        <div>
+          <p class="kicker text-mist">Explore</p>
+          <ul class="mt-4 space-y-2.5"><li><a class="hover:text-sand" href="portfolio.html">Portfolio</a></li><li><a class="hover:text-sand" href="stories.html">Stories</a></li><li><a class="hover:text-sand" href="packages.html">Packages</a></li><li><a class="hover:text-sand" href="proofing.html">Client proofing</a></li><li><a class="hover:text-sand" href="contact.html">Contact</a></li></ul>
+        </div>
+        <div>
+          <p class="kicker text-mist">Studio</p>
+          <address class="mt-4 space-y-2.5 not-italic">
+            <p>471 Van Buren Street<br>Monterey, CA 93940</p>
+            <p><a class="break-all hover:text-sand" href="mailto:studio@inesmorrow.example">studio@inesmorrow.example</a></p>
+            <p><a class="hover:text-sand" href="#">Instagram</a> · <a class="hover:text-sand" href="#">Pinterest</a></p>
+          </address>
+        </div>
+      </div>
+    </div>
+    <div class="container-x flex flex-wrap justify-between gap-3 border-t border-white/10 py-6 text-xs text-mist">
+      <p>© <span data-year>2026</span> Ines Morrow Photography. All photographs are illustrations for this template.</p>
+      <p>Weddings · Portraits · Travel</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

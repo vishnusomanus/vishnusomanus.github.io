@@ -1,0 +1,197 @@
+/* Heatloop — Tailwind CSS v4 source.
+   Rebuild with `npm run build` (writes assets/css/style.css) after adding new utility classes. */
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+@source not "../assets/press";
+
+/* Dark mode follows the .dark class on <html> (set in <head> and by the theme toggle). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---- Colour tokens: edit these to re-brand the whole site ---- */
+:root {
+  --paper: #f5f2ea;      /* page background, off-white paper */
+  --paper-2: #ece7da;    /* panels, table stripes */
+  --paper-3: #e1dac8;    /* deeper panels, chart grid */
+  --ink: #14251d;        /* text and line drawings: green-black ink */
+  --muted: #4d5a52;      /* secondary text */
+  --rule: #c9c1ad;       /* thin rules */
+  --forest: #1f4a37;     /* brand green: buttons, charge state */
+  --forest-2: #2b6149;
+  --copper: #8c4f17;     /* accent text and links (AA on paper) */
+  --ochre: #c98a3a;      /* decorative heat, tariff line */
+  --ember: #d4682a;      /* charging heat, decorative only */
+  --field: #fbf9f4;      /* form inputs */
+  --danger: #a3301c;
+  color-scheme: light;
+}
+.dark {
+  --paper: #0c1511;
+  --paper-2: #122019;
+  --paper-3: #1a2c23;
+  --ink: #e8e5da;
+  --muted: #a8b3aa;
+  --rule: #2c4035;
+  --forest: #7cc29d;
+  --forest-2: #9bd3b4;
+  --copper: #e3a663;
+  --ochre: #e0a052;
+  --ember: #ee8a4c;
+  --field: #0f1b15;
+  --danger: #ff9a85;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-paper-3: var(--paper-3);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-forest: var(--forest);
+  --color-forest-2: var(--forest-2);
+  --color-copper: var(--copper);
+  --color-ochre: var(--ochre);
+  --color-ember: var(--ember);
+  --color-field: var(--field);
+  --color-danger: var(--danger);
+}
+
+@theme {
+  /* Fixed colours that don't flip with the theme: the deep green band and the cream on it. */
+  --color-pine: #163829;
+  --color-pine-deep: #0f2a1e;
+  --color-cream: #f5f2ea;
+  --color-wheat: #e8bb78;   /* labels on the green band */
+
+  --font-serif: "Hedvig Letters Serif", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  --font-sans: "Hedvig Letters Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  --ease-soft: cubic-bezier(.2, .8, .2, 1);
+}
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; }
+  @media (prefers-reduced-motion: no-preference) {
+    html:focus-within { scroll-behavior: smooth; }
+  }
+  body {
+    @apply bg-paper font-sans text-[1.0625rem] leading-relaxed text-ink antialiased;
+    /* Hedvig ships one weight: never fake bold or italics. */
+    font-synthesis: none;
+  }
+  ::selection { background: var(--forest); color: var(--paper); }
+  :focus-visible { outline: 2px solid var(--copper); outline-offset: 3px; }
+  h1, h2, h3 { text-wrap: balance; }
+  [id] { scroll-margin-top: 6rem; }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  img, svg { max-width: 100%; }
+  [hidden] { display: none !important; }
+  dialog { color: inherit; }
+  code, kbd, samp { font-family: var(--font-mono); }
+}
+
+/* Buttons: square, thin-ruled, quiet. */
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 border px-5 py-2.5 font-mono text-[0.86rem] font-medium uppercase tracking-[0.08em] whitespace-nowrap transition duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-[78rem] px-5 sm:px-8; }
+
+  .btn-primary { @apply btn border-forest bg-forest text-paper hover:border-ink hover:bg-ink; }
+  .btn-line { @apply btn border-ink/70 text-ink hover:bg-ink hover:text-paper; }
+  .btn-cream { @apply btn border-cream bg-cream text-pine hover:bg-transparent hover:text-cream; }
+  .btn-sm { @apply px-3.5 py-1.5 text-[0.78rem]; }
+
+  /* Editorial type */
+  .display { @apply font-serif leading-[1.04] tracking-[-0.015em]; }
+  .label { @apply font-mono text-[0.78rem] font-medium uppercase tracking-[0.14em] text-copper; }
+  .label-muted { @apply font-mono text-[0.78rem] uppercase tracking-[0.12em] text-muted; }
+  .lede { @apply text-lg leading-relaxed text-muted sm:text-xl; }
+  .link { @apply underline decoration-copper/50 decoration-1 underline-offset-4 transition hover:decoration-copper hover:decoration-2; }
+
+  /* Numbered section heads: "01 — How it works" with a hairline. */
+  .section-head { @apply flex items-center gap-4 border-t border-ink pt-3; }
+  .section-no { @apply font-mono text-[0.78rem] font-medium tracking-[0.12em] text-copper; }
+
+  /* Panels and figures */
+  .panel { @apply border border-rule bg-paper-2/60; }
+  .figure { @apply border border-rule bg-paper; }
+  .tick { @apply font-mono text-[0.7rem] tracking-[0.06em] text-muted; }
+  .chip { @apply inline-flex items-center gap-1.5 border border-current px-2 py-0.5 font-mono text-[0.72rem] uppercase tracking-[0.1em]; }
+
+  /* Forms */
+  .field-label { @apply mb-1.5 block font-mono text-[0.8rem] font-medium uppercase tracking-[0.08em] text-ink; }
+  .field-hint { @apply mt-1 text-[0.95rem] text-muted; }
+  .field {
+    @apply w-full border border-ink/50 bg-field px-3.5 py-2.5 text-base text-ink transition placeholder:text-muted focus:border-forest focus:outline-none focus:ring-2 focus:ring-forest/30;
+  }
+  .field[aria-invalid="true"] { @apply border-danger ring-2 ring-danger/20; }
+  .field-error { @apply mt-1.5 text-[0.95rem] text-danger; }
+  .field-error:empty { display: none; }
+
+  /* Pressable chips (filters, model pickers) */
+  .toggle { @apply inline-flex items-center gap-2 border border-ink/40 px-3.5 py-1.5 font-mono text-[0.8rem] uppercase tracking-[0.08em] text-ink transition hover:border-ink; }
+  .toggle[aria-pressed="true"] { @apply border-forest bg-forest text-paper; }
+
+  /* Radio cards */
+  .choice { @apply relative flex cursor-pointer flex-col border border-rule bg-paper p-5 transition hover:border-ink; }
+  .choice:has(input:checked) { @apply border-forest ring-1 ring-forest; }
+  .choice:has(input:focus-visible) { outline: 2px solid var(--copper); outline-offset: 3px; }
+
+  /* Wizard steps */
+  .step-dot { @apply grid h-8 w-8 place-items-center rounded-full border border-ink/50 font-mono text-sm text-muted; }
+  [data-step-state="current"] .step-dot { @apply border-forest bg-forest text-paper; }
+  [data-step-state="done"] .step-dot { @apply border-forest text-forest; }
+
+  /* Tables */
+  .spec th, .spec td { @apply border-b border-rule px-3 py-3 text-left align-top; }
+  .spec thead th { @apply border-b border-ink font-mono text-[0.78rem] font-medium uppercase tracking-[0.1em] text-muted; }
+
+  /* Dialog */
+  .sheet { @apply m-auto max-h-[calc(100dvh-2rem)] w-[min(44rem,calc(100%-1.5rem))] overflow-y-auto border border-ink bg-paper p-0 text-ink; }
+  .sheet::backdrop { background: rgb(12 21 17 / .6); }
+
+  /* Line drawings that follow the theme */
+  .draw { fill: none; stroke: currentColor; stroke-width: 1.4; stroke-linecap: round; stroke-linejoin: round; }
+  .hatch { fill: url(#hatch); }
+}
+
+/* Charge diagram cursor and running dot */
+.pulse { animation: pulse 2.2s ease-out infinite; transform-origin: center; transform-box: fill-box; }
+@keyframes pulse { from { transform: scale(1); opacity: .7; } to { transform: scale(2.8); opacity: 0; } }
+.flow { stroke-dasharray: 4 6; animation: flow 1.6s linear infinite; }
+@keyframes flow { to { stroke-dashoffset: -20; } }
+
+/* Scroll reveal: only hidden when JS is running and motion is allowed. */
+.js .reveal { opacity: 0; transform: translateY(12px); transition: opacity .8s var(--ease-soft), transform .8s var(--ease-soft); }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
+.menu-open { overflow: hidden; }
+
+/* Back to top button (created by assets/js/main.js). Remove this block to drop it. */
+@layer components {
+  .back-to-top {
+    position: fixed; z-index: 40;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px));
+    display: grid; place-items: center; width: 2.75rem; height: 2.75rem; padding: 0; cursor: pointer;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, visibility 0s linear .25s;
+    border: 1px solid var(--ink); background: var(--paper); color: var(--ink);
+  }
+  .back-to-top svg { width: 1.1rem; height: 1.1rem; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top:hover { background: var(--ink); color: var(--paper); }
+  .back-to-top-target:focus { outline: none; }
+  @media print { .back-to-top { display: none !important; } }
+}

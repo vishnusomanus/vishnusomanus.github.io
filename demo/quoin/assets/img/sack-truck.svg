@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 330" width="400" height="330" fill="none">
+  <rect width="400" height="330" fill="#e6e5d7"/>
+  <path d="M0 292h400" stroke="#c1c5b1"/>
+  <path d="M24 300h70m40 0h60m60 0h120" stroke="#cfd0c0" stroke-dasharray="2 6"/>
+  <ellipse cx="200" cy="294" rx="120" ry="9" fill="#cfcab8"/>
+  <!-- the hand truck frame -->
+  <g stroke="#2f4335" stroke-width="7" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M118 40q-8 0-8 10v10q0 8 8 8"/>
+    <path d="M118 40l26 238"/>
+    <path d="M140 46l26 232" stroke-width="5"/>
+    <path d="M144 278h112"/>
+  </g>
+  <path d="M120 120l24-3m-14 73 24-3" stroke="#2f4335" stroke-width="4" stroke-linecap="round"/>
+  <!-- door leaning on the frame -->
+  <g stroke="#514f3f" stroke-width="2" stroke-linejoin="round">
+    <path d="M150 58l70-8 26 222-70 6z" fill="#9c7650"/>
+    <path d="M160 70l22-3 9 78-22 3zm30-4 22-3 9 78-22 3zm-18 94 22-3 11 94-22 3zm31-4 22-3 11 94-22 3z" fill="#b7976d"/>
+  </g>
+  <circle cx="232" cy="160" r="3.5" fill="#4a4437"/>
+  <!-- box of encaustic tiles on the toe plate -->
+  <g stroke="#514f3f" stroke-width="2" stroke-linejoin="round">
+    <path d="M196 214h84v64h-84z" fill="#c9a77a"/>
+    <path d="M196 214l12-12h84l-12 12z" fill="#dcc097"/>
+    <path d="M280 214l12-12v64l-12 12z" fill="#ad8a5e"/>
+    <path d="M210 226h36v36h-36z" fill="#efe5cf"/>
+  </g>
+  <path d="M228 230q-8 14 0 28m-14-14q14-8 28 0" stroke="#6e795a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M210 226l9 0-9 9zm36 0v9l-9-9zm-36 36v-9l9 9zm36 0h-9l9-9z" fill="#7e4035"/>
+  <circle cx="228" cy="244" r="4" fill="#6e795a"/>
+  <!-- a lantern standing on the box -->
+  <g stroke="#3d3a30" stroke-width="2" stroke-linejoin="round">
+    <path d="M247 168h26l6 12h-38z" fill="#8a5b43"/>
+    <path d="M245 180h30l-3 22h-24z" fill="#c9d5cc"/>
+    <path d="M246 202h28v4h-28z" fill="#3d3a30"/>
+  </g>
+  <path d="M260 160v8m-6-12h12" stroke="#3d3a30" stroke-width="2"/>
+  <path d="M256 186h8v14h-8z" fill="#e8c77e"/>
+  <!-- strap -->
+  <path d="M136 150l112-14" stroke="#7e4035" stroke-width="5" stroke-linecap="round"/>
+  <path d="M232 138h12v8h-12z" fill="#c4a463" stroke="#514f3f" stroke-width="1.5"/>
+  <!-- wheel -->
+  <circle cx="152" cy="276" r="24" fill="#3a3d33" stroke="#2f4335" stroke-width="3"/>
+  <circle cx="152" cy="276" r="11" fill="#b9bba7" stroke="#2f4335" stroke-width="2"/>
+  <circle cx="152" cy="276" r="3" fill="#2f4335"/>
+  <!-- lot ticket on string -->
+  <path d="M118 66q18 22 6 46" stroke="#7a705c" stroke-width="1.5"/>
+  <path d="M110 112l28-6 6 26-28 6z" fill="#f3efe5" stroke="#7a705c" stroke-width="1.5"/>
+  <circle cx="122" cy="113" r="2" fill="#7a705c"/>
+  <text x="117" y="131" fill="#7e4035" font-family="Sarabun, Arial, sans-serif" font-size="9" letter-spacing="1" transform="rotate(-12 117 131)">401</text>
+</svg>

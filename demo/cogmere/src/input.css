@@ -1,0 +1,218 @@
+@import "tailwindcss" source("../");
+@theme {
+  --color-ink: #101828;
+  --color-blue: #1747d1;
+  --color-acid: #e8f65b;
+  --color-mist: #edf1ff;
+  --color-paper: #fbfcff;
+  --color-line: #c6cddc;
+  --color-muted: #48566d;
+  --font-display: "Chivo", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Spline Sans", ui-sans-serif, system-ui, sans-serif;
+}
+@layer base {
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+  }
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+  }
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    -webkit-tap-highlight-color: transparent;
+  }
+  button,
+  a {
+    touch-action: manipulation;
+  }
+  button {
+    cursor: pointer;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-blue);
+    outline-offset: 4px;
+  }
+  .bg-blue :focus-visible,
+  .bg-ink :focus-visible {
+    outline-color: var(--color-acid);
+  }
+  [hidden] {
+    display: none !important;
+  }
+  ::selection {
+    background: var(--color-acid);
+    color: var(--color-ink);
+  }
+}
+@layer components {
+  .wrap {
+    width: min(1280px, calc(100% - 2.5rem));
+    margin-inline: auto;
+  }
+  .btn {
+    display: inline-flex;
+    min-height: 3rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    padding: 0.8rem 1.25rem;
+    font-weight: 650;
+    line-height: 1.25;
+    border: 1px solid var(--color-ink);
+    background: var(--color-ink);
+    color: white;
+    transition:
+      background 0.2s,
+      color 0.2s;
+  }
+  .btn:hover {
+    background: var(--color-blue);
+    border-color: var(--color-blue);
+  }
+  .btn-acid {
+    background: var(--color-acid);
+    color: var(--color-ink);
+  }
+  .btn-acid:hover {
+    background: white;
+    border-color: var(--color-ink);
+    color: var(--color-ink);
+  }
+  .btn-line {
+    color: var(--color-ink);
+    background: transparent;
+  }
+  .btn-line:hover {
+    color: white;
+  }
+  .btn-ghost {
+    color: white;
+    background: transparent;
+    border-color: white;
+  }
+  .btn-ghost:hover {
+    background: var(--color-acid);
+    border-color: var(--color-acid);
+    color: var(--color-ink);
+  }
+  .btn-small {
+    min-height: 2.5rem;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.875rem;
+  }
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 650;
+  }
+  .nav-link {
+    display: block;
+    padding: 0.65rem 0.6rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .nav-link:hover,
+  .nav-link[aria-current] {
+    color: var(--color-blue);
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+  }
+  .field {
+    display: block;
+    width: 100%;
+    min-height: 3rem;
+    border: 1px solid var(--color-muted);
+    padding: 0.7rem 0.85rem;
+    background: white;
+    color: var(--color-ink);
+    border-radius: 0;
+  }
+  .label {
+    display: block;
+    font-weight: 650;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+  }
+  .error {
+    color: #a21b23;
+    font-size: 0.875rem;
+    margin-top: 0.4rem;
+  }
+  .text-link {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+    font-weight: 650;
+  }
+  .text-link:hover {
+    color: var(--color-blue);
+  }
+  .chip {
+    border: 1px solid var(--color-line);
+    padding: 0.6rem 0.85rem;
+    font-size: 0.875rem;
+  }
+  .chip[aria-pressed="true"] {
+    background: var(--color-blue);
+    color: white;
+    border-color: var(--color-blue);
+  }
+  .service-card {
+    border: 1px solid var(--color-line);
+    background: white;
+    transition:
+      border-color 0.2s,
+      transform 0.2s;
+  }
+  .service-card:hover {
+    border-color: var(--color-blue);
+    transform: translateY(-3px);
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+      opacity 0.5s,
+      transform 0.5s;
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  summary {
+    cursor: pointer;
+  }
+  input[type="checkbox"],
+  input[type="radio"] {
+    accent-color: var(--color-blue);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+}

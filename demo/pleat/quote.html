@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Build your alteration estimate — Pleat, Alexandria</title>
+    <meta
+      name="description"
+      content="Build a clear alteration estimate for several garments, choose finishes and save a wardrobe repair plan before visiting Pleat in Alexandria."
+    />
+    <meta name="theme-color" content="#172b3a" />
+    <meta property="og:title" content="Build your alteration estimate — Pleat" />
+    <meta
+      property="og:description"
+      content="Build a clear alteration estimate for several garments, choose finishes and save a wardrobe repair plan before visiting Pleat in Alexandria."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:url" content="https://pleat.example/quote.html" />
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400..700&amp;family=Prata&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body>
+    <a href="#main" class="fixed left-5 top-3 z-50 -translate-y-24 bg-paper px-4 py-3 font-semibold focus:translate-y-0"
+      >Skip to content</a
+    >
+    <div class="bg-ink text-paper">
+      <div class="wrap flex flex-wrap items-center justify-between gap-2 py-2 text-[11px] tracking-[.08em]">
+        <span>INDEPENDENT ALTERATIONS &amp; REPAIR</span><span>ALEXANDRIA, VIRGINIA</span>
+      </div>
+    </div>
+    <header class="relative z-40 border-b border-line bg-paper">
+      <div class="wrap flex h-23 items-center justify-between gap-3">
+        <a href="index.html" class="font-display text-4xl tracking-[-.07em]" aria-label="Pleat home"
+          >Pleat<span class="text-ochre">.</span></a
+        >
+        <nav class="hidden items-center gap-6 lg:flex" aria-label="Main">
+          <a class="nav-link" href="services.html">Services</a><a class="nav-link" href="work.html">Our work</a
+          ><a class="nav-link" href="studio.html">The studio</a><a class="nav-link" href="care.html">Clothes care</a
+          ><a class="nav-link" href="visit.html">Visit us</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="quote.html" class="hidden text-sm font-semibold underline underline-offset-4 sm:block"
+            >Your estimate <span data-plan-count class="text-ochre">0</span></a
+          ><a href="book.html" class="button px-4"
+            >Book a fitting
+            <svg
+              class="size-4 shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path d="M3 12h17m-7-7 7 7-7 7" /></svg></a
+          ><button
+            id="menu-toggle"
+            class="grid size-12 shrink-0 place-items-center border border-line lg:hidden"
+            aria-label="Open menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg
+              class="size-5"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              aria-hidden="true"
+            >
+              <path d="M3 7h18M3 12h18M3 17h18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" hidden class="wrap border-t border-line pb-5 lg:hidden" aria-label="Mobile">
+        <div class="border-b border-line py-2"><a class="nav-link" href="index.html">Home</a></div>
+        <div class="border-b border-line py-2"><a class="nav-link" href="services.html">Services</a></div>
+        <div class="border-b border-line py-2"><a class="nav-link" href="work.html">Our work</a></div>
+        <div class="border-b border-line py-2"><a class="nav-link" href="studio.html">The studio</a></div>
+        <div class="border-b border-line py-2"><a class="nav-link" href="care.html">Clothes care</a></div>
+        <div class="border-b border-line py-2"><a class="nav-link" href="visit.html">Visit us</a></div>
+        <div class="border-b border-line py-2">
+          <a class="nav-link" href="quote.html" aria-current="page">Your estimate</a>
+        </div>
+        <div class="border-b border-line py-2"><a class="nav-link" href="book.html">Book a fitting</a></div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="wrap grid gap-8 py-12 sm:py-16 lg:grid-cols-[1.45fr_.65fr] lg:items-end">
+        <div>
+          <p class="eyebrow text-ochre">03 / Your repair plan</p>
+          <h1 class="display mt-6 max-w-4xl text-5xl sm:text-6xl lg:text-7xl">
+            A useful estimate.<br />A wardrobe worth keeping.
+          </h1>
+          <p class="mt-7 max-w-xl text-lg leading-relaxed text-muted">
+            Add the pieces you want us to look at. Choose a finish, allow for delicate cloth and take a clear price
+            estimate to your fitting.
+          </p>
+        </div>
+        <figure class="relative max-w-sm lg:ml-auto">
+          <img src="assets/img/skirt.svg" alt="" class="w-full" width="530" height="520" />
+          <figcaption class="mt-2 text-[11px] uppercase tracking-[.14em] text-muted">
+            From the studio ledger / Pleat
+          </figcaption>
+        </figure>
+      </section>
+      <section class="wrap grid items-start gap-10 pb-16 lg:grid-cols-[1.05fr_.95fr]">
+        <div>
+          <form id="quote-add" novalidate class="border border-line bg-white p-5 sm:p-7">
+            <h2 class="display text-3xl">One garment at a time.</h2>
+            <label for="quote-service" class="label mt-7">The alteration</label
+            ><select id="quote-service" name="service" class="field"></select
+            ><label for="quote-finish" class="label mt-5">Finish or construction</label
+            ><select id="quote-finish" name="finish" class="field"></select>
+            <p class="hint" data-quote-finish-note></p>
+            <div class="mt-5 grid gap-5 sm:grid-cols-2">
+              <div>
+                <label for="quote-complexity" class="label">The cloth</label
+                ><select id="quote-complexity" name="complexity" class="field"></select>
+              </div>
+              <div>
+                <label for="quote-quantity" class="label">Number of garments</label
+                ><input
+                  id="quote-quantity"
+                  name="quantity"
+                  class="field"
+                  type="number"
+                  min="1"
+                  max="6"
+                  value="1"
+                  aria-describedby="quantity-error"
+                />
+                <p id="quantity-error" class="error"></p>
+              </div>
+            </div>
+            <p class="mt-6 border-t border-line pt-5 text-sm">
+              This line: <strong data-line-preview class="font-display text-2xl"></strong>
+            </p>
+            <button class="button mt-5" type="submit">Add garment to plan</button>
+            <p class="hint">Up to 12 garment lines. No payment is taken.</p>
+          </form>
+          <div class="mt-8">
+            <h2 class="display text-2xl">What the price includes</h2>
+            <p class="mt-4 leading-7 text-muted">
+              Pinning, the agreed alteration, matching thread, pressing and a pickup fitting. Replacement zipper and
+              lining materials are included in their listed prices. Extra work is discussed first.
+            </p>
+            <details class="mt-5 border-y border-line py-4">
+              <summary class="font-semibold">When is a fitting needed?</summary>
+              <p class="mt-4 text-sm leading-7 text-muted">
+                Anything changing the shape of a garment needs a fitting. For a straight repair or matching pants
+                length, bring a well-fitting reference pair. Bridal and major redesign work begins with an individual
+                consultation.
+              </p>
+            </details>
+          </div>
+        </div>
+        <aside class="border-t-4 border-ink bg-white p-5 sm:p-7" aria-labelledby="plan-title">
+          <div class="flex flex-wrap items-start justify-between gap-3">
+            <h2 id="plan-title" class="display text-3xl" tabindex="-1">Your repair plan</h2>
+            <button type="button" data-clear-plan class="text-link text-sm">Clear plan</button>
+          </div>
+          <p class="hint" data-plan-caption></p>
+          <div class="mt-6 divide-y divide-line" data-plan-items></div>
+          <label for="quote-urgency" class="label mt-6">When do you need it?</label
+          ><select id="quote-urgency" class="field"></select>
+          <p class="hint" data-urgency-note></p>
+          <dl class="mt-6 space-y-3 border-t border-line pt-6">
+            <div class="flex justify-between gap-3">
+              <dt>Alterations</dt>
+              <dd data-subtotal></dd>
+            </div>
+            <div class="flex justify-between gap-3">
+              <dt>Priority allowance</dt>
+              <dd data-surcharge></dd>
+            </div>
+            <div class="flex items-baseline justify-between gap-3 border-t border-line pt-4">
+              <dt class="font-semibold">Estimated total</dt>
+              <dd data-total class="font-display text-3xl"></dd>
+            </div>
+            <div class="flex justify-between gap-3 text-sm text-muted">
+              <dt>Usual turnaround</dt>
+              <dd data-turnaround></dd>
+            </div>
+          </dl>
+          <div class="mt-7 grid gap-3">
+            <button data-save-plan type="button" class="button">Save this repair plan</button
+            ><a class="button-line" href="book.html">Take it to a fitting</a
+            ><button data-print-plan type="button" class="text-link min-h-11 text-sm">Print your plan</button>
+          </div>
+          <p data-save-status class="hint" role="status"></p>
+          <p class="hint">No personal details are saved. Your plan stays in this browser when storage is available.</p>
+        </aside>
+      </section>
+    </main>
+    <footer class="on-dark bg-ink text-paper">
+      <div class="wrap grid gap-10 py-14 md:grid-cols-[1.2fr_1fr_1fr]">
+        <div>
+          <a class="font-display text-5xl tracking-[-.06em]" href="index.html">Pleat.</a>
+          <p class="mt-5 max-w-xs text-sm leading-relaxed text-paper/75">
+            For clothes you reach for.<br />For the pieces you cannot replace.<br />For many more wears.
+          </p>
+        </div>
+        <div>
+          <p class="eyebrow text-gold">Find the studio</p>
+          <p class="mt-4 text-sm leading-7">Second floor, Cameron Street<br />Alexandria, VA 22314</p>
+          <a href="visit.html" class="mt-3 inline-block text-sm underline underline-offset-4"
+            >Directions &amp; access</a
+          >
+        </div>
+        <div>
+          <p class="eyebrow text-gold">A word with us</p>
+          <a href="mailto:hello@pleat.example" class="mt-4 block text-sm">hello@pleat.example</a
+          ><a href="tel:+17035550138" class="mt-2 block text-sm">(703) 555-0138</a>
+          <p class="mt-4 text-sm text-paper/75">Tue–Fri 9:30am–5:30pm · Sat 10am–3pm</p>
+        </div>
+      </div>
+      <div class="wrap flex flex-wrap justify-between gap-4 border-t border-paper/20 py-5 text-xs text-paper/70">
+        <p>© <span data-year></span> Pleat. Made to be worn.</p>
+        <p>Pleat is a fictional business, created for Freeframe.</p>
+      </div>
+    </footer>
+    <div
+      id="toast"
+      hidden
+      role="status"
+      class="fixed bottom-5 left-5 right-5 z-50 border border-gold bg-ink p-4 text-sm text-paper shadow-xl sm:left-auto sm:max-w-sm"
+    ></div>
+  </body>
+</html>

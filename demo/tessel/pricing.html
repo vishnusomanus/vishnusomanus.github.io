@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pricing: free to start, pay as answers grow | Tessel</title>
+    <meta name="description" content="Tessel pricing in US dollars: free for 100 responses a month, Maker from $24 and Team from $59. Slide to your monthly responses to see what you'd pay, monthly or annually." />
+    <meta name="theme-color" content="#fbf3e4" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tessel" />
+    <meta property="og:title" content="Pricing: free to start, pay as answers grow | Tessel" />
+    <meta property="og:description" content="Tessel pricing in US dollars: free for 100 responses a month, Maker from $24 and Team from $59. Slide to your monthly responses to see what you'd pay, monthly or annually." />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&amp;family=Ubuntu+Sans:ital,wght@0,400..800;1,400&amp;family=Ubuntu+Sans+Mono:wght@400;600&amp;display=swap" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      (function () {
+        var d = document.documentElement, t = null;
+        d.classList.add("js");
+        try { t = localStorage.getItem("tessel:theme"); } catch (e) {}
+        if (t === "dark" || (t !== "light" && window.matchMedia("(prefers-color-scheme: dark)").matches)) d.classList.add("dark");
+      })();
+    </script>
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="pricing" class="flex min-h-screen flex-col">
+    <a href="#main" class="sr-only z-[90] rounded-lg border-2 border-line bg-butter px-4 py-3 font-bold text-coal focus:not-sr-only focus:fixed focus:top-3 focus:left-3">Skip to content</a>
+    <header class="sticky top-0 z-40 border-b-[2.5px] border-line bg-bg">
+      <div class="wrap flex min-h-[4.5rem] items-center justify-between gap-3">
+        <a href="index.html" class="wiggle flex items-center gap-2.5" aria-label="Tessel home"><svg viewBox="0 0 40 40" class="size-10 shrink-0" aria-hidden="true"><rect x="5" y="5" width="33" height="33" rx="5" fill="var(--color-line)"/><rect x="2" y="2" width="33" height="33" rx="5" fill="var(--color-card)" stroke="var(--color-line)" stroke-width="2.5"/><path d="M2 18.5h33M18.5 2v33" stroke="var(--color-line)" stroke-width="2.5"/><path d="M4.6 4.6h12.6v12.6H4.6z" fill="#ff6b42"/><path d="M19.8 4.6h12.6v12.6H19.8z" fill="#ffd84a"/><path d="M4.6 19.8h12.6v12.6H4.6z" fill="#a9b2ff"/><path d="M19.8 19.8h12.6v12.6H19.8z" fill="#86e2b6"/><circle cx="26.1" cy="26.1" r="3.2" fill="#16130f"/></svg><span class="font-display text-2xl tracking-tight">tessel</span></a>
+        <nav class="hidden xl:block" aria-label="Main">
+          <ul class="flex items-center gap-1">
+            <li><a class="nav-link" href="features.html">Features</a></li>
+            <li><a class="nav-link" href="templates.html">Templates</a></li>
+            <li><a class="nav-link" href="integrations.html">Integrations</a></li>
+            <li><a class="nav-link" href="pricing.html" aria-current="page">Pricing</a></li>
+            <li><a class="nav-link" href="customers.html">Customers</a></li>
+            <li><a class="nav-link" href="changelog.html">Changelog</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-2">
+          <button type="button" class="icon-btn" data-theme-toggle aria-pressed="false" aria-label="Dark mode">
+            <svg data-icon-moon viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+            <svg data-icon-sun viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M5.3 18.7l1.8-1.8M16.9 7.1l1.8-1.8"/></svg>
+          </button>
+          <a href="signup.html#signin" class="nav-link hidden sm:block">Sign in</a>
+          <a href="signup.html" class="btn btn-sm btn-tomato hidden sm:inline-flex">Start free</a>
+          <button id="menu-toggle" type="button" class="icon-btn xl:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+            <svg data-icon-open viewBox="0 0 24 24" class="size-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+            <svg data-icon-close viewBox="0 0 24 24" class="hidden size-5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" hidden class="border-t-[2.5px] border-line bg-bg-2 xl:hidden">
+        <nav class="wrap pt-2 pb-6" aria-label="Mobile">
+          <ul>
+          <li><a class="m-link" href="features.html">Features<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="templates.html">Templates<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="integrations.html">Integrations<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="pricing.html" aria-current="page">Pricing<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="customers.html">Customers<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="changelog.html">Changelog<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          <li><a class="m-link" href="contact.html">Talk to sales<svg viewBox="0 0 20 20" class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 10h10m-4-4 4 4-4 4"/></svg></a></li>
+          </ul>
+          <div class="mt-5 grid grid-cols-2 gap-3">
+            <a href="signup.html#signin" class="btn btn-plain">Sign in</a>
+            <a href="signup.html" class="btn btn-tomato">Start free</a>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <main id="main" tabindex="-1" class="flex-1 focus:outline-none">
+      <section class="grid-paper border-b-[2.5px] border-line">
+        <div class="wrap py-14 text-center sm:py-16">
+          <p class="sticker -rotate-2 bg-mint!">Pricing</p>
+          <h1 class="mx-auto mt-6 max-w-3xl font-display text-[2.5rem] leading-[1.03] sm:text-6xl">Pay for answers, not for fields.</h1>
+          <p class="mx-auto mt-6 max-w-2xl text-lg text-ink-soft sm:text-xl">Every plan has unlimited forms, fields and team members. Slide to how many responses you expect each month.</p>
+        </div>
+      </section>
+
+      <section class="py-12 sm:py-16" aria-labelledby="calc-title" data-pricing>
+        <div class="wrap">
+          <h2 id="calc-title" class="sr-only">Price calculator</h2>
+          <div class="card grid gap-6 p-5 sm:p-7 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-center">
+            <div>
+              <div class="flex flex-wrap items-baseline justify-between gap-2">
+                <label for="volume" class="text-lg font-extrabold">Responses per month</label>
+                <output for="volume" class="font-display text-3xl" data-volume-out>1,000</output>
+              </div>
+              <input id="volume" class="range mt-3" type="range" min="0" max="8" step="1" value="2" aria-valuetext="1,000 responses a month" data-volume>
+              <div class="relative mx-3.5 mt-1 h-4 font-mono text-xs font-semibold text-ink-soft" aria-hidden="true"><span class="absolute left-0 -translate-x-1/2">100</span><span class="absolute left-[37.5%] -translate-x-1/2">2,500</span><span class="absolute left-[62.5%] -translate-x-1/2">10k</span><span class="absolute left-[87.5%] -translate-x-1/2">50k</span><span class="absolute left-full -translate-x-1/2">100k</span></div>
+            </div>
+            <fieldset class="lg:pl-6">
+              <legend class="label mb-2">Billing</legend>
+              <div class="flex flex-wrap gap-2">
+                <label class="chip"><input class="sr-only" type="radio" name="billing" value="monthly">Monthly</label>
+                <label class="chip"><input class="sr-only" type="radio" name="billing" value="annual" checked>Annually <span class="rounded-full border-2 border-line bg-butter px-1.5 text-xs text-coal">save 20%</span></label>
+              </div>
+            </fieldset>
+          </div>
+
+          <ul class="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+            <li class="card flex flex-col p-6" data-plan="free">
+              <h3 class="font-display text-2xl">Free</h3>
+              <p class="mt-1 text-ink-soft">For trying things out and tiny clubs.</p>
+              <p class="mt-6 flex items-baseline gap-1"><span class="font-display text-5xl" data-price="free">$0</span><span class="font-semibold text-ink-soft">/mo</span></p>
+              <p class="mt-1 min-h-12 text-sm font-semibold" data-plan-note="free">100 responses a month</p>
+              <a href="signup.html?plan=free" class="btn btn-plain mt-5" data-plan-cta="free">Start free</a>
+              <ul class="mt-6 grid gap-2.5 text-[15px]">
+                <li class="flex gap-2"><span aria-hidden="true">&#9632;</span>Unlimited forms and fields</li>
+                <li class="flex gap-2"><span aria-hidden="true">&#9632;</span>Logic and calculations</li>
+                <li class="flex gap-2"><span aria-hidden="true">&#9632;</span>Payments (2.9% Tessel fee)</li>
+              </ul>
+            </li>
+            <li class="card flex flex-col p-6" data-plan="maker">
+              <h3 class="font-display text-2xl">Maker</h3>
+              <p class="mt-1 text-ink-soft">For freelancers and small shops.</p>
+              <p class="mt-6 flex items-baseline gap-1"><span class="font-display text-5xl" data-price="maker">$19</span><span class="font-semibold text-ink-soft">/mo</span></p>
+              <p class="mt-1 min-h-12 text-sm font-semibold" data-plan-note="maker">Billed $228 a year</p>
+              <a href="signup.html?plan=maker" class="btn btn-plain mt-5" data-plan-cta="maker">Start Maker</a>
+              <ul class="mt-6 grid gap-2.5 text-[15px]">
+                <li class="flex gap-2"><span aria-hidden="true">&#9632;</span>1,000 responses included</li>
+                <li class="flex gap-2"><span aria-hidden="true">&#9632;</span>No Tessel branding</li>
+                <li class="flex gap-2"><span aria-hidden="true">&#9632;</span>File uploads and custom domain</li>
+              </ul>
+            </li>
+            <li class="card relative flex flex-col p-6" data-plan="team">
+              <h3 class="font-display text-2xl">Team</h3>
+              <p class="mt-1 text-ink-soft">For teams that run on forms.</p>
+              <p class="mt-6 flex items-baseline gap-1"><span class="font-display text-5xl" data-price="team">$47</span><span class="font-semibold text-ink-soft">/mo</span></p>
+              <p class="mt-1 min-h-12 text-sm font-semibold" data-plan-note="team">Billed $564 a year</p>
+              <a href="signup.html?plan=team" class="btn btn-plain mt-5" data-plan-cta="team">Start a Team trial</a>
+              <ul class="mt-6 grid gap-2.5 text-[15px]">
+                <li class="flex gap-2"><span aria-hidden="true">&#9632;</span>10,000 responses included</li>
+                <li class="flex gap-2"><span aria-hidden="true">&#9632;</span>Shared workspaces and roles</li>
+                <li class="flex gap-2"><span aria-hidden="true">&#9632;</span>Every integration, plus webhooks</li>
+              </ul>
+            </li>
+            <li class="card flex flex-col bg-coal! p-6 text-cream" data-plan="business">
+              <h3 class="font-display text-2xl">Business</h3>
+              <p class="mt-1 text-cream/80">For 100k+ responses and strict IT.</p>
+              <p class="mt-6 font-display text-4xl leading-[3rem]">Let's talk</p>
+              <p class="mt-1 min-h-12 text-sm font-semibold">Volume pricing, invoiced yearly</p>
+              <a href="contact.html" class="btn mt-5 border-cream! shadow-[4px_4px_0_0_#fbf3e4]!">Talk to sales</a>
+              <ul class="mt-6 grid gap-2.5 text-[15px]">
+                <li class="flex gap-2"><span aria-hidden="true">&#9632;</span>Single sign-on and SCIM</li>
+                <li class="flex gap-2"><span aria-hidden="true">&#9632;</span>Data residency and audit log</li>
+                <li class="flex gap-2"><span aria-hidden="true">&#9632;</span>A named success manager</li>
+              </ul>
+            </li>
+          </ul>
+          <p class="mt-6 text-center text-sm text-ink-soft" data-pricing-summary aria-live="polite">At 1,000 responses a month, Maker fits best: $19 a month, billed annually.</p>
+        </div>
+      </section>
+
+      <section class="border-y-[2.5px] border-line bg-bg-2 py-16 sm:py-20" aria-labelledby="compare-title">
+        <div class="wrap">
+          <h2 id="compare-title" class="font-display text-4xl leading-[1.05] sm:text-5xl">Compare plans</h2>
+          <div class="relative mt-8 overflow-x-auto rounded-xl border-[2.5px] border-line bg-card shadow-brut">
+            <table class="w-full min-w-[40rem] border-collapse text-left">
+              <caption class="sr-only">Features included in each Tessel plan</caption>
+              <thead class="bg-butter text-coal">
+                <tr>
+                  <th scope="col" class="border-b-[2.5px] border-line p-4 font-mono text-sm">Feature</th>
+                  <th scope="col" class="border-b-[2.5px] border-l-2 border-line p-4 font-display">Free</th>
+                  <th scope="col" class="border-b-[2.5px] border-l-2 border-line p-4 font-display">Maker</th>
+                  <th scope="col" class="border-b-[2.5px] border-l-2 border-line p-4 font-display">Team</th>
+                  <th scope="col" class="border-b-[2.5px] border-l-2 border-line p-4 font-display">Business</th>
+                </tr>
+              </thead>
+              <tbody class="[&_td]:border-l-2 [&_td]:border-line [&_td]:p-4 [&_th]:p-4 [&_th]:font-semibold [&_tr]:border-b-2 [&_tr]:border-line [&_tr:last-child]:border-b-0">
+                <tr><th scope="row">Responses included each month</th><td>100</td><td>1,000</td><td>10,000</td><td>Custom</td></tr>
+                <tr><th scope="row">Extra responses</th><td>&mdash;</td><td>$8 per 1,000</td><td>$15 per 5,000</td><td>Volume pricing</td></tr>
+                <tr><th scope="row">Forms, fields and team members</th><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td><td>Unlimited</td></tr>
+                <tr><th scope="row">Conditional logic</th><td>Yes</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+                <tr><th scope="row">Payments</th><td>2.9% Tessel fee</td><td>No Tessel fee</td><td>No Tessel fee</td><td>No Tessel fee</td></tr>
+                <tr><th scope="row">File uploads</th><td>&mdash;</td><td>10 GB</td><td>100 GB</td><td>Unlimited</td></tr>
+                <tr><th scope="row">Remove Tessel branding</th><td>&mdash;</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+                <tr><th scope="row">Integrations</th><td>3</td><td>10</td><td>All, plus webhooks</td><td>All, plus private apps</td></tr>
+                <tr><th scope="row">Drop-off analytics</th><td>&mdash;</td><td>Yes</td><td>Yes</td><td>Yes</td></tr>
+                <tr><th scope="row">Shared workspaces and roles</th><td>&mdash;</td><td>&mdash;</td><td>Yes</td><td>Yes</td></tr>
+                <tr><th scope="row">Single sign-on (SAML)</th><td>&mdash;</td><td>&mdash;</td><td>&mdash;</td><td>Yes</td></tr>
+                <tr><th scope="row">Support</th><td>Help center</td><td>Email</td><td>Email and chat</td><td>Named manager</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-24" aria-labelledby="faq-title">
+        <div class="wrap grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)]">
+          <div>
+            <h2 id="faq-title" class="font-display text-4xl leading-[1.05] sm:text-5xl">Questions, answered.</h2>
+            <p class="mt-5 text-lg text-ink-soft">Something else? Call us at <a class="text-link" href="tel:+14025550134">(402) 555-0134</a>, weekdays 8 a.m. to 5:30 p.m. Central.</p>
+            <svg viewBox="0 0 200 140" class="mt-8 hidden w-56 lg:block" aria-hidden="true"><path d="M20 20h120a12 12 0 0 1 12 12v50a12 12 0 0 1-12 12H70l-30 24V94H20A12 12 0 0 1 8 82V32a12 12 0 0 1 12-12z" fill="#ffb4d0" stroke="var(--color-line)" stroke-width="3.5" stroke-linejoin="round"/><text x="62" y="76" font-family="Bowlby One, sans-serif" font-size="40" fill="#16130f">?!</text><circle cx="170" cy="40" r="16" fill="#ffd84a" stroke="var(--color-line)" stroke-width="3.5"/></svg>
+          </div>
+          <div class="grid gap-4">
+            <details class="faq card p-0" open><summary class="flex items-center justify-between gap-4 p-5 text-lg font-extrabold">What counts as a response?<span class="faq-plus grid size-8 shrink-0 place-items-center rounded-md border-2 border-line bg-butter text-coal transition-transform" aria-hidden="true">+</span></summary><p class="px-5 pb-5 text-ink-soft">One submitted form. Partial answers, test submissions from the editor and spam we block don't count.</p></details>
+            <details class="faq card p-0"><summary class="flex items-center justify-between gap-4 p-5 text-lg font-extrabold">What happens if I go over my plan?<span class="faq-plus grid size-8 shrink-0 place-items-center rounded-md border-2 border-line bg-butter text-coal transition-transform" aria-hidden="true">+</span></summary><p class="px-5 pb-5 text-ink-soft">Your forms keep working. On Maker and Team, extra responses are added in blocks at the end of the month. On Free, we'll ask you to upgrade and pause new responses after a 20% grace.</p></details>
+            <details class="faq card p-0"><summary class="flex items-center justify-between gap-4 p-5 text-lg font-extrabold">Can I switch between monthly and annual?<span class="faq-plus grid size-8 shrink-0 place-items-center rounded-md border-2 border-line bg-butter text-coal transition-transform" aria-hidden="true">+</span></summary><p class="px-5 pb-5 text-ink-soft">Any time. Moving to annual takes effect right away with credit for the rest of your month; moving to monthly starts at your next renewal.</p></details>
+            <details class="faq card p-0"><summary class="flex items-center justify-between gap-4 p-5 text-lg font-extrabold">Do you offer nonprofit and education pricing?<span class="faq-plus grid size-8 shrink-0 place-items-center rounded-md border-2 border-line bg-butter text-coal transition-transform" aria-hidden="true">+</span></summary><p class="px-5 pb-5 text-ink-soft">Yes: 40% off Maker and Team for registered nonprofits, schools and libraries. Send us your details from the sales page.</p></details>
+            <details class="faq card p-0"><summary class="flex items-center justify-between gap-4 p-5 text-lg font-extrabold">Where is my data stored?<span class="faq-plus grid size-8 shrink-0 place-items-center rounded-md border-2 border-line bg-butter text-coal transition-transform" aria-hidden="true">+</span></summary><p class="px-5 pb-5 text-ink-soft">In data centers in the United States, encrypted at rest and in transit. Business plans can choose an EU region.</p></details>
+            <details class="faq card p-0"><summary class="flex items-center justify-between gap-4 p-5 text-lg font-extrabold">How does the Team trial work?<span class="faq-plus grid size-8 shrink-0 place-items-center rounded-md border-2 border-line bg-butter text-coal transition-transform" aria-hidden="true">+</span></summary><p class="px-5 pb-5 text-ink-soft">Fourteen days of every Team feature, no card needed. When it ends you pick a plan or drop to Free; nothing is deleted.</p></details>
+            <details class="faq card p-0"><summary class="flex items-center justify-between gap-4 p-5 text-lg font-extrabold">Can I cancel any time?<span class="faq-plus grid size-8 shrink-0 place-items-center rounded-md border-2 border-line bg-butter text-coal transition-transform" aria-hidden="true">+</span></summary><p class="px-5 pb-5 text-ink-soft">Yes, from your billing page. Annual plans are refunded for whole unused months within the first 60 days.</p></details>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-auto border-t-[2.5px] border-line bg-bg-2">
+      <div class="wrap grid gap-10 py-14 md:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1.2fr]">
+        <div>
+          <a href="index.html" class="flex items-center gap-2.5" aria-label="Tessel home"><svg viewBox="0 0 40 40" class="size-10 shrink-0" aria-hidden="true"><rect x="5" y="5" width="33" height="33" rx="5" fill="var(--color-line)"/><rect x="2" y="2" width="33" height="33" rx="5" fill="var(--color-card)" stroke="var(--color-line)" stroke-width="2.5"/><path d="M2 18.5h33M18.5 2v33" stroke="var(--color-line)" stroke-width="2.5"/><path d="M4.6 4.6h12.6v12.6H4.6z" fill="#ff6b42"/><path d="M19.8 4.6h12.6v12.6H19.8z" fill="#ffd84a"/><path d="M4.6 19.8h12.6v12.6H4.6z" fill="#a9b2ff"/><path d="M19.8 19.8h12.6v12.6H19.8z" fill="#86e2b6"/><circle cx="26.1" cy="26.1" r="3.2" fill="#16130f"/></svg><span class="font-display text-2xl tracking-tight">tessel</span></a>
+          <p class="mt-4 max-w-xs text-ink-soft">Online forms and surveys that people actually finish. Built in Omaha, Nebraska, since 2019.</p>
+          <p class="mt-5 inline-flex items-center gap-2 rounded-full border-2 border-line bg-card px-3 py-1 font-mono text-sm font-semibold"><span class="size-2.5 rounded-full border-2 border-line bg-mint" aria-hidden="true"></span>All systems normal</p>
+        </div>
+        <div>
+          <h2 class="eyebrow text-ink-soft">Product</h2>
+          <ul class="mt-4 grid gap-2.5 font-semibold">
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="features.html">Features</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="templates.html">Templates</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="integrations.html">Integrations</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="pricing.html">Pricing</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="changelog.html">Changelog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="eyebrow text-ink-soft">Company</h2>
+          <ul class="mt-4 grid gap-2.5 font-semibold">
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="customers.html">Customers</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="contact.html">Talk to sales</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="signup.html">Start free</a></li>
+            <li><a class="hover:underline hover:decoration-2 hover:underline-offset-4" href="signup.html#signin">Sign in</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="eyebrow text-ink-soft">Say hello</h2>
+          <address class="mt-4 grid gap-2.5 not-italic">
+            <span>1110 Harney Street, Suite 400<br>Omaha, NE 68102</span>
+            <a class="font-semibold hover:underline" href="tel:+14025550134">(402) 555-0134</a>
+            <a class="font-semibold hover:underline" href="mailto:hello@tessel.example">hello@tessel.example</a>
+          </address>
+        </div>
+      </div>
+      <div class="border-t-2 border-line">
+        <div class="wrap flex flex-col gap-2 py-5 text-sm text-ink-soft sm:flex-row sm:items-center sm:justify-between">
+          <p>&copy; <span data-year>2026</span> Tessel Forms, Inc. Tessel is a fictional company.</p>
+          <p class="font-mono">Made on the prairie, one field at a time.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

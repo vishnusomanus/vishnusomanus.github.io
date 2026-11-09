@@ -1,0 +1,270 @@
+/* Echo (Overtone podcast) — Tailwind CSS v4 source.
+   Edit the tokens in @theme below, then rebuild with `npm run build`. */
+@import "tailwindcss";
+
+/* Docs and metadata are not markup: keep their words out of the generated CSS. */
+@source not "../*.md";
+@source not "../*.json";
+
+@theme {
+  --font-sans: "Schibsted Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Syne", "Schibsted Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "DM Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Surfaces, darkest first: a blackcurrant night. */
+  --color-night: #0e0c13;     /* page background */
+  --color-ink-900: #15121c;   /* sections, footer */
+  --color-ink-800: #1c1826;   /* cards, inputs */
+  --color-ink-700: #272132;   /* raised panels, hover */
+  --color-line: #342c42;      /* borders and rules */
+
+  /* Text. */
+  --color-paper: #f4efe6;     /* headings and body */
+  --color-muted: #b6adc2;     /* secondary text */
+  --color-subtle: #948aa3;    /* captions and meta (AA on every surface above) */
+
+  /* Brand. Lilac is the main accent (buttons, links, the played part of a waveform). */
+  --color-lilac: #b9a4ff;
+  --color-lilac-soft: #d6caff;
+  --color-lilac-deep: #8f74ff;
+  --color-tomato: #ff6b4a;    /* "on air" dot, highlights */
+  --color-sun: #f6d45a;       /* stars, markers */
+  --color-sky: #86d2ff;
+  --color-mint: #7fe0b6;
+
+  --ease-soft: cubic-bezier(.2, .8, .2, 1);
+}
+
+:root { color-scheme: dark; }
+
+@layer base {
+  html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+  body { @apply bg-night font-sans text-paper antialiased; }
+  ::selection { background: var(--color-lilac); color: var(--color-night); }
+  :focus-visible { outline: 2px solid var(--color-lilac); outline-offset: 3px; border-radius: 6px; }
+  [id] { scroll-margin-top: 6rem; }
+  summary { cursor: pointer; list-style: none; }
+  summary::-webkit-details-marker { display: none; }
+  [hidden] { display: none !important; }
+  h1, h2, h3 { text-wrap: balance; }
+  mark { background: var(--color-sun); color: var(--color-night); border-radius: 3px; padding: 0 2px; }
+}
+
+/* Smooth scrolling for in-page links only, so scripted scrolling stays instant. */
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within { scroll-behavior: smooth; }
+}
+
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-[0.95rem] font-semibold whitespace-nowrap transition duration-200 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+/* Big display type: Syne ExtraBold, tight. Used by .h-hero, .h-page and .h-section. */
+@utility display {
+  @apply font-display font-extrabold leading-[0.92] tracking-[-0.035em];
+  overflow-wrap: break-word;
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-4 sm:px-8; }
+
+  /* Type */
+  .h-hero { @apply display text-[clamp(2.9rem,9.5vw,7.75rem)]; }
+  .h-page { @apply display text-[clamp(2.1rem,8.4vw,5.75rem)]; }
+  .h-section { @apply display text-[clamp(2rem,4.6vw,3.6rem)]; }
+  .eyebrow { @apply inline-flex items-center gap-2 font-mono text-xs font-medium tracking-[0.16em] text-lilac uppercase; }
+  .eyebrow::before { content: ""; @apply h-2 w-2 rounded-full bg-tomato; }
+  .eyebrow-plain::before { display: none; }
+  .meta { @apply font-mono text-xs tracking-[0.06em] text-subtle uppercase; }
+  .lead { @apply text-lg leading-relaxed text-muted sm:text-xl; }
+  .outline-text { color: transparent; -webkit-text-stroke: 1.5px var(--color-paper); }
+
+  /* Buttons */
+  .btn-primary { @apply btn bg-lilac text-night hover:bg-lilac-soft; }
+  .btn-light { @apply btn bg-paper text-night hover:bg-white; }
+  .btn-ghost { @apply btn border border-line bg-ink-800/60 text-paper hover:border-lilac/60 hover:bg-ink-700; }
+  .btn-lg { @apply px-6 py-3.5 text-base; }
+  .btn-icon { @apply inline-grid h-10 w-10 shrink-0 place-items-center rounded-full text-paper transition hover:bg-ink-700 disabled:opacity-40; }
+  .btn-play { @apply inline-grid shrink-0 place-items-center rounded-full bg-lilac text-night shadow-[0_10px_40px_-10px_rgba(185,164,255,.75)] transition duration-200 hover:scale-[1.04] hover:bg-lilac-soft active:scale-95; }
+  .btn-play svg { @apply h-[42%] w-[42%]; }
+  .btn-play-sm { @apply inline-grid h-11 w-11 shrink-0 place-items-center rounded-full border border-line bg-ink-800 text-paper transition hover:border-lilac hover:bg-lilac hover:text-night; }
+  .btn-play-sm[aria-pressed="true"] { @apply border-lilac bg-lilac text-night; }
+  .text-link { @apply font-semibold text-lilac underline decoration-lilac/40 decoration-2 underline-offset-4 transition hover:decoration-lilac; }
+
+  .nav-link { @apply rounded-full px-3.5 py-2 text-[0.95rem] font-medium text-muted transition hover:text-paper; }
+  .nav-link[aria-current="page"] { @apply bg-ink-700 text-paper; }
+  .mobile-link { @apply flex items-center justify-between border-b border-line py-4 font-display text-2xl font-bold text-paper; }
+  .mobile-link[aria-current="page"] { @apply text-lilac; }
+  #site-header.is-scrolled { @apply border-line bg-night/90 backdrop-blur-md; }
+
+  /* Surfaces */
+  .card { @apply rounded-3xl border border-line bg-ink-800; }
+  .panel { @apply rounded-[2rem] border border-line bg-ink-900; }
+  .chip { @apply inline-flex items-center gap-1.5 rounded-full border border-line px-3 py-1 font-mono text-[0.72rem] font-medium tracking-[0.06em] text-muted uppercase; }
+  .topic-dot { @apply inline-block h-2 w-2 shrink-0 rounded-full; }
+  .rule { @apply border-t border-line; }
+  .kbd { @apply inline-grid min-w-6 place-items-center rounded-md border border-line bg-ink-700 px-1.5 py-0.5 font-mono text-[0.72rem] text-paper; }
+
+  /* Filters */
+  .seg { @apply inline-flex flex-wrap gap-1 rounded-full border border-line bg-ink-900 p-1; }
+  .seg-btn { @apply rounded-full px-3.5 py-1.5 text-sm font-semibold text-muted transition hover:text-paper; }
+  .seg-btn[aria-pressed="true"] { @apply bg-paper text-night; }
+  .topic-btn { @apply inline-flex items-center gap-2 rounded-full border border-line px-3.5 py-1.5 text-sm font-semibold text-muted transition hover:border-paper/50 hover:text-paper; }
+  .topic-btn[aria-pressed="true"] { @apply border-lilac bg-lilac/12 text-paper; }
+  .topic-btn .count { @apply font-mono text-xs text-subtle; }
+
+  /* Forms */
+  .field-label { @apply mb-1.5 block text-sm font-semibold text-paper; }
+  .field {
+    @apply w-full rounded-2xl border border-line bg-ink-800 px-4 py-3 text-base text-paper transition placeholder:text-subtle focus:border-lilac focus:ring-4 focus:ring-lilac/20 focus:outline-none;
+  }
+  select.field { @apply appearance-none bg-[url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%23f4efe6'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='m6%209%206%206%206-6'/%3E%3C/svg%3E")] bg-[length:1.1rem] bg-[right_1rem_center] bg-no-repeat pr-11; }
+  .field[aria-invalid="true"] { @apply border-tomato ring-4 ring-tomato/20; }
+  .field-error { @apply mt-1.5 flex items-center gap-1.5 text-sm font-medium text-[#ff9a82]; }
+  .field-error:empty { display: none; }
+  .field-hint { @apply mt-1.5 text-sm text-subtle; }
+  .check { @apply mt-0.5 h-5 w-5 shrink-0 rounded border-line accent-lilac; }
+  .choice { @apply flex cursor-pointer items-center gap-3 rounded-2xl border border-line bg-ink-800 px-4 py-3 text-[0.95rem] transition hover:border-paper/40; }
+  .choice:has(input:checked) { @apply border-lilac bg-lilac/10; }
+  .choice:has(input:focus-visible) { outline: 2px solid var(--color-lilac); outline-offset: 2px; }
+
+  /* Waveform scrubber: two identical bar layers, the top one clipped to the played share (--p). */
+  .wave { @apply relative isolate h-16 w-full select-none; --p: 0%; }
+  .wave-sm { @apply h-10; }
+  .wave-lg { @apply h-24 sm:h-28; }
+  .wave-layer { @apply pointer-events-none absolute inset-0 h-full w-full; }
+  .wave-base { color: var(--color-line); }
+  .wave-fill { color: var(--color-lilac); clip-path: inset(0 calc(100% - var(--p)) 0 0); }
+  .wave-head { @apply pointer-events-none absolute top-0 bottom-0 w-0.5 rounded-full bg-paper; left: var(--p); transform: translateX(-50%); }
+  .wave-range { @apply absolute inset-0 m-0 h-full w-full cursor-pointer appearance-none bg-transparent opacity-0; }
+  .wave:has(.wave-range:focus-visible) { outline: 2px solid var(--color-lilac); outline-offset: 6px; border-radius: 8px; }
+  .wave-marks { @apply pointer-events-none absolute inset-x-0 -bottom-3 h-1.5; }
+  .wave-mark { @apply absolute top-0 h-1.5 w-1.5 -translate-x-1/2 rounded-full bg-sun; }
+
+  /* Slim progress bar used by the mini player on phones and by episode cards. */
+  .bar { @apply relative h-1 w-full overflow-hidden rounded-full bg-ink-700; }
+  .bar > span { @apply absolute inset-y-0 left-0 rounded-full bg-lilac; }
+
+  /* Volume slider */
+  .range { @apply h-1.5 w-full cursor-pointer appearance-none rounded-full bg-ink-700; background-image: linear-gradient(var(--color-paper), var(--color-paper)); background-size: var(--v, 100%) 100%; background-repeat: no-repeat; }
+  .range::-webkit-slider-thumb { @apply h-4 w-4 appearance-none rounded-full border-0 bg-paper; }
+  .range::-moz-range-thumb { @apply h-4 w-4 rounded-full border-0 bg-paper; }
+  .range:focus-visible { outline: 2px solid var(--color-lilac); outline-offset: 4px; }
+
+  /* Equalizer bars shown on whatever is playing. Static when motion is reduced. */
+  .eq { @apply inline-flex h-3.5 items-end gap-[2px]; }
+  [data-ep] .eq { display: none; }
+  [data-ep].is-playing .eq { display: inline-flex; }
+  .eq i { @apply block w-[3px] rounded-full bg-current; height: 40%; }
+  .is-playing .eq i { animation: eq .9s ease-in-out infinite alternate; }
+  .is-playing .eq i:nth-child(2) { animation-delay: -.3s; }
+  .is-playing .eq i:nth-child(3) { animation-delay: -.6s; }
+  .is-playing .eq i:nth-child(4) { animation-delay: -.15s; }
+
+  /* Ripple rings behind the hero cover: they pulse while the latest episode plays. */
+  .ripples circle { transform-origin: center; transform-box: fill-box; opacity: 0; }
+  .is-playing .ripples circle { animation: ripple 3.6s var(--ease-soft) infinite; }
+  .is-playing .ripples circle:nth-child(2) { animation-delay: -1.2s; }
+  .is-playing .ripples circle:nth-child(3) { animation-delay: -2.4s; }
+
+  /* Episode rows and cards */
+  .ep-row { @apply grid grid-cols-[4.5rem_minmax(0,1fr)_auto] items-center gap-4 border-b border-line py-5 sm:grid-cols-[6.5rem_minmax(0,1fr)_auto] sm:gap-6; }
+  .ep-row .cover { @apply w-[4.5rem] sm:w-[6.5rem]; }
+  .cover { @apply block aspect-square overflow-hidden rounded-2xl bg-ink-700; }
+  .cover svg { @apply block h-full w-full; }
+  .ep-card .cover svg { transition: transform .7s var(--ease-soft); }
+  .ep-card:hover .cover svg { transform: scale(1.04); }
+  .ep-link { @apply bg-[linear-gradient(currentColor,currentColor)] bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-[background-size] duration-300 hover:bg-[length:100%_2px]; }
+
+  /* Chapters and transcript */
+  .chapter { @apply grid w-full grid-cols-[4rem_minmax(0,1fr)_auto] items-center gap-3 rounded-2xl px-3 py-3 text-left transition hover:bg-ink-700; }
+  .chapter[aria-current="true"] { @apply bg-lilac/12 text-paper; }
+  .chapter[aria-current="true"] .chapter-time { @apply text-lilac; }
+  .chapter-time { @apply font-mono text-sm text-subtle; }
+  .t-line { @apply grid w-full grid-cols-[3.75rem_minmax(0,1fr)] gap-3 rounded-xl px-3 py-2.5 text-left text-[0.98rem] leading-relaxed text-muted transition hover:bg-ink-700 sm:grid-cols-[4.25rem_minmax(0,1fr)]; }
+  .t-line[aria-current="true"] { @apply bg-ink-700 text-paper; box-shadow: inset 3px 0 0 var(--color-lilac); }
+  .t-time { @apply pt-0.5 font-mono text-xs text-subtle; }
+  .t-who { @apply font-semibold text-paper; }
+
+  /* Show notes prose */
+  .prose-notes { @apply text-[1.05rem] leading-relaxed text-muted; }
+  .prose-notes > * + * { @apply mt-4; }
+  .prose-notes h3 { @apply mt-8 font-display text-xl font-bold text-paper; }
+  .prose-notes a { @apply font-semibold text-lilac underline decoration-lilac/40 decoration-2 underline-offset-4 hover:decoration-lilac; }
+  .prose-notes ul { @apply list-disc space-y-2 pl-5 marker:text-lilac; }
+
+  /* FAQ */
+  .faq { @apply border-b border-line; }
+  .faq summary { @apply flex items-center justify-between gap-4 py-5 text-left text-lg font-semibold; }
+  .faq summary svg { transition: transform .25s var(--ease-soft); }
+  .faq[open] summary svg { transform: rotate(45deg); }
+  .faq-body { @apply pb-6 leading-relaxed text-muted; }
+
+  /* Ticker */
+  .ticker { display: flex; width: max-content; animation: ticker 60s linear infinite; }
+  .ticker-wrap:hover .ticker { animation-play-state: paused; }
+
+  /* Charts */
+  .chart-axis { @apply fill-subtle font-mono text-[11px]; }
+  .bar-row { @apply grid grid-cols-[6.5rem_minmax(0,1fr)_3rem] items-center gap-3 text-sm; }
+  .bar-track { @apply h-3 overflow-hidden rounded-full bg-ink-700; }
+  .bar-fill { @apply block h-full rounded-full; width: var(--w); }
+}
+
+@keyframes eq { from { height: 25%; } to { height: 100%; } }
+@keyframes ripple { 0% { transform: scale(.85); opacity: .9; } 100% { transform: scale(1.18); opacity: 0; } }
+@keyframes ticker { to { transform: translateX(-50%); } }
+
+/* Mini player, docked to the bottom of every page once an episode is loaded. */
+.has-mini body { padding-bottom: 6.5rem; }
+@media (min-width: 768px) { .has-mini body { padding-bottom: 6rem; } }
+.mini-player { transform: translateY(0); transition: transform .35s var(--ease-soft); }
+.mini-player.is-tucked { transform: translateY(calc(100% + 1.5rem)); }
+
+/* Scroll reveal: only hidden when JS is running and motion is allowed. */
+.js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .8s var(--ease-soft), transform .8s var(--ease-soft); }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .ticker, .is-playing .eq i, .is-playing .ripples circle { animation: none; }
+  .is-playing .eq i { height: 70%; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+
+.menu-open { overflow: hidden; }
+
+/* Film grain over the whole page, very faint. */
+.grain::before {
+  content: ""; position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: .05; mix-blend-mode: screen;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Toast */
+.toast { @apply pointer-events-none fixed bottom-6 left-1/2 z-[70] max-w-[calc(100vw-2rem)] -translate-x-1/2 translate-y-4 rounded-full bg-paper px-5 py-3 text-center text-sm font-semibold text-night opacity-0 shadow-lg transition duration-300; }
+.toast.is-visible { @apply translate-y-0 opacity-100; }
+.has-mini .toast { bottom: 7.5rem; }
+
+/* Back to top button (created by assets/js/main.js). Remove this block to drop it. */
+@layer components {
+  .back-to-top {
+    position: fixed; z-index: 40;
+    right: calc(1.25rem + env(safe-area-inset-right, 0px));
+    bottom: calc(1.25rem + env(safe-area-inset-bottom, 0px) + var(--btt-lift, 0px));
+    display: grid; place-items: center; width: 3rem; height: 3rem; padding: 0; cursor: pointer;
+    opacity: 0; visibility: hidden; transform: translateY(.75rem);
+    transition: opacity .25s ease, transform .25s ease, bottom .25s ease, visibility 0s linear .25s, background-color .2s;
+    border-radius: 999px; border: 1px solid var(--color-line);
+    background: var(--color-ink-800); color: var(--color-paper);
+    box-shadow: 0 10px 30px -10px rgb(0 0 0 / .6);
+  }
+  .back-to-top svg { width: 1.25rem; height: 1.25rem; transition: transform .2s ease; }
+  .back-to-top.is-visible { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; }
+  .back-to-top.is-visible:hover svg { transform: translateY(-2px); }
+  .back-to-top:hover { background: var(--color-ink-700); border-color: var(--color-lilac); }
+  .back-to-top:focus-visible { outline: 2px solid var(--color-lilac); outline-offset: 3px; }
+  .back-to-top-target:focus { outline: none; }
+  @media (prefers-reduced-motion: reduce) {
+    .back-to-top, .back-to-top svg { transition: opacity .01s linear, visibility 0s linear; transform: none !important; }
+  }
+  @media print { .back-to-top { display: none !important; } }
+}

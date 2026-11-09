@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 750">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="80%" r="90%"><stop offset="0" stop-color="#c4532d"/><stop offset=".45" stop-color="#5a2414"/><stop offset="1" stop-color="#1a0f0a"/></radialGradient>
+    <linearGradient id="jacket" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7f1e8"/><stop offset="1" stop-color="#d8cbb6"/></linearGradient>
+    <linearGradient id="apron" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b4a2a"/><stop offset="1" stop-color="#26301b"/></linearGradient>
+    <radialGradient id="skin" cx="45%" cy="40%" r="60%"><stop offset="0" stop-color="#c98d64"/><stop offset="1" stop-color="#8f5a3a"/></radialGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="40"/></filter>
+  </defs>
+  <rect width="600" height="750" fill="url(#bg)"/>
+  <circle cx="300" cy="720" r="260" fill="#ff9a3c" opacity=".35" filter="url(#blur)"/>
+  <!-- body -->
+  <path d="M90 750c10-170 90-260 210-260s200 90 210 260z" fill="url(#jacket)"/>
+  <path d="M220 750l20-200h120l20 200z" fill="url(#apron)"/>
+  <path d="M240 500l60 70 60-70" fill="none" stroke="#c9b9a0" stroke-width="5"/>
+  <g fill="#3a2a20"><circle cx="270" cy="600" r="6"/><circle cx="330" cy="600" r="6"/><circle cx="270" cy="650" r="6"/><circle cx="330" cy="650" r="6"/></g>
+  <path d="M190 560c-30 60-40 120-40 190" stroke="#c9b9a0" stroke-width="4" fill="none"/>
+  <path d="M410 560c30 60 40 120 40 190" stroke="#c9b9a0" stroke-width="4" fill="none"/>
+  <!-- neck & head -->
+  <rect x="268" y="430" width="64" height="80" rx="20" fill="#8f5a3a"/>
+  <ellipse cx="300" cy="360" rx="98" ry="118" fill="url(#skin)"/>
+  <!-- hair (short curls, tied back) -->
+  <path d="M200 350c-10-110 60-170 110-168 70 2 120 60 100 170-10-50-40-90-100-96-60 6-90 40-110 94z" fill="#1f130d"/>
+  <circle cx="300" cy="190" r="38" fill="#1f130d"/>
+  <!-- face -->
+  <g fill="#2a1810"><ellipse cx="262" cy="365" rx="8" ry="10"/><ellipse cx="338" cy="365" rx="8" ry="10"/></g>
+  <path d="M248 340c10-8 24-8 32 0M320 340c10-8 24-8 32 0" stroke="#2a1810" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <path d="M300 372c-6 22-6 32 6 36" stroke="#6e3f26" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <path d="M270 425c18 14 42 14 60 0" stroke="#5a2a1a" stroke-width="6" stroke-linecap="round" fill="none"/>
+  <g fill="#c4532d" opacity=".25"><circle cx="245" cy="400" r="16"/><circle cx="355" cy="400" r="16"/></g>
+  <circle cx="201" cy="372" r="10" fill="#cfa862"/>
+</svg>

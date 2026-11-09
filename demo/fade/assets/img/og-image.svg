@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+<defs><clipPath id="og-pole"><rect x="1010" y="120" width="80" height="390" rx="12"/></clipPath>
+<pattern id="og-stripe" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="14" height="40" fill="#b5281c"/><rect x="14" width="6" height="40" fill="#f2ead9"/><rect x="20" width="14" height="40" fill="#1d3557"/><rect x="34" width="6" height="40" fill="#f2ead9"/></pattern></defs>
+<rect width="1200" height="630" fill="#151515"/>
+<rect width="1200" height="18" fill="url(#og-stripe)"/><rect y="612" width="1200" height="18" fill="url(#og-stripe)"/>
+<text x="80" y="140" font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="26" letter-spacing="8" fill="#e0a83a">FADE BROS. BARBER CO. · CHICAGO</text>
+<text x="76" y="300" font-family="Anton, Impact, sans-serif" font-size="150" fill="#f2ead9" letter-spacing="2">SHARP CUTS.</text>
+<text x="76" y="450" font-family="Anton, Impact, sans-serif" font-size="150" fill="#e0a83a" letter-spacing="2">HOT TOWELS.</text>
+<text x="80" y="530" font-family="Archivo, Arial, sans-serif" font-weight="600" font-size="30" fill="#f2ead9" opacity=".85">Fades, beards and hot shaves in Logan Square &amp; Pilsen.</text>
+<rect x="1000" y="96" width="100" height="28" rx="14" fill="#e0a83a"/><rect x="1000" y="506" width="100" height="28" rx="14" fill="#e0a83a"/>
+<rect x="1010" y="120" width="80" height="390" rx="12" fill="#f2ead9"/>
+<g clip-path="url(#og-pole)"><path d="M990 170 1110 110v34L990 204ZM990 270 1110 210v34L990 304ZM990 370 1110 310v34L990 404ZM990 470 1110 410v34L990 504ZM990 570 1110 510v34L990 604Z" fill="#b5281c"/><path d="M990 214 1110 154v16L990 230ZM990 314 1110 254v16L990 330ZM990 414 1110 354v16L990 430Z" fill="#1d3557"/></g>
+</svg>

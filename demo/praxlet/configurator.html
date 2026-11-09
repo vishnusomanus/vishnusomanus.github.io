@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The kit bench — Praxlet</title>
+    <meta
+      name="description"
+      content="Build a robotics parts list, check voltage and interface compatibility, calculate power headroom and save a named kit for your next session."
+    />
+    <meta name="theme-color" content="#b92e20" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Praxlet" />
+    <meta property="og:title" content="The kit bench — Praxlet" />
+    <meta
+      property="og:description"
+      content="Build a robotics parts list, check voltage and interface compatibility, calculate power headroom and save a named kit for your next session."
+    />
+    <meta property="og:image" content="assets/img/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="assets/img/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Mada:wght@400;600;700&amp;family=Teko:wght@400;500;600&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <script defer src="assets/js/data.js"></script>
+    <script defer src="assets/js/main.js"></script>
+  </head>
+  <body data-page="configurator" class="flex min-h-screen flex-col">
+    <a
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 z-50 bg-red p-3 font-semibold text-white"
+      href="#main"
+      >Skip to content</a
+    >
+    <header class="border-b border-ink">
+      <div class="bg-red text-white">
+        <div class="wrap flex min-h-8 items-center justify-between gap-4 text-xs">
+          <p>Modular robotics / Nashua, New Hampshire</p>
+          <p class="hidden sm:block">Low voltage. Open connections. Useful questions.</p>
+        </div>
+      </div>
+      <div class="wrap flex min-h-24 items-center justify-between gap-4">
+        <a href="index.html" class="font-display text-5xl font-semibold tracking-tight"
+          >PRAXLET<span class="text-red">/</span></a
+        >
+        <nav class="hidden lg:block" aria-label="Main">
+          <ul class="flex gap-1">
+            <li><a class="nav-link" href="modules.html">Modules</a></li>
+            <li><a class="nav-link" href="configurator.html" aria-current="page">Build a kit</a></li>
+            <li><a class="nav-link" href="projects.html">Projects</a></li>
+            <li><a class="nav-link" href="docs.html">Field notes</a></li>
+            <li><a class="nav-link" href="company.html">Company</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="contact.html" class="btn btn-small hidden sm:inline-flex"
+            >Talk through a build
+            <svg
+              class="size-4 shrink-0"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M4 12h16m-7-7 7 7-7 7" /></svg></a
+          ><button
+            type="button"
+            data-menu-toggle
+            class="border border-ink p-3 lg:hidden"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+            aria-label="Open menu"
+          >
+            <svg
+              class="size-5"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path d="M3 6h18M3 12h18M3 18h18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <nav id="mobile-menu" class="wrap pb-6 lg:hidden" aria-label="Mobile" hidden>
+        <ul class="grid grid-cols-2 gap-2">
+          <li><a class="nav-link" href="modules.html">Modules</a></li>
+          <li><a class="nav-link" href="configurator.html" aria-current="page">Build a kit</a></li>
+          <li><a class="nav-link" href="projects.html">Projects</a></li>
+          <li><a class="nav-link" href="docs.html">Field notes</a></li>
+          <li><a class="nav-link" href="company.html">Company</a></li>
+        </ul>
+        <a href="contact.html" class="btn mt-4 w-full">Talk through a build</a>
+      </nav>
+    </header>
+    <main id="main" class="flex-1">
+      <section class="border-b border-ink">
+        <div class="wrap grid items-center gap-8 py-10 md:grid-cols-[1.25fr_.75fr] lg:py-14">
+          <div>
+            <p class="eyebrow text-red">THE KIT BENCH / PLAN &amp; CHECK</p>
+            <h1 class="mt-5 max-w-4xl text-[clamp(3.6rem,7vw,6.8rem)] uppercase leading-[.95] tracking-tight">
+              A bench for<br />your next idea.
+            </h1>
+            <p class="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
+              Put a few modules together. The kit bench checks voltage, interfaces, dependencies and power headroom,
+              while keeping the cost and the next useful question in view.
+            </p>
+            <p class="mt-5 inline-flex items-center gap-2 border border-ink px-3 py-1.5 text-sm font-semibold" data-age-note>
+              <span class="bg-red px-1.5 text-white" aria-hidden="true">11+</span>Recommended for ages 11+. Contains small parts.
+            </p>
+          </div>
+          <figure>
+            <img
+              src="assets/img/hero-kit.svg"
+              class="w-full"
+              width="420"
+              height="320"
+              alt="A clipboard checklist with three items checked off beside an open kit box and a power headroom bar."
+            />
+          </figure>
+        </div>
+      </section>
+      <section class="wrap py-10">
+        <div class="grid gap-8 lg:grid-cols-[1.3fr_.8fr]">
+          <div class="min-w-0">
+            <div class="border border-line p-5">
+              <div class="grid gap-4 sm:grid-cols-2">
+                <label
+                  ><span class="label">Start from a project</span
+                  ><select class="field" data-preset>
+                    <option value="empty">An empty bench</option>
+                  </select></label
+                ><button type="button" class="btn self-end" data-load-preset>Load project parts</button>
+              </div>
+              <p class="mt-3 text-sm text-muted">
+                Loading a project replaces the current kit. Named builds are kept separately below.
+              </p>
+            </div>
+            <div class="mt-6 grid gap-4 sm:grid-cols-3">
+              <label
+                ><span class="label">Supply setting</span
+                ><select class="field" data-build-voltage>
+                  <option value="5">5 V</option>
+                  <option value="3.3">3.3 V</option>
+                </select></label
+              ><label
+                ><span class="label">Working budget ($)</span
+                ><input
+                  class="field"
+                  data-build-budget
+                  type="number"
+                  min="0"
+                  max="10000"
+                  step="0.01"
+                  value="350" /></label
+              ><label
+                ><span class="label">Number of kits</span
+                ><input class="field" data-kit-count type="number" min="1" max="12" value="1"
+              /></label>
+            </div>
+            <form data-add-part class="mt-6 grid gap-4 border border-line p-5 sm:grid-cols-[1fr_auto]">
+              <label
+                ><span class="label">Add a module</span
+                ><select class="field" name="module" data-part-picker></select></label
+              ><button class="btn self-end" type="submit">Add module</button>
+            </form>
+            <div class="mt-8 flex items-end justify-between gap-4">
+              <h2 class="text-4xl uppercase">Your parts list</h2>
+              <p data-build-count class="text-sm text-muted"></p>
+            </div>
+            <div data-build-lines class="mt-4"></div>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <button data-clear-build class="btn btn-line btn-small" type="button">Clear current kit</button
+              ><button data-copy-bom class="btn btn-line btn-small" type="button">Copy parts list</button>
+            </div>
+            <textarea
+              data-copy-fallback
+              class="field mt-4"
+              rows="7"
+              aria-label="Parts list to copy"
+              hidden
+              readonly
+            ></textarea>
+            <section class="mt-10 border-t border-ink pt-7">
+              <p class="eyebrow text-red">KEEP A USEFUL STARTING POINT</p>
+              <h2 class="mt-3 text-4xl uppercase">Named builds</h2>
+              <form data-save-build class="mt-5 grid gap-3 sm:grid-cols-[1fr_auto]">
+                <label
+                  ><span class="label">Build name</span
+                  ><input
+                    name="buildName"
+                    data-build-name
+                    class="field"
+                    maxlength="60"
+                    placeholder="The line-following question"
+                    aria-describedby="build-name-error" /></label
+                ><button type="submit" class="btn self-end">Save named build</button>
+              </form>
+              <p id="build-name-error" data-build-name-error class="error"></p>
+              <p class="mt-3 text-sm text-muted">
+                Keep up to six builds on this browser. Saving updates a build with the same name.
+              </p>
+              <div data-saved-builds class="mt-5 grid gap-4 sm:grid-cols-2"></div>
+            </section>
+          </div>
+          <aside class="min-w-0">
+            <div class="border border-ink bg-wash p-6">
+              <p class="eyebrow text-red">PX / BUILD CHECK</p>
+              <h2 class="mt-3 text-4xl uppercase">The whole system.</h2>
+              <div data-build-summary class="mt-5"></div>
+              <h3 class="mt-7 text-2xl uppercase">Compatibility notes</h3>
+              <div data-build-issues class="mt-4 space-y-3" role="status" aria-live="polite"></div>
+              <h3 class="mt-7 text-2xl uppercase">Power headroom</h3>
+              <div data-power-chart class="mt-4"></div>
+              <p class="mt-4 text-sm text-muted">
+                A 25% planning allowance is included. Starts, stalls and the real assembly can draw more; verify the
+                circuit before extended use.
+              </p>
+              <a href="contact.html?topic=quote" data-quote-link class="btn btn-red mt-7 w-full"
+                >Request a quote for 1 kit
+                <svg
+                  class="size-4 shrink-0"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M4 12h16m-7-7 7 7-7 7" /></svg
+              ></a>
+              <p class="mt-3 text-xs text-muted">
+                The parts list, kit count and total go with your request. We reply with a written quote; nothing is
+                charged online.
+              </p>
+            </div>
+            <div class="mt-6 border border-line p-6">
+              <h2 class="text-3xl uppercase">A useful check, not a wiring diagram.</h2>
+              <p class="mt-3 text-sm leading-relaxed text-muted">
+                This bench checks the listed module specifications. Work with power disconnected, follow the field notes
+                and keep moving parts clear during supervised testing.
+              </p>
+              <a href="docs.html?guide=first-power" class="text-link mt-4 inline-block text-sm"
+                >Before the first power-up</a
+              >
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+    <footer class="mt-auto bg-ink text-paper">
+      <div class="wrap grid gap-9 py-12 md:grid-cols-[1.2fr_1fr_1fr]">
+        <div>
+          <a href="index.html" class="font-display text-5xl font-semibold">PRAXLET/</a>
+          <p class="mt-3 max-w-xs text-sm text-paper/80">
+            Small modules for the questions you can build, test and explain.
+          </p>
+        </div>
+        <div>
+          <h2 class="eyebrow">Find the workbench</h2>
+          <p class="mt-4 text-sm leading-relaxed">
+            Studio 4, 46 Bobbin Way<br />Nashua, NH 03060<br />Monday–Friday, 9am–5pm
+          </p>
+          <a class="text-link mt-3 inline-block" href="company.html#visit">Plan a visit</a>
+        </div>
+        <div>
+          <h2 class="eyebrow">Build with us</h2>
+          <ul class="mt-4 space-y-3 text-sm">
+            <li><a class="underline underline-offset-4" href="contact.html">hello@praxlet.example</a></li>
+            <li><a class="underline underline-offset-4" href="tel:+16035550173">(603) 555-0173</a></li>
+            <li><a class="underline underline-offset-4" href="docs.html">Project & safety field notes</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="wrap flex flex-wrap justify-between gap-3 border-t border-paper/25 py-5 text-xs text-paper/70">
+        <p>© <span data-year></span> Praxlet. A useful way to learn.</p>
+        <p>Praxlet is a fictional business.</p>
+      </div>
+    </footer>
+    <p
+      data-announcement
+      role="status"
+      aria-live="polite"
+      class="fixed bottom-4 left-4 right-4 z-40 mx-auto max-w-xl border border-ink bg-paper px-5 py-4 text-sm font-semibold shadow-lg"
+      hidden
+    ></p>
+  </body>
+</html>

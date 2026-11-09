@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g" cx="75%" cy="80%" r="80%"><stop offset="0" stop-color="#e07a3a"/><stop offset=".35" stop-color="#7a2a16"/><stop offset="1" stop-color="#17110d"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <text x="90" y="250" font-family="Georgia, serif" font-style="italic" font-size="40" fill="#cfa862">Wood-fired kitchen · Annapolis</text>
+  <text x="90" y="360" font-family="Georgia, serif" font-size="110" fill="#f7f1e8">Olive &amp; Ember</text>
+  <text x="90" y="440" font-family="Helvetica, Arial, sans-serif" font-size="32" fill="#f7f1e8" opacity=".8">Simple food, cooked over fire.</text>
+</svg>

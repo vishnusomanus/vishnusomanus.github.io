@@ -1,0 +1,197 @@
+@import "tailwindcss" source("../");
+@theme {
+  --font-display: "Rajdhani", sans-serif;
+  --font-sans: "Golos Text", ui-sans-serif, system-ui, sans-serif;
+  --color-ink: #091721;
+  --color-deep: #051018;
+  --color-panel: #102632;
+  --color-line: #35515e;
+  --color-ice: #e9f3f7;
+  --color-muted: #a9bdc8;
+  --color-cyan: #6ce9e0;
+  --color-amber: #f8ce88;
+  --color-rose: #ffadaf;
+}
+@layer base {
+  body {
+    background: var(--color-ink);
+    color: var(--color-ice);
+  }
+  [hidden] {
+    display: none !important;
+  }
+  :focus-visible {
+    outline: 3px solid var(--color-cyan);
+    outline-offset: 4px;
+  }
+  .bg-cyan :focus-visible {
+    outline-color: var(--color-ink);
+  }
+  button,
+  summary {
+    cursor: pointer;
+  }
+  button:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+  }
+  input,
+  select,
+  textarea {
+    min-width: 0;
+  }
+  ::selection {
+    background: var(--color-cyan);
+    color: var(--color-ink);
+  }
+}
+@layer components {
+  .wrap {
+    width: min(1300px, calc(100% - 2.5rem));
+    margin-inline: auto;
+  }
+  .eyebrow {
+    font-family: var(--font-display);
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    min-height: 3rem;
+    padding: 0.7rem 1.1rem;
+    border: 1px solid var(--color-cyan);
+    background: var(--color-cyan);
+    color: var(--color-ink);
+    font-weight: 600;
+    line-height: 1.3;
+  }
+  .btn:hover {
+    background: var(--color-ice);
+    border-color: var(--color-ice);
+  }
+  .btn-line {
+    background: transparent;
+    color: var(--color-ice);
+    border-color: var(--color-line);
+  }
+  .btn-line:hover {
+    color: var(--color-ink);
+  }
+  .nav-link {
+    display: block;
+    padding: 0.65rem 0.7rem;
+    font-size: 0.95rem;
+  }
+  .nav-link:hover,
+  .nav-link[aria-current] {
+    color: var(--color-cyan);
+    text-decoration: underline;
+    text-underline-offset: 0.4rem;
+  }
+  .label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .field {
+    display: block;
+    width: 100%;
+    min-height: 3rem;
+    margin-top: 0.5rem;
+    padding: 0.7rem 0.85rem;
+    border: 1px solid var(--color-line);
+    background: var(--color-deep);
+    color: var(--color-ice);
+    border-radius: 0;
+  }
+  .field::placeholder {
+    color: var(--color-muted);
+    opacity: 1;
+  }
+  .field[aria-invalid="true"] {
+    border-color: var(--color-rose);
+  }
+  .error {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-rose);
+    margin-top: 0.35rem;
+  }
+  .text-link {
+    text-decoration: underline;
+    text-underline-offset: 0.3rem;
+  }
+  .text-link:hover {
+    color: var(--color-cyan);
+  }
+  .metric {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 600;
+  }
+  .signal-grid {
+    background-image:
+      linear-gradient(#35515e33 1px, transparent 1px), linear-gradient(90deg, #35515e33 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .reveal {
+    opacity: 1;
+  }
+  .js .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition:
+      opacity 0.5s,
+      transform 0.5s;
+  }
+  .js .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+  code {
+    overflow-wrap: anywhere;
+  }
+  pre {
+    max-width: 100%;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+}
+dialog::backdrop {
+  background: rgb(0 0 0 / 0.75);
+}
+dialog {
+  max-height: 90dvh;
+}
+@media (prefers-reduced-motion: no-preference) {
+  html:focus-within {
+    scroll-behavior: smooth;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+  .js .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@layer components {
+  [data-contact-success],
+  [data-query-status] {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}

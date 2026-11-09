@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="../css/tailwind.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>No. 19 — Field Issue</title>
+<meta name="description" content="Field Issue is a magazine about work outside offices: counters, boats, workshops, and docks." />
+<style>:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; } [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; } </style>
+</head>
+<body class="bg-[#f6f3ec] text-[#1a1a1a] font-sans antialiased">
+<header class="border-b-4 border-[#1a1a1a] bg-[#f6f3ec]">
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-5 py-4 sm:px-8">
+    <a href="index.html" class="font-display text-3xl leading-none">Field Issue</a>
+    <button id="menuBtn" class="border border-[#1a1a1a] px-3 py-1 text-xs uppercase tracking-wider md:hidden" aria-expanded="false">Menu</button>
+    <nav id="nav" class="hidden basis-full flex-col gap-2 border-t border-[#1a1a1a]/20 pt-3 text-sm md:flex md:basis-auto md:flex-row md:gap-6 md:border-0 md:pt-0 flex"><a href="index.html" aria-current="page">Issue 19</a><a href="spices.html">Spices</a><a href="boat.html">Boat</a><a href="violin.html">Violin</a><a href="masthead.html">Masthead</a></nav>
+  </div>
+</header><main>
+  <section class="mx-auto grid max-w-6xl gap-8 border-b border-[#1a1a1a]/15 px-5 py-10 sm:px-8 lg:grid-cols-[1.3fr_0.7fr]">
+    <article>
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-[#b42318]">Cover · No. 19</p>
+      <h1 class="mt-3 font-display text-5xl leading-[0.95] sm:text-7xl"><a href="spices.html">The drawers behind the counter.</a></h1>
+      <p class="mt-4 max-w-xl text-lg text-[#3d3934]">A spice counter keeps the color in front of the customer and the weight in a pencil ledger. We opened the shop with them for four mornings.</p>
+      <p class="mt-4 text-sm uppercase tracking-[0.16em]">Leela Nair · 8 min</p>
+    </article>
+    <img src="images/spices.jpg" alt="Spices arranged on a pale wooden table" class="aspect-square w-full object-cover lg:aspect-auto lg:h-full" />
+  </section>
+  <section class="mx-auto max-w-6xl px-5 py-10 sm:px-8">
+    <div class="flex flex-wrap gap-2" id="filters">
+      <button data-filter="all" class="filter rounded-full bg-[#1a1a1a] px-4 py-1.5 text-sm text-[#f6f3ec]">All</button>
+      <button data-filter="labor" class="filter rounded-full border border-[#1a1a1a] px-4 py-1.5 text-sm">Labor</button>
+      <button data-filter="place" class="filter rounded-full border border-[#1a1a1a] px-4 py-1.5 text-sm">Place</button>
+      <button data-filter="craft" class="filter rounded-full border border-[#1a1a1a] px-4 py-1.5 text-sm">Craft</button>
+    </div>
+    <div id="stories" class="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3"><a href="spices.html" data-tag="labor" class="story flex min-h-[280px] flex-col justify-between border border-[#1a1a1a]/15 bg-white p-5">
+      <img src="images/spices.jpg" alt="" class="mb-4 aspect-[16/10] w-full object-cover" />
+      <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#b42318]">Cover</p>
+      <h3 class="mt-2 font-display text-3xl leading-tight">The drawers behind the counter</h3>
+      <p class="mt-2 text-sm text-[#3d3934]">A spice counter keeps the color out front and the weight in the back.</p>
+    </a><a href="boat.html" data-tag="place" class="story flex min-h-[280px] flex-col justify-between border border-[#1a1a1a]/15 bg-white p-5">
+      <img src="images/ferry.jpg" alt="" class="mb-4 aspect-[16/10] w-full object-cover" />
+      <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#b42318]">Place</p>
+      <h3 class="mt-2 font-display text-3xl leading-tight">Across the still water</h3>
+      <p class="mt-2 text-sm text-[#3d3934]">A wooden boat, a lake under the peaks, and a timetable nobody argues with.</p>
+    </a><a href="violin.html" data-tag="craft" class="story flex min-h-[280px] flex-col justify-between border border-[#1a1a1a]/15 bg-white p-5">
+      <img src="images/violin.jpg" alt="" class="mb-4 aspect-[16/10] w-full object-cover" />
+      <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#b42318]">Craft</p>
+      <h3 class="mt-2 font-display text-3xl leading-tight">Varnish, twice a year</h3>
+      <p class="mt-2 text-sm text-[#3d3934]">Inside a one-room shop that still cooks its own oil.</p>
+    </a><a href="tea.html" data-tag="craft" class="story flex min-h-[280px] flex-col justify-between border border-[#1a1a1a]/15 bg-white p-5">
+      <img src="images/tea.jpg" alt="" class="mb-4 aspect-[16/10] w-full object-cover" />
+      <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#b42318]">Craft</p>
+      <h3 class="mt-2 font-display text-3xl leading-tight">The pot on the work table</h3>
+      <p class="mt-2 text-sm text-[#3d3934]">A pot of tea is how this office starts, and how it refuses to hurry.</p>
+    </a><a href="dock.html" data-tag="labor" class="story flex min-h-[280px] flex-col justify-between border border-[#1a1a1a]/15 bg-white p-5">
+      <img src="images/net.jpg" alt="" class="mb-4 aspect-[16/10] w-full object-cover" />
+      <p class="text-xs font-semibold uppercase tracking-[0.16em] text-[#b42318]">Labor</p>
+      <h3 class="mt-2 font-display text-3xl leading-tight">The hour the dock belongs to no one</h3>
+      <p class="mt-2 text-sm text-[#3d3934]">Between two shifts, the jetty is a place where work is visible and unpaid.</p>
+    </a></div>
+  </section>
+</main>
+<script>
+document.getElementById("filters").addEventListener("click", (event) => {
+  const button = event.target.closest("[data-filter]");
+  if (!button) return;
+  document.querySelectorAll(".filter").forEach((item) => {
+    item.classList.remove("bg-[#1a1a1a]", "text-[#f6f3ec]");
+    item.classList.add("border", "border-[#1a1a1a]");
+  });
+  button.classList.add("bg-[#1a1a1a]", "text-[#f6f3ec]");
+  button.classList.remove("border");
+  const filter = button.dataset.filter;
+  document.querySelectorAll(".story").forEach((card) => {
+    card.classList.toggle("hidden", filter !== "all" && card.dataset.tag !== filter);
+  });
+});
+</script><footer class="border-t border-[#1a1a1a]/20"><div class="mx-auto flex max-w-6xl flex-wrap justify-between gap-4 px-5 py-8 text-sm sm:px-8"><p>Field Issue, No. 19 · November. Edited in Kochi.</p><p><span class="underline underline-offset-4" >desk@fieldissue.com</span></p></div></footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const siteNav = document.getElementById("nav");
+if (menuBtn && siteNav) {
+  menuBtn.addEventListener("click", () => {
+    const open = siteNav.classList.toggle("hidden") === false;
+    menuBtn.setAttribute("aria-expanded", String(open));
+    menuBtn.textContent = open ? "Close" : "Menu";
+  });
+}
+</script>
+
+</body>
+</html>
